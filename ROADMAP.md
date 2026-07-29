@@ -118,7 +118,7 @@ edge validation               graph traceability
 | 2.3 Graph Traceability | ✅ Complete | 2026-07-29 | 2026-07-29 | `scripts/extract_skill_refs.py` |
 | 3.1 CI Freshness | ✅ Complete | 2026-07-29 | 2026-07-29 | `.github/workflows/graph-freshness.yml` |
 | 4.1 Cross-Library Edges | ✅ Complete | 2026-07-29 | 2026-07-29 | 6/7 bridges in `docs/cross-library-bridges.json` |
-| 4.2 Quant Usage Patterns | ⬜ Pending | — | — | `skills/quant-patterns/` |
+| 4.2 Quant Usage Patterns | ✅ Complete | 2026-07-29 | 2026-07-29 | 5 skills: walk-forward, factor-importance, regime-detection, HPO, portfolio-construction |
 
 ---
 
