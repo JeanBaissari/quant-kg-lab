@@ -50,7 +50,7 @@ Each skill follows the `agentskills.io` specification with:
 
 | Library | Nodes | Edges | Communities | Top God Node |
 |---------|-------|-------|-------------|--------------|
-| scikit-learn | 18,753 | 49,978 | TBD | BaseEstimator (2,309°) |
+| scikit-learn | 18,753 | 49,978 | 1,043 | BaseEstimator (2,309°) |
 | optuna | 3,912 | 8,405 | 228 | Study (228°) |
 
 ### Key Findings
