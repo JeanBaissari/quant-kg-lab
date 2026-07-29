@@ -1,144 +1,172 @@
-# quant-kg-lab — PhD-Level Roadmap
+# quant-kg-lab — Forward Roadmap
 
-> **North Star**: A self-updating, queryable, spec-driven knowledge ecosystem where every quant-relevant library module has a corresponding agent skill with full graph-to-skill traceability.
+> **Current**: 10 libraries extracted (133K nodes, 256K edges), 28 skills, 27 commits
+> **GitHub**: https://github.com/JeanBaissari/quant-kg-lab
 
-## Execution Waves
+---
 
+## State Assessment
+
+| Layer | Complete | In Progress | Gap |
+|-------|----------|-------------|-----|
+| Knowledge Graphs | 10/10 libraries ✅ | — | — |
+| Node Descriptions | 2/10 (sklearn 88.9%, optuna 36.7%) | — | 8 libraries at 0% |
+| Community Labels | 2/10 (sklearn, optuna) | — | 8 unlabeled |
+| Skills | 28 (15 sklearn + 8 optuna + 5 quant) | — | 0 skills for 8 new libraries |
+| Edge Audits | 2/10 (sklearn, optuna) | — | 8 unaudited |
+| Cross-Library Bridges | sklearn↔optuna (6/7) | — | No bridges for 8 new libraries |
+| Skill Validation | sklearn + optuna (92.2%) | — | 8 libraries not validated |
+| CI Pipelines | Freshness + Validation | — | — |
+| Studio HTML | sklearn (17MB) | — | 9 libraries not generated |
+
+**Critical bottleneck**: Only sklearn and optuna have descriptions. Without descriptions, query_graph.py returns bare labels, skills can't auto-generate API references, and the studio shows "0% described". Descriptions unlock everything downstream.
+
+---
+
+## Phase 3 — Description Generation (est. 3-4 sub-agent waves)
+
+**Goal**: Generate node descriptions for the 8 undescribed libraries. This is the single highest-leverage action.
+
+### Wave 3A — Tier 1 (largest impact)
+| Library | Nodes | Est. Batches | Priority | Why |
+|---------|-------|-------------|----------|-----|
+| pandas | 37,983 | ~800 | P0 | Core quant data layer. Descriptions unlock DataFrame/Series/GroupBy queryability |
+| numpy | 20,436 | ~450 | P0 | Numerical backbone. ndarray/linalg/random descriptions enable all downstream |
+| scipy | 31,042 | ~650 | P1 | stats/optimize/signal — quant workhorses |
+
+### Wave 3B — Tier 2 (quant tools)
+| Library | Nodes | Est. Batches | Priority | Why |
+|---------|-------|-------------|----------|-----|
+| vectorbt | 5,411 | ~120 | P0 | Core backtesting library. Config/ArrayWrapper/Portfolio descriptions critical |
+| backtrader | 3,458 | ~75 | P1 | Event-driven backtesting. Strategy/Cerebro descriptions |
+| ta-lib | 1,305 | ~30 | P1 | Technical indicators. Smallest graph, quick win |
+
+### Wave 3C — Tier 3 (ML boosters)
+| Library | Nodes | Est. Batches | Priority | Why |
+|---------|-------|-------------|----------|-----|
+| xgboost | 7,708 | ~170 | P1 | Gradient boosting. sklearn-compatible API |
+| lightgbm | 2,952 | ~65 | P1 | Microsoft GBDT. Smallest Tier 3, quick win |
+
+**Method**: Same pipeline as sklearn — `graphify extract --backend claude-cli` → batch processing → merge descriptions → `graphify cluster-only` to regenerate studio.
+
+**Verification**: Description coverage >30% per library (AST-only without LLM keys won't reach 88% like sklearn, but 30-40% is solid for code-symbol nodes).
+
+---
+
+## Phase 4 — Skill Extraction (est. 3 sub-agent waves)
+
+**Goal**: Extract spec-driven skills for all libraries. Target: 47 → 65+ total skills.
+
+### Wave 4A — Core Data Layer (numpy, scipy, pandas)
+| Skill | Library | Key Classes |
+|-------|---------|-------------|
+| `numpy-linalg` | numpy | `linalg.solve`, `linalg.eig`, `linalg.svd`, `linalg.norm` |
+| `numpy-random` | numpy | `Generator`, `RandomState`, distributions, permutation |
+| `numpy-core` | numpy | `ndarray`, `ufunc`, broadcasting, indexing |
+| `scipy-stats` | scipy | Distributions, statistical tests, kernel density |
+| `scipy-optimize` | scipy | `minimize`, `curve_fit`, root finding, linear programming |
+| `scipy-signal` | scipy | Filtering, spectral analysis, detrending, convolution |
+| `pandas-ts` | pandas | `resample`, `rolling`, `shift`, `ewm`, `DateOffset` |
+| `pandas-core` | pandas | `DataFrame`, `Series`, `GroupBy`, `merge`, `pivot` |
+
+### Wave 4B — Quant Tools (vectorbt, backtrader, ta-lib)
+| Skill | Library | Key Classes |
+|-------|---------|-------------|
+| `vectorbt-signals` | vectorbt | `SignalFactory`, entry/exit generation, indicator pipelines |
+| `vectorbt-portfolio` | vectorbt | `Portfolio.from_signals`, `from_orders`, metrics, stats |
+| `vectorbt-core` | vectorbt | `Config`, `ArrayWrapper`, `Wrapping`, accessors |
+| `backtrader-core` | backtrader | `Cerebro`, `Strategy`, `DataFeed`, `Broker` |
+| `backtrader-analyzers` | backtrader | `SharpeRatio`, `DrawDown`, `TradeAnalyzer`, `TimeReturn` |
+| `ta-lib-indicators` | ta-lib | SMA, RSI, MACD, Bollinger, ATR, 200+ indicators |
+
+### Wave 4C — ML Boosters (xgboost, lightgbm)
+| Skill | Library | Key Classes |
+|-------|---------|-------------|
+| `xgboost-core` | xgboost | `DMatrix`, `train()`, `Booster`, `cv()` |
+| `xgboost-sklearn` | xgboost | `XGBClassifier`, `XGBRegressor`, `XGBRanker` |
+| `lightgbm-core` | lightgbm | `Dataset`, `train()`, `Booster`, `cv()` |
+| `lightgbm-sklearn` | lightgbm | `LGBMClassifier`, `LGBMRegressor`, `LGBMRanker` |
+
+---
+
+## Phase 5 — Integration & Cross-Library (est. 2 waves)
+
+### 5.1 Cross-Library Bridge Expansion
+Extend `scripts/inject_cross_edges.py` with bridges for all 10 libraries:
 ```
-Wave 1: Graph Completeness    Wave 2: Skill Extraction    Wave 3: Infrastructure   Wave 4: Production
-[1][2][3] ──────────────────> [4][5][6] ───────────────> [7] ─────────────────> [8][9]
-descriptions                  skill extraction             CI freshness            cross-library edges
-community labels              query pipeline               automated updates       quant usage patterns
-edge validation               graph traceability
-  │                             │                            │                       │
-  └─ unlocks labeled,           └─ unlocks 20+               └─ unlocks              └─ unlocks integrated
-     described communities         queryable skills             living graphs            quant ecosystem
+numpy.ndarray → pandas.DataFrame (backing store)
+numpy.linalg → scipy.linalg (superset relationship)
+pandas.DataFrame → sklearn.BaseEstimator (fit input)
+pandas.DataFrame → vectorbt.Portfolio (backtest input)
+ta-lib.RSI → vectorbt.SignalFactory (indicator → signal)
+xgboost.XGBClassifier → sklearn.Pipeline (sklearn-compatible)
+optuna.Study → xgboost.train (HPO integration)
+scipy.optimize → optuna.samplers (alternative backend)
+backtrader.Strategy → sklearn.ensemble (ML strategy)
+pandas.rolling → numpy.lib.stride_tricks (implementation detail)
 ```
 
----
+### 5.2 Unified Index Regeneration
+Regenerate `docs/UNIFIED_INDEX.md` with actual graph node IDs, description snippets, and cross-library paths from all 10 graphs. Currently it's a template — needs real data.
 
-## Wave 1 — Graph Completeness (foundation)
-
-### 1.1 Node Descriptions ⬜
-**Status**: 0/18,753 nodes described. 469 batch instruction files exist in `description-instructions/`.
-**What**: Every graph node gets a human-readable description. Currently all nodes show raw code identifiers.
-**How**: Process description-instructions batches via agent → merge descriptions back into graph.json → regenerate studio.
-**Verification**: `graphify describe` reports >90% node coverage.
-**Depends on**: Nothing.
-**Unlocks**: Meaningful studio visualization, searchable skill extraction, community context.
-
-### 1.2 Community Labels ⬜
-**Status**: 1,149 communities all labeled "Community N". 1 instruction file at `label-instructions/communities.md`.
-**What**: Every community gets a semantic label (e.g., "GradientBoosting Ensemble Methods", "DBSCAN Density Clustering").
-**How**: Agent reads community members from GRAPH_REPORT.md → generates 2-5 word labels → writes `.graphify_labels.json` → regenerates report.
-**Verification**: GRAPH_REPORT.md shows labeled communities. `_COMMUNITY_*` notes in Obsidian vault.
-**Depends on**: Nothing (can run parallel with 1.1).
-**Unlocks**: Navigable module map, targeted skill extraction, community cohesion ranking.
-
-### 1.3 Edge Validation ⬜
-**Status**: 53% of 49,978 edges are INFERRED (confidence 0.5). 47% EXTRACTED.
-**What**: Review + reclassify high-impact INFERRED edges. Flag suspicious edges.
-**How**: Agent samples high-degree INFERRED edges → checks source files → reclassifies or flags.
-**Verification**: EXTRACTED ratio >70%. Suspicious edge report in `docs/edge-audit.md`.
-**Depends on**: 1.1 (descriptions help validate edges).
-**Unlocks**: Higher-confidence queries, trustable skill generation.
+### 5.3 Quant Workflow Patterns v2
+Expand `skills/quant-patterns/` with multi-library workflows:
+- `quant-full-pipeline` — pandas → ta-lib → sklearn → vectorbt → optuna → analysis
+- `quant-factor-research` — data → features → importance → selection → backtest
+- `quant-ml-strategy` — sklearn/xgboost/lightgbm model → vectorbt/backtrader execution
 
 ---
 
-## Wave 2 — Skill Extraction
+## Phase 6 — Production Polish (est. 1-2 waves)
 
-### 2.1 Per-Community Skills ⬜
-**Status**: 2 skills (`model_selection`, `samplers`) out of 1,149 communities.
-**What**: Top-20 quant-relevant communities each get a spec-driven `SKILL.md`.
-**Priority communities**: ensemble, metrics, preprocessing, pipeline, linear_model, decomposition, feature_selection, calibration, tree, svm, neural_network, clustering, impute, compose, gaussian_process, covariance, cross_decomposition, multiclass, isotonic, kernel_approximation.
-**How**: For each community: extract god node → neighborhood → method signatures → author SKILL.md with frontmatter, quick reference, pitfalls, references.
-**Verification**: 20+ SKILL.md files in `skills/<library>/<community>/`. Each has `graph_hash` frontmatter.
-**Depends on**: 1.1, 1.2.
-**Unlocks**: First-mover quant skill registry on SkillDock, usable agent capabilities.
+### 6.1 Skill Validation Expansion
+- Install all 10 libraries in CI venv
+- Run `validate_skills.py` across all libraries
+- Fix any validation failures
+- Add validation to pre-commit hooks
 
-### 2.2 Graph Query Pipeline ⬜
-**Status**: No query interface. `graphify query` exists but no project wrapper.
-**What**: `scripts/query_graph.py` — a Python CLI that wraps `graphify query`, `graphify path`, `graphify explain` against both graphs.
-**How**: Python script with argparse subcommands. Loads graph.json, traverses, prints results.
-**Verification**: `python scripts/query_graph.py sklearn "How does Pipeline work?"` returns structured answer.
-**Depends on**: 1.1.
-**Unlocks**: Agent can query graphs programmatically, skills can embed query results.
+### 6.2 Edge Audits for New Libraries
+- Run `audit_edges.py` on all 8 unaudited libraries
+- Flag suspicious cross-module edges
+- Generate `docs/edge-audit-<lib>.md` reports
 
-### 2.3 Skill-to-Graph Traceability ⬜
-**Status**: Skills claim API surface but no auto-generated `references/api.md`.
-**What**: For each skill, auto-extract its community's node neighborhood → method signatures → `references/api.md`.
-**How**: Script: given a community label, find its nodes in graph.json, extract `source_file`, `source_location`, `label`, neighbor edges → write reference docs.
-**Verification**: Every `references/api.md` has per-node `source_file:line` citations.
-**Depends on**: 1.1, 1.2, 2.1.
-**Unlocks**: Verifiable claims, freshness tracking, auditability.
+### 6.3 Community Labels for New Libraries
+- Label communities for the 8 unlabeled libraries
+- Regenerate GRAPH_REPORTs with semantic labels
+
+### 6.4 Studio HTML Generation
+- Regenerate studio for all 10 libraries after descriptions applied
+- Commit studio HTML (or link to it)
+
+### 6.5 Obsidian Vault Export
+- `graphify export obsidian` for all 10 libraries
+- Creates navigable offline knowledge base
 
 ---
 
-## Wave 3 — Infrastructure
+## Priority Matrix
 
-### 3.1 CI Freshness Pipeline ⬜
-**Status**: Graphs frozen at single commits. No auto-update.
-**What**: GitHub Action: weekly `git pull` upstream → detect changes → `graphify --update` → commit updated graphs → open PR if significant changes.
-**How**: `.github/workflows/graph-freshness.yml` with cron schedule, graphify update, diff detection.
-**Verification**: Action runs on schedule. PR opened when upstream diverges.
-**Depends on**: Wave 1 complete.
-**Unlocks**: Living graphs, reproducible extraction, version-pinned skills.
-
----
-
-## Wave 4 — Integration & Production
-
-### 4.1 Cross-Library Edges ⬜
-**Status**: scikit-learn and optuna graphs are isolated. No "RandomizedSearchCV → TPESampler" bridge.
-**What**: A third "integration" graph or injected cross-edges connecting quant workflows across libraries.
-**How**: Agent identifies natural bridges (e.g., `sklearn.model_selection.RandomizedSearchCV` ↔ `optuna.samplers.TPESampler` both do hyperparameter optimization) → injects INFERRED cross-edges.
-**Verification**: `graphify path "GridSearchCV" "TPESampler"` returns a path.
-**Depends on**: Wave 1, Wave 2.
-**Unlocks**: Multi-library queries, quant workflow graphs.
-
-### 4.2 Quant Usage Patterns ⬜
-**Status**: Graphs capture library API structure, not usage. No "walk-forward validation" or "factor importance ranking" nodes.
-**What**: `skills/quant-patterns/` — usage-level skills that reference both graphs: walk-forward CV, regime detection, factor ranking, portfolio optimization, backtesting loops.
-**How**: Author skills manually (these are domain knowledge, not extractable). Each skill references graph nodes from both libraries.
-**Verification**: 5+ quant-pattern skills with cross-library graph references.
-**Depends on**: Wave 1, Wave 2, 4.1.
-**Unlocks**: Production quant agent, differentiated ecosystem position.
+| Priority | Phase | Item | Impact | Effort | Unlocks |
+|----------|-------|------|--------|--------|---------|
+| **P0** | 3A | pandas + numpy descriptions | Critical | 2 sub-agents | All downstream queries, skills, studio |
+| **P0** | 3B | vectorbt descriptions | Critical | 1 sub-agent | Backtesting skill extraction |
+| **P1** | 3A | scipy descriptions | High | 1 sub-agent | Stats/optimize skill extraction |
+| **P1** | 3B-3C | backtrader + ta-lib + xgboost + lightgbm descriptions | Medium | 2 sub-agents | Remaining skill extraction |
+| **P1** | 4A | numpy + pandas + scipy skills (8) | High | 2 sub-agents | Core data layer skills |
+| **P1** | 4B | vectorbt + backtrader + ta-lib skills (6) | High | 1 sub-agent | Quant tool skills |
+| **P2** | 4C | xgboost + lightgbm skills (4) | Medium | 1 sub-agent | ML booster skills |
+| **P2** | 5.1 | Cross-library bridges expansion | Medium | 1 script | Multi-library queries |
+| **P2** | 5.2 | Unified Index regeneration | Medium | 1 agent | Authoritative reference |
+| **P3** | 6.x | Validation, audits, labels, studio | Polish | 2 waves | Production readiness |
 
 ---
 
-## Progress Tracker
+## Execution Strategy
 
-| Item | Status | Started | Completed | Artifacts |
-|------|--------|---------|-----------|-----------|
-| 1.1 Node Descriptions | 🔄 In Progress | 2026-07-29 | — | 10,467/18,753 (55.8%) merged into graph. 159 batches remaining (agent running) |
-| 1.2 Community Labels | ✅ Complete | 2026-07-29 | 2026-07-29 | 1,149 labels in `.graphify_labels.json`. Optuna: 228 labels being named (agent running) |
-| 1.3 Edge Validation | ✅ Complete | 2026-07-29 | 2026-07-29 | `docs/edge-audit-scikit-learn.md`, `docs/edge-audit-optuna.md` |
-| 2.1 Per-Community Skills | 🔄 In Progress | 2026-07-29 | — | 14 skills being extracted (2 sub-agents). 5 quant-pattern skills ✅ |
-| 2.2 Query Pipeline | ✅ Complete | 2026-07-29 | 2026-07-29 | `scripts/query_graph.py` |
-| 2.3 Graph Traceability | ✅ Complete | 2026-07-29 | 2026-07-29 | `scripts/extract_skill_refs.py` |
-| 3.1 CI Freshness | ✅ Complete | 2026-07-29 | 2026-07-29 | `.github/workflows/graph-freshness.yml` |
-| 4.1 Cross-Library Edges | ✅ Complete | 2026-07-29 | 2026-07-29 | 6/7 bridges in `docs/cross-library-bridges.json` |
-| 4.2 Quant Usage Patterns | ✅ Complete | 2026-07-29 | 2026-07-29 | 5 skills: walk-forward, factor-importance, regime-detection, HPO, portfolio-construction |
+1. **Phase 3 first** — descriptions are the bottleneck. Everything downstream depends on them.
+2. **Phase 3A + 3B in parallel** — pandas, numpy, vectorbt simultaneously (3 sub-agents, P0 items)
+3. **Phase 4A starts as soon as Phase 3A completes** — skills can be extracted from described graphs
+4. **Phase 5 is script-driven** — cross-library bridges and unified index don't need sub-agents
+5. **Phase 6 is cleanup** — validation, audits, labels — batchable into CI
 
----
-
-## Methodology Notes
-
-### When to Use Sub-Agents
-- **Parallel**: Items with no shared dependency (1.1 + 1.2 can run together)
-- **Sequential**: Items that unlock the next wave (Wave 1 → Wave 2)
-- **Leaf**: Scoped tasks with clear completion criteria (process N batches, label M communities)
-- **Orchestrator**: Multi-step waves where one agent coordinates workers (Wave 2 skill extraction)
-
-### Quality Gates Per Item
-1. **Completeness**: Did we process ALL items (not just a sample)?
-2. **Verifiability**: Can someone reproduce the result from graph source?
-3. **Traceability**: Does every skill claim link back to a graph node?
-4. **Freshness**: Is the version/commit pinned and checkable?
-
-### File Hygiene
-- `.graphify/description-instructions/` — delete after processing (temporary artifacts)
-- `.graphify/label-instructions/` — delete after labeling
-- `docs/` — permanent audit trails, methodology
-- `scripts/` — reproducible tooling, committed
-- `skills/` — permanent skill artifacts, committed
+**Total estimated**: 8-12 sub-agent waves, 15-25 new skills, 10 regenerated studios, full cross-library bridge matrix.
