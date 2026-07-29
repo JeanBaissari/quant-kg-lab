@@ -110,10 +110,10 @@ edge validation               graph traceability
 
 | Item | Status | Started | Completed | Artifacts |
 |------|--------|---------|-----------|-----------|
-| 1.1 Node Descriptions | 🔄 In Progress | 2026-07-29 | — | 6,215/18,753 (Task 2 done, Task 1 in memory) |
-| 1.2 Community Labels | ✅ Complete | 2026-07-29 | 2026-07-29 | 1,149 labels in `.graphify_labels.json` |
-| 1.3 Edge Validation | ⬜ Pending | — | — | `docs/edge-audit.md` |
-| 2.1 Per-Community Skills | 🔄 In Progress | 2026-07-29 | — | 14 skills being extracted (2 sub-agents) |
+| 1.1 Node Descriptions | 🔄 In Progress | 2026-07-29 | — | 10,467/18,753 (55.8%) merged into graph. 159 batches remaining (agent running) |
+| 1.2 Community Labels | ✅ Complete | 2026-07-29 | 2026-07-29 | 1,149 labels in `.graphify_labels.json`. Optuna: 228 labels being named (agent running) |
+| 1.3 Edge Validation | ✅ Complete | 2026-07-29 | 2026-07-29 | `docs/edge-audit-scikit-learn.md`, `docs/edge-audit-optuna.md` |
+| 2.1 Per-Community Skills | 🔄 In Progress | 2026-07-29 | — | 14 skills being extracted (2 sub-agents). 5 quant-pattern skills ✅ |
 | 2.2 Query Pipeline | ✅ Complete | 2026-07-29 | 2026-07-29 | `scripts/query_graph.py` |
 | 2.3 Graph Traceability | ✅ Complete | 2026-07-29 | 2026-07-29 | `scripts/extract_skill_refs.py` |
 | 3.1 CI Freshness | ✅ Complete | 2026-07-29 | 2026-07-29 | `.github/workflows/graph-freshness.yml` |
