@@ -26,6 +26,6 @@ node_modules/
 .graphify/memory/
 .graphify/wiki/
 
-# OS
-.DS_Store
-Thumbs.db
+# Cloned repos (too large, reclone via scripts/setup.sh)
+knowledge_graphs/*/repo/
+

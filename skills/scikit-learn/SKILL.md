@@ -7,7 +7,16 @@ license: MIT
 source_repo: scikit-learn/scikit-learn
 source_version: main
 extraction_date: 2026-07-29
-graph_hash: TBD
+graph_hash: 18753_nodes_49978_edges
+graph_stats:
+  nodes: 18753
+  edges: 49978
+  top_god_nodes:
+    - BaseEstimator (degree=2309)
+    - TransformerMixin (degree=1171)
+    - ClassifierMixin (degree=1072)
+    - Pipeline (degree=536)
+    - RegressorMixin (degree=802)
 metadata:
   hermes:
     tags: [scikit-learn, machine-learning, model-selection, cross-validation, hyperparameter-tuning]

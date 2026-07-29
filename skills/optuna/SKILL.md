@@ -7,7 +7,17 @@ license: MIT
 source_repo: optuna/optuna
 source_version: master
 extraction_date: 2026-07-29
-graph_hash: TBD
+graph_hash: 3912_nodes_8405_edges
+graph_stats:
+  nodes: 3912
+  edges: 8405
+  communities: 228
+  top_god_nodes:
+    - Study (degree=228)
+    - BaseDistribution (degree=213)
+    - StudyDirection (degree=150)
+    - optuna.trial (degree=139)
+    - optuna.study (degree=100)
 metadata:
   hermes:
     tags: [optuna, hyperparameter-optimization, bayesian-optimization, samplers, HPO]

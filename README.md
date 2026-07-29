@@ -44,7 +44,28 @@ Each skill follows the `agentskills.io` specification with:
 
 ## Status
 
-🚧 **Phase 0 — Foundation** — Knowledge graph extraction in progress.
+🚧 **Phase 1 — Extraction Complete** — Knowledge graphs built for both libraries.
+
+### Extraction Results
+
+| Library | Nodes | Edges | Communities | Top God Node |
+|---------|-------|-------|-------------|--------------|
+| scikit-learn | 18,753 | 49,978 | TBD | BaseEstimator (2,309°) |
+| optuna | 3,912 | 8,405 | 228 | Study (228°) |
+
+### Key Findings
+
+- **scikit-learn**: `BaseEstimator` is the undisputed hub (2,309 connections). `Pipeline` (536°), `TransformerMixin` (1,171°), and the `*Mixin` hierarchy form the core architecture. Parameter validation classes (`Interval`, `StrOptions`) have surprisingly high centrality.
+- **optuna**: `Study` (228°) and `BaseDistribution` (213°) form a tightly-coupled core. The sampler/distribution hierarchy is the dominant structural pattern. 228 natural communities detected.
+
+### Next: Skill Extraction
+
+From these graphs, we'll extract spec-driven agent skills for quant-relevant modules:
+- `sklearn.model_selection` → GridSearchCV, cross_val_score
+- `sklearn.ensemble` → RandomForest, GradientBoosting
+- `sklearn.metrics` → classification/regression metrics
+- `optuna.samplers` → TPESampler, BoTorchSampler
+- `optuna.pruners` → MedianPruner, HyperbandPruner
 
 ## License
 
