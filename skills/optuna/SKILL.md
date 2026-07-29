@@ -1,6 +1,6 @@
 ---
-name: optuna-samplers
-description: Use when working with Optuna hyperparameter optimization samplers — TPESampler, RandomSampler, GridSampler, CmaEsSampler, BoTorchSampler. Covers sampler selection, parameter suggestion, and multi-objective optimization.
+name: optuna
+description: Use when working with Optuna hyperparameter optimization framework. Covers samplers, pruners, study lifecycle, trial parameter suggestion, visualization, integrations, and distributions. Load sub-skills for domain-specific detail.
 version: 0.1.0
 author: quant-kg-lab
 license: MIT
@@ -12,58 +12,55 @@ graph_stats:
   nodes: 3912
   edges: 8405
   communities: 228
-  top_god_nodes:
-    - Study (degree=228)
-    - BaseDistribution (degree=213)
-    - StudyDirection (degree=150)
-    - optuna.trial (degree=139)
-    - optuna.study (degree=100)
+  described_nodes: 1437
 metadata:
   hermes:
-    tags: [optuna, hyperparameter-optimization, bayesian-optimization, samplers, HPO]
-    related_skills: [optuna-pruners, optuna-study, scikit-learn-model-selection]
+    tags: [optuna, hyperparameter-optimization, bayesian-optimization, HPO, automated-machine-learning]
+    related_skills: [optuna-samplers, optuna-pruners, optuna-study, optuna-trial, optuna-visualization, optuna-integration, optuna-distributions]
 ---
 
-# Optuna Samplers
+# Optuna Knowledge Graph Extraction
 
-Extracted from optuna knowledge graph. Source: `optuna.samplers` module.
+Extracted from the full Optuna codebase (381 Python files, 3,912 nodes, 228 communities).
 
-## Quick Reference
+## Module Skills
 
-| Sampler | Algorithm | Best For |
-|---------|-----------|----------|
-| `TPESampler` | Tree-structured Parzen Estimator | General-purpose Bayesian opt (default) |
-| `RandomSampler` | Uniform random | Baseline, high-dimensional categorical |
-| `GridSampler` | Exhaustive grid | Small search spaces, reproducibility |
-| `CmaEsSampler` | CMA-ES | Continuous, ill-conditioned spaces |
-| `BoTorchSampler` | Gaussian Process (BoTorch) | Low-dim (<20) continuous, sample-efficient |
-| `NSGAIISampler` | NSGA-II | Multi-objective optimization |
+This top-level skill indexes seven spec-driven sub-skills covering each major Optuna module:
 
-## Common Patterns
+| Skill | Module | Coverage |
+|-------|--------|----------|
+| [optuna-samplers](samplers/SKILL.md) | `optuna.samplers` | TPESampler, RandomSampler, GridSampler, CmaEsSampler, NSGAIISampler, QMCSampler, BruteForceSampler, GPSampler |
+| [optuna-pruners](pruners/SKILL.md) | `optuna.pruners` | MedianPruner, PercentilePruner, SuccessiveHalvingPruner, HyperbandPruner, ThresholdPruner, PatientPruner, WilcoxonPruner |
+| [optuna-study](study/SKILL.md) | `optuna.study` | create_study, Study.optimize, Study.ask, Study.tell, load_study, delete_study |
+| [optuna-trial](trial/SKILL.md) | `optuna.trial` | Trial.suggest_float, suggest_int, suggest_categorical, should_prune, report |
+| [optuna-visualization](visualization/SKILL.md) | `optuna.visualization` | plot_optimization_history, plot_slice, plot_contour, plot_param_importances, plot_edf, plot_parallel_coordinate |
+| [optuna-integration](integration/SKILL.md) | `optuna.integration` | PyTorch, TensorFlow, XGBoost, LightGBM, CatBoost, MLflow, W&B, FastAI, scikit-learn |
+| [optuna-distributions](distributions/SKILL.md) | `optuna.distributions` | FloatDistribution, IntDistribution, CategoricalDistribution, BaseDistribution |
 
-```python
-import optuna
+## Graph Overview
 
-def objective(trial):
-    # Suggest hyperparameters
-    lr = trial.suggest_float("lr", 1e-5, 1e-2, log=True)
-    n_layers = trial.suggest_int("n_layers", 1, 5)
-    dropout = trial.suggest_float("dropout", 0.0, 0.5)
-    # ... train and return metric
+- **3,912 nodes** across 381 Python source files
+- **228 communities** detected via graph clustering
+- **1,437 node descriptions** generated and merged into graph.json
+- **7 module skills** extracted following agentskills.io template specification
 
-study = optuna.create_study(
-    direction="maximize",
-    sampler=optuna.samplers.TPESampler(seed=42)
-)
-study.optimize(objective, n_trials=100)
+## Key God Nodes (by connection degree)
+
+| Node | Description |
+|------|-------------|
+| `Study` | A study corresponds to an optimization task, i.e., a set of trials |
+| `BaseDistribution` | Base class for distributions used internally by Trial and samplers |
+| `optuna.trial` | Module providing parameter suggestion and pruning interface |
+| `optuna.study` | Module providing study lifecycle management |
+| `optuna.samplers` | Module providing sampling algorithms for parameter suggestion |
+
+## Knowledge Graph
+
+Located at: `knowledge_graphs/optuna/.graphify/graph.json`
+
+Query the graph:
+```bash
+cd knowledge_graphs/optuna
+graphify query "How does TPESampler work?" --graph .graphify/graph.json
+graphify explain "Study" --graph .graphify/graph.json
 ```
-
-## Pitfalls
-
-1. **TPESampler with few trials**: TPE needs warm-up (default `n_startup_trials=10`). Below that, behaves like random.
-2. **Dynamic search spaces**: Changing param ranges mid-study confuses TPE inference.
-3. **Multi-objective requires specific sampler**: Use `NSGAIISampler` or `BoTorchSampler` with `directions`.
-
-## References
-
-- `references/api.md` — Full sampler API surface from knowledge graph

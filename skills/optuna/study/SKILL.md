@@ -1,0 +1,127 @@
+---
+name: optuna-study
+description: Use when working with Optuna Study lifecycle — create_study, Study.optimize, Study.ask, Study.tell, load_study, delete_study, copy_study. Covers study creation, optimization loops, ask-and-tell interface, persistence, and multi-objective studies.
+version: 0.1.0
+author: quant-kg-lab
+license: MIT
+source_repo: optuna/optuna
+source_version: master
+extraction_date: 2026-07-29
+graph_hash: 3912_nodes_8405_edges
+graph_stats:
+  nodes: 3912
+  edges: 8405
+  communities: 228
+metadata:
+  hermes:
+    tags: [optuna, hyperparameter-optimization, study]
+    related_skills: [optuna-samplers, optuna-pruners, optuna-study, optuna-trial, optuna-visualization, optuna-integration, optuna-distributions]
+---
+
+# Optuna Study
+
+Extracted from optuna knowledge graph. Source: `optuna.study` module.
+
+## Quick Reference
+
+| API | Purpose | Key Parameters |
+|-----|---------|----------------|
+| `create_study()` | Create a new optimization study | `direction`, `sampler`, `pruner`, `storage`, `study_name` |
+| `Study.optimize()` | Run optimization with an objective function | `objective`, `n_trials`, `timeout`, `callbacks` |
+| `Study.ask()` | Suggest next trial parameters (without evaluating) | `fixed_distributions` |
+| `Study.tell()` | Report trial result back to study | `trial`, `values`, `state` |
+| `load_study()` | Load existing study from storage | `study_name`, `storage` |
+| `delete_study()` | Delete study and all trials from storage | `study_name`, `storage` |
+| `copy_study()` | Copy study between storages | `from_study_name`, `to_study_name`, `from_storage`, `to_storage` |
+| `get_all_study_names()` | List all studies in storage | `storage` |
+| `Study.best_trial` | Get the best trial object | — (property) |
+| `Study.trials_dataframe()` | Get trials as pandas DataFrame | — |
+
+## Common Patterns
+
+### Basic Optimization Loop
+```python
+import optuna
+
+def objective(trial):
+    x = trial.suggest_float("x", -10, 10)
+    return (x - 2) ** 2
+
+study = optuna.create_study(direction="minimize")
+study.optimize(objective, n_trials=100)
+
+print(f"Best value: {study.best_value}")
+print(f"Best params: {study.best_params}")
+```
+
+### Ask-and-Tell Interface (Manual Control)
+```python
+study = optuna.create_study(direction="minimize")
+
+for _ in range(100):
+    trial = study.ask()                    # Get suggested params
+    value = (trial.suggest_float("x", -10, 10) - 2) ** 2
+    study.tell(trial, value)               # Report result back
+
+print(study.best_value)
+```
+
+### Persistent Storage (SQLite)
+```python
+storage = "sqlite:///optuna_study.db"
+study = optuna.create_study(
+    study_name="my_study",
+    storage=storage,
+    direction="minimize",
+    load_if_exists=True    # Resume if exists
+)
+study.optimize(objective, n_trials=100)
+
+# Later: load and analyze
+study2 = optuna.load_study("my_study", storage=storage)
+```
+
+### Multi-Objective Study
+```python
+study = optuna.create_study(
+    directions=["minimize", "maximize"],
+    study_name="multi_obj"
+)
+study.optimize(objective, n_trials=100)
+
+# Get Pareto front
+for trial in study.best_trials:
+    print(trial.values)
+```
+
+### Callbacks
+```python
+study.optimize(
+    objective, n_trials=100,
+    callbacks=[
+        optuna.callbacks.MaxTrialsCallback(100),
+        # Custom callback
+    ]
+)
+```
+
+## Pitfalls
+
+1. **Forgetting `load_if_exists=True`**: Without it, re-running crashes if study already exists in storage.
+2. **`timeout` vs `n_trials`**: `timeout` (seconds) only stops new trials; `n_trials` sets max count. Combine for safety.
+3. **Multi-objective `direction` must be list**: Single string `"maximize"` for single-objective; list `["maximize", "minimize"]` for multi.
+4. **Ask-and-Tell: don't forget `trial.suggest_*()`**: `study.ask()` returns a FrozenTrial; you still call `suggest_*` on it.
+5. **Study deletion**: `delete_study()` requires storage reference; in-memory studies are auto-deleted at process exit.
+
+## Verification Checklist
+
+- [ ] `direction` or `directions` matches optimization goal
+- [ ] `storage` is set for persistent studies
+- [ ] `load_if_exists=True` when resuming
+- [ ] Callbacks are non-blocking and exception-safe
+- [ ] `timeout` is set as safety net for long-running optimizations
+
+## References
+
+- Source: `optuna/study/__init__.py`, `optuna/study/study.py`
+- `references/api.md` — Full study API surface from knowledge graph

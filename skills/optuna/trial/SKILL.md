@@ -1,0 +1,117 @@
+---
+name: optuna-trial
+description: Use when working with Optuna Trial parameter suggestion and pruning — Trial.suggest_float, suggest_int, suggest_categorical, suggest_loguniform, should_prune, report. Covers parameter space definition, conditional parameters, and intermediate value reporting.
+version: 0.1.0
+author: quant-kg-lab
+license: MIT
+source_repo: optuna/optuna
+source_version: master
+extraction_date: 2026-07-29
+graph_hash: 3912_nodes_8405_edges
+graph_stats:
+  nodes: 3912
+  edges: 8405
+  communities: 228
+metadata:
+  hermes:
+    tags: [optuna, hyperparameter-optimization, trial]
+    related_skills: [optuna-samplers, optuna-pruners, optuna-study, optuna-trial, optuna-visualization, optuna-integration, optuna-distributions]
+---
+
+# Optuna Trial
+
+Extracted from optuna knowledge graph. Source: `optuna.trial` module.
+
+## Quick Reference
+
+| API | Purpose | Parameters |
+|-----|---------|------------|
+| `Trial.suggest_float()` | Suggest a floating-point parameter | `name`, `low`, `high`, `step`, `log` |
+| `Trial.suggest_int()` | Suggest an integer parameter | `name`, `low`, `high`, `step`, `log` |
+| `Trial.suggest_categorical()` | Suggest a categorical choice | `name`, `choices` |
+| `Trial.suggest_uniform()` | Deprecated: use `suggest_float` | `name`, `low`, `high` |
+| `Trial.suggest_loguniform()` | Deprecated: use `suggest_float(log=True)` | `name`, `low`, `high` |
+| `Trial.suggest_discrete_uniform()` | Deprecated: use `suggest_float(step=...)` | `name`, `low`, `high`, `q` |
+| `Trial.should_prune()` | Check if trial should be pruned | — |
+| `Trial.report()` | Report intermediate objective value | `value`, `step` |
+| `Trial.set_user_attr()` | Attach custom metadata to trial | `key`, `value` |
+| `Trial.params` | Access current trial parameters | — (property) |
+
+## Common Patterns
+
+### Parameter Suggestion
+```python
+def objective(trial):
+    # Float with log scale
+    lr = trial.suggest_float("lr", 1e-5, 1e-2, log=True)
+    
+    # Integer with step
+    n_units = trial.suggest_int("n_units", 16, 256, step=16)
+    
+    # Categorical choice
+    optimizer = trial.suggest_categorical("optimizer", ["adam", "sgd", "rmsprop"])
+    
+    # Float with discrete step
+    dropout = trial.suggest_float("dropout", 0.0, 0.5, step=0.05)
+    
+    return train_and_evaluate(lr, n_units, optimizer, dropout)
+```
+
+### Conditional Parameters
+```python
+def objective(trial):
+    model_type = trial.suggest_categorical("model", ["cnn", "rnn"])
+    
+    if model_type == "cnn":
+        n_filters = trial.suggest_int("n_filters", 32, 256)
+        kernel_size = trial.suggest_int("kernel_size", 3, 7)
+        return train_cnn(n_filters, kernel_size)
+    else:
+        n_units = trial.suggest_int("n_units", 64, 512)
+        n_layers = trial.suggest_int("n_layers", 1, 4)
+        return train_rnn(n_units, n_layers)
+```
+
+### Pruning with Intermediate Reports
+```python
+def objective(trial):
+    lr = trial.suggest_float("lr", 1e-5, 1e-2, log=True)
+    
+    for epoch in range(100):
+        val = train_one_epoch(lr, epoch)
+        trial.report(val, epoch)
+        
+        if trial.should_prune():
+            raise optuna.TrialPruned()
+    
+    return val
+```
+
+### User Attributes for Metadata
+```python
+def objective(trial):
+    trial.set_user_attr("model_size_mb", model_size)
+    trial.set_user_attr("gpu", gpu_name)
+    # ... training
+```
+
+## Pitfalls
+
+1. **Deprecated suggest methods**: `suggest_uniform`, `suggest_loguniform`, `suggest_discrete_uniform` are deprecated since Optuna v3.0. Use `suggest_float` with appropriate kwargs.
+2. **Forgetting `raise TrialPruned()`**: `trial.should_prune()` returns True/False but doesn't stop execution. Must raise `optuna.TrialPruned`.
+3. **Non-deterministic parameter suggestion**: Calling `suggest_*` with the same name but different ranges crashes. Use conditional logic to avoid re-definition.
+4. **`step` and `log` are mutually exclusive**: Cannot use both `step` and `log=True` in `suggest_float`.
+5. **Trial objects are single-use**: Each call to `objective(trial)` gets a fresh `Trial` instance.
+
+## Verification Checklist
+
+- [ ] All `suggest_*()` calls use `suggest_float`/`suggest_int`/`suggest_categorical` (not deprecated methods)
+- [ ] Parameter names are unique within each trial
+- [ ] `trial.report()` is called at regular intervals if using pruning
+- [ ] `optuna.TrialPruned` is raised after `trial.should_prune()` returns `True`
+- [ ] Conditional parameters don't re-define the same name with different bounds
+
+## References
+
+- Source: `optuna/trial/__init__.py`, `optuna/trial/_trial.py`
+- `references/api.md` — Full trial API surface from knowledge graph
