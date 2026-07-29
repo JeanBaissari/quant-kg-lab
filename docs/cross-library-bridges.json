@@ -1,0 +1,41 @@
+{
+  "bridges": [
+    {
+      "sklearn": "Callable to pass to GridSearchCV that will use the BIC score. (examples/mixture/plot_gmm_selection.py)",
+      "optuna": "Set a maximum number of trials before ending the study.      While the ``n_trial (optuna/_callbacks.py)",
+      "relation": "related_to",
+      "description": "GridSearchCV performs exhaustive hyperparameter search; Optuna Study performs Bayesian optimization for the same purpose"
+    },
+    {
+      "sklearn": "RandomizedSearchCV (sklearn/model_selection/_search.py)",
+      "optuna": "TPESampler (optuna/samplers/_tpe/sampler.py)",
+      "relation": "related_to",
+      "description": "RandomizedSearchCV samples randomly from param distributions; TPESampler uses Tree-structured Parzen Estimator for guided sampling"
+    },
+    {
+      "sklearn": "cross_val_score() (sklearn/model_selection/_validation.py)",
+      "optuna": "Progress Bar implementation for :func:`~optuna.study.Study.optimize` on the top (optuna/progress_bar.py)",
+      "relation": "related_to",
+      "description": "cross_val_score evaluates via cross-validation; Study.optimize evaluates via sequential trial-based optimization"
+    },
+    {
+      "sklearn": "BaseEstimator ()",
+      "optuna": "BaseDistribution (optuna/distributions.py)",
+      "relation": "related_to",
+      "description": "BaseEstimator is scikit-learn's root estimator class; BaseDistribution is optuna's root parameter distribution class"
+    },
+    {
+      "sklearn": "plot_feature_selection_pipeline.py (examples/feature_selection/plot_feature_selection_pipeline.py)",
+      "optuna": "Set a maximum number of trials before ending the study.      While the ``n_trial (optuna/_callbacks.py)",
+      "relation": "related_to",
+      "description": "Pipeline chains preprocessing and estimation steps; Study chains hyperparameter suggestions and evaluations"
+    },
+    {
+      "sklearn": "HalvingGridSearchCV (sklearn/model_selection/_search_successive_halving.py)",
+      "optuna": "SuccessiveHalvingPruner (optuna/pruners/_successive_halving.py)",
+      "relation": "related_to",
+      "description": "HalvingGridSearchCV uses successive halving for resource allocation; SuccessiveHalvingPruner prunes unpromising trials"
+    }
+  ],
+  "total": 6
+}
