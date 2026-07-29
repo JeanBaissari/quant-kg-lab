@@ -1,0 +1,36 @@
+name: Skill Validation
+
+on:
+  push:
+    paths:
+      - 'skills/**'
+      - 'scripts/validate_skills.py'
+  pull_request:
+    paths:
+      - 'skills/**'
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install core libraries for validation
+        run: |
+          pip install scikit-learn optuna numpy scipy pandas
+      
+      - name: Validate skills against live APIs
+        run: |
+          python scripts/validate_skills.py --ci
+      
+      - name: Upload validation report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: skill-validation-report
+          path: docs/skill-validation-report.json
