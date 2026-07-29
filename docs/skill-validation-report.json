@@ -1,0 +1,420 @@
+{
+  "skills/optuna/SKILL.md": {
+    "passed": [],
+    "failed": [
+      "class:BoTorchSampler \u2014 NOT FOUND in optuna (53 symbols searched)",
+      "class:CmaEsSampler \u2014 NOT FOUND in optuna (53 symbols searched)",
+      "class:GridSampler \u2014 NOT FOUND in optuna (53 symbols searched)",
+      "class:NSGAIISampler \u2014 NOT FOUND in optuna (53 symbols searched)",
+      "class:RandomSampler \u2014 NOT FOUND in optuna (53 symbols searched)",
+      "class:TPESampler \u2014 NOT FOUND in optuna (53 symbols searched)"
+    ],
+    "skipped": []
+  },
+  "skills/quant-patterns/factor-importance/SKILL.md": {
+    "passed": [],
+    "failed": [],
+    "skipped": [
+      "Unknown library: quant-patterns"
+    ]
+  },
+  "skills/quant-patterns/hpo-optimization/SKILL.md": {
+    "passed": [],
+    "failed": [],
+    "skipped": [
+      "Unknown library: quant-patterns"
+    ]
+  },
+  "skills/quant-patterns/portfolio-construction/SKILL.md": {
+    "passed": [],
+    "failed": [],
+    "skipped": [
+      "Unknown library: quant-patterns"
+    ]
+  },
+  "skills/quant-patterns/regime-detection/SKILL.md": {
+    "passed": [],
+    "failed": [],
+    "skipped": [
+      "Unknown library: quant-patterns"
+    ]
+  },
+  "skills/quant-patterns/walk-forward-validation/SKILL.md": {
+    "passed": [],
+    "failed": [],
+    "skipped": [
+      "Unknown library: quant-patterns"
+    ]
+  },
+  "skills/scikit-learn/SKILL.md": {
+    "passed": [
+      "class:GridSearchCV \u2192 sklearn.model_selection.GridSearchCV",
+      "class:RandomizedSearchCV \u2192 sklearn.model_selection.RandomizedSearchCV",
+      "func:cross_val_score \u2192 sklearn.model_selection.cross_val_score",
+      "func:cross_validate \u2192 sklearn.model_selection.cross_validate",
+      "func:train_test_split \u2192 sklearn.model_selection.train_test_split"
+    ],
+    "failed": [],
+    "skipped": []
+  },
+  "skills/scikit-learn/cluster/SKILL.md": {
+    "passed": [
+      "class:AffinityPropagation \u2192 sklearn.cluster.AffinityPropagation",
+      "class:AgglomerativeClustering \u2192 sklearn.cluster.AgglomerativeClustering",
+      "class:Birch \u2192 sklearn.cluster.Birch",
+      "class:BisectingKMeans \u2192 sklearn.cluster.BisectingKMeans",
+      "class:DBSCAN \u2192 sklearn.cluster.DBSCAN",
+      "class:HDBSCAN \u2192 sklearn.cluster.HDBSCAN",
+      "class:KMeans \u2192 sklearn.cluster.KMeans",
+      "class:MeanShift \u2192 sklearn.cluster.MeanShift",
+      "class:MiniBatchKMeans \u2192 sklearn.cluster.MiniBatchKMeans",
+      "class:OPTICS \u2192 sklearn.cluster.OPTICS",
+      "class:SpectralBiclustering \u2192 sklearn.cluster.SpectralBiclustering",
+      "class:SpectralClustering \u2192 sklearn.cluster.SpectralClustering",
+      "class:SpectralCoclustering \u2192 sklearn.cluster.SpectralCoclustering",
+      "func:AgglomerativeClustering \u2192 sklearn.cluster.AgglomerativeClustering",
+      "func:DBSCAN \u2192 sklearn.cluster.DBSCAN",
+      "func:HDBSCAN \u2192 sklearn.cluster.HDBSCAN",
+      "func:KMeans \u2192 sklearn.cluster.KMeans",
+      "func:MiniBatchKMeans \u2192 sklearn.cluster.MiniBatchKMeans",
+      "func:SpectralCoclustering \u2192 sklearn.cluster.SpectralCoclustering",
+      "func:StandardScaler \u2192 sklearn.discriminant_analysis.StandardScaler",
+      "func:make_pipeline \u2192 sklearn.pipeline.make_pipeline"
+    ],
+    "failed": [],
+    "skipped": []
+  },
+  "skills/scikit-learn/compose/SKILL.md": {
+    "passed": [
+      "class:ColumnTransformer \u2192 sklearn.compose.ColumnTransformer",
+      "class:FeatureUnion \u2192 sklearn.pipeline.FeatureUnion",
+      "class:GridSearchCV \u2192 sklearn.model_selection.GridSearchCV",
+      "class:Pipeline \u2192 sklearn.pipeline.Pipeline",
+      "class:TransformedTargetRegressor \u2192 sklearn.compose.TransformedTargetRegressor",
+      "func:make_column_selector \u2192 sklearn.compose.make_column_selector",
+      "func:make_column_transformer \u2192 sklearn.compose.make_column_transformer",
+      "func:make_pipeline \u2192 sklearn.pipeline.make_pipeline",
+      "func:make_union \u2192 sklearn.pipeline.make_union"
+    ],
+    "failed": [],
+    "skipped": []
+  },
+  "skills/scikit-learn/decomposition/SKILL.md": {
+    "passed": [
+      "class:DictionaryLearning \u2192 sklearn.decomposition.DictionaryLearning",
+      "class:FactorAnalysis \u2192 sklearn.decomposition.FactorAnalysis",
+      "class:FastICA \u2192 sklearn.decomposition.FastICA",
+      "class:IncrementalPCA \u2192 sklearn.decomposition.IncrementalPCA",
+      "class:KernelPCA \u2192 sklearn.decomposition.KernelPCA",
+      "class:LatentDirichletAllocation \u2192 sklearn.decomposition.LatentDirichletAllocation",
+      "class:MiniBatchDictionaryLearning \u2192 sklearn.decomposition.MiniBatchDictionaryLearning",
+      "class:MiniBatchSparsePCA \u2192 sklearn.decomposition.MiniBatchSparsePCA",
+      "class:NMF \u2192 sklearn.decomposition.NMF",
+      "class:PCA \u2192 sklearn.decomposition.PCA",
+      "class:SparsePCA \u2192 sklearn.decomposition.SparsePCA",
+      "class:TruncatedSVD \u2192 sklearn.decomposition.TruncatedSVD"
+    ],
+    "failed": [],
+    "skipped": []
+  },
+  "skills/scikit-learn/ensemble/SKILL.md": {
+    "passed": [
+      "class:AdaBoostClassifier \u2192 sklearn.ensemble.AdaBoostClassifier",
+      "class:AdaBoostRegressor \u2192 sklearn.ensemble.AdaBoostRegressor",
+      "class:BaggingClassifier \u2192 sklearn.ensemble.BaggingClassifier",
+      "class:BaggingRegressor \u2192 sklearn.ensemble.BaggingRegressor",
+      "class:ExtraTreesClassifier \u2192 sklearn.ensemble.ExtraTreesClassifier",
+      "class:GradientBoostingClassifier \u2192 sklearn.ensemble.GradientBoostingClassifier",
+      "class:GradientBoostingRegressor \u2192 sklearn.ensemble.GradientBoostingRegressor",
+      "class:HistGradientBoostingClassifier \u2192 sklearn.ensemble.HistGradientBoostingClassifier",
+      "class:HistGradientBoostingRegressor \u2192 sklearn.ensemble.HistGradientBoostingRegressor",
+      "class:IsolationForest \u2192 sklearn.ensemble.IsolationForest",
+      "class:RandomForestClassifier \u2192 sklearn.ensemble.RandomForestClassifier",
+      "class:RandomForestRegressor \u2192 sklearn.ensemble.RandomForestRegressor",
+      "class:StackingClassifier \u2192 sklearn.ensemble.StackingClassifier",
+      "class:StackingRegressor \u2192 sklearn.ensemble.StackingRegressor",
+      "class:VotingClassifier \u2192 sklearn.ensemble.VotingClassifier",
+      "class:VotingRegressor \u2192 sklearn.ensemble.VotingRegressor",
+      "func:GradientBoostingRegressor \u2192 sklearn.ensemble.GradientBoostingRegressor",
+      "func:HistGradientBoostingRegressor \u2192 sklearn.ensemble.HistGradientBoostingRegressor",
+      "func:RandomForestRegressor \u2192 sklearn.ensemble.RandomForestRegressor",
+      "func:Ridge \u2192 sklearn.linear_model.Ridge",
+      "func:StackingRegressor \u2192 sklearn.ensemble.StackingRegressor"
+    ],
+    "failed": [],
+    "skipped": []
+  },
+  "skills/scikit-learn/feature_selection/SKILL.md": {
+    "passed": [
+      "class:GenericUnivariateSelect \u2192 sklearn.feature_selection.GenericUnivariateSelect",
+      "class:RFE \u2192 sklearn.feature_selection.RFE",
+      "class:RFECV \u2192 sklearn.feature_selection.RFECV",
+      "class:SelectFdr \u2192 sklearn.feature_selection.SelectFdr",
+      "class:SelectFpr \u2192 sklearn.feature_selection.SelectFpr",
+      "class:SelectFromModel \u2192 sklearn.feature_selection.SelectFromModel",
+      "class:SelectFwe \u2192 sklearn.feature_selection.SelectFwe",
+      "class:SelectKBest \u2192 sklearn.feature_selection.SelectKBest",
+      "class:SelectPercentile \u2192 sklearn.feature_selection.SelectPercentile",
+      "class:SelectorMixin \u2192 sklearn.feature_selection.SelectorMixin",
+      "class:SequentialFeatureSelector \u2192 sklearn.feature_selection.SequentialFeatureSelector",
+      "class:VarianceThreshold \u2192 sklearn.feature_selection.VarianceThreshold",
+      "func:chi2 \u2192 sklearn.feature_selection.chi2",
+      "func:f_classif \u2192 sklearn.feature_selection.f_classif",
+      "func:f_oneway \u2192 sklearn.feature_selection.f_oneway",
+      "func:f_regression \u2192 sklearn.feature_selection.f_regression",
+      "func:mutual_info_classif \u2192 sklearn.feature_selection.mutual_info_classif",
+      "func:mutual_info_regression \u2192 sklearn.feature_selection.mutual_info_regression",
+      "func:r_regression \u2192 sklearn.feature_selection.r_regression"
+    ],
+    "failed": [],
+    "skipped": []
+  },
+  "skills/scikit-learn/gaussian_process/SKILL.md": {
+    "passed": [
+      "class:GaussianProcessClassifier \u2192 sklearn.gaussian_process.GaussianProcessClassifier",
+      "class:GaussianProcessRegressor \u2192 sklearn.gaussian_process.GaussianProcessRegressor",
+      "class:GradientBoostingRegressor \u2192 sklearn.ensemble.GradientBoostingRegressor",
+      "class:RandomForestRegressor \u2192 sklearn.ensemble.RandomForestRegressor",
+      "func:GaussianProcessClassifier \u2192 sklearn.gaussian_process.GaussianProcessClassifier",
+      "func:GaussianProcessRegressor \u2192 sklearn.gaussian_process.GaussianProcessRegressor"
+    ],
+    "failed": [
+      "class:ConstantKernel \u2014 NOT FOUND in scikit-learn (466 symbols searched)",
+      "class:DotProduct \u2014 NOT FOUND in scikit-learn (466 symbols searched)",
+      "class:ExpSineSquared \u2014 NOT FOUND in scikit-learn (466 symbols searched)",
+      "class:Hyperparameter \u2014 NOT FOUND in scikit-learn (466 symbols searched)",
+      "class:Kernel \u2014 NOT FOUND in scikit-learn (466 symbols searched)",
+      "class:Matern \u2014 NOT FOUND in scikit-learn (466 symbols searched)",
+      "class:RBF \u2014 NOT FOUND in scikit-learn (466 symbols searched)",
+      "class:RationalQuadratic \u2014 NOT FOUND in scikit-learn (466 symbols searched)",
+      "class:WhiteKernel \u2014 NOT FOUND in scikit-learn (466 symbols searched)"
+    ],
+    "skipped": []
+  },
+  "skills/scikit-learn/impute/SKILL.md": {
+    "passed": [
+      "class:KNNImputer \u2192 sklearn.impute.KNNImputer",
+      "class:MissingIndicator \u2192 sklearn.impute.MissingIndicator",
+      "class:SimpleImputer \u2192 sklearn.impute.SimpleImputer",
+      "func:BayesianRidge \u2192 sklearn.linear_model.BayesianRidge",
+      "func:ColumnTransformer \u2192 sklearn.compose.ColumnTransformer",
+      "func:KNNImputer \u2192 sklearn.impute.KNNImputer",
+      "func:MissingIndicator \u2192 sklearn.impute.MissingIndicator",
+      "func:RandomForestRegressor \u2192 sklearn.ensemble.RandomForestRegressor",
+      "func:SimpleImputer \u2192 sklearn.impute.SimpleImputer",
+      "func:make_pipeline \u2192 sklearn.pipeline.make_pipeline",
+      "func:make_union \u2192 sklearn.pipeline.make_union"
+    ],
+    "failed": [
+      "class:IterativeImputer \u2014 NOT FOUND in scikit-learn (466 symbols searched)"
+    ],
+    "skipped": []
+  },
+  "skills/scikit-learn/linear_model/SKILL.md": {
+    "passed": [
+      "class:ARDRegression \u2192 sklearn.linear_model.ARDRegression",
+      "class:BayesianRidge \u2192 sklearn.linear_model.BayesianRidge",
+      "class:ElasticNet \u2192 sklearn.linear_model.ElasticNet",
+      "class:ElasticNetCV \u2192 sklearn.linear_model.ElasticNetCV",
+      "class:GammaRegressor \u2192 sklearn.linear_model.GammaRegressor",
+      "class:HuberRegressor \u2192 sklearn.linear_model.HuberRegressor",
+      "class:Lars \u2192 sklearn.linear_model.Lars",
+      "class:LarsCV \u2192 sklearn.linear_model.LarsCV",
+      "class:Lasso \u2192 sklearn.linear_model.Lasso",
+      "class:LassoCV \u2192 sklearn.linear_model.LassoCV",
+      "class:LassoLars \u2192 sklearn.linear_model.LassoLars",
+      "class:LassoLarsCV \u2192 sklearn.linear_model.LassoLarsCV",
+      "class:LinearRegression \u2192 sklearn.linear_model.LinearRegression",
+      "class:LogisticRegression \u2192 sklearn.linear_model.LogisticRegression",
+      "class:LogisticRegressionCV \u2192 sklearn.linear_model.LogisticRegressionCV",
+      "class:MultiTaskElasticNet \u2192 sklearn.linear_model.MultiTaskElasticNet",
+      "class:MultiTaskLasso \u2192 sklearn.linear_model.MultiTaskLasso",
+      "class:OrthogonalMatchingPursuit \u2192 sklearn.linear_model.OrthogonalMatchingPursuit",
+      "class:PassiveAggressiveClassifier \u2192 sklearn.linear_model.PassiveAggressiveClassifier",
+      "class:PassiveAggressiveRegressor \u2192 sklearn.linear_model.PassiveAggressiveRegressor",
+      "class:Perceptron \u2192 sklearn.linear_model.Perceptron",
+      "class:PoissonRegressor \u2192 sklearn.linear_model.PoissonRegressor",
+      "class:QuantileRegressor \u2192 sklearn.linear_model.QuantileRegressor",
+      "class:RANSACRegressor \u2192 sklearn.linear_model.RANSACRegressor",
+      "class:Ridge \u2192 sklearn.linear_model.Ridge",
+      "class:RidgeCV \u2192 sklearn.linear_model.RidgeCV",
+      "class:RidgeClassifier \u2192 sklearn.linear_model.RidgeClassifier",
+      "class:RidgeClassifierCV \u2192 sklearn.linear_model.RidgeClassifierCV",
+      "class:SGDClassifier \u2192 sklearn.linear_model.SGDClassifier",
+      "class:SGDOneClassSVM \u2192 sklearn.linear_model.SGDOneClassSVM",
+      "class:SGDRegressor \u2192 sklearn.linear_model.SGDRegressor",
+      "class:TheilSenRegressor \u2192 sklearn.linear_model.TheilSenRegressor",
+      "class:TweedieRegressor \u2192 sklearn.linear_model.TweedieRegressor"
+    ],
+    "failed": [],
+    "skipped": []
+  },
+  "skills/scikit-learn/metrics/SKILL.md": {
+    "passed": [
+      "func:accuracy_score \u2192 sklearn.metrics.accuracy_score",
+      "func:adjusted_rand_score \u2192 sklearn.metrics.adjusted_rand_score",
+      "func:balanced_accuracy_score \u2192 sklearn.metrics.balanced_accuracy_score",
+      "func:brier_score_loss \u2192 sklearn.metrics.brier_score_loss",
+      "func:calinski_harabasz_score \u2192 sklearn.metrics.calinski_harabasz_score",
+      "func:classification_report \u2192 sklearn.metrics.classification_report",
+      "func:cohen_kappa_score \u2192 sklearn.metrics.cohen_kappa_score",
+      "func:confusion_matrix \u2192 sklearn.metrics.confusion_matrix",
+      "func:d2_tweedie_score \u2192 sklearn.metrics.d2_tweedie_score",
+      "func:davies_bouldin_score \u2192 sklearn.metrics.davies_bouldin_score",
+      "func:euclidean_distances \u2192 sklearn.metrics.euclidean_distances",
+      "func:explained_variance_score \u2192 sklearn.metrics.explained_variance_score",
+      "func:f1_score \u2192 sklearn.metrics.f1_score",
+      "func:fbeta_score \u2192 sklearn.metrics.fbeta_score",
+      "func:get_scorer \u2192 sklearn.metrics.get_scorer",
+      "func:hamming_loss \u2192 sklearn.metrics.hamming_loss",
+      "func:jaccard_score \u2192 sklearn.metrics.jaccard_score",
+      "func:log_loss \u2192 sklearn.metrics.log_loss",
+      "func:make_scorer \u2192 sklearn.metrics.make_scorer",
+      "func:matthews_corrcoef \u2192 sklearn.metrics.matthews_corrcoef",
+      "func:max_error \u2192 sklearn.metrics.max_error",
+      "func:mean_absolute_error \u2192 sklearn.metrics.mean_absolute_error",
+      "func:mean_absolute_percentage_error \u2192 sklearn.metrics.mean_absolute_percentage_error",
+      "func:mean_gamma_deviance \u2192 sklearn.metrics.mean_gamma_deviance",
+      "func:mean_poisson_deviance \u2192 sklearn.metrics.mean_poisson_deviance",
+      "func:mean_squared_error \u2192 sklearn.metrics.mean_squared_error",
+      "func:mean_squared_log_error \u2192 sklearn.metrics.mean_squared_log_error",
+      "func:mean_tweedie_deviance \u2192 sklearn.metrics.mean_tweedie_deviance",
+      "func:normalized_mutual_info_score \u2192 sklearn.metrics.normalized_mutual_info_score",
+      "func:pairwise_distances \u2192 sklearn.metrics.pairwise_distances",
+      "func:precision_score \u2192 sklearn.metrics.precision_score",
+      "func:r2_score \u2192 sklearn.metrics.r2_score",
+      "func:recall_score \u2192 sklearn.metrics.recall_score",
+      "func:roc_auc_score \u2192 sklearn.metrics.roc_auc_score",
+      "func:root_mean_squared_error \u2192 sklearn.metrics.root_mean_squared_error",
+      "func:silhouette_score \u2192 sklearn.metrics.silhouette_score",
+      "func:top_k_accuracy_score \u2192 sklearn.metrics.top_k_accuracy_score",
+      "func:zero_one_loss \u2192 sklearn.metrics.zero_one_loss"
+    ],
+    "failed": [],
+    "skipped": []
+  },
+  "skills/scikit-learn/model_selection/SKILL.md": {
+    "passed": [
+      "class:GridSearchCV \u2192 sklearn.model_selection.GridSearchCV",
+      "class:GroupKFold \u2192 sklearn.model_selection.GroupKFold",
+      "class:GroupShuffleSplit \u2192 sklearn.model_selection.GroupShuffleSplit",
+      "class:KFold \u2192 sklearn.model_selection.KFold",
+      "class:LearningCurveDisplay \u2192 sklearn.model_selection.LearningCurveDisplay",
+      "class:LeaveOneOut \u2192 sklearn.calibration.LeaveOneOut",
+      "class:LeavePOut \u2192 sklearn.model_selection.LeavePOut",
+      "class:ParameterGrid \u2192 sklearn.model_selection.ParameterGrid",
+      "class:ParameterSampler \u2192 sklearn.model_selection.ParameterSampler",
+      "class:PredefinedSplit \u2192 sklearn.model_selection.PredefinedSplit",
+      "class:RandomizedSearchCV \u2192 sklearn.model_selection.RandomizedSearchCV",
+      "class:RepeatedKFold \u2192 sklearn.model_selection.RepeatedKFold",
+      "class:RepeatedStratifiedKFold \u2192 sklearn.model_selection.RepeatedStratifiedKFold",
+      "class:ShuffleSplit \u2192 sklearn.model_selection.ShuffleSplit",
+      "class:StratifiedKFold \u2192 sklearn.model_selection.StratifiedKFold",
+      "class:StratifiedShuffleSplit \u2192 sklearn.model_selection.StratifiedShuffleSplit",
+      "class:TimeSeriesSplit \u2192 sklearn.model_selection.TimeSeriesSplit",
+      "class:TunedThresholdClassifierCV \u2192 sklearn.model_selection.TunedThresholdClassifierCV",
+      "class:ValidationCurveDisplay \u2192 sklearn.model_selection.ValidationCurveDisplay",
+      "func:check_cv \u2192 sklearn.calibration.check_cv",
+      "func:cross_val_score \u2192 sklearn.model_selection.cross_val_score",
+      "func:cross_validate \u2192 sklearn.model_selection.cross_validate",
+      "func:learning_curve \u2192 sklearn.model_selection.learning_curve",
+      "func:train_test_split \u2192 sklearn.model_selection.train_test_split",
+      "func:validation_curve \u2192 sklearn.model_selection.validation_curve"
+    ],
+    "failed": [
+      "class:BaseSearchCV \u2014 NOT FOUND in scikit-learn (466 symbols searched)",
+      "class:HalvingGridSearchCV \u2014 NOT FOUND in scikit-learn (466 symbols searched)",
+      "class:HalvingRandomSearchCV \u2014 NOT FOUND in scikit-learn (466 symbols searched)"
+    ],
+    "skipped": []
+  },
+  "skills/scikit-learn/neural_network/SKILL.md": {
+    "passed": [
+      "class:BernoulliRBM \u2192 sklearn.neural_network.BernoulliRBM",
+      "class:MLPClassifier \u2192 sklearn.neural_network.MLPClassifier",
+      "class:MLPRegressor \u2192 sklearn.neural_network.MLPRegressor",
+      "class:MinMaxScaler \u2192 sklearn.preprocessing.MinMaxScaler",
+      "class:StandardScaler \u2192 sklearn.discriminant_analysis.StandardScaler",
+      "func:MLPClassifier \u2192 sklearn.neural_network.MLPClassifier",
+      "func:MLPRegressor \u2192 sklearn.neural_network.MLPRegressor",
+      "func:StandardScaler \u2192 sklearn.discriminant_analysis.StandardScaler",
+      "func:make_pipeline \u2192 sklearn.pipeline.make_pipeline"
+    ],
+    "failed": [
+      "class:BaseMultilayerPerceptron \u2014 NOT FOUND in scikit-learn (466 symbols searched)"
+    ],
+    "skipped": []
+  },
+  "skills/scikit-learn/preprocessing/SKILL.md": {
+    "passed": [
+      "class:Binarizer \u2192 sklearn.preprocessing.Binarizer",
+      "class:FunctionTransformer \u2192 sklearn.pipeline.FunctionTransformer",
+      "class:KBinsDiscretizer \u2192 sklearn.preprocessing.KBinsDiscretizer",
+      "class:LabelBinarizer \u2192 sklearn.multiclass.LabelBinarizer",
+      "class:LabelEncoder \u2192 sklearn.calibration.LabelEncoder",
+      "class:MaxAbsScaler \u2192 sklearn.preprocessing.MaxAbsScaler",
+      "class:MinMaxScaler \u2192 sklearn.preprocessing.MinMaxScaler",
+      "class:Normalizer \u2192 sklearn.preprocessing.Normalizer",
+      "class:OneHotEncoder \u2192 sklearn.preprocessing.OneHotEncoder",
+      "class:OrdinalEncoder \u2192 sklearn.preprocessing.OrdinalEncoder",
+      "class:PolynomialFeatures \u2192 sklearn.preprocessing.PolynomialFeatures",
+      "class:PowerTransformer \u2192 sklearn.preprocessing.PowerTransformer",
+      "class:QuantileTransformer \u2192 sklearn.preprocessing.QuantileTransformer",
+      "class:RobustScaler \u2192 sklearn.preprocessing.RobustScaler",
+      "class:SplineTransformer \u2192 sklearn.preprocessing.SplineTransformer",
+      "class:StandardScaler \u2192 sklearn.discriminant_analysis.StandardScaler",
+      "class:TargetEncoder \u2192 sklearn.preprocessing.TargetEncoder",
+      "func:add_dummy_feature \u2192 sklearn.preprocessing.add_dummy_feature",
+      "func:binarize \u2192 sklearn.naive_bayes.binarize",
+      "func:label_binarize \u2192 sklearn.calibration.label_binarize",
+      "func:maxabs_scale \u2192 sklearn.preprocessing.maxabs_scale",
+      "func:minmax_scale \u2192 sklearn.preprocessing.minmax_scale",
+      "func:normalize \u2192 sklearn.preprocessing.normalize",
+      "func:power_transform \u2192 sklearn.preprocessing.power_transform",
+      "func:quantile_transform \u2192 sklearn.preprocessing.quantile_transform",
+      "func:robust_scale \u2192 sklearn.preprocessing.robust_scale",
+      "func:scale \u2192 sklearn.preprocessing.scale"
+    ],
+    "failed": [],
+    "skipped": []
+  },
+  "skills/scikit-learn/svm/SKILL.md": {
+    "passed": [
+      "class:LinearSVC \u2192 sklearn.calibration.LinearSVC",
+      "class:LinearSVR \u2192 sklearn.svm.LinearSVR",
+      "class:NuSVC \u2192 sklearn.svm.NuSVC",
+      "class:NuSVR \u2192 sklearn.svm.NuSVR",
+      "class:OneClassSVM \u2192 sklearn.svm.OneClassSVM",
+      "class:SVC \u2192 sklearn.svm.SVC",
+      "class:SVR \u2192 sklearn.svm.SVR",
+      "class:StandardScaler \u2192 sklearn.discriminant_analysis.StandardScaler",
+      "func:LinearSVC \u2192 sklearn.calibration.LinearSVC",
+      "func:OneClassSVM \u2192 sklearn.svm.OneClassSVM",
+      "func:SVC \u2192 sklearn.svm.SVC",
+      "func:SVR \u2192 sklearn.svm.SVR",
+      "func:StandardScaler \u2192 sklearn.discriminant_analysis.StandardScaler",
+      "func:make_pipeline \u2192 sklearn.pipeline.make_pipeline"
+    ],
+    "failed": [
+      "class:BaseLibSVM \u2014 NOT FOUND in scikit-learn (466 symbols searched)",
+      "class:BaseSVC \u2014 NOT FOUND in scikit-learn (466 symbols searched)"
+    ],
+    "skipped": []
+  },
+  "skills/scikit-learn/tree/SKILL.md": {
+    "passed": [
+      "class:BaseDecisionTree \u2192 sklearn.tree.BaseDecisionTree",
+      "class:DecisionTreeClassifier \u2192 sklearn.tree.DecisionTreeClassifier",
+      "class:DecisionTreeRegressor \u2192 sklearn.tree.DecisionTreeRegressor",
+      "class:ExtraTreeClassifier \u2192 sklearn.tree.ExtraTreeClassifier",
+      "class:ExtraTreeRegressor \u2192 sklearn.tree.ExtraTreeRegressor",
+      "func:DecisionTreeClassifier \u2192 sklearn.tree.DecisionTreeClassifier",
+      "func:DecisionTreeRegressor \u2192 sklearn.tree.DecisionTreeRegressor",
+      "func:export_graphviz \u2192 sklearn.tree.export_graphviz",
+      "func:export_text \u2192 sklearn.tree.export_text",
+      "func:plot_tree \u2192 sklearn.tree.plot_tree"
+    ],
+    "failed": [],
+    "skipped": []
+  }
+}
