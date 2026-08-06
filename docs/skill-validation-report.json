@@ -155,7 +155,25 @@
       "api_warn": [],
       "provenance": []
     },
+    "skills/quant-patterns/factor-research/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "provenance": []
+    },
+    "skills/quant-patterns/full-pipeline/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "provenance": []
+    },
     "skills/quant-patterns/hpo-optimization/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "provenance": []
+    },
+    "skills/quant-patterns/ml-strategy/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],

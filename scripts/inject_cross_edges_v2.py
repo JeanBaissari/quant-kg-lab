@@ -1,153 +1,135 @@
 #!/usr/bin/env python3
-"""Inject cross-library edges across ALL 10 knowledge graphs.
+"""Resolve curated cross-library bridges to real graph nodes and (optionally) write
+them as a cross-library OVERLAY graph.
 
-Expanded from the original sklearn↔optuna bridges to cover the full ecosystem.
+Unlike the previous version (which substring-matched labels and happily resolved
+bridges to benchmark/test/docstring/Cython nodes), this one:
+  * matches endpoints PRECISELY — exact label first, code nodes only, excluding
+    test/benchmark/example/binding-internal noise (see docs/GRAPH_SPEC.md §6);
+  * writes a real overlay graph (nodes namespaced `<lib>::<id>`, links = bridges)
+    to knowledge_graphs/_cross_library/.graphify/graph.json with `--apply`.
 
-Usage: python scripts/inject_cross_edges_v2.py
+On the CURRENT (pre-rebuild, noisy) graphs many endpoints legitimately fail to
+resolve to a clean node — that is honest signal, not a bug. Re-run after the
+Phase-1 rebuild (clean graphs) to get the full overlay.
+
+Usage:
+  python scripts/inject_cross_edges_v2.py            # dry run: report resolution
+  python scripts/inject_cross_edges_v2.py --apply    # write the overlay graph
 """
-import json
+import sys, json
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 KG_DIR = REPO_ROOT / "knowledge_graphs"
 
-# Format: (library_a, node_label_a, library_b, node_label_b, relation, description)
+NOISE = ("tests/", "/test", "test_", "benchmarks/", "asv_bench", "bench_", "examples/",
+         "r-package", "apps/", "/doc/", "docs/", ".github", "conftest")
+
+# (library_a, label_a, library_b, label_b, relation, description)
 ALL_BRIDGES = [
-    # === Foundation Layer ===
-    ("numpy", "ndarray", "pandas", "DataFrame",
-     "backed_by", "pandas DataFrame is backed by numpy ndarray for numerical storage"),
-    ("numpy", "ndarray", "scipy", "sparse",
-     "data_source", "scipy sparse matrices consume numpy arrays as input"),
-    ("numpy", "linalg", "scipy", "linalg",
-     "superset_of", "scipy.linalg extends numpy.linalg with additional decompositions"),
-    ("numpy", "random", "scipy", "stats",
-     "complements", "numpy.random generates samples; scipy.stats models distributions"),
-    ("numpy", "ufunc", "pandas", "apply",
-     "powers", "pandas apply/transform operations use numpy ufuncs under the hood"),
-    
-    # === Data → ML Pipeline ===
-    ("pandas", "DataFrame", "scikit-learn", "BaseEstimator",
-     "input_to", "pandas DataFrame is the standard input to sklearn fit()"),
-    ("pandas", "read_csv", "scikit-learn", "train_test_split",
-     "precedes", "data loaded via pandas read_csv feeds into sklearn train/test splits"),
-    ("pandas", "rolling", "ta-lib", "SMA",
-     "implements", "pandas rolling window underpins ta-lib moving average calculations"),
-    
-    # === Quant Tools → ML Integration ===
-    ("ta-lib", "RSI", "vectorbt", "SignalFactory",
-     "generates", "ta-lib RSI values feed into vectorbt SignalFactory for entry/exit signals"),
-    ("ta-lib", "MACD", "vectorbt", "Portfolio",
-     "indicator_for", "ta-lib MACD crossovers drive vectorbt Portfolio entry/exit logic"),
-    ("vectorbt", "Portfolio", "scikit-learn", "cross_val_score",
-     "evaluated_by", "vectorbt portfolio returns evaluated via sklearn cross_val_score"),
-    ("vectorbt", "SignalFactory", "optuna", "Study",
-     "optimized_by", "vectorbt signal parameters tuned via optuna Study.optimize"),
-    ("vectorbt", "Config", "optuna", "TPESampler",
-     "configured_by", "vectorbt Config parameters sampled by optuna TPESampler"),
-    
-    # === Backtesting Engines ===
-    ("backtrader", "Cerebro", "optuna", "Study",
-     "optimized_by", "backtrader Cerebro strategy parameters tuned via optuna"),
-    ("backtrader", "Strategy", "vectorbt", "Portfolio",
-     "alternative_to", "backtrader event-driven Strategy vs vectorbt vectorized Portfolio"),
-    ("backtrader", "DataFeed", "pandas", "DataFrame",
-     "consumes", "backtrader DataFeed consumes pandas DataFrames as data source"),
-    
-    # === ML Boosters → sklearn ===
-    ("xgboost", "XGBClassifier", "scikit-learn", "Pipeline",
-     "compatible_with", "XGBClassifier implements sklearn API, usable in Pipeline"),
-    ("xgboost", "train", "optuna", "Study",
-     "optimized_by", "xgboost.train hyperparameters tuned via optuna Study"),
-    ("lightgbm", "LGBMClassifier", "scikit-learn", "GridSearchCV",
-     "compatible_with", "LGBMClassifier works with sklearn GridSearchCV"),
-    ("lightgbm", "train", "optuna", "integration",
-     "integrated_with", "lightgbm has native optuna integration via LightGBMPruningCallback"),
-    
-    # === ML → Quant Tools ===
-    ("scikit-learn", "RandomForestClassifier", "vectorbt", "SignalFactory",
-     "powers", "RandomForest classifier predictions converted to vectorbt signals"),
-    ("xgboost", "XGBRegressor", "vectorbt", "Portfolio",
-     "predicts_for", "XGBRegressor return predictions fed to vectorbt Portfolio simulation"),
-    ("scikit-learn", "Pipeline", "optuna", "Study",
-     "tuned_by", "sklearn Pipeline parameters optimized via optuna"),
-    
-    # === Statistical → Quant ===
-    ("scipy", "stats", "scikit-learn", "SelectKBest",
-     "powers", "scipy.stats statistical tests drive sklearn feature selection"),
-    ("scipy", "optimize", "optuna", "samplers",
-     "alternative_to", "scipy.optimize as alternative optimization backend to optuna samplers"),
-    ("scipy", "signal", "ta-lib", "indicators",
-     "underlies", "scipy.signal filtering underpins ta-lib technical indicator calculations"),
-    
-    # === Cross-Framework ===
-    ("pandas", "DataFrame", "vectorbt", "Portfolio",
-     "input_to", "pandas DataFrame is the primary data input to vectorbt Portfolio"),
-    ("numpy", "ndarray", "vectorbt", "ArrayWrapper",
-     "wrapped_by", "vectorbt ArrayWrapper wraps numpy ndarray for named column access"),
-    ("scikit-learn", "make_scorer", "optuna", "Study",
-     "objective_for", "sklearn scorers used as optuna Study optimization objectives"),
+    ("numpy", "ndarray", "pandas", "DataFrame", "backed_by", "pandas DataFrame is backed by numpy ndarray for numerical storage"),
+    ("numpy", "ndarray", "vectorbt", "ArrayWrapper", "wrapped_by", "vectorbt ArrayWrapper wraps numpy ndarray for named column access"),
+    ("numpy", "linalg", "scipy", "linalg", "superset_of", "scipy.linalg extends numpy.linalg with additional decompositions"),
+    ("pandas", "DataFrame", "scikit-learn", "BaseEstimator", "input_to", "pandas DataFrame is the standard input to sklearn fit()"),
+    ("pandas", "DataFrame", "vectorbt", "Portfolio", "input_to", "pandas DataFrame is the primary data input to vectorbt Portfolio"),
+    ("pandas", "DataFrame", "backtrader", "DataFeed", "consumed_by", "backtrader DataFeed consumes pandas DataFrames as data source"),
+    ("ta-lib", "RSI", "vectorbt", "SignalFactory", "generates", "ta-lib indicator values feed vectorbt SignalFactory for entry/exit signals"),
+    ("ta-lib", "MACD", "vectorbt", "Portfolio", "indicator_for", "ta-lib MACD crossovers drive vectorbt Portfolio entry/exit logic"),
+    ("vectorbt", "SignalFactory", "optuna", "Study", "optimized_by", "vectorbt signal parameters tuned via optuna Study.optimize"),
+    ("backtrader", "Cerebro", "optuna", "Study", "optimized_by", "backtrader Cerebro strategy parameters tuned via optuna"),
+    ("backtrader", "Strategy", "vectorbt", "Portfolio", "alternative_to", "backtrader event-driven Strategy vs vectorbt vectorized Portfolio"),
+    ("xgboost", "XGBClassifier", "scikit-learn", "Pipeline", "compatible_with", "XGBClassifier implements the sklearn API, usable in a Pipeline"),
+    ("xgboost", "XGBRegressor", "vectorbt", "Portfolio", "predicts_for", "XGBRegressor return predictions fed to vectorbt Portfolio simulation"),
+    ("xgboost", "train", "optuna", "Study", "optimized_by", "xgboost.train hyperparameters tuned via optuna Study"),
+    ("lightgbm", "LGBMClassifier", "scikit-learn", "GridSearchCV", "compatible_with", "LGBMClassifier works with sklearn GridSearchCV"),
+    ("scikit-learn", "RandomForestClassifier", "vectorbt", "SignalFactory", "powers", "RandomForest predictions converted to vectorbt signals"),
+    ("scikit-learn", "Pipeline", "optuna", "Study", "tuned_by", "sklearn Pipeline parameters optimized via optuna"),
+    ("scipy", "stats", "scikit-learn", "SelectKBest", "powers", "scipy.stats statistical tests drive sklearn feature selection"),
+    ("scipy", "optimize", "optuna", "Study", "alternative_to", "scipy.optimize as an alternative optimization backend to optuna"),
 ]
 
-def find_node(graph, label_substring):
-    """Find a node by label substring, returning (id, label, source_file)."""
-    for n in graph.get("nodes", []):
-        node_label = n.get("label", "")
-        if label_substring.lower() in node_label.lower():
-            return n["id"], node_label, n.get("source_file", "")
-    return None, None, None
+ALL_LIBS = ["numpy", "scipy", "pandas", "scikit-learn", "optuna",
+            "vectorbt", "backtrader", "ta-lib", "xgboost", "lightgbm"]
+
 
 def load_graph(lib):
-    path = KG_DIR / lib / ".graphify" / "graph.json"
-    if not path.exists():
-        return None
-    with open(path) as f:
-        return json.load(f)
+    p = KG_DIR / lib / ".graphify" / "graph.json"
+    return json.load(open(p)) if p.exists() else None
+
+
+def clean(n):
+    sf = (n.get("source_file") or "").lower()
+    if any(p in sf for p in NOISE):
+        return False
+    lbl = n.get("label") or ""
+    if not lbl or " " in lbl or len(lbl) > 40:
+        return False
+    if lbl.startswith("__pyx") or lbl.startswith("__Pyx"):
+        return False
+    if n.get("file_type") not in (None, "code"):
+        return False
+    return True
+
+
+def resolve(graph, label):
+    """Exact-label code node preferred; else identifier-like substring. Noise excluded."""
+    cands = [n for n in graph.get("nodes", []) if clean(n)]
+    for n in cands:
+        if (n.get("label") or "").lower() == label.lower():
+            return n
+    for n in cands:
+        if label.lower() in (n.get("label") or "").lower():
+            return n
+    return None
+
 
 def main():
-    graphs = {}
-    for lib in ["numpy", "scipy", "pandas", "scikit-learn", "optuna", 
-                "vectorbt", "backtrader", "ta-lib", "xgboost", "lightgbm"]:
-        g = load_graph(lib)
-        if g:
-            graphs[lib] = g
-    
-    print("=== Cross-Library Bridge Injection v2 ===\n")
-    
-    results = []
-    for lib_a, label_a, lib_b, label_b, relation, desc in ALL_BRIDGES:
-        g_a = graphs.get(lib_a)
-        g_b = graphs.get(lib_b)
-        
-        if not g_a or not g_b:
-            results.append({"bridge": f"{label_a}↔{label_b}", "status": "SKIP", "reason": "graph missing"})
-            continue
-        
-        id_a, name_a, src_a = find_node(g_a, label_a)
-        id_b, name_b, src_b = find_node(g_b, label_b)
-        
-        if id_a and id_b:
-            results.append({
-                "bridge": f"{name_a}↔{name_b}",
-                "status": "FOUND",
-                "source": f"{lib_a}:{src_a}",
-                "target": f"{lib_b}:{src_b}",
-                "relation": relation,
-                "description": desc,
-            })
-            print(f"  ✓ {lib_a}.{name_a} ↔ {lib_b}.{name_b}: {desc[:70]}...")
+    apply = "--apply" in sys.argv
+    graphs = {lib: g for lib in ALL_LIBS if (g := load_graph(lib))}
+
+    overlay_nodes, overlay_links, report = {}, [], []
+    print("=== Cross-library bridge resolution (precise) ===\n")
+    for lib_a, lab_a, lib_b, lab_b, rel, desc in ALL_BRIDGES:
+        ga, gb = graphs.get(lib_a), graphs.get(lib_b)
+        na = resolve(ga, lab_a) if ga else None
+        nb = resolve(gb, lab_b) if gb else None
+        if na and nb:
+            ida, idb = f"{lib_a}::{na['id']}", f"{lib_b}::{nb['id']}"
+            overlay_nodes[ida] = {"id": ida, "label": na["label"], "library": lib_a,
+                                  "source_file": na.get("source_file", "")}
+            overlay_nodes[idb] = {"id": idb, "label": nb["label"], "library": lib_b,
+                                  "source_file": nb.get("source_file", "")}
+            overlay_links.append({"source": ida, "target": idb, "relation": rel,
+                                  "confidence": "CURATED", "description": desc})
+            report.append({"bridge": f"{lib_a}.{lab_a} -> {lib_b}.{lab_b}", "status": "RESOLVED",
+                           "source": f"{lib_a}::{na['label']}", "target": f"{lib_b}::{nb['label']}",
+                           "relation": rel})
+            print(f"  ✓ {lib_a}.{na['label']} -> {lib_b}.{nb['label']}  [{rel}]")
         else:
-            found = bool(id_a) + bool(id_b)
-            results.append({"bridge": f"{label_a}↔{label_b}", "status": "MISSING", "found": f"{found}/2"})
-            print(f"  ✗ {label_a}↔{label_b}: {found}/2 found")
-    
-    found = sum(1 for r in results if r["status"] == "FOUND")
-    print(f"\n{found}/{len(ALL_BRIDGES)} bridges injected")
-    
-    # Write report
-    output_path = REPO_ROOT / "docs" / "cross-library-bridges-v2.json"
-    with open(output_path, "w") as f:
-        json.dump({"bridges": results, "total_found": found, "total_attempted": len(ALL_BRIDGES)}, f, indent=2)
-    print(f"Report: {output_path}")
+            miss = ", ".join(x for x, ok in [(lab_a, na), (lab_b, nb)] if not ok)
+            report.append({"bridge": f"{lib_a}.{lab_a} -> {lib_b}.{lab_b}", "status": "UNRESOLVED",
+                           "missing": miss})
+            print(f"  ✗ {lib_a}.{lab_a} -> {lib_b}.{lab_b}  (no clean node for: {miss})")
+
+    resolved = sum(1 for r in report if r["status"] == "RESOLVED")
+    print(f"\n{resolved}/{len(ALL_BRIDGES)} bridges resolved to clean nodes "
+          f"({'noisy pre-rebuild graphs — re-run after Phase 1' if resolved < len(ALL_BRIDGES) else 'all clean'})")
+
+    json.dump({"bridges": report, "resolved": resolved, "attempted": len(ALL_BRIDGES)},
+              open(REPO_ROOT / "docs" / "cross-library-bridges-v2.json", "w"), indent=2)
+
+    if apply:
+        overlay = {"directed": False, "multigraph": False,
+                   "graph": {"kind": "cross_library_overlay", "note": "Curated bridges resolved to clean nodes."},
+                   "nodes": list(overlay_nodes.values()), "links": overlay_links, "hyperedges": []}
+        out = KG_DIR / "_cross_library" / ".graphify"
+        out.mkdir(parents=True, exist_ok=True)
+        json.dump(overlay, open(out / "graph.json", "w"), indent=2)
+        print(f"Overlay written: {out/'graph.json'}  ({len(overlay_nodes)} nodes, {len(overlay_links)} links)")
+    else:
+        print("(dry run — pass --apply to write the overlay graph)")
+
 
 if __name__ == "__main__":
     main()
