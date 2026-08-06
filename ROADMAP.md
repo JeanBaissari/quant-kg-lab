@@ -61,17 +61,18 @@ API importance. Full definitions: `docs/GRAPH_SPEC.md` §5 and `docs/SKILL_SPEC.
 - [ ] Provenance check: every cited graph node resolves in `graph.json`
 - [ ] CI installs all 10 libraries; validation + provenance gate PRs; pin versions in frontmatter
 
-## Phase 4 — Composable quant stack
+## Phase 4 — Composable quant stack  ✅ (rebuild-independent parts done)
 
-- [ ] `scripts/inject_cross_edges_v2.py` writes bridge **edges** (today it only reports them)
-- [ ] Author playbooks: `quant-full-pipeline`, `quant-factor-research`, `quant-ml-strategy`
-- [ ] Regenerate `docs/UNIFIED_INDEX.md` from the real 10 graphs (domain overlay + concept index)
+- [x] `scripts/inject_cross_edges_v2.py` resolves bridges precisely + writes a `_cross_library` overlay graph
+- [x] Playbooks authored: `quant-full-pipeline`, `quant-factor-research`, `quant-ml-strategy`
+- [x] `docs/UNIFIED_INDEX.md` regenerated via `scripts/build_unified_index.py` (domain overlay)
+- [ ] After rebuild: re-resolve the 3 noise-only bridges + add the node-level concept index
 
-## Phase 5 — Docs standardization & the before/after narrative
+## Phase 5 — Docs standardization & the before/after narrative  ✅
 
-- [ ] Split living-reference vs historical docs; one naming convention; JSON separate from prose
-- [ ] `methodology.md` v2; a before/after case-study; `docs/workflows.md` (dev patterns & ideas)
-- [ ] Finalize `README.md` as the front door
+- [x] `docs/README.md` — living-reference vs generated vs archive, with a naming convention
+- [x] `methodology.md` v2; `docs/BEFORE_AFTER.md` case study; `docs/workflows.md` (dev patterns & ideas)
+- [x] `README.md` finalized as the front door (Phase 0)
 
 ## Phase 6 — Library expansion (deferred; scoped only)
 

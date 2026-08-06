@@ -1,62 +1,69 @@
-# Methodology — QuantKG Extraction Pipeline
+# Methodology — the quant-kg-lab pipeline
 
-## 1. Knowledge Graph Extraction
+How a library becomes a set of verifiable, copy-in skills. Four stages, each reproducible.
+Specs: [`GRAPH_SPEC.md`](GRAPH_SPEC.md) (graphs), [`SKILL_SPEC.md`](SKILL_SPEC.md) (skills).
 
-We use [graphify](https://github.com/sentropic/graphify) to ingest library source trees and produce structured knowledge graphs.
-
-### Process
-
-1. **Clone** target library at a pinned version tag
-2. **Detect** file types, token counts, language distribution
-3. **Extract** (AST + semantic):
-   - Python AST: class/function definitions, imports, inheritance chains
-   - Semantic: docstring summaries, module-level descriptions via LLM
-4. **Build** undirected graph (nodes = code entities, edges = relationships)
-5. **Cluster** via community detection → natural module boundaries
-6. **Label** communities → human-readable module names
-7. **Audit** every edge tagged EXTRACTED | INFERRED | AMBIGUOUS
-
-### Graph Schema
-
-```json
-{
-  "nodes": [
-    {
-      "id": "sklearn.ensemble.RandomForestClassifier",
-      "label": "RandomForestClassifier",
-      "file_type": "code",
-      "source_file": "sklearn/ensemble/_forest.py",
-      "source_location": "L1023-L1500",
-      "type": "class"
-    }
-  ],
-  "links": [
-    {
-      "source": "...",
-      "target": "...",
-      "relation": "inherits",
-      "confidence": "EXTRACTED"
-    }
-  ]
-}
+```
+ EXTRACT ───▶ QUERY ───▶ AUTHOR ───▶ VALIDATE
+ graphify     god nodes   SKILL.md    live API + graph provenance
+ @pinned      communities  one spec    lint gate in CI
 ```
 
-## 2. Skill Authoring
+## 1. Extract — source → knowledge graph
 
-From the knowledge graph, we extract quant-relevant modules and author spec-driven skills.
+We use [graphify](https://github.com/sentropic/graphify) (`npm i -g @sentropic/graphify`) to
+ingest a library's source tree at a **pinned commit** (recorded in [`/graphs.lock`](../graphs.lock))
+and emit a networkx node-link graph.
 
-### Selection Criteria
-- Module has ≥3 god nodes (high-degree API hubs)
-- Community cohesion > threshold
-- Direct quant applicability (model_selection, metrics, samplers, pruners)
+- Reproducible entry point: `scripts/rebuild_graph.sh <lib>` — clone@pin → `graphify extract
+  --backend claude-cli` → merge descriptions → cluster → audit.
+- The **noise filter** (`GRAPH_SPEC.md` §6) excludes tests, benchmarks, examples, and
+  binding-internals so the graph reflects the *public API*, not the test harness.
+- Requires the graphify CLI **and** network access to clone upstream — run it on a full machine,
+  not a network-restricted sandbox.
 
-### Skill Structure
-Each skill follows `agentskills.io` with:
-- **SKILL.md**: trigger conditions, quick reference, core workflows
-- **references/api.md**: extracted from graph nodes (class → method signatures)
-- **references/examples.md**: extracted from library examples/tutorials
-- **scripts/validate.py**: cross-ref skill claims against live library
+Graph schema (nodes = code entities + rationale; edges = calls/inherits/imports/uses, each tagged
+`EXTRACTED`/`INFERRED`/`AMBIGUOUS`) is defined in `GRAPH_SPEC.md`.
 
-## 3. Freshness
+## 2. Query — find the API that matters
 
-CI pipeline checks library versions weekly. Stale graphs trigger re-extraction. Skills track extraction date and library version in frontmatter.
+- `scripts/query_graph.py <lib> "<term>"` — substring + BFS over any of the 10 graphs (plus the
+  `_cross_library` overlay).
+- **God nodes** (highest degree) are the API hubs; **communities** are the natural module
+  boundaries. After the noise filter, these reflect real user-facing API — the signal that tells
+  us which modules deserve a skill and what a skill's Quick Reference should contain.
+
+## 3. Author — graph → skill
+
+One skill per quant-relevant module, following `SKILL_SPEC.md`:
+- one template, one frontmatter schema, `name` unique, `description` a "Use when" trigger;
+- every Quick-Reference row cites a graph node (`source_file:line`) — the traceability that makes
+  the skill *verifiable*;
+- multi-skill libraries get a router; playbooks (`skills/quant-patterns/`) compose atomic skills
+  into cross-library workflows.
+- `scripts/normalize_skills.py` enforces the template mechanically across all skills.
+
+## 4. Validate — trust, then rely
+
+`scripts/validate_skills.py` runs three checks:
+- **Lint** (CI gate): frontmatter schema, unique "Use when" names, no dangling `references/`,
+  `source_commit` matches `graphs.lock`, routers present.
+- **API**: every claimed class/function exists in the installed library (public / private-internal
+  / genuinely-absent tiers) — the anti-hallucination guarantee.
+- **Provenance**: cited source files resolve to a node in `graph.json`.
+
+CI (`.github/workflows/skill-validation.yml`) runs a fast deterministic lint gate plus a
+best-effort all-10-library API/provenance job. Freshness is tracked by
+`.github/workflows/graph-freshness.yml`, which compares each graph's `built_from_commit` against
+upstream HEAD.
+
+## Reproduce from scratch
+
+```bash
+npm i -g @sentropic/graphify
+pip install -r requirements.txt
+scripts/rebuild_graph.sh <lib>          # per library, on a machine with network
+python scripts/normalize_skills.py --apply
+python scripts/validate_skills.py --provenance
+python scripts/build_unified_index.py
+```
