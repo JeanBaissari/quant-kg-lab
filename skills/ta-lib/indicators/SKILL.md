@@ -1,19 +1,19 @@
 ---
 name: ta-lib-indicators
-description: TA-Lib Indicators — SMA, EMA, RSI, MACD, BBANDS, ATR, ADX, STOCH, CCI, OBV, and 200+ technical indicators. Python bindings over the C TA-Lib library via Cython. Extracted from the TA-Lib knowledge graph (1,305 nodes, 5,564 edges).
-version: 0.1.0
+description: "Use when computing technical indicators with TA-Lib — SMA, EMA, RSI, MACD, BBANDS, ATR, ADX, STOCH, and 200+ others."
+version: 0.2.0
 author: quant-kg-lab
 license: MIT
 source_repo: TA-Lib/ta-lib-python
-graph_hash: f3b97c361b15a18c
+source_commit: a9ff1b47b3ddbd57274116645d688c0ed677338b
 extraction_date: 2026-07-29
-graph_stats:
+graph:
   nodes: 1305
   edges: 5564
-  description_coverage: "0% (no descriptions)"
   community_count: 120
-  indicator_count: 213
-  primary_source: talib/_ta_lib.c (Cython wrapper, 1,130 nodes)
+  graph_hash: 42a839f87ae0e568
+tags: [ta-lib, indicators]
+related_skills: []
 ---
 
 # TA-Lib Indicators (`talib`)

@@ -1,21 +1,19 @@
 ---
 name: optuna-trial
-description: Use when working with Optuna Trial parameter suggestion and pruning — Trial.suggest_float, suggest_int, suggest_categorical, suggest_loguniform, should_prune, report. Covers parameter space definition, conditional parameters, and intermediate value reporting.
-version: 0.1.0
+description: "Use when working with Optuna Trial parameter suggestion and pruning — Trial.suggest_float, suggest_int, suggest_categorical, suggest_loguniform, should_prune, report. Covers parameter space definition, conditional parameters, and intermediate value reporting."
+version: 0.2.0
 author: quant-kg-lab
 license: MIT
 source_repo: optuna/optuna
-source_version: master
+source_commit: b6f2ea62fbe7fb09d0d1c75783c65dad098d9a06
 extraction_date: 2026-07-29
-graph_hash: 3912_nodes_8405_edges
-graph_stats:
+graph:
   nodes: 3912
   edges: 8405
-  communities: 228
-metadata:
-  hermes:
-    tags: [optuna, hyperparameter-optimization, trial]
-    related_skills: [optuna-samplers, optuna-pruners, optuna-study, optuna-trial, optuna-visualization, optuna-integration, optuna-distributions]
+  community_count: 228
+  graph_hash: 4f20084a8bf230e9
+tags: [optuna, hyperparameter-optimization, trial]
+related_skills: [optuna-samplers, optuna-pruners, optuna-study, optuna-trial, optuna-visualization, optuna-integration, optuna-distributions]
 ---
 
 # Optuna Trial
@@ -110,8 +108,3 @@ def objective(trial):
 - [ ] `trial.report()` is called at regular intervals if using pruning
 - [ ] `optuna.TrialPruned` is raised after `trial.should_prune()` returns `True`
 - [ ] Conditional parameters don't re-define the same name with different bounds
-
-## References
-
-- Source: `optuna/trial/__init__.py`, `optuna/trial/_trial.py`
-- `references/api.md` — Full trial API surface from knowledge graph

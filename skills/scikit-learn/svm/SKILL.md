@@ -1,17 +1,19 @@
 ---
 name: scikit-learn-svm
-description: Use when working with scikit-learn SVMs — SVC, SVR, LinearSVC, NuSVC, OneClassSVM. Covers core classes, kernel functions, and quant-relevant patterns.
-version: 0.1.0
+description: "Use when working with scikit-learn SVMs — SVC, SVR, LinearSVC, NuSVC, OneClassSVM. Covers core classes, kernel functions, and quant-relevant patterns."
+version: 0.2.0
 author: quant-kg-lab
 license: MIT
 source_repo: scikit-learn/scikit-learn
-source_version: main
+source_commit: 6f8b95aa2234102acc3804fc8c7a3e6bd0506bfb
 extraction_date: 2026-07-29
-graph_hash: 18753_nodes_49978_edges
-metadata:
-  hermes:
-    tags: [scikit-learn, machine-learning, svm, svc, svr, classification, regression]
-    related_skills: [scikit-learn-model-selection, scikit-learn-metrics, scikit-learn-preprocessing]
+graph:
+  nodes: 18753
+  edges: 49978
+  community_count: 1149
+  graph_hash: e4761fba3e257880
+tags: [scikit-learn, machine-learning, svm, svc, svr, classification, regression]
+related_skills: [scikit-learn-model-selection, scikit-learn-metrics, scikit-learn-preprocessing]
 ---
 
 # scikit-learn Support Vector Machines
@@ -96,10 +98,3 @@ is_outlier = ocsvm.predict(X_test)  # 1=inlier, -1=outlier
 5. **Dual vs primal**: `dual=False` in `LinearSVC` uses primal optimization and is much faster for n_samples >> n_features. `dual=True` (default) is faster for n_features >> n_samples.
 6. **Sparsity**: SVC/SVR support sparse input via `fit(X, y)` directly. LinearSVC *with* `dual=False` supports sparse. `dual=True` does not.
 7. **Memory**: Kernel SVMs store all support vectors (can be thousands), consuming significant memory at prediction time.
-
-## References
-
-- `references/api.md` — Full API surface from knowledge graph
-- Communities 60, 72, 83, 102, 161: 239 total graph nodes (219 code, 20 rationale)
-- Source files: `sklearn/svm/_classes.py` (24 nodes), `_base.py` (37), `_bounds.py` (2)
-- C-level: `libsvm/svm.cpp` (46 nodes), `liblinear/linear.cpp` (52 nodes)

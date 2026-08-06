@@ -1,17 +1,19 @@
 ---
 name: scikit-learn-ensemble
-description: Use when working with scikit-learn Ensemble methods — bagging, boosting, stacking, voting, and forests. Covers core classes, methods, and quant-relevant patterns.
-version: 0.1.0
+description: "Use when working with scikit-learn Ensemble methods — bagging, boosting, stacking, voting, and forests. Covers core classes, methods, and quant-relevant patterns."
+version: 0.2.0
 author: quant-kg-lab
 license: MIT
 source_repo: scikit-learn/scikit-learn
-source_version: main
+source_commit: 6f8b95aa2234102acc3804fc8c7a3e6bd0506bfb
 extraction_date: 2026-07-29
-graph_hash: 18753_nodes_49978_edges
-metadata:
-  hermes:
-    tags: [scikit-learn, machine-learning, ensemble, bagging, boosting, random-forest]
-    related_skills: [scikit-learn-model-selection, scikit-learn-metrics, scikit-learn-tree]
+graph:
+  nodes: 18753
+  edges: 49978
+  community_count: 1149
+  graph_hash: e4761fba3e257880
+tags: [scikit-learn, machine-learning, ensemble, bagging, boosting, random-forest]
+related_skills: [scikit-learn-model-selection, scikit-learn-metrics, scikit-learn-tree]
 ---
 
 # scikit-learn Ensemble Methods
@@ -113,9 +115,3 @@ stack.fit(X_train, y_train)
 4. **IsolationForest `contamination`**: Must be set correctly — auto-detection is unreliable for time-series data.
 5. **memory**: Forests with many deep trees can consume GBs. Use `max_depth` and `max_leaf_nodes` to bound model size.
 6. **Stacking CV leak**: The `cv` parameter in stacking splits *training* data; don't confuse with outer CV.
-
-## References
-
-- `references/api.md` — Full API surface from knowledge graph
-- Communities 3, 5, 235: 1090 total graph nodes, 506 code nodes, 584 rationale nodes
-- Source files: `sklearn/ensemble/_gb.py` (45 nodes), `_bagging.py` (34), `_forest.py` (via tree community), `_weight_boosting.py`, `_stacking.py`, `_voting.py`, `_iforest.py`

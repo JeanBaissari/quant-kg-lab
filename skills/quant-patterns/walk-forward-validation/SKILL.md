@@ -1,13 +1,12 @@
 ---
 name: quant-walk-forward-validation
-description: Use when implementing walk-forward validation, time-series cross-validation, or rolling/expanding window backtesting for trading strategies. Integrates scikit-learn TimeSeriesSplit with custom purging/embargo logic.
-version: 0.1.0
+description: "Use when implementing walk-forward validation, time-series cross-validation, or rolling/expanding window backtesting for trading strategies. Integrates scikit-learn TimeSeriesSplit with custom purging/embargo logic."
+version: 0.2.0
 author: quant-kg-lab
 license: MIT
-metadata:
-  hermes:
-    tags: [quantitative-finance, backtesting, walk-forward, time-series, cross-validation]
-    related_skills: [scikit-learn-model-selection, optuna-study]
+composes: [scikit-learn-model-selection, optuna-study]
+tags: [quantitative-finance, backtesting, walk-forward, time-series, cross-validation]
+related_skills: [scikit-learn-model-selection, optuna-study]
 ---
 
 # Walk-Forward Validation for Trading Strategies

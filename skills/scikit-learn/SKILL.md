@@ -1,55 +1,43 @@
 ---
-name: scikit-learn-model-selection
-description: Use when working with scikit-learn model selection, cross-validation, hyperparameter tuning, or GridSearchCV/RandomizedSearchCV workflows. Covers train_test_split, cross_val_score, GridSearchCV, RandomizedSearchCV, and validation curve analysis.
-version: 0.1.0
+name: scikit-learn
+description: "Use when working with scikit-learn. Router indexing the 14 scikit-learn sub-skills; load the sub-skill for the module you need."
+version: 0.2.0
 author: quant-kg-lab
 license: MIT
 source_repo: scikit-learn/scikit-learn
-source_version: main
+source_commit: 6f8b95aa2234102acc3804fc8c7a3e6bd0506bfb
 extraction_date: 2026-07-29
-graph_hash: 18753_nodes_49978_edges
-graph_stats:
+graph:
   nodes: 18753
   edges: 49978
-  top_god_nodes:
-    - BaseEstimator (degree=2309)
-    - TransformerMixin (degree=1171)
-    - ClassifierMixin (degree=1072)
-    - Pipeline (degree=536)
-    - RegressorMixin (degree=802)
-metadata:
-  hermes:
-    tags: [scikit-learn, machine-learning, model-selection, cross-validation, hyperparameter-tuning]
-    related_skills: [scikit-learn-metrics, scikit-learn-preprocessing, optuna-samplers]
+  community_count: 1149
+  graph_hash: e4761fba3e257880
+tags: [scikit-learn]
+related_skills: [scikit-learn-cluster, scikit-learn-compose, scikit-learn-decomposition, scikit-learn-ensemble, scikit-learn-feature-selection, scikit-learn-gaussian-process, scikit-learn-impute, scikit-learn-linear-model, scikit-learn-metrics, scikit-learn-model-selection, scikit-learn-neural-network, scikit-learn-preprocessing, scikit-learn-svm, scikit-learn-tree]
 ---
 
-# scikit-learn Model Selection
+# scikit-learn (router)
 
-Extracted from scikit-learn knowledge graph. Source: `sklearn.model_selection` module.
+Indexes the 14 spec-driven scikit-learn sub-skills. Load the one for the module you need.
 
-## Quick Reference
+## Sub-skills
+| Skill | Module | Covers |
+|-------|--------|--------|
+| [scikit-learn-cluster](cluster/SKILL.md) | `sklearn.cluster` | scikit-learn Clustering |
+| [scikit-learn-compose](compose/SKILL.md) | `sklearn.compose` | composite estimators and pipelines in scikit-learn |
+| [scikit-learn-decomposition](decomposition/SKILL.md) | `sklearn.decomposition` | scikit-learn matrix decomposition and dimensionality reduction |
+| [scikit-learn-ensemble](ensemble/SKILL.md) | `sklearn.ensemble` | scikit-learn Ensemble methods |
+| [scikit-learn-feature-selection](feature_selection/SKILL.md) | `sklearn.feature_selection` | scikit-learn feature selection |
+| [scikit-learn-gaussian-process](gaussian_process/SKILL.md) | `sklearn.gaussian_process` | scikit-learn Gaussian Processes |
+| [scikit-learn-impute](impute/SKILL.md) | `sklearn.impute` | scikit-learn Imputation |
+| [scikit-learn-linear-model](linear_model/SKILL.md) | `sklearn.linear_model` | scikit-learn linear models |
+| [scikit-learn-metrics](metrics/SKILL.md) | `sklearn.metrics` | scikit-learn metrics, scoring functions, pairwise distances, or clustering evaluation |
+| [scikit-learn-model-selection](model_selection/SKILL.md) | `sklearn.model_selection` | scikit-learn model selection, cross-validation, hyperparameter tuning, or GridSearchCV/RandomizedSearchCV workflows |
+| [scikit-learn-neural-network](neural_network/SKILL.md) | `sklearn.neural_network` | scikit-learn Neural Networks |
+| [scikit-learn-preprocessing](preprocessing/SKILL.md) | `sklearn.preprocessing` | scikit-learn data preprocessing, scaling, encoding, discretization, or feature transformations |
+| [scikit-learn-svm](svm/SKILL.md) | `sklearn.svm` | scikit-learn SVMs |
+| [scikit-learn-tree](tree/SKILL.md) | `sklearn.tree` | scikit-learn Decision Trees |
 
-| Function/Class | Purpose | Key Params |
-|---------------|---------|------------|
-| `train_test_split` | Split arrays into train/test | `test_size`, `random_state`, `stratify` |
-| `cross_val_score` | Evaluate score by CV | `cv`, `scoring`, `n_jobs` |
-| `GridSearchCV` | Exhaustive param search | `param_grid`, `cv`, `scoring`, `n_jobs` |
-| `RandomizedSearchCV` | Randomized param search | `param_distributions`, `n_iter`, `cv` |
-| `cross_validate` | Evaluate multiple metrics | `cv`, `scoring` (dict), `return_train_score` |
-
-## Common Pitfalls
-
-1. **Data leakage in CV**: Always split before scaling. Use `Pipeline` to chain preprocessing + estimator.
-2. **GridSearchCV score vs production**: `best_score_` is mean CV score, not holdout/test score.
-3. **n_jobs interaction**: `n_jobs=-1` uses all cores but can conflict with BLAS threading.
-
-## Verification Checklist
-
-- [ ] Preprocessing inside Pipeline, not before CV split
-- [ ] `scoring` metric matches business objective
-- [ ] `random_state` set for reproducibility
-
-## References
-
-- `references/api.md` — Full API surface from knowledge graph
-- `references/examples.md` — Extracted from scikit-learn examples/
+## Provenance
+- Knowledge graph: scikit-learn, 18753 nodes, 49978 edges, 1149 communities
+- Rebuild: `scripts/rebuild_graph.sh scikit-learn` (pinned commit 6f8b95aa2234)

@@ -1,17 +1,19 @@
 ---
 name: scikit-learn-gaussian-process
-description: Use when working with scikit-learn Gaussian Processes — GPC, GPR, and kernel functions. Covers core classes, methods, and quant-relevant patterns.
-version: 0.1.0
+description: "Use when working with scikit-learn Gaussian Processes — GPC, GPR, and kernel functions. Covers core classes, methods, and quant-relevant patterns."
+version: 0.2.0
 author: quant-kg-lab
 license: MIT
 source_repo: scikit-learn/scikit-learn
-source_version: main
+source_commit: 6f8b95aa2234102acc3804fc8c7a3e6bd0506bfb
 extraction_date: 2026-07-29
-graph_hash: 18753_nodes_49978_edges
-metadata:
-  hermes:
-    tags: [scikit-learn, machine-learning, gaussian-process, gp, bayesian, uncertainty, kernels]
-    related_skills: [scikit-learn-model-selection, scikit-learn-metrics, scikit-learn-preprocessing]
+graph:
+  nodes: 18753
+  edges: 49978
+  community_count: 1149
+  graph_hash: e4761fba3e257880
+tags: [scikit-learn, machine-learning, gaussian-process, gp, bayesian, uncertainty, kernels]
+related_skills: [scikit-learn-model-selection, scikit-learn-metrics, scikit-learn-preprocessing]
 ---
 
 # scikit-learn Gaussian Processes
@@ -113,9 +115,3 @@ probas = gpc.predict_proba(X_test)
 5. **`normalize_y=True`**: Centers y to zero mean, which improves numerical stability. But predictions are on the centered scale — scikit-learn handles this transparently.
 6. **`return_std` vs `return_cov`**: Use `return_std` for diagonal uncertainty, `return_cov` for full predictive covariance matrix (O(n_test³) memory).
 7. **`predict_proba` in GPC**: Uses Monte Carlo sampling of the latent function — `max_iter_predict` controls number of samples.
-
-## References
-
-- `references/api.md` — Full API surface from knowledge graph
-- Communities 30, 58, 116, 160, 216, 544: 358 total graph nodes (230 code, 128 rationale)
-- Source files: `sklearn/gaussian_process/kernels.py` (115 nodes), `_gpc.py` (18), `_gpr.py` (9)

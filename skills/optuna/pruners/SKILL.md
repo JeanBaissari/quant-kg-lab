@@ -1,21 +1,19 @@
 ---
 name: optuna-pruners
-description: Use when working with Optuna pruning algorithms — MedianPruner, PercentilePruner, SuccessiveHalvingPruner, HyperbandPruner, ThresholdPruner, PatientPruner, WilcoxonPruner. Covers early stopping, pruning schedules, and trial efficiency.
-version: 0.1.0
+description: "Use when working with Optuna pruning algorithms — MedianPruner, PercentilePruner, SuccessiveHalvingPruner, HyperbandPruner, ThresholdPruner, PatientPruner, WilcoxonPruner. Covers early stopping, pruning schedules, and trial efficiency."
+version: 0.2.0
 author: quant-kg-lab
 license: MIT
 source_repo: optuna/optuna
-source_version: master
+source_commit: b6f2ea62fbe7fb09d0d1c75783c65dad098d9a06
 extraction_date: 2026-07-29
-graph_hash: 3912_nodes_8405_edges
-graph_stats:
+graph:
   nodes: 3912
   edges: 8405
-  communities: 228
-metadata:
-  hermes:
-    tags: [optuna, hyperparameter-optimization, pruners]
-    related_skills: [optuna-samplers, optuna-pruners, optuna-study, optuna-trial, optuna-visualization, optuna-integration, optuna-distributions]
+  community_count: 228
+  graph_hash: 4f20084a8bf230e9
+tags: [optuna, hyperparameter-optimization, pruners]
+related_skills: [optuna-samplers, optuna-pruners, optuna-study, optuna-trial, optuna-visualization, optuna-integration, optuna-distributions]
 ---
 
 # Optuna Pruners
@@ -104,8 +102,3 @@ pruner = optuna.pruners.PatientPruner(
 - [ ] `n_startup_trials` is ≥ 5 for statistical stability
 - [ ] `n_warmup_steps` provides enough early training before pruning begins
 - [ ] Hyperband's `max_resource` matches actual training budget
-
-## References
-
-- Source: `optuna/pruners/__init__.py`
-- `references/api.md` — Full pruner API surface from knowledge graph

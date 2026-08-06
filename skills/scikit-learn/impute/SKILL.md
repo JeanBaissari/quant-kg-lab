@@ -1,17 +1,19 @@
 ---
 name: scikit-learn-impute
-description: Use when working with scikit-learn Imputation — SimpleImputer, KNNImputer, IterativeImputer, and MissingIndicator. Covers core classes, methods, and quant-relevant patterns.
-version: 0.1.0
+description: "Use when working with scikit-learn Imputation — SimpleImputer, KNNImputer, IterativeImputer, and MissingIndicator. Covers core classes, methods, and quant-relevant patterns."
+version: 0.2.0
 author: quant-kg-lab
 license: MIT
 source_repo: scikit-learn/scikit-learn
-source_version: main
+source_commit: 6f8b95aa2234102acc3804fc8c7a3e6bd0506bfb
 extraction_date: 2026-07-29
-graph_hash: 18753_nodes_49978_edges
-metadata:
-  hermes:
-    tags: [scikit-learn, machine-learning, imputation, missing-data, preprocessing, quant]
-    related_skills: [scikit-learn-preprocessing, scikit-learn-model-selection, scikit-learn-metrics]
+graph:
+  nodes: 18753
+  edges: 49978
+  community_count: 1149
+  graph_hash: e4761fba3e257880
+tags: [scikit-learn, machine-learning, imputation, missing-data, preprocessing, quant]
+related_skills: [scikit-learn-preprocessing, scikit-learn-model-selection, scikit-learn-metrics]
 ---
 
 # scikit-learn Imputation
@@ -125,9 +127,3 @@ preprocessor = ColumnTransformer([
 5. **`keep_empty_features`**: When a column is all-NaN in training, default behavior drops it. Set `keep_empty_features=True` to preserve column count for pipelines with fixed feature ordering.
 6. **MissingIndicator `features` parameter**: `'all'` returns indicator for all features (even those without missing values). `'missing-only'` (default) only returns indicators for features with at least one missing value — changes output dimension.
 7. **Performance**: `IterativeImputer` trains `max_iter × n_features_with_missing` models. For 100 features with missing values and `max_iter=20`, that's 2000 model fits. Use `n_nearest_features` and `sample_posterior=False` for speed.
-
-## References
-
-- `references/api.md` — Full API surface from knowledge graph
-- Communities 140, 297, 436: 185 total graph nodes (169 code, 16 rationale)
-- Source files: `sklearn/impute/_base.py` (30 nodes), `_iterative.py` (15), `_knn.py` (7)

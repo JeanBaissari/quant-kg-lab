@@ -1,17 +1,19 @@
 ---
 name: scikit-learn-neural-network
-description: Use when working with scikit-learn Neural Networks — MLPClassifier, MLPRegressor, and Bernoulli RBM. Covers core classes, methods, and quant-relevant patterns.
-version: 0.1.0
+description: "Use when working with scikit-learn Neural Networks — MLPClassifier, MLPRegressor, and Bernoulli RBM. Covers core classes, methods, and quant-relevant patterns."
+version: 0.2.0
 author: quant-kg-lab
 license: MIT
 source_repo: scikit-learn/scikit-learn
-source_version: main
+source_commit: 6f8b95aa2234102acc3804fc8c7a3e6bd0506bfb
 extraction_date: 2026-07-29
-graph_hash: 18753_nodes_49978_edges
-metadata:
-  hermes:
-    tags: [scikit-learn, machine-learning, neural-network, mlp, deep-learning, classification, regression]
-    related_skills: [scikit-learn-model-selection, scikit-learn-metrics, scikit-learn-preprocessing]
+graph:
+  nodes: 18753
+  edges: 49978
+  community_count: 1149
+  graph_hash: e4761fba3e257880
+tags: [scikit-learn, machine-learning, neural-network, mlp, deep-learning, classification, regression]
+related_skills: [scikit-learn-model-selection, scikit-learn-metrics, scikit-learn-preprocessing]
 ---
 
 # scikit-learn Neural Networks
@@ -107,9 +109,3 @@ for batch_X, batch_y in data_batches:
 4. **Non-convex optimization**: Different random seeds produce different local minima. For reproducible quant work, always set `random_state`.
 5. **Warm start**: `warm_start=True` allows reusing the previous solution when `fit` is called again — useful for progressive training or hyperparameter search.
 6. **Classification with `partial_fit`**: You must pass `classes` parameter on the first call so the model knows all possible labels.
-
-## References
-
-- `references/api.md` — Full API surface from knowledge graph
-- Communities 81, 136, 386: 153 total graph nodes (118 code, 35 rationale)
-- Source files: `sklearn/neural_network/_multilayer_perceptron.py` (29 nodes), `_base.py` (15), `_rbm.py` (13), `_stochastic_optimizers.py` (6)

@@ -1,11 +1,19 @@
 ---
 name: numpy-random
-description: NumPy random number generation — Generator, default_rng, distributions (random, normal, uniform, choice, permutation), BitGenerators (PCG64, MT19937, Philox, SFC64), SeedSequence, and legacy RandomState. Extracted from the NumPy knowledge graph.
-version: 0.1.0
+description: "Use when generating random numbers with NumPy — Generator, default_rng, distributions, permutation, and seeding."
+version: 0.2.0
 author: quant-kg-lab
 license: MIT
 source_repo: numpy/numpy
-graph_hash: 20436_nodes_30581_edges
+source_commit: ab2199763cb17878cd8f34fcbc97106c5397f922
+extraction_date: 2026-07-29
+graph:
+  nodes: 20436
+  edges: 30581
+  community_count: 1561
+  graph_hash: 96ded7dfb2ac7d28
+tags: [numpy, random]
+related_skills: []
 ---
 
 # NumPy Random Number Generation (`numpy.random`)

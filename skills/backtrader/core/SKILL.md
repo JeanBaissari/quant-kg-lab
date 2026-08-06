@@ -1,31 +1,19 @@
 ---
 name: backtrader-core
-description: backtrader Core — Cerebro (engine), Strategy (trading logic), DataFeed (OHLCV data loading), Broker (order execution), Line/LineBuffer (time-series primitives), MetaParams (parameter system). Extracted from the backtrader knowledge graph (3,458 nodes, 6,863 edges).
-version: 0.1.0
+description: "Use when building event-driven backtests with backtrader — Cerebro, Strategy, DataFeed, Broker, Order, and Trade."
+version: 0.2.0
 author: quant-kg-lab
 license: MIT
 source_repo: mementum/backtrader
-graph_hash: 2edf6fd78f85b446
+source_commit: b853d7c90b6721476eb5a5ea3135224e33db1f14
 extraction_date: 2026-07-29
-graph_stats:
+graph:
   nodes: 3458
   edges: 6863
-  description_coverage: "0% (no descriptions)"
   community_count: 261
-  core_communities:
-    - {id: 0, label: "Indicators/samples", nodes: 163}
-    - {id: 1, label: "Strategy/LineIterator/MetaParams", nodes: 90}
-    - {id: 5, label: "Broker/Commissions/Sizers", nodes: 74}
-    - {id: 6, label: "LineBuffer (time-series)", nodes: 68}
-    - {id: 8, label: "LineRoot (line operations)", nodes: 61}
-    - {id: 10, label: "BackBroker (broker backend)", nodes: 57}
-    - {id: 11, label: "Cerebro/SignalStrategy/TradingCalendar", nodes: 56}
-    - {id: 12, label: "LineSeries/LineOperations/MetaParams", nodes: 54}
-    - {id: 13, label: "Orders/Position/Commission", nodes: 51}
-    - {id: 14, label: "DataFeed/DataBase (data loading)", nodes: 50}
-    - {id: 15, label: "DataSeries/Indicator/Observer", nodes: 49}
-    - {id: 16, label: "BasicOps indicators (SumN, Highest, ...)", nodes: 47}
-    - {id: 26, label: "Strategy", nodes: 46}
+  graph_hash: b54e4c68d9bf8f46
+tags: [backtrader, core]
+related_skills: []
 ---
 
 # backtrader Core (`backtrader`)

@@ -1,21 +1,19 @@
 ---
 name: scikit-learn-model-selection
-description: Use when working with scikit-learn model selection, cross-validation, hyperparameter tuning, or GridSearchCV/RandomizedSearchCV workflows. Covers train_test_split, cross_val_score, GridSearchCV, RandomizedSearchCV, and validation curve analysis.
-version: 0.1.0
+description: "Use when working with scikit-learn model selection, cross-validation, hyperparameter tuning, or GridSearchCV/RandomizedSearchCV workflows. Covers train_test_split, cross_val_score, GridSearchCV, RandomizedSearchCV, and validation curve analysis."
+version: 0.2.0
 author: quant-kg-lab
 license: MIT
 source_repo: scikit-learn/scikit-learn
-source_version: main
+source_commit: 6f8b95aa2234102acc3804fc8c7a3e6bd0506bfb
 extraction_date: 2026-07-29
-graph_hash: 18753_nodes_49978_edges
-graph_stats:
+graph:
   nodes: 18753
   edges: 49978
-  communities: [12, 135, 169, 227, 676, 677]
-metadata:
-  hermes:
-    tags: [scikit-learn, machine-learning, model-selection, cross-validation, hyperparameter-tuning]
-    related_skills: [scikit-learn-metrics, scikit-learn-preprocessing]
+  community_count: 1149
+  graph_hash: e4761fba3e257880
+tags: [scikit-learn, machine-learning, model-selection, cross-validation, hyperparameter-tuning]
+related_skills: [scikit-learn-metrics, scikit-learn-preprocessing]
 ---
 
 # scikit-learn Model Selection
@@ -87,8 +85,3 @@ Extracted from scikit-learn knowledge graph. Source: `sklearn.model_selection` m
 - [ ] `random_state` set for reproducibility
 - [ ] `refit=True` (default) for GridSearchCV to get a usable `best_estimator_`
 - [ ] Holdout test set reserved for final evaluation after CV
-
-## References
-
-- `references/api.md` — Full API surface from knowledge graph
-- `references/examples.md` — Extracted from scikit-learn examples/

@@ -1,11 +1,19 @@
 ---
 name: numpy-core
-description: NumPy core — ndarray, ufunc, broadcasting, indexing, dtypes, array creation (zeros, ones, arange, linspace), reshaping, reductions (sum, mean, std, min, max, argmin, argmax), sorting, and I/O. Extracted from the NumPy knowledge graph.
-version: 0.1.0
+description: "Use when working with NumPy arrays — ndarray, ufuncs, broadcasting, indexing, dtypes, and array creation."
+version: 0.2.0
 author: quant-kg-lab
 license: MIT
 source_repo: numpy/numpy
-graph_hash: 20436_nodes_30581_edges
+source_commit: ab2199763cb17878cd8f34fcbc97106c5397f922
+extraction_date: 2026-07-29
+graph:
+  nodes: 20436
+  edges: 30581
+  community_count: 1561
+  graph_hash: 96ded7dfb2ac7d28
+tags: [numpy, core]
+related_skills: []
 ---
 
 # NumPy Core (`numpy._core` / `numpy`)

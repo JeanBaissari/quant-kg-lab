@@ -1,13 +1,12 @@
 ---
 name: quant-hpo-optimization
-description: Use when tuning trading strategy hyperparameters via Bayesian optimization — Optuna study lifecycle, sampler selection, pruning strategies, and distributed parallel sweeps for walk-forward backtesting.
-version: 0.1.0
+description: "Use when tuning trading strategy hyperparameters via Bayesian optimization — Optuna study lifecycle, sampler selection, pruning strategies, and distributed parallel sweeps for walk-forward backtesting."
+version: 0.2.0
 author: quant-kg-lab
 license: MIT
-metadata:
-  hermes:
-    tags: [quantitative-finance, hyperparameter-optimization, bayesian-optimization, backtesting]
-    related_skills: [optuna-samplers, optuna-study, scikit-learn-model-selection, quant-walk-forward-validation]
+composes: [optuna-samplers, optuna-study, scikit-learn-model-selection, quant-walk-forward-validation]
+tags: [quantitative-finance, hyperparameter-optimization, bayesian-optimization, backtesting]
+related_skills: [optuna-samplers, optuna-study, scikit-learn-model-selection, quant-walk-forward-validation]
 ---
 
 # Hyperparameter Optimization for Trading Strategies

@@ -1,21 +1,19 @@
 ---
 name: lightgbm-core
-description: Use when working with LightGBM native API — Dataset, train(), Booster, cv(), callbacks. Covers data loading, training, model persistence, and cross-validation.
-version: 0.1.0
+description: "Use when working with LightGBM native API — Dataset, train(), Booster, cv(), callbacks. Covers data loading, training, model persistence, and cross-validation."
+version: 0.2.0
 author: quant-kg-lab
 license: MIT
 source_repo: microsoft/LightGBM
-source_version: main
+source_commit: f9bf8d1358cd7b5d649b47175e56543b62856f98
 extraction_date: 2026-07-29
-graph_hash: 2952_nodes_5138_edges
-graph_stats:
+graph:
   nodes: 2952
   edges: 5138
-  communities: [0, 3, 4, 5, 6, 8, 13, 20, 33, 34, 38, 98, 99, 106, 114, 115, 116, 133, 134, 146]
-metadata:
-  hermes:
-    tags: [lightgbm, gradient-boosting, machine-learning, core-api]
-    related_skills: [lightgbm-sklearn, xgboost-core]
+  community_count: 176
+  graph_hash: 063abd3af521a2d7
+tags: [lightgbm, gradient-boosting, machine-learning, core-api]
+related_skills: [lightgbm-sklearn, xgboost-core]
 ---
 
 # LightGBM Core API

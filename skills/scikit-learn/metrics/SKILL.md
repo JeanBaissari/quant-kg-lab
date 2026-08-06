@@ -1,21 +1,19 @@
 ---
 name: scikit-learn-metrics
-description: Use when working with scikit-learn metrics, scoring functions, pairwise distances, or clustering evaluation. Covers accuracy_score, f1_score, classification_report, roc_auc_score, silhouette_score, and pairwise distance metrics.
-version: 0.1.0
+description: "Use when working with scikit-learn metrics, scoring functions, pairwise distances, or clustering evaluation. Covers accuracy_score, f1_score, classification_report, roc_auc_score, silhouette_score, and pairwise distance metrics."
+version: 0.2.0
 author: quant-kg-lab
 license: MIT
 source_repo: scikit-learn/scikit-learn
-source_version: main
+source_commit: 6f8b95aa2234102acc3804fc8c7a3e6bd0506bfb
 extraction_date: 2026-07-29
-graph_hash: 18753_nodes_49978_edges
-graph_stats:
+graph:
   nodes: 18753
   edges: 49978
-  communities: [35, 94, 105, 123, 125, 133, 315, 346, 347, 363, 382, 415, 515]
-metadata:
-  hermes:
-    tags: [scikit-learn, machine-learning, metrics, scoring, classification, regression, clustering]
-    related_skills: [scikit-learn-model-selection, scikit-learn-preprocessing]
+  community_count: 1149
+  graph_hash: e4761fba3e257880
+tags: [scikit-learn, machine-learning, metrics, scoring, classification, regression, clustering]
+related_skills: [scikit-learn-model-selection, scikit-learn-preprocessing]
 ---
 
 # scikit-learn Metrics
@@ -102,8 +100,3 @@ Extracted from scikit-learn knowledge graph. Source: `sklearn.metrics` module.
 - [ ] Scoring metric matches business objective (e.g., `f1` vs `roc_auc` vs `recall`)
 - [ ] Probability calibration checked before `brier_score_loss` or `log_loss`
 - [ ] `sample_weight` propagated when using weighted datasets
-
-## References
-
-- `references/api.md` — Full API surface from knowledge graph
-- `references/examples.md` — Extracted from scikit-learn examples/

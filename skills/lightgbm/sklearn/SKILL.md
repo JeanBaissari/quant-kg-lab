@@ -1,21 +1,19 @@
 ---
 name: lightgbm-sklearn
-description: Use when working with LightGBM scikit-learn wrappers — LGBMClassifier, LGBMRegressor, LGBMRanker. Covers sklearn-compatible fit/predict, parameter aliases, categorical handling, and Pipeline/GridSearchCV integration.
-version: 0.1.0
+description: "Use when working with LightGBM scikit-learn wrappers — LGBMClassifier, LGBMRegressor, LGBMRanker. Covers sklearn-compatible fit/predict, parameter aliases, categorical handling, and Pipeline/GridSearchCV integration."
+version: 0.2.0
 author: quant-kg-lab
 license: MIT
 source_repo: microsoft/LightGBM
-source_version: main
+source_commit: f9bf8d1358cd7b5d649b47175e56543b62856f98
 extraction_date: 2026-07-29
-graph_hash: 2952_nodes_5138_edges
-graph_stats:
+graph:
   nodes: 2952
   edges: 5138
-  communities: [1, 3, 56, 72, 77, 87, 100, 101, 107, 123, 132]
-metadata:
-  hermes:
-    tags: [lightgbm, gradient-boosting, machine-learning, scikit-learn, sklearn]
-    related_skills: [lightgbm-core, scikit-learn-model-selection, optuna-samplers]
+  community_count: 176
+  graph_hash: 063abd3af521a2d7
+tags: [lightgbm, gradient-boosting, machine-learning, scikit-learn, sklearn]
+related_skills: [lightgbm-core, scikit-learn-model-selection, optuna-samplers]
 ---
 
 # LightGBM Scikit-learn API

@@ -1,22 +1,19 @@
 ---
 name: optuna
-description: Use when working with Optuna hyperparameter optimization framework. Covers samplers, pruners, study lifecycle, trial parameter suggestion, visualization, integrations, and distributions. Load sub-skills for domain-specific detail.
-version: 0.1.0
+description: "Use when working with Optuna hyperparameter optimization framework. Covers samplers, pruners, study lifecycle, trial parameter suggestion, visualization, integrations, and distributions. Load sub-skills for domain-specific detail."
+version: 0.2.0
 author: quant-kg-lab
 license: MIT
 source_repo: optuna/optuna
-source_version: master
+source_commit: b6f2ea62fbe7fb09d0d1c75783c65dad098d9a06
 extraction_date: 2026-07-29
-graph_hash: 3912_nodes_8405_edges
-graph_stats:
+graph:
   nodes: 3912
   edges: 8405
-  communities: 228
-  described_nodes: 1437
-metadata:
-  hermes:
-    tags: [optuna, hyperparameter-optimization, bayesian-optimization, HPO, automated-machine-learning]
-    related_skills: [optuna-samplers, optuna-pruners, optuna-study, optuna-trial, optuna-visualization, optuna-integration, optuna-distributions]
+  community_count: 228
+  graph_hash: 4f20084a8bf230e9
+tags: [optuna, hyperparameter-optimization, bayesian-optimization, HPO, automated-machine-learning]
+related_skills: [optuna-samplers, optuna-pruners, optuna-study, optuna-trial, optuna-visualization, optuna-integration, optuna-distributions]
 ---
 
 # Optuna Knowledge Graph Extraction
