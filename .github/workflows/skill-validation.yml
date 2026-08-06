@@ -5,32 +5,55 @@ on:
     paths:
       - 'skills/**'
       - 'scripts/validate_skills.py'
+      - 'scripts/normalize_skills.py'
+      - 'docs/SKILL_SPEC.md'
+      - 'graphs.lock'
   pull_request:
     paths:
       - 'skills/**'
+      - 'scripts/validate_skills.py'
+      - 'graphs.lock'
   workflow_dispatch:
 
 jobs:
-  validate:
+  lint:
+    # Fast, deterministic GATE: frontmatter schema, unique "Use when" names, no
+    # dangling references/, source_commit matches graphs.lock, routers exist.
+    # Needs no target libraries — pure text/YAML checks.
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      
-      - name: Install core libraries for validation
-        run: |
-          pip install scikit-learn optuna numpy scipy pandas
-      
-      - name: Validate skills against live APIs
-        run: |
-          python scripts/validate_skills.py --ci
-      
-      - name: Upload validation report
-        if: always()
+      - run: pip install pyyaml
+      - name: Lint skills against docs/SKILL_SPEC.md
+        run: python scripts/validate_skills.py --ci
+      - if: always()
         uses: actions/upload-artifact@v4
         with:
           name: skill-validation-report
+          path: docs/skill-validation-report.json
+
+  api:
+    # Best-effort API + provenance validation across all 10 libraries. Non-gating:
+    # surfaces renamed/removed symbols and unresolved provenance for review.
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install target libraries (best-effort; TA-Lib needs the C lib)
+        run: |
+          sudo apt-get update && sudo apt-get install -y build-essential || true
+          pip install pyyaml numpy scipy pandas scikit-learn optuna vectorbt xgboost lightgbm backtrader || true
+          pip install TA-Lib || true
+      - name: Validate skills against live APIs + provenance
+        run: python scripts/validate_skills.py --provenance
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: skill-validation-report-full
           path: docs/skill-validation-report.json
