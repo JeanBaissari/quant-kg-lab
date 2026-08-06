@@ -86,7 +86,7 @@ def audit_edges(graph, library):
         print(f"  {mod_a} ↔ {mod_b}: {count} edges")
     
     # Write audit report
-    report_path = REPO_ROOT / "docs" / f"edge-audit-{library.replace('/', '-')}.md"
+    report_path = REPO_ROOT / "docs" / "reference" / "edge-audits" / f"edge-audit-{library.replace('/', '-')}.md"
     with open(report_path, "w") as f:
         f.write(f"# Edge Audit — {library}\n\n")
         f.write(f"**Date**: 2026-07-29\n\n")

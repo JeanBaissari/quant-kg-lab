@@ -7,7 +7,7 @@ for history but are **superseded** and should not be read as the current state o
 |------|-------------|---------------|
 | `AUDIT.md` | Phase-1 audit (2 libraries) + library-expansion backlog | `README.md`, `ROADMAP.md`; the expansion backlog lives on in ROADMAP Phase 6 |
 | `PHASE2_PLAN.md` | 9-library extraction plan | `ROADMAP.md`, `graphs.lock` |
-| `PHASE4_SKILLS.md` | Per-library skill templates + the original SKILL template | `docs/SKILL_SPEC.md` (now the single authoritative template) |
+| `PHASE4_SKILLS.md` | Per-library skill templates + the original SKILL template | `docs/specs/SKILL_SPEC.md` (now the single authoritative template) |
 
-For current status see `/ROADMAP.md`. For the canonical specs see `docs/SKILL_SPEC.md` and
-`docs/GRAPH_SPEC.md`.
+For current status see `/ROADMAP.md`. For the canonical specs see `docs/specs/SKILL_SPEC.md` and
+`docs/specs/GRAPH_SPEC.md`.

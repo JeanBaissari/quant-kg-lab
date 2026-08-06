@@ -2,7 +2,7 @@
 
 > **Mission**: consolidate the existing 10 library graphs + skills into a single **gold standard**
 > — verifiable, uniform, and composable — before expanding to new libraries.
-> Canonical specs: `docs/SKILL_SPEC.md`, `docs/GRAPH_SPEC.md`. Pins: `graphs.lock`.
+> Canonical specs: `docs/specs/SKILL_SPEC.md`, `docs/specs/GRAPH_SPEC.md`. Pins: `graphs.lock`.
 
 ## State of the repo (accurate as of this roadmap)
 
@@ -21,15 +21,15 @@
 Re-extracted at a pinned commit with **real** descriptions + labels, **noise-filtered** god
 nodes, every skill on the **one template**, every claim **traceable to a graph node** and
 **validated against the live API**, cross-library **bridges as real edges**, and depth matched to
-API importance. Full definitions: `docs/GRAPH_SPEC.md` §5 and `docs/SKILL_SPEC.md`.
+API importance. Full definitions: `docs/specs/GRAPH_SPEC.md` §5 and `docs/specs/SKILL_SPEC.md`.
 
 ---
 
 ## Phase 0 — Truth reset & foundations  ✅ (this cycle)
 
 - [x] `LICENSE`, `requirements.txt`
-- [x] `docs/SKILL_SPEC.md` — the single skill template + frontmatter schema
-- [x] `docs/GRAPH_SPEC.md` — graph schema, noise-filter policy, quality gate
+- [x] `docs/specs/SKILL_SPEC.md` — the single skill template + frontmatter schema
+- [x] `docs/specs/GRAPH_SPEC.md` — graph schema, noise-filter policy, quality gate
 - [x] `graphs.lock` — pinned upstream commits for all 10 libraries
 - [x] `scripts/rebuild_graph.sh` — reproducible per-library rebuild
 - [x] Archived stale plans → `docs/archive/`; rewrote `README.md` + this roadmap
@@ -49,7 +49,7 @@ API importance. Full definitions: `docs/GRAPH_SPEC.md` §5 and `docs/SKILL_SPEC.
 - [x] `scripts/rebuild_graph.sh` uses the real, working invocation (package-dir + noise excludes)
 - [x] `scripts/query_graph.py` accepts all 10 libraries
 - [ ] Run for all 10: clone@pin → extract → answer describe batches → ingest → labels
-- [ ] Every graph passes the Quality Gate (`docs/GRAPH_SPEC.md` §5)
+- [ ] Every graph passes the Quality Gate (`docs/specs/GRAPH_SPEC.md` §5)
 
 ## Phase 2 — Normalize all 46 skills to `SKILL_SPEC`
 

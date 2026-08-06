@@ -1,5 +1,9 @@
 # SKILL_SPEC — The One Skill Template
 
+**Type**: Spec
+**Status**: current
+**Last Verified**: 2026-08-06
+
 > Authoritative spec for every `SKILL.md` under `skills/`. Phase 2 normalizes all skills to
 > this. CI (`scripts/validate_skills.py`) lints against it. There is exactly **one** template
 > and **one** frontmatter schema — the three historical "generations" are retired.

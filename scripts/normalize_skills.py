@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Normalize every skills/**/SKILL.md to docs/SKILL_SPEC.md (one template).
+"""Normalize every skills/**/SKILL.md to docs/specs/SKILL_SPEC.md (one template).
 
 Deterministic structural pass (Phase 2). It does NOT rewrite prose/content — that
 is the post-rebuild content pass. It DOES:

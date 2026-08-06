@@ -1,7 +1,11 @@
 # Methodology — the quant-kg-lab pipeline
 
+**Type**: Guide
+**Status**: current
+**Last Verified**: 2026-08-06
+
 How a library becomes a set of verifiable, copy-in skills. Four stages, each reproducible.
-Specs: [`GRAPH_SPEC.md`](GRAPH_SPEC.md) (graphs), [`SKILL_SPEC.md`](SKILL_SPEC.md) (skills).
+Specs: [`GRAPH_SPEC.md`](../specs/GRAPH_SPEC.md) (graphs), [`SKILL_SPEC.md`](../specs/SKILL_SPEC.md) (skills).
 
 ```
  EXTRACT ───▶ QUERY ───▶ AUTHOR ───▶ VALIDATE

@@ -19,11 +19,11 @@ Two things make it more than a pile of library docs:
 
 - **① Verifiable skills.** Every claim in a skill traces to a graph node (`source_file:line`)
   and is validated against the installed library's real API in CI. Skills you can trust, not
-  hallucinated cheatsheets. → `docs/SKILL_SPEC.md`, `scripts/validate_skills.py`
+  hallucinated cheatsheets. → `docs/specs/SKILL_SPEC.md`, `scripts/validate_skills.py`
 - **② A composable quant stack.** Cross-library **bridges** and **workflow playbooks** encode
   *how* the libraries compose into research loops (data → features → model → backtest → HPO →
   risk) — so it reads as one stack, not ten isolated references. → `skills/quant-patterns/`,
-  `docs/UNIFIED_INDEX.md`
+  `docs/reference/unified-index.md`
 
 ## Architecture
 
@@ -33,7 +33,7 @@ quant-kg-lab/
 ├── skills/<lib>/<module>/SKILL.md      # atomic, per-module skills (+ routers)
 │   └── quant-patterns/                 #   cross-library workflow playbooks
 ├── scripts/                            # rebuild, query, validate, audit, bridge tooling
-├── docs/                               # specs (SKILL_SPEC, GRAPH_SPEC), methodology, index
+├── docs/                               # index.md hub → specs/ guides/ libraries/ reference/ adr/ audit/
 ├── graphs.lock                         # pinned upstream commits — reproducibility manifest
 └── .github/workflows/                  # skill validation + graph freshness CI
 ```
@@ -44,10 +44,10 @@ quant-kg-lab/
    (nodes = modules/classes/functions, edges = calls/inherits/imports/uses).
 2. **Query** — community detection surfaces module boundaries; degree centrality surfaces the
    real API hubs ("god nodes").
-3. **Author** — one spec-driven `SKILL.md` per quant-relevant module (`docs/SKILL_SPEC.md`).
+3. **Author** — one spec-driven `SKILL.md` per quant-relevant module (`docs/specs/SKILL_SPEC.md`).
 4. **Validate** — every skill's claims are checked against the live API + graph provenance in CI.
 
-See `docs/methodology.md` for the full pipeline and `docs/GRAPH_SPEC.md` for the schema, the
+See `docs/guides/methodology.md` for the full pipeline and `docs/specs/GRAPH_SPEC.md` for the schema, the
 noise-filter policy, and the graph quality gate.
 
 ## Libraries under analysis

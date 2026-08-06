@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate docs/UNIFIED_INDEX.md from the normalized skills + graphs.lock + bridges.
+"""Generate docs/reference/unified-index.md from the normalized skills + graphs.lock + bridges.
 
 Reproducible replacement for the old hand-written (stale) template. Re-run after the
 Phase-1 rebuild to refresh graph stats and (later) add a node-level concept index.
@@ -46,7 +46,7 @@ def scan():
 def main():
     libs, playbooks = scan()
     bridges = []
-    bpath = ROOT / "docs" / "cross-library-bridges-v2.json"
+    bpath = ROOT / "docs" / "reference" / "cross-library-bridges.json"
     if bpath.exists():
         bridges = [b for b in json.load(open(bpath)).get("bridges", []) if b.get("status") == "RESOLVED"]
 
@@ -72,7 +72,7 @@ def main():
         info = LOCK.get(lib, {})
         n_skills = len([e for e in libs[lib] if not e["router"]])
         has_router = any(e["router"] for e in libs[lib])
-        router = f"[`{lib}`](../skills/{lib}/SKILL.md)" if has_router else "—"
+        router = f"[`{lib}`](../../skills/{lib}/SKILL.md)" if has_router else "—"
         L.append(f"| {lib} | {LIB_DOMAIN.get(lib,'—')} | {info.get('nodes','?')} · {info.get('edges','?')} "
                  f"| {n_skills} | {router} |")
 
@@ -81,12 +81,12 @@ def main():
         L.append(f"### {lib}")
         for e in sorted(libs[lib], key=lambda x: (not x["router"], x["name"])):
             tag = " *(router)*" if e["router"] else ""
-            L.append(f"- [`{e['name']}`](../skills/{e['path']}){tag} — {e['desc']}")
+            L.append(f"- [`{e['name']}`](../../skills/{e['path']}){tag} — {e['desc']}")
         L.append("")
 
     L += ["## Workflow playbooks (composable stack)", ""]
     for e in sorted(playbooks, key=lambda x: x["name"]):
-        L.append(f"- [`{e['name']}`](../skills/{e['path']}) — {e['desc']}")
+        L.append(f"- [`{e['name']}`](../../skills/{e['path']}) — {e['desc']}")
 
     L += ["", "## Cross-library bridges (resolved to clean nodes)", ""]
     if bridges:
@@ -100,7 +100,7 @@ def main():
     else:
         L.append("_Run `scripts/inject_cross_edges_v2.py` to populate resolved bridges._")
 
-    out = ROOT / "docs" / "UNIFIED_INDEX.md"
+    out = ROOT / "docs" / "reference" / "unified-index.md"
     out.write_text("\n".join(L) + "\n")
     print(f"wrote {out} ({len(libs)} libraries, {sum(len(v) for v in libs.values())} skill entries, "
           f"{len(playbooks)} playbooks, {len(bridges)} bridges)")

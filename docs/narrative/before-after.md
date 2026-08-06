@@ -1,5 +1,9 @@
 # Before / After — the consolidation
 
+**Type**: Narrative
+**Status**: current
+**Last Verified**: 2026-08-06
+
 This repo is its own case study: how a promising-but-drifted "pile of skills" became a verifiable,
 reproducible, composable knowledge base. If you're building something similar for *your* stack,
 this is the transformation — and the method — in one page.
@@ -53,7 +57,7 @@ it *read* like "another random skills repo" because of **drift**, not thin conte
 The skills are **structurally** gold-standard and validated, but not yet **content-regrounded**:
 8/10 graphs remain AST-stub until the Phase-1 rebuild (`rebuild_graph.sh`, needs graphify + network).
 That rebuild is the gate for real semantic descriptions, clean god nodes, and the final bridge/
-concept resolution. Tracked in [`../ROADMAP.md`](../ROADMAP.md).
+concept resolution. Tracked in [`ROADMAP.md`](../../ROADMAP.md).
 
 ## The method, transferable to your stack
 

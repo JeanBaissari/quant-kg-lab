@@ -1,5 +1,9 @@
 # GRAPH_SPEC — Knowledge Graph Schema, Noise Filter & Quality Gate
 
+**Type**: Spec
+**Status**: current
+**Last Verified**: 2026-08-06
+
 > Authoritative spec for every graph under `knowledge_graphs/<lib>/.graphify/`.
 > Governs the Phase-1 rebuild. If a rebuilt graph does not meet the **Quality Gate**
 > (§5), it is not done.
@@ -87,7 +91,7 @@ and `source_location`):
 - **`relation`** vocabulary: `method`, `uses`, `contains`, `calls`, `imports_from`, `imports`,
   `inherits`, `rationale_for`. New relations MUST be documented here before use.
 - **`confidence`**: `EXTRACTED` (AST-derived, score 1) | `INFERRED` (semantic guess, score ~0.5) |
-  `AMBIGUOUS`. `docs/edge-audit-<lib>.md` reports the ratio per library.
+  `AMBIGUOUS`. `docs/reference/edge-audits/edge-audit-<lib>.md` reports the ratio per library.
 
 ## 5. Quality Gate (definition of done for a rebuilt graph)
 
@@ -104,7 +108,7 @@ A rebuilt graph is **gold standard** only when ALL hold:
    `Benchmark` (scipy), `AxisError` (numpy), test/benchmark files.
 4. **Pinned & reproducible** — `built_from_commit` is set and matches `/graphs.lock`;
    `scripts/rebuild_graph.sh <lib>` reproduces the graph.
-5. **Audited** — `docs/edge-audit-<lib>.md` regenerated; INFERRED ratio reported (sklearn's
+5. **Audited** — `docs/reference/edge-audits/edge-audit-<lib>.md` regenerated; INFERRED ratio reported (sklearn's
    53%-inferred graph is the known worst case to re-check).
 
 ## 6. Noise-filter policy
@@ -148,13 +152,13 @@ library's `GRAPH_REPORT.md`.
 
 ## 8. Rebuild procedure
 
-See `scripts/rebuild_graph.sh <library>`. Pipeline (also in `docs/methodology.md`):
+See `scripts/rebuild_graph.sh <library>`. Pipeline (also in `docs/guides/methodology.md`):
 
 1. Clone upstream at the `/graphs.lock` commit into `knowledge_graphs/<lib>/repo/` (gitignored).
 2. `graphify extract --backend claude-cli` with the §6 ignore config → real descriptions + edges.
 3. `scripts/merge_descriptions.py` → merge any batched descriptions into `graph.json`.
 4. `graphify cluster-only .` → community detection + labels + `GRAPH_REPORT.md`.
-5. `scripts/audit_edges.py <lib>` → `docs/edge-audit-<lib>.md`.
+5. `scripts/audit_edges.py <lib>` → `docs/reference/edge-audits/edge-audit-<lib>.md`.
 6. Verify against the §5 Quality Gate before committing.
 
 > Re-extraction requires the graphify CLI **and** network access to clone upstream. It cannot run

@@ -6,10 +6,12 @@ distill into **verifiable, copy-in agent skills**. Read `README.md` for the thes
 
 ## The two specs are authoritative
 
-- **Skills** MUST follow `docs/SKILL_SPEC.md` — one template, one frontmatter schema, one naming
+- **Docs** MUST follow `docs/_development/standards.md` — closed doc-type taxonomy + identity block;
+  `python scripts/doc_audit.py --ci` is the gate.
+- **Skills** MUST follow `docs/specs/SKILL_SPEC.md` — one template, one frontmatter schema, one naming
   rule. Do not reintroduce the retired variants (`metadata.hermes.*`, `graph_hash: <n>_nodes_<m>_edges`,
   noun-phrase descriptions).
-- **Graphs** MUST follow `docs/GRAPH_SPEC.md` — schema, noise filter, quality gate. The definition
+- **Graphs** MUST follow `docs/specs/GRAPH_SPEC.md` — schema, noise filter, quality gate. The definition
   of "described" is *semantic*, not AST stubs.
 
 ## Layout
@@ -20,7 +22,7 @@ knowledge_graphs/<lib>/repo/        upstream source clone                       
 skills/<lib>/<module>/SKILL.md      atomic skill        skills/<lib>/SKILL.md = router
 skills/quant-patterns/              cross-library workflow playbooks
 scripts/                            rebuild / query / validate / audit / bridge tooling (stdlib only)
-docs/                               SKILL_SPEC, GRAPH_SPEC, methodology, UNIFIED_INDEX, edge audits
+docs/                               index.md hub → specs/ guides/ libraries/ reference/ adr/ audit/ narrative/ _development/
 graphs.lock                         pinned upstream commit per library — the reproducibility anchor
 ```
 
@@ -30,7 +32,8 @@ graphs.lock                         pinned upstream commit per library — the r
 scripts/rebuild_graph.sh <lib>                 # rebuild one graph from its pinned commit
 python scripts/query_graph.py <lib> "<query>"  # search + BFS over a graph
 python scripts/validate_skills.py [<lib>|--ci] # check skill claims against live APIs
-python scripts/audit_edges.py <lib>            # regenerate docs/edge-audit-<lib>.md
+python scripts/audit_edges.py <lib>            # regenerate docs/reference/edge-audits/edge-audit-<lib>.md
+python scripts/doc_audit.py [--ci|--write]     # lint docs against docs/_development/standards.md
 ```
 
 ## Environment reality (important)

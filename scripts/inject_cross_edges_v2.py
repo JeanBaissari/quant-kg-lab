@@ -5,7 +5,7 @@ them as a cross-library OVERLAY graph.
 Unlike the previous version (which substring-matched labels and happily resolved
 bridges to benchmark/test/docstring/Cython nodes), this one:
   * matches endpoints PRECISELY — exact label first, code nodes only, excluding
-    test/benchmark/example/binding-internal noise (see docs/GRAPH_SPEC.md §6);
+    test/benchmark/example/binding-internal noise (see docs/specs/GRAPH_SPEC.md §6);
   * writes a real overlay graph (nodes namespaced `<lib>::<id>`, links = bridges)
     to knowledge_graphs/_cross_library/.graphify/graph.json with `--apply`.
 
@@ -117,7 +117,7 @@ def main():
           f"({'noisy pre-rebuild graphs — re-run after Phase 1' if resolved < len(ALL_BRIDGES) else 'all clean'})")
 
     json.dump({"bridges": report, "resolved": resolved, "attempted": len(ALL_BRIDGES)},
-              open(REPO_ROOT / "docs" / "cross-library-bridges-v2.json", "w"), indent=2)
+              open(REPO_ROOT / "docs" / "reference" / "cross-library-bridges.json", "w"), indent=2)
 
     if apply:
         overlay = {"directed": False, "multigraph": False,

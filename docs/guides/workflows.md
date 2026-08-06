@@ -1,5 +1,9 @@
 # Developing with these skills & agents
 
+**Type**: Guide
+**Status**: current
+**Last Verified**: 2026-08-06
+
 Patterns and ideas for *using* quant-kg-lab in day-to-day quantitative work — planning sessions,
 research, and PhD documentation. The skills are copy-in; the tooling around them is what turns a
 pile of references into a working method.

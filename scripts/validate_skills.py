@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate + lint skills against docs/SKILL_SPEC.md and the live library APIs.
+"""Validate + lint skills against docs/specs/SKILL_SPEC.md and the live library APIs.
 
 Three independent checks (all reported; gating differs):
 
@@ -302,7 +302,7 @@ def main():
     (REPO_ROOT / "docs").mkdir(exist_ok=True)
     json.dump({"report": report, "router_errors": router_errs,
                "totals": {"lint": n_lint, "api_fail": n_api, "provenance": n_prov}},
-              open(REPO_ROOT / "docs" / "skill-validation-report.json", "w"),
+              open(REPO_ROOT / "docs" / "reference" / "skill-validation-report.json", "w"),
               indent=2, default=list)
     if ci and n_lint > 0:
         sys.exit(1)
