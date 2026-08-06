@@ -1,112 +1,81 @@
 #!/usr/bin/env bash
 #
-# rebuild_graph.sh — reproducibly rebuild one library's knowledge graph.
+# rebuild_graph.sh — reproducibly re-extract one library's knowledge graph FROM SCRATCH.
+#
+# Verified working pipeline (graphify 0.17.1, github.com/rhanka/graphify):
+#   code extraction is a LOCAL tree-sitter AST pass + Louvain clustering — NO LLM,
+#   NO API key, NO credits. Node descriptions use graphify's assistant mode, which
+#   emits batch prompt files an assistant (Claude Code) answers — still no API key.
 #
 # Usage:   scripts/rebuild_graph.sh <library>
 # Example: scripts/rebuild_graph.sh pandas
 #
-# Reads the pinned upstream commit from /graphs.lock, clones the source at that
-# commit, runs the graphify pipeline with the noise filter from docs/GRAPH_SPEC.md,
-# and regenerates graph.json + GRAPH_REPORT.md + labels + edge audit.
-#
-# Requirements (this cannot run in a network-less sandbox):
-#   - graphify CLI:  npm install -g @sentropic/graphify
-#   - network access to clone the upstream repo
-#   - the claude-cli backend available to graphify (for real descriptions)
+# Requirements:
+#   - graphify CLI. If `graphify` is on PATH it is used; otherwise set GRAPHIFY_CLI
+#     to the path of dist/cli.js. Install cleanly (the plain `npm i -g` can leave a
+#     broken package if $HOME already has a node_modules — install isolated):
+#        d=$(mktemp -d); (cd "$d" && npm init -y >/dev/null && \
+#           npm i @sentropic/graphify@0.17.1 --no-audit --no-fund)
+#        export GRAPHIFY_CLI="$d/node_modules/@sentropic/graphify/dist/cli.js"
+#   - network access to clone upstream (github reachable).
 #
 set -euo pipefail
 
 LIB="${1:-}"
-if [[ -z "$LIB" ]]; then
-  echo "usage: scripts/rebuild_graph.sh <library>" >&2
-  exit 2
-fi
+[[ -z "$LIB" ]] && { echo "usage: scripts/rebuild_graph.sh <library>" >&2; exit 2; }
 
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 LOCK="$REPO_ROOT/graphs.lock"
-KG_DIR="$REPO_ROOT/knowledge_graphs/$LIB"
-GRAPHIFY_DIR="$KG_DIR/.graphify"
-SRC_DIR="$KG_DIR/repo"
+KG="$REPO_ROOT/knowledge_graphs/$LIB"
+SRC="$KG/repo"
 
-# --- Preconditions -----------------------------------------------------------
-command -v graphify >/dev/null 2>&1 || {
-  echo "ERROR: graphify not found. Install with: npm install -g @sentropic/graphify" >&2
-  exit 1
-}
-[[ -f "$LOCK" ]] || { echo "ERROR: missing $LOCK" >&2; exit 1; }
+# graphify invocation: prefer PATH binary, else GRAPHIFY_CLI (node dist/cli.js)
+if command -v graphify >/dev/null 2>&1; then GFY=(graphify)
+elif [[ -n "${GRAPHIFY_CLI:-}" && -f "${GRAPHIFY_CLI}" ]]; then GFY=(node "$GRAPHIFY_CLI")
+else echo "ERROR: graphify not found. Set GRAPHIFY_CLI to dist/cli.js (see header)." >&2; exit 1; fi
 
-# --- Resolve repo + commit from graphs.lock (stdlib python, no jq needed) -----
+# The importable package subdir inside each upstream repo (the real API surface —
+# extracting the whole repo drags in tests/benchmarks/docs and errors on non-code).
+pkg_subdir() { case "$1" in
+  scikit-learn) echo sklearn;; ta-lib) echo talib;;
+  xgboost) echo python-package/xgboost;; lightgbm) echo python-package/lightgbm;;
+  *) echo "$1";; esac; }
+
 read -r REPO COMMIT < <(python3 - "$LOCK" "$LIB" <<'PY'
-import json, sys
-lock, lib = sys.argv[1], sys.argv[2]
-data = json.load(open(lock))["libraries"]
-if lib not in data:
-    sys.stderr.write(f"ERROR: '{lib}' not in graphs.lock. Known: {', '.join(sorted(data))}\n"); sys.exit(1)
-print(data[lib]["repo"], data[lib]["commit"])
+import json,sys
+d=json.load(open(sys.argv[1]))["libraries"]; lib=sys.argv[2]
+if lib not in d: sys.stderr.write("unknown lib\n"); sys.exit(1)
+print(d[lib]["repo"], d[lib]["commit"])
 PY
 )
-echo ">> $LIB  repo=$REPO  commit=$COMMIT"
 
-# --- Clone (or update) upstream at the pinned commit -------------------------
-mkdir -p "$KG_DIR"
-if [[ ! -d "$SRC_DIR/.git" ]]; then
-  echo ">> cloning https://github.com/$REPO into $SRC_DIR"
-  git clone --filter=blob:none "https://github.com/$REPO" "$SRC_DIR"
+# 1. clone upstream at the pinned commit
+if [[ ! -d "$SRC/.git" ]]; then
+  echo ">> cloning $REPO"
+  git clone --quiet --filter=blob:none "https://github.com/$REPO" "$SRC"
 fi
-git -C "$SRC_DIR" fetch --depth 1 origin "$COMMIT" || git -C "$SRC_DIR" fetch origin
-git -C "$SRC_DIR" checkout --quiet "$COMMIT"
-echo ">> checked out $(git -C "$SRC_DIR" rev-parse --short HEAD)"
+git -C "$SRC" fetch --quiet --depth 1 origin "$COMMIT" 2>/dev/null || git -C "$SRC" fetch --quiet origin
+git -C "$SRC" checkout --quiet "$COMMIT"
+PKG="$SRC/$(pkg_subdir "$LIB")"
+echo ">> extracting $LIB from $PKG @ ${COMMIT:0:12}"
 
-# --- Noise filter (docs/GRAPH_SPEC.md §6) ------------------------------------
-# graphify reads .graphifyignore for path excludes. Symbol-level excludes
-# (__Pyx_*, *JNI*, raw TA_* C entry points) are pruned in a post-pass; see
-# GRAPH_SPEC §6 for the ta-lib exception.
-cat > "$SRC_DIR/.graphifyignore" <<'IGNORE'
-tests/
-test_*
-*_test.py
-conftest.py
-asv_bench/
-benchmarks/
-bench/
-doc/
-docs/
-examples/
-.github/
-setup.py
-versioneer*
-_vendor/
-third_party/
-vendored/
-IGNORE
+# 2. LOCAL AST + Louvain extraction (no LLM). Exclude tests/benchmarks + non-code.
+WS="$KG/.graphify"; mkdir -p "$WS"
+"${GFY[@]}" extract "$PKG" --out "$KG" --no-description --no-label \
+  --exclude 'tests/**' --exclude 'test_*' --exclude '*_test.py' --exclude 'benchmarks/**' \
+  --exclude 'asv_bench/**' --exclude 'examples/**' --exclude 'samples/**' --exclude 'docs/**' \
+  --exclude '*.pyx' --exclude '*.pxi' --exclude '*.pxd' --exclude '*.pyi' --exclude '*.typed'
 
-# --- Extract → merge descriptions → cluster → audit --------------------------
-pushd "$SRC_DIR" >/dev/null
-echo ">> graphify extract (backend=claude-cli)"
-graphify extract --backend claude-cli
-echo ">> merging descriptions"
-python3 "$REPO_ROOT/scripts/merge_descriptions.py" "$LIB" || true
-echo ">> graphify cluster-only"
-graphify cluster-only .
-popd >/dev/null
+# 3. Descriptions + labels via assistant mode (emits batch prompts; NO API key).
+#    An assistant (Claude Code) fills each .graphify/description-instructions/batch-NNN.json,
+#    then re-run `graphify describe` to ingest. Same flow for `graphify label`.
+echo ">> emitting description batches (assistant mode — answer them, then re-run describe to ingest)"
+"${GFY[@]}" describe "$KG" || true
 
-# graphify writes into $SRC_DIR/.graphify — publish the three committed artifacts up one level.
-mkdir -p "$GRAPHIFY_DIR"
-for f in graph.json GRAPH_REPORT.md .graphify_labels.json; do
-  [[ -f "$SRC_DIR/.graphify/$f" ]] && cp "$SRC_DIR/.graphify/$f" "$GRAPHIFY_DIR/$f"
-done
+cat <<DONE
 
-echo ">> edge audit"
-python3 "$REPO_ROOT/scripts/audit_edges.py" "$LIB" || true
-
-# --- Quality-gate reminder (docs/GRAPH_SPEC.md §5) ---------------------------
-cat <<GATE
-
-── Verify against the Quality Gate (docs/GRAPH_SPEC.md §5) before committing ──
-  [ ] real community labels (no "Community N", no {"None":"Tests"})
-  [ ] >=80% of retained public-API code nodes have SEMANTIC descriptions (not AST stubs)
-  [ ] top-20 god nodes contain no test/benchmark/__Pyx_*/JNI symbols
-  [ ] built_from_commit == $COMMIT (matches graphs.lock)
-  [ ] docs/edge-audit-$LIB.md regenerated
-GATE
-echo ">> done: $GRAPHIFY_DIR"
+>> structural graph written: $WS/graph.json
+>> NEXT: answer .graphify/description-instructions/batch-*.json (assistant mode, no API key),
+   then: ${GFY[*]} describe "$KG"   # ingests → real descriptions
+   Verify against the Quality Gate in docs/GRAPH_SPEC.md §5.
+DONE

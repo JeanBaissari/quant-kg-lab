@@ -35,15 +35,20 @@ API importance. Full definitions: `docs/GRAPH_SPEC.md` §5 and `docs/SKILL_SPEC.
 - [x] Archived stale plans → `docs/archive/`; rewrote `README.md` + this roadmap
 - [x] `CLAUDE.md` — repo conventions for agents
 
-## Phase 1 — Rebuild all 10 graphs, done right
+## Phase 1 — Rebuild all 10 graphs, done right  🔧 (pipeline PROVEN working)
 
-> **Runs on a machine with the graphify CLI + network** (not a sandbox). Tooling is ready.
+> **graphify runs here, from scratch, with NO API key / NO credits.** Verified 2026-08-06:
+> code extraction is a local tree-sitter AST + Louvain pass (no LLM); node descriptions use
+> graphify's **assistant mode** (emits batch prompts the assistant answers — still no key).
+> End-to-end proof: ta-lib Python API re-extracted from scratch → 10/10 nodes described.
+> Working invocation captured in `scripts/rebuild_graph.sh`. graphify install: isolated
+> (`npm i @sentropic/graphify` in a dir whose parent has no node_modules), then `GRAPHIFY_CLI`.
 
-- [ ] `scripts/rebuild_graph.sh <lib>` for all 10 → real descriptions + real labels
-- [ ] Apply the noise filter (`docs/GRAPH_SPEC.md` §6) — remove test/bench/Cython-internal nodes
-- [ ] Regenerate `GRAPH_REPORT.md`, `.graphify_labels.json`, `docs/edge-audit-<lib>.md`
-- [ ] Fix hardcoded foreign paths in `scripts/label_communities.py`, `merge_descriptions.py`
-- [ ] `scripts/query_graph.py` accepts all 10 libraries (currently sklearn/optuna only)
+- [x] Proven: `graphify extract <pkg> --no-description --no-label --exclude …` (local, no LLM)
+- [x] Proven: `graphify describe` assistant loop ingests answers → real descriptions (no key)
+- [x] `scripts/rebuild_graph.sh` uses the real, working invocation (package-dir + noise excludes)
+- [x] `scripts/query_graph.py` accepts all 10 libraries
+- [ ] Run for all 10: clone@pin → extract → answer describe batches → ingest → labels
 - [ ] Every graph passes the Quality Gate (`docs/GRAPH_SPEC.md` §5)
 
 ## Phase 2 — Normalize all 46 skills to `SKILL_SPEC`
