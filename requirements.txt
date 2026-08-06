@@ -1,0 +1,27 @@
+# quant-kg-lab — Python dependencies
+#
+# The repo's own tooling (scripts/*.py) uses only the Python standard library.
+# These packages are the *target libraries* the skills describe. They are needed
+# to run scripts/validate_skills.py (which imports each library and checks that
+# every symbol a skill claims actually exists).
+#
+# Graph (re)extraction additionally requires the external graphify CLI, which is
+# NOT a Python package — install it with:  npm install -g @sentropic/graphify
+#
+# Pins are lower-bounds matching the upstream commits recorded in graphs.lock.
+# Regenerate exact versions with `pip freeze` in your extraction environment.
+
+numpy>=2.0
+scipy>=1.13
+pandas>=2.2
+scikit-learn>=1.5
+optuna>=4.0
+vectorbt>=0.26
+xgboost>=2.0
+lightgbm>=4.0
+backtrader>=1.9
+
+# TA-Lib requires the underlying C library (libta-lib) to be installed first:
+#   Debian/Ubuntu: apt install ta-lib      macOS: brew install ta-lib
+# then:  pip install TA-Lib
+TA-Lib>=0.4.28
