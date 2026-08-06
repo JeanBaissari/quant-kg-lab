@@ -16,7 +16,7 @@ Specs: [`GRAPH_SPEC.md`](../specs/GRAPH_SPEC.md) (graphs), [`SKILL_SPEC.md`](../
 ## 1. Extract — source → knowledge graph
 
 We use [graphify](https://github.com/sentropic/graphify) (`npm i -g @sentropic/graphify`) to
-ingest a library's source tree at a **pinned commit** (recorded in [`/graphs.lock`](../graphs.lock))
+ingest a library's source tree at a **pinned commit** (recorded in [`/graphs.lock`](../../graphs.lock))
 and emit a networkx node-link graph.
 
 - Reproducible entry point: `scripts/rebuild_graph.sh <lib>` — clone@pin → `graphify extract
