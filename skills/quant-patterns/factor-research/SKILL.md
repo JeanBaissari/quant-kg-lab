@@ -1,10 +1,10 @@
 ---
 name: quant-factor-research
-description: Use when researching alpha factors — building candidate features, measuring their predictive power and importance, selecting a robust subset, and validating out-of-sample before any backtest.
+description: "Use when researching alpha factors — building candidate features, measuring their predictive power and importance, selecting a robust subset, and validating out-of-sample before any backtest."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
-composes: [pandas-ts, ta-lib-indicators, scipy-stats, scikit-learn-feature-selection, scikit-learn-ensemble, quant-factor-importance, quant-walk-forward-validation]
+composes: [quant-full-pipeline, quant-factor-importance, quant-walk-forward-validation]
 tags: [quantitative-finance, factor-research, feature-selection, alpha, workflow]
 related_skills: [quant-full-pipeline, quant-factor-importance, quant-walk-forward-validation]
 ---

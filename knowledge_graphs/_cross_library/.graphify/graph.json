@@ -22,79 +22,79 @@
       "id": "vectorbt::base_array_wrapper_arraywrapper",
       "label": "ArrayWrapper",
       "library": "vectorbt",
-      "source_file": "vectorbt/base/array_wrapper.py"
+      "source_file": "base/array_wrapper.py"
     },
     {
       "id": "numpy::linalg_linalg",
       "label": "_linalg.py",
       "library": "numpy",
-      "source_file": "numpy/linalg/_linalg.py"
+      "source_file": "linalg/_linalg.py"
     },
     {
       "id": "scipy::linalg_linalg_pythran",
       "label": "_linalg_pythran.py",
       "library": "scipy",
-      "source_file": "scipy/linalg/_linalg_pythran.py"
+      "source_file": "linalg/_linalg_pythran.py"
     },
     {
-      "id": "scikit-learn::baseestimator",
+      "id": "scikit-learn::base_baseestimator",
       "label": "BaseEstimator",
       "library": "scikit-learn",
-      "source_file": ""
+      "source_file": "base.py"
     },
     {
       "id": "vectorbt::portfolio_base_portfolio",
       "label": "Portfolio",
       "library": "vectorbt",
-      "source_file": "vectorbt/portfolio/base.py"
+      "source_file": "portfolio/base.py"
     },
     {
       "id": "vectorbt::signals_factory_signalfactory",
       "label": "SignalFactory",
       "library": "vectorbt",
-      "source_file": "vectorbt/signals/factory.py"
+      "source_file": "signals/factory.py"
     },
     {
       "id": "optuna::study_study_study",
       "label": "Study",
       "library": "optuna",
-      "source_file": "optuna/study/study.py"
+      "source_file": "study/study.py"
     },
     {
-      "id": "backtrader::backtrader_cerebro_cerebro",
+      "id": "backtrader::cerebro_cerebro",
       "label": "Cerebro",
       "library": "backtrader",
-      "source_file": "backtrader/cerebro.py"
+      "source_file": "cerebro.py"
     },
     {
-      "id": "backtrader::backtrader_strategy_strategy",
+      "id": "backtrader::strategy_strategy",
       "label": "Strategy",
       "library": "backtrader",
-      "source_file": "backtrader/strategy.py"
+      "source_file": "strategy.py"
     },
     {
-      "id": "xgboost::xgboost_sklearn_xgbclassifier",
+      "id": "xgboost::sklearn_xgbclassifier",
       "label": "XGBClassifier",
       "library": "xgboost",
-      "source_file": "python-package/xgboost/sklearn.py"
+      "source_file": "sklearn.py"
     },
     {
-      "id": "scikit-learn::sklearn_pipeline_pipeline",
+      "id": "scikit-learn::pipeline_pipeline",
       "label": "Pipeline",
       "library": "scikit-learn",
-      "source_file": "sklearn/pipeline.py"
+      "source_file": "pipeline.py"
     },
     {
-      "id": "xgboost::xgboost_sklearn_xgbregressor",
+      "id": "xgboost::sklearn_xgbregressor",
       "label": "XGBRegressor",
       "library": "xgboost",
-      "source_file": "python-package/xgboost/sklearn.py"
+      "source_file": "sklearn.py"
     },
     {
-      "id": "xgboost::external_memory_external_memory_trainmodel",
-      "label": "TrainModel()",
+      "id": "xgboost::callback_trainingcallback",
+      "label": "TrainingCallback",
       "library": "xgboost",
-      "source_file": "demo/c-api/external-memory/external_memory.c"
+      "source_file": "callback.py"
     },
     {
       "id": "lightgbm::lgbmclassifier",
@@ -106,31 +106,31 @@
       "id": "scikit-learn::model_selection_search_gridsearchcv",
       "label": "GridSearchCV",
       "library": "scikit-learn",
-      "source_file": "sklearn/model_selection/_search.py"
+      "source_file": "model_selection/_search.py"
     },
     {
       "id": "scikit-learn::ensemble_forest_randomforestclassifier",
       "label": "RandomForestClassifier",
       "library": "scikit-learn",
-      "source_file": "sklearn/ensemble/_forest.py"
+      "source_file": "ensemble/_forest.py"
     },
     {
-      "id": "scipy::arff_arffread_numericattribute_basic_stats",
-      "label": "._basic_stats()",
+      "id": "scipy::ndimage_measurements_stats",
+      "label": "_stats()",
       "library": "scipy",
-      "source_file": "scipy/io/arff/_arffread.py"
+      "source_file": "ndimage/_measurements.py"
     },
     {
       "id": "scikit-learn::feature_selection_univariate_selection_selectkbest",
       "label": "SelectKBest",
       "library": "scikit-learn",
-      "source_file": "sklearn/feature_selection/_univariate_selection.py"
+      "source_file": "feature_selection/_univariate_selection.py"
     },
     {
-      "id": "scipy::source_scipyoptdoc_scipyoptimizeinterfacedomain",
-      "label": "ScipyOptimizeInterfaceDomain",
+      "id": "scipy::optimizeresult",
+      "label": "OptimizeResult",
       "library": "scipy",
-      "source_file": "doc/source/scipyoptdoc.py"
+      "source_file": ""
     }
   ],
   "links": [
@@ -157,7 +157,7 @@
     },
     {
       "source": "pandas::dataframe",
-      "target": "scikit-learn::baseestimator",
+      "target": "scikit-learn::base_baseestimator",
       "relation": "input_to",
       "confidence": "CURATED",
       "description": "pandas DataFrame is the standard input to sklearn fit()"
@@ -177,35 +177,35 @@
       "description": "vectorbt signal parameters tuned via optuna Study.optimize"
     },
     {
-      "source": "backtrader::backtrader_cerebro_cerebro",
+      "source": "backtrader::cerebro_cerebro",
       "target": "optuna::study_study_study",
       "relation": "optimized_by",
       "confidence": "CURATED",
       "description": "backtrader Cerebro strategy parameters tuned via optuna"
     },
     {
-      "source": "backtrader::backtrader_strategy_strategy",
+      "source": "backtrader::strategy_strategy",
       "target": "vectorbt::portfolio_base_portfolio",
       "relation": "alternative_to",
       "confidence": "CURATED",
       "description": "backtrader event-driven Strategy vs vectorbt vectorized Portfolio"
     },
     {
-      "source": "xgboost::xgboost_sklearn_xgbclassifier",
-      "target": "scikit-learn::sklearn_pipeline_pipeline",
+      "source": "xgboost::sklearn_xgbclassifier",
+      "target": "scikit-learn::pipeline_pipeline",
       "relation": "compatible_with",
       "confidence": "CURATED",
       "description": "XGBClassifier implements the sklearn API, usable in a Pipeline"
     },
     {
-      "source": "xgboost::xgboost_sklearn_xgbregressor",
+      "source": "xgboost::sklearn_xgbregressor",
       "target": "vectorbt::portfolio_base_portfolio",
       "relation": "predicts_for",
       "confidence": "CURATED",
       "description": "XGBRegressor return predictions fed to vectorbt Portfolio simulation"
     },
     {
-      "source": "xgboost::external_memory_external_memory_trainmodel",
+      "source": "xgboost::callback_trainingcallback",
       "target": "optuna::study_study_study",
       "relation": "optimized_by",
       "confidence": "CURATED",
@@ -226,21 +226,21 @@
       "description": "RandomForest predictions converted to vectorbt signals"
     },
     {
-      "source": "scikit-learn::sklearn_pipeline_pipeline",
+      "source": "scikit-learn::pipeline_pipeline",
       "target": "optuna::study_study_study",
       "relation": "tuned_by",
       "confidence": "CURATED",
       "description": "sklearn Pipeline parameters optimized via optuna"
     },
     {
-      "source": "scipy::arff_arffread_numericattribute_basic_stats",
+      "source": "scipy::ndimage_measurements_stats",
       "target": "scikit-learn::feature_selection_univariate_selection_selectkbest",
       "relation": "powers",
       "confidence": "CURATED",
       "description": "scipy.stats statistical tests drive sklearn feature selection"
     },
     {
-      "source": "scipy::source_scipyoptdoc_scipyoptimizeinterfacedomain",
+      "source": "scipy::optimizeresult",
       "target": "optuna::study_study_study",
       "relation": "alternative_to",
       "confidence": "CURATED",

@@ -8,10 +8,10 @@ source_repo: numpy/numpy
 source_commit: ab2199763cb17878cd8f34fcbc97106c5397f922
 extraction_date: 2026-07-29
 graph:
-  nodes: 20436
-  edges: 30581
-  community_count: 1561
-  graph_hash: 96ded7dfb2ac7d28
+  nodes: 8345
+  edges: 13507
+  community_count: 670
+  graph_hash: 11fb7485308e9cec
 tags: [numpy, core]
 related_skills: []
 ---

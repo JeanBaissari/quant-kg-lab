@@ -8,10 +8,10 @@ source_repo: scikit-learn/scikit-learn
 source_commit: 6f8b95aa2234102acc3804fc8c7a3e6bd0506bfb
 extraction_date: 2026-07-29
 graph:
-  nodes: 18753
-  edges: 49978
-  community_count: 1149
-  graph_hash: e4761fba3e257880
+  nodes: 8662
+  edges: 29241
+  community_count: 401
+  graph_hash: e587e89627b31941
 tags: [scikit-learn]
 related_skills: [scikit-learn-cluster, scikit-learn-compose, scikit-learn-decomposition, scikit-learn-ensemble, scikit-learn-feature-selection, scikit-learn-gaussian-process, scikit-learn-impute, scikit-learn-linear-model, scikit-learn-metrics, scikit-learn-model-selection, scikit-learn-neural-network, scikit-learn-preprocessing, scikit-learn-svm, scikit-learn-tree]
 ---
@@ -39,5 +39,5 @@ Indexes the 14 spec-driven scikit-learn sub-skills. Load the one for the module 
 | [scikit-learn-tree](tree/SKILL.md) | `sklearn.tree` | scikit-learn Decision Trees |
 
 ## Provenance
-- Knowledge graph: scikit-learn, 18753 nodes, 49978 edges, 1149 communities
+- Knowledge graph: scikit-learn, 8662 nodes, 29241 edges, 401 communities
 - Rebuild: `scripts/rebuild_graph.sh scikit-learn` (pinned commit 6f8b95aa2234)

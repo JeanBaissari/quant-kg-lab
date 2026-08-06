@@ -6,15 +6,65 @@
     "backend": "claude-cli"
   },
   "libraries": {
-    "numpy":        { "repo": "numpy/numpy",                 "commit": "ab2199763cb17878cd8f34fcbc97106c5397f922", "nodes": 20436, "edges": 30581 },
-    "scipy":        { "repo": "scipy/scipy",                 "commit": "0514ef9e73297ef8d6f46379731eedc619f9d201", "nodes": 31042, "edges": 51352 },
-    "pandas":       { "repo": "pandas-dev/pandas",           "commit": "982854070758cd2015fc9e64395684546b1c5444", "nodes": 37983, "edges": 69899 },
-    "scikit-learn": { "repo": "scikit-learn/scikit-learn",   "commit": "6f8b95aa2234102acc3804fc8c7a3e6bd0506bfb", "nodes": 18753, "edges": 49978 },
-    "optuna":       { "repo": "optuna/optuna",               "commit": "b6f2ea62fbe7fb09d0d1c75783c65dad098d9a06", "nodes": 3912,  "edges": 8405  },
-    "vectorbt":     { "repo": "polakowo/vectorbt",           "commit": "f9897528f675114e6b34790178dbb2ca137acb51", "nodes": 5411,  "edges": 13588 },
-    "backtrader":   { "repo": "mementum/backtrader",         "commit": "b853d7c90b6721476eb5a5ea3135224e33db1f14", "nodes": 3458,  "edges": 6863  },
-    "ta-lib":       { "repo": "TA-Lib/ta-lib-python",        "commit": "a9ff1b47b3ddbd57274116645d688c0ed677338b", "nodes": 1305,  "edges": 5564  },
-    "xgboost":      { "repo": "dmlc/xgboost",                "commit": "2a4786e61e08b41f63916089c35a10d0ac4626d2", "nodes": 7708,  "edges": 14747 },
-    "lightgbm":     { "repo": "microsoft/LightGBM",          "commit": "f9bf8d1358cd7b5d649b47175e56543b62856f98", "nodes": 2952,  "edges": 5138  }
+    "numpy": {
+      "repo": "numpy/numpy",
+      "commit": "ab2199763cb17878cd8f34fcbc97106c5397f922",
+      "nodes": 8345,
+      "edges": 13507
+    },
+    "scipy": {
+      "repo": "scipy/scipy",
+      "commit": "0514ef9e73297ef8d6f46379731eedc619f9d201",
+      "nodes": 14193,
+      "edges": 23606
+    },
+    "pandas": {
+      "repo": "pandas-dev/pandas",
+      "commit": "982854070758cd2015fc9e64395684546b1c5444",
+      "nodes": 11837,
+      "edges": 40707
+    },
+    "scikit-learn": {
+      "repo": "scikit-learn/scikit-learn",
+      "commit": "6f8b95aa2234102acc3804fc8c7a3e6bd0506bfb",
+      "nodes": 8662,
+      "edges": 29241
+    },
+    "optuna": {
+      "repo": "optuna/optuna",
+      "commit": "b6f2ea62fbe7fb09d0d1c75783c65dad098d9a06",
+      "nodes": 2318,
+      "edges": 4252
+    },
+    "vectorbt": {
+      "repo": "polakowo/vectorbt",
+      "commit": "f9897528f675114e6b34790178dbb2ca137acb51",
+      "nodes": 3682,
+      "edges": 9212
+    },
+    "backtrader": {
+      "repo": "mementum/backtrader",
+      "commit": "b853d7c90b6721476eb5a5ea3135224e33db1f14",
+      "nodes": 2680,
+      "edges": 4964
+    },
+    "ta-lib": {
+      "repo": "TA-Lib/ta-lib-python",
+      "commit": "a9ff1b47b3ddbd57274116645d688c0ed677338b",
+      "nodes": 1140,
+      "edges": 5352
+    },
+    "xgboost": {
+      "repo": "dmlc/xgboost",
+      "commit": "2a4786e61e08b41f63916089c35a10d0ac4626d2",
+      "nodes": 1632,
+      "edges": 4415
+    },
+    "lightgbm": {
+      "repo": "microsoft/LightGBM",
+      "commit": "f9bf8d1358cd7b5d649b47175e56543b62856f98",
+      "nodes": 594,
+      "edges": 2099
+    }
   }
 }

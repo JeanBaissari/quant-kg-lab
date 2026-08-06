@@ -8,10 +8,10 @@ source_repo: pandas-dev/pandas
 source_commit: 982854070758cd2015fc9e64395684546b1c5444
 extraction_date: 2026-07-29
 graph:
-  nodes: 37983
-  edges: 69899
-  community_count: 1986
-  graph_hash: b70488661b79f085
+  nodes: 11837
+  edges: 40707
+  community_count: 410
+  graph_hash: 228c5da2c015f886
 tags: [pandas, ts]
 related_skills: []
 ---

@@ -1,10 +1,10 @@
 ---
 name: quant-full-pipeline
-description: Use when building an end-to-end quantitative research loop — from raw OHLCV data through features, model, backtest, hyperparameter search, and risk analysis — composing the whole quant stack.
+description: "Use when building an end-to-end quantitative research loop — from raw OHLCV data through features, model, backtest, hyperparameter search, and risk analysis — composing the whole quant stack."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
-composes: [pandas-core, pandas-ts, ta-lib-indicators, scipy-stats, scikit-learn-ensemble, xgboost-sklearn, vectorbt-signals, vectorbt-portfolio, optuna-study, quant-walk-forward-validation]
+composes: [quant-factor-research, quant-ml-strategy, quant-walk-forward-validation]
 tags: [quantitative-finance, pipeline, backtesting, feature-engineering, workflow]
 related_skills: [quant-factor-research, quant-ml-strategy, quant-walk-forward-validation]
 ---

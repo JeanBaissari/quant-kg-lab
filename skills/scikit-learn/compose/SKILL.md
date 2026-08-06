@@ -8,10 +8,10 @@ source_repo: scikit-learn/scikit-learn
 source_commit: 6f8b95aa2234102acc3804fc8c7a3e6bd0506bfb
 extraction_date: 2026-07-29
 graph:
-  nodes: 18753
-  edges: 49978
-  community_count: 1149
-  graph_hash: e4761fba3e257880
+  nodes: 8662
+  edges: 29241
+  community_count: 401
+  graph_hash: e587e89627b31941
 tags: [scikit-learn, machine-learning, pipelines, composite-estimators, column-transformer, feature-union]
 related_skills: [scikit-learn-preprocessing, scikit-learn-model-selection, scikit-learn-linear-model]
 ---

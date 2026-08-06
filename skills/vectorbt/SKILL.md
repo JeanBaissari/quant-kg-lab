@@ -8,10 +8,10 @@ source_repo: polakowo/vectorbt
 source_commit: f9897528f675114e6b34790178dbb2ca137acb51
 extraction_date: 2026-07-29
 graph:
-  nodes: 5411
-  edges: 13588
-  community_count: 395
-  graph_hash: 517324dd1904bd64
+  nodes: 3682
+  edges: 9212
+  community_count: 353
+  graph_hash: 0c9c535c173d5a38
 tags: [vectorbt]
 related_skills: [vectorbt-core, vectorbt-portfolio, vectorbt-signals]
 ---
@@ -28,5 +28,5 @@ Indexes the 3 spec-driven vectorbt sub-skills. Load the one for the module you n
 | [vectorbt-signals](signals/SKILL.md) | `vectorbt.signals` | entry/exit signals with vectorbt |
 
 ## Provenance
-- Knowledge graph: vectorbt, 5411 nodes, 13588 edges, 395 communities
+- Knowledge graph: vectorbt, 3682 nodes, 9212 edges, 353 communities
 - Rebuild: `scripts/rebuild_graph.sh vectorbt` (pinned commit f9897528f675)

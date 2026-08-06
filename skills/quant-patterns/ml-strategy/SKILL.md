@@ -1,10 +1,10 @@
 ---
 name: quant-ml-strategy
-description: Use when turning a machine-learning model into a tradable strategy — mapping predictions to positions, backtesting on an execution engine, tuning with HPO, and sizing with risk controls.
+description: "Use when turning a machine-learning model into a tradable strategy — mapping predictions to positions, backtesting on an execution engine, tuning with HPO, and sizing with risk controls."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
-composes: [scikit-learn-ensemble, xgboost-sklearn, lightgbm-sklearn, vectorbt-portfolio, backtrader-core, optuna-study, quant-walk-forward-validation, quant-portfolio-construction]
+composes: [quant-full-pipeline, quant-portfolio-construction, quant-walk-forward-validation]
 tags: [quantitative-finance, machine-learning, strategy, backtesting, workflow]
 related_skills: [quant-full-pipeline, quant-portfolio-construction, quant-walk-forward-validation]
 ---

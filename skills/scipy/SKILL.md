@@ -8,10 +8,10 @@ source_repo: scipy/scipy
 source_commit: 0514ef9e73297ef8d6f46379731eedc619f9d201
 extraction_date: 2026-07-29
 graph:
-  nodes: 31042
-  edges: 51352
-  community_count: 1929
-  graph_hash: 4a63d9a8dfdca80b
+  nodes: 14193
+  edges: 23606
+  community_count: 1076
+  graph_hash: 2be4a46f8c5c60da
 tags: [scipy]
 related_skills: [scipy-optimize, scipy-signal, scipy-stats]
 ---
@@ -28,5 +28,5 @@ Indexes the 3 spec-driven SciPy sub-skills. Load the one for the module you need
 | [scipy-stats](stats/SKILL.md) | `scipy.stats` | statistics with SciPy |
 
 ## Provenance
-- Knowledge graph: scipy, 31042 nodes, 51352 edges, 1929 communities
+- Knowledge graph: scipy, 14193 nodes, 23606 edges, 1076 communities
 - Rebuild: `scripts/rebuild_graph.sh scipy` (pinned commit 0514ef9e7329)

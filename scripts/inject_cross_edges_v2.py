@@ -113,8 +113,9 @@ def main():
             print(f"  ✗ {lib_a}.{lab_a} -> {lib_b}.{lab_b}  (no clean node for: {miss})")
 
     resolved = sum(1 for r in report if r["status"] == "RESOLVED")
-    print(f"\n{resolved}/{len(ALL_BRIDGES)} bridges resolved to clean nodes "
-          f"({'noisy pre-rebuild graphs — re-run after Phase 1' if resolved < len(ALL_BRIDGES) else 'all clean'})")
+    tail = "all clean" if resolved == len(ALL_BRIDGES) else \
+        f"{len(ALL_BRIDGES)-resolved} endpoints exist only as Cython/internal nodes (e.g. ta-lib RSI/MACD)"
+    print(f"\n{resolved}/{len(ALL_BRIDGES)} bridges resolved to clean nodes ({tail})")
 
     json.dump({"bridges": report, "resolved": resolved, "attempted": len(ALL_BRIDGES)},
               open(REPO_ROOT / "docs" / "reference" / "cross-library-bridges.json", "w"), indent=2)

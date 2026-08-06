@@ -8,10 +8,10 @@ source_repo: TA-Lib/ta-lib-python
 source_commit: a9ff1b47b3ddbd57274116645d688c0ed677338b
 extraction_date: 2026-07-29
 graph:
-  nodes: 1305
-  edges: 5564
-  community_count: 120
-  graph_hash: 42a839f87ae0e568
+  nodes: 1140
+  edges: 5352
+  community_count: 203
+  graph_hash: 3230149560fae608
 tags: [ta-lib, indicators]
 related_skills: []
 ---

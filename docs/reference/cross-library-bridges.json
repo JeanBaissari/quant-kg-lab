@@ -88,7 +88,7 @@
     {
       "bridge": "xgboost.train -> optuna.Study",
       "status": "RESOLVED",
-      "source": "xgboost::TrainModel()",
+      "source": "xgboost::TrainingCallback",
       "target": "optuna::Study",
       "relation": "optimized_by"
     },
@@ -116,14 +116,14 @@
     {
       "bridge": "scipy.stats -> scikit-learn.SelectKBest",
       "status": "RESOLVED",
-      "source": "scipy::._basic_stats()",
+      "source": "scipy::_stats()",
       "target": "scikit-learn::SelectKBest",
       "relation": "powers"
     },
     {
       "bridge": "scipy.optimize -> optuna.Study",
       "status": "RESOLVED",
-      "source": "scipy::ScipyOptimizeInterfaceDomain",
+      "source": "scipy::OptimizeResult",
       "target": "optuna::Study",
       "relation": "alternative_to"
     }

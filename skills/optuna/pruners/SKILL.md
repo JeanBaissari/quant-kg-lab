@@ -8,10 +8,10 @@ source_repo: optuna/optuna
 source_commit: b6f2ea62fbe7fb09d0d1c75783c65dad098d9a06
 extraction_date: 2026-07-29
 graph:
-  nodes: 3912
-  edges: 8405
-  community_count: 228
-  graph_hash: 4f20084a8bf230e9
+  nodes: 2318
+  edges: 4252
+  community_count: 226
+  graph_hash: a4c296debfeefdef
 tags: [optuna, hyperparameter-optimization, pruners]
 related_skills: [optuna-samplers, optuna-pruners, optuna-study, optuna-trial, optuna-visualization, optuna-integration, optuna-distributions]
 ---

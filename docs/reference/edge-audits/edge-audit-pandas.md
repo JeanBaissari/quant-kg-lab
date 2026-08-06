@@ -4,53 +4,53 @@
 
 ## Summary
 
-- Total edges: 69899
-- EXTRACTED: 54636 (78.2%)
-- INFERRED: 15263 (21.8%)
+- Total edges: 40707
+- EXTRACTED: 17144 (42.1%)
+- INFERRED: 23563 (57.9%)
 - AMBIGUOUS: 0
 
 ## Top INFERRED Nodes
 
-- `StringDtype`: 1007 inferred edges
-- `WriteBuffer`: 736 inferred edges
-- `DataFrame`: 658 inferred edges
-- `Series`: 500 inferred edges
-- `Accessor`: 467 inferred edges
-- `ReadBuffer`: 463 inferred edges
-- `MultiIndex`: 425 inferred edges
-- `OpsMixin`: 401 inferred edges
-- `SequenceNotStr`: 362 inferred edges
-- `RangeIndex`: 356 inferred edges
-- `ArrowExtensionArray`: 321 inferred edges
-- `ExtensionArray`: 317 inferred edges
-- `FrozenList`: 315 inferred edges
-- `ArrowArrayExportable`: 295 inferred edges
-- `ArrowStreamExportable`: 295 inferred edges
-- `NDArrayBackedExtensionArray`: 293 inferred edges
-- `BaseIndexer`: 287 inferred edges
-- `Resampler`: 248 inferred edges
-- `WriteExcelBuffer`: 235 inferred edges
-- `NumpyExtensionArray`: 210 inferred edges
+- `DatetimeTZDtype`: 1682 inferred edges
+- `CategoricalDtype`: 1456 inferred edges
+- `PeriodDtype`: 1069 inferred edges
+- `StringDtype`: 1012 inferred edges
+- `ArrowDtype`: 999 inferred edges
+- `IntervalDtype`: 846 inferred edges
+- `WriteBuffer`: 773 inferred edges
+- `DataFrame`: 697 inferred edges
+- `Series`: 511 inferred edges
+- `ReadBuffer`: 480 inferred edges
+- `Accessor`: 478 inferred edges
+- `MultiIndex`: 432 inferred edges
+- `BaseMaskedDtype`: 418 inferred edges
+- `OpsMixin`: 404 inferred edges
+- `SequenceNotStr`: 371 inferred edges
+- `RangeIndex`: 365 inferred edges
+- `SparseDtype`: 347 inferred edges
+- `FrozenList`: 320 inferred edges
+- `ArrowExtensionArray`: 319 inferred edges
+- `ExtensionArray`: 314 inferred edges
 
 ## Cross-Module Suspicious Edges
 
-- `core` ↔ `io`: 1711
-- `core` ↔ `_typing.py`: 1555
-- `io` ↔ `core`: 1005
-- `io` ↔ `_typing.py`: 953
-- `core` ↔ `benchmarks`: 302
-- `tests` ↔ `core`: 256
-- `errors` ↔ `_config`: 84
-- `tests` ↔ `io`: 61
-- `_testing` ↔ `core`: 47
-- `_typing.py` ↔ `core`: 36
-- `api` ↔ `core`: 20
-- `tests` ↔ `benchmarks`: 19
-- `tests` ↔ `tseries`: 16
-- `benchmarks` ↔ `plotting`: 13
-- `_typing.py` ↔ `tseries`: 11
-- `tseries` ↔ `core`: 10
-- `_typing.py` ↔ `io`: 9
-- `api` ↔ `io`: 6
-- `tests` ↔ `plotting`: 3
-- `_testing` ↔ `_typing.py`: 3
+- `indexes` ↔ `dtypes`: 1509
+- `arrays` ↔ `dtypes`: 960
+- `frame.py` ↔ `dtypes`: 845
+- `frame.py` ↔ `_typing.py`: 845
+- `indexes` ↔ `arrays`: 822
+- `frame.py` ↔ `formats`: 676
+- `internals` ↔ `dtypes`: 565
+- `frame.py` ↔ `stata.py`: 507
+- `pytables.py` ↔ `dtypes`: 486
+- `generic.py` ↔ `formats`: 472
+- `series.py` ↔ `_typing.py`: 396
+- `window` ↔ `indexers`: 371
+- `generic.py` ↔ `_typing.py`: 354
+- `indexes` ↔ `formats`: 354
+- `frame.py` ↔ `arrays`: 338
+- `frame.py` ↔ `interchange`: 338
+- `formats` ↔ `_typing.py`: 326
+- `pytables.py` ↔ `computation`: 324
+- `dtypes` ↔ `arrays`: 276
+- `indexing.py` ↔ `dtypes`: 256

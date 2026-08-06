@@ -8,10 +8,10 @@ source_repo: microsoft/LightGBM
 source_commit: f9bf8d1358cd7b5d649b47175e56543b62856f98
 extraction_date: 2026-07-29
 graph:
-  nodes: 2952
-  edges: 5138
-  community_count: 176
-  graph_hash: 063abd3af521a2d7
+  nodes: 594
+  edges: 2099
+  community_count: 17
+  graph_hash: af871e54ee48be1d
 tags: [lightgbm, gradient-boosting, machine-learning, scikit-learn, sklearn]
 related_skills: [lightgbm-core, scikit-learn-model-selection, optuna-samplers]
 ---

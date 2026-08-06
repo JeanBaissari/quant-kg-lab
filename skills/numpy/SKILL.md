@@ -8,10 +8,10 @@ source_repo: numpy/numpy
 source_commit: ab2199763cb17878cd8f34fcbc97106c5397f922
 extraction_date: 2026-07-29
 graph:
-  nodes: 20436
-  edges: 30581
-  community_count: 1561
-  graph_hash: 96ded7dfb2ac7d28
+  nodes: 8345
+  edges: 13507
+  community_count: 670
+  graph_hash: 11fb7485308e9cec
 tags: [numpy]
 related_skills: [numpy-core, numpy-linalg, numpy-random]
 ---
@@ -28,5 +28,5 @@ Indexes the 3 spec-driven NumPy sub-skills. Load the one for the module you need
 | [numpy-random](random/SKILL.md) | `numpy.random` | random numbers with NumPy |
 
 ## Provenance
-- Knowledge graph: numpy, 20436 nodes, 30581 edges, 1561 communities
+- Knowledge graph: numpy, 8345 nodes, 13507 edges, 670 communities
 - Rebuild: `scripts/rebuild_graph.sh numpy` (pinned commit ab2199763cb1)

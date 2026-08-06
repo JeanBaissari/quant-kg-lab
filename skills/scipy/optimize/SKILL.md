@@ -8,10 +8,10 @@ source_repo: scipy/scipy
 source_commit: 0514ef9e73297ef8d6f46379731eedc619f9d201
 extraction_date: 2026-07-29
 graph:
-  nodes: 31042
-  edges: 51352
-  community_count: 1929
-  graph_hash: 4a63d9a8dfdca80b
+  nodes: 14193
+  edges: 23606
+  community_count: 1076
+  graph_hash: 2be4a46f8c5c60da
 tags: [scipy, optimize]
 related_skills: []
 ---

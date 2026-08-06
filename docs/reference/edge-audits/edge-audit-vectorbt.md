@@ -4,53 +4,53 @@
 
 ## Summary
 
-- Total edges: 13588
-- EXTRACTED: 8019 (59.0%)
-- INFERRED: 5569 (41.0%)
+- Total edges: 9212
+- EXTRACTED: 4481 (48.6%)
+- INFERRED: 4731 (51.4%)
 - AMBIGUOUS: 0
 
 ## Top INFERRED Nodes
 
-- `Config`: 539 inferred edges
-- `ArrayWrapper`: 497 inferred edges
-- `Wrapping`: 410 inferred edges
-- `PlotsBuilderMixin`: 279 inferred edges
-- `StatsBuilderMixin`: 279 inferred edges
-- `MappedArray`: 219 inferred edges
-- `Drawdowns`: 212 inferred edges
-- `Configured`: 202 inferred edges
-- `RepEval`: 174 inferred edges
-- `Ranges`: 165 inferred edges
-- `QSAdapter`: 137 inferred edges
-- `BaseAccessor`: 112 inferred edges
+- `Config`: 544 inferred edges
+- `ArrayWrapper`: 502 inferred edges
+- `Wrapping`: 414 inferred edges
+- `PlotsBuilderMixin`: 283 inferred edges
+- `StatsBuilderMixin`: 283 inferred edges
+- `Configured`: 233 inferred edges
+- `MappedArray`: 223 inferred edges
+- `Drawdowns`: 215 inferred edges
+- `RepEval`: 176 inferred edges
+- `Ranges`: 168 inferred edges
+- `QSAdapter`: 138 inferred edges
+- `BaseAccessor`: 114 inferred edges
 - `RustSupport`: 112 inferred edges
-- `Orders`: 100 inferred edges
-- `Bar`: 95 inferred edges
-- `Box`: 95 inferred edges
-- `Gauge`: 95 inferred edges
-- `Heatmap`: 95 inferred edges
-- `Histogram`: 95 inferred edges
-- `Scatter`: 95 inferred edges
+- `Orders`: 101 inferred edges
+- `BaseDFAccessor`: 83 inferred edges
+- `BaseSRAccessor`: 83 inferred edges
+- `EntryTrades`: 83 inferred edges
+- `ExitTrades`: 83 inferred edges
+- `Positions`: 83 inferred edges
+- `Trades`: 83 inferred edges
 
 ## Cross-Module Suspicious Edges
 
-- `test_plotting.py` ↔ `generic`: 752
-- `generic` ↔ `base`: 414
-- `portfolio` ↔ `generic`: 250
-- `portfolio` ↔ `utils`: 208
-- `test_plotting.py` ↔ `utils`: 188
-- `portfolio` ↔ `base`: 181
-- `generic` ↔ `utils`: 177
-- `records` ↔ `base`: 168
-- `records` ↔ `utils`: 150
-- `records` ↔ `generic`: 148
-- `returns` ↔ `base`: 120
-- `signals` ↔ `utils`: 116
-- `generic` ↔ `records`: 106
-- `indicators` ↔ `base`: 93
-- `base` ↔ `utils`: 83
-- `portfolio` ↔ `returns`: 76
-- `returns` ↔ `utils`: 66
-- `indicators` ↔ `generic`: 62
-- `indicators` ↔ `utils`: 62
-- `returns` ↔ `generic`: 60
+- `accessors.py` ↔ `array_wrapper.py`: 382
+- `base.py` ↔ `trades.py`: 308
+- `accessors.py` ↔ `splitters.py`: 292
+- `base.py` ↔ `array_wrapper.py`: 276
+- `accessors.py` ↔ `config.py`: 181
+- `base.py` ↔ `config.py`: 174
+- `base.py` ↔ `plots_builder.py`: 138
+- `base.py` ↔ `stats_builder.py`: 138
+- `accessors.py` ↔ `drawdowns.py`: 133
+- `accessors.py` ↔ `ranges.py`: 121
+- `accessors.py` ↔ `mapped_array.py`: 121
+- `dispatch.py` ↔ `_engine.py`: 112
+- `mapped_array.py` ↔ `array_wrapper.py`: 78
+- `mapped_array.py` ↔ `config.py`: 78
+- `base.py` ↔ `drawdowns.py`: 77
+- `base.py` ↔ `logs.py`: 77
+- `base.py` ↔ `orders.py`: 77
+- `base.py` ↔ `qs_adapter.py`: 77
+- `base.py` ↔ `template.py`: 77
+- `accessors.py` ↔ `plots_builder.py`: 73

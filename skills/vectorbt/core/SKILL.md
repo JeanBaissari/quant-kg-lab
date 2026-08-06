@@ -8,10 +8,10 @@ source_repo: polakowo/vectorbt
 source_commit: f9897528f675114e6b34790178dbb2ca137acb51
 extraction_date: 2026-07-29
 graph:
-  nodes: 5411
-  edges: 13588
-  community_count: 395
-  graph_hash: 517324dd1904bd64
+  nodes: 3682
+  edges: 9212
+  community_count: 353
+  graph_hash: 0c9c535c173d5a38
 tags: [vectorbt, core]
 related_skills: []
 ---

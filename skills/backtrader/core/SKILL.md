@@ -8,10 +8,10 @@ source_repo: mementum/backtrader
 source_commit: b853d7c90b6721476eb5a5ea3135224e33db1f14
 extraction_date: 2026-07-29
 graph:
-  nodes: 3458
-  edges: 6863
-  community_count: 261
-  graph_hash: b54e4c68d9bf8f46
+  nodes: 2680
+  edges: 4964
+  community_count: 206
+  graph_hash: c751b026be8cb4f0
 tags: [backtrader, core]
 related_skills: []
 ---

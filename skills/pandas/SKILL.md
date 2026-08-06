@@ -8,10 +8,10 @@ source_repo: pandas-dev/pandas
 source_commit: 982854070758cd2015fc9e64395684546b1c5444
 extraction_date: 2026-07-29
 graph:
-  nodes: 37983
-  edges: 69899
-  community_count: 1986
-  graph_hash: b70488661b79f085
+  nodes: 11837
+  edges: 40707
+  community_count: 410
+  graph_hash: 228c5da2c015f886
 tags: [pandas]
 related_skills: [pandas-core, pandas-ts]
 ---
@@ -27,5 +27,5 @@ Indexes the 2 spec-driven pandas sub-skills. Load the one for the module you nee
 | [pandas-ts](ts/SKILL.md) | `pandas.ts` | pandas time series |
 
 ## Provenance
-- Knowledge graph: pandas, 37983 nodes, 69899 edges, 1986 communities
+- Knowledge graph: pandas, 11837 nodes, 40707 edges, 410 communities
 - Rebuild: `scripts/rebuild_graph.sh pandas` (pinned commit 982854070758)
