@@ -1,22 +1,19 @@
 ---
 name: vectorbt-portfolio
-description: vectorbt Portfolio — Portfolio.from_signals, from_orders, simulation engine (Numba/Rust), trades/positions/logs, performance stats, metrics. Extracted from the vectorbt knowledge graph (5,411 nodes, 13,588 edges).
-version: 0.1.0
+description: "Use when simulating portfolios with vectorbt — Portfolio.from_signals/from_orders, stats, metrics, and trades."
+version: 0.2.0
 author: quant-kg-lab
 license: MIT
 source_repo: polakowo/vectorbt
-graph_hash: d545b89580e72e30
+source_commit: f9897528f675114e6b34790178dbb2ca137acb51
 extraction_date: 2026-07-29
-graph_stats:
-  nodes: 5411
-  edges: 13588
-  description_coverage: "100%"
-  portfolio_communities:
-    - {id: 6, label: "Portfolio class (base.py)", nodes: 82}
-    - {id: 9, label: "portfolio/dispatch.py (buy/sell)", nodes: 70}
-    - {id: 10, label: "portfolio/nb.py (Numba kernels)", nodes: 67}
-    - {id: 14, label: "rust/portfolio.rs", nodes: 56}
-    - {id: 39, label: "portfolio/enums.py (conflict modes)", nodes: 35}
+graph:
+  nodes: 3682
+  edges: 9212
+  community_count: 353
+  graph_hash: 0c9c535c173d5a38
+tags: [vectorbt, portfolio]
+related_skills: []
 ---
 
 # vectorbt Portfolio (`vectorbt.portfolio`)

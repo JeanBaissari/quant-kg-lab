@@ -1,0 +1,139 @@
+{
+  "bridges": [
+    {
+      "bridge": "numpy.ndarray -> pandas.DataFrame",
+      "status": "RESOLVED",
+      "source": "numpy::ndarray",
+      "target": "pandas::DataFrame",
+      "relation": "backed_by"
+    },
+    {
+      "bridge": "numpy.ndarray -> vectorbt.ArrayWrapper",
+      "status": "RESOLVED",
+      "source": "numpy::ndarray",
+      "target": "vectorbt::ArrayWrapper",
+      "relation": "wrapped_by"
+    },
+    {
+      "bridge": "numpy.linalg -> scipy.linalg",
+      "status": "RESOLVED",
+      "source": "numpy::_linalg.py",
+      "target": "scipy::_linalg_pythran.py",
+      "relation": "superset_of"
+    },
+    {
+      "bridge": "pandas.DataFrame -> scikit-learn.BaseEstimator",
+      "status": "RESOLVED",
+      "source": "pandas::DataFrame",
+      "target": "scikit-learn::BaseEstimator",
+      "relation": "input_to"
+    },
+    {
+      "bridge": "pandas.DataFrame -> vectorbt.Portfolio",
+      "status": "RESOLVED",
+      "source": "pandas::DataFrame",
+      "target": "vectorbt::Portfolio",
+      "relation": "input_to"
+    },
+    {
+      "bridge": "pandas.DataFrame -> backtrader.DataBase",
+      "status": "RESOLVED",
+      "source": "pandas::DataFrame",
+      "target": "backtrader::DataBase",
+      "relation": "consumed_by"
+    },
+    {
+      "bridge": "ta-lib.RSI -> vectorbt.SignalFactory",
+      "status": "RESOLVED",
+      "source": "ta-lib::__pyx_pw_5talib_7_ta_lib_287RSI()",
+      "target": "vectorbt::SignalFactory",
+      "relation": "generates"
+    },
+    {
+      "bridge": "ta-lib.MACD -> vectorbt.Portfolio",
+      "status": "RESOLVED",
+      "source": "ta-lib::__pyx_pw_5talib_7_ta_lib_231MACD()",
+      "target": "vectorbt::Portfolio",
+      "relation": "indicator_for"
+    },
+    {
+      "bridge": "vectorbt.SignalFactory -> optuna.Study",
+      "status": "RESOLVED",
+      "source": "vectorbt::SignalFactory",
+      "target": "optuna::Study",
+      "relation": "optimized_by"
+    },
+    {
+      "bridge": "backtrader.Cerebro -> optuna.Study",
+      "status": "RESOLVED",
+      "source": "backtrader::Cerebro",
+      "target": "optuna::Study",
+      "relation": "optimized_by"
+    },
+    {
+      "bridge": "backtrader.Strategy -> vectorbt.Portfolio",
+      "status": "RESOLVED",
+      "source": "backtrader::Strategy",
+      "target": "vectorbt::Portfolio",
+      "relation": "alternative_to"
+    },
+    {
+      "bridge": "xgboost.XGBClassifier -> scikit-learn.Pipeline",
+      "status": "RESOLVED",
+      "source": "xgboost::XGBClassifier",
+      "target": "scikit-learn::Pipeline",
+      "relation": "compatible_with"
+    },
+    {
+      "bridge": "xgboost.XGBRegressor -> vectorbt.Portfolio",
+      "status": "RESOLVED",
+      "source": "xgboost::XGBRegressor",
+      "target": "vectorbt::Portfolio",
+      "relation": "predicts_for"
+    },
+    {
+      "bridge": "xgboost.train -> optuna.Study",
+      "status": "RESOLVED",
+      "source": "xgboost::TrainingCallback",
+      "target": "optuna::Study",
+      "relation": "optimized_by"
+    },
+    {
+      "bridge": "lightgbm.LGBMClassifier -> scikit-learn.GridSearchCV",
+      "status": "RESOLVED",
+      "source": "lightgbm::LGBMClassifier",
+      "target": "scikit-learn::GridSearchCV",
+      "relation": "compatible_with"
+    },
+    {
+      "bridge": "scikit-learn.RandomForestClassifier -> vectorbt.SignalFactory",
+      "status": "RESOLVED",
+      "source": "scikit-learn::RandomForestClassifier",
+      "target": "vectorbt::SignalFactory",
+      "relation": "powers"
+    },
+    {
+      "bridge": "scikit-learn.Pipeline -> optuna.Study",
+      "status": "RESOLVED",
+      "source": "scikit-learn::Pipeline",
+      "target": "optuna::Study",
+      "relation": "tuned_by"
+    },
+    {
+      "bridge": "scipy.stats -> scikit-learn.SelectKBest",
+      "status": "RESOLVED",
+      "source": "scipy::_stats()",
+      "target": "scikit-learn::SelectKBest",
+      "relation": "powers"
+    },
+    {
+      "bridge": "scipy.optimize -> optuna.Study",
+      "status": "RESOLVED",
+      "source": "scipy::OptimizeResult",
+      "target": "optuna::Study",
+      "relation": "alternative_to"
+    }
+  ],
+  "resolved": 19,
+  "attempted": 19
+}

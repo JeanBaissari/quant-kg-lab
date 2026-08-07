@@ -1,22 +1,19 @@
 ---
 name: vectorbt-core
-description: vectorbt Core — Config, ArrayWrapper, Wrapping, Accessor system, indexing, type system, and data infrastructure. Extracted from the vectorbt knowledge graph (5,411 nodes, 13,588 edges).
-version: 0.1.0
+description: "Use when working with vectorbt internals — Config, ArrayWrapper, Wrapping, accessors, and settings."
+version: 0.2.0
 author: quant-kg-lab
 license: MIT
 source_repo: polakowo/vectorbt
-graph_hash: d545b89580e72e30
+source_commit: f9897528f675114e6b34790178dbb2ca137acb51
 extraction_date: 2026-07-29
-graph_stats:
-  nodes: 5411
-  edges: 13588
-  description_coverage: "100%"
-  community_count: 395
-  top_communities:
-    - {id: 0, label: "Config/Drawdowns", nodes: 208}
-    - {id: 1, label: "Wrapping/Builders", nodes: 197}
-    - {id: 2, label: "ArrayWrapper/MappedArray", nodes: 178}
-    - {id: 3, label: "Accessor System", nodes: 170}
+graph:
+  nodes: 3682
+  edges: 9212
+  community_count: 353
+  graph_hash: 0c9c535c173d5a38
+tags: [vectorbt, core]
+related_skills: []
 ---
 
 # vectorbt Core (`vectorbt.base`, `vectorbt.utils`)

@@ -1,29 +1,19 @@
 ---
 name: vectorbt-signals
-description: vectorbt Signals — SignalFactory, MA, RSI, MACD, BBANDS, entry/exit generators, random signal generation, signal conflict resolution. Extracted from the vectorbt knowledge graph (5,411 nodes, 13,588 edges).
-version: 0.1.0
+description: "Use when generating entry/exit signals with vectorbt — SignalFactory, indicator pipelines, and signal generation."
+version: 0.2.0
 author: quant-kg-lab
 license: MIT
 source_repo: polakowo/vectorbt
-graph_hash: d545b89580e72e30
+source_commit: f9897528f675114e6b34790178dbb2ca137acb51
 extraction_date: 2026-07-29
-graph_stats:
-  nodes: 5411
-  edges: 13588
-  description_coverage: "100%"
-  signal_communities:
-    - {id: 11, label: "signals/nb.py (Numba kernels)", nodes: 63}
-    - {id: 12, label: "rust/signals.rs (Rust engine)", nodes: 62}
-    - {id: 21, label: "signals/accessors.py", nodes: 47}
-    - {id: 60, label: "signals/factory.py (SignalFactory)", nodes: 16}
-    - {id: 19, label: "signals/generators.py (RAND, RPROB)", nodes: 52}
-    - {id: 107, label: "signals/dispatch.py (engine-neutral)", nodes: 12}
-  indicator_communities:
-    - {id: 1, label: "indicators/factory.py (IndicatorBase)", nodes: 30}
-    - {id: 33, label: "indicators/basic.py (MA, BBANDS, RSI, STOCH, MACD)", nodes: 29}
-    - {id: 35, label: "indicators/dispatch.py", nodes: 24}
-    - {id: 36, label: "indicators/nb.py (Numba caches)", nodes: 25}
-    - {id: 44, label: "rust/indicators.rs", nodes: 33}
+graph:
+  nodes: 3682
+  edges: 9212
+  community_count: 353
+  graph_hash: 0c9c535c173d5a38
+tags: [vectorbt, signals]
+related_skills: []
 ---
 
 # vectorbt Signals & Indicators (`vectorbt.signals`, `vectorbt.indicators`)

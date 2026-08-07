@@ -1,11 +1,19 @@
 ---
 name: scipy-optimize
-description: "Numerical optimization: minimize (BFGS, Nelder-Mead, SLSQP), curve_fit, root finding, linear programming (linprog), differential_evolution."
-version: 0.1.0
+description: "Use when solving optimization or root-finding problems with SciPy — minimize, curve_fit, root, linprog, milp, and differential_evolution."
+version: 0.2.0
 author: quant-kg-lab
 license: MIT
 source_repo: scipy/scipy
-graph_hash: 31042_nodes_51352_edges
+source_commit: 0514ef9e73297ef8d6f46379731eedc619f9d201
+extraction_date: 2026-07-29
+graph:
+  nodes: 14193
+  edges: 23606
+  community_count: 1076
+  graph_hash: 2be4a46f8c5c60da
+tags: [scipy, optimize]
+related_skills: []
 ---
 
 # scipy.optimize

@@ -1,30 +1,19 @@
 ---
 name: backtrader-analyzers
-description: backtrader Analyzers — SharpeRatio, DrawDown, TradeAnalyzer, AnnualReturn, TimeReturn, SQN, Calmar, VWR, PyFolio, Transactions, PositionsValue, GrossLeverage. Extracted from the backtrader knowledge graph (3,458 nodes, 6,863 edges).
-version: 0.1.0
+description: "Use when adding performance analyzers to a backtrader strategy — SharpeRatio, DrawDown, TradeAnalyzer, TimeReturn, and other Cerebro analyzers."
+version: 0.2.0
 author: quant-kg-lab
 license: MIT
 source_repo: mementum/backtrader
-graph_hash: 2edf6fd78f85b446
+source_commit: b853d7c90b6721476eb5a5ea3135224e33db1f14
 extraction_date: 2026-07-29
-graph_stats:
-  nodes: 3458
-  edges: 6863
-  description_coverage: "0% (no descriptions)"
-  community_count: 261
-  analyzer_communities:
-    - {id: 22, label: "Analyzer base class", nodes: 40}
-    - {id: 44, label: "Returns/TimeReturn analyzers", nodes: 20}
-    - {id: 49, label: "Sharpe/TradeAnalyzer/AnnualReturn", nodes: 16}
-    - {id: 74, label: "DrawDown + TimeDrawDown", nodes: 10}
-    - {id: 107, label: "Calmar", nodes: 7}
-    - {id: 108, label: "SQN (System Quality Number)", nodes: 7}
-    - {id: 137, label: "GrossLeverage", nodes: 6}
-    - {id: 138, label: "LogReturnsRolling", nodes: 6}
-    - {id: 139, label: "PyFolio", nodes: 6}
-    - {id: 164, label: "PositionsValue", nodes: 5}
-    - {id: 165, label: "Transactions", nodes: 5}
-    - {id: 188, label: "PeriodStats", nodes: 4}
+graph:
+  nodes: 2680
+  edges: 4964
+  community_count: 206
+  graph_hash: c751b026be8cb4f0
+tags: [backtrader, analyzers]
+related_skills: []
 ---
 
 # backtrader Analyzers (`backtrader.analyzers`)

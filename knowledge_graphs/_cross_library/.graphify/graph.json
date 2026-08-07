@@ -1,0 +1,290 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {
+    "kind": "cross_library_overlay",
+    "note": "Curated bridges resolved to clean nodes."
+  },
+  "nodes": [
+    {
+      "id": "numpy::ndarray",
+      "label": "ndarray",
+      "library": "numpy",
+      "source_file": ""
+    },
+    {
+      "id": "pandas::dataframe",
+      "label": "DataFrame",
+      "library": "pandas",
+      "source_file": ""
+    },
+    {
+      "id": "vectorbt::base_array_wrapper_arraywrapper",
+      "label": "ArrayWrapper",
+      "library": "vectorbt",
+      "source_file": "base/array_wrapper.py"
+    },
+    {
+      "id": "numpy::linalg_linalg",
+      "label": "_linalg.py",
+      "library": "numpy",
+      "source_file": "linalg/_linalg.py"
+    },
+    {
+      "id": "scipy::linalg_linalg_pythran",
+      "label": "_linalg_pythran.py",
+      "library": "scipy",
+      "source_file": "linalg/_linalg_pythran.py"
+    },
+    {
+      "id": "scikit-learn::base_baseestimator",
+      "label": "BaseEstimator",
+      "library": "scikit-learn",
+      "source_file": "base.py"
+    },
+    {
+      "id": "vectorbt::portfolio_base_portfolio",
+      "label": "Portfolio",
+      "library": "vectorbt",
+      "source_file": "portfolio/base.py"
+    },
+    {
+      "id": "backtrader::feed_database",
+      "label": "DataBase",
+      "library": "backtrader",
+      "source_file": "feed.py"
+    },
+    {
+      "id": "ta-lib::ta_lib_pyx_pw_5talib_7_ta_lib_287rsi",
+      "label": "__pyx_pw_5talib_7_ta_lib_287RSI()",
+      "library": "ta-lib",
+      "source_file": "_ta_lib.c"
+    },
+    {
+      "id": "vectorbt::signals_factory_signalfactory",
+      "label": "SignalFactory",
+      "library": "vectorbt",
+      "source_file": "signals/factory.py"
+    },
+    {
+      "id": "ta-lib::ta_lib_pyx_pw_5talib_7_ta_lib_231macd",
+      "label": "__pyx_pw_5talib_7_ta_lib_231MACD()",
+      "library": "ta-lib",
+      "source_file": "_ta_lib.c"
+    },
+    {
+      "id": "optuna::study_study_study",
+      "label": "Study",
+      "library": "optuna",
+      "source_file": "study/study.py"
+    },
+    {
+      "id": "backtrader::cerebro_cerebro",
+      "label": "Cerebro",
+      "library": "backtrader",
+      "source_file": "cerebro.py"
+    },
+    {
+      "id": "backtrader::strategy_strategy",
+      "label": "Strategy",
+      "library": "backtrader",
+      "source_file": "strategy.py"
+    },
+    {
+      "id": "xgboost::sklearn_xgbclassifier",
+      "label": "XGBClassifier",
+      "library": "xgboost",
+      "source_file": "sklearn.py"
+    },
+    {
+      "id": "scikit-learn::pipeline_pipeline",
+      "label": "Pipeline",
+      "library": "scikit-learn",
+      "source_file": "pipeline.py"
+    },
+    {
+      "id": "xgboost::sklearn_xgbregressor",
+      "label": "XGBRegressor",
+      "library": "xgboost",
+      "source_file": "sklearn.py"
+    },
+    {
+      "id": "xgboost::callback_trainingcallback",
+      "label": "TrainingCallback",
+      "library": "xgboost",
+      "source_file": "callback.py"
+    },
+    {
+      "id": "lightgbm::lgbmclassifier",
+      "label": "LGBMClassifier",
+      "library": "lightgbm",
+      "source_file": ""
+    },
+    {
+      "id": "scikit-learn::model_selection_search_gridsearchcv",
+      "label": "GridSearchCV",
+      "library": "scikit-learn",
+      "source_file": "model_selection/_search.py"
+    },
+    {
+      "id": "scikit-learn::ensemble_forest_randomforestclassifier",
+      "label": "RandomForestClassifier",
+      "library": "scikit-learn",
+      "source_file": "ensemble/_forest.py"
+    },
+    {
+      "id": "scipy::ndimage_measurements_stats",
+      "label": "_stats()",
+      "library": "scipy",
+      "source_file": "ndimage/_measurements.py"
+    },
+    {
+      "id": "scikit-learn::feature_selection_univariate_selection_selectkbest",
+      "label": "SelectKBest",
+      "library": "scikit-learn",
+      "source_file": "feature_selection/_univariate_selection.py"
+    },
+    {
+      "id": "scipy::optimizeresult",
+      "label": "OptimizeResult",
+      "library": "scipy",
+      "source_file": ""
+    }
+  ],
+  "links": [
+    {
+      "source": "numpy::ndarray",
+      "target": "pandas::dataframe",
+      "relation": "backed_by",
+      "confidence": "CURATED",
+      "description": "pandas DataFrame is backed by numpy ndarray for numerical storage"
+    },
+    {
+      "source": "numpy::ndarray",
+      "target": "vectorbt::base_array_wrapper_arraywrapper",
+      "relation": "wrapped_by",
+      "confidence": "CURATED",
+      "description": "vectorbt ArrayWrapper wraps numpy ndarray for named column access"
+    },
+    {
+      "source": "numpy::linalg_linalg",
+      "target": "scipy::linalg_linalg_pythran",
+      "relation": "superset_of",
+      "confidence": "CURATED",
+      "description": "scipy.linalg extends numpy.linalg with additional decompositions"
+    },
+    {
+      "source": "pandas::dataframe",
+      "target": "scikit-learn::base_baseestimator",
+      "relation": "input_to",
+      "confidence": "CURATED",
+      "description": "pandas DataFrame is the standard input to sklearn fit()"
+    },
+    {
+      "source": "pandas::dataframe",
+      "target": "vectorbt::portfolio_base_portfolio",
+      "relation": "input_to",
+      "confidence": "CURATED",
+      "description": "pandas DataFrame is the primary data input to vectorbt Portfolio"
+    },
+    {
+      "source": "pandas::dataframe",
+      "target": "backtrader::feed_database",
+      "relation": "consumed_by",
+      "confidence": "CURATED",
+      "description": "backtrader data feeds (DataBase) consume pandas DataFrames as data source"
+    },
+    {
+      "source": "ta-lib::ta_lib_pyx_pw_5talib_7_ta_lib_287rsi",
+      "target": "vectorbt::signals_factory_signalfactory",
+      "relation": "generates",
+      "confidence": "CURATED",
+      "description": "ta-lib indicator values feed vectorbt SignalFactory for entry/exit signals"
+    },
+    {
+      "source": "ta-lib::ta_lib_pyx_pw_5talib_7_ta_lib_231macd",
+      "target": "vectorbt::portfolio_base_portfolio",
+      "relation": "indicator_for",
+      "confidence": "CURATED",
+      "description": "ta-lib MACD crossovers drive vectorbt Portfolio entry/exit logic"
+    },
+    {
+      "source": "vectorbt::signals_factory_signalfactory",
+      "target": "optuna::study_study_study",
+      "relation": "optimized_by",
+      "confidence": "CURATED",
+      "description": "vectorbt signal parameters tuned via optuna Study.optimize"
+    },
+    {
+      "source": "backtrader::cerebro_cerebro",
+      "target": "optuna::study_study_study",
+      "relation": "optimized_by",
+      "confidence": "CURATED",
+      "description": "backtrader Cerebro strategy parameters tuned via optuna"
+    },
+    {
+      "source": "backtrader::strategy_strategy",
+      "target": "vectorbt::portfolio_base_portfolio",
+      "relation": "alternative_to",
+      "confidence": "CURATED",
+      "description": "backtrader event-driven Strategy vs vectorbt vectorized Portfolio"
+    },
+    {
+      "source": "xgboost::sklearn_xgbclassifier",
+      "target": "scikit-learn::pipeline_pipeline",
+      "relation": "compatible_with",
+      "confidence": "CURATED",
+      "description": "XGBClassifier implements the sklearn API, usable in a Pipeline"
+    },
+    {
+      "source": "xgboost::sklearn_xgbregressor",
+      "target": "vectorbt::portfolio_base_portfolio",
+      "relation": "predicts_for",
+      "confidence": "CURATED",
+      "description": "XGBRegressor return predictions fed to vectorbt Portfolio simulation"
+    },
+    {
+      "source": "xgboost::callback_trainingcallback",
+      "target": "optuna::study_study_study",
+      "relation": "optimized_by",
+      "confidence": "CURATED",
+      "description": "xgboost.train hyperparameters tuned via optuna Study"
+    },
+    {
+      "source": "lightgbm::lgbmclassifier",
+      "target": "scikit-learn::model_selection_search_gridsearchcv",
+      "relation": "compatible_with",
+      "confidence": "CURATED",
+      "description": "LGBMClassifier works with sklearn GridSearchCV"
+    },
+    {
+      "source": "scikit-learn::ensemble_forest_randomforestclassifier",
+      "target": "vectorbt::signals_factory_signalfactory",
+      "relation": "powers",
+      "confidence": "CURATED",
+      "description": "RandomForest predictions converted to vectorbt signals"
+    },
+    {
+      "source": "scikit-learn::pipeline_pipeline",
+      "target": "optuna::study_study_study",
+      "relation": "tuned_by",
+      "confidence": "CURATED",
+      "description": "sklearn Pipeline parameters optimized via optuna"
+    },
+    {
+      "source": "scipy::ndimage_measurements_stats",
+      "target": "scikit-learn::feature_selection_univariate_selection_selectkbest",
+      "relation": "powers",
+      "confidence": "CURATED",
+      "description": "scipy.stats statistical tests drive sklearn feature selection"
+    },
+    {
+      "source": "scipy::optimizeresult",
+      "target": "optuna::study_study_study",
+      "relation": "alternative_to",
+      "confidence": "CURATED",
+      "description": "scipy.optimize as an alternative optimization backend to optuna"
+    }
+  ],
+  "hyperedges": []
+}

@@ -1,17 +1,19 @@
 ---
 name: scikit-learn-cluster
-description: Use when working with scikit-learn Clustering — KMeans, DBSCAN, HDBSCAN, Agglomerative, MeanShift, Spectral, Birch, OPTICS, and biclustering. Covers core classes, methods, and quant-relevant patterns.
-version: 0.1.0
+description: "Use when working with scikit-learn Clustering — KMeans, DBSCAN, HDBSCAN, Agglomerative, MeanShift, Spectral, Birch, OPTICS, and biclustering. Covers core classes, methods, and quant-relevant patterns."
+version: 0.2.0
 author: quant-kg-lab
 license: MIT
 source_repo: scikit-learn/scikit-learn
-source_version: main
+source_commit: 6f8b95aa2234102acc3804fc8c7a3e6bd0506bfb
 extraction_date: 2026-07-29
-graph_hash: 18753_nodes_49978_edges
-metadata:
-  hermes:
-    tags: [scikit-learn, machine-learning, clustering, kmeans, dbscan, unsupervised, quant]
-    related_skills: [scikit-learn-model-selection, scikit-learn-metrics, scikit-learn-preprocessing]
+graph:
+  nodes: 8662
+  edges: 29241
+  community_count: 401
+  graph_hash: e587e89627b31941
+tags: [scikit-learn, machine-learning, clustering, kmeans, dbscan, unsupervised, quant]
+related_skills: [scikit-learn-model-selection, scikit-learn-metrics, scikit-learn-preprocessing]
 ---
 
 # scikit-learn Clustering
@@ -118,9 +120,3 @@ col_labels = scc.column_labels_
 5. **`fit_predict` vs `fit` then `predict`**: KMeans and DBSCAN support both, but DBSCAN's `predict` is approximate and memory-intensive — prefer `fit_predict`.
 6. **Birch `threshold`**: Very sensitive; too small = many subclusters/memory blowup, too large = coarse clusters. Tune empirically.
 7. **Spectral `affinity='rbf'`**: Requires `gamma` tuning. Try `affinity='nearest_neighbors'` for an automatic alternative.
-
-## References
-
-- `references/api.md` — Full API surface from knowledge graph
-- Communities 37, 48, 147, 935–945, 966: 195 total graph nodes (122 code, 73 rationale)
-- Source files: `sklearn/cluster/_kmeans.py` (33 nodes), `_bicluster.py` (20), `_bisect_k_means.py` (15), `_hdbscan/hdbscan.py` (14), `_mean_shift.py` (9), `_spectral.py` (9)

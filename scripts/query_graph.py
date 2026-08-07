@@ -181,22 +181,41 @@ def explain_node(library, node_query):
     if len(connections) > 20:
         print(f"    ... and {len(connections) - 20} more")
 
+def available_libraries():
+    """Discover libraries that have a committed graph on disk."""
+    kg_root = REPO_ROOT / "knowledge_graphs"
+    if not kg_root.exists():
+        return []
+    return sorted(
+        p.name for p in kg_root.iterdir()
+        if (p / ".graphify" / "graph.json").exists()
+    )
+
+# Aliases → on-disk directory name (dirs use hyphens: scikit-learn, ta-lib)
+LIBRARY_ALIASES = {"sklearn": "scikit-learn", "talib": "ta-lib"}
+
 if __name__ == "__main__":
     import argparse
-    parser = argparse.ArgumentParser(description="Query knowledge graphs")
-    parser.add_argument("library", choices=["sklearn", "optuna", "scikit-learn"], help="Library to query")
+    libs = available_libraries()
+    parser = argparse.ArgumentParser(
+        description="Query knowledge graphs",
+        epilog="Available: " + (", ".join(libs) or "<none>") + "  (aliases: sklearn, talib)",
+    )
+    parser.add_argument("library", help="Library to query (see available list below)")
     parser.add_argument("query", nargs="?", help="Search query or node name")
     parser.add_argument("--path", nargs=2, metavar=("A", "B"), help="Find path between two nodes")
     parser.add_argument("--explain", action="store_true", help="Explain a single node")
     parser.add_argument("--depth", type=int, default=3, help="BFS depth (default: 3)")
-    
+
     args = parser.parse_args()
-    
-    # Normalize library name
-    lib = args.library.replace("-", "_")
-    if lib == "sklearn":
-        lib = "scikit-learn"
-    
+
+    # Normalize to the on-disk directory (do NOT replace hyphens — scikit-learn
+    # and ta-lib are hyphenated directory names).
+    lib = LIBRARY_ALIASES.get(args.library, args.library)
+    if lib not in libs:
+        print(f"ERROR: no graph for '{args.library}'. Available: {', '.join(libs) or '<none>'}")
+        sys.exit(1)
+
     if args.path:
         path_query(lib, args.path[0], args.path[1])
     elif args.explain and args.query:

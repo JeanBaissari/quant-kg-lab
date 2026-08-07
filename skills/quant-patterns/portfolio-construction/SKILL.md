@@ -1,13 +1,12 @@
 ---
 name: quant-portfolio-construction
-description: Use when building portfolios from strategy signals — mean-variance optimization, risk parity, Black-Litterman, and position sizing from Kelly criterion. Integrates scikit-learn covariance and decomposition for risk modeling.
-version: 0.1.0
+description: "Use when building portfolios from strategy signals — mean-variance optimization, risk parity, Black-Litterman, and position sizing from Kelly criterion. Integrates scikit-learn covariance and decomposition for risk modeling."
+version: 0.2.0
 author: quant-kg-lab
 license: MIT
-metadata:
-  hermes:
-    tags: [quantitative-finance, portfolio-optimization, risk-parity, mean-variance, position-sizing]
-    related_skills: [scikit-learn-covariance, scikit-learn-decomposition]
+composes: [scikit-learn-covariance, scikit-learn-decomposition]
+tags: [quantitative-finance, portfolio-optimization, risk-parity, mean-variance, position-sizing]
+related_skills: [scikit-learn-covariance, scikit-learn-decomposition]
 ---
 
 # Portfolio Construction & Position Sizing

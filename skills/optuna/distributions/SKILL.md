@@ -1,21 +1,19 @@
 ---
 name: optuna-distributions
-description: Use when working with Optuna probability distributions for parameter spaces — FloatDistribution, IntDistribution, CategoricalDistribution, BaseDistribution. Covers internal/external representations, distribution single-range checks, and deprecated distribution classes.
-version: 0.1.0
+description: "Use when working with Optuna probability distributions for parameter spaces — FloatDistribution, IntDistribution, CategoricalDistribution, BaseDistribution. Covers internal/external representations, distribution single-range checks, and deprecated distribution classes."
+version: 0.2.0
 author: quant-kg-lab
 license: MIT
 source_repo: optuna/optuna
-source_version: master
+source_commit: b6f2ea62fbe7fb09d0d1c75783c65dad098d9a06
 extraction_date: 2026-07-29
-graph_hash: 3912_nodes_8405_edges
-graph_stats:
-  nodes: 3912
-  edges: 8405
-  communities: 228
-metadata:
-  hermes:
-    tags: [optuna, hyperparameter-optimization, distributions]
-    related_skills: [optuna-samplers, optuna-pruners, optuna-study, optuna-trial, optuna-visualization, optuna-integration, optuna-distributions]
+graph:
+  nodes: 2318
+  edges: 4252
+  community_count: 226
+  graph_hash: a4c296debfeefdef
+tags: [optuna, hyperparameter-optimization, distributions]
+related_skills: [optuna-samplers, optuna-pruners, optuna-study, optuna-trial, optuna-visualization, optuna-integration, optuna-distributions]
 ---
 
 # Optuna Distributions
@@ -98,8 +96,3 @@ external = dist.to_external_repr(0.7)     # 0.7
 - [ ] `choices` in `CategoricalDistribution` is non-empty
 - [ ] `log=True` only for strictly positive ranges (`low > 0`)
 - [ ] `step` parameter is consistent with distribution type
-
-## References
-
-- Source: `optuna/distributions.py`
-- `references/api.md` — Full distribution API surface from knowledge graph

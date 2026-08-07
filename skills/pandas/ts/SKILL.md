@@ -1,11 +1,19 @@
 ---
 name: pandas-ts
-description: "Time series operations: resample, rolling/expanding/ewm windows, shift/diff/pct_change, DateOffset, and datetime indexing (DatetimeIndex, PeriodIndex)."
-version: 0.1.0
+description: "Use when working with pandas time series — resample, rolling, expanding, ewm, shift, diff, pct_change, and DateOffset."
+version: 0.2.0
 author: quant-kg-lab
 license: MIT
 source_repo: pandas-dev/pandas
-graph_hash: 37983_nodes_69899_edges
+source_commit: 982854070758cd2015fc9e64395684546b1c5444
+extraction_date: 2026-07-29
+graph:
+  nodes: 11837
+  edges: 40707
+  community_count: 410
+  graph_hash: 228c5da2c015f886
+tags: [pandas, ts]
+related_skills: []
 ---
 
 # pandas time series (ts)

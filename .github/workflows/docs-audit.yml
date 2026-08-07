@@ -1,0 +1,31 @@
+name: Docs Audit
+
+on:
+  push:
+    paths:
+      - 'docs/**'
+      - 'scripts/doc_audit.py'
+  pull_request:
+    paths:
+      - 'docs/**'
+      - 'scripts/doc_audit.py'
+  workflow_dispatch:
+
+jobs:
+  docs-audit:
+    # Fast, deterministic gate for docs/: identity block + doc-type taxonomy,
+    # no dangling links, census (doc_inventory.yaml) in sync. No libraries needed.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pyyaml
+      - name: Lint docs against docs/_development/standards.md
+        run: python scripts/doc_audit.py --ci
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: doc-audit-report
+          path: docs/reference/doc-audit-report.json

@@ -1,11 +1,19 @@
 ---
 name: scipy-signal
-description: "Signal processing: butter/filtfilt for IIR filtering, spectrogram/welch for spectral analysis, convolve/correlate, detrend, find_peaks, and LTI system analysis."
-version: 0.1.0
+description: "Use when processing signals with SciPy — filtering (butter/filtfilt), spectral analysis (welch/stft), detrending, and convolution/correlation."
+version: 0.2.0
 author: quant-kg-lab
 license: MIT
 source_repo: scipy/scipy
-graph_hash: 31042_nodes_51352_edges
+source_commit: 0514ef9e73297ef8d6f46379731eedc619f9d201
+extraction_date: 2026-07-29
+graph:
+  nodes: 14193
+  edges: 23606
+  community_count: 1076
+  graph_hash: 2be4a46f8c5c60da
+tags: [scipy, signal]
+related_skills: []
 ---
 
 # scipy.signal

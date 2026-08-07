@@ -1,21 +1,19 @@
 ---
 name: scikit-learn-compose
-description: Use when building composite estimators and pipelines in scikit-learn — Pipeline, ColumnTransformer, FeatureUnion, and TransformedTargetRegressor for heterogeneous data and multi-step workflows.
-version: 0.1.0
+description: "Use when building composite estimators and pipelines in scikit-learn — Pipeline, ColumnTransformer, FeatureUnion, and TransformedTargetRegressor for heterogeneous data and multi-step workflows."
+version: 0.2.0
 author: quant-kg-lab
 license: MIT
 source_repo: scikit-learn/scikit-learn
-source_version: main
+source_commit: 6f8b95aa2234102acc3804fc8c7a3e6bd0506bfb
 extraction_date: 2026-07-29
-graph_hash: 18753_nodes_49978_edges
-graph_stats:
-  nodes: 18753
-  edges: 49978
-  communities: [3, 108, 487, 896]
-metadata:
-  hermes:
-    tags: [scikit-learn, machine-learning, pipelines, composite-estimators, column-transformer, feature-union]
-    related_skills: [scikit-learn-preprocessing, scikit-learn-model-selection, scikit-learn-linear-model]
+graph:
+  nodes: 8662
+  edges: 29241
+  community_count: 401
+  graph_hash: e587e89627b31941
+tags: [scikit-learn, machine-learning, pipelines, composite-estimators, column-transformer, feature-union]
+related_skills: [scikit-learn-preprocessing, scikit-learn-model-selection, scikit-learn-linear-model]
 ---
 
 # scikit-learn Compose (Composite Estimators)
@@ -66,8 +64,3 @@ Extracted from scikit-learn knowledge graph. Source: `sklearn.compose` module an
 - [ ] `TransformedTargetRegressor` `transformer` implements `inverse_transform`
 - [ ] `random_state` propagated through all randomized steps
 - [ ] Pipeline used in `GridSearchCV` for no-leak preprocessing
-
-## References
-
-- `references/api.md` — Full API surface from knowledge graph
-- `references/examples.md` — Extracted from scikit-learn examples/

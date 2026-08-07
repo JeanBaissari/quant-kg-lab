@@ -1,13 +1,12 @@
 ---
 name: quant-regime-detection
-description: Use when detecting market regimes for conditional strategy switching — Hidden Markov Models, Gaussian Mixture Models, threshold-based segmentation, and volatility clustering. Integrates scikit-learn mixture, cluster, and decomposition modules.
-version: 0.1.0
+description: "Use when detecting market regimes for conditional strategy switching — Hidden Markov Models, Gaussian Mixture Models, threshold-based segmentation, and volatility clustering. Integrates scikit-learn mixture, cluster, and decomposition modules."
+version: 0.2.0
 author: quant-kg-lab
 license: MIT
-metadata:
-  hermes:
-    tags: [quantitative-finance, regime-detection, market-regimes, hmm, gmm, clustering]
-    related_skills: [scikit-learn-cluster, scikit-learn-decomposition, scikit-learn-gaussian-process]
+composes: [scikit-learn-cluster, scikit-learn-decomposition, scikit-learn-gaussian-process]
+tags: [quantitative-finance, regime-detection, market-regimes, hmm, gmm, clustering]
+related_skills: [scikit-learn-cluster, scikit-learn-decomposition, scikit-learn-gaussian-process]
 ---
 
 # Market Regime Detection

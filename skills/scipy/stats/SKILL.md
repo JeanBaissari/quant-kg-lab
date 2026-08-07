@@ -1,11 +1,19 @@
 ---
 name: scipy-stats
-description: "Statistical distributions (norm, t, f), statistical tests (ttest_ind, ks, mannwhitneyu), gaussian_kde, zscore, and resampling (bootstrap, permutation)."
-version: 0.1.0
+description: "Use when doing statistics with SciPy — distributions, hypothesis tests (ttest/ks/mannwhitneyu), gaussian_kde, zscore, and bootstrap/permutation resampling."
+version: 0.2.0
 author: quant-kg-lab
 license: MIT
 source_repo: scipy/scipy
-graph_hash: 31042_nodes_51352_edges
+source_commit: 0514ef9e73297ef8d6f46379731eedc619f9d201
+extraction_date: 2026-07-29
+graph:
+  nodes: 14193
+  edges: 23606
+  community_count: 1076
+  graph_hash: 2be4a46f8c5c60da
+tags: [scipy, stats]
+related_skills: []
 ---
 
 # scipy.stats
