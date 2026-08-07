@@ -33,6 +33,7 @@ Hub for the **backtrader** library (Quant Tools tier). The per-module API refere
 
 | Source | Target | Relation |
 |--------|--------|----------|
+| pandas::DataFrame | backtrader::DataBase | consumed_by |
 | backtrader::Cerebro | optuna::Study | optimized_by |
 | backtrader::Strategy | vectorbt::Portfolio | alternative_to |
 

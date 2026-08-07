@@ -17,7 +17,7 @@ Usage:
   python scripts/inject_cross_edges_v2.py            # dry run: report resolution
   python scripts/inject_cross_edges_v2.py --apply    # write the overlay graph
 """
-import sys, json
+import sys, json, re
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -33,7 +33,7 @@ ALL_BRIDGES = [
     ("numpy", "linalg", "scipy", "linalg", "superset_of", "scipy.linalg extends numpy.linalg with additional decompositions"),
     ("pandas", "DataFrame", "scikit-learn", "BaseEstimator", "input_to", "pandas DataFrame is the standard input to sklearn fit()"),
     ("pandas", "DataFrame", "vectorbt", "Portfolio", "input_to", "pandas DataFrame is the primary data input to vectorbt Portfolio"),
-    ("pandas", "DataFrame", "backtrader", "DataFeed", "consumed_by", "backtrader DataFeed consumes pandas DataFrames as data source"),
+    ("pandas", "DataFrame", "backtrader", "DataBase", "consumed_by", "backtrader data feeds (DataBase) consume pandas DataFrames as data source"),
     ("ta-lib", "RSI", "vectorbt", "SignalFactory", "generates", "ta-lib indicator values feed vectorbt SignalFactory for entry/exit signals"),
     ("ta-lib", "MACD", "vectorbt", "Portfolio", "indicator_for", "ta-lib MACD crossovers drive vectorbt Portfolio entry/exit logic"),
     ("vectorbt", "SignalFactory", "optuna", "Study", "optimized_by", "vectorbt signal parameters tuned via optuna Study.optimize"),
@@ -72,8 +72,9 @@ def clean(n):
     return True
 
 
-def resolve(graph, label):
-    """Exact-label code node preferred; else identifier-like substring. Noise excluded."""
+def resolve(graph, label, lib=None):
+    """Exact-label code node preferred; else identifier-like substring. Noise excluded.
+    ta-lib exception: indicators exist only as __pyx_pw_..._NAME() Cython wrappers."""
     cands = [n for n in graph.get("nodes", []) if clean(n)]
     for n in cands:
         if (n.get("label") or "").lower() == label.lower():
@@ -81,6 +82,11 @@ def resolve(graph, label):
     for n in cands:
         if label.lower() in (n.get("label") or "").lower():
             return n
+    if lib == "ta-lib":
+        pat = re.compile(r"__pyx_pw_.*?" + re.escape(label) + r"\(\)$", re.I)
+        for n in graph.get("nodes", []):
+            if pat.search(n.get("label") or ""):
+                return n
     return None
 
 
@@ -92,8 +98,8 @@ def main():
     print("=== Cross-library bridge resolution (precise) ===\n")
     for lib_a, lab_a, lib_b, lab_b, rel, desc in ALL_BRIDGES:
         ga, gb = graphs.get(lib_a), graphs.get(lib_b)
-        na = resolve(ga, lab_a) if ga else None
-        nb = resolve(gb, lab_b) if gb else None
+        na = resolve(ga, lab_a, lib_a) if ga else None
+        nb = resolve(gb, lab_b, lib_b) if gb else None
         if na and nb:
             ida, idb = f"{lib_a}::{na['id']}", f"{lib_b}::{nb['id']}"
             overlay_nodes[ida] = {"id": ida, "label": na["label"], "library": lib_a,

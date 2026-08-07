@@ -27,6 +27,13 @@ Hub for the **ta-lib** library (Quant Tools tier). The per-module API reference 
 - **Edge audit**: [edge-audit-ta-lib.md](../../reference/edge-audits/edge-audit-ta-lib.md)
 - **Rebuild**: `scripts/rebuild_graph.sh ta-lib`
 
+## Cross-library bridges
+
+| Source | Target | Relation |
+|--------|--------|----------|
+| ta-lib::__pyx_pw_5talib_7_ta_lib_287RSI() | vectorbt::SignalFactory | generates |
+| ta-lib::__pyx_pw_5talib_7_ta_lib_231MACD() | vectorbt::Portfolio | indicator_for |
+
 ## Related
 
 - [Libraries index](../index.md) — the domain taxonomy

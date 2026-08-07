@@ -49,10 +49,28 @@
       "source_file": "portfolio/base.py"
     },
     {
+      "id": "backtrader::feed_database",
+      "label": "DataBase",
+      "library": "backtrader",
+      "source_file": "feed.py"
+    },
+    {
+      "id": "ta-lib::ta_lib_pyx_pw_5talib_7_ta_lib_287rsi",
+      "label": "__pyx_pw_5talib_7_ta_lib_287RSI()",
+      "library": "ta-lib",
+      "source_file": "_ta_lib.c"
+    },
+    {
       "id": "vectorbt::signals_factory_signalfactory",
       "label": "SignalFactory",
       "library": "vectorbt",
       "source_file": "signals/factory.py"
+    },
+    {
+      "id": "ta-lib::ta_lib_pyx_pw_5talib_7_ta_lib_231macd",
+      "label": "__pyx_pw_5talib_7_ta_lib_231MACD()",
+      "library": "ta-lib",
+      "source_file": "_ta_lib.c"
     },
     {
       "id": "optuna::study_study_study",
@@ -168,6 +186,27 @@
       "relation": "input_to",
       "confidence": "CURATED",
       "description": "pandas DataFrame is the primary data input to vectorbt Portfolio"
+    },
+    {
+      "source": "pandas::dataframe",
+      "target": "backtrader::feed_database",
+      "relation": "consumed_by",
+      "confidence": "CURATED",
+      "description": "backtrader data feeds (DataBase) consume pandas DataFrames as data source"
+    },
+    {
+      "source": "ta-lib::ta_lib_pyx_pw_5talib_7_ta_lib_287rsi",
+      "target": "vectorbt::signals_factory_signalfactory",
+      "relation": "generates",
+      "confidence": "CURATED",
+      "description": "ta-lib indicator values feed vectorbt SignalFactory for entry/exit signals"
+    },
+    {
+      "source": "ta-lib::ta_lib_pyx_pw_5talib_7_ta_lib_231macd",
+      "target": "vectorbt::portfolio_base_portfolio",
+      "relation": "indicator_for",
+      "confidence": "CURATED",
+      "description": "ta-lib MACD crossovers drive vectorbt Portfolio entry/exit logic"
     },
     {
       "source": "vectorbt::signals_factory_signalfactory",

@@ -36,6 +36,8 @@ Hub for the **vectorbt** library (Quant Tools tier). The per-module API referenc
 |--------|--------|----------|
 | numpy::ndarray | vectorbt::ArrayWrapper | wrapped_by |
 | pandas::DataFrame | vectorbt::Portfolio | input_to |
+| ta-lib::__pyx_pw_5talib_7_ta_lib_287RSI() | vectorbt::SignalFactory | generates |
+| ta-lib::__pyx_pw_5talib_7_ta_lib_231MACD() | vectorbt::Portfolio | indicator_for |
 | vectorbt::SignalFactory | optuna::Study | optimized_by |
 | backtrader::Strategy | vectorbt::Portfolio | alternative_to |
 | xgboost::XGBRegressor | vectorbt::Portfolio | predicts_for |

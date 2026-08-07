@@ -36,6 +36,7 @@ Hub for the **pandas** library (Foundation tier). The per-module API reference l
 | numpy::ndarray | pandas::DataFrame | backed_by |
 | pandas::DataFrame | scikit-learn::BaseEstimator | input_to |
 | pandas::DataFrame | vectorbt::Portfolio | input_to |
+| pandas::DataFrame | backtrader::DataBase | consumed_by |
 
 ## Related
 

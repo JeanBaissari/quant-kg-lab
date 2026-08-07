@@ -116,6 +116,9 @@
 | numpy::_linalg.py | scipy::_linalg_pythran.py | superset_of |
 | pandas::DataFrame | scikit-learn::BaseEstimator | input_to |
 | pandas::DataFrame | vectorbt::Portfolio | input_to |
+| pandas::DataFrame | backtrader::DataBase | consumed_by |
+| ta-lib::__pyx_pw_5talib_7_ta_lib_287RSI() | vectorbt::SignalFactory | generates |
+| ta-lib::__pyx_pw_5talib_7_ta_lib_231MACD() | vectorbt::Portfolio | indicator_for |
 | vectorbt::SignalFactory | optuna::Study | optimized_by |
 | backtrader::Cerebro | optuna::Study | optimized_by |
 | backtrader::Strategy | vectorbt::Portfolio | alternative_to |
