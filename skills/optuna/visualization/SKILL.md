@@ -1,21 +1,19 @@
 ---
 name: optuna-visualization
-description: Use when working with Optuna visualization functions — plot_optimization_history, plot_slice, plot_contour, plot_param_importances, plot_edf, plot_parallel_coordinate, plot_pareto_front, plot_rank. Covers study analysis, parameter relationships, and interactive Plotly charts.
-version: 0.1.0
+description: "Use when working with Optuna visualization functions — plot_optimization_history, plot_slice, plot_contour, plot_param_importances, plot_edf, plot_parallel_coordinate, plot_pareto_front, plot_rank. Covers study analysis, parameter relationships, and interactive Plotly charts."
+version: 0.2.0
 author: quant-kg-lab
 license: MIT
 source_repo: optuna/optuna
-source_version: master
+source_commit: b6f2ea62fbe7fb09d0d1c75783c65dad098d9a06
 extraction_date: 2026-07-29
-graph_hash: 3912_nodes_8405_edges
-graph_stats:
-  nodes: 3912
-  edges: 8405
-  communities: 228
-metadata:
-  hermes:
-    tags: [optuna, hyperparameter-optimization, visualization]
-    related_skills: [optuna-samplers, optuna-pruners, optuna-study, optuna-trial, optuna-visualization, optuna-integration, optuna-distributions]
+graph:
+  nodes: 2318
+  edges: 4252
+  community_count: 226
+  graph_hash: a4c296debfeefdef
+tags: [optuna, hyperparameter-optimization, visualization]
+related_skills: [optuna-samplers, optuna-pruners, optuna-study, optuna-trial, optuna-visualization, optuna-integration, optuna-distributions]
 ---
 
 # Optuna Visualization
@@ -110,8 +108,3 @@ plt.show()
 - [ ] Parameters of interest are specified in `params` argument for slice/contour
 - [ ] Multi-objective plots (Pareto, hypervolume) only used with multi-objective studies
 - [ ] Importance evaluator chosen appropriately (fANOVA vs MDI)
-
-## References
-
-- Source: `optuna/visualization/__init__.py`
-- `references/api.md` — Full visualization API surface from knowledge graph

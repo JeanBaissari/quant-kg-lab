@@ -1,21 +1,19 @@
 ---
 name: optuna-samplers
-description: Use when working with Optuna hyperparameter optimization samplers — TPESampler, RandomSampler, GridSampler, CmaEsSampler, NSGAIISampler, BoTorchSampler, QMCSampler, BruteForceSampler. Covers sampler selection, parameter suggestion, and multi-objective optimization.
-version: 0.1.0
+description: "Use when working with Optuna hyperparameter optimization samplers — TPESampler, RandomSampler, GridSampler, CmaEsSampler, NSGAIISampler, BoTorchSampler, QMCSampler, BruteForceSampler. Covers sampler selection, parameter suggestion, and multi-objective optimization."
+version: 0.2.0
 author: quant-kg-lab
 license: MIT
 source_repo: optuna/optuna
-source_version: master
+source_commit: b6f2ea62fbe7fb09d0d1c75783c65dad098d9a06
 extraction_date: 2026-07-29
-graph_hash: 3912_nodes_8405_edges
-graph_stats:
-  nodes: 3912
-  edges: 8405
-  communities: 228
-metadata:
-  hermes:
-    tags: [optuna, hyperparameter-optimization, samplers]
-    related_skills: [optuna-samplers, optuna-pruners, optuna-study, optuna-trial, optuna-visualization, optuna-integration, optuna-distributions]
+graph:
+  nodes: 2318
+  edges: 4252
+  community_count: 226
+  graph_hash: a4c296debfeefdef
+tags: [optuna, hyperparameter-optimization, samplers]
+related_skills: [optuna-samplers, optuna-pruners, optuna-study, optuna-trial, optuna-visualization, optuna-integration, optuna-distributions]
 ---
 
 # Optuna Samplers
@@ -105,8 +103,3 @@ sampler = optuna.samplers.QMCSampler(seed=42)
 - [ ] Search space bounds are finite (TPE, CMA-ES require bounded spaces)
 - [ ] `seed` is set for reproducibility
 - [ ] Dynamic parameters use conditional logic, not mid-study range changes
-
-## References
-
-- `references/api.md` — Full sampler API surface from knowledge graph
-- Source: `optuna/samplers/__init__.py`

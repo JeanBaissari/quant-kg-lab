@@ -1,21 +1,19 @@
 ---
 name: scikit-learn-linear-model
-description: Use when working with scikit-learn linear models — regression (LinearRegression, Ridge, Lasso, ElasticNet), classification (LogisticRegression, SGDClassifier), and robust alternatives (Huber, RANSAC, Quantile). Covers loss functions, regularization, and solver selection.
-version: 0.1.0
+description: "Use when working with scikit-learn linear models — regression (LinearRegression, Ridge, Lasso, ElasticNet), classification (LogisticRegression, SGDClassifier), and robust alternatives (Huber, RANSAC, Quantile). Covers loss functions, regularization, and solver selection."
+version: 0.2.0
 author: quant-kg-lab
 license: MIT
 source_repo: scikit-learn/scikit-learn
-source_version: main
+source_commit: 6f8b95aa2234102acc3804fc8c7a3e6bd0506bfb
 extraction_date: 2026-07-29
-graph_hash: 18753_nodes_49978_edges
-graph_stats:
-  nodes: 18753
-  edges: 49978
-  communities: [0, 4, 11, 26, 65, 93, 205, 236, 248, 422, 437, 472, 528, 866]
-metadata:
-  hermes:
-    tags: [scikit-learn, machine-learning, linear-models, regression, classification, regularization]
-    related_skills: [scikit-learn-metrics, scikit-learn-model-selection, scikit-learn-preprocessing]
+graph:
+  nodes: 8662
+  edges: 29241
+  community_count: 401
+  graph_hash: e587e89627b31941
+tags: [scikit-learn, machine-learning, linear-models, regression, classification, regularization]
+related_skills: [scikit-learn-metrics, scikit-learn-model-selection, scikit-learn-preprocessing]
 ---
 
 # scikit-learn Linear Models
@@ -94,8 +92,3 @@ Extracted from scikit-learn knowledge graph. Source: `sklearn.linear_model` modu
 - [ ] `max_iter` increased if convergence warning appears
 - [ ] `random_state` set for reproducible results
 - [ ] Model calibrated if probability estimates needed from SGDClassifier
-
-## References
-
-- `references/api.md` — Full API surface from knowledge graph
-- `references/examples.md` — Extracted from scikit-learn examples/

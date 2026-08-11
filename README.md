@@ -1,72 +1,103 @@
 # quant-kg-lab
 
-**Open-source PhD-level quantitative research laboratory** — extracting, structuring, and operationalizing knowledge from premier scientific Python libraries into reusable agent skills.
+**A quantitative knowledge-graph laboratory** — it extracts structured knowledge graphs from
+premier scientific-Python libraries and distills them into **verifiable, copy-in agent skills**
+for quantitative research and development.
+
+Not a package to install. A knowledge base to **copy from** — every skill traces back to a
+graph node and a source line, and is checked against the live library API in CI.
 
 ## Thesis
 
-Modern quantitative finance demands fluency across statistical learning (scikit-learn), hyperparameter optimization (optuna), and agent-driven automation. This project builds **persistent, queryable knowledge graphs** of these foundational libraries and distills them into **spec-driven agent skills** that can be loaded into any agentskills.io-compatible agent (Hermes, Claude Code, OpenClaw, Codex).
+Quantitative work spans data (pandas, numpy), statistics & signal processing (scipy),
+statistical learning (scikit-learn, xgboost, lightgbm), hyperparameter optimization (optuna),
+technical analysis (ta-lib), and backtesting (vectorbt, backtrader). This repo builds a
+**persistent, queryable knowledge graph** of each of those libraries and turns them into
+**spec-driven agent skills** an agent can load to work fluently across the whole stack.
+
+Two things make it more than a pile of library docs:
+
+- **① Verifiable skills.** Every claim in a skill traces to a graph node (`source_file:line`)
+  and is validated against the installed library's real API in CI. Skills you can trust, not
+  hallucinated cheatsheets. → `docs/specs/SKILL_SPEC.md`, `scripts/validate_skills.py`
+- **② A composable quant stack.** Cross-library **bridges** and **workflow playbooks** encode
+  *how* the libraries compose into research loops (data → features → model → backtest → HPO →
+  risk) — so it reads as one stack, not ten isolated references. → `skills/quant-patterns/`,
+  `docs/reference/unified-index.md`
 
 ## Architecture
 
 ```
 quant-kg-lab/
-├── knowledge_graphs/       # graphify-extracted knowledge graphs
-│   ├── scikit-learn/       #   ML library graph (.graphify/)
-│   └── optuna/             #   HPO framework graph (.graphify/)
-├── skills/                 # extracted spec-driven SKILL.md files
-│   ├── scikit-learn/       #   per-module skills
-│   └── optuna/             #   per-module skills
-├── scripts/                # extraction & automation tooling
-├── docs/                   # methodology, papers, references
-└── .github/                # CI/CD for graph freshness
+├── knowledge_graphs/<lib>/.graphify/   # graph.json + GRAPH_REPORT.md + labels (10 libraries)
+├── skills/<lib>/<module>/SKILL.md      # atomic, per-module skills (+ routers)
+│   └── quant-patterns/                 #   cross-library workflow playbooks
+├── scripts/                            # rebuild, query, validate, audit, bridge tooling
+├── docs/                               # index.md hub → specs/ guides/ libraries/ reference/ adr/ audit/
+├── graphs.lock                         # pinned upstream commits — reproducibility manifest
+└── .github/workflows/                  # skill validation + graph freshness CI
 ```
 
 ## Pipeline
 
-1. **Extract** → `graphify` ingests library source + docs → structured knowledge graph (nodes: classes/functions/modules, edges: calls/inherits/imports)
-2. **Query** → community detection surfaces natural module boundaries; god nodes identify API hubs
-3. **Author** → spec-driven `SKILL.md` files for quant-relevant modules
-4. **Validate** → cross-reference against live library APIs; freshness gates via CI
+1. **Extract** — `graphify` ingests a library's source (pinned commit) → knowledge graph
+   (nodes = modules/classes/functions, edges = calls/inherits/imports/uses).
+2. **Query** — community detection surfaces module boundaries; degree centrality surfaces the
+   real API hubs ("god nodes").
+3. **Author** — one spec-driven `SKILL.md` per quant-relevant module (`docs/specs/SKILL_SPEC.md`).
+4. **Validate** — every skill's claims are checked against the live API + graph provenance in CI.
 
-## Libraries Under Analysis
+See `docs/guides/methodology.md` for the full pipeline and `docs/specs/GRAPH_SPEC.md` for the schema, the
+noise-filter policy, and the graph quality gate.
 
-| Library | Stars | Focus | Quant Relevance |
-|---------|-------|-------|-----------------|
-| [scikit-learn](https://github.com/scikit-learn/scikit-learn) | 66.8K | Machine learning | Feature engineering, model selection, metrics, pipelines |
-| [optuna](https://github.com/optuna/optuna) | 14.6K | Hyperparameter optimization | Bayesian optimization, pruning, distributed sweeps |
+## Libraries under analysis
 
-## Skills Produced
+| Library | Domain | Nodes · Edges |
+|---------|--------|---------------|
+| [pandas](https://github.com/pandas-dev/pandas) | Data frames, time series | 37,983 · 69,899 |
+| [scipy](https://github.com/scipy/scipy) | Stats, optimize, signal | 31,042 · 51,352 |
+| [numpy](https://github.com/numpy/numpy) | Arrays, linalg, random | 20,436 · 30,581 |
+| [scikit-learn](https://github.com/scikit-learn/scikit-learn) | Machine learning | 18,753 · 49,978 |
+| [xgboost](https://github.com/dmlc/xgboost) | Gradient boosting | 7,708 · 14,747 |
+| [vectorbt](https://github.com/polakowo/vectorbt) | Vectorized backtesting | 5,411 · 13,588 |
+| [optuna](https://github.com/optuna/optuna) | Hyperparameter optimization | 3,912 · 8,405 |
+| [backtrader](https://github.com/mementum/backtrader) | Event-driven backtesting | 3,458 · 6,863 |
+| [lightgbm](https://github.com/microsoft/LightGBM) | Gradient boosting | 2,952 · 5,138 |
+| [ta-lib](https://github.com/TA-Lib/ta-lib-python) | Technical indicators | 1,305 · 5,564 |
 
-Each skill follows the `agentskills.io` specification with:
-- Progressive disclosure (SKILL.md → references/ → scripts/)
-- Source-to-skill traceability (every claim links back to a graph node)
-- Freshness metadata (library version, extraction date, graph hash)
+**Total: ~133K nodes / ~256K edges across 10 graphs.** Pinned commits in `graphs.lock`.
+
+## Using a skill (copy-in)
+
+These skills are intentionally **not** distributed as a package. To use one, copy the skill
+directory into your agent's skills location:
+
+```bash
+cp -r skills/scipy/stats /path/to/your/.claude/skills/scipy-stats
+# or into any agentskills.io / Hermes-compatible skills directory
+```
+
+Only the `name` and `description` frontmatter are required by loaders; the provenance metadata is
+carried along and ignored safely by agents that don't use it.
+
+## Reproducibility
+
+Every graph is rebuildable from its pinned commit:
+
+```bash
+npm install -g @sentropic/graphify      # the external extraction engine
+pip install -r requirements.txt         # the target libraries (for validation)
+scripts/rebuild_graph.sh scipy          # clone@pin → extract → merge → cluster → audit
+python scripts/query_graph.py scipy "kolmogorov smirnov"   # query any graph
+python scripts/validate_skills.py --ci  # verify skill claims against live APIs
+```
 
 ## Status
 
-🚧 **Phase 1 — Extraction Complete** — Knowledge graphs built for both libraries.
-
-### Extraction Results
-
-| Library | Nodes | Edges | Communities | Top God Node |
-|---------|-------|-------|-------------|--------------|
-| scikit-learn | 18,753 | 49,978 | 1,043 | BaseEstimator (2,309°) |
-| optuna | 3,912 | 8,405 | 228 | Study (228°) |
-
-### Key Findings
-
-- **scikit-learn**: `BaseEstimator` is the undisputed hub (2,309 connections). `Pipeline` (536°), `TransformerMixin` (1,171°), and the `*Mixin` hierarchy form the core architecture. Parameter validation classes (`Interval`, `StrOptions`) have surprisingly high centrality.
-- **optuna**: `Study` (228°) and `BaseDistribution` (213°) form a tightly-coupled core. The sampler/distribution hierarchy is the dominant structural pattern. 228 natural communities detected.
-
-### Next: Skill Extraction
-
-From these graphs, we'll extract spec-driven agent skills for quant-relevant modules:
-- `sklearn.model_selection` → GridSearchCV, cross_val_score
-- `sklearn.ensemble` → RandomForest, GradientBoosting
-- `sklearn.metrics` → classification/regression metrics
-- `optuna.samplers` → TPESampler, BoTorchSampler
-- `optuna.pruners` → MedianPruner, HyperbandPruner
+10 library graphs are extracted; the project is **consolidating them to a single gold standard**
+(uniform skill template, semantic descriptions + clean god nodes for all 10, full API validation,
+and the workflow-playbook layer). See `ROADMAP.md` for the phased plan and current state.
 
 ## License
 
-MIT — skills are open-source, graphs are reproducible.
+[MIT](LICENSE). Skills are open-source; graphs are reproducible from `graphs.lock`.

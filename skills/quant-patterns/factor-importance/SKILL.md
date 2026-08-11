@@ -1,13 +1,12 @@
 ---
 name: quant-factor-importance
-description: Use when ranking features by predictive power in trading models — permutation importance, SHAP values, MDI (mean decrease in impurity), and factor decay analysis. Integrates scikit-learn inspection and ensemble modules.
-version: 0.1.0
+description: "Use when ranking features by predictive power in trading models — permutation importance, SHAP values, MDI (mean decrease in impurity), and factor decay analysis. Integrates scikit-learn inspection and ensemble modules."
+version: 0.2.0
 author: quant-kg-lab
 license: MIT
-metadata:
-  hermes:
-    tags: [quantitative-finance, factor-research, feature-importance, shap, permutation-importance]
-    related_skills: [scikit-learn-ensemble, scikit-learn-inspection]
+composes: [scikit-learn-ensemble, scikit-learn-inspection]
+tags: [quantitative-finance, factor-research, feature-importance, shap, permutation-importance]
+related_skills: [scikit-learn-ensemble, scikit-learn-inspection]
 ---
 
 # Factor Importance Ranking

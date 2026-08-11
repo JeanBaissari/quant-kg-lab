@@ -1,0 +1,392 @@
+{
+  "report": {
+    "skills/backtrader/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "provenance": []
+    },
+    "skills/backtrader/analyzers/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "backtrader not installed \u2014 API check skipped"
+      ],
+      "provenance": []
+    },
+    "skills/backtrader/core/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "backtrader not installed \u2014 API check skipped"
+      ],
+      "provenance": []
+    },
+    "skills/lightgbm/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "provenance": []
+    },
+    "skills/lightgbm/core/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "lightgbm not installed \u2014 API check skipped"
+      ],
+      "provenance": []
+    },
+    "skills/lightgbm/sklearn/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "lightgbm not installed \u2014 API check skipped"
+      ],
+      "provenance": []
+    },
+    "skills/numpy/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "provenance": []
+    },
+    "skills/numpy/core/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "provenance": []
+    },
+    "skills/numpy/linalg/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class EigResult: internal/private (real, not public API)",
+        "class EighResult: internal/private (real, not public API)",
+        "class QRResult: internal/private (real, not public API)",
+        "class SVDResult: internal/private (real, not public API)",
+        "class SlogdetResult: internal/private (real, not public API)"
+      ],
+      "provenance": []
+    },
+    "skills/numpy/random/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "func integers: not found in public API (cross-ref or renamed)"
+      ],
+      "provenance": []
+    },
+    "skills/optuna/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "provenance": []
+    },
+    "skills/optuna/distributions/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "provenance": []
+    },
+    "skills/optuna/integration/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class LightGBMTunerCV: module 'integration' not importable (optional dependency?)",
+        "class OptunaSearchCV: module 'integration' not importable (optional dependency?)",
+        "class TorchDistributedTrial: module 'integration' not importable (optional dependency?)"
+      ],
+      "provenance": []
+    },
+    "skills/optuna/pruners/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "provenance": []
+    },
+    "skills/optuna/samplers/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "provenance": []
+    },
+    "skills/optuna/study/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "provenance": []
+    },
+    "skills/optuna/trial/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "provenance": []
+    },
+    "skills/optuna/visualization/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "provenance": []
+    },
+    "skills/pandas/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "provenance": []
+    },
+    "skills/pandas/core/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "provenance": []
+    },
+    "skills/pandas/ts/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class BaseWindow: internal/private (real, not public API)",
+        "class OnlineExponentialMovingWindow: internal/private (real, not public API)"
+      ],
+      "provenance": []
+    },
+    "skills/quant-patterns/factor-importance/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "provenance": []
+    },
+    "skills/quant-patterns/factor-research/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "provenance": []
+    },
+    "skills/quant-patterns/full-pipeline/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "provenance": []
+    },
+    "skills/quant-patterns/hpo-optimization/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "provenance": []
+    },
+    "skills/quant-patterns/ml-strategy/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "provenance": []
+    },
+    "skills/quant-patterns/portfolio-construction/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "provenance": []
+    },
+    "skills/quant-patterns/regime-detection/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "provenance": []
+    },
+    "skills/quant-patterns/walk-forward-validation/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "provenance": []
+    },
+    "skills/scikit-learn/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "provenance": []
+    },
+    "skills/scikit-learn/cluster/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "provenance": []
+    },
+    "skills/scikit-learn/compose/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "provenance": []
+    },
+    "skills/scikit-learn/decomposition/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "provenance": []
+    },
+    "skills/scikit-learn/ensemble/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "provenance": []
+    },
+    "skills/scikit-learn/feature_selection/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "provenance": []
+    },
+    "skills/scikit-learn/gaussian_process/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "provenance": []
+    },
+    "skills/scikit-learn/impute/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "provenance": []
+    },
+    "skills/scikit-learn/linear_model/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "provenance": []
+    },
+    "skills/scikit-learn/metrics/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "provenance": []
+    },
+    "skills/scikit-learn/model_selection/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class BaseSearchCV: internal/private (real, not public API)"
+      ],
+      "provenance": []
+    },
+    "skills/scikit-learn/neural_network/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class BaseMultilayerPerceptron: internal/private (real, not public API)"
+      ],
+      "provenance": []
+    },
+    "skills/scikit-learn/preprocessing/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "provenance": []
+    },
+    "skills/scikit-learn/svm/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class BaseLibSVM: internal/private (real, not public API)",
+        "class BaseSVC: internal/private (real, not public API)"
+      ],
+      "provenance": []
+    },
+    "skills/scikit-learn/tree/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "provenance": []
+    },
+    "skills/scipy/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "provenance": []
+    },
+    "skills/scipy/optimize/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class DifferentialEvolutionSolver: internal/private (real, not public API)",
+        "class MemoizeJac: internal/private (real, not public API)",
+        "class ScalarFunction: internal/private (real, not public API)"
+      ],
+      "provenance": []
+    },
+    "skills/scipy/signal/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "provenance": []
+    },
+    "skills/scipy/stats/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class ContinuousDistribution: internal/private (real, not public API)",
+        "class FitResult: internal/private (real, not public API)",
+        "class UnivariateDistribution: internal/private (real, not public API)"
+      ],
+      "provenance": []
+    },
+    "skills/ta-lib/indicators/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "ta-lib not installed \u2014 API check skipped"
+      ],
+      "provenance": []
+    },
+    "skills/vectorbt/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "provenance": []
+    },
+    "skills/vectorbt/core/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "provenance": []
+    },
+    "skills/vectorbt/portfolio/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "provenance": []
+    },
+    "skills/vectorbt/signals/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "func rand_enex_by_prob: not found in public API (cross-ref or renamed)"
+      ],
+      "provenance": []
+    },
+    "skills/xgboost/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "provenance": []
+    },
+    "skills/xgboost/core/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "xgboost not installed \u2014 API check skipped"
+      ],
+      "provenance": []
+    },
+    "skills/xgboost/sklearn/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "xgboost not installed \u2014 API check skipped"
+      ],
+      "provenance": []
+    }
+  },
+  "router_errors": [],
+  "totals": {
+    "lint": 0,
+    "api_fail": 0,
+    "provenance": 0
+  }
+}

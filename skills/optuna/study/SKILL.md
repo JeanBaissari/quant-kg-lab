@@ -1,21 +1,19 @@
 ---
 name: optuna-study
-description: Use when working with Optuna Study lifecycle — create_study, Study.optimize, Study.ask, Study.tell, load_study, delete_study, copy_study. Covers study creation, optimization loops, ask-and-tell interface, persistence, and multi-objective studies.
-version: 0.1.0
+description: "Use when working with Optuna Study lifecycle — create_study, Study.optimize, Study.ask, Study.tell, load_study, delete_study, copy_study. Covers study creation, optimization loops, ask-and-tell interface, persistence, and multi-objective studies."
+version: 0.2.0
 author: quant-kg-lab
 license: MIT
 source_repo: optuna/optuna
-source_version: master
+source_commit: b6f2ea62fbe7fb09d0d1c75783c65dad098d9a06
 extraction_date: 2026-07-29
-graph_hash: 3912_nodes_8405_edges
-graph_stats:
-  nodes: 3912
-  edges: 8405
-  communities: 228
-metadata:
-  hermes:
-    tags: [optuna, hyperparameter-optimization, study]
-    related_skills: [optuna-samplers, optuna-pruners, optuna-study, optuna-trial, optuna-visualization, optuna-integration, optuna-distributions]
+graph:
+  nodes: 2318
+  edges: 4252
+  community_count: 226
+  graph_hash: a4c296debfeefdef
+tags: [optuna, hyperparameter-optimization, study]
+related_skills: [optuna-samplers, optuna-pruners, optuna-study, optuna-trial, optuna-visualization, optuna-integration, optuna-distributions]
 ---
 
 # Optuna Study
@@ -120,8 +118,3 @@ study.optimize(
 - [ ] `load_if_exists=True` when resuming
 - [ ] Callbacks are non-blocking and exception-safe
 - [ ] `timeout` is set as safety net for long-running optimizations
-
-## References
-
-- Source: `optuna/study/__init__.py`, `optuna/study/study.py`
-- `references/api.md` — Full study API surface from knowledge graph

@@ -1,17 +1,19 @@
 ---
 name: scikit-learn-tree
-description: Use when working with scikit-learn Decision Trees — classification, regression, visualization, and export. Covers core classes, methods, and quant-relevant patterns.
-version: 0.1.0
+description: "Use when working with scikit-learn Decision Trees — classification, regression, visualization, and export. Covers core classes, methods, and quant-relevant patterns."
+version: 0.2.0
 author: quant-kg-lab
 license: MIT
 source_repo: scikit-learn/scikit-learn
-source_version: main
+source_commit: 6f8b95aa2234102acc3804fc8c7a3e6bd0506bfb
 extraction_date: 2026-07-29
-graph_hash: 18753_nodes_49978_edges
-metadata:
-  hermes:
-    tags: [scikit-learn, machine-learning, decision-tree, cart, visualization]
-    related_skills: [scikit-learn-ensemble, scikit-learn-model-selection, scikit-learn-metrics]
+graph:
+  nodes: 8662
+  edges: 29241
+  community_count: 401
+  graph_hash: e587e89627b31941
+tags: [scikit-learn, machine-learning, decision-tree, cart, visualization]
+related_skills: [scikit-learn-ensemble, scikit-learn-model-selection, scikit-learn-metrics]
 ---
 
 # scikit-learn Decision Trees
@@ -96,9 +98,3 @@ plot_tree(dtc, feature_names=feature_names, filled=True)
 4. **`predict_proba` smoothing**: Class probabilities are computed as the fraction of samples in each leaf — no smoothing. Small leaves produce extreme probabilities (0 or 1).
 5. **Memory with deep trees**: A fully-grown tree on large data can have millions of nodes. Set `max_leaf_nodes` to bound memory.
 6. **`decision_path` output**: Returns a sparse CSR matrix — use `.toarray()` or `.nonzero()` to extract paths per sample.
-
-## References
-
-- `references/api.md` — Full API surface from knowledge graph
-- Communities 176, 0: 779 total graph nodes (412 code, 367 rationale)
-- Source files: `sklearn/tree/_classes.py` (33 nodes), `_export.py` (26), `_reingold_tilford.py` (18)

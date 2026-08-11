@@ -1,21 +1,19 @@
 ---
 name: xgboost-sklearn
-description: Use when working with XGBoost scikit-learn wrappers — XGBClassifier, XGBRegressor, XGBRanker. Covers sklearn-compatible fit/predict, parameter interface, and Pipeline/GridSearchCV integration.
-version: 0.1.0
+description: "Use when working with XGBoost scikit-learn wrappers — XGBClassifier, XGBRegressor, XGBRanker. Covers sklearn-compatible fit/predict, parameter interface, and Pipeline/GridSearchCV integration."
+version: 0.2.0
 author: quant-kg-lab
 license: MIT
 source_repo: dmlc/xgboost
-source_version: main
+source_commit: 2a4786e61e08b41f63916089c35a10d0ac4626d2
 extraction_date: 2026-07-29
-graph_hash: 7708_nodes_14747_edges
-graph_stats:
-  nodes: 7708
-  edges: 14747
-  communities: [0, 1, 23, 37, 79, 83, 124, 132, 149, 187, 370, 371, 394]
-metadata:
-  hermes:
-    tags: [xgboost, gradient-boosting, machine-learning, scikit-learn, sklearn]
-    related_skills: [xgboost-core, scikit-learn-model-selection, optuna-samplers]
+graph:
+  nodes: 1632
+  edges: 4415
+  community_count: 80
+  graph_hash: b2d7c9adae1e5f30
+tags: [xgboost, gradient-boosting, machine-learning, scikit-learn, sklearn]
+related_skills: [xgboost-core, scikit-learn-model-selection, optuna-samplers]
 ---
 
 # XGBoost Scikit-learn API
