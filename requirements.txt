@@ -1,6 +1,7 @@
 # quant-kg-lab — Python dependencies
 #
-# The repo's own tooling (scripts/*.py) uses only the Python standard library.
+# scripts/*.py uses the Python standard library plus PyYAML (imported by doc_audit.py,
+# validate_skills.py, normalize_skills.py, build_unified_index.py, build_library_docs.py).
 # These packages are the *target libraries* the skills describe. They are needed
 # to run scripts/validate_skills.py (which imports each library and checks that
 # every symbol a skill claims actually exists).
