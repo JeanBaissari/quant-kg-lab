@@ -1,0 +1,57 @@
+name: release-bundles
+
+# ADR-0007 / QKG_014 — versioned graph bundles as GitHub Release assets.
+# On a tag push (v<graphs.lock sha12>): run the quality gate first, build every
+# library bundle + the cross-library overlay, attach them to the release.
+# A failing gate fails the release — bundles never ship from a non-gold state.
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Quality gate (11/11 must pass)
+        run: python3 scripts/graph_gate.py --ci --all
+      - name: Doc audit
+        run: python3 scripts/doc_audit.py --ci
+  build:
+    needs: gate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Export bundles
+        run: |
+          python3 scripts/export_bundle.py --lib all --out dist --tag "${GITHUB_REF_NAME}"
+          python3 scripts/check_artifact_safety.py --include-dist
+      - name: Verify manifest hashes
+        run: |
+          python3 - <<'EOF'
+          import json, hashlib, pathlib, zipfile
+          m = json.load(open('dist/bundle.json'))
+          for lib, e in m['libraries'].items():
+              for art, sha in e['artifacts'].items():
+                  path = pathlib.Path('dist') / f"qkg-{lib}.zip"
+                  with zipfile.ZipFile(path) as z:
+                      data = z.read(art)
+                  assert hashlib.sha256(data).hexdigest() == sha, f"{lib}: {art} hash mismatch"
+          print(f"verified {len(m['libraries'])} bundles byte-identical to manifest")
+          EOF
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: dist/*.zip
+          generate_release_notes: true

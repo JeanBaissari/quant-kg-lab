@@ -25,5 +25,6 @@ Lifecycle: `proposed → accepted → superseded-by: ADR-000N`.
 | [ADR-0004](ADR-0004-bridges-as-overlay.md) | Cross-library bridges as a precise overlay graph | accepted |
 | [ADR-0005](ADR-0005-single-docs-surface.md) | Single `docs/` surface + doc-type taxonomy | accepted |
 | [ADR-0006](ADR-0006-package-subdir-extraction.md) | Package-subdir from-scratch re-extraction | accepted |
+| [ADR-0007](ADR-0007-distribution-bundles.md) | Graph bundles as GitHub Release assets | accepted |
 
-*Last verified against the repo: 2026-08-06.*
+*Last verified against the repo: 2026-08-12.*

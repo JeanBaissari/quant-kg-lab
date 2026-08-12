@@ -1,0 +1,38 @@
+name: artifact-safety
+
+# QKG_015 — the repo's committed/bundled artifacts must never contain absolute
+# paths, usernames, or gitignored intermediates. Runs on every push/PR touching
+# the artifacts the repo ships; a violation blocks the merge.
+
+on:
+  push:
+    paths:
+      - 'knowledge_graphs/**'
+      - 'skills/**'
+      - 'docs/reference/**'
+      - 'graphs.lock'
+      - 'scripts/export_bundle.py'
+      - 'scripts/check_artifact_safety.py'
+  pull_request:
+    paths:
+      - 'knowledge_graphs/**'
+      - 'skills/**'
+      - 'docs/reference/**'
+      - 'graphs.lock'
+      - 'scripts/export_bundle.py'
+      - 'scripts/check_artifact_safety.py'
+
+jobs:
+  safety:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Scan committed artifacts
+        run: python3 scripts/check_artifact_safety.py
+      - name: Scan bundles (build + check)
+        run: |
+          python3 scripts/export_bundle.py --lib all --out dist --tag ci
+          python3 scripts/check_artifact_safety.py --include-dist

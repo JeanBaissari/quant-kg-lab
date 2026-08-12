@@ -83,6 +83,28 @@ cp -r skills/scipy/stats /path/to/your/.claude/skills/scipy-stats
 Only the `name` and `description` frontmatter are required by loaders; the provenance metadata is
 carried along and ignored safely by agents that don't use it.
 
+## Consume without rebuilding
+
+Every tag ships versioned bundles as **GitHub Release assets** (ADR-0007): one zip per library
+plus the cross-library overlay, with a `bundle.json` manifest (per-file sha256, pinned commit,
+node/edge counts). Bundles carry the **graphs** — the knowledge base skills cite; skills
+themselves stay copy-in from this repo. No graphify, no network, no rebuild:
+
+```bash
+# 1. Download the bundle for a library from the release (tag = graphs.lock commit)
+unzip qkg-scipy.zip && unzip qkg-cross-library-overlay.zip
+#    → scipy/graph.json + scipy/GRAPH_REPORT.md + scipy/.graphify_labels.json
+# 2. Copy the skills you need (copy-in, per SKILL_SPEC) — from this repo
+cp -r skills/scipy/stats ~/.claude/skills/scipy-stats
+# 3. Verify skills against your installed library (with the repo checkout)
+python3 scripts/validate_skills.py --ci scipy
+```
+
+Bundles are byte-identical across builds (`bundle.json` verifies every sha256), and are
+asserted free of absolute paths and gitignored intermediates — the same
+`scripts/check_artifact_safety.py` check runs in CI. Build one locally with
+`python3 scripts/export_bundle.py --lib all --out dist`.
+
 ## Reproducibility
 
 Every graph is rebuildable from its pinned commit:

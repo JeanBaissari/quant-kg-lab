@@ -1,10 +1,12 @@
 {
   "errors": {},
-  "census_errors": [],
+  "census_errors": [
+    "doc not in census: docs/adr/ADR-0007-distribution-bundles.md"
+  ],
   "totals": {
-    "docs": 54,
+    "docs": 55,
     "identity": 0,
     "links": 0,
-    "census": 0
+    "census": 1
   }
 }
