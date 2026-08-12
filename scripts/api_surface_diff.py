@@ -25,6 +25,7 @@ import sys, json, types, importlib, pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 THRESHOLD = 95.0
+IMPORT_NAME = {"scikit-learn": "sklearn", "ta-lib": "talib", "pyportfolioopt": "pypfopt"}
 
 BUILTIN_TYPES = {"builtin_function_or_method", "method_descriptor",
                  "_ArrayFunctionDispatcher", "getset_descriptor", "classmethod",
@@ -112,7 +113,7 @@ def main():
         sys.exit(f"no graph for {lib}")
     labels = graph_labels(g)
     gsrc = {n.get("source_file", "") for n in g["nodes"]}
-    mod = importlib.import_module(lib)
+    mod = importlib.import_module(IMPORT_NAME.get(lib, lib))
     symbols = [s for s in dir(mod) if not s.startswith("_")]
     missing, present = [], 0
     for s in symbols:

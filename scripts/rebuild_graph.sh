@@ -39,6 +39,7 @@ else echo "ERROR: graphify not found. Set GRAPHIFY_CLI to dist/cli.js (see heade
 pkg_subdir() { case "$1" in
   scikit-learn) echo sklearn;; ta-lib) echo talib;;
   xgboost) echo python-package/xgboost;; lightgbm) echo python-package/lightgbm;;
+  pyportfolioopt) echo pypfopt;;
   *) echo "$1";; esac; }
 
 read -r REPO COMMIT < <(python3 - "$LOCK" "$LIB" <<'PY'
@@ -58,6 +59,9 @@ git -C "$SRC" fetch --quiet --depth 1 origin "$COMMIT" 2>/dev/null || git -C "$S
 git -C "$SRC" checkout --quiet "$COMMIT"
 PKG="$SRC/$(pkg_subdir "$LIB")"
 echo ">> extracting $LIB from $PKG @ ${COMMIT:0:12}"
+# F11: graphify writes its own cache INTO the scanned root; a leftover cache
+# aborts re-extraction (its stat-index.json is a non-code corpus file).
+rm -rf "$PKG/.graphify"
 
 # 2. LOCAL AST + Louvain extraction (no LLM). Exclude tests/benchmarks + non-code.
 #    NOTE (QKG_018 F1/F2): graphify's glob excludes are root-anchored, so also pass

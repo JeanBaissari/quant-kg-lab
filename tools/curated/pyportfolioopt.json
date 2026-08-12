@@ -1,0 +1,55 @@
+{
+  "library": "pyportfolioopt",
+  "symbols": [
+    {
+      "label": "base_optimizer",
+      "source_file": "__init__.py",
+      "description": "The ``base_optimizer`` module houses the parent classes ``BaseOptimizer`` from which all."
+    },
+    {
+      "label": "black_litterman",
+      "source_file": "__init__.py",
+      "description": "The ``black_litterman`` module houses the BlackLittermanModel class, which."
+    },
+    {
+      "label": "cla",
+      "source_file": "__init__.py",
+      "description": "The ``cla`` module houses the CLA class, which."
+    },
+    {
+      "label": "discrete_allocation",
+      "source_file": "__init__.py",
+      "description": "The ``discrete_allocation`` module contains the ``DiscreteAllocation`` class, which."
+    },
+    {
+      "label": "efficient_frontier",
+      "source_file": "__init__.py",
+      "description": "The ``efficient_frontier`` module houses the EfficientFrontier class and its descendants,."
+    },
+    {
+      "label": "exceptions",
+      "source_file": "__init__.py",
+      "description": "The ``exceptions`` module houses custom exceptions. Currently implemented:."
+    },
+    {
+      "label": "expected_returns",
+      "source_file": "__init__.py",
+      "description": "The ``expected_returns`` module provides functions for estimating the expected returns of."
+    },
+    {
+      "label": "hierarchical_portfolio",
+      "source_file": "__init__.py",
+      "description": "The ``hierarchical_portfolio`` module seeks to implement one of the recent advances in."
+    },
+    {
+      "label": "objective_functions",
+      "source_file": "__init__.py",
+      "description": "The ``objective_functions`` module provides optimization objectives, including the actual."
+    },
+    {
+      "label": "risk_models",
+      "source_file": "__init__.py",
+      "description": "The ``risk_models`` module provides functions for estimating the covariance matrix given."
+    }
+  ]
+}
