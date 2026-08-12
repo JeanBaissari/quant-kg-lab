@@ -80,6 +80,39 @@ Extracted from scikit-learn knowledge graph. Source: `sklearn.feature_selection`
 |-------|---------|
 | `SelectorMixin` | Mixin providing `get_support()` and `inverse_transform()` to all selectors | feature_selection/_base.py:L27 | feature_selection/_base.py:L27 |
 
+## Common Patterns
+
+```python
+# Filter: keep the top-k factor features by F-test against forward returns
+import numpy as np
+from sklearn.feature_selection import (RFE, SelectKBest, SequentialFeatureSelector,
+                                       f_regression, mutual_info_regression)
+from sklearn.linear_model import Ridge
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler
+
+rng = np.random.default_rng(0)
+X = rng.normal(size=(400, 8))  # momentum, vol, skew, volume z + 4 noise factors
+y = 2.0 * X[:, 0] - 1.0 * X[:, 2] + rng.normal(scale=0.5, size=400)
+
+sel = SelectKBest(score_func=f_regression, k=3).fit(X, y)
+print(sel.get_support(indices=True))
+
+# Nonlinear filter for non-linear factor/return relationships
+mi = SelectKBest(score_func=mutual_info_regression, k=3).fit(X, y)
+print(mi.get_support(indices=True))
+
+# Wrapper: recursive feature elimination with a regularized estimator
+rfe = RFE(estimator=Ridge(alpha=1.0), n_features_to_select=3, step=1).fit(X, y)
+print(rfe.support_)
+
+# Sequential forward selection scored inside a scaled pipeline
+pipe = Pipeline([("scale", StandardScaler()), ("ridge", Ridge(alpha=1.0))])
+sfs = SequentialFeatureSelector(pipe, n_features_to_select=3, direction="forward", cv=5)
+sfs.fit(X, y)
+print(sfs.get_support(indices=True))
+```
+
 ## Pitfalls
 1. **`chi2` requires non-negative features**: Chi-squared assumes frequencies/counts. For negative or continuous features, use `f_classif` or `mutual_info_classif` instead.
 2. **Univariate ≠ Multivariate**: `SelectKBest` scores features independently. Features that are useless alone but useful in combination will be discarded. Use `RFE` or `SequentialFeatureSelector` for multivariate selection.

@@ -32,8 +32,8 @@ Extracted from scikit-learn knowledge graph. Source: `sklearn.model_selection` m
 ## Quick Reference
 ### Cross-Validation Splitters
 
-| Class | Purpose | Key Params | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node |
-|-------|---------|------------|
+| Class | Purpose | Key Params | Graph Node |
+|-------|---------|------------|-----------|
 | `KFold` | K-fold cross-validation | `n_splits`, `shuffle`, `random_state` | model_selection/_split.py:L437 |
 | `StratifiedKFold` | Stratified K-fold (preserves class %) | `n_splits`, `shuffle`, `random_state` | model_selection/_split.py:L687 |
 | `GroupKFold` | Non-overlapping group K-fold | `n_splits` | model_selection/_split.py:L533 |
@@ -49,8 +49,8 @@ Extracted from scikit-learn knowledge graph. Source: `sklearn.model_selection` m
 
 ### Hyperparameter Search
 
-| Class | Purpose | Key Params | externals/array_api_compat/common/_typing.py:L39 |
-|-------|---------|------------|
+| Class | Purpose | Key Params | Graph Node |
+|-------|---------|------------|-----------|
 | `GridSearchCV` | Exhaustive param grid search | `param_grid`, `cv`, `scoring`, `n_jobs`, `refit` | model_selection/_search.py:L1346 |
 | `RandomizedSearchCV` | Randomized param sampling | `param_distributions`, `n_iter`, `cv`, `scoring` | model_selection/_search.py:L1726 |
 | `HalvingGridSearchCV` | Successive halving grid search | `param_grid`, `cv`, `factor`, `resource` | model_selection/_search_successive_halving.py:L426 |
@@ -60,16 +60,16 @@ Extracted from scikit-learn knowledge graph. Source: `sklearn.model_selection` m
 
 ### Tuning Utilities
 
-| Function/Class | Purpose |
-|----------------|---------|
-| `TunedThresholdClassifierCV` | Post-hoc decision threshold tuning | model_selection/_classification_threshold.py:L499 | model_selection/_classification_threshold.py:L499 |
-| `BaseSearchCV` | Base class for all CV search estimators | model_selection/_search.py:L443 | model_selection/_search.py:L443 |
-| `LearningCurveDisplay` | Plot learning curves from `learning_curve()` | model_selection/_plot.py:L126 | model_selection/_plot.py:L126 |
-| `ValidationCurveDisplay` | Plot validation curves from `validation_curve()` | model_selection/_plot.py:L511 | model_selection/_plot.py:L511 |
+| Function/Class | Purpose | Graph Node |
+|----------------|---------|-----------|
+| `TunedThresholdClassifierCV` | Post-hoc decision threshold tuning | model_selection/_classification_threshold.py:L499 |
+| `BaseSearchCV` | Base class for all CV search estimators | model_selection/_search.py:L443 |
+| `LearningCurveDisplay` | Plot learning curves from `learning_curve()` | model_selection/_plot.py:L126 |
+| `ValidationCurveDisplay` | Plot validation curves from `validation_curve()` | model_selection/_plot.py:L511 |
 
 ### Core Functions
 
-| Function | Purpose | Key Params | covariance/_elliptic_envelope.py:L187 |
+| Function | Purpose | Key Params | Graph Node |
 |----------|---------|------------|
 | `train_test_split` | Split arrays into train/test | `test_size`, `random_state`, `stratify` | model_selection/_split.py:L2797 |
 | `cross_val_score` | Evaluate score by CV | `estimator`, `X`, `y`, `cv`, `scoring` | model_selection/_validation.py:L512 |
@@ -77,6 +77,41 @@ Extracted from scikit-learn knowledge graph. Source: `sklearn.model_selection` m
 | `validation_curve` | Compute train/test scores vs param | `param_name`, `param_range`, `cv` | model_selection/_validation.py:L2276 |
 | `learning_curve` | Compute scores vs training size | `train_sizes`, `cv`, `scoring` | model_selection/_validation.py:L1769 |
 | `check_cv` | Validate/normalize CV splitter | `cv`, `y`, `classifier` | model_selection/_split.py:L2697 |
+
+## Common Patterns
+
+```python
+# Quant CV must be temporal: TimeSeriesSplit never shuffles the return series
+import numpy as np
+from scipy.stats import loguniform
+from sklearn.linear_model import Ridge
+from sklearn.model_selection import (GridSearchCV, RandomizedSearchCV, TimeSeriesSplit,
+                                     cross_val_score, train_test_split)
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler
+
+rng = np.random.default_rng(0)
+X = rng.normal(size=(500, 6))
+y = X[:, 0] + 0.3 * X[:, 1] + rng.normal(scale=0.5, size=500)
+
+tscv = TimeSeriesSplit(n_splits=5, test_size=50)
+pipe = Pipeline([("std", StandardScaler()), ("ridge", Ridge())])
+
+grid = {"ridge__alpha": [0.1, 1.0, 10.0]}
+search = GridSearchCV(pipe, grid, cv=tscv, scoring="neg_mean_squared_error", n_jobs=-1)
+search.fit(X, y)
+print(search.best_params_, search.best_score_)
+
+# RandomizedSearchCV for continuous alpha priors
+dist = {"ridge__alpha": loguniform(1e-3, 1e2)}
+rs = RandomizedSearchCV(pipe, dist, n_iter=20, cv=tscv, random_state=42, n_jobs=-1)
+rs.fit(X, y)
+print(rs.best_params_)
+
+# Final estimate on a temporal holdout kept out of tuning
+Xtr, Xte, ytr, yte = train_test_split(X, y, test_size=0.2, shuffle=False)
+print(cross_val_score(rs.best_estimator_, Xtr, ytr, cv=tscv).mean())
+```
 
 ## Pitfalls
 1. **Data leakage in CV**: Always split before scaling. Use `Pipeline` to chain preprocessing + estimator so transforms are re-fit per fold.

@@ -34,8 +34,8 @@ Extracted from scikit-learn knowledge graph. Source: `sklearn.compose` module an
 ## Quick Reference
 ### Core Pipeline & Column Transformers
 
-| Class/Function | Purpose | Key Params | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node |
-|---------------|---------|------------|
+| Class/Function | Purpose | Key Params | Graph Node |
+|---------------|---------|------------|-----------|
 | `Pipeline` | Chain transforms + estimator sequentially | `steps` (list of (name, transform) tuples), `memory`, `verbose` | pipeline.py:L93 |
 | `make_pipeline` | Shorthand Pipeline (auto-names steps) | `*steps` | pipeline.py:L1471 |
 | `ColumnTransformer` | Apply different transforms to different columns | `transformers`, `remainder`, `sparse_threshold`, `verbose_feature_names_out` | compose/_column_transformer.py:L64 |
@@ -44,16 +44,52 @@ Extracted from scikit-learn knowledge graph. Source: `sklearn.compose` module an
 
 ### Feature Union
 
-| Class/Function | Purpose | Key Params |
-|---------------|---------|------------|
+| Class/Function | Purpose | Key Params | Graph Node |
+|---------------|---------|------------|-----------|
 | `FeatureUnion` | Concatenate results of multiple transforms | `transformer_list`, `n_jobs`, `transformer_weights`, `verbose` | pipeline.py:L1626 |
 | `make_union` | Shorthand FeatureUnion (auto-names) | `*transformers`, `n_jobs`, `verbose` | pipeline.py:L2234 |
 
 ### Target Transformation
 
-| Class | Purpose | Key Params | externals/array_api_compat/common/_typing.py:L39 |
-|-------|---------|------------|
+| Class | Purpose | Key Params | Graph Node |
+|-------|---------|------------|-----------|
 | `TransformedTargetRegressor` | Transform target y before fitting | `regressor`, `transformer`, `func`, `inverse_func`, `check_inverse` | compose/_target.py:L28 |
+
+## Common Patterns
+
+```python
+# Quant feature pipeline: impute + scale momentum/vol, passthrough sector dummies
+import numpy as np
+from sklearn.compose import ColumnTransformer, TransformedTargetRegressor
+from sklearn.impute import SimpleImputer
+from sklearn.linear_model import Ridge
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler
+
+rng = np.random.default_rng(0)
+X = rng.normal(size=(500, 4))
+X[rng.uniform(size=X.shape) < 0.05] = np.nan  # missing prints in continuous cols
+X[:, 3] = rng.integers(0, 2, size=500).astype(float)  # clean sector dummy (passthrough)
+y = 0.5 * np.nan_to_num(X[:, 1]) + rng.normal(scale=0.4, size=500)
+
+prep = ColumnTransformer(
+    transformers=[
+        ("scale", Pipeline([("imp", SimpleImputer(strategy="median")),
+                            ("std", StandardScaler())]), [0, 1, 2]),
+        ("sector", "passthrough", [3]),
+    ]
+)
+pipe = Pipeline([("prep", prep), ("ridge", Ridge(alpha=1.0))])
+pipe.fit(X, y)
+print(pipe.predict(X[:3]))
+
+# TransformedTargetRegressor: log-shift the return target, back-transform
+ttr = TransformedTargetRegressor(
+    regressor=Ridge(alpha=1.0), func=np.log1p, inverse_func=np.expm1
+)
+ttr.fit(np.nan_to_num(X), y + 1.0)
+print(ttr.predict(np.nan_to_num(X[:3])))
+```
 
 ## Pitfalls
 1. **Pipeline step ordering**: Steps execute in order. Preprocessing must come before the final estimator. `Pipeline([('scaler', StandardScaler()), ('clf', LogisticRegression())])` — the last step must be an estimator (has `fit()` and `predict()`), all prior steps must be transformers (have `fit_transform()`).

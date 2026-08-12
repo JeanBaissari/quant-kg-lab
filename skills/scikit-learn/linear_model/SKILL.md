@@ -86,6 +86,35 @@ Extracted from scikit-learn knowledge graph. Source: `sklearn.linear_model` modu
 | `GammaRegressor` | GLM with Gamma distribution (positive) | `alpha`, `fit_intercept`, `max_iter` | linear_model/_glm/glm.py:L763 |
 | `TweedieRegressor` | GLM with Tweedie distribution | `power`, `alpha`, `fit_intercept`, `max_iter` | linear_model/_glm/glm.py:L944 |
 
+## Common Patterns
+
+```python
+# L2 shrinkage with built-in CV: RidgeCV picks alpha on the validation path
+import numpy as np
+from sklearn.linear_model import LassoCV, LogisticRegression, Ridge, RidgeCV
+from sklearn.model_selection import train_test_split
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler
+
+rng = np.random.default_rng(0)
+X = rng.normal(size=(600, 10))
+y = 0.8 * X[:, 0] - 0.4 * X[:, 3] + rng.normal(scale=0.3, size=600)
+
+ridge_cv = RidgeCV(alphas=np.logspace(-3, 3, 20), cv=5).fit(X, y)
+print(ridge_cv.alpha_, ridge_cv.coef_[:5])
+
+# L1 path: LassoCV drives most factor coefficients to zero
+lasso_cv = LassoCV(alphas=np.logspace(-3, 1, 50), cv=5, random_state=42).fit(X, y)
+print(np.count_nonzero(lasso_cv.coef_), lasso_cv.alpha_)
+
+# Directional classification (return sign) with a scaled pipeline
+Xtr, Xte, ytr, yte = train_test_split(X, y, test_size=0.3, random_state=42)
+clf = Pipeline([("std", StandardScaler()),
+                ("logit", LogisticRegression(penalty="l2", C=1.0, max_iter=1000))])
+clf.fit(Xtr, (ytr > 0).astype(int))
+print(clf.score(Xte, (yte > 0).astype(int)))
+```
+
 ## Pitfalls
 1. **Feature scaling matters**: `LinearRegression` (with OLS solver) and `Ridge` don't strictly require scaling, but `SGD*`, `Perceptron`, `PassiveAggressive*`, and regularized models converge faster/more reliably with standardized features. Always scale for `LogisticRegression`.
 2. **`LogisticRegression` `penalty` + `solver` compatibility**: Not all solver/penalty pairs work. Use `solver='lbfgs'` with `penalty='l2'` or `None` for most cases. `penalty='l1'` requires `solver='liblinear'` or `'saga'`.

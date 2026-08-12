@@ -59,6 +59,40 @@ Extracted from scikit-learn knowledge graph. Source: `sklearn.decomposition` mod
 | `FastICA` | Independent Component Analysis | `n_components`, `algorithm` ('parallel'/'deflation'), `fun` | decomposition/_fastica.py:L1 |
 | `LatentDirichletAllocation` | Topic modeling (LDA) | `n_components`, `doc_topic_prior`, `topic_word_prior`, `learning_method` | decomposition/_lda.py:L160 |
 
+## Common Patterns
+
+```python
+# PCA: extract orthogonal factor returns from standardized asset returns
+import numpy as np
+from scipy.sparse import csr_matrix
+from sklearn.decomposition import NMF, PCA, TruncatedSVD
+from sklearn.linear_model import Ridge
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler
+
+rng = np.random.default_rng(0)
+returns = rng.normal(0, 0.01, size=(252, 40))  # 40 assets x 1y of daily returns
+X = StandardScaler().fit_transform(returns)
+
+pca = PCA(n_components=5, random_state=42)
+factors = pca.fit_transform(X)
+print(pca.explained_variance_ratio_.sum(), factors.shape)
+
+# PCA as a noise filter inside a regression pipeline
+pipe = Pipeline([("scale", StandardScaler()),
+                 ("pca", PCA(n_components=0.95)),
+                 ("ridge", Ridge(alpha=1.0))])
+pipe.fit(X, X[:, 0])
+
+# TruncatedSVD works directly on sparse matrices (one-hot exposures)
+svd = TruncatedSVD(n_components=3, random_state=42)
+print(svd.fit_transform(csr_matrix(X)).shape)
+
+# NMF needs non-negative input: decompose squared returns (variance proxy)
+W = NMF(n_components=3, init="nndsvda", random_state=42).fit_transform(returns**2)
+print(W.shape)
+```
+
 ## Pitfalls
 1. **`PCA` `n_components` as float**: When `0 < n_components < 1`, it selects the number of components to explain that fraction of variance. When `n_components=None`, keeps all components (min(n_samples, n_features)).
 2. **`TruncatedSVD` for sparse text**: Use for LSA on `TfidfVectorizer` output. Unlike `PCA`, it works directly on sparse matrices without densifying.

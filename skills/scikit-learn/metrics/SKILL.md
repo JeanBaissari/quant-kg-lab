@@ -34,8 +34,8 @@ Extracted from scikit-learn knowledge graph. Source: `sklearn.metrics` module.
 ## Quick Reference
 ### Classification Metrics
 
-| Function | Purpose | Key Params | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node |
-|----------|---------|------------|
+| Function | Purpose | Key Params | Graph Node |
+|----------|---------|------------|-----------|
 | `accuracy_score` | Fraction of correct predictions | `normalize`, `sample_weight` | metrics/_classification.py:L357 |
 | `precision_score` | Ratio tp / (tp + fp) | `average`, `pos_label`, `zero_division` | metrics/_classification.py:L2527 |
 | `recall_score` | Ratio tp / (tp + fn) | `average`, `pos_label`, `zero_division` | metrics/_classification.py:L2710 |
@@ -56,45 +56,72 @@ Extracted from scikit-learn knowledge graph. Source: `sklearn.metrics` module.
 
 ### Regression Metrics
 
-| Function | Purpose | covariance/_elliptic_envelope.py:L187 | covariance/_elliptic_envelope.py:L187 |
+| Function | Purpose | Graph Node |
 |----------|---------|
-| `r2_score` | Coefficient of determination | metrics/_regression.py:L1179 | metrics/_regression.py:L1179 |
-| `mean_squared_error` | MSE (L2 loss) | metrics/_regression.py:L551 | metrics/_regression.py:L551 |
-| `root_mean_squared_error` | RMSE (sqrt of MSE) | metrics/_regression.py:L642 | metrics/_regression.py:L642 |
-| `mean_absolute_error` | MAE (L1 loss) | metrics/_regression.py:L257 | metrics/_regression.py:L257 |
-| `mean_absolute_percentage_error` | MAPE | metrics/_regression.py:L447 | metrics/_regression.py:L447 |
-| `explained_variance_score` | Explained variance | metrics/_regression.py:L1033 | metrics/_regression.py:L1033 |
-| `max_error` | Maximum residual error | metrics/_regression.py:L1348 | metrics/_regression.py:L1348 |
-| `mean_squared_log_error` | Mean squared log error | metrics/_regression.py:L730 | metrics/_regression.py:L730 |
-| `mean_gamma_deviance` | Gamma deviance (for GammaRegressor) | metrics/_regression.py:L1565 | metrics/_regression.py:L1565 |
-| `mean_poisson_deviance` | Poisson deviance (for PoissonRegressor) | metrics/_regression.py:L1522 | metrics/_regression.py:L1522 |
-| `mean_tweedie_deviance` | Tweedie deviance |
-| `d2_tweedie_score` | D² Tweedie score | metrics/_regression.py:L1613 | metrics/_regression.py:L1613 |
+| `r2_score` | Coefficient of determination | metrics/_regression.py:L1179 |
+| `mean_squared_error` | MSE (L2 loss) | metrics/_regression.py:L551 |
+| `root_mean_squared_error` | RMSE (sqrt of MSE) | metrics/_regression.py:L642 |
+| `mean_absolute_error` | MAE (L1 loss) | metrics/_regression.py:L257 |
+| `mean_absolute_percentage_error` | MAPE | metrics/_regression.py:L447 |
+| `explained_variance_score` | Explained variance | metrics/_regression.py:L1033 |
+| `max_error` | Maximum residual error | metrics/_regression.py:L1348 |
+| `mean_squared_log_error` | Mean squared log error | metrics/_regression.py:L730 |
+| `mean_gamma_deviance` | Gamma deviance (for GammaRegressor) | metrics/_regression.py:L1565 |
+| `mean_poisson_deviance` | Poisson deviance (for PoissonRegressor) | metrics/_regression.py:L1522 |
+| `mean_tweedie_deviance` | Tweedie deviance | — |
+| `d2_tweedie_score` | D² Tweedie score | metrics/_regression.py:L1613 |
 
 ### Clustering Metrics
 
-| Function | Purpose | covariance/_elliptic_envelope.py:L187 | covariance/_elliptic_envelope.py:L187 |
+| Function | Purpose | Graph Node |
 |----------|---------|
-| `silhouette_score` | Silhouette coefficient | metrics/cluster/_unsupervised.py:L59 | metrics/cluster/_unsupervised.py:L59 |
-| `adjusted_rand_score` | Adjusted Rand index | metrics/cluster/_supervised.py:L360 | metrics/cluster/_supervised.py:L360 |
-| `normalized_mutual_info_score` | NMI | metrics/cluster/_supervised.py:L1084 | metrics/cluster/_supervised.py:L1084 |
-| `calinski_harabasz_score` | Variance ratio criterion | metrics/cluster/_unsupervised.py:L333 | metrics/cluster/_unsupervised.py:L333 |
-| `davies_bouldin_score` | Davies-Bouldin index | metrics/cluster/_unsupervised.py:L413 | metrics/cluster/_unsupervised.py:L413 |
+| `silhouette_score` | Silhouette coefficient | metrics/cluster/_unsupervised.py:L59 |
+| `adjusted_rand_score` | Adjusted Rand index | metrics/cluster/_supervised.py:L360 |
+| `normalized_mutual_info_score` | NMI | metrics/cluster/_supervised.py:L1084 |
+| `calinski_harabasz_score` | Variance ratio criterion | metrics/cluster/_unsupervised.py:L333 |
+| `davies_bouldin_score` | Davies-Bouldin index | metrics/cluster/_unsupervised.py:L413 |
 
 ### Pairwise Distances
 
-| Function | Purpose | covariance/_elliptic_envelope.py:L187 | covariance/_elliptic_envelope.py:L187 |
+| Function | Purpose | Graph Node |
 |----------|---------|
-| `pairwise_distances` | Compute distance matrix between vectors | metrics/pairwise.py:L2311 | metrics/pairwise.py:L2311 |
-| `cosine_similarity` | Cosine similarity kernel | metrics/pairwise.py:L1705 | metrics/pairwise.py:L1705 |
-| `euclidean_distances` | Euclidean distance matrix | metrics/pairwise.py:L268 | metrics/pairwise.py:L268 |
+| `pairwise_distances` | Compute distance matrix between vectors | metrics/pairwise.py:L2311 |
+| `cosine_similarity` | Cosine similarity kernel | metrics/pairwise.py:L1705 |
+| `euclidean_distances` | Euclidean distance matrix | metrics/pairwise.py:L268 |
 
 ### Scorer Utilities
 
-| Function | Purpose | covariance/_elliptic_envelope.py:L187 | covariance/_elliptic_envelope.py:L187 |
+| Function | Purpose | Graph Node |
 |----------|---------|
-| `make_scorer` | Build a scorer from a metric function | metrics/_scorer.py:L674 | metrics/_scorer.py:L674 |
-| `get_scorer` | Get scorer by name from registry | metrics/_scorer.py:L478 | metrics/_scorer.py:L478 |
+| `make_scorer` | Build a scorer from a metric function | metrics/_scorer.py:L674 |
+| `get_scorer` | Get scorer by name from registry | metrics/_scorer.py:L478 |
+
+> Note: mean_tweedie_deviance exists in the library but is absent from the committed graph (extraction gap).
+
+## Common Patterns
+
+```python
+# Regression diagnostics on out-of-sample return predictions
+import numpy as np
+from sklearn.linear_model import Ridge
+from sklearn.metrics import make_scorer, mean_squared_error, r2_score
+from sklearn.model_selection import TimeSeriesSplit, cross_val_score
+
+rng = np.random.default_rng(0)
+X = rng.normal(size=(300, 5))
+y = 0.5 * X[:, 0] - 0.2 * X[:, 2] + rng.normal(scale=0.4, size=300)
+y_pred = Ridge(alpha=1.0).fit(X, y).predict(X)
+print(r2_score(y, y_pred), mean_squared_error(y, y_pred))
+
+# Custom scorer: directional hit rate (sign agreement with the target)
+def hit_rate(y_true, y_pred):
+    return float(np.mean(np.sign(y_true) == np.sign(y_pred)))
+
+hit_scorer = make_scorer(hit_rate)
+tscv = TimeSeriesSplit(n_splits=5)
+scores = cross_val_score(Ridge(), X, y, cv=tscv, scoring=hit_scorer)
+print(scores, scores.mean())
+```
 
 ## Pitfalls
 1. **`average` parameter for multiclass**: `precision_score` / `recall_score` / `f1_score` default to `average='binary'` — fails on multiclass. Use `'macro'`, `'micro'`, or `'weighted'`.

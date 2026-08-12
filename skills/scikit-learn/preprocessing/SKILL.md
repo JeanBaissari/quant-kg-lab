@@ -84,6 +84,44 @@ Extracted from scikit-learn knowledge graph. Source: `sklearn.preprocessing` mod
 | `power_transform` | Box-Cox / Yeo-Johnson (equiv. `PowerTransformer`) | preprocessing/_data.py:L3659 | preprocessing/_data.py:L3659 |
 | `quantile_transform` | Quantile transform (equiv. `QuantileTransformer`) | preprocessing/_data.py:L3113 | preprocessing/_data.py:L3113 |
 
+## Common Patterns
+
+```python
+# Impute missing quotes, robust-scale fat-tailed returns, then regress
+import numpy as np
+from sklearn.impute import SimpleImputer
+from sklearn.linear_model import Ridge
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import (KBinsDiscretizer, PolynomialFeatures,
+                                   RobustScaler, StandardScaler)
+
+rng = np.random.default_rng(0)
+X = rng.normal(size=(400, 4))
+X_clean = X.copy()
+X[rng.uniform(size=X.shape) < 0.05] = np.nan  # missing data points
+y = X_clean[:, 0] + rng.normal(scale=0.3, size=400)
+
+pipe = Pipeline([("imp", SimpleImputer(strategy="median")),
+                 ("scale", RobustScaler()),
+                 ("ridge", Ridge(alpha=1.0))])
+pipe.fit(X, y)
+print(pipe.score(X, y))
+
+# Polynomial interactions for momentum/vol cross-terms
+clean = SimpleImputer(strategy="median").fit_transform(X)
+X_poly = PolynomialFeatures(degree=2, include_bias=False).fit_transform(clean)
+print(X_poly.shape)
+
+# Quantile bins as regime labels for a classifier target
+disc = KBinsDiscretizer(n_bins=5, encode="ordinal", strategy="quantile")
+labels = disc.fit_transform(clean[:, :1].reshape(-1, 1)).ravel()
+print(np.unique(labels, return_counts=True))
+
+# StandardScaler for mean/variance-sensitive models
+std = StandardScaler().fit(clean)
+print(std.mean_, std.scale_)
+```
+
 ## Pitfalls
 1. **`LabelEncoder` is NOT for features**: It's designed for 1D target labels. Use `OrdinalEncoder` for feature columns — it handles 2D arrays and unknown categories.
 2. **`StandardScaler` on sparse data**: Setting `with_mean=True` on sparse matrices raises an error (cannot center sparse). Use `with_mean=False` or densify first.
