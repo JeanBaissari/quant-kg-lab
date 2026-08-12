@@ -7,7 +7,7 @@ Graph: `knowledge_graphs/ta-lib/.graphify/graph.json` · GRAPH_SPEC §5 · gener
 | criterion | status | counts |
 |---|---|---|
 | c1 real labels | PASS | distinct=174 non_singleton=21 default_labels=0 default_graph=0 coverage=100.0% |
-| c2 descriptions | FAIL | described=40 describable=148 pct=27.0% |
+| c2 descriptions | PASS | described=148 describable=148 pct=100.0% |
 | c3 god nodes | PASS | top20=20 noise=0 |
 | c4 pin | FAIL | expected=a9ff1b47b3ddbd57274116645d688c0ed677338b found=absent (graph) |
 | c5 audited | PASS | exists |
