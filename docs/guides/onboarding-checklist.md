@@ -81,9 +81,11 @@ Extraction only sees Python `def`s: Cython modules (`.pyx`) and C-only symbols
 
 ## 8. Sync + gate + commit
 
-- Set `graph.json` → `graph.built_from_commit` = pin (no stamp tool is committed yet — see Findings F4), and sync `graphs.lock` node/edge counts to the final graph.
+- Set `graph.json` → `graph.built_from_commit` = pin:
+  `python3 scripts/stamp_graphs.py <lib>` (QKG_005), then sync `graphs.lock`
+  node/edge counts to the final graph.
 - Regenerate the gate report: `python3 scripts/graph_gate.py <lib>` (c1–c6).
-- Commit per step (pin/extract, prune, labels, audit, hub, checklist, tool fixes separately). Never commit `repo/` or `.graphify` intermediates.
+- Commit per step (pin/extract, prune, labels, audit, hub, checklist, tool fixes separately). Never commit `repo/` or `.graphify` intermediates (nested patterns ignored since QKG_018 F7).
 
 ## Findings (QKG_019 stress run — statsmodels)
 
@@ -107,7 +109,8 @@ Extraction only sees Python `def`s: Cython modules (`.pyx`) and C-only symbols
   `LIB_EXTRA_SYMBOLS`) or segment-anchored patterns (`/tests/`).
 - **F4 — No stamp tool committed.** Nothing writes `graph.built_from_commit`; c4 is FAIL for
   all 11 libraries until the QKG_005 stamp tool lands. The field was set manually per
-  GRAPH_SPEC §2 for statsmodels.
+  GRAPH_SPEC §2 for statsmodels. **RESOLVED (QKG_005):** `scripts/stamp_graphs.py <lib>` writes
+  it; step 8 uses the tool.
 - **F5 — Hardcoded library lists.** `scripts/graph_gate.py` `ALL` rejects unknown libraries
   (`exit 2 "unknown library"`) — statsmodels added. `scripts/build_library_docs.py` `DOMAIN`
   missing statsmodels — added to Foundation. (`audit_edges.py` needs no list — it takes any
@@ -123,7 +126,10 @@ Extraction only sees Python `def`s: Cython modules (`.pyx`) and C-only symbols
   `graphify_*.json` names nor the 0.17.1 set (`entities.json`, `manifest.json`, `scope.json`,
   `scene.json`, `reconciliation-candidates.json`, `workspace-manifest.json`, `studio/`) are
   ignored in practice. Stage only the three canonical artifacts (graph.json, GRAPH_REPORT.md,
-  .graphify_labels.json) until the patterns are fixed.
+  .graphify_labels.json) until the patterns are fixed. **RESOLVED (QKG_018 F7):** every
+  intermediate now carries a `**/.graphify/...` pattern (plus the 0.17.1-era set and
+  `description-instructions/`); `git check-ignore` verifies nested paths; the three canonical
+  artifacts remain explicitly un-ignored.
 - **F8 — Language-invisible API surface (QKG_021 template case, numpy).** tree-sitter has no
   Cython grammar and extracts only Python `def`s. numpy: 199/499 top-level symbols absent —
   whole `.pyx` modules (`random/_generator.pyx`), C-only ufuncs/builtins (`arange`, `sin`,

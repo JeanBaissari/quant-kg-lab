@@ -14,6 +14,8 @@ node_modules/
 
 # Graphify intermediates — committed artifacts (graph.json, GRAPH_REPORT.md,
 # .graphify_labels.json) are explicitly NOT ignored; see GRAPH_SPEC §1.
+# NOTE (QKG_018 F7): patterns with a slash are root-anchored, so every graphify
+# intermediate also needs a **/ variant to match knowledge_graphs/<lib>/.graphify/.
 .graphify/.graphify_detect.json
 .graphify/.graphify_extract.json
 .graphify/.graphify_analysis.json
@@ -29,6 +31,32 @@ node_modules/
 .graphify/cost.json
 .graphify/memory/
 .graphify/wiki/
+**/.graphify/.graphify_detect.json
+**/.graphify/.graphify_extract.json
+**/.graphify/.graphify_analysis.json
+**/.graphify/.graphify_ast.json
+**/.graphify/.graphify_semantic.json
+**/.graphify/.graphify_incremental.json
+**/.graphify/.graphify_old.json
+**/.graphify/.vocab.txt
+**/.graphify/branch.json
+**/.graphify/worktree.json
+**/.graphify/needs_update
+**/.graphify/cache/
+**/.graphify/cost.json
+**/.graphify/memory/
+**/.graphify/wiki/
+**/.graphify/describe-log.jsonl
+**/.graphify/prompt-*.txt
+# graphify 0.17.1-era intermediates (F7)
+**/.graphify/entities.json
+**/.graphify/manifest.json
+**/.graphify/scope.json
+**/.graphify/scene.json
+**/.graphify/reconciliation-candidates.json
+**/.graphify/workspace-manifest.json
+**/.graphify/studio/
+**/.graphify/description-instructions/
 
 # Cloned repos (too large, reclone via scripts/setup.sh)
 knowledge_graphs/*/repo/
@@ -38,6 +66,4 @@ knowledge_graphs/*/repo/
 *.labels.bak
 *.curated.bak
 *.stamp.bak
-.graphify/describe-log.jsonl
-.graphify/prompt-*.txt
 dist/

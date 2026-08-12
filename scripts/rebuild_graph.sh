@@ -60,11 +60,18 @@ PKG="$SRC/$(pkg_subdir "$LIB")"
 echo ">> extracting $LIB from $PKG @ ${COMMIT:0:12}"
 
 # 2. LOCAL AST + Louvain extraction (no LLM). Exclude tests/benchmarks + non-code.
+#    NOTE (QKG_018 F1/F2): graphify's glob excludes are root-anchored, so also pass
+#    the segment form 'tests/' (matches nested test dirs — statsmodels F1) and
+#    corpus-extension excludes ('.m'/'.txt'/'.html' etc. hard-abort without a
+#    semantic backend — statsmodels F2).
 WS="$KG/.graphify"; mkdir -p "$WS"
 "${GFY[@]}" extract "$PKG" --out "$KG" --no-description --no-label \
-  --exclude 'tests/**' --exclude 'test_*' --exclude '*_test.py' --exclude 'benchmarks/**' \
-  --exclude 'asv_bench/**' --exclude 'examples/**' --exclude 'samples/**' --exclude 'docs/**' \
-  --exclude '*.pyx' --exclude '*.pxi' --exclude '*.pxd' --exclude '*.pyi' --exclude '*.typed'
+  --exclude 'tests/**' --exclude 'tests/' --exclude 'test_*' --exclude '*_test.py' \
+  --exclude 'benchmarks/**' --exclude 'asv_bench/**' --exclude 'examples/**' \
+  --exclude 'samples/**' --exclude 'docs/**' --exclude 'doc/' \
+  --exclude '*.pyx' --exclude '*.pxi' --exclude '*.pxd' --exclude '*.pyi' --exclude '*.typed' \
+  --exclude '*.m' --exclude '*.mat' --exclude '*.do' --exclude '*.R' --exclude '*.f90' \
+  --exclude '*.txt' --exclude '*.html'
 
 # 3. Descriptions + labels via assistant mode (emits batch prompts; NO API key).
 #    An assistant (Claude Code) fills each .graphify/description-instructions/batch-NNN.json,
