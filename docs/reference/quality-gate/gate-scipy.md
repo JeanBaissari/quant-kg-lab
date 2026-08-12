@@ -7,7 +7,7 @@ Graph: `knowledge_graphs/scipy/.graphify/graph.json` · GRAPH_SPEC §5 · genera
 | criterion | status | counts |
 |---|---|---|
 | c1 real labels | PASS | distinct=1061 non_singleton=1042 default_labels=0 default_graph=0 coverage=100.0% |
-| c2 descriptions | FAIL | described=39 describable=8640 pct=0.5% |
+| c2 descriptions | PASS | described=6984 describable=8640 pct=80.8% |
 | c3 god nodes | PASS | top20=20 noise=0 |
 | c4 pin | FAIL | expected=0514ef9e73297ef8d6f46379731eedc619f9d201 found=absent (graph) |
 | c5 audited | PASS | exists |
