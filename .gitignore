@@ -8,14 +8,14 @@ venv/
 # Node
 node_modules/
 
-# Graphify (except graph.json)
+# Graphify intermediates — committed artifacts (graph.json, GRAPH_REPORT.md,
+# .graphify_labels.json) are explicitly NOT ignored; see GRAPH_SPEC §1.
 .graphify/.graphify_detect.json
 .graphify/.graphify_extract.json
 .graphify/.graphify_analysis.json
 .graphify/.graphify_ast.json
 .graphify/.graphify_semantic.json
 .graphify/.graphify_incremental.json
-.graphify/.graphify_labels.json
 .graphify/.graphify_old.json
 .graphify/.vocab.txt
 .graphify/branch.json

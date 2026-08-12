@@ -9,8 +9,8 @@
 ## Context
 
 `docs/` was flat and inconsistent — no taxonomy, no templates, two partial indexes, orphaned
-artifacts, stale dates. We wanted the scalable, modular system proven in `baissari-vbt-lab/docs`,
-but without prematurely adopting its full mkdocs + `{@auto}` toolchain.
+artifacts, stale dates. We wanted the scalable, modular system proven in a sibling lab's docs
+surface, but without prematurely adopting a full mkdocs + `{@auto}` toolchain.
 
 ## Decision
 
@@ -28,7 +28,7 @@ graphify **studio HTML** is the browsable graph view.
 
 ## Alternatives considered
 
-- Two surfaces (`docs/` + Obsidian `wiki/`) like vbt-lab — rejected for now to reduce surface area.
+- Two surfaces (`docs/` + Obsidian `wiki/`) like a sibling lab — rejected for now to reduce surface area.
 - Full mkdocs + auto-gen toolchain — deferred; not needed to get consistency.
 
 *Last verified against the repo: 2026-08-06.*

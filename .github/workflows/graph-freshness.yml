@@ -1,9 +1,11 @@
 name: Graph Freshness Check
 
+# DISABLED 2026-08-12: the scheduled cron was broken by design (read a `git_commit`
+# field no graph carries -> always-stale PR every Monday) and encoded the wrong model
+# (graphs are pinned to graphs.lock; upstream HEAD moving is not staleness).
+# Superseded by the provenance gate (QKG_006). Manual trigger kept for diagnostics.
 on:
-  schedule:
-    - cron: '0 8 * * 1'  # Every Monday at 8am UTC
-  workflow_dispatch:      # Manual trigger
+  workflow_dispatch:      # Manual trigger only
 
 jobs:
   check-scikit-learn:

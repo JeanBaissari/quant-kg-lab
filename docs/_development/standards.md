@@ -7,7 +7,8 @@
 The rules every doc in `docs/` follows. One closed doc-type taxonomy, one identity
 block, one naming scheme, one living-vs-generated rule — all machine-checkable by
 `scripts/doc_audit.py`. Philosophy: **no boilerplate, no one-size-fits-all; every doc
-serves humans and AI agents equally.** Model: `baissari-vbt-lab/docs/_development`.
+serves humans and AI agents equally.** Model: the modular docs surface of a sibling lab
+project, stripped of its toolchain dependencies.
 
 ## 1. Doc-type taxonomy (closed `Type` enum)
 
