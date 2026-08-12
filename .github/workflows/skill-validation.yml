@@ -19,9 +19,8 @@ jobs:
   lint:
     # Fast, deterministic GATE: frontmatter schema, unique "Use when" names, no
     # dangling references/, source_commit matches graphs.lock, routers exist,
-    # required sections + graph_hash + related_skills resolution (QKG_007).
-    # --exclude-known-debt bridges the section-debt (QKG_011) so new violations
-    # still fail; the flag is removed once the authoring wave clears the debt.
+    # required sections + graph_hash + related_skills resolution (QKG_007),
+    # and every QR graph-node citation resolves in the committed graphs (QKG_012).
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -30,7 +29,9 @@ jobs:
           python-version: '3.11'
       - run: pip install pyyaml
       - name: Lint skills against docs/specs/SKILL_SPEC.md
-        run: python scripts/validate_skills.py --ci --exclude-known-debt
+        run: python scripts/validate_skills.py --ci
+      - name: Verify graph-node citations resolve (QKG_012)
+        run: python scripts/verify_citations.py
       - if: always()
         uses: actions/upload-artifact@v4
         with:
@@ -57,7 +58,7 @@ jobs:
         run: |
           pip install pyyaml numpy scipy pandas scikit-learn optuna vectorbt xgboost lightgbm backtrader TA-Lib
       - name: Validate skills against live APIs + provenance (strict)
-        run: python scripts/validate_skills.py --strict --provenance --exclude-known-debt
+        run: python scripts/validate_skills.py --strict --provenance
       - if: always()
         uses: actions/upload-artifact@v4
         with:

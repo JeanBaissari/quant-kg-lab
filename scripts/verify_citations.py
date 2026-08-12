@@ -1,20 +1,25 @@
 #!/usr/bin/env python3
 """Verify every graph-node citation in skills/ resolves in the committed graphs.
 
-A citation is any backticked or plain path containing ".py"/".c" found in a
-SKILL.md (e.g. `core/frame.py`, `vectorbt/utils/config.py:L12`). Resolution:
-suffix-match against the owning library's graph.json source_file values (paths
-are repo-relative; optional :L<line> suffix stripped for the path check).
-Playbooks are included (their citations are cross-library). URLs and docs/
-references are ignored. Exits 1 on any dangling citation (CI gate, QKG_012).
+Citation convention (SKILL_SPEC §4): graph nodes are cited as backticked paths
+(`core/frame.py`) or `source_file:line` (`vectorbt/utils/config.py:L12`), typically
+inside Quick Reference table cells. Resolution:
+  - citations are matched ONLY inside backtick spans / table rows (code fences are
+    skipped, so `self.c`-style attribute chains in code blocks never match);
+  - the leading "<lib>/" or "<pkg>/" segment (backtrader/, sklearn/, numpy/…) is
+    stripped before suffix-matching against the owning graph's source_file values;
+  - playbooks' cross-library citations resolve against the cited library's graph.
+URLs and docs/scripts references are ignored. Exits 1 on any dangling citation
+(CI gate, QKG_012).
 """
 import sys, re, pathlib, json
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-CITE_RE = re.compile(r"([A-Za-z0-9_./-]+\.(?:py|c)(?::L?\d+)?)")
+CITE_RE = re.compile(r"`([A-Za-z0-9_./-]+\.(?:py|c)(?::L?\d+)?)`")
 SKIP = re.compile(r"^(https?://|docs/|scripts/|tests/|tools/|knowledge_graphs/)")
-LIB_DIRS = {"scikit-learn": "sklearn", "ta-lib": "talib", "xgboost": "xgboost",
-            "lightgbm": "lightgbm", "statsmodels": "statsmodels"}
+PKG_OF = {"scikit-learn": "sklearn", "ta-lib": "talib", "xgboost": "xgboost",
+          "lightgbm": "lightgbm", "statsmodels": "statsmodels"}
+NAME_OF = {v: k for k, v in PKG_OF.items()}
 
 
 def graph_sources(lib):
@@ -27,10 +32,7 @@ def graph_sources(lib):
 
 def lib_for_path(path):
     first = path.split("/", 1)[0]
-    for lib, pkg in LIB_DIRS.items():
-        if first == pkg:
-            return lib
-    return first if first in LIB_DIRS else first
+    return NAME_OF.get(first, first)
 
 
 def main():
@@ -45,22 +47,32 @@ def main():
         if libs and lib not in libs:
             continue
         text = p.read_text()
+        # drop fenced code blocks (attribute chains like `self.c` live there)
+        text = re.sub(r"```.*?```", "", text, flags=re.S)
         for m in CITE_RE.finditer(text):
             path = m.group(1)
             bare = re.sub(r":L?\d+$", "", path)
             if SKIP.match(bare):
                 continue
-            # keep only plausible graph-relative paths (no leading ../, no ./)
             if bare.startswith(("/", "../", "./")):
                 continue
             own_lib = lib
-            if lib == "quant-patterns" and "/" in bare:
+            if lib == "quant-patterns" or "/" in bare and bare.split("/", 1)[0] in NAME_OF:
                 own_lib = lib_for_path(bare)
             if own_lib not in sources:
                 sources[own_lib] = graph_sources(own_lib)
             checked += 1
-            match = any(sf == bare or sf.endswith("/" + bare)
-                        for sf in sources[own_lib])
+            cand = bare
+            # strip a leading "<lib>/" or "<pkg>/" segment (citations are
+            # module-qualified; graph source_file values are package-relative)
+            if "/" in cand:
+                head = cand.split("/", 1)[0]
+                if head in NAME_OF or head == own_lib:
+                    cand = cand.split("/", 1)[1]
+            # legacy "python-package/<pkg>/" citation prefix (pre-rebuild graphs)
+            if cand.startswith("python-package/"):
+                cand = "/".join(cand.split("/")[2:])
+            match = any(sf == cand or sf.endswith("/" + cand) for sf in sources[own_lib])
             if not match:
                 dangling.append((str(p.relative_to(ROOT)), path))
     print(f"citations checked: {checked} | dangling: {len(dangling)}")

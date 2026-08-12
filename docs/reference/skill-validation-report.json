@@ -398,9 +398,7 @@
       "provenance": []
     },
     "skills/ta-lib/indicators/SKILL.md": {
-      "lint": [
-        "graph_hash mismatch: expected 1cdcccf662bedb05 (sha256(knowledge_graphs/ta-lib/.graphify/graph.json)[:16]), found 388dac894f0acf64"
-      ],
+      "lint": [],
       "api_fail": [],
       "api_warn": [
         "class AD: not found (library not installed, no graph node)",
@@ -513,7 +511,7 @@
   },
   "router_errors": [],
   "totals": {
-    "lint": 1,
+    "lint": 0,
     "api_fail": 2,
     "provenance": 0
   }

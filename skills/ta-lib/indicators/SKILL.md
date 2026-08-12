@@ -12,7 +12,7 @@ graph:
   nodes: 381
   edges: 379
   community_count: 174
-  graph_hash: 388dac894f0acf64
+  graph_hash: 1cdcccf662bedb05
 tags:
 - ta-lib
 - indicators
@@ -54,9 +54,9 @@ TA-Lib (Technical Analysis Library) is a C library with Python bindings via Cyth
 | `OBV` | Volume | `talib.OBV(close, volume)` | On-Balance Volume | _ta_lib.c:L33087 |
 | `AD` | Volume | `talib.AD(high, low, close, volume)` | Chaikin A/D Line | _ta_lib.c:L8200 |
 | `ADOSC` | Volume | `talib.ADOSC(high, low, close, volume, fastperiod=3, slowperiod=10)` | Chaikin A/D Oscillator | _ta_lib.c:L8588 |
-| `HT_DCPERIOD` | Cycle | `talib.HT_DCPERIOD(close)` | Hilbert Transform — Dominant Cycle Period |
-| `HT_DCPHASE` | Cycle | `talib.HT_DCPHASE(close)` | Hilbert Transform — Dominant Cycle Phase |
-| `HT_PHASOR` | Cycle | `talib.HT_PHASOR(close)` | Hilbert Transform — Phasor Components |
+| `HT_DCPERIOD` | Cycle | `talib.HT_DCPERIOD(close)` | Hilbert Transform — Dominant Cycle Period | _ta_lib.c:L26483 |
+| `HT_DCPHASE` | Cycle | `talib.HT_DCPHASE(close)` | Hilbert Transform — Dominant Cycle Phase | _ta_lib.c:L26643 |
+| `HT_PHASOR` | Cycle | `talib.HT_PHASOR(close)` | Hilbert Transform — Phasor Components | _ta_lib.c:L26803 |
 
 ## Full Function Reference by Category
 

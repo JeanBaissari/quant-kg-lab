@@ -33,7 +33,7 @@ The event-driven backtesting engine. `Cerebro` is the central orchestrator — y
 | `LineBuffer` | `backtrader/linebuffer.py` | Circular buffer for time-series data | underlying array storage |
 | `LineSeries` | `backtrader/lineseries.py` | Named group of lines (open, high, low, close) | `.lines` attribute |
 | `DataBase` | `backtrader/feed.py` | Abstract data feed base class | `dataname`, `fromdate`, `todate` |
-| `GenericCSVData` | `backtrader/feeds/genericcsv.py` | CSV data feed with column mapping | `dtformat`, `timeframe` |
+| `GenericCSVData` | `backtrader/feeds/csvgeneric.py:L32` | CSV data feed with column mapping | `dtformat`, `timeframe` |
 | `YahooFinanceCSV` | `backtrader/feeds/yahoo.py` | Yahoo Finance CSV loader | pre-configured OHLCV columns |
 | `BackBroker` | `backtrader/brokers/bbroker.py` | Default broker backend | `cash`, `commission` |
 | `CommInfoBase` | `backtrader/comminfo.py` | Commission scheme base | `commission`, `margin`, `stocklike` |
