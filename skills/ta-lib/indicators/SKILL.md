@@ -1,6 +1,7 @@
 ---
 name: ta-lib-indicators
-description: "Use when computing technical indicators with TA-Lib — SMA, EMA, RSI, MACD, BBANDS, ATR, ADX, STOCH, and 200+ others."
+description: "Use when computing technical indicators with TA-Lib \u2014 SMA, EMA,\
+  \ RSI, MACD, BBANDS, ATR, ADX, STOCH, and 200+ others."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -8,11 +9,13 @@ source_repo: TA-Lib/ta-lib-python
 source_commit: a9ff1b47b3ddbd57274116645d688c0ed677338b
 extraction_date: 2026-07-29
 graph:
-  nodes: 1140
-  edges: 5352
-  community_count: 203
-  graph_hash: 3230149560fae608
-tags: [ta-lib, indicators]
+  nodes: 381
+  edges: 379
+  community_count: 174
+  graph_hash: 388dac894f0acf64
+tags:
+- ta-lib
+- indicators
 related_skills: []
 ---
 

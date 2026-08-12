@@ -1,6 +1,8 @@
 ---
 name: optuna-pruners
-description: "Use when working with Optuna pruning algorithms — MedianPruner, PercentilePruner, SuccessiveHalvingPruner, HyperbandPruner, ThresholdPruner, PatientPruner, WilcoxonPruner. Covers early stopping, pruning schedules, and trial efficiency."
+description: "Use when working with Optuna pruning algorithms \u2014 MedianPruner,\
+  \ PercentilePruner, SuccessiveHalvingPruner, HyperbandPruner, ThresholdPruner, PatientPruner,\
+  \ WilcoxonPruner. Covers early stopping, pruning schedules, and trial efficiency."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -8,12 +10,22 @@ source_repo: optuna/optuna
 source_commit: b6f2ea62fbe7fb09d0d1c75783c65dad098d9a06
 extraction_date: 2026-07-29
 graph:
-  nodes: 2318
-  edges: 4252
+  nodes: 2205
+  edges: 4010
   community_count: 226
-  graph_hash: a4c296debfeefdef
-tags: [optuna, hyperparameter-optimization, pruners]
-related_skills: [optuna-samplers, optuna-pruners, optuna-study, optuna-trial, optuna-visualization, optuna-integration, optuna-distributions]
+  graph_hash: fa73620b99133289
+tags:
+- optuna
+- hyperparameter-optimization
+- pruners
+related_skills:
+- optuna-samplers
+- optuna-pruners
+- optuna-study
+- optuna-trial
+- optuna-visualization
+- optuna-integration
+- optuna-distributions
 ---
 
 # Optuna Pruners

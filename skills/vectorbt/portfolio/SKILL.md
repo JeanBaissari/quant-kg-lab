@@ -1,6 +1,7 @@
 ---
 name: vectorbt-portfolio
-description: "Use when simulating portfolios with vectorbt — Portfolio.from_signals/from_orders, stats, metrics, and trades."
+description: "Use when simulating portfolios with vectorbt \u2014 Portfolio.from_signals/from_orders,\
+  \ stats, metrics, and trades."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -11,8 +12,10 @@ graph:
   nodes: 3682
   edges: 9212
   community_count: 353
-  graph_hash: 0c9c535c173d5a38
-tags: [vectorbt, portfolio]
+  graph_hash: 4952c3623e7b56de
+tags:
+- vectorbt
+- portfolio
 related_skills: []
 ---
 

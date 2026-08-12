@@ -1,6 +1,7 @@
 ---
 name: xgboost-core
-description: "Use when working with XGBoost native API — DMatrix, train(), Booster, cv(), callbacks. Covers data loading, training loop, model persistence, and cross-validation."
+description: "Use when working with XGBoost native API \u2014 DMatrix, train(), Booster,\
+  \ cv(), callbacks. Covers data loading, training loop, model persistence, and cross-validation."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -8,12 +9,18 @@ source_repo: dmlc/xgboost
 source_commit: 2a4786e61e08b41f63916089c35a10d0ac4626d2
 extraction_date: 2026-07-29
 graph:
-  nodes: 1632
-  edges: 4415
+  nodes: 1631
+  edges: 4318
   community_count: 80
-  graph_hash: b2d7c9adae1e5f30
-tags: [xgboost, gradient-boosting, machine-learning, core-api]
-related_skills: [xgboost-sklearn, lightgbm-core]
+  graph_hash: fe8085677fab40cf
+tags:
+- xgboost
+- gradient-boosting
+- machine-learning
+- core-api
+related_skills:
+- xgboost-sklearn
+- lightgbm-core
 ---
 
 # XGBoost Core API

@@ -1,6 +1,7 @@
 ---
 name: vectorbt-signals
-description: "Use when generating entry/exit signals with vectorbt — SignalFactory, indicator pipelines, and signal generation."
+description: "Use when generating entry/exit signals with vectorbt \u2014 SignalFactory,\
+  \ indicator pipelines, and signal generation."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -11,8 +12,10 @@ graph:
   nodes: 3682
   edges: 9212
   community_count: 353
-  graph_hash: 0c9c535c173d5a38
-tags: [vectorbt, signals]
+  graph_hash: 4952c3623e7b56de
+tags:
+- vectorbt
+- signals
 related_skills: []
 ---
 

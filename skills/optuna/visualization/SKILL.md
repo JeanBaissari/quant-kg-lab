@@ -1,6 +1,9 @@
 ---
 name: optuna-visualization
-description: "Use when working with Optuna visualization functions — plot_optimization_history, plot_slice, plot_contour, plot_param_importances, plot_edf, plot_parallel_coordinate, plot_pareto_front, plot_rank. Covers study analysis, parameter relationships, and interactive Plotly charts."
+description: "Use when working with Optuna visualization functions \u2014 plot_optimization_history,\
+  \ plot_slice, plot_contour, plot_param_importances, plot_edf, plot_parallel_coordinate,\
+  \ plot_pareto_front, plot_rank. Covers study analysis, parameter relationships,\
+  \ and interactive Plotly charts."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -8,12 +11,22 @@ source_repo: optuna/optuna
 source_commit: b6f2ea62fbe7fb09d0d1c75783c65dad098d9a06
 extraction_date: 2026-07-29
 graph:
-  nodes: 2318
-  edges: 4252
+  nodes: 2205
+  edges: 4010
   community_count: 226
-  graph_hash: a4c296debfeefdef
-tags: [optuna, hyperparameter-optimization, visualization]
-related_skills: [optuna-samplers, optuna-pruners, optuna-study, optuna-trial, optuna-visualization, optuna-integration, optuna-distributions]
+  graph_hash: fa73620b99133289
+tags:
+- optuna
+- hyperparameter-optimization
+- visualization
+related_skills:
+- optuna-samplers
+- optuna-pruners
+- optuna-study
+- optuna-trial
+- optuna-visualization
+- optuna-integration
+- optuna-distributions
 ---
 
 # Optuna Visualization

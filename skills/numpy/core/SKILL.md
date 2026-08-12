@@ -1,6 +1,7 @@
 ---
 name: numpy-core
-description: "Use when working with NumPy arrays — ndarray, ufuncs, broadcasting, indexing, dtypes, and array creation."
+description: "Use when working with NumPy arrays \u2014 ndarray, ufuncs, broadcasting,\
+  \ indexing, dtypes, and array creation."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -8,11 +9,13 @@ source_repo: numpy/numpy
 source_commit: ab2199763cb17878cd8f34fcbc97106c5397f922
 extraction_date: 2026-07-29
 graph:
-  nodes: 8345
-  edges: 13507
+  nodes: 8094
+  edges: 13271
   community_count: 670
-  graph_hash: 11fb7485308e9cec
-tags: [numpy, core]
+  graph_hash: 7dd96f3509f3d0ee
+tags:
+- numpy
+- core
 related_skills: []
 ---
 

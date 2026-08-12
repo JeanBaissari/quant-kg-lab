@@ -1,6 +1,7 @@
 ---
 name: pandas-ts
-description: "Use when working with pandas time series — resample, rolling, expanding, ewm, shift, diff, pct_change, and DateOffset."
+description: "Use when working with pandas time series \u2014 resample, rolling, expanding,\
+  \ ewm, shift, diff, pct_change, and DateOffset."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -8,11 +9,13 @@ source_repo: pandas-dev/pandas
 source_commit: 982854070758cd2015fc9e64395684546b1c5444
 extraction_date: 2026-07-29
 graph:
-  nodes: 11837
-  edges: 40707
+  nodes: 11368
+  edges: 39913
   community_count: 410
-  graph_hash: 228c5da2c015f886
-tags: [pandas, ts]
+  graph_hash: 4d026ee98025ac0c
+tags:
+- pandas
+- ts
 related_skills: []
 ---
 

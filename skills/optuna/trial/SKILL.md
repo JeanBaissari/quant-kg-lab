@@ -1,6 +1,9 @@
 ---
 name: optuna-trial
-description: "Use when working with Optuna Trial parameter suggestion and pruning — Trial.suggest_float, suggest_int, suggest_categorical, suggest_loguniform, should_prune, report. Covers parameter space definition, conditional parameters, and intermediate value reporting."
+description: "Use when working with Optuna Trial parameter suggestion and pruning\
+  \ \u2014 Trial.suggest_float, suggest_int, suggest_categorical, suggest_loguniform,\
+  \ should_prune, report. Covers parameter space definition, conditional parameters,\
+  \ and intermediate value reporting."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -8,12 +11,22 @@ source_repo: optuna/optuna
 source_commit: b6f2ea62fbe7fb09d0d1c75783c65dad098d9a06
 extraction_date: 2026-07-29
 graph:
-  nodes: 2318
-  edges: 4252
+  nodes: 2205
+  edges: 4010
   community_count: 226
-  graph_hash: a4c296debfeefdef
-tags: [optuna, hyperparameter-optimization, trial]
-related_skills: [optuna-samplers, optuna-pruners, optuna-study, optuna-trial, optuna-visualization, optuna-integration, optuna-distributions]
+  graph_hash: fa73620b99133289
+tags:
+- optuna
+- hyperparameter-optimization
+- trial
+related_skills:
+- optuna-samplers
+- optuna-pruners
+- optuna-study
+- optuna-trial
+- optuna-visualization
+- optuna-integration
+- optuna-distributions
 ---
 
 # Optuna Trial

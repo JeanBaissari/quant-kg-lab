@@ -1,6 +1,7 @@
 ---
 name: vectorbt
-description: "Use when working with vectorbt. Router indexing the 3 vectorbt sub-skills; load the sub-skill for the module you need."
+description: Use when working with vectorbt. Router indexing the 3 vectorbt sub-skills;
+  load the sub-skill for the module you need.
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -11,9 +12,13 @@ graph:
   nodes: 3682
   edges: 9212
   community_count: 353
-  graph_hash: 0c9c535c173d5a38
-tags: [vectorbt]
-related_skills: [vectorbt-core, vectorbt-portfolio, vectorbt-signals]
+  graph_hash: 4952c3623e7b56de
+tags:
+- vectorbt
+related_skills:
+- vectorbt-core
+- vectorbt-portfolio
+- vectorbt-signals
 ---
 
 # vectorbt (router)

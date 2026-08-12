@@ -8,13 +8,15 @@
 
 | Layer | State |
 |-------|-------|
-| Knowledge graphs | 10/10 extracted (~133K nodes, ~256K edges) |
-| Semantic node descriptions | **2/10 real** (scikit-learn 88.9%, optuna 36.7%); other 8 are AST-stub only → Phase 1 |
-| Community labels | 2/10 real (sklearn, optuna); others default `"Community N"` → Phase 1 |
-| Skills | 46 `SKILL.md`, but **3 inconsistent templates**, 1 broken router, 22 dangling `references/` → Phase 2 |
-| Skill validation | partial (CI installs 5/10 libs; validator has known false-negatives) → Phase 3 |
-| Cross-library bridges | 28/29 **defined** in JSON, **not injected** as edges → Phase 4 |
-| Docs | specs added; `UNIFIED_INDEX.md` still a stale template → Phase 4/5 |
+| Knowledge graphs | 11/11 extracted (~66K nodes, ~165K edges), incl. statsmodels stress wave |
+| Semantic node descriptions | **11/11 ≥80%** (81–100%; ta-lib 100%) — `describe_nodes.py --auto` via opencode |
+| Community labels | **11/11 real** (0 default `"Community N"`; e.g. pandas 396, scipy 1061, statsmodels 638) |
+| Quality Gate | **11/11 GREEN** (c1 labels · c2 descriptions · c3 god nodes · c4 pin · c5 audited) — `scripts/graph_gate.py --ci --all` exits 0 |
+| Skills | 56 `SKILL.md` (9 routers + 39 modules + 8 playbooks), uniform template, 0 dangling refs; `graph_hash` sync → QKG_010 |
+| Skill validation | lint gate + QKG_007 validator v2 (sections/hash/related-skills) with known-debt bridge; API/TA-Lib gating → QKG_008 |
+| Cross-library bridges | 19/19 resolved, injected as `_cross_library` overlay (24 nodes) |
+| Docs | 50-doc governed corpus, `doc_audit.py --ci` green; gate reports in `docs/reference/quality-gate/` |
+| CI | lint + docs gates active; freshness cron disabled → provenance gate (QKG_006) |
 
 ## Gold-standard bar (per library)
 
@@ -48,8 +50,8 @@ API importance. Full definitions: `docs/specs/GRAPH_SPEC.md` §5 and `docs/specs
 - [x] Proven: `graphify describe` assistant loop ingests answers → real descriptions (no key)
 - [x] `scripts/rebuild_graph.sh` uses the real, working invocation (package-dir + noise excludes)
 - [x] `scripts/query_graph.py` accepts all 10 libraries
-- [ ] Run for all 10: clone@pin → extract → answer describe batches → ingest → labels
-- [ ] Every graph passes the Quality Gate (`docs/specs/GRAPH_SPEC.md` §5)
+- [x] Run for all 10 (now 11 incl. statsmodels): clone@pin → extract → describe (opencode) → labels → prune → stamp
+- [x] Every graph passes the Quality Gate (`docs/specs/GRAPH_SPEC.md` §5) — **11/11 green** (`scripts/graph_gate.py --ci --all`)
 
 ## Phase 2 — Normalize all 46 skills to `SKILL_SPEC`
 

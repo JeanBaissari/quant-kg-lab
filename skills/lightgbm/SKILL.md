@@ -1,6 +1,7 @@
 ---
 name: lightgbm
-description: "Use when working with LightGBM. Router indexing the 2 lightgbm sub-skills; load the sub-skill for the module you need."
+description: Use when working with LightGBM. Router indexing the 2 lightgbm sub-skills;
+  load the sub-skill for the module you need.
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -8,12 +9,15 @@ source_repo: microsoft/LightGBM
 source_commit: f9bf8d1358cd7b5d649b47175e56543b62856f98
 extraction_date: 2026-07-29
 graph:
-  nodes: 594
-  edges: 2099
+  nodes: 593
+  edges: 2029
   community_count: 17
-  graph_hash: af871e54ee48be1d
-tags: [lightgbm]
-related_skills: [lightgbm-core, lightgbm-sklearn]
+  graph_hash: a8013a25fbe34b59
+tags:
+- lightgbm
+related_skills:
+- lightgbm-core
+- lightgbm-sklearn
 ---
 
 # LightGBM (router)

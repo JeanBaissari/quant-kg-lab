@@ -1,6 +1,7 @@
 ---
 name: vectorbt-core
-description: "Use when working with vectorbt internals — Config, ArrayWrapper, Wrapping, accessors, and settings."
+description: "Use when working with vectorbt internals \u2014 Config, ArrayWrapper,\
+  \ Wrapping, accessors, and settings."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -11,8 +12,10 @@ graph:
   nodes: 3682
   edges: 9212
   community_count: 353
-  graph_hash: 0c9c535c173d5a38
-tags: [vectorbt, core]
+  graph_hash: 4952c3623e7b56de
+tags:
+- vectorbt
+- core
 related_skills: []
 ---
 

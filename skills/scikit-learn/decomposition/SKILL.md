@@ -1,6 +1,8 @@
 ---
 name: scikit-learn-decomposition
-description: "Use when working with scikit-learn matrix decomposition and dimensionality reduction — PCA, NMF, TruncatedSVD, FactorAnalysis, FastICA, DictionaryLearning, and LatentDirichletAllocation."
+description: "Use when working with scikit-learn matrix decomposition and dimensionality\
+  \ reduction \u2014 PCA, NMF, TruncatedSVD, FactorAnalysis, FastICA, DictionaryLearning,\
+  \ and LatentDirichletAllocation."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -8,12 +10,21 @@ source_repo: scikit-learn/scikit-learn
 source_commit: 6f8b95aa2234102acc3804fc8c7a3e6bd0506bfb
 extraction_date: 2026-07-29
 graph:
-  nodes: 8662
-  edges: 29241
+  nodes: 8450
+  edges: 28094
   community_count: 401
-  graph_hash: e587e89627b31941
-tags: [scikit-learn, machine-learning, decomposition, dimensionality-reduction, pca, nmf, svd]
-related_skills: [scikit-learn-preprocessing, scikit-learn-linear-model]
+  graph_hash: fc25a6d284e9a3ed
+tags:
+- scikit-learn
+- machine-learning
+- decomposition
+- dimensionality-reduction
+- pca
+- nmf
+- svd
+related_skills:
+- scikit-learn-preprocessing
+- scikit-learn-linear-model
 ---
 
 # scikit-learn Decomposition

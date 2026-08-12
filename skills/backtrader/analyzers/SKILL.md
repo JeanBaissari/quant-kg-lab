@@ -1,6 +1,7 @@
 ---
 name: backtrader-analyzers
-description: "Use when adding performance analyzers to a backtrader strategy — SharpeRatio, DrawDown, TradeAnalyzer, TimeReturn, and other Cerebro analyzers."
+description: "Use when adding performance analyzers to a backtrader strategy \u2014\
+  \ SharpeRatio, DrawDown, TradeAnalyzer, TimeReturn, and other Cerebro analyzers."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -11,8 +12,10 @@ graph:
   nodes: 2680
   edges: 4964
   community_count: 206
-  graph_hash: c751b026be8cb4f0
-tags: [backtrader, analyzers]
+  graph_hash: cf88173e47db1f05
+tags:
+- backtrader
+- analyzers
 related_skills: []
 ---
 

@@ -1,6 +1,7 @@
 ---
 name: scipy
-description: "Use when working with SciPy. Router indexing the 3 scipy sub-skills; load the sub-skill for the module you need."
+description: Use when working with SciPy. Router indexing the 3 scipy sub-skills;
+  load the sub-skill for the module you need.
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -8,12 +9,16 @@ source_repo: scipy/scipy
 source_commit: 0514ef9e73297ef8d6f46379731eedc619f9d201
 extraction_date: 2026-07-29
 graph:
-  nodes: 14193
-  edges: 23606
+  nodes: 14071
+  edges: 23466
   community_count: 1076
-  graph_hash: 2be4a46f8c5c60da
-tags: [scipy]
-related_skills: [scipy-optimize, scipy-signal, scipy-stats]
+  graph_hash: 1c051b3be2968b39
+tags:
+- scipy
+related_skills:
+- scipy-optimize
+- scipy-signal
+- scipy-stats
 ---
 
 # SciPy (router)
