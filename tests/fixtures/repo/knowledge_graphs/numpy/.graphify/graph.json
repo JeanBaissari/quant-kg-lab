@@ -1,0 +1,37 @@
+{
+  "directed": true,
+  "multigraph": true,
+  "graph": {
+    "community_labels": [
+      "community-0",
+      "community-1"
+    ]
+  },
+  "nodes": [
+    {
+      "id": "array",
+      "label": "array()",
+      "file_type": "code",
+      "source_file": "array.py",
+      "source_location": "L1",
+      "community": 0
+    },
+    {
+      "id": "linspace",
+      "label": "linspace()",
+      "file_type": "code",
+      "source_file": "linspace.py",
+      "source_location": "L1",
+      "community": 0
+    },
+    {
+      "id": "ndarray",
+      "label": "ndarray",
+      "file_type": "code",
+      "source_file": "array.py",
+      "source_location": "L2",
+      "community": 1
+    }
+  ],
+  "links": []
+}

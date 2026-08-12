@@ -1,0 +1,73 @@
+{
+  "report": {
+    "skills/numpy/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/numpy/badcommit/SKILL.md": {
+      "lint": [
+        "source_commit does not match graphs.lock"
+      ],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/numpy/core/SKILL.md": {
+      "lint": [
+        "missing required section: ## Provenance"
+      ],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/numpy/dangling/SKILL.md": {
+      "lint": [
+        "related_skills: 'no-such-skill' does not resolve to any skill in the registry"
+      ],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/numpy/linalg/SKILL.md": {
+      "lint": [],
+      "api_fail": [
+        "class QuandaryRegression: NOT FOUND \u2014 review (renamed/removed/hallucinated)",
+        "class StandardScaler: NOT FOUND \u2014 review (renamed/removed/hallucinated)",
+        "func ictus_flip: NOT FOUND \u2014 review (renamed/removed/hallucinated)"
+      ],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/numpy/stalehash/SKILL.md": {
+      "lint": [
+        "graph_hash mismatch: expected df564aefc267559e (sha256(knowledge_graphs/numpy/.graphify/graph.json)[:16]), found 0000000000000000"
+      ],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [
+        "graph meta: nodes mismatch \u2014 graph has 3, skill claims 99"
+      ],
+      "provenance": []
+    },
+    "skills/quant-patterns/bridge/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    }
+  },
+  "router_errors": [],
+  "totals": {
+    "lint": 4,
+    "api_fail": 3,
+    "provenance": 0
+  }
+}

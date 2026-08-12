@@ -113,7 +113,7 @@ provenance check fails a skill whose cited nodes don't exist. This is the concre
   from the graph. If it isn't generated, **omit the References section entirely**. Never link a
   file that doesn't exist. *(The current 22 sklearn/optuna skills violate this — they link
   `references/api.md` + `references/examples.md` that were never created.)*
-- `scripts/validate.py` — optional runnable check for that specific skill.
+- `scripts/validate_skills.py` — optional runnable check for that specific skill.
 
 CI treats any link to a non-existent `references/*` or `scripts/*` file as a lint failure.
 
