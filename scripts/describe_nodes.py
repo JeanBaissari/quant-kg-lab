@@ -32,8 +32,23 @@ def is_stub(d):
         or re.match(r"^(The .+\(\) function|Python module|Member|Entity|An example|R source|Function |Class )", d) is not None
 
 def talib_name(label):
-    m = re.match(r"__pyx_pw_\d*talib_\d*_ta_lib_\d+([A-Z][A-Za-z0-9]*)\(\)$", label or "")
-    return m.group(1) if m else None
+    """Map a __pyx_pw_ wrapper back to its public API name.
+
+    Wrapper shape: __pyx_pw_<mod>talib_<n>_ta_lib_<id><NAME>(), where NAME is one of:
+      HT_PHASOR / LINEARREG_SLOPE / CDL*   indicator names (may contain underscores)
+      stream_<NAME>                        the streaming API (talib.stream.<NAME>)
+      Function_<n><name>                   methods of the abstract Function class
+      bytes2str / str2bytes                legacy helpers
+    """
+    m = re.match(r"__pyx_pw_\d*talib_\d*_ta_lib_\d+(.+)\(\)$", label or "")
+    if not m:
+        return None
+    name = m.group(1)
+    if name.startswith("stream_"):
+        return "stream." + name[len("stream_"):]
+    if name.startswith("Function_"):
+        return "Function." + re.sub(r"^\d+", "", name[len("Function_"):])
+    return name
 
 def public(n, lib):
     sf = (n.get("source_file") or "").lower(); lbl = n.get("label") or ""

@@ -21,6 +21,8 @@ try:
 except ImportError:
     sys.exit("ERROR: PyYAML required")
 
+import describe_nodes
+
 ALL_LIBS = ["numpy", "scipy", "pandas", "scikit-learn", "optuna", "vectorbt",
             "backtrader", "ta-lib", "xgboost", "lightgbm", "statsmodels"]
 HEADER_FIXES = (
@@ -179,10 +181,9 @@ def main():
                 lbl = (n.get("label") or "").removesuffix("()")
                 by_label[lbl].append(n)
                 if lib == "ta-lib":
-                    m = re.match(r"__pyx_pw_\d*talib_\d*_ta_lib_\d+([A-Z][A-Za-z0-9]*)\(\)$",
-                                 n.get("label") or "")
-                    if m:
-                        by_label[m.group(1)].append(n)
+                    nm = describe_nodes.talib_name(n.get("label"))
+                    if nm:
+                        by_label[nm].append(n)
             for p in skills_of(lib):
                 if is_playbook(p):
                     continue
