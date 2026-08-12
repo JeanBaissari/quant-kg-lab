@@ -7,7 +7,7 @@ Graph: `knowledge_graphs/lightgbm/.graphify/graph.json` · GRAPH_SPEC §5 · gen
 | criterion | status | counts |
 |---|---|---|
 | c1 real labels | PASS | distinct=17 non_singleton=17 default_labels=0 default_graph=0 coverage=100.0% |
-| c2 descriptions | FAIL | described=30 describable=260 pct=11.5% |
+| c2 descriptions | PASS | described=219 describable=260 pct=84.2% |
 | c3 god nodes | PASS | top20=20 noise=0 |
 | c4 pin | FAIL | expected=f9bf8d1358cd7b5d649b47175e56543b62856f98 found=absent (graph) |
 | c5 audited | PASS | exists |
