@@ -29,13 +29,13 @@ Two things make it more than a pile of library docs:
 
 ```
 quant-kg-lab/
-├── knowledge_graphs/<lib>/.graphify/   # graph.json + GRAPH_REPORT.md + labels (10 libraries)
+├── knowledge_graphs/<lib>/.graphify/   # graph.json + GRAPH_REPORT.md + labels (11 libraries)
 ├── skills/<lib>/<module>/SKILL.md      # atomic, per-module skills (+ routers)
 │   └── quant-patterns/                 #   cross-library workflow playbooks
-├── scripts/                            # rebuild, query, validate, audit, bridge tooling
+├── scripts/                            # rebuild, query, validate, audit, bundle tooling
 ├── docs/                               # index.md hub → specs/ guides/ libraries/ reference/ adr/ audit/
 ├── graphs.lock                         # pinned upstream commits — reproducibility manifest
-└── .github/workflows/                  # skill validation + graph freshness CI
+└── .github/workflows/                  # skill validation + graph provenance gate + docs audit
 ```
 
 ## Pipeline
@@ -54,18 +54,21 @@ noise-filter policy, and the graph quality gate.
 
 | Library | Domain | Nodes · Edges |
 |---------|--------|---------------|
-| [pandas](https://github.com/pandas-dev/pandas) | Data frames, time series | 37,983 · 69,899 |
-| [scipy](https://github.com/scipy/scipy) | Stats, optimize, signal | 31,042 · 51,352 |
-| [numpy](https://github.com/numpy/numpy) | Arrays, linalg, random | 20,436 · 30,581 |
-| [scikit-learn](https://github.com/scikit-learn/scikit-learn) | Machine learning | 18,753 · 49,978 |
-| [xgboost](https://github.com/dmlc/xgboost) | Gradient boosting | 7,708 · 14,747 |
-| [vectorbt](https://github.com/polakowo/vectorbt) | Vectorized backtesting | 5,411 · 13,588 |
-| [optuna](https://github.com/optuna/optuna) | Hyperparameter optimization | 3,912 · 8,405 |
-| [backtrader](https://github.com/mementum/backtrader) | Event-driven backtesting | 3,458 · 6,863 |
-| [lightgbm](https://github.com/microsoft/LightGBM) | Gradient boosting | 2,952 · 5,138 |
-| [ta-lib](https://github.com/TA-Lib/ta-lib-python) | Technical indicators | 1,305 · 5,564 |
+| [pandas](https://github.com/pandas-dev/pandas) | Data frames, time series | 11,368 · 39,913 |
+| [scipy](https://github.com/scipy/scipy) | Stats, optimize, signal | 14,071 · 23,466 |
+| [numpy](https://github.com/numpy/numpy) | Arrays, linalg, random | 8,104 · 13,281 |
+| [scikit-learn](https://github.com/scikit-learn/scikit-learn) | Machine learning | 8,450 · 28,094 |
+| [xgboost](https://github.com/dmlc/xgboost) | Gradient boosting | 1,631 · 4,318 |
+| [vectorbt](https://github.com/polakowo/vectorbt) | Vectorized backtesting | 3,682 · 9,212 |
+| [optuna](https://github.com/optuna/optuna) | Hyperparameter optimization | 2,205 · 4,010 |
+| [backtrader](https://github.com/mementum/backtrader) | Event-driven backtesting | 2,680 · 4,964 |
+| [lightgbm](https://github.com/microsoft/LightGBM) | Gradient boosting | 593 · 2,029 |
+| [ta-lib](https://github.com/TA-Lib/ta-lib-python) | Technical indicators | 381 · 379 |
+| [statsmodels](https://github.com/statsmodels/statsmodels) | Statistical models (regression, GLM, time series) | 11,616 · 33,529 |
 
-**Total: ~133K nodes / ~256K edges across 10 graphs.** Pinned commits in `graphs.lock`.
+**Total: ~65K nodes / ~163K edges across 11 graphs.** Pinned commits in `graphs.lock`; every
+graph passes the [quality gate](docs/specs/GRAPH_SPEC.md#5-quality-gate) (labels, descriptions,
+god nodes, pin, audit).
 
 ## Using a skill (copy-in)
 
@@ -94,9 +97,12 @@ python scripts/validate_skills.py --ci  # verify skill claims against live APIs
 
 ## Status
 
-10 library graphs are extracted; the project is **consolidating them to a single gold standard**
-(uniform skill template, semantic descriptions + clean god nodes for all 10, full API validation,
-and the workflow-playbook layer). See `ROADMAP.md` for the phased plan and current state.
+**Gold standard reached for all 11 libraries**: every graph passes the quality gate (real
+community labels, ≥80% semantic descriptions, clean god nodes, `built_from_commit` pinned,
+audited edges); 56 spec-normalized skills with live-API validation, graph-node citations and a
+green citation gate; 19/19 precise cross-library bridges as a curated overlay; workflow
+playbooks across the whole stack; provenance-gated CI. See `ROADMAP.md` for the phased plan,
+remaining polish, and the expansion queue (cvxpy, PyPortfolioOpt…).
 
 ## License
 
