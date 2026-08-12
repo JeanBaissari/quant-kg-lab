@@ -105,9 +105,7 @@
     },
     "skills/numpy/random/SKILL.md": {
       "lint": [],
-      "api_fail": [
-        "func integers: NOT FOUND \u2014 review (renamed/removed/hallucinated)"
-      ],
+      "api_fail": [],
       "api_warn": [],
       "meta_warn": [],
       "provenance": []
@@ -458,9 +456,7 @@
     },
     "skills/vectorbt/signals/SKILL.md": {
       "lint": [],
-      "api_fail": [
-        "func rand_enex_by_prob: NOT FOUND \u2014 review (renamed/removed/hallucinated)"
-      ],
+      "api_fail": [],
       "api_warn": [],
       "meta_warn": [],
       "provenance": []
@@ -512,7 +508,7 @@
   "router_errors": [],
   "totals": {
     "lint": 0,
-    "api_fail": 2,
+    "api_fail": 0,
     "provenance": 0
   }
 }

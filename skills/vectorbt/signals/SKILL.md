@@ -36,7 +36,7 @@ Dual-layer signal generation: **indicators** (technical analysis primitives from
 | `STOCH` | `vectorbt/indicators/basic.py` | Stochastic oscillator | `k_window`, `d_window` |
 | `generate_rand_enex()` | `vectorbt/signals/nb.py` | Numba kernel for random entry/exit | `n`, `entry_prob`, `exit_prob` |
 | `generate_enex_nb()` | `vectorbt/signals/nb.py` | General entry/exit from rules | condition functions |
-| `rand_enex_by_prob` | `vectorbt/signals/generators.py` | Random signals by probability | entry/exit probability |
+| `generate_rand_enex_by_prob` | `vectorbt/signals/dispatch.py:L327` | Random entry/exit signals by probability | `entry_prob`, `exit_prob` |
 | `between_partition_ranges` | `vectorbt/signals/dispatch.py` | Engine-neutral range queries | partition indices |
 
 ## Key Methods (graph degree centrality)

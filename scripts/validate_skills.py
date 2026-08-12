@@ -87,6 +87,12 @@ def library_symbols(lib, deep=False):
                     continue
                 if isinstance(obj, type) or callable(obj):
                     syms.setdefault(a, f"{mod.__name__}.{a}")
+                # methods of public classes (e.g. numpy.random.Generator.integers)
+                if isinstance(obj, type):
+                    for m in dir(obj):
+                        if m.startswith("_"):
+                            continue
+                        syms.setdefault(m, f"{mod.__name__}.{a}.{m}")
         collect(top)
         def crawl(mod, depth):
             if depth == 0 or not hasattr(mod, "__path__"):
