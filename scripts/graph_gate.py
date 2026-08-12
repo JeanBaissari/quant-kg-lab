@@ -30,7 +30,8 @@ from prune_graph import LIB_EXTRA_SYMBOLS
 
 ROOT = describe_nodes.ROOT
 ALL = ["numpy", "scipy", "pandas", "scikit-learn", "optuna",
-       "vectorbt", "backtrader", "ta-lib", "xgboost", "lightgbm"]
+       "vectorbt", "backtrader", "ta-lib", "xgboost", "lightgbm",
+       "statsmodels"]
 GATE_DIR = ROOT / "docs" / "reference" / "quality-gate"
 DEFAULT_LABEL = re.compile(r"^Community \d+$")
 NOISE_SYM = (re.compile(r"__[Pp]yx_"), re.compile(r"JNI", re.IGNORECASE),
