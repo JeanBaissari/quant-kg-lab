@@ -10,7 +10,7 @@ display per docs/specs/GRAPH_SPEC.md §6), skills/<lib>/, docs/reference/cross-l
 
 Usage: python scripts/build_library_docs.py
 """
-import json, re, pathlib
+import json, re, pathlib, datetime
 from collections import Counter
 import yaml
 
@@ -27,7 +27,7 @@ LIB_DOMAIN = {lib: dom for dom, libs in DOMAIN.items() for lib in libs}
 IMPORT_NAME = {"scikit-learn": "sklearn", "ta-lib": "talib"}
 NOISE = ("tests/", "/test", "test_", "asv_bench", "benchmarks/", "bench_", "examples/",
          "r-package", "apps/", "/doc/", "docs/", ".github", "conftest")
-DATE = "2026-08-06"
+DATE = datetime.date.today().isoformat()
 
 
 def fm_of(path):

@@ -8,7 +8,7 @@
 **Domain**: ML & Optimization
 **Source**: scikit-learn/scikit-learn@6f8b95aa2234
 **Graph**: 8662 nodes · 29241 edges
-**Last Verified**: 2026-08-06
+**Last Verified**: 2026-08-12
 
 ## Overview
 

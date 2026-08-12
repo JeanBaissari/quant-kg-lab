@@ -8,7 +8,7 @@
 **Domain**: ML & Optimization
 **Source**: microsoft/LightGBM@f9bf8d1358cd
 **Graph**: 594 nodes · 2099 edges
-**Last Verified**: 2026-08-06
+**Last Verified**: 2026-08-12
 
 ## Overview
 

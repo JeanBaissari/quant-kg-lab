@@ -10,6 +10,7 @@ Usage: python scripts/audit_edges.py [library]
 """
 import json
 import sys
+import datetime
 from pathlib import Path
 from collections import Counter, defaultdict
 
@@ -89,7 +90,7 @@ def audit_edges(graph, library):
     report_path = REPO_ROOT / "docs" / "reference" / "edge-audits" / f"edge-audit-{library.replace('/', '-')}.md"
     with open(report_path, "w") as f:
         f.write(f"# Edge Audit — {library}\n\n")
-        f.write(f"**Date**: 2026-07-29\n\n")
+        f.write(f"**Date**: {datetime.date.today().isoformat()}\n\n")
         f.write(f"## Summary\n\n")
         f.write(f"- Total edges: {len(links)}\n")
         f.write(f"- EXTRACTED: {len(extracted)} ({100*len(extracted)/len(links):.1f}%)\n")

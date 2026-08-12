@@ -8,7 +8,7 @@
 **Domain**: Foundation
 **Source**: pandas-dev/pandas@982854070758
 **Graph**: 11837 nodes · 40707 edges
-**Last Verified**: 2026-08-06
+**Last Verified**: 2026-08-12
 
 ## Overview
 

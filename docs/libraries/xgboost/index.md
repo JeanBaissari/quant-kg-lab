@@ -8,7 +8,7 @@
 **Domain**: ML & Optimization
 **Source**: dmlc/xgboost@2a4786e61e08
 **Graph**: 1632 nodes · 4415 edges
-**Last Verified**: 2026-08-06
+**Last Verified**: 2026-08-12
 
 ## Overview
 
