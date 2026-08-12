@@ -33,7 +33,6 @@ Extracted from scikit-learn knowledge graph. Source: `sklearn.impute` module.
 Communities: 140 ("Imputation SimpleImputer/MissingIndicator"), 297 ("IterativeImputer"), 436 ("KNNImputer").
 
 ## Quick Reference
-
 | Class/Function | Source File | Purpose | Key Params |
 |---------------|-------------|---------|------------|
 | `SimpleImputer` | `impute/_base.py` | Basic univariate imputation | `strategy` ('mean'/'median'/'most_frequent'/'constant'), `missing_values` (np.nan), `fill_value`, `keep_empty_features` |
@@ -138,3 +137,9 @@ preprocessor = ColumnTransformer([
 5. **`keep_empty_features`**: When a column is all-NaN in training, default behavior drops it. Set `keep_empty_features=True` to preserve column count for pipelines with fixed feature ordering.
 6. **MissingIndicator `features` parameter**: `'all'` returns indicator for all features (even those without missing values). `'missing-only'` (default) only returns indicators for features with at least one missing value — changes output dimension.
 7. **Performance**: `IterativeImputer` trains `max_iter × n_features_with_missing` models. For 100 features with missing values and `max_iter=20`, that's 2000 model fits. Use `n_nearest_features` and `sample_posterior=False` for speed.
+
+## Provenance
+
+- Knowledge graph: scikit-learn, 8450 nodes, 28094 edges, 401 communities
+- God nodes: `IterativeImputer` (19), `MissingIndicator` (17), `SimpleImputer` (16) — public-API hubs only (see GRAPH_SPEC noise filter)
+- Extraction: graphify @ 6f8b95aa2234, backend opencode, description coverage 81%

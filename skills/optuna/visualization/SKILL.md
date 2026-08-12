@@ -34,19 +34,18 @@ related_skills:
 Extracted from optuna knowledge graph. Source: `optuna.visualization` module.
 
 ## Quick Reference
-
-| Function | Plot Type | Purpose |
+| Function | Plot Type | Purpose | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node |
 |----------|-----------|---------|
-| `plot_optimization_history()` | Line chart | Show objective value over trials; identify convergence |
-| `plot_slice()` | Slice plot | Show parameter vs objective; identify promising regions |
-| `plot_contour()` | Contour plot | Show 2-parameter interactions as heatmap |
-| `plot_param_importances()` | Bar chart | Rank parameters by importance (fANOVA or MDI) |
-| `plot_edf()` | EDF curve | Empirical distribution function; compare sampler efficiency |
-| `plot_parallel_coordinate()` | Parallel coordinates | Visualize high-dimensional parameter relationships |
-| `plot_intermediate_values()` | Line chart per trial | Show learning curves; visualize pruning |
-| `plot_pareto_front()` | Scatter plot | Visualize Pareto front in multi-objective studies |
-| `plot_hypervolume_history()` | Line chart | Track hypervolume over trials (multi-objective) |
-| `plot_rank()` | Rank plot | Visualize trial rankings across objectives |
+| `plot_optimization_history()` | Line chart | Show objective value over trials; identify convergence | visualization/_optimization_history.py:L174 |
+| `plot_slice()` | Slice plot | Show parameter vs objective; identify promising regions | visualization/_slice.py:L148 |
+| `plot_contour()` | Contour plot | Show 2-parameter interactions as heatmap | visualization/_contour.py:L70 |
+| `plot_param_importances()` | Bar chart | Rank parameters by importance (fANOVA or MDI) | visualization/_param_importances.py:L118 |
+| `plot_edf()` | EDF curve | Empirical distribution function; compare sampler efficiency | visualization/_edf.py:L42 |
+| `plot_parallel_coordinate()` | Parallel coordinates | Visualize high-dimensional parameter relationships | visualization/_parallel_coordinate.py:L56 |
+| `plot_intermediate_values()` | Line chart per trial | Show learning curves; visualize pruning | visualization/_intermediate_values.py:L59 |
+| `plot_pareto_front()` | Scatter plot | Visualize Pareto front in multi-objective studies | visualization/_pareto_front.py:L40 |
+| `plot_hypervolume_history()` | Line chart | Track hypervolume over trials (multi-objective) | visualization/_hypervolume_history.py:L34 |
+| `plot_rank()` | Rank plot | Visualize trial rankings across objectives | visualization/_rank.py:L70 |
 
 ## Common Patterns
 
@@ -121,3 +120,9 @@ plt.show()
 - [ ] Parameters of interest are specified in `params` argument for slice/contour
 - [ ] Multi-objective plots (Pareto, hypervolume) only used with multi-objective studies
 - [ ] Importance evaluator chosen appropriately (fANOVA vs MDI)
+
+## Provenance
+
+- Knowledge graph: optuna, 2205 nodes, 4010 edges, 226 communities
+- God nodes: `_rank.py` (14), `_contour.py` (13), `_contour.py` (12) — public-API hubs only (see GRAPH_SPEC noise filter)
+- Extraction: graphify @ b6f2ea62fbe7, backend opencode, description coverage 85%

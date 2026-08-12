@@ -33,5 +33,7 @@ Indexes the 3 spec-driven NumPy sub-skills. Load the one for the module you need
 | [numpy-random](random/SKILL.md) | `numpy.random` | random numbers with NumPy |
 
 ## Provenance
-- Knowledge graph: numpy, 8345 nodes, 13507 edges, 670 communities
-- Rebuild: `scripts/rebuild_graph.sh numpy` (pinned commit ab2199763cb1)
+
+- Knowledge graph: numpy, 8094 nodes, 13271 edges, 670 communities
+- God nodes: `ABCPolyBase` (251), `MaskedArray` (151), `f2c_d_lapack.c` (124) — public-API hubs only (see GRAPH_SPEC noise filter)
+- Extraction: graphify @ ab2199763cb1, backend opencode, description coverage 83%

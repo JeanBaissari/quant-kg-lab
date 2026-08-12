@@ -33,7 +33,6 @@ Extracted from scikit-learn knowledge graph. Source: `sklearn.gaussian_process` 
 Communities: 30 ("Gaussian Processes GPC"), 58 ("Gaussian Processes"), 160 ("Gaussian Processes GPR"), 116, 216, 544.
 
 ## Quick Reference
-
 | Class/Function | Source File | Purpose | Key Params |
 |---------------|-------------|---------|------------|
 | `GaussianProcessClassifier` | `gaussian_process/_gpc.py` | GP classification with Laplace approximation | `kernel`, `optimizer`, `n_restarts_optimizer`, `max_iter_predict` |
@@ -126,3 +125,9 @@ probas = gpc.predict_proba(X_test)
 5. **`normalize_y=True`**: Centers y to zero mean, which improves numerical stability. But predictions are on the centered scale — scikit-learn handles this transparently.
 6. **`return_std` vs `return_cov`**: Use `return_std` for diagonal uncertainty, `return_cov` for full predictive covariance matrix (O(n_test³) memory).
 7. **`predict_proba` in GPC**: Uses Monte Carlo sampling of the latent function — `max_iter_predict` controls number of samples.
+
+## Provenance
+
+- Knowledge graph: scikit-learn, 8450 nodes, 28094 edges, 401 communities
+- God nodes: `Kernel` (94), `ConstantKernel` (39), `RBF` (36) — public-API hubs only (see GRAPH_SPEC noise filter)
+- Extraction: graphify @ 6f8b95aa2234, backend opencode, description coverage 81%

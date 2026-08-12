@@ -23,7 +23,7 @@ related_skills: []
 
 Numerical optimization and root finding. Covers local optimization (`minimize`), global optimization (`differential_evolution`, `basinhopping`), least-squares fitting (`curve_fit`, `least_squares`), linear programming (`linprog`), and scalar root finding (`newton`, `bisect`).
 
-## Quick Reference: Top 10 APIs
+## Quick Reference
 
 | API | Source File | Degree | Description |
 |-----|------------|--------|-------------|
@@ -170,3 +170,9 @@ print(f"Global min: x={res.x}, fun={res.fun}")
 - [ ] `res = minimize(...); assert hasattr(res, 'success')`
 - [ ] `Bounds(-1, 1)` creates box constraint on all variables
 - [ ] `NonlinearConstraint(f, -1, 1)` accepts callable
+
+## Provenance
+
+- Knowledge graph: scipy, 14071 nodes, 23466 edges, 1076 communities
+- God nodes: `OptimizeResult` (135), `_tstutils.py` (76), `OptimizeWarning` (70) — public-API hubs only (see GRAPH_SPEC noise filter)
+- Extraction: graphify @ 0514ef9e7329, backend opencode, description coverage 81%

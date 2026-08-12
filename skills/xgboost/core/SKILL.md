@@ -28,39 +28,38 @@ related_skills:
 Extracted from XGBoost knowledge graph. Sources: `python-package/xgboost/core.py`, `data.py`, `training.py`, `callback.py`.
 
 ## Quick Reference
-
 ### Data Structures
 
-| API | Purpose | Key Methods |
+| API | Purpose | Key Methods | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node |
 |-----|---------|-------------|
-| `DMatrix` | Core data matrix for training/prediction | `set_info()`, `get_label()`, `save_binary()`, `slice()` |
-| `QuantileDMatrix` | Memory-efficient DMatrix variant using quantilized data | Like DMatrix, plus `ExtMemQuantileDMatrix` for external memory |
-| `_ProxyDMatrix` | Lazy placeholder for deferred construction (device, external memory) | `ref_data_from_numpy()`, `ref_data_from_cudf()` |
-| `DataIter` | User-defined data iterator for distributed/custom data loading | `reset()`, `next()` — implement for each batch |
+| `DMatrix` | Core data matrix for training/prediction | `set_info()`, `get_label()`, `save_binary()`, `slice()` | core.py:L666 |
+| `QuantileDMatrix` | Memory-efficient DMatrix variant using quantilized data | Like DMatrix, plus `ExtMemQuantileDMatrix` for external memory | core.py:L1434 |
+| `_ProxyDMatrix` | Lazy placeholder for deferred construction (device, external memory) | `ref_data_from_numpy()`, `ref_data_from_cudf()` | core.py:L1379 |
+| `DataIter` | User-defined data iterator for distributed/custom data loading | `reset()`, `next()` — implement for each batch | core.py:L265 |
 
 ### Core Training
 
-| API | Purpose | Signature |
+| API | Purpose | Signature | _c_api.py:L1 |
 |-----|---------|-----------|
-| `train()` | Train a booster with given params | `train(params, dtrain, num_boost_round, evals, obj, feval, ...)` |
-| `cv()` | Cross-validation | `cv(params, dtrain, nfold, num_boost_round, ...)` |
-| `Booster` | The trained model object | `predict()`, `save_model()`, `load_model()`, `dump_model()`, `get_score()`, `trees_to_dataframe()` |
+| `train()` | Train a booster with given params | `train(params, dtrain, num_boost_round, evals, obj, feval, ...)` | dask/__init__.py:L833 |
+| `cv()` | Cross-validation | `cv(params, dtrain, nfold, num_boost_round, ...)` | training.py:L435 |
+| `Booster` | The trained model object | `predict()`, `save_model()`, `load_model()`, `dump_model()`, `get_score()`, `trees_to_dataframe()` | core.py:L1750 |
 
 ### Callbacks
 
-| Callback | Purpose |
+| Callback | Purpose | _c_api.py:L55 | _c_api.py:L55 |
 |----------|---------|
-| `TrainingCallback` | Base interface for custom callbacks (`before_training`, `after_training`, `before_iteration`, `after_iteration`) |
-| `EarlyStopping` | Stop training when evaluation metric stops improving (`rounds`, `metric_name`, `minimize`) |
-| `CallbackContainer` | Internal container that sequences multiple callbacks |
-| `LearningRateScheduler` | Schedule learning rate by iteration |
+| `TrainingCallback` | Base interface for custom callbacks (`before_training`, `after_training`, `before_iteration`, `after_iteration`) | callback.py:L51 | callback.py:L51 |
+| `EarlyStopping` | Stop training when evaluation metric stops improving (`rounds`, `metric_name`, `minimize`) | callback.py:L311 | callback.py:L311 |
+| `CallbackContainer` | Internal container that sequences multiple callbacks | callback.py:L149 | callback.py:L149 |
+| `LearningRateScheduler` | Schedule learning rate by iteration | callback.py:L272 | callback.py:L272 |
 
 ### CV Utilities
 
-| API | Purpose |
+| API | Purpose | _c_api.py:L1 | _c_api.py:L1 |
 |-----|---------|
-| `CVPack` | Holds one fold of CV — booster + dtrain/dtest |
-| `_PackedBooster` | Lightweight pack of CV boosters |
+| `CVPack` | Holds one fold of CV — booster + dtrain/dtest | training.py:L212 | training.py:L212 |
+| `_PackedBooster` | Lightweight pack of CV boosters | training.py:L239 | training.py:L239 |
 
 ## Common Patterns
 
@@ -155,8 +154,7 @@ trees_df = model.trees_to_dataframe()  # pandas DataFrame view
 importance = model.get_score(importance_type='gain')
 ```
 
-## Common Pitfalls
-
+## Pitfalls
 1. **DMatrix cannot be pickled reliably**: Serialize via `save_binary()` / `load_binary()` or save the model, not the DMatrix.
 2. **`train()` vs `fit()`**: The native `train()` expects `num_boost_round` and raw `DMatrix`; sklearn wrappers use `fit()` with numpy/pandas.
 3. **GPU + DMatrix caching**: DMatrix caches data in GPU memory on first use. Free with `del dtrain` or call `gc.collect()` if OOM.
@@ -216,3 +214,9 @@ def objective(trial):
 - Source: `python-package/xgboost/training.py` (train, cv, CVPack)
 - Source: `python-package/xgboost/callback.py` (TrainingCallback, EarlyStopping, LearningRateScheduler)
 - Source: `python-package/xgboost/data.py` (data dispatch, pandas/polars/cupy support)
+
+## Provenance
+
+- Knowledge graph: xgboost, 1631 nodes, 4318 edges, 80 communities
+- God nodes: `Categories` (179), `DMatrix` (161), `Objective` (146) — public-API hubs only (see GRAPH_SPEC noise filter)
+- Extraction: graphify @ 2a4786e61e08, backend opencode, description coverage 84%

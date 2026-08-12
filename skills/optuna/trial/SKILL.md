@@ -34,8 +34,7 @@ related_skills:
 Extracted from optuna knowledge graph. Source: `optuna.trial` module.
 
 ## Quick Reference
-
-| API | Purpose | Parameters |
+| API | Purpose | Parameters | Graph Node | Graph Node |
 |-----|---------|------------|
 | `Trial.suggest_float()` | Suggest a floating-point parameter | `name`, `low`, `high`, `step`, `log` |
 | `Trial.suggest_int()` | Suggest an integer parameter | `name`, `low`, `high`, `step`, `log` |
@@ -44,9 +43,9 @@ Extracted from optuna knowledge graph. Source: `optuna.trial` module.
 | `Trial.suggest_loguniform()` | Deprecated: use `suggest_float(log=True)` | `name`, `low`, `high` |
 | `Trial.suggest_discrete_uniform()` | Deprecated: use `suggest_float(step=...)` | `name`, `low`, `high`, `q` |
 | `Trial.should_prune()` | Check if trial should be pruned | — |
-| `Trial.report()` | Report intermediate objective value | `value`, `step` |
+| `Trial.report()` | Report intermediate objective value | `value`, `step` | trial/_base.py:L94 |
 | `Trial.set_user_attr()` | Attach custom metadata to trial | `key`, `value` |
-| `Trial.params` | Access current trial parameters | — (property) |
+| `Trial.params` | Access current trial parameters | — (property) | _gp/gp.py:L305 |
 
 ## Common Patterns
 
@@ -121,3 +120,9 @@ def objective(trial):
 - [ ] `trial.report()` is called at regular intervals if using pruning
 - [ ] `optuna.TrialPruned` is raised after `trial.should_prune()` returns `True`
 - [ ] Conditional parameters don't re-define the same name with different bounds
+
+## Provenance
+
+- Knowledge graph: optuna, 2205 nodes, 4010 edges, 226 communities
+- God nodes: `TrialState` (44), `FrozenTrial` (40), `Trial` (33) — public-API hubs only (see GRAPH_SPEC noise filter)
+- Extraction: graphify @ b6f2ea62fbe7, backend opencode, description coverage 85%

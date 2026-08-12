@@ -33,5 +33,7 @@ Indexes the 3 spec-driven SciPy sub-skills. Load the one for the module you need
 | [scipy-stats](stats/SKILL.md) | `scipy.stats` | statistics with SciPy |
 
 ## Provenance
-- Knowledge graph: scipy, 14193 nodes, 23606 edges, 1076 communities
-- Rebuild: `scripts/rebuild_graph.sh scipy` (pinned commit 0514ef9e7329)
+
+- Knowledge graph: scipy, 14071 nodes, 23466 edges, 1076 communities
+- God nodes: `CensoredData` (342), `FitError` (320), `rv_continuous` (278) — public-API hubs only (see GRAPH_SPEC noise filter)
+- Extraction: graphify @ 0514ef9e7329, backend opencode, description coverage 81%

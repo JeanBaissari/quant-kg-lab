@@ -31,5 +31,7 @@ Indexes the 2 spec-driven pandas sub-skills. Load the one for the module you nee
 | [pandas-ts](ts/SKILL.md) | `pandas.ts` | pandas time series |
 
 ## Provenance
-- Knowledge graph: pandas, 11837 nodes, 40707 edges, 410 communities
-- Rebuild: `scripts/rebuild_graph.sh pandas` (pinned commit 982854070758)
+
+- Knowledge graph: pandas, 11368 nodes, 39913 edges, 410 communities
+- God nodes: `DatetimeTZDtype` (1582), `CategoricalDtype` (1480), `PeriodDtype` (1087) — public-API hubs only (see GRAPH_SPEC noise filter)
+- Extraction: graphify @ 982854070758, backend opencode, description coverage 81%

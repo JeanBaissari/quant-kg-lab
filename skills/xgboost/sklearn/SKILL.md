@@ -31,17 +31,16 @@ related_skills:
 Extracted from XGBoost knowledge graph. Source: `python-package/xgboost/sklearn.py`.
 
 ## Quick Reference
-
 ### Estimators
 
-| Class | Purpose | Special Methods |
+| Class | Purpose | Special Methods | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node |
 |-------|---------|----------------|
-| `XGBModel` | Base class for all sklearn wrappers | `get_booster()`, `get_xgb_params()`, `evals_result()`, `feature_importances_`, `save_model()`, `load_model()` |
-| `XGBClassifier` | Classification (binary + multi-class) | `predict_proba()`, `classes_` |
-| `XGBRegressor` | Regression | `predict()`, `coef_`, `intercept_` (for gblinear) |
-| `XGBRanker` | Learning-to-rank | `predict()`, `score()` — requires `qid` in input |
-| `XGBRFClassifier` | Random forest classifier (deprecated) | Inherits from XGBClassifier — use `num_parallel_tree` instead |
-| `XGBRFRegressor` | Random forest regressor (deprecated) | Inherits from XGBRegressor — use `num_parallel_tree` instead |
+| `XGBModel` | Base class for all sklearn wrappers | `get_booster()`, `get_xgb_params()`, `evals_result()`, `feature_importances_`, `save_model()`, `load_model()` | : |
+| `XGBClassifier` | Classification (binary + multi-class) | `predict_proba()`, `classes_` | sklearn.py:L1758 |
+| `XGBRegressor` | Regression | `predict()`, `coef_`, `intercept_` (for gblinear) | sklearn.py:L2051 |
+| `XGBRanker` | Learning-to-rank | `predict()`, `score()` — requires `qid` in input | sklearn.py:L2194 |
+| `XGBRFClassifier` | Random forest classifier (deprecated) | Inherits from XGBClassifier — use `num_parallel_tree` instead | sklearn.py:L1995 |
+| `XGBRFRegressor` | Random forest regressor (deprecated) | Inherits from XGBRegressor — use `num_parallel_tree` instead | sklearn.py:L2075 |
 
 ### Key Attributes (on fitted model)
 
@@ -64,12 +63,12 @@ Extracted from XGBoost knowledge graph. Source: `python-package/xgboost/sklearn.
 | `n_estimators` | int | 100 | Number of boosting rounds |
 | `max_depth` | int | 6 | Maximum tree depth |
 | `learning_rate` | float | 0.3 | Step size shrinkage (eta) |
-| `objective` | str | 'reg:squarederror' | Learning objective |
-| `booster` | str | 'gbtree' | Booster type: 'gbtree', 'gblinear', 'dart' |
+| `objective` | str | 'reg:squarederror' | Learning objective | : |
+| `booster` | str | 'gbtree' | Booster type: 'gbtree', 'gblinear', 'dart' | core.py:L1750 |
 | `eval_metric` | str/list | None | Metric(s) for evaluation |
 | `early_stopping_rounds` | int | None | Rounds without improvement before stopping |
 | `importance_type` | str | 'gain' | Feature importance metric: 'gain', 'weight', 'cover', 'total_gain', 'total_cover' |
-| `device` | str | 'cpu' | 'cpu', 'cuda', 'gpu' |
+| `device` | str | 'cpu' | 'cpu', 'cuda', 'gpu' | spark/core.py:L273 |
 | `enable_categorical` | bool | False | Enable categorical feature support |
 | `max_cat_to_onehot` | int | 4 | Max categories for one-hot encoding |
 | `verbosity` | int | 1 | 0 (silent), 1 (warning), 2 (info), 3 (debug) |
@@ -250,3 +249,9 @@ study.optimize(objective, n_trials=100)
 
 - Source: `python-package/xgboost/sklearn.py` (XGBModel, XGBClassifier, XGBRegressor, XGBRanker, mixins)
 - Graph communities: 0, 1, 23, 37, 79, 83, 124, 132, 149, 187, 370, 371, 394
+
+## Provenance
+
+- Knowledge graph: xgboost, 1631 nodes, 4318 edges, 80 communities
+- God nodes: `XGBModel` (51), `sklearn.py` (48), `XGBRanker` (19) — public-API hubs only (see GRAPH_SPEC noise filter)
+- Extraction: graphify @ 2a4786e61e08, backend opencode, description coverage 84%

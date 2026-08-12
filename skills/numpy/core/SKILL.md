@@ -23,20 +23,20 @@ related_skills: []
 
 The foundational array computing layer. The `ndarray` is an N-dimensional homogeneous array backed by a contiguous C buffer with stride-based indexing. Universal functions (ufuncs) provide element-wise operations with broadcasting.
 
-## Quick Reference: Top 10 APIs
+## Quick Reference
 
-| API | Signature | Description |
+| API | Signature | Description | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node |
 |-----|-----------|-------------|
-| `array` | `np.array(object, dtype=None)` | Create an ndarray from array-like input |
-| `asarray` | `np.asarray(a, dtype=None)` | Convert to ndarray — no copy if input is already ndarray |
-| `arange` | `np.arange([start,] stop[, step])` | Evenly spaced values within a half-open interval |
-| `linspace` | `np.linspace(start, stop, num=50)` | Evenly spaced numbers over a closed interval |
-| `reshape` | `np.reshape(a, newshape)` | Reshape ndarray without changing data |
-| `sum` | `np.sum(a, axis=None)` | Sum of array elements over given axes |
-| `mean` | `np.mean(a, axis=None)` | Arithmetic mean along specified axis |
-| `concatenate` | `np.concatenate((a1, a2, ...), axis=0)` | Join arrays along an existing axis |
-| `sort` | `np.sort(a, axis=-1)` | Return a sorted copy of an array |
-| `einsum` | `np.einsum(subscripts, *operands)` | Einstein summation convention |
+| `array` | `np.array(object, dtype=None)` | Create an ndarray from array-like input | _core/defchararray.py:L1221 |
+| `asarray` | `np.asarray(a, dtype=None)` | Convert to ndarray — no copy if input is already ndarray | _core/defchararray.py:L1368 |
+| `arange` | `np.arange([start,] stop[, step])` | Evenly spaced values within a half-open interval | _core/src/multiarray/ctors.c:L3093 |
+| `linspace` | `np.linspace(start, stop, num=50)` | Evenly spaced numbers over a closed interval | _core/function_base.py:L28 |
+| `reshape` | `np.reshape(a, newshape)` | Reshape ndarray without changing data | _core/fromnumeric.py:L224 |
+| `sum` | `np.sum(a, axis=None)` | Sum of array elements over given axes | _core/fromnumeric.py:L2389 |
+| `mean` | `np.mean(a, axis=None)` | Arithmetic mean along specified axis | _core/fromnumeric.py:L3804 |
+| `concatenate` | `np.concatenate((a1, a2, ...), axis=0)` | Join arrays along an existing axis | _core/multiarray.py:L198 |
+| `sort` | `np.sort(a, axis=-1)` | Return a sorted copy of an array | _core/fromnumeric.py:L1000 |
+| `einsum` | `np.einsum(subscripts, *operands)` | Einstein summation convention | _core/einsumfunc.py:L1243 |
 
 ## Architecture Overview
 
@@ -540,3 +540,9 @@ np.sort(data, order=['x', 'y'])  # sort by x, then y
 - [ ] `np.seterr()` / `np.errstate()` control floating-point error behavior
 - [ ] `np.save()` / `np.load()` roundtrip preserves array data exactly
 - [ ] Structured dtypes allow field access by name
+
+## Provenance
+
+- Knowledge graph: numpy, 8094 nodes, 13271 edges, 670 communities
+- God nodes: `MaskedArray` (151), `core.py` (115), `fromnumeric.py` (92) — public-API hubs only (see GRAPH_SPEC noise filter)
+- Extraction: graphify @ ab2199763cb1, backend opencode, description coverage 83%

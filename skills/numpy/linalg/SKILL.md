@@ -23,55 +23,55 @@ related_skills: []
 
 Linear algebra functions backed by BLAS and LAPACK. All functions operate on the last two axes by default for stacked (batched) matrices.
 
-## Quick Reference: Top 10 APIs
+## Quick Reference
 
-| API | Signature | Description |
+| API | Signature | Description | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node |
 |-----|-----------|-------------|
-| `solve` | `solve(a, b)` | Solve `a @ x = b` for x |
-| `eig` | `eig(a)` | Eigenvalues and right eigenvectors of a square array |
-| `eigh` | `eigh(a, UPLO='L')` | Eigenvalues/vectors of complex Hermitian or real symmetric matrix |
-| `svd` | `svd(a, full_matrices=True)` | Singular Value Decomposition → U, S, Vh |
-| `norm` | `norm(x, ord=None, axis=None)` | Matrix or vector norm |
-| `det` | `det(a)` | Determinant of an array |
-| `inv` | `inv(a)` | Multiplicative inverse of a matrix |
-| `cholesky` | `cholesky(a)` | Cholesky decomposition (lower or upper triangular) |
-| `qr` | `qr(a, mode='reduced')` | QR factorization → Q, R |
-| `lstsq` | `lstsq(a, b, rcond=None)` | Least-squares solution to `a @ x = b` |
+| `solve` | `solve(a, b)` | Solve `a @ x = b` for x | linalg/_linalg.py:L374 |
+| `eig` | `eig(a)` | Eigenvalues and right eigenvectors of a square array | linalg/_linalg.py:L1342 |
+| `eigh` | `eigh(a, UPLO='L')` | Eigenvalues/vectors of complex Hermitian or real symmetric matrix | linalg/_linalg.py:L1489 |
+| `svd` | `svd(a, full_matrices=True)` | Singular Value Decomposition → U, S, Vh | linalg/_linalg.py:L1642 |
+| `norm` | `norm(x, ord=None, axis=None)` | Matrix or vector norm | linalg/_linalg.py:L2573 |
+| `det` | `det(a)` | Determinant of an array | linalg/_linalg.py:L2331 |
+| `inv` | `inv(a)` | Multiplicative inverse of a matrix | linalg/_linalg.py:L547 |
+| `cholesky` | `cholesky(a)` | Cholesky decomposition (lower or upper triangular) | linalg/_linalg.py:L789 |
+| `qr` | `qr(a, mode='reduced')` | QR factorization → Q, R | linalg/_linalg.py:L976 |
+| `lstsq` | `lstsq(a, b, rcond=None)` | Least-squares solution to `a @ x = b` | linalg/_linalg.py:L2393 |
 
 ### Additional APIs (by degree rank from knowledge graph)
 
-| API | Description |
+| API | Description | _core/code_generators/generate_numpy_api.py:L1 | _core/code_generators/generate_numpy_api.py:L1 |
 |-----|-------------|
-| `eigvals(a)` | Eigenvalues of a general matrix |
-| `eigvalsh(a, UPLO='L')` | Eigenvalues of Hermitian/symmetric matrix |
-| `pinv(a, rcond=1e-15)` | Moore-Penrose pseudo-inverse |
-| `slogdet(a)` | Sign and natural log of determinant (avoids overflow) |
-| `cond(x, p=None)` | Condition number of a matrix |
-| `tensorinv(a, ind=2)` | Inverse of an N-dimensional array |
-| `tensorsolve(a, b, axes=None)` | Solve tensor equation `a @ x = b` |
-| `matrix_power(a, n)` | Raise a square matrix to integer power n |
-| `matrix_rank(M, tol=None)` | Matrix rank using SVD method |
-| `multi_dot(arrays)` | Optimal order dot product of 2+ arrays |
-| `svdvals(x)` | Singular values only (no vectors) |
-| `outer(a, b)` | Outer product of two vectors |
-| `matmul(x1, x2)` | Matrix product of two arrays |
-| `matrix_norm(x, ord='fro', axis=...)` | Matrix norm only |
-| `vector_norm(x, ord=2, axis=None)` | Vector norm only |
-| `cross(a, b, axisa=-1, axisb=-1, axisc=-1)` | Cross product of 3-element vectors |
-| `vecdot(x1, x2, axis=-1)` | Vector dot product along an axis |
-| `diagonal(x, offset=0, axis1=0, axis2=1)` | Return specified diagonals |
-| `trace(x, offset=0, axis1=0, axis2=1)` | Sum along specified diagonals |
-| `matrix_transpose(x)` | Transpose a matrix (or stack of matrices) |
+| `eigvals(a)` | Eigenvalues of a general matrix | linalg/_linalg.py:L1157 | linalg/_linalg.py:L1157 |
+| `eigvalsh(a, UPLO='L')` | Eigenvalues of Hermitian/symmetric matrix | linalg/_linalg.py:L1245 | linalg/_linalg.py:L1245 |
+| `pinv(a, rcond=1e-15)` | Moore-Penrose pseudo-inverse | linalg/_linalg.py:L2129 | linalg/_linalg.py:L2129 |
+| `slogdet(a)` | Sign and natural log of determinant (avoids overflow) | linalg/_linalg.py:L2247 | linalg/_linalg.py:L2247 |
+| `cond(x, p=None)` | Condition number of a matrix | linalg/_linalg.py:L1889 | linalg/_linalg.py:L1889 |
+| `tensorinv(a, ind=2)` | Inverse of an N-dimensional array | linalg/_linalg.py:L472 | linalg/_linalg.py:L472 |
+| `tensorsolve(a, b, axes=None)` | Solve tensor equation `a @ x = b` | linalg/_linalg.py:L293 | linalg/_linalg.py:L293 |
+| `matrix_power(a, n)` | Raise a square matrix to integer power n | linalg/_linalg.py:L667 | linalg/_linalg.py:L667 |
+| `matrix_rank(M, tol=None)` | Matrix rank using SVD method | linalg/_linalg.py:L2010 | linalg/_linalg.py:L2010 |
+| `multi_dot(arrays)` | Optimal order dot product of 2+ arrays | linalg/_linalg.py:L2839 | linalg/_linalg.py:L2839 |
+| `svdvals(x)` | Singular values only (no vectors) | linalg/_linalg.py:L1835 | linalg/_linalg.py:L1835 |
+| `outer(a, b)` | Outer product of two vectors | _core/numeric.py:L906 | _core/numeric.py:L906 |
+| `matmul(x1, x2)` | Matrix product of two arrays | linalg/_linalg.py:L3292 | linalg/_linalg.py:L3292 |
+| `matrix_norm(x, ord='fro', axis=...)` | Matrix norm only | linalg/_linalg.py:L3414 | linalg/_linalg.py:L3414 |
+| `vector_norm(x, ord=2, axis=None)` | Vector norm only | linalg/_linalg.py:L3477 | linalg/_linalg.py:L3477 |
+| `cross(a, b, axisa=-1, axisb=-1, axisc=-1)` | Cross product of 3-element vectors | _core/numeric.py:L1565 | _core/numeric.py:L1565 |
+| `vecdot(x1, x2, axis=-1)` | Vector dot product along an axis | linalg/_linalg.py:L3579 | linalg/_linalg.py:L3579 |
+| `diagonal(x, offset=0, axis1=0, axis2=1)` | Return specified diagonals | _core/fromnumeric.py:L1750 | _core/fromnumeric.py:L1750 |
+| `trace(x, offset=0, axis1=0, axis2=1)` | Sum along specified diagonals | _core/fromnumeric.py:L1886 | _core/fromnumeric.py:L1886 |
+| `matrix_transpose(x)` | Transpose a matrix (or stack of matrices) | _core/fromnumeric.py:L702 | _core/fromnumeric.py:L702 |
 
 ### Result Types
 
-| Type | Fields | Returned By |
+| Type | Fields | Returned By | _core/_add_newdocs_scalars.py:L76 |
 |------|--------|-------------|
-| `EigResult` | `eigenvalues`, `eigenvectors` | `eig()` |
-| `EighResult` | `eigenvalues`, `eigenvectors` | `eigh()` |
-| `QRResult` | `Q`, `R` | `qr()` |
-| `SVDResult` | `U`, `S`, `Vh` | `svd()` (with `full_matrices=False` and `compute_uv=True`) |
-| `SlogdetResult` | `sign`, `logabsdet` | `slogdet()` |
+| `EigResult` | `eigenvalues`, `eigenvectors` | `eig()` | linalg/_linalg.py:L82 |
+| `EighResult` | `eigenvalues`, `eigenvectors` | `eigh()` | linalg/_linalg.py:L86 |
+| `QRResult` | `Q`, `R` | `qr()` | linalg/_linalg.py:L90 |
+| `SVDResult` | `U`, `S`, `Vh` | `svd()` (with `full_matrices=False` and `compute_uv=True`) | linalg/_linalg.py:L98 |
+| `SlogdetResult` | `sign`, `logabsdet` | `slogdet()` | linalg/_linalg.py:L94 |
 
 ## Common Patterns
 
@@ -177,3 +177,9 @@ except LinAlgError:
 - [ ] `lstsq()` returns minimum-norm solution for under-determined systems
 - [ ] Batch/stacked operations work correctly on last two axes
 - [ ] `pinv(A) @ A @ pinv(A)` ≈ `pinv(A)` (Moore-Penrose property)
+
+## Provenance
+
+- Knowledge graph: numpy, 8094 nodes, 13271 edges, 670 communities
+- God nodes: `f2c_d_lapack.c` (124), `f2c_s_lapack.c` (124), `umath_linalg.cpp` (101) — public-API hubs only (see GRAPH_SPEC noise filter)
+- Extraction: graphify @ ab2199763cb1, backend opencode, description coverage 83%

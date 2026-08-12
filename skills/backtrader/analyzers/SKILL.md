@@ -24,7 +24,6 @@ related_skills: []
 Analyzers compute performance metrics asynchronously during a backtest. Unlike Strategy code — which runs per-bar — analyzers receive callbacks (`notify_trade`, `notify_order`, `notify_fund`) and aggregate results into a final analysis dictionary retrievable after `cerebro.run()`.
 
 ## Quick Reference
-
 | Analyzer | Source File | Metric | Key Output Keys |
 |----------|-------------|--------|-----------------|
 | `SharpeRatio` | `backtrader/analyzers/sharpe.py` | Risk-adjusted return (annualized) | `sharperatio` |
@@ -222,9 +221,8 @@ for year, ret in sorted(annual.items()):
 - [ ] TradeAnalyzer `total.closed` matches expected trade count
 - [ ] PyFolio `get_pf_items()` returns 4-tuple (returns, positions, transactions, leverage)
 
-## Graph Provenance
+## Provenance
 
-- Knowledge graph: backtrader, 3,458 nodes, 6,863 edges, 261 communities
-- Analyzer communities: 22 (base Analyzer), 44 (Returns/TimeReturn), 49 (Sharpe/TradeAnalyzer/AnnualReturn), 74 (DrawDown), 107 (Calmar), 108 (SQN), 137–165 (other analyzers)
-- God node: `Analyzer` base class (17 edges)
-- Top analyzers by degree: VWR (8), DrawDown (7), SQN (7), TimeReturn (7), Calmar (6), LogReturnsRolling (6), Returns (6), SharpeRatio (6), TradeAnalyzer (6)
+- Knowledge graph: backtrader, 2680 nodes, 4964 edges, 206 communities
+- God nodes: `VWR` (8), `DrawDown` (7), `SQN` (7) — public-API hubs only (see GRAPH_SPEC noise filter)
+- Extraction: graphify @ b853d7c90b67, backend opencode, description coverage 84%

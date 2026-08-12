@@ -34,19 +34,18 @@ related_skills:
 Extracted from optuna knowledge graph. Source: `optuna.samplers` module.
 
 ## Quick Reference
-
-| Sampler | Algorithm | Best For | Multi-Objective |
+| Sampler | Algorithm | Best For | Multi-Objective | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node |
 |---------|-----------|----------|-----------------|
-| `TPESampler` | Tree-structured Parzen Estimator (TPE) | General-purpose Bayesian optimization (default) | No |
-| `RandomSampler` | Uniform random search | Baseline, high-dimensional categorical spaces | Yes |
-| `GridSampler` | Exhaustive grid search | Small search spaces, reproducibility | No |
-| `CmaEsSampler` | Covariance Matrix Adaptation Evolution Strategy | Continuous spaces, ill-conditioned problems | No |
-| `NSGAIISampler` | Non-dominated Sorting Genetic Algorithm II | Multi-objective optimization | Yes |
-| `NSGAIIISampler` | NSGA-III with reference directions | Many-objective optimization (3+ objectives) | Yes |
-| `QMCSampler` | Quasi-Monte Carlo (Sobol/Halton) | Low-discrepancy sequences, initial exploration | Yes |
-| `BruteForceSampler` | Exhaustive enumeration | Tiny discrete search spaces | No |
-| `GPSampler` | Gaussian Process (GP) | Low-dimensional continuous spaces (<20) | No |
-| `PartialFixedSampler` | Wrapper that fixes some parameters | Conditional/DAG search spaces | Wraps any |
+| `TPESampler` | Tree-structured Parzen Estimator (TPE) | General-purpose Bayesian optimization (default) | No | samplers/_tpe/sampler.py:L88 |
+| `RandomSampler` | Uniform random search | Baseline, high-dimensional categorical spaces | Yes | samplers/_random.py:L19 |
+| `GridSampler` | Exhaustive grid search | Small search spaces, reproducibility | No | samplers/_grid.py:L33 |
+| `CmaEsSampler` | Covariance Matrix Adaptation Evolution Strategy | Continuous spaces, ill-conditioned problems | No | samplers/_cmaes.py:L50 |
+| `NSGAIISampler` | Non-dominated Sorting Genetic Algorithm II | Multi-objective optimization | Yes | samplers/nsgaii/_sampler.py:L33 |
+| `NSGAIIISampler` | NSGA-III with reference directions | Many-objective optimization (3+ objectives) | Yes | samplers/_nsgaiii/_sampler.py:L36 |
+| `QMCSampler` | Quasi-Monte Carlo (Sobol/Halton) | Low-discrepancy sequences, initial exploration | Yes | samplers/_qmc.py:L38 |
+| `BruteForceSampler` | Exhaustive enumeration | Tiny discrete search spaces | No | samplers/_brute_force.py:L226 |
+| `GPSampler` | Gaussian Process (GP) | Low-dimensional continuous spaces (<20) | No | samplers/_gp/sampler.py:L67 |
+| `PartialFixedSampler` | Wrapper that fixes some parameters | Conditional/DAG search spaces | Wraps any | samplers/_partial_fixed.py:L21 |
 
 ## Common Patterns
 
@@ -116,3 +115,9 @@ sampler = optuna.samplers.QMCSampler(seed=42)
 - [ ] Search space bounds are finite (TPE, CMA-ES require bounded spaces)
 - [ ] `seed` is set for reproducibility
 - [ ] Dynamic parameters use conditional logic, not mid-study range changes
+
+## Provenance
+
+- Knowledge graph: optuna, 2205 nodes, 4010 edges, 226 communities
+- God nodes: `LazyRandomState` (42), `CmaEsSampler` (24), `TPESampler` (23) — public-API hubs only (see GRAPH_SPEC noise filter)
+- Extraction: graphify @ b6f2ea62fbe7, backend opencode, description coverage 85%

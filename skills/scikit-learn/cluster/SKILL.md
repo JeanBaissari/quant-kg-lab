@@ -34,7 +34,6 @@ Extracted from scikit-learn knowledge graph. Source: `sklearn.cluster` module.
 Communities: 37 ("Clustering KMeans"), 48 ("Clustering DBSCAN/MeanShift/Spectral"), 147 ("BisectingKMeans"), 935–945 (DBSCAN subcommunities), 966 (KMeans).
 
 ## Quick Reference
-
 | Class/Function | Source File | Purpose | Key Params |
 |---------------|-------------|---------|------------|
 | `KMeans` | `cluster/_kmeans.py` | k-means clustering (Lloyd/Elkan) | `n_clusters`, `init`, `n_init`, `max_iter`, `algorithm` ('lloyd'/'elkan'), `random_state` |
@@ -132,3 +131,9 @@ col_labels = scc.column_labels_
 5. **`fit_predict` vs `fit` then `predict`**: KMeans and DBSCAN support both, but DBSCAN's `predict` is approximate and memory-intensive — prefer `fit_predict`.
 6. **Birch `threshold`**: Very sensitive; too small = many subclusters/memory blowup, too large = coarse clusters. Tune empirically.
 7. **Spectral `affinity='rbf'`**: Requires `gamma` tuning. Try `affinity='nearest_neighbors'` for an automatic alternative.
+
+## Provenance
+
+- Knowledge graph: scikit-learn, 8450 nodes, 28094 edges, 401 communities
+- God nodes: `MiniBatchKMeans` (33), `KMeans` (31), `_BaseKMeans` (29) — public-API hubs only (see GRAPH_SPEC noise filter)
+- Extraction: graphify @ 6f8b95aa2234, backend opencode, description coverage 81%

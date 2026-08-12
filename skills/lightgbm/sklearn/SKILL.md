@@ -31,15 +31,14 @@ related_skills:
 Extracted from LightGBM knowledge graph. Source: `python-package/lightgbm/sklearn.py`.
 
 ## Quick Reference
-
 ### Estimators
 
-| Class | Purpose | Special Methods |
+| Class | Purpose | Special Methods | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node |
 |-------|---------|----------------|
-| `LGBMModel` | Base class for all sklearn wrappers | `booster_`, `feature_importances_`, `evals_result_`, `n_features_in_`, `n_estimators_`, `n_iter_` |
-| `LGBMClassifier` | Classification (binary + multi-class) | `predict_proba()`, `decision_function()`, `classes_`, `n_classes_` |
-| `LGBMRegressor` | Regression | `predict()` |
-| `LGBMRanker` | Learning-to-rank | `predict()` — requires `group` parameter |
+| `LGBMModel` | Base class for all sklearn wrappers | `booster_`, `feature_importances_`, `evals_result_`, `n_features_in_`, `n_estimators_`, `n_iter_` | sklearn.py:L575 |
+| `LGBMClassifier` | Classification (binary + multi-class) | `predict_proba()`, `decision_function()`, `classes_`, `n_classes_` | : |
+| `LGBMRegressor` | Regression | `predict()` | : |
+| `LGBMRanker` | Learning-to-rank | `predict()` — requires `group` parameter | : |
 
 ### Key Attributes (on fitted model)
 
@@ -61,15 +60,15 @@ Extracted from LightGBM knowledge graph. Source: `python-package/lightgbm/sklear
 
 ### Common Parameters
 
-| Parameter | Type | Default | Description |
+| Parameter | Type | Default | Description | basic.py:L4167 |
 |-----------|------|---------|-------------|
 | `n_estimators` | int | 100 | Number of boosting rounds |
 | `num_leaves` | int | 31 | Maximum tree leaves (leaf-wise growth) |
 | `max_depth` | int | -1 | Max tree depth; -1 = no limit |
 | `learning_rate` | float | 0.1 | Step size shrinkage |
-| `objective` | str | 'regression' | Objective: 'regression', 'binary', 'multiclass', 'lambdarank' |
+| `objective` | str | 'regression' | Objective: 'regression', 'binary', 'multiclass', 'lambdarank' | sklearn.py:L1336 |
 | `boosting_type` | str | 'gbdt' | 'gbdt', 'dart', 'goss', 'rf' |
-| `metric` | str/list | '' | Metric: 'rmse', 'binary_logloss', 'auc', 'ndcg', etc. |
+| `metric` | str/list | '' | Metric: 'rmse', 'binary_logloss', 'auc', 'ndcg', etc. | plotting.py:L294 |
 | `num_iterations` | int | 100 | Alias for `n_estimators` (both work) |
 | `early_stopping_rounds` | int | 0 | Rounds without improvement; 0 = disabled |
 | `importance_type` | str | 'split' | 'split' (default) or 'gain' |
@@ -306,3 +305,9 @@ study.optimize(objective, n_trials=100)
 
 - Source: `python-package/lightgbm/sklearn.py` (LGBMModel, LGBMClassifier, LGBMRegressor, LGBMRanker, wrappers)
 - Graph communities: 1, 3, 56, 72, 77, 87, 100, 101, 107, 123, 132
+
+## Provenance
+
+- Knowledge graph: lightgbm, 593 nodes, 2029 edges, 17 communities
+- God nodes: `LGBMModel` (72), `LGBMClassifier` (49), `LGBMRegressor` (43) — public-API hubs only (see GRAPH_SPEC noise filter)
+- Extraction: graphify @ f9bf8d1358cd, backend opencode, description coverage 84%

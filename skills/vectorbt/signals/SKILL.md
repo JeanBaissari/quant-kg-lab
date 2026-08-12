@@ -24,7 +24,6 @@ related_skills: []
 Dual-layer signal generation: **indicators** (technical analysis primitives from `ta-lib`, `pandas-ta`, or custom numba) produce real-valued arrays; **signals** convert those arrays into boolean entry/exit masks. `SignalFactory` builds signal generators with parameterized rules, backed by Numba-compiled kernels or a Rust engine.
 
 ## Quick Reference
-
 | Class / Component | Source File | Purpose | Key Params |
 |-------------------|-------------|---------|------------|
 | `SignalFactory` | `vectorbt/signals/factory.py` | Build signal generator classes | `entry`, `exit`, `mode` |
@@ -230,8 +229,8 @@ result = MyMA.run(price, window=20)
 - [ ] Entry/exit arrays are same shape as price input
 - [ ] Indicator parameter grid produces multi-level column index
 
-## Graph Provenance
+## Provenance
 
-- Knowledge graph: vectorbt, 5,411 nodes, 13,588 edges, 395 communities
-- Signal communities: 11 (nb.py), 12 (Rust), 21 (accessors), 60 (factory), 19 (generators), 107 (dispatch)
-- Indicator communities: 1 (factory), 33 (basic indicators), 35 (dispatch), 36 (nb caches), 44 (Rust indicators)
+- Knowledge graph: vectorbt, 3682 nodes, 9212 edges, 353 communities
+- God nodes: `SignalsAccessor` (52), `dispatch.py` (38), `nb.py` (32) — public-API hubs only (see GRAPH_SPEC noise filter)
+- Extraction: graphify @ f9897528f675, backend opencode, description coverage 88%

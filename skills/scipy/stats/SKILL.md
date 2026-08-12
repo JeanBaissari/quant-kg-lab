@@ -24,7 +24,7 @@ related_skills: []
 
 Statistical functions, probability distributions, and hypothesis tests. The workhorse module for quantitative analysis — covers everything from descriptive statistics to distribution fitting, density estimation, and resampling-based inference.
 
-## Quick Reference: Top 10 APIs
+## Quick Reference
 
 | API | Source File | Degree | Description |
 |-----|------------|--------|-------------|
@@ -187,3 +187,9 @@ fit = stats.norm.fit(censored)
 - [ ] `stats.mannwhitneyu(a, b, alternative='two-sided')` accepts `alternative` kwarg
 - [ ] `stats.CensoredData` accepts `right`, `left`, `interval` keyword args
 - [ ] `stats.ContinuousDistribution` is available (scipy ≥ 1.15) or falls back to `rv_continuous`
+
+## Provenance
+
+- Knowledge graph: scipy, 14071 nodes, 23466 edges, 1076 communities
+- God nodes: `CensoredData` (342), `FitError` (320), `rv_continuous` (278) — public-API hubs only (see GRAPH_SPEC noise filter)
+- Extraction: graphify @ 0514ef9e7329, backend opencode, description coverage 81%

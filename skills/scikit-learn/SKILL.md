@@ -55,5 +55,7 @@ Indexes the 14 spec-driven scikit-learn sub-skills. Load the one for the module 
 | [scikit-learn-tree](tree/SKILL.md) | `sklearn.tree` | scikit-learn Decision Trees |
 
 ## Provenance
-- Knowledge graph: scikit-learn, 8662 nodes, 29241 edges, 401 communities
-- Rebuild: `scripts/rebuild_graph.sh scikit-learn` (pinned commit 6f8b95aa2234)
+
+- Knowledge graph: scikit-learn, 8450 nodes, 28094 edges, 401 communities
+- God nodes: `Interval` (2234), `StrOptions` (2007), `BaseEstimator` (1531) — public-API hubs only (see GRAPH_SPEC noise filter)
+- Extraction: graphify @ 6f8b95aa2234, backend opencode, description coverage 81%

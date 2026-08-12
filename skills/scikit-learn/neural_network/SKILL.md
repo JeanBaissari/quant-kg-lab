@@ -34,7 +34,6 @@ Extracted from scikit-learn knowledge graph. Source: `sklearn.neural_network` mo
 Communities: 81 ("Neural Networks"), 136, 386.
 
 ## Quick Reference
-
 | Class/Function | Source File | Purpose | Key Params |
 |---------------|-------------|---------|------------|
 | `MLPClassifier` | `neural_network/_multilayer_perceptron.py` | Multi-layer Perceptron classifier | `hidden_layer_sizes`, `activation` ('relu'/'tanh'/'logistic'), `alpha`, `batch_size`, `learning_rate`, `max_iter`, `early_stopping` |
@@ -121,3 +120,9 @@ for batch_X, batch_y in data_batches:
 4. **Non-convex optimization**: Different random seeds produce different local minima. For reproducible quant work, always set `random_state`.
 5. **Warm start**: `warm_start=True` allows reusing the previous solution when `fit` is called again — useful for progressive training or hyperparameter search.
 6. **Classification with `partial_fit`**: You must pass `classes` parameter on the first call so the model knows all possible labels.
+
+## Provenance
+
+- Knowledge graph: scikit-learn, 8450 nodes, 28094 edges, 401 communities
+- God nodes: `SGDOptimizer` (32), `BaseMultilayerPerceptron` (31), `AdamOptimizer` (30) — public-API hubs only (see GRAPH_SPEC noise filter)
+- Extraction: graphify @ 6f8b95aa2234, backend opencode, description coverage 81%

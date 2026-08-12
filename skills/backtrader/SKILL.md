@@ -31,5 +31,7 @@ Indexes the 2 spec-driven backtrader sub-skills. Load the one for the module you
 | [backtrader-core](core/SKILL.md) | `backtrader.core` | event-driven backtests with backtrader |
 
 ## Provenance
+
 - Knowledge graph: backtrader, 2680 nodes, 4964 edges, 206 communities
-- Rebuild: `scripts/rebuild_graph.sh backtrader` (pinned commit b853d7c90b67)
+- God nodes: `MetaParams` (260), `LineRoot` (119), `LineSingle` (111) — public-API hubs only (see GRAPH_SPEC noise filter)
+- Extraction: graphify @ b853d7c90b67, backend opencode, description coverage 84%

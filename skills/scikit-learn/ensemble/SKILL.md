@@ -33,7 +33,6 @@ Extracted from scikit-learn knowledge graph. Source: `sklearn.ensemble` module.
 Communities: 3 ("Ensemble Methods Bagging"), 5 ("Ensemble Methods Boosting"), 235 ("BaggingClassifier").
 
 ## Quick Reference
-
 | Class/Function | Source File | Purpose | Key Params |
 |---------------|-------------|---------|------------|
 | `RandomForestClassifier` | `ensemble/_forest.py` | RF classification; bagged trees + feature randomness | `n_estimators`, `max_depth`, `max_features`, `min_samples_split`, `oob_score` |
@@ -126,3 +125,9 @@ stack.fit(X_train, y_train)
 4. **IsolationForest `contamination`**: Must be set correctly — auto-detection is unreliable for time-series data.
 5. **memory**: Forests with many deep trees can consume GBs. Use `max_depth` and `max_leaf_nodes` to bound model size.
 6. **Stacking CV leak**: The `cv` parameter in stacking splits *training* data; don't confuse with outer CV.
+
+## Provenance
+
+- Knowledge graph: scikit-learn, 8450 nodes, 28094 edges, 401 communities
+- God nodes: `TreeGrower` (56), `BaseHistGradientBoosting` (50), `BaseGradientBoosting` (46) — public-API hubs only (see GRAPH_SPEC noise filter)
+- Extraction: graphify @ 6f8b95aa2234, backend opencode, description coverage 81%

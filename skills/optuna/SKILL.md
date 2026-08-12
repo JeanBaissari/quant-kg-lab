@@ -75,3 +75,9 @@ cd knowledge_graphs/optuna
 graphify query "How does TPESampler work?" --graph .graphify/graph.json
 graphify explain "Study" --graph .graphify/graph.json
 ```
+
+## Provenance
+
+- Knowledge graph: optuna, 2205 nodes, 4010 edges, 226 communities
+- God nodes: `Study` (221), `BaseDistribution` (196), `_typing.py` (142) — public-API hubs only (see GRAPH_SPEC noise filter)
+- Extraction: graphify @ b6f2ea62fbe7, backend opencode, description coverage 85%

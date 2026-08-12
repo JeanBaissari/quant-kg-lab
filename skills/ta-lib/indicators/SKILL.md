@@ -23,37 +23,37 @@ related_skills: []
 
 TA-Lib (Technical Analysis Library) is a C library with Python bindings via Cython. It provides **200+ technical indicators** across multiple categories: overlap studies, momentum oscillators, volatility, volume, cycle indicators, price transforms, and candlestick pattern recognition (61 patterns). All functions accept numpy arrays and return numpy arrays.
 
-## Quick Reference: Top 30 Indicator Functions
+## Quick Reference
 
-| Function | Category | Signature | Description |
+| Function | Category | Signature | Description | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node |
 |----------|----------|-----------|-------------|
-| `SMA` | Overlap | `talib.SMA(close, timeperiod=30)` | Simple Moving Average |
-| `EMA` | Overlap | `talib.EMA(close, timeperiod=30)` | Exponential Moving Average |
-| `WMA` | Overlap | `talib.WMA(close, timeperiod=30)` | Weighted Moving Average |
-| `DEMA` | Overlap | `talib.DEMA(close, timeperiod=30)` | Double Exponential MA |
-| `TEMA` | Overlap | `talib.TEMA(close, timeperiod=30)` | Triple Exponential MA |
-| `KAMA` | Overlap | `talib.KAMA(close, timeperiod=30)` | Kaufman Adaptive MA |
-| `MAMA` | Overlap | `talib.MAMA(close)` | MESA Adaptive MA (returns MAMA, FAMA) |
-| `BBANDS` | Overlap | `talib.BBANDS(close, timeperiod=20, nbdevup=2, nbdevdn=2, matype=0)` | Bollinger Bands (upper, middle, lower) |
-| `SAR` | Overlap | `talib.SAR(high, low, acceleration=0.02, maximum=0.2)` | Parabolic SAR |
-| `RSI` | Momentum | `talib.RSI(close, timeperiod=14)` | Relative Strength Index |
-| `MACD` | Momentum | `talib.MACD(close, fastperiod=12, slowperiod=26, signalperiod=9)` | MACD (macd, signal, hist) |
-| `MACDEXT` | Momentum | `talib.MACDEXT(close, fastperiod=12, fastmatype=0, slowperiod=26, slowmatype=0, signalperiod=9, signalmatype=0)` | MACD with controllable MA types |
-| `MACDFIX` | Momentum | `talib.MACDFIX(close, signalperiod=9)` | MACD with fixed 12/26 periods |
-| `STOCH` | Momentum | `talib.STOCH(high, low, close, fastk_period=5, slowk_period=3, slowd_period=3)` | Stochastic (slowk, slowd) |
-| `STOCHF` | Momentum | `talib.STOCHF(high, low, close, fastk_period=5, fastd_period=3)` | Fast Stochastic |
-| `STOCHRSI` | Momentum | `talib.STOCHRSI(close, timeperiod=14, fastk_period=5, fastd_period=3)` | Stochastic RSI |
-| `ADX` | Momentum | `talib.ADX(high, low, close, timeperiod=14)` | Average Directional Index |
-| `ADXR` | Momentum | `talib.ADXR(high, low, close, timeperiod=14)` | ADX Rating |
-| `CCI` | Momentum | `talib.CCI(high, low, close, timeperiod=14)` | Commodity Channel Index |
-| `MFI` | Momentum | `talib.MFI(high, low, close, volume, timeperiod=14)` | Money Flow Index |
-| `WILLR` | Momentum | `talib.WILLR(high, low, close, timeperiod=14)` | Williams %R |
-| `ULTOSC` | Momentum | `talib.ULTOSC(high, low, close, timeperiod1=7, timeperiod2=14, timeperiod3=28)` | Ultimate Oscillator |
-| `ATR` | Volatility | `talib.ATR(high, low, close, timeperiod=14)` | Average True Range |
-| `NATR` | Volatility | `talib.NATR(high, low, close, timeperiod=14)` | Normalized ATR |
-| `OBV` | Volume | `talib.OBV(close, volume)` | On-Balance Volume |
-| `AD` | Volume | `talib.AD(high, low, close, volume)` | Chaikin A/D Line |
-| `ADOSC` | Volume | `talib.ADOSC(high, low, close, volume, fastperiod=3, slowperiod=10)` | Chaikin A/D Oscillator |
+| `SMA` | Overlap | `talib.SMA(close, timeperiod=30)` | Simple Moving Average | _ta_lib.c:L35583 |
+| `EMA` | Overlap | `talib.EMA(close, timeperiod=30)` | Exponential Moving Average | _ta_lib.c:L25986 |
+| `WMA` | Overlap | `talib.WMA(close, timeperiod=30)` | Weighted Moving Average | _ta_lib.c:L39678 |
+| `DEMA` | Overlap | `talib.DEMA(close, timeperiod=30)` | Double Exponential MA | _ta_lib.c:L25420 |
+| `TEMA` | Overlap | `talib.TEMA(close, timeperiod=30)` | Triple Exponential MA | _ta_lib.c:L37747 |
+| `KAMA` | Overlap | `talib.KAMA(close, timeperiod=30)` | Kaufman Adaptive MA | _ta_lib.c:L27668 |
+| `MAMA` | Overlap | `talib.MAMA(close)` | MESA Adaptive MA (returns MAMA, FAMA) | _ta_lib.c:L29768 |
+| `BBANDS` | Overlap | `talib.BBANDS(close, timeperiod=20, nbdevup=2, nbdevdn=2, matype=0)` | Bollinger Bands (upper, middle, lower) | _ta_lib.c:L10779 |
+| `SAR` | Overlap | `talib.SAR(high, low, acceleration=0.02, maximum=0.2)` | Parabolic SAR | _ta_lib.c:L34761 |
+| `RSI` | Momentum | `talib.RSI(close, timeperiod=14)` | Relative Strength Index | _ta_lib.c:L34584 |
+| `MACD` | Momentum | `talib.MACD(close, fastperiod=12, slowperiod=26, signalperiod=9)` | MACD (macd, signal, hist) | _ta_lib.c:L29064 |
+| `MACDEXT` | Momentum | `talib.MACDEXT(close, fastperiod=12, fastmatype=0, slowperiod=26, slowmatype=0, signalperiod=9, signalmatype=0)` | MACD with controllable MA types | _ta_lib.c:L29294 |
+| `MACDFIX` | Momentum | `talib.MACDFIX(close, signalperiod=9)` | MACD with fixed 12/26 periods | _ta_lib.c:L29566 |
+| `STOCH` | Momentum | `talib.STOCH(high, low, close, fastk_period=5, slowk_period=3, slowd_period=3)` | Stochastic (slowk, slowd) | _ta_lib.c:L36111 |
+| `STOCHF` | Momentum | `talib.STOCHF(high, low, close, fastk_period=5, fastd_period=3)` | Fast Stochastic | _ta_lib.c:L36393 |
+| `STOCHRSI` | Momentum | `talib.STOCHRSI(close, timeperiod=14, fastk_period=5, fastd_period=3)` | Stochastic RSI | _ta_lib.c:L36647 |
+| `ADX` | Momentum | `talib.ADX(high, low, close, timeperiod=14)` | Average Directional Index | _ta_lib.c:L8829 |
+| `ADXR` | Momentum | `talib.ADXR(high, low, close, timeperiod=14)` | ADX Rating | _ta_lib.c:L9040 |
+| `CCI` | Momentum | `talib.CCI(high, low, close, timeperiod=14)` | Commodity Channel Index | _ta_lib.c:L11428 |
+| `MFI` | Momentum | `talib.MFI(high, low, close, volume, timeperiod=14)` | Money Flow Index | _ta_lib.c:L30742 |
+| `WILLR` | Momentum | `talib.WILLR(high, low, close, timeperiod=14)` | Williams %R | _ta_lib.c:L39467 |
+| `ULTOSC` | Momentum | `talib.ULTOSC(high, low, close, timeperiod1=7, timeperiod2=14, timeperiod3=28)` | Ultimate Oscillator | _ta_lib.c:L38843 |
+| `ATR` | Volatility | `talib.ATR(high, low, close, timeperiod=14)` | Average True Range | _ta_lib.c:L10181 |
+| `NATR` | Volatility | `talib.NATR(high, low, close, timeperiod=14)` | Normalized ATR | _ta_lib.c:L32876 |
+| `OBV` | Volume | `talib.OBV(close, volume)` | On-Balance Volume | _ta_lib.c:L33087 |
+| `AD` | Volume | `talib.AD(high, low, close, volume)` | Chaikin A/D Line | _ta_lib.c:L8200 |
+| `ADOSC` | Volume | `talib.ADOSC(high, low, close, volume, fastperiod=3, slowperiod=10)` | Chaikin A/D Oscillator | _ta_lib.c:L8588 |
 | `HT_DCPERIOD` | Cycle | `talib.HT_DCPERIOD(close)` | Hilbert Transform — Dominant Cycle Period |
 | `HT_DCPHASE` | Cycle | `talib.HT_DCPHASE(close)` | Hilbert Transform — Dominant Cycle Phase |
 | `HT_PHASOR` | Cycle | `talib.HT_PHASOR(close)` | Hilbert Transform — Phasor Components |
@@ -249,10 +249,8 @@ result = sma_func.outputs  # Access via .outputs after setting inputs
 - [ ] `import talib` succeeds (libta_lib.so found on system path)
 - [ ] Pattern recognition returns -100 (bearish), 0 (none), 100 (bullish)
 
-## Graph Provenance
+## Provenance
 
-- Knowledge graph: TA-Lib, 1,305 nodes, 5,564 edges, 120 communities
-- 1,130 nodes in `talib/_ta_lib.c` (Cython wrapper for C library)
-- 213 indicator functions identified from Cython wrapper labels
-- Extraction: AST-only via graphify, 0% node descriptions
-- God node: `_ta_lib.c` (1,165 edges) — all Python-level bindings converge through single Cython module
+- Knowledge graph: ta-lib, 381 nodes, 379 edges, 174 communities
+- God nodes: `_ta_lib.c` (373), `__init__.py` (4), `get_functions()` (2) — public-API hubs only (see GRAPH_SPEC noise filter)
+- Extraction: graphify @ a9ff1b47b3dd, backend opencode, description coverage 100%

@@ -23,18 +23,18 @@ related_skills: []
 
 NumPy's random module provides a modern, reproducible, and high-performance random number generation system backed by multiple bit generators, seed sequences for independent streams, and a rich set of probability distributions.
 
-## Quick Reference: Top 10 APIs
+## Quick Reference
 
-| API | Signature | Description |
+| API | Signature | Description | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node |
 |-----|-----------|-------------|
 | `default_rng` | `default_rng(seed=None)` | Create a new Generator with default BitGenerator (PCG64) |
-| `Generator` | Class wrapping a BitGenerator | Primary distribution-sampling interface |
-| `PCG64` | `PCG64(seed=None)` | Default BitGenerator — fast, statistically sound |
+| `Generator` | Class wrapping a BitGenerator | Primary distribution-sampling interface | f2py/_backends/__init__.py:L1 |
+| `PCG64` | `PCG64(seed=None)` | Default BitGenerator — fast, statistically sound | random/src/pcg64/pcg64.c:L1 |
 | `SeedSequence` | `SeedSequence(entropy=None)` | Generate independent seed states for parallel streams |
-| `random` | `rng.random(size=None, dtype=np.float64)` | Uniform floats in [0, 1) |
-| `normal` | `rng.normal(loc=0.0, scale=1.0, size=None)` | Gaussian/normal distribution |
-| `uniform` | `rng.uniform(low=0.0, high=1.0, size=None)` | Uniform floats in [low, high) |
-| `integers` | `rng.integers(low, high=None, size=None)` | Random integers in [low, high) |
+| `random` | `rng.random(size=None, dtype=np.float64)` | Uniform floats in [0, 1) | random/src/mt19937/randomkit.c:L218 |
+| `normal` | `rng.normal(loc=0.0, scale=1.0, size=None)` | Gaussian/normal distribution | lib/_function_base_impl.py:L2523 |
+| `uniform` | `rng.uniform(low=0.0, high=1.0, size=None)` | Uniform floats in [low, high) | random/src/distributions/distributions.c:L28 |
+| `integers` | `rng.integers(low, high=None, size=None)` | Random integers in [low, high) | _core/src/multiarray/descriptor.c:L779 |
 | `choice` | `rng.choice(a, size=None, replace=True, p=None)` | Random sample from a 1-D array |
 | `permutation` | `rng.permutation(x)` | Randomly permute a sequence or return a permuted range |
 
@@ -225,3 +225,9 @@ Pickling helpers exist in `numpy.random._pickle`: `__generator_ctor()`, `__bit_g
 - [ ] `permutation()` returns a copy; `shuffle()` mutates in-place
 - [ ] Generator is pickleable and restorable via `bit_generator.state`
 - [ ] `PCG64` is the default BitGenerator
+
+## Provenance
+
+- Knowledge graph: numpy, 8094 nodes, 13271 edges, 670 communities
+- God nodes: `distributions.c` (85), `legacy-distributions.c` (36), `randomkit.c` (19) — public-API hubs only (see GRAPH_SPEC noise filter)
+- Extraction: graphify @ ab2199763cb1, backend opencode, description coverage 83%

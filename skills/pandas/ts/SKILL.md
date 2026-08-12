@@ -23,7 +23,7 @@ related_skills: []
 
 Temporal data manipulation: frequency conversion (`resample`), moving window computations (`rolling`, `expanding`, `ewm`), lag operations (`shift`, `diff`, `pct_change`), date generation (`date_range`), and datetime indexing (`DatetimeIndex`, `PeriodIndex`). Foundational for quant workflows — every OHLCV pipeline starts here.
 
-## Quick Reference: Top 10 APIs
+## Quick Reference
 
 | API | Source File | Degree | Description |
 |-----|------------|--------|-------------|
@@ -216,3 +216,9 @@ df.groupby('symbol')['close'].ewm(span=20).mean()
 - [ ] `df.groupby('sym')['close'].rolling(20).mean()` computes per-group rolling
 - [ ] `df['close'].rolling(60).corr(df['other'])` computes rolling correlation
 - [ ] `df.resample('h').ffill()` upsamples with forward fill
+
+## Provenance
+
+- Knowledge graph: pandas, 11368 nodes, 39913 edges, 410 communities
+- God nodes: `_FrequencyInferer` (28), `AbstractHolidayCalendar` (19), `holiday.py` (18) — public-API hubs only (see GRAPH_SPEC noise filter)
+- Extraction: graphify @ 982854070758, backend opencode, description coverage 81%

@@ -31,5 +31,7 @@ Indexes the 2 spec-driven XGBoost sub-skills. Load the one for the module you ne
 | [xgboost-sklearn](sklearn/SKILL.md) | `xgboost.sklearn` | XGBoost scikit-learn wrappers |
 
 ## Provenance
-- Knowledge graph: xgboost, 1632 nodes, 4415 edges, 80 communities
-- Rebuild: `scripts/rebuild_graph.sh xgboost` (pinned commit 2a4786e61e08)
+
+- Knowledge graph: xgboost, 1631 nodes, 4318 edges, 80 communities
+- God nodes: `Categories` (179), `DMatrix` (161), `Objective` (146) — public-API hubs only (see GRAPH_SPEC noise filter)
+- Extraction: graphify @ 2a4786e61e08, backend opencode, description coverage 84%

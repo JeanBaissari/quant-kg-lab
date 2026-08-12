@@ -32,61 +32,59 @@ related_skills:
 Extracted from scikit-learn knowledge graph. Source: `sklearn.preprocessing` module.
 
 ## Quick Reference
-
 ### Scalers (Numerical Features)
 
-| Class | Purpose | Key Params |
+| Class | Purpose | Key Params | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node |
 |-------|---------|------------|
-| `StandardScaler` | Zero-mean, unit-variance scaling | `with_mean`, `with_std` |
-| `MinMaxScaler` | Scale to [0, 1] or custom range | `feature_range` |
-| `MaxAbsScaler` | Scale by max absolute value (sparse-safe) | (none) |
-| `RobustScaler` | Scale using median/IQR (outlier-robust) | `with_centering`, `with_scaling`, `quantile_range` |
-| `Normalizer` | Row-wise normalization to unit norm | `norm` ('l2', 'l1', 'max') |
+| `StandardScaler` | Zero-mean, unit-variance scaling | `with_mean`, `with_std` | preprocessing/_data.py:L742 |
+| `MinMaxScaler` | Scale to [0, 1] or custom range | `feature_range` | preprocessing/_data.py:L305 |
+| `MaxAbsScaler` | Scale by max absolute value (sparse-safe) | (none) | preprocessing/_data.py:L1190 |
+| `RobustScaler` | Scale using median/IQR (outlier-robust) | `with_centering`, `with_scaling`, `quantile_range` | preprocessing/_data.py:L1552 |
+| `Normalizer` | Row-wise normalization to unit norm | `norm` ('l2', 'l1', 'max') | preprocessing/_data.py:L2092 |
 
 ### Power / Distribution Transforms
 
-| Class | Purpose | Key Params |
+| Class | Purpose | Key Params | externals/array_api_compat/common/_typing.py:L39 |
 |-------|---------|------------|
-| `PowerTransformer` | Box-Cox or Yeo-Johnson transform | `method` ('yeo-johnson', 'box-cox'), `standardize` |
-| `QuantileTransformer` | Map to uniform or normal distribution | `n_quantiles`, `output_distribution`, `subsample` |
+| `PowerTransformer` | Box-Cox or Yeo-Johnson transform | `method` ('yeo-johnson', 'box-cox'), `standardize` | preprocessing/_data.py:L3257 |
+| `QuantileTransformer` | Map to uniform or normal distribution | `n_quantiles`, `output_distribution`, `subsample` | preprocessing/_data.py:L2670 |
 
 ### Encoders (Categorical Features)
 
-| Class | Purpose | Key Params |
+| Class | Purpose | Key Params | externals/array_api_compat/common/_typing.py:L39 |
 |-------|---------|------------|
-| `OneHotEncoder` | One-hot / dummy encoding | `drop`, `sparse_output`, `handle_unknown`, `min_frequency` |
-| `OrdinalEncoder` | Integer ordinal encoding | `categories`, `handle_unknown`, `encoded_missing_value` |
-| `LabelEncoder` | Encode target labels (1D only) | (none) |
-| `LabelBinarizer` | One-vs-all binary encoding (1D) | `neg_label`, `pos_label`, `sparse_output` |
-| `TargetEncoder` | Target-based encoding (for high-cardinality) | `categories`, `target_type`, `smooth` |
+| `OneHotEncoder` | One-hot / dummy encoding | `drop`, `sparse_output`, `handle_unknown`, `min_frequency` | preprocessing/_encoders.py:L474 |
+| `OrdinalEncoder` | Integer ordinal encoding | `categories`, `handle_unknown`, `encoded_missing_value` | preprocessing/_encoders.py:L1263 |
+| `LabelEncoder` | Encode target labels (1D only) | (none) | preprocessing/_label.py:L39 |
+| `LabelBinarizer` | One-vs-all binary encoding (1D) | `neg_label`, `pos_label`, `sparse_output` | preprocessing/_label.py:L183 |
+| `TargetEncoder` | Target-based encoding (for high-cardinality) | `categories`, `target_type`, `smooth` | preprocessing/_target_encoder.py:L34 |
 
 ### Feature Construction
 
-| Class | Purpose | Key Params |
+| Class | Purpose | Key Params | externals/array_api_compat/common/_typing.py:L39 |
 |-------|---------|------------|
-| `PolynomialFeatures` | Generate polynomial/interaction features | `degree`, `interaction_only`, `include_bias` |
-| `SplineTransformer` | B-spline basis functions | `n_knots`, `degree`, `knots`, `extrapolation` |
-| `KBinsDiscretizer` | Bin continuous data into intervals | `n_bins`, `encode`, `strategy` ('uniform', 'quantile', 'kmeans') |
-| `FunctionTransformer` | Apply arbitrary function as transform | `func`, `inverse_func`, `check_inverse` |
-| `Binarizer` | Threshold numerical data to binary | `threshold` |
+| `PolynomialFeatures` | Generate polynomial/interaction features | `degree`, `interaction_only`, `include_bias` | preprocessing/_polynomial.py:L92 |
+| `SplineTransformer` | B-spline basis functions | `n_knots`, `degree`, `knots`, `extrapolation` | preprocessing/_polynomial.py:L586 |
+| `KBinsDiscretizer` | Bin continuous data into intervals | `n_bins`, `encode`, `strategy` ('uniform', 'quantile', 'kmeans') | preprocessing/_discretization.py:L24 |
+| `FunctionTransformer` | Apply arbitrary function as transform | `func`, `inverse_func`, `check_inverse` | preprocessing/_function_transformer.py:L30 |
+| `Binarizer` | Threshold numerical data to binary | `threshold` | preprocessing/_data.py:L2295 |
 
 ### Standalone Functions
 
-| Function | Purpose |
+| Function | Purpose | covariance/_elliptic_envelope.py:L187 | covariance/_elliptic_envelope.py:L187 |
 |----------|---------|
-| `scale` | Standardize (equiv. `StandardScaler`) |
-| `minmax_scale` | Min-max scale (equiv. `MinMaxScaler`) |
-| `maxabs_scale` | Max-abs scale (equiv. `MaxAbsScaler`) |
-| `robust_scale` | Robust scale (equiv. `RobustScaler`) |
-| `normalize` | Row-wise normalize (equiv. `Normalizer`) |
-| `binarize` | Threshold binarize (equiv. `Binarizer`) |
-| `label_binarize` | One-vs-all binary encoding |
-| `add_dummy_feature` | Add constant bias column |
-| `power_transform` | Box-Cox / Yeo-Johnson (equiv. `PowerTransformer`) |
-| `quantile_transform` | Quantile transform (equiv. `QuantileTransformer`) |
+| `scale` | Standardize (equiv. `StandardScaler`) | preprocessing/_data.py:L146 | preprocessing/_data.py:L146 |
+| `minmax_scale` | Min-max scale (equiv. `MinMaxScaler`) | preprocessing/_data.py:L631 | preprocessing/_data.py:L631 |
+| `maxabs_scale` | Max-abs scale (equiv. `MaxAbsScaler`) | preprocessing/_data.py:L1458 | preprocessing/_data.py:L1458 |
+| `robust_scale` | Robust scale (equiv. `RobustScaler`) | preprocessing/_data.py:L1831 | preprocessing/_data.py:L1831 |
+| `normalize` | Row-wise normalize (equiv. `Normalizer`) | preprocessing/_data.py:L1978 | preprocessing/_data.py:L1978 |
+| `binarize` | Threshold binarize (equiv. `Binarizer`) | preprocessing/_data.py:L2236 | preprocessing/_data.py:L2236 |
+| `label_binarize` | One-vs-all binary encoding | preprocessing/_label.py:L474 | preprocessing/_label.py:L474 |
+| `add_dummy_feature` | Add constant bias column | preprocessing/_data.py:L2612 | preprocessing/_data.py:L2612 |
+| `power_transform` | Box-Cox / Yeo-Johnson (equiv. `PowerTransformer`) | preprocessing/_data.py:L3659 | preprocessing/_data.py:L3659 |
+| `quantile_transform` | Quantile transform (equiv. `QuantileTransformer`) | preprocessing/_data.py:L3113 | preprocessing/_data.py:L3113 |
 
-## Common Pitfalls
-
+## Pitfalls
 1. **`LabelEncoder` is NOT for features**: It's designed for 1D target labels. Use `OrdinalEncoder` for feature columns — it handles 2D arrays and unknown categories.
 2. **`StandardScaler` on sparse data**: Setting `with_mean=True` on sparse matrices raises an error (cannot center sparse). Use `with_mean=False` or densify first.
 3. **`PowerTransformer` with `method='box-cox'`**: Requires strictly positive data. Use `method='yeo-johnson'` for zero or negative values.
@@ -102,3 +100,9 @@ Extracted from scikit-learn knowledge graph. Source: `sklearn.preprocessing` mod
 - [ ] Scaler fitted only on training data (inside Pipeline)
 - [ ] Sparse matrices handled correctly (no centering)
 - [ ] Target encoding uses proper cross-fitting to avoid leakage
+
+## Provenance
+
+- Knowledge graph: scikit-learn, 8450 nodes, 28094 edges, 401 communities
+- God nodes: `OneHotEncoder` (99), `PowerTransformer` (25), `QuantileTransformer` (24) — public-API hubs only (see GRAPH_SPEC noise filter)
+- Extraction: graphify @ 6f8b95aa2234, backend opencode, description coverage 81%

@@ -33,5 +33,7 @@ Indexes the 3 spec-driven vectorbt sub-skills. Load the one for the module you n
 | [vectorbt-signals](signals/SKILL.md) | `vectorbt.signals` | entry/exit signals with vectorbt |
 
 ## Provenance
+
 - Knowledge graph: vectorbt, 3682 nodes, 9212 edges, 353 communities
-- Rebuild: `scripts/rebuild_graph.sh vectorbt` (pinned commit f9897528f675)
+- God nodes: `Config` (579), `ArrayWrapper` (535), `Wrapping` (426) — public-API hubs only (see GRAPH_SPEC noise filter)
+- Extraction: graphify @ f9897528f675, backend opencode, description coverage 88%

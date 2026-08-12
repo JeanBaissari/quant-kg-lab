@@ -31,58 +31,56 @@ related_skills:
 Extracted from scikit-learn knowledge graph. Source: `sklearn.feature_selection` module.
 
 ## Quick Reference
-
 ### Filter Methods (Univariate)
 
-| Class/Function | Purpose | Key Params |
+| Class/Function | Purpose | Key Params | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node |
 |---------------|---------|------------|
-| `SelectKBest` | Select top-k scoring features | `score_func`, `k` |
-| `SelectPercentile` | Select top percentile of features | `score_func`, `percentile` |
-| `SelectFpr` | Select based on FPR (false positive rate) | `score_func`, `alpha` |
-| `SelectFdr` | Select based on FDR (false discovery rate) | `score_func`, `alpha` |
-| `SelectFwe` | Select based on family-wise error | `score_func`, `alpha` |
-| `GenericUnivariateSelect` | Configurable univariate selection | `score_func`, `mode`, `param` |
+| `SelectKBest` | Select top-k scoring features | `score_func`, `k` | feature_selection/_univariate_selection.py:L698 |
+| `SelectPercentile` | Select top percentile of features | `score_func`, `percentile` | feature_selection/_univariate_selection.py:L593 |
+| `SelectFpr` | Select based on FPR (false positive rate) | `score_func`, `alpha` | feature_selection/_univariate_selection.py:L809 |
+| `SelectFdr` | Select based on FDR (false discovery rate) | `score_func`, `alpha` | feature_selection/_univariate_selection.py:L889 |
+| `SelectFwe` | Select based on family-wise error | `score_func`, `alpha` | feature_selection/_univariate_selection.py:L980 |
+| `GenericUnivariateSelect` | Configurable univariate selection | `score_func`, `mode`, `param` | feature_selection/_univariate_selection.py:L1062 |
 
 ### Scoring Functions
 
-| Function | Purpose | Target Type |
+| Function | Purpose | Target Type | covariance/_elliptic_envelope.py:L187 |
 |----------|---------|-------------|
-| `chi2` | Chi-squared statistic | Classification (non-negative features) |
-| `f_classif` | ANOVA F-value | Classification |
-| `f_regression` | F-value between feature and target | Regression |
-| `f_oneway` | One-way ANOVA | Classification |
-| `mutual_info_classif` | Mutual information | Classification |
-| `mutual_info_regression` | Mutual information | Regression |
-| `r_regression` | Pearson correlation coefficient | Regression |
+| `chi2` | Chi-squared statistic | Classification (non-negative features) | feature_selection/_univariate_selection.py:L200 |
+| `f_classif` | ANOVA F-value | Classification | feature_selection/_univariate_selection.py:L125 |
+| `f_regression` | F-value between feature and target | Regression | feature_selection/_univariate_selection.py:L406 |
+| `f_oneway` | One-way ANOVA | Classification | feature_selection/_univariate_selection.py:L41 |
+| `mutual_info_classif` | Mutual information | Classification | feature_selection/_mutual_info.py:L465 |
+| `mutual_info_regression` | Mutual information | Regression | feature_selection/_mutual_info.py:L337 |
+| `r_regression` | Pearson correlation coefficient | Regression | feature_selection/_univariate_selection.py:L301 |
 
 ### Wrapper Methods
 
-| Class | Purpose | Key Params |
+| Class | Purpose | Key Params | externals/array_api_compat/common/_typing.py:L39 |
 |-------|---------|------------|
-| `RFE` | Recursive Feature Elimination | `estimator`, `n_features_to_select`, `step` |
-| `RFECV` | RFE with cross-validated feature count | `estimator`, `step`, `cv`, `scoring`, `min_features_to_select` |
-| `SequentialFeatureSelector` | Forward/backward sequential selection | `estimator`, `n_features_to_select`, `direction`, `cv`, `scoring` |
+| `RFE` | Recursive Feature Elimination | `estimator`, `n_features_to_select`, `step` | feature_selection/_rfe.py:L74 |
+| `RFECV` | RFE with cross-validated feature count | `estimator`, `step`, `cv`, `scoring`, `min_features_to_select` | feature_selection/_rfe.py:L559 |
+| `SequentialFeatureSelector` | Forward/backward sequential selection | `estimator`, `n_features_to_select`, `direction`, `cv`, `scoring` | feature_selection/_sequential.py:L34 |
 
 ### Embedded / Model-Based Methods
 
-| Class | Purpose | Key Params |
+| Class | Purpose | Key Params | externals/array_api_compat/common/_typing.py:L39 |
 |-------|---------|------------|
-| `SelectFromModel` | Select features based on model importance | `estimator`, `threshold`, `prefit`, `max_features` |
+| `SelectFromModel` | Select features based on model importance | `estimator`, `threshold`, `prefit`, `max_features` | feature_selection/_from_model.py:L95 |
 
 ### Variance-Based
 
-| Class | Purpose | Key Params |
+| Class | Purpose | Key Params | externals/array_api_compat/common/_typing.py:L39 |
 |-------|---------|------------|
-| `VarianceThreshold` | Remove low-variance features | `threshold` |
+| `VarianceThreshold` | Remove low-variance features | `threshold` | feature_selection/_variance_threshold.py:L15 |
 
 ### Base Mixin
 
-| Class | Purpose |
+| Class | Purpose | externals/array_api_compat/common/_typing.py:L39 | externals/array_api_compat/common/_typing.py:L39 |
 |-------|---------|
-| `SelectorMixin` | Mixin providing `get_support()` and `inverse_transform()` to all selectors |
+| `SelectorMixin` | Mixin providing `get_support()` and `inverse_transform()` to all selectors | feature_selection/_base.py:L27 | feature_selection/_base.py:L27 |
 
-## Common Pitfalls
-
+## Pitfalls
 1. **`chi2` requires non-negative features**: Chi-squared assumes frequencies/counts. For negative or continuous features, use `f_classif` or `mutual_info_classif` instead.
 2. **Univariate ≠ Multivariate**: `SelectKBest` scores features independently. Features that are useless alone but useful in combination will be discarded. Use `RFE` or `SequentialFeatureSelector` for multivariate selection.
 3. **`RFECV` `min_features_to_select`**: Default is 1. For models that need multiple features (e.g., `LogisticRegression` with `penalty='l1'`), set higher if 1-feature models crash.
@@ -99,3 +97,9 @@ Extracted from scikit-learn knowledge graph. Source: `sklearn.feature_selection`
 - [ ] `random_state` set for mutual_info and SequentialFeatureSelector
 - [ ] Feature selection performed inside Pipeline to avoid data leakage
 - [ ] CV split strategy appropriate for data size
+
+## Provenance
+
+- Knowledge graph: scikit-learn, 8450 nodes, 28094 edges, 401 communities
+- God nodes: `RFE` (27), `SelectFromModel` (21), `SequentialFeatureSelector` (20) — public-API hubs only (see GRAPH_SPEC noise filter)
+- Extraction: graphify @ 6f8b95aa2234, backend opencode, description coverage 81%

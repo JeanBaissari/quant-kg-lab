@@ -32,7 +32,6 @@ Extracted from scikit-learn knowledge graph. Source: `sklearn.tree` module.
 Communities: 176 ("Decision Trees"), 0 ("Linear Models + DecisionTreeClassifier/Regressor").
 
 ## Quick Reference
-
 | Class/Function | Source File | Purpose | Key Params |
 |---------------|-------------|---------|------------|
 | `DecisionTreeClassifier` | `tree/_classes.py` | CART classification tree | `criterion` ('gini'/'entropy'), `max_depth`, `min_samples_split`, `min_samples_leaf`, `max_features`, `class_weight` |
@@ -108,3 +107,9 @@ plot_tree(dtc, feature_names=feature_names, filled=True)
 4. **`predict_proba` smoothing**: Class probabilities are computed as the fraction of samples in each leaf — no smoothing. Small leaves produce extreme probabilities (0 or 1).
 5. **Memory with deep trees**: A fully-grown tree on large data can have millions of nodes. Set `max_leaf_nodes` to bound memory.
 6. **`decision_path` output**: Returns a sparse CSR matrix — use `.toarray()` or `.nonzero()` to extract paths per sample.
+
+## Provenance
+
+- Knowledge graph: scikit-learn, 8450 nodes, 28094 edges, 401 communities
+- God nodes: `BaseDecisionTree` (30), `DecisionTreeClassifier` (18), `DecisionTreeRegressor` (17) — public-API hubs only (see GRAPH_SPEC noise filter)
+- Extraction: graphify @ 6f8b95aa2234, backend opencode, description coverage 81%

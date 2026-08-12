@@ -23,7 +23,7 @@ related_skills: []
 
 Signal processing toolbox for filter design, spectral analysis, convolution, peak finding, and linear time-invariant (LTI) system analysis. Essential for preprocessing time-series data before feeding into quantitative models.
 
-## Quick Reference: Top 10 APIs
+## Quick Reference
 
 | API | Source File | Degree | Description |
 |-----|------------|--------|-------------|
@@ -180,3 +180,9 @@ t_out, y_out, x_out = lsim(sys, U=input_signal, T=t)
 - [ ] `detrend(np.array([1,2,3,4,5], dtype=float))` returns zero-mean series
 - [ ] `TransferFunction([1], [1,2,1])` creates a valid LTI system
 - [ ] `ShortTimeFFT.from_window('hann', fs=1000, nperseg=256, noverlap=200)` is constructable
+
+## Provenance
+
+- Knowledge graph: scipy, 14071 nodes, 23466 edges, 1076 communities
+- God nodes: `_delegators.py` (111), `filter_design.py` (80), `dlti` (67) — public-API hubs only (see GRAPH_SPEC noise filter)
+- Extraction: graphify @ 0514ef9e7329, backend opencode, description coverage 81%

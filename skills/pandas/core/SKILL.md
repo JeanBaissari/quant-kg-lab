@@ -23,7 +23,7 @@ related_skills: []
 
 The core pandas data structures and operations: `DataFrame` (2-D labeled tabular data), `Series` (1-D labeled array), `Index` (axis labels), `GroupBy` (split-apply-combine), plus reshaping (`merge`, `pivot`, `concat`) and I/O.
 
-## Quick Reference: Top 10 APIs
+## Quick Reference
 
 | API | Source File | Degree | Description |
 |-----|------------|--------|-------------|
@@ -182,3 +182,9 @@ df.to_parquet('output.parquet')
 - [ ] `df.isna().sum()` counts missing values
 - [ ] `df.sort_values('col')` returns sorted DataFrame
 - [ ] `df.reset_index()` moves index to column
+
+## Provenance
+
+- Knowledge graph: pandas, 11368 nodes, 39913 edges, 410 communities
+- God nodes: `DatetimeTZDtype` (1582), `CategoricalDtype` (1480), `PeriodDtype` (1087) — public-API hubs only (see GRAPH_SPEC noise filter)
+- Extraction: graphify @ 982854070758, backend opencode, description coverage 81%

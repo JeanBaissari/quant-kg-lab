@@ -24,7 +24,6 @@ related_skills: []
 The portfolio simulation engine. `Portfolio.from_signals()` takes boolean entry/exit arrays and simulates through them bar-by-bar, tracking cash, position size, trades, and drawdowns. The engine runs Numba-compiled kernels by default with an optional Rust backend. Performance stats are computed lazily via the `StatsBuilderMixin` inheritance chain.
 
 ## Quick Reference
-
 | Class / Function | Source File | Purpose | Key Params |
 |------------------|-------------|---------|------------|
 | `Portfolio` | `vectorbt/portfolio/base.py` | Core portfolio object with stats, plotting, trades | wraps simulation result |
@@ -232,7 +231,8 @@ print(logs.records_readable)
 - [ ] `init_cash=0` raises appropriate error (must be > 0)
 - [ ] Fees are applied correctly: verify a round-trip PnL matches manual calculation
 
-## Graph Provenance
+## Provenance
 
-- Knowledge graph: vectorbt, 5,411 nodes, 13,588 edges, 395 communities
-- Portfolio communities: 6 (Portfolio class), 9 (dispatch/buy-sell), 10 (nb.py kernels), 14 (Rust engine), 39 (enums), 61 (nb order resolution), 73 (nb record updates), 86 (grouped cash/value)
+- Knowledge graph: vectorbt, 3682 nodes, 9212 edges, 353 communities
+- God nodes: `Orders` (113), `Trades` (108), `nb.py` (101) — public-API hubs only (see GRAPH_SPEC noise filter)
+- Extraction: graphify @ f9897528f675, backend opencode, description coverage 88%

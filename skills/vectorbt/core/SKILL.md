@@ -24,7 +24,6 @@ related_skills: []
 The foundational layer of vectorbt. Every vectorbt object wraps a pandas DataFrame/Series through `ArrayWrapper` and extends behavior via the `Wrapping` → `Accessor` pattern. Configuration flows top-down from `Config` through `Configured`, enabling global defaults that cascade to every component.
 
 ## Quick Reference
-
 | Class / Component | Source File | Purpose | Key Params |
 |-------------------|-------------|---------|------------|
 | `Config` | `vectorbt/utils/config.py` | Global configuration singleton (merged dicts) | `frozen`, `readonly`, nested keys |
@@ -153,8 +152,8 @@ price.vbt.group_by = [0, 0, 1]  # AAPL+MSFT in group 0, GOOGL in group 1
 - [ ] Column grouping via `.group_by` preserved through pipeline operations
 - [ ] Config cascade: set `vbt.settings.portfolio.init_cash = 20000` → `Portfolio.from_signals()` uses it
 
-## Graph Provenance
+## Provenance
 
-- Knowledge graph: vectorbt, 5,411 nodes, 13,588 edges, 395 communities
-- Extraction: AST-only via graphify, 100% nodes described
-- Core communities: 0 (Config), 1 (Wrapping/Builders), 2 (ArrayWrapper), 3 (Accessors), 8 (Indexing), 15 (Configured/Documented), 17 (RustSupport)
+- Knowledge graph: vectorbt, 3682 nodes, 9212 edges, 353 communities
+- God nodes: `RustSupport` (129), `_engine.py` (28), `OHLCVDFAccessor` (18) — public-API hubs only (see GRAPH_SPEC noise filter)
+- Extraction: graphify @ f9897528f675, backend opencode, description coverage 88%

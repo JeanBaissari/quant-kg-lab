@@ -31,5 +31,7 @@ Indexes the 2 spec-driven LightGBM sub-skills. Load the one for the module you n
 | [lightgbm-sklearn](sklearn/SKILL.md) | `lightgbm.sklearn` | LightGBM scikit-learn wrappers |
 
 ## Provenance
-- Knowledge graph: lightgbm, 594 nodes, 2099 edges, 17 communities
-- Rebuild: `scripts/rebuild_graph.sh lightgbm` (pinned commit f9bf8d1358cd)
+
+- Knowledge graph: lightgbm, 593 nodes, 2029 edges, 17 communities
+- God nodes: `pd_DataFrame` (231), `pd_Series` (173), `pd_CategoricalDtype` (142) — public-API hubs only (see GRAPH_SPEC noise filter)
+- Extraction: graphify @ f9bf8d1358cd, backend opencode, description coverage 84%

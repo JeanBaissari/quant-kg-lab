@@ -34,7 +34,6 @@ Extracted from scikit-learn knowledge graph. Source: `sklearn.svm` module.
 Communities: 60 ("SVM Liblinear"), 72 ("SVM SVC SVR"), 83 ("SVM LinearSVC/NuSVC"), 102 ("SVM SVC"), 161 ("SVM Libsvm").
 
 ## Quick Reference
-
 | Class/Function | Source File | Purpose | Key Params |
 |---------------|-------------|---------|------------|
 | `SVC` | `svm/_classes.py` | C-Support Vector Classification | `C`, `kernel` ('linear'/'rbf'/'poly'/'sigmoid'), `gamma`, `degree`, `class_weight`, `probability` |
@@ -110,3 +109,9 @@ is_outlier = ocsvm.predict(X_test)  # 1=inlier, -1=outlier
 5. **Dual vs primal**: `dual=False` in `LinearSVC` uses primal optimization and is much faster for n_samples >> n_features. `dual=True` (default) is faster for n_features >> n_samples.
 6. **Sparsity**: SVC/SVR support sparse input via `fit(X, y)` directly. LinearSVC *with* `dual=False` supports sparse. `dual=True` does not.
 7. **Memory**: Kernel SVMs store all support vectors (can be thousands), consuming significant memory at prediction time.
+
+## Provenance
+
+- Knowledge graph: scikit-learn, 8450 nodes, 28094 edges, 401 communities
+- God nodes: `linear.cpp` (52), `svm.cpp` (40), `BaseLibSVM` (29) — public-API hubs only (see GRAPH_SPEC noise filter)
+- Extraction: graphify @ 6f8b95aa2234, backend opencode, description coverage 81%

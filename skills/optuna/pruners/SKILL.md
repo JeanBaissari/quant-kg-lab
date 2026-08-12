@@ -33,17 +33,16 @@ related_skills:
 Extracted from optuna knowledge graph. Source: `optuna.pruners` module.
 
 ## Quick Reference
-
-| Pruner | Strategy | Best For | Requires Report |
+| Pruner | Strategy | Best For | Requires Report | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node |
 |--------|----------|----------|-----------------|
-| `MedianPruner` | Prune if intermediate value is worse than median of previous trials at same step | Simple early stopping | Yes |
-| `PercentilePruner` | Prune if value is below specified percentile of previous trials | Tunable aggressiveness | Yes |
-| `SuccessiveHalvingPruner` | Allocate equal budget across trials, prune worst half at each rung | Fixed budget problems | Yes |
-| `HyperbandPruner` | Adaptive budget allocation across brackets (SuccessiveHalving on steroids) | Large-scale HPO, unknown optimal budgets | Yes |
-| `ThresholdPruner` | Prune if value exceeds a fixed threshold | Known performance bounds | Yes |
-| `PatientPruner` | Prune if no improvement for N consecutive steps | Avoiding premature stopping | Yes |
-| `WilcoxonPruner` | Wilcoxon signed-rank test to detect stagnation | Statistical rigor | Yes |
-| `NopPruner` | Never prunes (passthrough) | Disabling pruning | No |
+| `MedianPruner` | Prune if intermediate value is worse than median of previous trials at same step | Simple early stopping | Yes | pruners/_median.py:L4 |
+| `PercentilePruner` | Prune if value is below specified percentile of previous trials | Tunable aggressiveness | Yes | : |
+| `SuccessiveHalvingPruner` | Allocate equal budget across trials, prune worst half at each rung | Fixed budget problems | Yes | pruners/_successive_halving.py:L15 |
+| `HyperbandPruner` | Adaptive budget allocation across brackets (SuccessiveHalving on steroids) | Large-scale HPO, unknown optimal budgets | Yes | pruners/_hyperband.py:L21 |
+| `ThresholdPruner` | Prune if value exceeds a fixed threshold | Known performance bounds | Yes | pruners/_threshold.py:L29 |
+| `PatientPruner` | Prune if no improvement for N consecutive steps | Avoiding premature stopping | Yes | pruners/_patient.py:L17 |
+| `WilcoxonPruner` | Wilcoxon signed-rank test to detect stagnation | Statistical rigor | Yes | pruners/_wilcoxon.py:L27 |
+| `NopPruner` | Never prunes (passthrough) | Disabling pruning | No | pruners/_nop.py:L13 |
 
 ## Common Patterns
 
@@ -114,3 +113,9 @@ pruner = optuna.pruners.PatientPruner(
 - [ ] `n_startup_trials` is ≥ 5 for statistical stability
 - [ ] `n_warmup_steps` provides enough early training before pruning begins
 - [ ] Hyperband's `max_resource` matches actual training budget
+
+## Provenance
+
+- Knowledge graph: optuna, 2205 nodes, 4010 edges, 226 communities
+- God nodes: `HyperbandPruner` (11), `SuccessiveHalvingPruner` (11), `PercentilePruner` (9) — public-API hubs only (see GRAPH_SPEC noise filter)
+- Extraction: graphify @ b6f2ea62fbe7, backend opencode, description coverage 85%

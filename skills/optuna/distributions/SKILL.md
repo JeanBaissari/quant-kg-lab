@@ -34,12 +34,11 @@ related_skills:
 Extracted from optuna knowledge graph. Source: `optuna.distributions` module.
 
 ## Quick Reference
-
-| Distribution | Domain | Internal Repr | Use Case |
+| Distribution | Domain | Internal Repr | Use Case | Graph Node | Graph Node | Graph Node |
 |-------------|--------|---------------|----------|
-| `FloatDistribution` | Continuous float `[low, high]` | `[0, 1]` uniform | Learning rate, dropout, regularization |
-| `IntDistribution` | Discrete integer `[low, high]` | `[0, N-1]` uniform | Number of layers, units, epochs |
-| `CategoricalDistribution` | Finite set of choices | Index in choices | Optimizer, activation function, architecture |
+| `FloatDistribution` | Continuous float `[low, high]` | `[0, 1]` uniform | Learning rate, dropout, regularization | distributions.py:L109 |
+| `IntDistribution` | Discrete integer `[low, high]` | `[0, N-1]` uniform | Number of layers, units, epochs | distributions.py:L310 |
+| `CategoricalDistribution` | Finite set of choices | Index in choices | Optimizer, activation function, architecture | distributions.py:L470 |
 | `BaseDistribution` (ABC) | Abstract base | — | Custom distribution implementation |
 | `UniformDistribution` (deprecated) | Continuous uniform | `[0, 1]` | **Use `FloatDistribution` instead** |
 | `LogUniformDistribution` (deprecated) | Continuous log-uniform | `[0, 1]` | **Use `FloatDistribution(log=True)` instead** |
@@ -109,3 +108,9 @@ external = dist.to_external_repr(0.7)     # 0.7
 - [ ] `choices` in `CategoricalDistribution` is non-empty
 - [ ] `log=True` only for strictly positive ranges (`low > 0`)
 - [ ] `step` parameter is consistent with distribution type
+
+## Provenance
+
+- Knowledge graph: optuna, 2205 nodes, 4010 edges, 226 communities
+- God nodes: `BaseDistribution` (196), `FloatDistribution` (75), `CategoricalDistribution` (73) — public-API hubs only (see GRAPH_SPEC noise filter)
+- Extraction: graphify @ b6f2ea62fbe7, backend opencode, description coverage 85%

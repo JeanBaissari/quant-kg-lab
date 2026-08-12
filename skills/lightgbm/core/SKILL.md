@@ -28,36 +28,35 @@ related_skills:
 Extracted from LightGBM knowledge graph. Sources: `python-package/lightgbm/basic.py`, `engine.py`, `callback.py`.
 
 ## Quick Reference
-
 ### Data Structures
 
-| API | Purpose | Key Methods |
+| API | Purpose | Key Methods | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node |
 |-----|---------|-------------|
-| `Dataset` | Core data container; LightGBM discretizes data into histograms from this | `construct()`, `set_field()`, `get_field()`, `save_binary()`, `subset()`, `create_valid()` |
-| `Booster` | The trained model object | `predict()`, `save_model()`, `dump_model()`, `feature_importance()`, `trees_to_dataframe()`, `refit()` |
-| `CVBooster` | Holds all CV fold boosters | Load/save as JSON, redirect method calls to underlying boosters |
-| `Sequence` | Data access interface for custom loading | Implement `__getitem__(idx)` returning data for given row index |
-| `_InnerPredictor` | Internal fast predictor (not exposed) | Used for sklearn wrapper prediction |
+| `Dataset` | Core data container; LightGBM discretizes data into histograms from this | `construct()`, `set_field()`, `get_field()`, `save_binary()`, `subset()`, `create_valid()` | basic.py:L1693 |
+| `Booster` | The trained model object | `predict()`, `save_model()`, `dump_model()`, `feature_importance()`, `trees_to_dataframe()`, `refit()` | basic.py:L3681 |
+| `CVBooster` | Holds all CV fold boosters | Load/save as JSON, redirect method calls to underlying boosters | engine.py:L353 |
+| `Sequence` | Data access interface for custom loading | Implement `__getitem__(idx)` returning data for given row index | basic.py:L842 |
+| `_InnerPredictor` | Internal fast predictor (not exposed) | Used for sklearn wrapper prediction | basic.py:L908 |
 
 ### Core Training
 
 | API | Purpose | Signature |
 |-----|---------|-----------|
-| `train()` | Perform the training with given parameters | `train(params, train_set, num_boost_round, valid_sets, feval, callbacks, ...)` |
-| `cv()` | Cross-validation | `cv(params, train_set, num_boost_round, nfold, stratified, feval, callbacks, ...)` |
+| `train()` | Perform the training with given parameters | `train(params, train_set, num_boost_round, valid_sets, feval, callbacks, ...)` | engine.py:L108 |
+| `cv()` | Cross-validation | `cv(params, train_set, num_boost_round, nfold, stratified, feval, callbacks, ...)` | engine.py:L632 |
 
 ### Callbacks
 
-| Callback | Purpose |
+| Callback | Purpose | basic.py:L271 | basic.py:L271 |
 |----------|---------|
-| `log_evaluation()` | Log evaluation results at specified period |
-| `record_evaluation()` | Record evaluation history into `evals_result` dict |
-| `early_stopping()` | Stop training when metric stops improving |
-| `reset_parameter()` | Reset a parameter after first iteration |
+| `log_evaluation()` | Log evaluation results at specified period | callback.py:L110 | callback.py:L110 |
+| `record_evaluation()` | Record evaluation history into `evals_result` dict | callback.py:L182 | callback.py:L182 |
+| `early_stopping()` | Stop training when metric stops improving | callback.py:L462 | callback.py:L462 |
+| `reset_parameter()` | Reset a parameter after first iteration | callback.py:L253 | callback.py:L253 |
 
 ### Field Operations (Dataset)
 
-| Method | Purpose |
+| Method | Purpose | basic.py:L212 | basic.py:L212 |
 |--------|---------|
 | `set_field(field_name, data)` | Set label, weight, group, init_score, position |
 | `get_field(field_name)` | Get field data |
@@ -184,8 +183,7 @@ sliced = model.model_from_string(
 )
 ```
 
-## Common Pitfalls
-
+## Pitfalls
 1. **`reference` Dataset for validation**: When creating validation Dataset, always set `reference=train_data` to ensure consistent binning. Without it, validation data gets its own bin boundaries and results are inconsistent.
 2. **Categorical features**: Specify via `categorical_feature` in `Dataset()` or `params['categorical_feature']`. LightGBM handles categoricals natively — do NOT one-hot encode.
 3. **`num_leaves` vs `max_depth`**: LightGBM uses leaf-wise (best-first) tree growth controlled by `num_leaves`, not depth-wise like XGBoost. Use `num_leaves < 2^max_depth` to avoid overfitting.
@@ -253,3 +251,9 @@ model = optuna_lgb.train(
 - Source: `python-package/lightgbm/basic.py` (Dataset, Booster, Sequence, _InnerPredictor)
 - Source: `python-package/lightgbm/engine.py` (train, cv, CVBooster)
 - Source: `python-package/lightgbm/callback.py` (early_stopping, log_evaluation, record_evaluation, reset_parameter)
+
+## Provenance
+
+- Knowledge graph: lightgbm, 593 nodes, 2029 edges, 17 communities
+- God nodes: `pd_DataFrame` (231), `pd_Series` (173), `pd_CategoricalDtype` (142) — public-API hubs only (see GRAPH_SPEC noise filter)
+- Extraction: graphify @ f9bf8d1358cd, backend opencode, description coverage 84%

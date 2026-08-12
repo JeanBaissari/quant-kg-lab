@@ -24,7 +24,6 @@ related_skills: []
 The event-driven backtesting engine. `Cerebro` is the central orchestrator — you add data feeds, register a strategy, configure brokers/commissions, add analyzers, and call `run()`. Every time-series in backtrader is a `Line` (a circular buffer), groups of lines form `LineSeries`, and the strategy receives new bar data via `next()`.
 
 ## Quick Reference
-
 | Class / Component | Source File | Purpose | Key Params |
 |-------------------|-------------|---------|------------|
 | `Cerebro` | `backtrader/cerebro.py` | Backtesting engine / orchestration | `stdstats`, `runonce`, `preload` |
@@ -225,9 +224,8 @@ class StopLossStrategy(bt.Strategy):
 - [ ] Final portfolio value accessible via `cerebro.broker.getvalue()`
 - [ ] Plot renders: `cerebro.plot()` shows OHLCV, indicators, trades
 
-## Graph Provenance
+## Provenance
 
-- Knowledge graph: backtrader, 3,458 nodes, 6,863 edges, 261 communities
-- Extraction: AST-only via graphify, no node descriptions (0%)
-- Core communities identified by source file analysis and degree centrality
-- God nodes: MetaParams (247 edges), LineRoot (110), Strategy (107), LineSingle (100), DataBase (72), CommInfoBase (71)
+- Knowledge graph: backtrader, 2680 nodes, 4964 edges, 206 communities
+- God nodes: `MetaParams` (260), `LineRoot` (119), `LineSingle` (111) — public-API hubs only (see GRAPH_SPEC noise filter)
+- Extraction: graphify @ b853d7c90b67, backend opencode, description coverage 84%

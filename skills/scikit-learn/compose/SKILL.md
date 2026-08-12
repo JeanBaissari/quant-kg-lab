@@ -32,32 +32,30 @@ related_skills:
 Extracted from scikit-learn knowledge graph. Source: `sklearn.compose` module and `sklearn.pipeline`.
 
 ## Quick Reference
-
 ### Core Pipeline & Column Transformers
 
-| Class/Function | Purpose | Key Params |
+| Class/Function | Purpose | Key Params | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node |
 |---------------|---------|------------|
-| `Pipeline` | Chain transforms + estimator sequentially | `steps` (list of (name, transform) tuples), `memory`, `verbose` |
-| `make_pipeline` | Shorthand Pipeline (auto-names steps) | `*steps` |
-| `ColumnTransformer` | Apply different transforms to different columns | `transformers`, `remainder`, `sparse_threshold`, `verbose_feature_names_out` |
-| `make_column_transformer` | Shorthand ColumnTransformer (auto-names) | `*transformers`, `remainder`, `verbose_feature_names_out` |
-| `make_column_selector` | Select columns by dtype or pattern | `pattern`, `dtype_include`, `dtype_exclude` |
+| `Pipeline` | Chain transforms + estimator sequentially | `steps` (list of (name, transform) tuples), `memory`, `verbose` | pipeline.py:L93 |
+| `make_pipeline` | Shorthand Pipeline (auto-names steps) | `*steps` | pipeline.py:L1471 |
+| `ColumnTransformer` | Apply different transforms to different columns | `transformers`, `remainder`, `sparse_threshold`, `verbose_feature_names_out` | compose/_column_transformer.py:L64 |
+| `make_column_transformer` | Shorthand ColumnTransformer (auto-names) | `*transformers`, `remainder`, `verbose_feature_names_out` | compose/_column_transformer.py:L1312 |
+| `make_column_selector` | Select columns by dtype or pattern | `pattern`, `dtype_include`, `dtype_exclude` | compose/_column_transformer.py:L1427 |
 
 ### Feature Union
 
 | Class/Function | Purpose | Key Params |
 |---------------|---------|------------|
-| `FeatureUnion` | Concatenate results of multiple transforms | `transformer_list`, `n_jobs`, `transformer_weights`, `verbose` |
-| `make_union` | Shorthand FeatureUnion (auto-names) | `*transformers`, `n_jobs`, `verbose` |
+| `FeatureUnion` | Concatenate results of multiple transforms | `transformer_list`, `n_jobs`, `transformer_weights`, `verbose` | pipeline.py:L1626 |
+| `make_union` | Shorthand FeatureUnion (auto-names) | `*transformers`, `n_jobs`, `verbose` | pipeline.py:L2234 |
 
 ### Target Transformation
 
-| Class | Purpose | Key Params |
+| Class | Purpose | Key Params | externals/array_api_compat/common/_typing.py:L39 |
 |-------|---------|------------|
-| `TransformedTargetRegressor` | Transform target y before fitting | `regressor`, `transformer`, `func`, `inverse_func`, `check_inverse` |
+| `TransformedTargetRegressor` | Transform target y before fitting | `regressor`, `transformer`, `func`, `inverse_func`, `check_inverse` | compose/_target.py:L28 |
 
-## Common Pitfalls
-
+## Pitfalls
 1. **Pipeline step ordering**: Steps execute in order. Preprocessing must come before the final estimator. `Pipeline([('scaler', StandardScaler()), ('clf', LogisticRegression())])` — the last step must be an estimator (has `fit()` and `predict()`), all prior steps must be transformers (have `fit_transform()`).
 2. **`ColumnTransformer` `remainder` default**: `remainder='drop'` — columns not mentioned in any transformer are silently dropped! Set `remainder='passthrough'` to keep them unchanged.
 3. **`make_column_transformer` auto-selection**: Unlike `ColumnTransformer`, this automatically selects columns via `make_column_selector`. Use `dtype_include` and `dtype_exclude` to control which columns each transformer processes.
@@ -75,3 +73,9 @@ Extracted from scikit-learn knowledge graph. Source: `sklearn.compose` module an
 - [ ] `TransformedTargetRegressor` `transformer` implements `inverse_transform`
 - [ ] `random_state` propagated through all randomized steps
 - [ ] Pipeline used in `GridSearchCV` for no-leak preprocessing
+
+## Provenance
+
+- Knowledge graph: scikit-learn, 8450 nodes, 28094 edges, 401 communities
+- God nodes: `ColumnTransformer` (40), `TransformedTargetRegressor` (20), `.fit_transform()` (12) — public-API hubs only (see GRAPH_SPEC noise filter)
+- Extraction: graphify @ 6f8b95aa2234, backend opencode, description coverage 81%
