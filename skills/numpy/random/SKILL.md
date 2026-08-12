@@ -25,18 +25,20 @@ NumPy's random module provides a modern, reproducible, and high-performance rand
 
 ## Quick Reference
 
-| API | Signature | Description | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node |
-|-----|-----------|-------------|
-| `default_rng` | `default_rng(seed=None)` | Create a new Generator with default BitGenerator (PCG64) |
-| `Generator` | Class wrapping a BitGenerator | Primary distribution-sampling interface | f2py/_backends/__init__.py:L1 |
-| `PCG64` | `PCG64(seed=None)` | Default BitGenerator — fast, statistically sound | random/src/pcg64/pcg64.c:L1 |
-| `SeedSequence` | `SeedSequence(entropy=None)` | Generate independent seed states for parallel streams |
-| `random` | `rng.random(size=None, dtype=np.float64)` | Uniform floats in [0, 1) | random/src/mt19937/randomkit.c:L218 |
-| `normal` | `rng.normal(loc=0.0, scale=1.0, size=None)` | Gaussian/normal distribution | lib/_function_base_impl.py:L2523 |
-| `uniform` | `rng.uniform(low=0.0, high=1.0, size=None)` | Uniform floats in [low, high) | random/src/distributions/distributions.c:L28 |
-| `integers` | `rng.integers(low, high=None, size=None)` | Random integers in [low, high) | _core/src/multiarray/descriptor.c:L779 |
-| `choice` | `rng.choice(a, size=None, replace=True, p=None)` | Random sample from a 1-D array |
-| `permutation` | `rng.permutation(x)` | Randomly permute a sequence or return a permuted range |
+| API | Signature | Description | Graph Node |
+|-----|-----------|-------------|-----------|
+| `default_rng` | `default_rng(seed=None)` | Create a new Generator with default BitGenerator (PCG64) | — |
+| `Generator` | Class wrapping a BitGenerator | Primary distribution-sampling interface | — |
+| `PCG64` | `PCG64(seed=None)` | Default BitGenerator — fast, statistically sound | — |
+| `SeedSequence` | `SeedSequence(entropy=None)` | Generate independent seed states for parallel streams | — |
+| `random` | `rng.random(size=None, dtype=np.float64)` | Uniform floats in [0, 1) | — |
+| `normal` | `rng.normal(loc=0.0, scale=1.0, size=None)` | Gaussian/normal distribution | — |
+| `uniform` | `rng.uniform(low=0.0, high=1.0, size=None)` | Uniform floats in [low, high) | — |
+| `integers` | `rng.integers(low, high=None, size=None)` | Random integers in [low, high) | — |
+| `choice` | `rng.choice(a, size=None, replace=True, p=None)` | Random sample from a 1-D array | — |
+| `permutation` | `rng.permutation(x)` | Randomly permute a sequence or return a permuted range | — |
+
+> Note: default_rng, Generator, SeedSequence, PCG64, random, normal, uniform, integers, choice, permutation exist in the library but are absent from the committed graph (extraction gap, tracked as QKG_021 numpy re-extraction).
 
 ## Architecture
 

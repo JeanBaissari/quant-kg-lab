@@ -30,39 +30,39 @@ Extracted from LightGBM knowledge graph. Sources: `python-package/lightgbm/basic
 ## Quick Reference
 ### Data Structures
 
-| API | Purpose | Key Methods | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node |
-|-----|---------|-------------|
-| `Dataset` | Core data container; LightGBM discretizes data into histograms from this | `construct()`, `set_field()`, `get_field()`, `save_binary()`, `subset()`, `create_valid()` | basic.py:L1693 |
-| `Booster` | The trained model object | `predict()`, `save_model()`, `dump_model()`, `feature_importance()`, `trees_to_dataframe()`, `refit()` | basic.py:L3681 |
-| `CVBooster` | Holds all CV fold boosters | Load/save as JSON, redirect method calls to underlying boosters | engine.py:L353 |
-| `Sequence` | Data access interface for custom loading | Implement `__getitem__(idx)` returning data for given row index | basic.py:L842 |
-| `_InnerPredictor` | Internal fast predictor (not exposed) | Used for sklearn wrapper prediction | basic.py:L908 |
+| API | Purpose | Graph Node | Key Methods |
+|-----|---------|-----------|-------------|
+| `Dataset` | Core data container; LightGBM discretizes data into histograms from this | basic.py:L1693 | `construct()`, `set_field()`, `get_field()`, `save_binary()`, `subset()`, `create_valid()` |
+| `Booster` | The trained model object | basic.py:L3681 | `predict()`, `save_model()`, `dump_model()`, `feature_importance()`, `trees_to_dataframe()`, `refit()` |
+| `CVBooster` | Holds all CV fold boosters | engine.py:L353 | Load/save as JSON, redirect method calls to underlying boosters |
+| `Sequence` | Data access interface for custom loading | basic.py:L842 | Implement `__getitem__(idx)` returning data for given row index |
+| `_InnerPredictor` | Internal fast predictor (not exposed) | basic.py:L908 | Used for sklearn wrapper prediction |
 
 ### Core Training
 
-| API | Purpose | Signature |
-|-----|---------|-----------|
+| API | Purpose | Signature | Graph Node |
+|-----|---------|-----------|-----------|
 | `train()` | Perform the training with given parameters | `train(params, train_set, num_boost_round, valid_sets, feval, callbacks, ...)` | engine.py:L108 |
 | `cv()` | Cross-validation | `cv(params, train_set, num_boost_round, nfold, stratified, feval, callbacks, ...)` | engine.py:L632 |
 
 ### Callbacks
 
-| Callback | Purpose | basic.py:L271 | basic.py:L271 |
-|----------|---------|
-| `log_evaluation()` | Log evaluation results at specified period | callback.py:L110 | callback.py:L110 |
-| `record_evaluation()` | Record evaluation history into `evals_result` dict | callback.py:L182 | callback.py:L182 |
-| `early_stopping()` | Stop training when metric stops improving | callback.py:L462 | callback.py:L462 |
-| `reset_parameter()` | Reset a parameter after first iteration | callback.py:L253 | callback.py:L253 |
+| Callback | Purpose | Graph Node |
+|----------|---------|-----------|
+| `log_evaluation()` | Log evaluation results at specified period | callback.py:L110 |
+| `record_evaluation()` | Record evaluation history into `evals_result` dict | callback.py:L182 |
+| `early_stopping()` | Stop training when metric stops improving | callback.py:L462 |
+| `reset_parameter()` | Reset a parameter after first iteration | callback.py:L253 |
 
 ### Field Operations (Dataset)
 
-| Method | Purpose | basic.py:L212 | basic.py:L212 |
-|--------|---------|
-| `set_field(field_name, data)` | Set label, weight, group, init_score, position |
-| `get_field(field_name)` | Get field data |
-| `set_categorical_feature(features)` | Mark categorical feature indices |
-| `set_feature_name(feature_names)` | Assign feature names |
-| `set_reference(reference)` | Set reference Dataset for aligned binning |
+| Method | Purpose | Graph Node |
+|--------|---------|-----------|
+| `set_field(field_name, data)` | Set label, weight, group, init_score, position | basic.py:L2768 |
+| `get_field(field_name)` | Get field data | basic.py:L2864 |
+| `set_categorical_feature(features)` | Mark categorical feature indices | basic.py:L2925 |
+| `set_feature_name(feature_names)` | Assign feature names | basic.py:L3030 |
+| `set_reference(reference)` | Set reference Dataset for aligned binning | basic.py:L3002 |
 
 ## Common Patterns
 

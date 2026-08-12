@@ -33,22 +33,24 @@ related_skills:
 Extracted from optuna knowledge graph. Source: `optuna.integration` module.
 
 ## Quick Reference
-| Integration | Key Classes | Purpose |
-|-------------|-------------|---------|
-| **LightGBM** | `LightGBMPruningCallback`, `LightGBMTuner`, `LightGBMTunerCV` | Automated LightGBM tuning with step-wise algorithm |
-| **XGBoost** | `XGBoostPruningCallback` | Pruning callback for XGBoost training |
-| **CatBoost** | `CatBoostPruningCallback` | Pruning callback for CatBoost training |
-| **PyTorch Lightning** | `PyTorchLightningPruningCallback` | Pruning callback for PyTorch Lightning Trainer |
-| **PyTorch Ignite** | `PyTorchIgnitePruningHandler` | Pruning handler for PyTorch Ignite |
-| **PyTorch Distributed** | `TorchDistributedTrial` | Synchronized trials across distributed nodes |
-| **TensorFlow** | `TensorFlowPruningHook` | Pruning hook for TensorFlow Estimator |
-| **TF Keras** | `TFKerasPruningCallback` | Pruning callback for TensorFlow Keras |
-| **FastAI** | `FastAIPruningCallback`, `FastAIV2PruningCallback` | Pruning callbacks for FastAI v1 and v2 |
-| **scikit-learn** | `OptunaSearchCV` | GridSearchCV-compatible hyperparameter search |
-| **MLflow** | `MLflowCallback` | Log trials to MLflow tracking server |
-| **Weights & Biases** | `WeightsAndBiasesCallback` | Log trials to W&B dashboard |
-| **Dask** | `DaskStorage` | Distributed storage backend for Dask |
-| **SHAP** | `ShapleyImportanceEvaluator` | SHAP-based parameter importance |
+| Integration | Key Classes | Purpose | Graph Node |
+|-------------|-------------|---------|-----------|
+| **LightGBM** | `LightGBMPruningCallback`, `LightGBMTuner`, `LightGBMTunerCV` | Automated LightGBM tuning with step-wise algorithm | — |
+| **XGBoost** | `XGBoostPruningCallback` | Pruning callback for XGBoost training | — |
+| **CatBoost** | `CatBoostPruningCallback` | Pruning callback for CatBoost training | — |
+| **PyTorch Lightning** | `PyTorchLightningPruningCallback` | Pruning callback for PyTorch Lightning Trainer | — |
+| **PyTorch Ignite** | `PyTorchIgnitePruningHandler` | Pruning handler for PyTorch Ignite | — |
+| **PyTorch Distributed** | `TorchDistributedTrial` | Synchronized trials across distributed nodes | — |
+| **TensorFlow** | `TensorFlowPruningHook` | Pruning hook for TensorFlow Estimator | — |
+| **TF Keras** | `TFKerasPruningCallback` | Pruning callback for TensorFlow Keras | — |
+| **FastAI** | `FastAIPruningCallback`, `FastAIV2PruningCallback` | Pruning callbacks for FastAI v1 and v2 | — |
+| **scikit-learn** | `OptunaSearchCV` | GridSearchCV-compatible hyperparameter search | — |
+| **MLflow** | `MLflowCallback` | Log trials to MLflow tracking server | — |
+| **Weights & Biases** | `WeightsAndBiasesCallback` | Log trials to W&B dashboard | — |
+| **Dask** | `DaskStorage` | Distributed storage backend for Dask | — |
+| **SHAP** | `ShapleyImportanceEvaluator` | SHAP-based parameter importance | — |
+
+> Note: The optuna.integration classes (LightGBMPruningCallback, XGBoostPruningCallback, CatBoostPruningCallback, PyTorchLightningPruningCallback, TorchDistributedTrial, OptunaSearchCV, MLflowCallback, WeightsAndBiasesCallback, etc.) exist in the library but are absent from the committed graph (extraction gap).
 
 ## Common Patterns
 

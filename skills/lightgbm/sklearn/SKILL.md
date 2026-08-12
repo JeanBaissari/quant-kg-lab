@@ -33,42 +33,42 @@ Extracted from LightGBM knowledge graph. Source: `python-package/lightgbm/sklear
 ## Quick Reference
 ### Estimators
 
-| Class | Purpose | Special Methods | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node |
-|-------|---------|----------------|
-| `LGBMModel` | Base class for all sklearn wrappers | `booster_`, `feature_importances_`, `evals_result_`, `n_features_in_`, `n_estimators_`, `n_iter_` | sklearn.py:L575 |
-| `LGBMClassifier` | Classification (binary + multi-class) | `predict_proba()`, `decision_function()`, `classes_`, `n_classes_` | : |
-| `LGBMRegressor` | Regression | `predict()` | : |
-| `LGBMRanker` | Learning-to-rank | `predict()` — requires `group` parameter | : |
+| Class | Purpose | Graph Node | Special Methods |
+|-------|---------|-----------|----------------|
+| `LGBMModel` | Base class for all sklearn wrappers | sklearn.py:L575 | `booster_`, `feature_importances_`, `evals_result_`, `n_features_in_`, `n_estimators_`, `n_iter_` |
+| `LGBMClassifier` | Classification (binary + multi-class) | sklearn.py:L1564 | `predict_proba()`, `decision_function()`, `classes_`, `n_classes_` |
+| `LGBMRegressor` | Regression | sklearn.py:L1449 | `predict()` |
+| `LGBMRanker` | Learning-to-rank | sklearn.py:L1874 | `predict()` — requires `group` parameter |
 
 ### Key Attributes (on fitted model)
 
-| Attribute | Description |
-|-----------|-------------|
-| `booster_` | Underlying `lgb.Booster` object |
-| `feature_importances_` | Feature importance array (default: `'split'`) |
-| `feature_name_` | List of feature names (internal) |
-| `feature_names_in_` | Feature names (sklearn-compatible, when X has columns) |
-| `evals_result_` | Dict of evaluation metrics per iteration |
-| `best_score_` | Dict of best scores from early stopping |
-| `best_iteration_` | Best iteration (0-based) |
-| `objective_` | Concrete objective string/callable used during fit |
-| `n_estimators_` | True number of boosting iterations performed |
-| `n_iter_` | Same as `n_estimators_` (scikit-learn convention) |
-| `n_features_in_` | Number of features seen during fit |
-| `classes_` | Class labels (classifier only, shape: [n_classes]) |
-| `n_classes_` | Number of classes (classifier only) |
+| Attribute | Description | Graph Node |
+|-----------|-------------|-----------|
+| `booster_` | Underlying `lgb.Booster` object | sklearn.py:L575 |
+| `feature_importances_` | Feature importance array (default: `'split'`) | sklearn.py:L575 |
+| `feature_name_` | List of feature names (internal) | sklearn.py:L575 |
+| `feature_names_in_` | Feature names (sklearn-compatible, when X has columns) | sklearn.py:L575 |
+| `evals_result_` | Dict of evaluation metrics per iteration | sklearn.py:L575 |
+| `best_score_` | Dict of best scores from early stopping | sklearn.py:L575 |
+| `best_iteration_` | Best iteration (0-based) | sklearn.py:L575 |
+| `objective_` | Concrete objective string/callable used during fit | sklearn.py:L575 |
+| `n_estimators_` | True number of boosting iterations performed | sklearn.py:L575 |
+| `n_iter_` | Same as `n_estimators_` (scikit-learn convention) | sklearn.py:L575 |
+| `n_features_in_` | Number of features seen during fit | sklearn.py:L575 |
+| `classes_` | Class labels (classifier only, shape: [n_classes]) | sklearn.py:L1564 |
+| `n_classes_` | Number of classes (classifier only) | sklearn.py:L1564 |
 
 ### Common Parameters
 
-| Parameter | Type | Default | Description | basic.py:L4167 |
+| Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
 | `n_estimators` | int | 100 | Number of boosting rounds |
 | `num_leaves` | int | 31 | Maximum tree leaves (leaf-wise growth) |
 | `max_depth` | int | -1 | Max tree depth; -1 = no limit |
 | `learning_rate` | float | 0.1 | Step size shrinkage |
-| `objective` | str | 'regression' | Objective: 'regression', 'binary', 'multiclass', 'lambdarank' | sklearn.py:L1336 |
+| `objective` | str | 'regression' | Objective: 'regression', 'binary', 'multiclass', 'lambdarank' |
 | `boosting_type` | str | 'gbdt' | 'gbdt', 'dart', 'goss', 'rf' |
-| `metric` | str/list | '' | Metric: 'rmse', 'binary_logloss', 'auc', 'ndcg', etc. | plotting.py:L294 |
+| `metric` | str/list | '' | Metric: 'rmse', 'binary_logloss', 'auc', 'ndcg', etc. |
 | `num_iterations` | int | 100 | Alias for `n_estimators` (both work) |
 | `early_stopping_rounds` | int | 0 | Rounds without improvement; 0 = disabled |
 | `importance_type` | str | 'split' | 'split' (default) or 'gain' |
@@ -86,18 +86,18 @@ Extracted from LightGBM knowledge graph. Source: `python-package/lightgbm/sklear
 
 ### Parameter Aliases
 
-| Primary | Alias |
-|---------|-------|
-| `n_estimators` | `num_iterations`, `n_estimators`, `num_round`, `num_trees` |
-| `learning_rate` | `eta`, `shrinkage_rate` |
-| `num_leaves` | `num_leaf` |
-| `feature_fraction` | `colsample_bytree` |
-| `bagging_fraction` | `subsample`, `sub_row` |
-| `bagging_freq` | `subsample_freq` |
-| `min_child_samples` | `min_data_in_leaf` |
-| `reg_alpha` | `lambda_l1` |
-| `reg_lambda` | `lambda_l2` |
-| `device_type` | `device`, `boosting` |
+| Primary | Alias | Graph Node |
+|---------|-------|-----------|
+| `n_estimators` | `num_iterations`, `n_estimators`, `num_round`, `num_trees` | — |
+| `learning_rate` | `eta`, `shrinkage_rate` | — |
+| `num_leaves` | `num_leaf` | — |
+| `feature_fraction` | `colsample_bytree` | — |
+| `bagging_fraction` | `subsample`, `sub_row` | — |
+| `bagging_freq` | `subsample_freq` | — |
+| `min_child_samples` | `min_data_in_leaf` | — |
+| `reg_alpha` | `lambda_l1` | — |
+| `reg_lambda` | `lambda_l2` | — |
+| `device_type` | `device`, `boosting` | — |
 
 ## Common Patterns
 
@@ -281,10 +281,10 @@ study.optimize(objective, n_trials=100)
 ### XGBoost Sklearn Equivalents
 | LightGBM | XGBoost |
 |----------|---------|
-| `LGBMClassifier` | `XGBClassifier` |
-| `LGBMRegressor` | `XGBRegressor` |
-| `LGBMRanker` | `XGBRanker` |
-| `n_estimators` / `num_iterations` | `n_estimators` |
+| `LGBMClassifier` | `XGBClassifier` | — |
+| `LGBMRegressor` | `XGBRegressor` | — |
+| `LGBMRanker` | `XGBRanker` | — |
+| `n_estimators` / `num_iterations` | `n_estimators` | — |
 | `num_leaves` | `max_depth` (XGBoost is depth-wise) |
 | `importance_type='split'` | `importance_type='gain'` (different defaults!) |
 

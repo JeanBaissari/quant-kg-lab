@@ -33,18 +33,18 @@ related_skills:
 Extracted from optuna knowledge graph. Source: `optuna.study` module.
 
 ## Quick Reference
-| API | Purpose | Key Parameters | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node |
-|-----|---------|----------------|
+| API | Purpose | Key Parameters | Graph Node |
+|-----|---------|----------------|-----------|
 | `create_study()` | Create a new optimization study | `direction`, `sampler`, `pruner`, `storage`, `study_name` | study/study.py:L1204 |
-| `Study.optimize()` | Run optimization with an objective function | `objective`, `n_trials`, `timeout`, `callbacks` | study/_optimize.py:L1 |
-| `Study.ask()` | Suggest next trial parameters (without evaluating) | `fixed_distributions` | cli.py:L655 |
-| `Study.tell()` | Report trial result back to study | `trial`, `values`, `state` | cli.py:L760 |
+| `Study.optimize()` | Run optimization with an objective function | `objective`, `n_trials`, `timeout`, `callbacks` | study/study.py:L414 |
+| `Study.ask()` | Suggest next trial parameters (without evaluating) | `fixed_distributions` | study/study.py:L528 |
+| `Study.tell()` | Report trial result back to study | `trial`, `values`, `state` | study/study.py:L614 |
 | `load_study()` | Load existing study from storage | `study_name`, `storage` | study/study.py:L1355 |
 | `delete_study()` | Delete study and all trials from storage | `study_name`, `storage` | study/study.py:L1442 |
 | `copy_study()` | Copy study between storages | `from_study_name`, `to_study_name`, `from_storage`, `to_storage` | study/study.py:L1505 |
 | `get_all_study_names()` | List all studies in storage | `storage` | study/study.py:L1706 |
-| `Study.best_trial` | Get the best trial object | — (property) |
-| `Study.trials_dataframe()` | Get trials as pandas DataFrame | — |
+| `Study.best_trial` | Get the best trial object | — (property) | study/study.py:L141 |
+| `Study.trials_dataframe()` | Get trials as pandas DataFrame | — | study/study.py:L766 |
 
 ## Common Patterns
 

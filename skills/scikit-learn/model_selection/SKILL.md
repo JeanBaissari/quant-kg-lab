@@ -32,31 +32,31 @@ Extracted from scikit-learn knowledge graph. Source: `sklearn.model_selection` m
 ## Quick Reference
 ### Cross-Validation Splitters
 
-| Class | Purpose | Key Params | Graph Node |
-|-------|---------|------------|-----------|
-| `KFold` | K-fold cross-validation | `n_splits`, `shuffle`, `random_state` | model_selection/_split.py:L437 |
-| `StratifiedKFold` | Stratified K-fold (preserves class %) | `n_splits`, `shuffle`, `random_state` | model_selection/_split.py:L687 |
-| `GroupKFold` | Non-overlapping group K-fold | `n_splits` | model_selection/_split.py:L533 |
-| `TimeSeriesSplit` | Time-series aware CV | `n_splits`, `max_train_size`, `test_size` | model_selection/_split.py:L1116 |
-| `LeaveOneOut` | Leave-one-out CV | (none) | model_selection/_split.py:L171 |
-| `LeavePOut` | Leave-P-out CV | `p` | model_selection/_split.py:L250 |
-| `ShuffleSplit` | Random train/test splits | `n_splits`, `test_size`, `random_state` | model_selection/_split.py:L1982 |
-| `StratifiedShuffleSplit` | Stratified shuffle split | `n_splits`, `test_size`, `random_state` | model_selection/_split.py:L2233 |
-| `GroupShuffleSplit` | Group-aware shuffle split | `n_splits`, `test_size`, `random_state` | model_selection/_split.py:L2087 |
-| `RepeatedKFold` | Repeated K-fold | `n_splits`, `n_repeats`, `random_state` | model_selection/_split.py:L1683 |
-| `RepeatedStratifiedKFold` | Repeated stratified K-fold | `n_splits`, `n_repeats`, `random_state` | model_selection/_split.py:L1749 |
-| `PredefinedSplit` | User-defined split indices | `test_fold` | model_selection/_split.py:L2520 |
+| Class | Purpose | Graph Node | Key Params |
+|-------|---------|-----------|------------|
+| `KFold` | K-fold cross-validation | model_selection/_split.py:L437 | `n_splits`, `shuffle`, `random_state` |
+| `StratifiedKFold` | Stratified K-fold (preserves class %) | model_selection/_split.py:L687 | `n_splits`, `shuffle`, `random_state` |
+| `GroupKFold` | Non-overlapping group K-fold | model_selection/_split.py:L533 | `n_splits` |
+| `TimeSeriesSplit` | Time-series aware CV | model_selection/_split.py:L1116 | `n_splits`, `max_train_size`, `test_size` |
+| `LeaveOneOut` | Leave-one-out CV | model_selection/_split.py:L171 | (none) |
+| `LeavePOut` | Leave-P-out CV | model_selection/_split.py:L250 | `p` |
+| `ShuffleSplit` | Random train/test splits | model_selection/_split.py:L1982 | `n_splits`, `test_size`, `random_state` |
+| `StratifiedShuffleSplit` | Stratified shuffle split | model_selection/_split.py:L2233 | `n_splits`, `test_size`, `random_state` |
+| `GroupShuffleSplit` | Group-aware shuffle split | model_selection/_split.py:L2087 | `n_splits`, `test_size`, `random_state` |
+| `RepeatedKFold` | Repeated K-fold | model_selection/_split.py:L1683 | `n_splits`, `n_repeats`, `random_state` |
+| `RepeatedStratifiedKFold` | Repeated stratified K-fold | model_selection/_split.py:L1749 | `n_splits`, `n_repeats`, `random_state` |
+| `PredefinedSplit` | User-defined split indices | model_selection/_split.py:L2520 | `test_fold` |
 
 ### Hyperparameter Search
 
-| Class | Purpose | Key Params | Graph Node |
-|-------|---------|------------|-----------|
-| `GridSearchCV` | Exhaustive param grid search | `param_grid`, `cv`, `scoring`, `n_jobs`, `refit` | model_selection/_search.py:L1346 |
-| `RandomizedSearchCV` | Randomized param sampling | `param_distributions`, `n_iter`, `cv`, `scoring` | model_selection/_search.py:L1726 |
-| `HalvingGridSearchCV` | Successive halving grid search | `param_grid`, `cv`, `factor`, `resource` | model_selection/_search_successive_halving.py:L426 |
-| `HalvingRandomSearchCV` | Successive halving random search | `param_distributions`, `n_candidates`, `cv` | model_selection/_search_successive_halving.py:L785 |
-| `ParameterGrid` | Cartesian product of param grid | `param_grid` | model_selection/_search.py:L70 |
-| `ParameterSampler` | Sample from param distributions | `param_distributions`, `n_iter`, `random_state` | model_selection/_search.py:L223 |
+| Class | Purpose | Graph Node | Key Params |
+|-------|---------|-----------|------------|
+| `GridSearchCV` | Exhaustive param grid search | model_selection/_search.py:L1346 | `param_grid`, `cv`, `scoring`, `n_jobs`, `refit` |
+| `RandomizedSearchCV` | Randomized param sampling | model_selection/_search.py:L1726 | `param_distributions`, `n_iter`, `cv`, `scoring` |
+| `HalvingGridSearchCV` | Successive halving grid search | model_selection/_search_successive_halving.py:L426 | `param_grid`, `cv`, `factor`, `resource` |
+| `HalvingRandomSearchCV` | Successive halving random search | model_selection/_search_successive_halving.py:L785 | `param_distributions`, `n_candidates`, `cv` |
+| `ParameterGrid` | Cartesian product of param grid | model_selection/_search.py:L70 | `param_grid` |
+| `ParameterSampler` | Sample from param distributions | model_selection/_search.py:L223 | `param_distributions`, `n_iter`, `random_state` |
 
 ### Tuning Utilities
 
@@ -70,7 +70,7 @@ Extracted from scikit-learn knowledge graph. Source: `sklearn.model_selection` m
 ### Core Functions
 
 | Function | Purpose | Key Params | Graph Node |
-|----------|---------|------------|
+|----------|---------|------------|-----------|
 | `train_test_split` | Split arrays into train/test | `test_size`, `random_state`, `stratify` | model_selection/_split.py:L2797 |
 | `cross_val_score` | Evaluate score by CV | `estimator`, `X`, `y`, `cv`, `scoring` | model_selection/_validation.py:L512 |
 | `cross_validate` | Evaluate multiple metrics via CV | `cv`, `scoring` (dict), `return_train_score` | model_selection/_validation.py:L101 |

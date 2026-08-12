@@ -34,18 +34,18 @@ related_skills:
 Extracted from optuna knowledge graph. Source: `optuna.trial` module.
 
 ## Quick Reference
-| API | Purpose | Parameters | Graph Node | Graph Node |
-|-----|---------|------------|
-| `Trial.suggest_float()` | Suggest a floating-point parameter | `name`, `low`, `high`, `step`, `log` |
-| `Trial.suggest_int()` | Suggest an integer parameter | `name`, `low`, `high`, `step`, `log` |
-| `Trial.suggest_categorical()` | Suggest a categorical choice | `name`, `choices` |
-| `Trial.suggest_uniform()` | Deprecated: use `suggest_float` | `name`, `low`, `high` |
-| `Trial.suggest_loguniform()` | Deprecated: use `suggest_float(log=True)` | `name`, `low`, `high` |
-| `Trial.suggest_discrete_uniform()` | Deprecated: use `suggest_float(step=...)` | `name`, `low`, `high`, `q` |
-| `Trial.should_prune()` | Check if trial should be pruned | — |
+| API | Purpose | Parameters | Graph Node |
+|-----|---------|------------|-----------|
+| `Trial.suggest_float()` | Suggest a floating-point parameter | `name`, `low`, `high`, `step`, `log` | trial/_trial.py:L87 |
+| `Trial.suggest_int()` | Suggest an integer parameter | `name`, `low`, `high`, `step`, `log` | trial/_trial.py:L254 |
+| `Trial.suggest_categorical()` | Suggest a categorical choice | `name`, `choices` | trial/_trial.py:L344 |
+| `Trial.suggest_uniform()` | Deprecated: use `suggest_float` | `name`, `low`, `high` | trial/_base.py:L42 |
+| `Trial.suggest_loguniform()` | Deprecated: use `suggest_float(log=True)` | `name`, `low`, `high` | trial/_base.py:L47 |
+| `Trial.suggest_discrete_uniform()` | Deprecated: use `suggest_float(step=...)` | `name`, `low`, `high`, `q` | trial/_base.py:L52 |
+| `Trial.should_prune()` | Check if trial should be pruned | — | trial/_trial.py:L520 |
 | `Trial.report()` | Report intermediate objective value | `value`, `step` | trial/_base.py:L94 |
-| `Trial.set_user_attr()` | Attach custom metadata to trial | `key`, `value` |
-| `Trial.params` | Access current trial parameters | — (property) | _gp/gp.py:L305 |
+| `Trial.set_user_attr()` | Attach custom metadata to trial | `key`, `value` | trial/_trial.py:L552 |
+| `Trial.params` | Access current trial parameters | — (property) | trial/_trial.py:L713 |
 
 ## Common Patterns
 

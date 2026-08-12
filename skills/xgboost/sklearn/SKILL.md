@@ -33,28 +33,28 @@ Extracted from XGBoost knowledge graph. Source: `python-package/xgboost/sklearn.
 ## Quick Reference
 ### Estimators
 
-| Class | Purpose | Special Methods | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node |
-|-------|---------|----------------|
-| `XGBModel` | Base class for all sklearn wrappers | `get_booster()`, `get_xgb_params()`, `evals_result()`, `feature_importances_`, `save_model()`, `load_model()` | : |
-| `XGBClassifier` | Classification (binary + multi-class) | `predict_proba()`, `classes_` | sklearn.py:L1758 |
-| `XGBRegressor` | Regression | `predict()`, `coef_`, `intercept_` (for gblinear) | sklearn.py:L2051 |
-| `XGBRanker` | Learning-to-rank | `predict()`, `score()` — requires `qid` in input | sklearn.py:L2194 |
-| `XGBRFClassifier` | Random forest classifier (deprecated) | Inherits from XGBClassifier — use `num_parallel_tree` instead | sklearn.py:L1995 |
-| `XGBRFRegressor` | Random forest regressor (deprecated) | Inherits from XGBRegressor — use `num_parallel_tree` instead | sklearn.py:L2075 |
+| Class | Purpose | Graph Node | Special Methods |
+|-------|---------|-----------|----------------|
+| `XGBModel` | Base class for all sklearn wrappers | sklearn.py:L866 | `get_booster()`, `get_xgb_params()`, `evals_result()`, `feature_importances_`, `save_model()`, `load_model()` |
+| `XGBClassifier` | Classification (binary + multi-class) | sklearn.py:L1758 | `predict_proba()`, `classes_` |
+| `XGBRegressor` | Regression | sklearn.py:L2051 | `predict()`, `coef_`, `intercept_` (for gblinear) |
+| `XGBRanker` | Learning-to-rank | sklearn.py:L2194 | `predict()`, `score()` — requires `qid` in input |
+| `XGBRFClassifier` | Random forest classifier (deprecated) | sklearn.py:L1995 | Inherits from XGBClassifier — use `num_parallel_tree` instead |
+| `XGBRFRegressor` | Random forest regressor (deprecated) | sklearn.py:L2075 | Inherits from XGBRegressor — use `num_parallel_tree` instead |
 
 ### Key Attributes (on fitted model)
 
-| Attribute | Description |
-|-----------|-------------|
-| `booster_` | Underlying `xgb.Booster` object |
-| `feature_importances_` | Feature importance array (depends on `importance_type`) |
-| `evals_result_` | Dict of evaluation metrics per iteration |
-| `best_score_` | Best score from early stopping |
-| `best_iteration_` | 0-based best iteration |
-| `n_features_in_` | Number of features seen during fit |
-| `feature_names_in_` | Feature names (when X has column names) |
-| `classes_` | Class labels (classifier only) |
-| `coef_` / `intercept_` | Coefficients (linear models only) |
+| Attribute | Description | Graph Node |
+|-----------|-------------|-----------|
+| `booster_` | Underlying `xgb.Booster` object | sklearn.py:L866 |
+| `feature_importances_` | Feature importance array (depends on `importance_type`) | sklearn.py:L866 |
+| `evals_result_` | Dict of evaluation metrics per iteration | sklearn.py:L866 |
+| `best_score_` | Best score from early stopping | sklearn.py:L866 |
+| `best_iteration_` | 0-based best iteration | sklearn.py:L866 |
+| `n_features_in_` | Number of features seen during fit | sklearn.py:L866 |
+| `feature_names_in_` | Feature names (when X has column names) | sklearn.py:L866 |
+| `classes_` | Class labels (classifier only) | sklearn.py:L1758 |
+| `coef_` / `intercept_` | Coefficients (linear models only) | sklearn.py:L2051 |
 
 ### Common Parameters
 
@@ -63,12 +63,12 @@ Extracted from XGBoost knowledge graph. Source: `python-package/xgboost/sklearn.
 | `n_estimators` | int | 100 | Number of boosting rounds |
 | `max_depth` | int | 6 | Maximum tree depth |
 | `learning_rate` | float | 0.3 | Step size shrinkage (eta) |
-| `objective` | str | 'reg:squarederror' | Learning objective | : |
+| `objective` | str | 'reg:squarederror' | Learning objective |
 | `booster` | str | 'gbtree' | Booster type: 'gbtree', 'gblinear', 'dart' | core.py:L1750 |
 | `eval_metric` | str/list | None | Metric(s) for evaluation |
 | `early_stopping_rounds` | int | None | Rounds without improvement before stopping |
 | `importance_type` | str | 'gain' | Feature importance metric: 'gain', 'weight', 'cover', 'total_gain', 'total_cover' |
-| `device` | str | 'cpu' | 'cpu', 'cuda', 'gpu' | spark/core.py:L273 |
+| `device` | str | 'cpu' | 'cpu', 'cuda', 'gpu' | — |
 | `enable_categorical` | bool | False | Enable categorical feature support |
 | `max_cat_to_onehot` | int | 4 | Max categories for one-hot encoding |
 | `verbosity` | int | 1 | 0 (silent), 1 (warning), 2 (info), 3 (debug) |

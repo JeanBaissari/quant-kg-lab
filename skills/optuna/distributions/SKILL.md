@@ -34,17 +34,17 @@ related_skills:
 Extracted from optuna knowledge graph. Source: `optuna.distributions` module.
 
 ## Quick Reference
-| Distribution | Domain | Internal Repr | Use Case | Graph Node | Graph Node | Graph Node |
-|-------------|--------|---------------|----------|
+| Distribution | Domain | Internal Repr | Use Case | Graph Node |
+|-------------|--------|---------------|----------|-----------|
 | `FloatDistribution` | Continuous float `[low, high]` | `[0, 1]` uniform | Learning rate, dropout, regularization | distributions.py:L109 |
 | `IntDistribution` | Discrete integer `[low, high]` | `[0, N-1]` uniform | Number of layers, units, epochs | distributions.py:L310 |
 | `CategoricalDistribution` | Finite set of choices | Index in choices | Optimizer, activation function, architecture | distributions.py:L470 |
-| `BaseDistribution` (ABC) | Abstract base | — | Custom distribution implementation |
-| `UniformDistribution` (deprecated) | Continuous uniform | `[0, 1]` | **Use `FloatDistribution` instead** |
-| `LogUniformDistribution` (deprecated) | Continuous log-uniform | `[0, 1]` | **Use `FloatDistribution(log=True)` instead** |
-| `DiscreteUniformDistribution` (deprecated) | Discrete uniform | `[0, N-1]` | **Use `IntDistribution` or `FloatDistribution(step=...)` instead** |
-| `IntUniformDistribution` (deprecated) | Integer uniform | `[0, N-1]` | **Use `IntDistribution` instead** |
-| `IntLogUniformDistribution` (deprecated) | Integer log-uniform | `[0, N-1]` | **Use `IntDistribution(log=True)` instead** |
+| `BaseDistribution` (ABC) | Abstract base | — | Custom distribution implementation | distributions.py:L31 |
+| `UniformDistribution` (deprecated) | Continuous uniform | `[0, 1]` | **Use `FloatDistribution` instead** | distributions.py:L201 |
+| `LogUniformDistribution` (deprecated) | Continuous log-uniform | `[0, 1]` | **Use `FloatDistribution(log=True)` instead** | distributions.py:L228 |
+| `DiscreteUniformDistribution` (deprecated) | Discrete uniform | `[0, N-1]` | **Use `IntDistribution` or `FloatDistribution(step=...)` instead** | distributions.py:L255 |
+| `IntUniformDistribution` (deprecated) | Integer uniform | `[0, N-1]` | **Use `IntDistribution` instead** | distributions.py:L396 |
+| `IntLogUniformDistribution` (deprecated) | Integer log-uniform | `[0, N-1]` | **Use `IntDistribution(log=True)` instead** | distributions.py:L430 |
 
 ## Distribution Internal/External Representation
 

@@ -12,20 +12,14 @@
       "api_fail": [],
       "api_warn": [],
       "meta_warn": [],
-      "provenance": [],
-      "known": [
-        "section variant: 'Graph Provenance' \u2014 spec requires '## Provenance'"
-      ]
+      "provenance": []
     },
     "skills/backtrader/core/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
       "meta_warn": [],
-      "provenance": [],
-      "known": [
-        "section variant: 'Graph Provenance' \u2014 spec requires '## Provenance'"
-      ]
+      "provenance": []
     },
     "skills/lightgbm/SKILL.md": {
       "lint": [],
@@ -41,11 +35,7 @@
         "func num_leaves: not found (library not installed, no graph node)"
       ],
       "meta_warn": [],
-      "provenance": [],
-      "known": [
-        "section variant: 'Common Pitfalls' \u2014 spec requires '## Pitfalls'",
-        "missing required section: ## Provenance"
-      ]
+      "provenance": []
     },
     "skills/lightgbm/sklearn/SKILL.md": {
       "lint": [],
@@ -90,10 +80,7 @@
         "func verbosity: not found (library not installed, no graph node)"
       ],
       "meta_warn": [],
-      "provenance": [],
-      "known": [
-        "missing required section: ## Provenance"
-      ]
+      "provenance": []
     },
     "skills/numpy/SKILL.md": {
       "lint": [],
@@ -107,22 +94,14 @@
       "api_fail": [],
       "api_warn": [],
       "meta_warn": [],
-      "provenance": [],
-      "known": [
-        "missing required section: ## Quick Reference",
-        "missing required section: ## Provenance"
-      ]
+      "provenance": []
     },
     "skills/numpy/linalg/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
       "meta_warn": [],
-      "provenance": [],
-      "known": [
-        "missing required section: ## Quick Reference",
-        "missing required section: ## Provenance"
-      ]
+      "provenance": []
     },
     "skills/numpy/random/SKILL.md": {
       "lint": [],
@@ -131,11 +110,7 @@
       ],
       "api_warn": [],
       "meta_warn": [],
-      "provenance": [],
-      "known": [
-        "missing required section: ## Quick Reference",
-        "missing required section: ## Provenance"
-      ]
+      "provenance": []
     },
     "skills/optuna/SKILL.md": {
       "lint": [],
@@ -149,10 +124,7 @@
       "api_fail": [],
       "api_warn": [],
       "meta_warn": [],
-      "provenance": [],
-      "known": [
-        "missing required section: ## Provenance"
-      ]
+      "provenance": []
     },
     "skills/optuna/integration/SKILL.md": {
       "lint": [],
@@ -164,60 +136,42 @@
         "class TorchDistributedTrial: not found (library not installed, no graph node)"
       ],
       "meta_warn": [],
-      "provenance": [],
-      "known": [
-        "missing required section: ## Provenance"
-      ]
+      "provenance": []
     },
     "skills/optuna/pruners/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
       "meta_warn": [],
-      "provenance": [],
-      "known": [
-        "missing required section: ## Provenance"
-      ]
+      "provenance": []
     },
     "skills/optuna/samplers/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
       "meta_warn": [],
-      "provenance": [],
-      "known": [
-        "missing required section: ## Provenance"
-      ]
+      "provenance": []
     },
     "skills/optuna/study/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
       "meta_warn": [],
-      "provenance": [],
-      "known": [
-        "missing required section: ## Provenance"
-      ]
+      "provenance": []
     },
     "skills/optuna/trial/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
       "meta_warn": [],
-      "provenance": [],
-      "known": [
-        "missing required section: ## Provenance"
-      ]
+      "provenance": []
     },
     "skills/optuna/visualization/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
       "meta_warn": [],
-      "provenance": [],
-      "known": [
-        "missing required section: ## Provenance"
-      ]
+      "provenance": []
     },
     "skills/pandas/SKILL.md": {
       "lint": [],
@@ -231,33 +185,21 @@
       "api_fail": [],
       "api_warn": [],
       "meta_warn": [],
-      "provenance": [],
-      "known": [
-        "missing required section: ## Quick Reference",
-        "missing required section: ## Provenance"
-      ]
+      "provenance": []
     },
     "skills/pandas/ts/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
       "meta_warn": [],
-      "provenance": [],
-      "known": [
-        "missing required section: ## Quick Reference",
-        "missing required section: ## Provenance"
-      ]
+      "provenance": []
     },
     "skills/quant-patterns/factor-importance/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
       "meta_warn": [],
-      "provenance": [],
-      "known": [
-        "related_skills: 'scikit-learn-inspection' does not resolve to any skill in the registry",
-        "composes: 'scikit-learn-inspection' does not resolve to any skill in the registry"
-      ]
+      "provenance": []
     },
     "skills/quant-patterns/factor-research/SKILL.md": {
       "lint": [],
@@ -292,11 +234,7 @@
       "api_fail": [],
       "api_warn": [],
       "meta_warn": [],
-      "provenance": [],
-      "known": [
-        "related_skills: 'scikit-learn-covariance' does not resolve to any skill in the registry",
-        "composes: 'scikit-learn-covariance' does not resolve to any skill in the registry"
-      ]
+      "provenance": []
     },
     "skills/quant-patterns/regime-detection/SKILL.md": {
       "lint": [],
@@ -324,154 +262,112 @@
       "api_fail": [],
       "api_warn": [],
       "meta_warn": [],
-      "provenance": [],
-      "known": [
-        "missing required section: ## Provenance"
-      ]
+      "provenance": []
     },
     "skills/scikit-learn/compose/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
       "meta_warn": [],
-      "provenance": [],
-      "known": [
-        "missing required section: ## Common Patterns",
-        "section variant: 'Common Pitfalls' \u2014 spec requires '## Pitfalls'",
-        "missing required section: ## Provenance"
-      ]
+      "provenance": []
+    },
+    "skills/scikit-learn/covariance/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
     },
     "skills/scikit-learn/decomposition/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
       "meta_warn": [],
-      "provenance": [],
-      "known": [
-        "missing required section: ## Common Patterns",
-        "section variant: 'Common Pitfalls' \u2014 spec requires '## Pitfalls'",
-        "missing required section: ## Provenance"
-      ]
+      "provenance": []
     },
     "skills/scikit-learn/ensemble/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
       "meta_warn": [],
-      "provenance": [],
-      "known": [
-        "missing required section: ## Provenance"
-      ]
+      "provenance": []
     },
     "skills/scikit-learn/feature_selection/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
       "meta_warn": [],
-      "provenance": [],
-      "known": [
-        "missing required section: ## Common Patterns",
-        "section variant: 'Common Pitfalls' \u2014 spec requires '## Pitfalls'",
-        "missing required section: ## Provenance"
-      ]
+      "provenance": []
     },
     "skills/scikit-learn/gaussian_process/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
       "meta_warn": [],
-      "provenance": [],
-      "known": [
-        "missing required section: ## Provenance"
-      ]
+      "provenance": []
     },
     "skills/scikit-learn/impute/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
       "meta_warn": [],
-      "provenance": [],
-      "known": [
-        "missing required section: ## Provenance"
-      ]
+      "provenance": []
+    },
+    "skills/scikit-learn/inspection/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
     },
     "skills/scikit-learn/linear_model/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
       "meta_warn": [],
-      "provenance": [],
-      "known": [
-        "missing required section: ## Common Patterns",
-        "section variant: 'Common Pitfalls' \u2014 spec requires '## Pitfalls'",
-        "missing required section: ## Provenance"
-      ]
+      "provenance": []
     },
     "skills/scikit-learn/metrics/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
       "meta_warn": [],
-      "provenance": [],
-      "known": [
-        "missing required section: ## Common Patterns",
-        "section variant: 'Common Pitfalls' \u2014 spec requires '## Pitfalls'",
-        "missing required section: ## Provenance"
-      ]
+      "provenance": []
     },
     "skills/scikit-learn/model_selection/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
       "meta_warn": [],
-      "provenance": [],
-      "known": [
-        "missing required section: ## Common Patterns",
-        "section variant: 'Common Pitfalls' \u2014 spec requires '## Pitfalls'",
-        "missing required section: ## Provenance"
-      ]
+      "provenance": []
     },
     "skills/scikit-learn/neural_network/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
       "meta_warn": [],
-      "provenance": [],
-      "known": [
-        "missing required section: ## Provenance"
-      ]
+      "provenance": []
     },
     "skills/scikit-learn/preprocessing/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
       "meta_warn": [],
-      "provenance": [],
-      "known": [
-        "missing required section: ## Common Patterns",
-        "section variant: 'Common Pitfalls' \u2014 spec requires '## Pitfalls'",
-        "missing required section: ## Provenance"
-      ]
+      "provenance": []
     },
     "skills/scikit-learn/svm/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
       "meta_warn": [],
-      "provenance": [],
-      "known": [
-        "missing required section: ## Provenance"
-      ]
+      "provenance": []
     },
     "skills/scikit-learn/tree/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
       "meta_warn": [],
-      "provenance": [],
-      "known": [
-        "missing required section: ## Provenance"
-      ]
+      "provenance": []
     },
     "skills/scipy/SKILL.md": {
       "lint": [],
@@ -485,36 +381,26 @@
       "api_fail": [],
       "api_warn": [],
       "meta_warn": [],
-      "provenance": [],
-      "known": [
-        "missing required section: ## Quick Reference",
-        "missing required section: ## Provenance"
-      ]
+      "provenance": []
     },
     "skills/scipy/signal/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
       "meta_warn": [],
-      "provenance": [],
-      "known": [
-        "missing required section: ## Quick Reference",
-        "missing required section: ## Provenance"
-      ]
+      "provenance": []
     },
     "skills/scipy/stats/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
       "meta_warn": [],
-      "provenance": [],
-      "known": [
-        "missing required section: ## Quick Reference",
-        "missing required section: ## Provenance"
-      ]
+      "provenance": []
     },
     "skills/ta-lib/indicators/SKILL.md": {
-      "lint": [],
+      "lint": [
+        "graph_hash mismatch: expected 1cdcccf662bedb05 (sha256(knowledge_graphs/ta-lib/.graphify/graph.json)[:16]), found 388dac894f0acf64"
+      ],
       "api_fail": [],
       "api_warn": [
         "class AD: not found (library not installed, no graph node)",
@@ -549,11 +435,7 @@
         "class WMA: not found (library not installed, no graph node)"
       ],
       "meta_warn": [],
-      "provenance": [],
-      "known": [
-        "missing required section: ## Quick Reference",
-        "section variant: 'Graph Provenance' \u2014 spec requires '## Provenance'"
-      ]
+      "provenance": []
     },
     "skills/vectorbt/SKILL.md": {
       "lint": [],
@@ -567,20 +449,14 @@
       "api_fail": [],
       "api_warn": [],
       "meta_warn": [],
-      "provenance": [],
-      "known": [
-        "section variant: 'Graph Provenance' \u2014 spec requires '## Provenance'"
-      ]
+      "provenance": []
     },
     "skills/vectorbt/portfolio/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
       "meta_warn": [],
-      "provenance": [],
-      "known": [
-        "section variant: 'Graph Provenance' \u2014 spec requires '## Provenance'"
-      ]
+      "provenance": []
     },
     "skills/vectorbt/signals/SKILL.md": {
       "lint": [],
@@ -589,10 +465,7 @@
       ],
       "api_warn": [],
       "meta_warn": [],
-      "provenance": [],
-      "known": [
-        "section variant: 'Graph Provenance' \u2014 spec requires '## Provenance'"
-      ]
+      "provenance": []
     },
     "skills/xgboost/SKILL.md": {
       "lint": [],
@@ -606,11 +479,7 @@
       "api_fail": [],
       "api_warn": [],
       "meta_warn": [],
-      "provenance": [],
-      "known": [
-        "section variant: 'Common Pitfalls' \u2014 spec requires '## Pitfalls'",
-        "missing required section: ## Provenance"
-      ]
+      "provenance": []
     },
     "skills/xgboost/sklearn/SKILL.md": {
       "lint": [],
@@ -639,15 +508,12 @@
         "func verbosity: not found (library not installed, no graph node)"
       ],
       "meta_warn": [],
-      "provenance": [],
-      "known": [
-        "missing required section: ## Provenance"
-      ]
+      "provenance": []
     }
   },
   "router_errors": [],
   "totals": {
-    "lint": 0,
+    "lint": 1,
     "api_fail": 2,
     "provenance": 0
   }

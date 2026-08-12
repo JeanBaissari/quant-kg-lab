@@ -34,30 +34,30 @@ Extracted from scikit-learn knowledge graph. Source: `sklearn.metrics` module.
 ## Quick Reference
 ### Classification Metrics
 
-| Function | Purpose | Key Params | Graph Node |
-|----------|---------|------------|-----------|
-| `accuracy_score` | Fraction of correct predictions | `normalize`, `sample_weight` | metrics/_classification.py:L357 |
-| `precision_score` | Ratio tp / (tp + fp) | `average`, `pos_label`, `zero_division` | metrics/_classification.py:L2527 |
-| `recall_score` | Ratio tp / (tp + fn) | `average`, `pos_label`, `zero_division` | metrics/_classification.py:L2710 |
-| `f1_score` | Harmonic mean of precision and recall | `average`, `pos_label` | metrics/_classification.py:L1461 |
-| `fbeta_score` | Weighted harmonic mean (beta param) | `beta`, `average` | metrics/_classification.py:L1656 |
-| `classification_report` | Text summary of precision, recall, f1 | `target_names`, `output_dict` | metrics/_classification.py:L2996 |
-| `confusion_matrix` | Compute confusion matrix | `labels`, `normalize` | metrics/_classification.py:L443 |
-| `roc_auc_score` | Area under ROC curve | `average`, `multi_class`, `max_fpr` | metrics/_ranking.py:L513 |
-| `log_loss` | Logistic / cross-entropy loss | `eps`, `normalize`, `sample_weight` | metrics/_classification.py:L3347 |
-| `balanced_accuracy_score` | Class-balanced accuracy | `adjusted`, `sample_weight` | metrics/_classification.py:L2884 |
-| `matthews_corrcoef` | MCC (phi coefficient) | `sample_weight` | metrics/_classification.py:L1252 |
-| `cohen_kappa_score` | Inter-rater agreement | `labels`, `weights`, `sample_weight` | metrics/_classification.py:L888 |
-| `hamming_loss` | Fraction of wrong labels | `sample_weight` | metrics/_classification.py:L3230 |
-| `jaccard_score` | Intersection over union | `average`, `pos_label`, `sample_weight` | metrics/_classification.py:L1058 |
-| `brier_score_loss` | Brier score for probabilities | `pos_label`, `sample_weight` | metrics/_classification.py:L3739 |
-| `zero_one_loss` | Fraction of misclassifications | `normalize`, `sample_weight` | metrics/_classification.py:L1362 |
-| `top_k_accuracy_score` | Top-k accuracy | `k`, `normalize`, `sample_weight` | metrics/_ranking.py:L2086 |
+| Function | Purpose | Graph Node | Key Params |
+|----------|---------|-----------|------------|
+| `accuracy_score` | Fraction of correct predictions | metrics/_classification.py:L357 | `normalize`, `sample_weight` |
+| `precision_score` | Ratio tp / (tp + fp) | metrics/_classification.py:L2527 | `average`, `pos_label`, `zero_division` |
+| `recall_score` | Ratio tp / (tp + fn) | metrics/_classification.py:L2710 | `average`, `pos_label`, `zero_division` |
+| `f1_score` | Harmonic mean of precision and recall | metrics/_classification.py:L1461 | `average`, `pos_label` |
+| `fbeta_score` | Weighted harmonic mean (beta param) | metrics/_classification.py:L1656 | `beta`, `average` |
+| `classification_report` | Text summary of precision, recall, f1 | metrics/_classification.py:L2996 | `target_names`, `output_dict` |
+| `confusion_matrix` | Compute confusion matrix | metrics/_classification.py:L443 | `labels`, `normalize` |
+| `roc_auc_score` | Area under ROC curve | metrics/_ranking.py:L513 | `average`, `multi_class`, `max_fpr` |
+| `log_loss` | Logistic / cross-entropy loss | metrics/_classification.py:L3347 | `eps`, `normalize`, `sample_weight` |
+| `balanced_accuracy_score` | Class-balanced accuracy | metrics/_classification.py:L2884 | `adjusted`, `sample_weight` |
+| `matthews_corrcoef` | MCC (phi coefficient) | metrics/_classification.py:L1252 | `sample_weight` |
+| `cohen_kappa_score` | Inter-rater agreement | metrics/_classification.py:L888 | `labels`, `weights`, `sample_weight` |
+| `hamming_loss` | Fraction of wrong labels | metrics/_classification.py:L3230 | `sample_weight` |
+| `jaccard_score` | Intersection over union | metrics/_classification.py:L1058 | `average`, `pos_label`, `sample_weight` |
+| `brier_score_loss` | Brier score for probabilities | metrics/_classification.py:L3739 | `pos_label`, `sample_weight` |
+| `zero_one_loss` | Fraction of misclassifications | metrics/_classification.py:L1362 | `normalize`, `sample_weight` |
+| `top_k_accuracy_score` | Top-k accuracy | metrics/_ranking.py:L2086 | `k`, `normalize`, `sample_weight` |
 
 ### Regression Metrics
 
 | Function | Purpose | Graph Node |
-|----------|---------|
+|----------|---------|-----------|
 | `r2_score` | Coefficient of determination | metrics/_regression.py:L1179 |
 | `mean_squared_error` | MSE (L2 loss) | metrics/_regression.py:L551 |
 | `root_mean_squared_error` | RMSE (sqrt of MSE) | metrics/_regression.py:L642 |
@@ -74,7 +74,7 @@ Extracted from scikit-learn knowledge graph. Source: `sklearn.metrics` module.
 ### Clustering Metrics
 
 | Function | Purpose | Graph Node |
-|----------|---------|
+|----------|---------|-----------|
 | `silhouette_score` | Silhouette coefficient | metrics/cluster/_unsupervised.py:L59 |
 | `adjusted_rand_score` | Adjusted Rand index | metrics/cluster/_supervised.py:L360 |
 | `normalized_mutual_info_score` | NMI | metrics/cluster/_supervised.py:L1084 |
@@ -84,7 +84,7 @@ Extracted from scikit-learn knowledge graph. Source: `sklearn.metrics` module.
 ### Pairwise Distances
 
 | Function | Purpose | Graph Node |
-|----------|---------|
+|----------|---------|-----------|
 | `pairwise_distances` | Compute distance matrix between vectors | metrics/pairwise.py:L2311 |
 | `cosine_similarity` | Cosine similarity kernel | metrics/pairwise.py:L1705 |
 | `euclidean_distances` | Euclidean distance matrix | metrics/pairwise.py:L268 |
@@ -92,7 +92,7 @@ Extracted from scikit-learn knowledge graph. Source: `sklearn.metrics` module.
 ### Scorer Utilities
 
 | Function | Purpose | Graph Node |
-|----------|---------|
+|----------|---------|-----------|
 | `make_scorer` | Build a scorer from a metric function | metrics/_scorer.py:L674 |
 | `get_scorer` | Get scorer by name from registry | metrics/_scorer.py:L478 |
 

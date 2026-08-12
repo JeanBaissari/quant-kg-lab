@@ -34,20 +34,20 @@ Extracted from scikit-learn knowledge graph. Source: `sklearn.compose` module an
 ## Quick Reference
 ### Core Pipeline & Column Transformers
 
-| Class/Function | Purpose | Key Params | Graph Node |
-|---------------|---------|------------|-----------|
-| `Pipeline` | Chain transforms + estimator sequentially | `steps` (list of (name, transform) tuples), `memory`, `verbose` | pipeline.py:L93 |
-| `make_pipeline` | Shorthand Pipeline (auto-names steps) | `*steps` | pipeline.py:L1471 |
-| `ColumnTransformer` | Apply different transforms to different columns | `transformers`, `remainder`, `sparse_threshold`, `verbose_feature_names_out` | compose/_column_transformer.py:L64 |
-| `make_column_transformer` | Shorthand ColumnTransformer (auto-names) | `*transformers`, `remainder`, `verbose_feature_names_out` | compose/_column_transformer.py:L1312 |
-| `make_column_selector` | Select columns by dtype or pattern | `pattern`, `dtype_include`, `dtype_exclude` | compose/_column_transformer.py:L1427 |
+| Class/Function | Purpose | Graph Node | Key Params |
+|---------------|---------|-----------|------------|
+| `Pipeline` | Chain transforms + estimator sequentially | pipeline.py:L93 | `steps` (list of (name, transform) tuples), `memory`, `verbose` |
+| `make_pipeline` | Shorthand Pipeline (auto-names steps) | pipeline.py:L1471 | `*steps` |
+| `ColumnTransformer` | Apply different transforms to different columns | compose/_column_transformer.py:L64 | `transformers`, `remainder`, `sparse_threshold`, `verbose_feature_names_out` |
+| `make_column_transformer` | Shorthand ColumnTransformer (auto-names) | compose/_column_transformer.py:L1312 | `*transformers`, `remainder`, `verbose_feature_names_out` |
+| `make_column_selector` | Select columns by dtype or pattern | compose/_column_transformer.py:L1427 | `pattern`, `dtype_include`, `dtype_exclude` |
 
 ### Feature Union
 
-| Class/Function | Purpose | Key Params | Graph Node |
-|---------------|---------|------------|-----------|
-| `FeatureUnion` | Concatenate results of multiple transforms | `transformer_list`, `n_jobs`, `transformer_weights`, `verbose` | pipeline.py:L1626 |
-| `make_union` | Shorthand FeatureUnion (auto-names) | `*transformers`, `n_jobs`, `verbose` | pipeline.py:L2234 |
+| Class/Function | Purpose | Graph Node | Key Params |
+|---------------|---------|-----------|------------|
+| `FeatureUnion` | Concatenate results of multiple transforms | pipeline.py:L1626 | `transformer_list`, `n_jobs`, `transformer_weights`, `verbose` |
+| `make_union` | Shorthand FeatureUnion (auto-names) | pipeline.py:L2234 | `*transformers`, `n_jobs`, `verbose` |
 
 ### Target Transformation
 
