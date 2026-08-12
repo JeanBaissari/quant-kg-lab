@@ -1,11 +1,11 @@
 # Edge Audit — ta-lib
 
-**Date**: 2026-07-29
+**Date**: 2026-08-12
 
 ## Summary
 
-- Total edges: 5352
-- EXTRACTED: 5352 (100.0%)
+- Total edges: 379
+- EXTRACTED: 379 (100.0%)
 - INFERRED: 0 (0.0%)
 - AMBIGUOUS: 0
 

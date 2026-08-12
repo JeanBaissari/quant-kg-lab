@@ -6,8 +6,8 @@ Graph: `knowledge_graphs/lightgbm/.graphify/graph.json` · GRAPH_SPEC §5 · gen
 
 | criterion | status | counts |
 |---|---|---|
-| c1 real labels | FAIL | distinct=17 non_singleton=17 default_labels=17 default_graph=17 coverage=0.0% |
+| c1 real labels | PASS | distinct=17 non_singleton=17 default_labels=0 default_graph=0 coverage=100.0% |
 | c2 descriptions | FAIL | described=30 describable=260 pct=11.5% |
-| c3 god nodes | FAIL | top20=20 noise=1 hits=basic_safe_call(_safe_call()) |
+| c3 god nodes | PASS | top20=20 noise=0 |
 | c4 pin | FAIL | expected=f9bf8d1358cd7b5d649b47175e56543b62856f98 found=absent (graph) |
 | c5 audited | PASS | exists |
