@@ -6,8 +6,8 @@ Graph: `knowledge_graphs/xgboost/.graphify/graph.json` · GRAPH_SPEC §5 · gene
 
 | criterion | status | counts |
 |---|---|---|
-| c1 real labels | FAIL | distinct=80 non_singleton=80 default_labels=80 default_graph=80 coverage=0.0% |
-| c2 descriptions | FAIL | described=30 describable=841 pct=3.6% |
+| c1 real labels | PASS | distinct=80 non_singleton=80 default_labels=0 default_graph=0 coverage=100.0% |
+| c2 descriptions | FAIL | described=29 describable=840 pct=3.5% |
 | c3 god nodes | PASS | top20=20 noise=0 |
 | c4 pin | FAIL | expected=2a4786e61e08b41f63916089c35a10d0ac4626d2 found=absent (graph) |
 | c5 audited | PASS | exists |

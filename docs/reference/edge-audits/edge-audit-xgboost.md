@@ -1,12 +1,12 @@
 # Edge Audit — xgboost
 
-**Date**: 2026-07-29
+**Date**: 2026-08-12
 
 ## Summary
 
-- Total edges: 4415
-- EXTRACTED: 2405 (54.5%)
-- INFERRED: 2010 (45.5%)
+- Total edges: 4318
+- EXTRACTED: 2398 (55.5%)
+- INFERRED: 1920 (44.5%)
 - AMBIGUOUS: 0
 
 ## Top INFERRED Nodes
@@ -20,7 +20,6 @@
 - `Booster`: 98 inferred edges
 - `XGBoostError`: 96 inferred edges
 - `TreeObjective`: 96 inferred edges
-- `IteratorForTest`: 90 inferred edges
 - `TrainingCallback`: 64 inferred edges
 - `HasArbitraryParamsDict`: 56 inferred edges
 - `HasBaseMarginCol`: 56 inferred edges
@@ -31,6 +30,7 @@
 - `XGBoostTrainingSummary`: 56 inferred edges
 - `CommunicatorContext`: 56 inferred edges
 - `QuantileDMatrix`: 53 inferred edges
+- `XGBClassifierBase`: 45 inferred edges
 
 ## Cross-Module Suspicious Edges
 
@@ -51,6 +51,6 @@
 - `sklearn.py` ↔ `objective.py`: 45
 - `training.py` ↔ `core.py`: 34
 - `dask.py` ↔ `multi_target.py`: 32
-- `multi_target.py` ↔ `data.py`: 31
 - `multi_target.py` ↔ `updater.py`: 31
 - `data.py` ↔ `core.py`: 29
+- `updater.py` ↔ `data_iter.py`: 16
