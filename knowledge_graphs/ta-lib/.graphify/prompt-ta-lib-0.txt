@@ -1,0 +1,1023 @@
+ROLE
+You are a library-documentation annotator for nodes of a code knowledge graph of the scientific-Python library ta-lib. You are a writer, not a coder: never produce code, never quote source.
+
+TASK
+Given a JSON array of graph nodes, write exactly ONE semantic sentence per node — a functional summary a skilled ta-lib user can act on. The payload (name + source path + neighbor labels) is the ONLY per-node evidence you receive; there is no source code.
+
+INPUT — one entry per node:
+{
+  "id": "ma_core_getmask",
+  "name": "getmask()",
+  "label": "getmask()",
+  "source": "ma/core.py:L1411",
+  "neighbors": ["core.py", "allclose()", "allequal()"]
+}
+Node-kind decoder: label ends in "()" -> function; ends in .py/.c -> module or C source file; bare name -> class/type. The source path names the file; neighbors tell you what the node cooperates with.
+
+OUTPUT — strict contract
+Return a SINGLE JSON object (nothing before or after, no markdown fences, no commentary) mapping node id -> one-sentence description: {"ma_core_getmask": "Returns the mask of a masked array, or a default if none is set."}
+Rules: answer EVERY node in the input; never add nodes; each value is exactly ONE sentence, 8-20 words, no semicolons, no lists, no inline code; descriptions must be SEMANTIC — what the node IS and DOES, useful on its own.
+
+HALLUCINATION RULE
+State only what is supported by (a) the node name, (b) its neighbors, (c) the file path, (d) reliable knowledge of ta-lib's public API. NEVER invent parameters, behaviors, or sister functions not implied. When obscure, write the most conservative TRUE sentence ("Provides X used by <neighbors>."). A modest generic truth beats a confident invention.
+
+STYLE — verb anchors by kind (match exactly in feel):
+- module / source file -> "Module implementing…", "C implementation of…", or a bare noun phrase
+- class -> "Base class for X — …" or the em-dash form "X — <what it is>"
+- function -> imperative or third-person: "Computes…", "Returns…", "Builds…"
+- Prefer the "X — does Y" em-dash form when it reads naturally.
+
+FORBIDDEN FORMS (each fails the pipeline's stub detector — never write them):
+- "Python module at <path> containing symbols such as A, B, C"
+- "Function f() …" / "Class C …" / "The <name>() function …" as openers
+- "Member …", "Entity …", "An example …", "R source …"
+- Any sentence containing " in the _"
+- Restating the name or location instead of the meaning
+
+LENGTH TIERS: module <= 20 words; class <= 18 words; function <= 14 words. One sentence only.
+
+EXEMPLARS — real, already-graded descriptions of ta-lib nodes. Match their tone, density, and length exactly:
+  - ACCBANDS: "Acceleration Bands — volatility bands plotted a set factor above and below a simple moving average."
+  - ADOSC: "Chaikin A/D Oscillator — the difference between fast and slow EMAs of the Accumulation/Distribution line."
+  - ADX: "Average Directional Movement Index — measures trend strength on a 0–100 scale, regardless of direction."
+
+GLOSSARY — domain vocabulary of ta-lib; use these terms where applicable:
+moving average, EMA/SMA, oscillator, volatility band, momentum, trend strength, support/resistance, accumulation/distribution, price channels, cycle
+
+INPUT OVERRIDE: the label is a Cython indicator wrapper like "__pyx_pw_5talib_7_ta_lib_19ACCBANDS()"; the payload's name field carries the CLEAN indicator name (e.g. ACCBANDS). Describe the INDICATOR API, never the Cython plumbing — every node is an indicator function. For each indicator write: "<EXPANDED FULL NAME> — <one-sentence functional definition>" (ACCBANDS -> Acceleration Bands; ADX -> Average Directional Movement Index; APO -> Absolute Price Oscillator), stating what it measures or computes at technical-analysis-dictionary level. Always include the full-name expansion — it is the searchable key. Never mention Cython, wrappers, or C internals. LENGTH TIER OVERRIDE: <= 22 words; single sentence, single em-dash.
+
+Now describe the nodes in the JSON below.
+[
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_21acos",
+  "name": "ACOS",
+  "label": "__pyx_pw_5talib_7_ta_lib_21ACOS()",
+  "source": "_ta_lib.c:L8040",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_23ad",
+  "name": "AD",
+  "label": "__pyx_pw_5talib_7_ta_lib_23AD()",
+  "source": "_ta_lib.c:L8200",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_25add",
+  "name": "ADD",
+  "label": "__pyx_pw_5talib_7_ta_lib_25ADD()",
+  "source": "_ta_lib.c:L8410",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_39asin",
+  "name": "ASIN",
+  "label": "__pyx_pw_5talib_7_ta_lib_39ASIN()",
+  "source": "_ta_lib.c:L9861",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_41atan",
+  "name": "ATAN",
+  "label": "__pyx_pw_5talib_7_ta_lib_41ATAN()",
+  "source": "_ta_lib.c:L10021",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_45avgprice",
+  "name": "AVGPRICE",
+  "label": "__pyx_pw_5talib_7_ta_lib_45AVGPRICE()",
+  "source": "_ta_lib.c:L10392",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_53bop",
+  "name": "BOP",
+  "label": "__pyx_pw_5talib_7_ta_lib_53BOP()",
+  "source": "_ta_lib.c:L11218",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_57cdl2crows",
+  "name": "CDL2CROWS",
+  "label": "__pyx_pw_5talib_7_ta_lib_57CDL2CROWS()",
+  "source": "_ta_lib.c:L11639",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_59cdl3blackcrows",
+  "name": "CDL3BLACKCROWS",
+  "label": "__pyx_pw_5talib_7_ta_lib_59CDL3BLACKCROWS()",
+  "source": "_ta_lib.c:L11849",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_61cdl3inside",
+  "name": "CDL3INSIDE",
+  "label": "__pyx_pw_5talib_7_ta_lib_61CDL3INSIDE()",
+  "source": "_ta_lib.c:L12059",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_63cdl3linestrike",
+  "name": "CDL3LINESTRIKE",
+  "label": "__pyx_pw_5talib_7_ta_lib_63CDL3LINESTRIKE()",
+  "source": "_ta_lib.c:L12269",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_65cdl3outside",
+  "name": "CDL3OUTSIDE",
+  "label": "__pyx_pw_5talib_7_ta_lib_65CDL3OUTSIDE()",
+  "source": "_ta_lib.c:L12479",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_67cdl3starsinsouth",
+  "name": "CDL3STARSINSOUTH",
+  "label": "__pyx_pw_5talib_7_ta_lib_67CDL3STARSINSOUTH()",
+  "source": "_ta_lib.c:L12689",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_69cdl3whitesoldiers",
+  "name": "CDL3WHITESOLDIERS",
+  "label": "__pyx_pw_5talib_7_ta_lib_69CDL3WHITESOLDIERS()",
+  "source": "_ta_lib.c:L12899",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_71cdlabandonedbaby",
+  "name": "CDLABANDONEDBABY",
+  "label": "__pyx_pw_5talib_7_ta_lib_71CDLABANDONEDBABY()",
+  "source": "_ta_lib.c:L13109",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_73cdladvanceblock",
+  "name": "CDLADVANCEBLOCK",
+  "label": "__pyx_pw_5talib_7_ta_lib_73CDLADVANCEBLOCK()",
+  "source": "_ta_lib.c:L13336",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_75cdlbelthold",
+  "name": "CDLBELTHOLD",
+  "label": "__pyx_pw_5talib_7_ta_lib_75CDLBELTHOLD()",
+  "source": "_ta_lib.c:L13546",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_77cdlbreakaway",
+  "name": "CDLBREAKAWAY",
+  "label": "__pyx_pw_5talib_7_ta_lib_77CDLBREAKAWAY()",
+  "source": "_ta_lib.c:L13756",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_79cdlclosingmarubozu",
+  "name": "CDLCLOSINGMARUBOZU",
+  "label": "__pyx_pw_5talib_7_ta_lib_79CDLCLOSINGMARUBOZU()",
+  "source": "_ta_lib.c:L13966",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_81cdlconcealbabyswall",
+  "name": "CDLCONCEALBABYSWALL",
+  "label": "__pyx_pw_5talib_7_ta_lib_81CDLCONCEALBABYSWALL()",
+  "source": "_ta_lib.c:L14176",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_83cdlcounterattack",
+  "name": "CDLCOUNTERATTACK",
+  "label": "__pyx_pw_5talib_7_ta_lib_83CDLCOUNTERATTACK()",
+  "source": "_ta_lib.c:L14386",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_85cdldarkcloudcover",
+  "name": "CDLDARKCLOUDCOVER",
+  "label": "__pyx_pw_5talib_7_ta_lib_85CDLDARKCLOUDCOVER()",
+  "source": "_ta_lib.c:L14596",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_87cdldoji",
+  "name": "CDLDOJI",
+  "label": "__pyx_pw_5talib_7_ta_lib_87CDLDOJI()",
+  "source": "_ta_lib.c:L14823",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_89cdldojistar",
+  "name": "CDLDOJISTAR",
+  "label": "__pyx_pw_5talib_7_ta_lib_89CDLDOJISTAR()",
+  "source": "_ta_lib.c:L15033",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_91cdldragonflydoji",
+  "name": "CDLDRAGONFLYDOJI",
+  "label": "__pyx_pw_5talib_7_ta_lib_91CDLDRAGONFLYDOJI()",
+  "source": "_ta_lib.c:L15243",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_93cdlengulfing",
+  "name": "CDLENGULFING",
+  "label": "__pyx_pw_5talib_7_ta_lib_93CDLENGULFING()",
+  "source": "_ta_lib.c:L15453",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_95cdleveningdojistar",
+  "name": "CDLEVENINGDOJISTAR",
+  "label": "__pyx_pw_5talib_7_ta_lib_95CDLEVENINGDOJISTAR()",
+  "source": "_ta_lib.c:L15663",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_97cdleveningstar",
+  "name": "CDLEVENINGSTAR",
+  "label": "__pyx_pw_5talib_7_ta_lib_97CDLEVENINGSTAR()",
+  "source": "_ta_lib.c:L15890",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_99cdlgapsidesidewhite",
+  "name": "CDLGAPSIDESIDEWHITE",
+  "label": "__pyx_pw_5talib_7_ta_lib_99CDLGAPSIDESIDEWHITE()",
+  "source": "_ta_lib.c:L16117",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_101cdlgravestonedoji",
+  "name": "CDLGRAVESTONEDOJI",
+  "label": "__pyx_pw_5talib_7_ta_lib_101CDLGRAVESTONEDOJI()",
+  "source": "_ta_lib.c:L16327",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_103cdlhammer",
+  "name": "CDLHAMMER",
+  "label": "__pyx_pw_5talib_7_ta_lib_103CDLHAMMER()",
+  "source": "_ta_lib.c:L16537",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_105cdlhangingman",
+  "name": "CDLHANGINGMAN",
+  "label": "__pyx_pw_5talib_7_ta_lib_105CDLHANGINGMAN()",
+  "source": "_ta_lib.c:L16747",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_107cdlharami",
+  "name": "CDLHARAMI",
+  "label": "__pyx_pw_5talib_7_ta_lib_107CDLHARAMI()",
+  "source": "_ta_lib.c:L16957",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_109cdlharamicross",
+  "name": "CDLHARAMICROSS",
+  "label": "__pyx_pw_5talib_7_ta_lib_109CDLHARAMICROSS()",
+  "source": "_ta_lib.c:L17167",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_111cdlhighwave",
+  "name": "CDLHIGHWAVE",
+  "label": "__pyx_pw_5talib_7_ta_lib_111CDLHIGHWAVE()",
+  "source": "_ta_lib.c:L17377",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_113cdlhikkake",
+  "name": "CDLHIKKAKE",
+  "label": "__pyx_pw_5talib_7_ta_lib_113CDLHIKKAKE()",
+  "source": "_ta_lib.c:L17587",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_115cdlhikkakemod",
+  "name": "CDLHIKKAKEMOD",
+  "label": "__pyx_pw_5talib_7_ta_lib_115CDLHIKKAKEMOD()",
+  "source": "_ta_lib.c:L17797",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_117cdlhomingpigeon",
+  "name": "CDLHOMINGPIGEON",
+  "label": "__pyx_pw_5talib_7_ta_lib_117CDLHOMINGPIGEON()",
+  "source": "_ta_lib.c:L18007",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_119cdlidentical3crows",
+  "name": "CDLIDENTICAL3CROWS",
+  "label": "__pyx_pw_5talib_7_ta_lib_119CDLIDENTICAL3CROWS()",
+  "source": "_ta_lib.c:L18217",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_121cdlinneck",
+  "name": "CDLINNECK",
+  "label": "__pyx_pw_5talib_7_ta_lib_121CDLINNECK()",
+  "source": "_ta_lib.c:L18427",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_123cdlinvertedhammer",
+  "name": "CDLINVERTEDHAMMER",
+  "label": "__pyx_pw_5talib_7_ta_lib_123CDLINVERTEDHAMMER()",
+  "source": "_ta_lib.c:L18637",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_125cdlkicking",
+  "name": "CDLKICKING",
+  "label": "__pyx_pw_5talib_7_ta_lib_125CDLKICKING()",
+  "source": "_ta_lib.c:L18847",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_127cdlkickingbylength",
+  "name": "CDLKICKINGBYLENGTH",
+  "label": "__pyx_pw_5talib_7_ta_lib_127CDLKICKINGBYLENGTH()",
+  "source": "_ta_lib.c:L19057",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_129cdlladderbottom",
+  "name": "CDLLADDERBOTTOM",
+  "label": "__pyx_pw_5talib_7_ta_lib_129CDLLADDERBOTTOM()",
+  "source": "_ta_lib.c:L19267",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_131cdllongleggeddoji",
+  "name": "CDLLONGLEGGEDDOJI",
+  "label": "__pyx_pw_5talib_7_ta_lib_131CDLLONGLEGGEDDOJI()",
+  "source": "_ta_lib.c:L19477",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_133cdllongline",
+  "name": "CDLLONGLINE",
+  "label": "__pyx_pw_5talib_7_ta_lib_133CDLLONGLINE()",
+  "source": "_ta_lib.c:L19687",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_135cdlmarubozu",
+  "name": "CDLMARUBOZU",
+  "label": "__pyx_pw_5talib_7_ta_lib_135CDLMARUBOZU()",
+  "source": "_ta_lib.c:L19897",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_137cdlmatchinglow",
+  "name": "CDLMATCHINGLOW",
+  "label": "__pyx_pw_5talib_7_ta_lib_137CDLMATCHINGLOW()",
+  "source": "_ta_lib.c:L20107",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_139cdlmathold",
+  "name": "CDLMATHOLD",
+  "label": "__pyx_pw_5talib_7_ta_lib_139CDLMATHOLD()",
+  "source": "_ta_lib.c:L20317",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_141cdlmorningdojistar",
+  "name": "CDLMORNINGDOJISTAR",
+  "label": "__pyx_pw_5talib_7_ta_lib_141CDLMORNINGDOJISTAR()",
+  "source": "_ta_lib.c:L20544",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_143cdlmorningstar",
+  "name": "CDLMORNINGSTAR",
+  "label": "__pyx_pw_5talib_7_ta_lib_143CDLMORNINGSTAR()",
+  "source": "_ta_lib.c:L20771",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_145cdlonneck",
+  "name": "CDLONNECK",
+  "label": "__pyx_pw_5talib_7_ta_lib_145CDLONNECK()",
+  "source": "_ta_lib.c:L20998",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_147cdlpiercing",
+  "name": "CDLPIERCING",
+  "label": "__pyx_pw_5talib_7_ta_lib_147CDLPIERCING()",
+  "source": "_ta_lib.c:L21208",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_149cdlrickshawman",
+  "name": "CDLRICKSHAWMAN",
+  "label": "__pyx_pw_5talib_7_ta_lib_149CDLRICKSHAWMAN()",
+  "source": "_ta_lib.c:L21418",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_151cdlrisefall3methods",
+  "name": "CDLRISEFALL3METHODS",
+  "label": "__pyx_pw_5talib_7_ta_lib_151CDLRISEFALL3METHODS()",
+  "source": "_ta_lib.c:L21628",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_153cdlseparatinglines",
+  "name": "CDLSEPARATINGLINES",
+  "label": "__pyx_pw_5talib_7_ta_lib_153CDLSEPARATINGLINES()",
+  "source": "_ta_lib.c:L21838",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_155cdlshootingstar",
+  "name": "CDLSHOOTINGSTAR",
+  "label": "__pyx_pw_5talib_7_ta_lib_155CDLSHOOTINGSTAR()",
+  "source": "_ta_lib.c:L22048",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_157cdlshortline",
+  "name": "CDLSHORTLINE",
+  "label": "__pyx_pw_5talib_7_ta_lib_157CDLSHORTLINE()",
+  "source": "_ta_lib.c:L22258",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_159cdlspinningtop",
+  "name": "CDLSPINNINGTOP",
+  "label": "__pyx_pw_5talib_7_ta_lib_159CDLSPINNINGTOP()",
+  "source": "_ta_lib.c:L22468",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_161cdlstalledpattern",
+  "name": "CDLSTALLEDPATTERN",
+  "label": "__pyx_pw_5talib_7_ta_lib_161CDLSTALLEDPATTERN()",
+  "source": "_ta_lib.c:L22678",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_163cdlsticksandwich",
+  "name": "CDLSTICKSANDWICH",
+  "label": "__pyx_pw_5talib_7_ta_lib_163CDLSTICKSANDWICH()",
+  "source": "_ta_lib.c:L22888",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_165cdltakuri",
+  "name": "CDLTAKURI",
+  "label": "__pyx_pw_5talib_7_ta_lib_165CDLTAKURI()",
+  "source": "_ta_lib.c:L23098",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_167cdltasukigap",
+  "name": "CDLTASUKIGAP",
+  "label": "__pyx_pw_5talib_7_ta_lib_167CDLTASUKIGAP()",
+  "source": "_ta_lib.c:L23308",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_169cdlthrusting",
+  "name": "CDLTHRUSTING",
+  "label": "__pyx_pw_5talib_7_ta_lib_169CDLTHRUSTING()",
+  "source": "_ta_lib.c:L23518",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_171cdltristar",
+  "name": "CDLTRISTAR",
+  "label": "__pyx_pw_5talib_7_ta_lib_171CDLTRISTAR()",
+  "source": "_ta_lib.c:L23728",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_173cdlunique3river",
+  "name": "CDLUNIQUE3RIVER",
+  "label": "__pyx_pw_5talib_7_ta_lib_173CDLUNIQUE3RIVER()",
+  "source": "_ta_lib.c:L23938",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_175cdlupsidegap2crows",
+  "name": "CDLUPSIDEGAP2CROWS",
+  "label": "__pyx_pw_5talib_7_ta_lib_175CDLUPSIDEGAP2CROWS()",
+  "source": "_ta_lib.c:L24148",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_177cdlxsidegap3methods",
+  "name": "CDLXSIDEGAP3METHODS",
+  "label": "__pyx_pw_5talib_7_ta_lib_177CDLXSIDEGAP3METHODS()",
+  "source": "_ta_lib.c:L24358",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_179ceil",
+  "name": "CEIL",
+  "label": "__pyx_pw_5talib_7_ta_lib_179CEIL()",
+  "source": "_ta_lib.c:L24568",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_185cos",
+  "name": "COS",
+  "label": "__pyx_pw_5talib_7_ta_lib_185COS()",
+  "source": "_ta_lib.c:L25100",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_187cosh",
+  "name": "COSH",
+  "label": "__pyx_pw_5talib_7_ta_lib_187COSH()",
+  "source": "_ta_lib.c:L25260",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_191div",
+  "name": "DIV",
+  "label": "__pyx_pw_5talib_7_ta_lib_191DIV()",
+  "source": "_ta_lib.c:L25597",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_197exp",
+  "name": "EXP",
+  "label": "__pyx_pw_5talib_7_ta_lib_197EXP()",
+  "source": "_ta_lib.c:L26163",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_199floor",
+  "name": "FLOOR",
+  "label": "__pyx_pw_5talib_7_ta_lib_199FLOOR()",
+  "source": "_ta_lib.c:L26323",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_225ln",
+  "name": "LN",
+  "label": "__pyx_pw_5talib_7_ta_lib_225LN()",
+  "source": "_ta_lib.c:L28553",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_227log10",
+  "name": "LOG10",
+  "label": "__pyx_pw_5talib_7_ta_lib_227LOG10()",
+  "source": "_ta_lib.c:L28713",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_237mama",
+  "name": "MAMA",
+  "label": "__pyx_pw_5talib_7_ta_lib_237MAMA()",
+  "source": "_ta_lib.c:L29768",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_245medprice",
+  "name": "MEDPRICE",
+  "label": "__pyx_pw_5talib_7_ta_lib_245MEDPRICE()",
+  "source": "_ta_lib.c:L30564",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_267mult",
+  "name": "MULT",
+  "label": "__pyx_pw_5talib_7_ta_lib_267MULT()",
+  "source": "_ta_lib.c:L32698",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_271obv",
+  "name": "OBV",
+  "label": "__pyx_pw_5talib_7_ta_lib_271OBV()",
+  "source": "_ta_lib.c:L33087",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_285rocr100",
+  "name": "ROCR100",
+  "label": "__pyx_pw_5talib_7_ta_lib_285ROCR100()",
+  "source": "_ta_lib.c:L34407",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_287rsi",
+  "name": "RSI",
+  "label": "__pyx_pw_5talib_7_ta_lib_287RSI()",
+  "source": "_ta_lib.c:L34584",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_289sar",
+  "name": "SAR",
+  "label": "__pyx_pw_5talib_7_ta_lib_289SAR()",
+  "source": "_ta_lib.c:L34761",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_291sarext",
+  "name": "SAREXT",
+  "label": "__pyx_pw_5talib_7_ta_lib_291SAREXT()",
+  "source": "_ta_lib.c:L34970",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_293sin",
+  "name": "SIN",
+  "label": "__pyx_pw_5talib_7_ta_lib_293SIN()",
+  "source": "_ta_lib.c:L35263",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_295sinh",
+  "name": "SINH",
+  "label": "__pyx_pw_5talib_7_ta_lib_295SINH()",
+  "source": "_ta_lib.c:L35423",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_297sma",
+  "name": "SMA",
+  "label": "__pyx_pw_5talib_7_ta_lib_297SMA()",
+  "source": "_ta_lib.c:L35583",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_299sqrt",
+  "name": "SQRT",
+  "label": "__pyx_pw_5talib_7_ta_lib_299SQRT()",
+  "source": "_ta_lib.c:L35760",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_301stddev",
+  "name": "STDDEV",
+  "label": "__pyx_pw_5talib_7_ta_lib_301STDDEV()",
+  "source": "_ta_lib.c:L35920",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_303stoch",
+  "name": "STOCH",
+  "label": "__pyx_pw_5talib_7_ta_lib_303STOCH()",
+  "source": "_ta_lib.c:L36111",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_305stochf",
+  "name": "STOCHF",
+  "label": "__pyx_pw_5talib_7_ta_lib_305STOCHF()",
+  "source": "_ta_lib.c:L36393",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_307stochrsi",
+  "name": "STOCHRSI",
+  "label": "__pyx_pw_5talib_7_ta_lib_307STOCHRSI()",
+  "source": "_ta_lib.c:L36647",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_309sub",
+  "name": "SUB",
+  "label": "__pyx_pw_5talib_7_ta_lib_309SUB()",
+  "source": "_ta_lib.c:L36881",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_311sum",
+  "name": "SUM",
+  "label": "__pyx_pw_5talib_7_ta_lib_311SUM()",
+  "source": "_ta_lib.c:L37059",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_313t3",
+  "name": "T3",
+  "label": "__pyx_pw_5talib_7_ta_lib_313T3()",
+  "source": "_ta_lib.c:L37236",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_315tan",
+  "name": "TAN",
+  "label": "__pyx_pw_5talib_7_ta_lib_315TAN()",
+  "source": "_ta_lib.c:L37427",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_317tanh",
+  "name": "TANH",
+  "label": "__pyx_pw_5talib_7_ta_lib_317TANH()",
+  "source": "_ta_lib.c:L37587",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_319tema",
+  "name": "TEMA",
+  "label": "__pyx_pw_5talib_7_ta_lib_319TEMA()",
+  "source": "_ta_lib.c:L37747",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_321trange",
+  "name": "TRANGE",
+  "label": "__pyx_pw_5talib_7_ta_lib_321TRANGE()",
+  "source": "_ta_lib.c:L37924",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_323trima",
+  "name": "TRIMA",
+  "label": "__pyx_pw_5talib_7_ta_lib_323TRIMA()",
+  "source": "_ta_lib.c:L38118",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_325trix",
+  "name": "TRIX",
+  "label": "__pyx_pw_5talib_7_ta_lib_325TRIX()",
+  "source": "_ta_lib.c:L38295",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_327tsf",
+  "name": "TSF",
+  "label": "__pyx_pw_5talib_7_ta_lib_327TSF()",
+  "source": "_ta_lib.c:L38472",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_329typprice",
+  "name": "TYPPRICE",
+  "label": "__pyx_pw_5talib_7_ta_lib_329TYPPRICE()",
+  "source": "_ta_lib.c:L38649",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_331ultosc",
+  "name": "ULTOSC",
+  "label": "__pyx_pw_5talib_7_ta_lib_331ULTOSC()",
+  "source": "_ta_lib.c:L38843",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_333var",
+  "name": "VAR",
+  "label": "__pyx_pw_5talib_7_ta_lib_333VAR()",
+  "source": "_ta_lib.c:L39082",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_335wclprice",
+  "name": "WCLPRICE",
+  "label": "__pyx_pw_5talib_7_ta_lib_335WCLPRICE()",
+  "source": "_ta_lib.c:L39273",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_337willr",
+  "name": "WILLR",
+  "label": "__pyx_pw_5talib_7_ta_lib_337WILLR()",
+  "source": "_ta_lib.c:L39467",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ },
+ {
+  "id": "ta_lib_pyx_pw_5talib_7_ta_lib_339wma",
+  "name": "WMA",
+  "label": "__pyx_pw_5talib_7_ta_lib_339WMA()",
+  "source": "_ta_lib.c:L39678",
+  "neighbors": [
+   "_ta_lib.c"
+  ]
+ }
+]
