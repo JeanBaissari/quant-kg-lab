@@ -6,8 +6,8 @@ Graph: `knowledge_graphs/ta-lib/.graphify/graph.json` · GRAPH_SPEC §5 · gener
 
 | criterion | status | counts |
 |---|---|---|
-| c1 real labels | FAIL | distinct=203 non_singleton=202 default_labels=203 default_graph=203 coverage=0.0% |
+| c1 real labels | PASS | distinct=174 non_singleton=21 default_labels=0 default_graph=0 coverage=100.0% |
 | c2 descriptions | FAIL | described=40 describable=148 pct=27.0% |
-| c3 god nodes | FAIL | top20=20 noise=19 hits=ta_lib_pyx_addtraceback(__Pyx_AddTraceback()), ta_lib_pyx_parsekeywords(__Pyx_ParseKeywords()), ta_lib_pyx_raiseargtupleinvalid(__Pyx_RaiseArgtupleInvalid()), ta_lib_pyx_f_5talib_7_ta_lib_ta_check_success(__pyx_f_5talib_7_ta_lib__ta_check_success()), ta_lib_pyx_f_5talib_7_ta_lib_check_array(__pyx_f_5talib_7_ta_lib_check_array()), ta_lib_pyx_f_5numpy_7ndarray_4data_data(__pyx_f_5numpy_7ndarray_4data_data()) |
+| c3 god nodes | PASS | top20=20 noise=0 |
 | c4 pin | FAIL | expected=a9ff1b47b3ddbd57274116645d688c0ed677338b found=absent (graph) |
 | c5 audited | PASS | exists |
