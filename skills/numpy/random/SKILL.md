@@ -9,10 +9,10 @@ source_repo: numpy/numpy
 source_commit: ab2199763cb17878cd8f34fcbc97106c5397f922
 extraction_date: 2026-07-29
 graph:
-  nodes: 8094
-  edges: 13271
+  nodes: 8104
+  edges: 13281
   community_count: 670
-  graph_hash: 7dd96f3509f3d0ee
+  graph_hash: 65eb865357d8f26a
 tags:
 - numpy
 - random
@@ -27,18 +27,22 @@ NumPy's random module provides a modern, reproducible, and high-performance rand
 
 | API | Signature | Description | Graph Node |
 |-----|-----------|-------------|-----------|
-| `default_rng` | `default_rng(seed=None)` | Create a new Generator with default BitGenerator (PCG64) | — |
-| `Generator` | Class wrapping a BitGenerator | Primary distribution-sampling interface | — |
-| `PCG64` | `PCG64(seed=None)` | Default BitGenerator — fast, statistically sound | — |
-| `SeedSequence` | `SeedSequence(entropy=None)` | Generate independent seed states for parallel streams | — |
-| `random` | `rng.random(size=None, dtype=np.float64)` | Uniform floats in [0, 1) | — |
-| `normal` | `rng.normal(loc=0.0, scale=1.0, size=None)` | Gaussian/normal distribution | — |
-| `uniform` | `rng.uniform(low=0.0, high=1.0, size=None)` | Uniform floats in [low, high) | — |
-| `integers` | `rng.integers(low, high=None, size=None)` | Random integers in [low, high) | — |
-| `choice` | `rng.choice(a, size=None, replace=True, p=None)` | Random sample from a 1-D array | — |
-| `permutation` | `rng.permutation(x)` | Randomly permute a sequence or return a permuted range | — |
+| `default_rng` | `default_rng(seed=None)` | Create a new Generator with default BitGenerator (PCG64) | `random/__init__.py` |
+| `Generator` | Class wrapping a BitGenerator | Primary distribution-sampling interface | `random/__init__.py` |
+| `PCG64` | `PCG64(seed=None)` | Default BitGenerator — fast, statistically sound | `random/__init__.py` |
+| `SeedSequence` | `SeedSequence(entropy=None)` | Generate independent seed states for parallel streams | `random/__init__.py` |
+| `random` | `rng.random(size=None, dtype=np.float64)` | Uniform floats in [0, 1) | `random/__init__.py` |
+| `normal` | `rng.normal(loc=0.0, scale=1.0, size=None)` | Gaussian/normal distribution | `random/__init__.py` |
+| `uniform` | `rng.uniform(low=0.0, high=1.0, size=None)` | Uniform floats in [low, high) | `random/__init__.py` |
+| `integers` | `rng.integers(low, high=None, size=None)` | Random integers in [low, high) | `random/__init__.py` |
+| `choice` | `rng.choice(a, size=None, replace=True, p=None)` | Random sample from a 1-D array | `random/__init__.py` |
+| `permutation` | `rng.permutation(x)` | Randomly permute a sequence or return a permuted range | `random/__init__.py` |
 
-> Note: default_rng, Generator, SeedSequence, PCG64, random, normal, uniform, integers, choice, permutation exist in the library but are absent from the committed graph (extraction gap, tracked as QKG_021 numpy re-extraction).
+> Note: these symbols are re-exported by `numpy/random/__init__.py` from the Cython core
+> (`_generator.pyx` et al. — no tree-sitter grammar), so the graph carries them as **CURATED
+> re-export nodes** (see `scripts/inject_curated_nodes.py`, QKG_021) instead of extracted
+> definitions. `integers` is a `Generator` method; module-level `numpy.random.integers` was
+> removed in NumPy 2.0.
 
 ## Architecture
 
