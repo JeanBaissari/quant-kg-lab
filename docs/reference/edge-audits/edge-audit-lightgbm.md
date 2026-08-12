@@ -1,12 +1,12 @@
 # Edge Audit — lightgbm
 
-**Date**: 2026-07-29
+**Date**: 2026-08-12
 
 ## Summary
 
-- Total edges: 2099
-- EXTRACTED: 1073 (51.1%)
-- INFERRED: 1026 (48.9%)
+- Total edges: 2029
+- EXTRACTED: 1003 (49.4%)
+- INFERRED: 1026 (50.6%)
 - AMBIGUOUS: 0
 
 ## Top INFERRED Nodes
