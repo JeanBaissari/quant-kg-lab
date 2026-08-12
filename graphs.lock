@@ -3,7 +3,7 @@
   "graphify": {
     "package": "@sentropic/graphify",
     "install": "npm install -g @sentropic/graphify",
-    "backend": "claude-cli"
+    "backend": "opencode"
   },
   "libraries": {
     "numpy": {
