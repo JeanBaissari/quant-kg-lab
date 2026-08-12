@@ -16,6 +16,13 @@ import sys, json, shutil, pathlib, collections
 from describe_nodes import public, gpath
 
 
+def public_name_from_label(label):
+    """ta-lib §6 exception: map a __pyx_pw_ wrapper back to its indicator name."""
+    import re
+    m = re.match(r"__pyx_pw_\d*talib_\d*_ta_lib_\d+([A-Z][A-Za-z0-9]*)\(\)$", label or "")
+    return m.group(1) if m else None
+
+
 def module_path(n):
     sf = (n.get("source_file") or "").replace("\\", "/")
     parts = sf.split("/")
@@ -24,7 +31,11 @@ def module_path(n):
     return ".".join(parts[:-1]) if len(parts) > 1 else "root"
 
 
-def display_name(label):
+def display_name(label, lib):
+    if lib == "ta-lib":
+        nm = public_name_from_label(label)
+        if nm:
+            return nm
     return (label or "").removesuffix("()")
 
 
@@ -54,7 +65,7 @@ def main():
         members = by_community[cid]
         ranked = sorted(members, key=lambda n: (-deg[n["id"]], n.get("id", "")))
         centroid = next((n for n in ranked if public(n, lib)), ranked[0])
-        labels[str(cid)] = f"{module_path(centroid)} · {display_name(centroid.get('label'))}"
+        labels[str(cid)] = f"{module_path(centroid)} · {display_name(centroid.get('label'), lib)}"
 
     n_real = sum(1 for v in labels.values() if not v.startswith("Community "))
     print(f"{lib}: {len(labels)} communities labeled; {n_real} real, "
