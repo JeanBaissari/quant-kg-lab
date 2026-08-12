@@ -1,0 +1,204 @@
+{
+ "_comment": "QKG_003 description prompts. Design: prd/review/prompt-template-design-2026-08-12.md (researcher spec). BASE_TEMPLATE placeholders: {LIBRARY} {EMPHASIS} {GLOSSARY} {EXEMPLARS} {PAYLOAD}",
+ "base_template": "ROLE\nYou are a library-documentation annotator for nodes of a code knowledge graph of the scientific-Python library <<LIBRARY>>. You are a writer, not a coder: never produce code, never quote source.\n\nTASK\nGiven a JSON array of graph nodes, write exactly ONE semantic sentence per node — a functional summary a skilled <<LIBRARY>> user can act on. The payload (name + source path + neighbor labels) is the ONLY per-node evidence you receive; there is no source code.\n\nINPUT — one entry per node:\n{\n  \"id\": \"ma_core_getmask\",\n  \"name\": \"getmask()\",\n  \"label\": \"getmask()\",\n  \"source\": \"ma/core.py:L1411\",\n  \"neighbors\": [\"core.py\", \"allclose()\", \"allequal()\"]\n}\nNode-kind decoder: label ends in \"()\" -> function; ends in .py/.c -> module or C source file; bare name -> class/type. The source path names the file; neighbors tell you what the node cooperates with.\n\nOUTPUT — strict contract\nReturn a SINGLE JSON object (nothing before or after, no markdown fences, no commentary) mapping node id -> one-sentence description: {\"ma_core_getmask\": \"Returns the mask of a masked array, or a default if none is set.\"}\nRules: answer EVERY node in the input; never add nodes; each value is exactly ONE sentence, 8-20 words, no semicolons, no lists, no inline code; descriptions must be SEMANTIC — what the node IS and DOES, useful on its own.\n\nHALLUCINATION RULE\nState only what is supported by (a) the node name, (b) its neighbors, (c) the file path, (d) reliable knowledge of <<LIBRARY>>'s public API. NEVER invent parameters, behaviors, or sister functions not implied. When obscure, write the most conservative TRUE sentence (\"Provides X used by <neighbors>.\"). A modest generic truth beats a confident invention.\n\nSTYLE — verb anchors by kind (match exactly in feel):\n- module / source file -> \"Module implementing…\", \"C implementation of…\", or a bare noun phrase\n- class -> \"Base class for X — …\" or the em-dash form \"X — <what it is>\"\n- function -> imperative or third-person: \"Computes…\", \"Returns…\", \"Builds…\"\n- Prefer the \"X — does Y\" em-dash form when it reads naturally.\n\nFORBIDDEN FORMS (each fails the pipeline's stub detector — never write them):\n- \"Python module at <path> containing symbols such as A, B, C\"\n- \"Function f() …\" / \"Class C …\" / \"The <name>() function …\" as openers\n- \"Member …\", \"Entity …\", \"An example …\", \"R source …\"\n- Any sentence containing \" in the _\"\n- Restating the name or location instead of the meaning\n\nLENGTH TIERS: module <= 20 words; class <= 18 words; function <= 14 words. One sentence only.\n\nEXEMPLARS — real, already-graded descriptions of <<LIBRARY>> nodes. Match their tone, density, and length exactly:\n<<EXEMPLARS>>\n\nGLOSSARY — domain vocabulary of <<LIBRARY>>; use these terms where applicable:\n<<GLOSSARY>>\n\n<<EMPHASIS>>\n\nNow describe the nodes in the JSON below.\n<<PAYLOAD>>",
+ "libraries": {
+  "numpy": {
+   "emphasis": "numpy's graph mixes pure-Python modules, C implementation files (_core/src/multiarray/*.c, linalg/lapack_lite/*.c) and wrappers. For a .c file, the sentence describes the C layer's job (\"C implementation of …\", \"f2c-translated double-precision LAPACK routines used by numpy.linalg.\"). For numpy.ma / numpy.core submodules, name the submodule family so the sentence is searchable.",
+   "glossary": "ndarray, dtype, ufunc, broadcasting, axis, stride, view vs copy, mask (masked array), einsum, FFT, matrix vs array, generalized ufunc",
+   "exemplars": [
+    {
+     "name": "MaskedArray (ma/core.py)",
+     "desc": "numpy.ma array pairing data with a boolean mask that marks invalid/missing entries."
+    },
+    {
+     "name": "fromnumeric.py (core/fromnumeric.py)",
+     "desc": "Module defining array functions (sum, mean, reshape, sort) that dispatch to ndarray methods."
+    },
+    {
+     "name": "ufunc_object.c (_core/src/umath/ufunc_object.c)",
+     "desc": "C implementation of the universal-function (ufunc) object."
+    }
+   ]
+  },
+  "pandas": {
+   "emphasis": "pandas nodes are overwhelmingly data-structure internals, accessors, and typing helpers. Distinguish dtype-family objects from accessor namespaces (.str/.cat/.dt) from data-structure classes. \"Deprecated shim re-exporting…\" is a valid description when true. For accessors, say what they expose, not how.",
+   "glossary": "Series, DataFrame, Index, dtype, accessor, groupby, reindex/alignment, MultiIndex, Timestamp/Timedelta, Categorical, join/merge, view vs copy, shim",
+   "exemplars": [
+    {
+     "name": "SequenceNotStr (_typing.py)",
+     "desc": "Typing helper for a sequence that is not a string."
+    },
+    {
+     "name": "ReadBuffer (_typing.py)",
+     "desc": "Typing protocol for readable buffers used by pandas I/O."
+    },
+    {
+     "name": "ArrowArrayExportable (_typing.py)",
+     "desc": "Protocol for objects exportable as an Arrow array (PyCapsule interface)."
+    }
+   ]
+  },
+  "scipy": {
+   "emphasis": "scipy nodes span subpackage modules (stats, signal, optimize, sparse, ndimage, integrate, _lib) and C/Cython-adjacent machinery. Prefer the subpackage in the sentence (\"…used by scipy.sparse\") because scipy's layout is the main disambiguator. Wrapper/adapter classes are common — say what they adapt.",
+   "glossary": "subpackage (stats/signal/optimize/sparse/ndimage/integrate), ndarray, sparse matrix, convolution, filter, distribution fit, solver, numpydoc, callback, wrapper, LowLevelCallable",
+   "exemplars": [
+    {
+     "name": "LowLevelCallable (_lib/_ccallback.py)",
+     "desc": "Wrapper letting C/Cython callbacks be passed to SciPy routines."
+    },
+    {
+     "name": "DisjointSet (_lib/_disjoint_set.py)",
+     "desc": "Union-find (disjoint-set) data structure."
+    },
+    {
+     "name": "NumpyDocString (_lib/_docscrape.py)",
+     "desc": "numpydoc parser for a full NumPy-style docstring."
+    }
+   ]
+  },
+  "statsmodels": {
+   "emphasis": "statsmodels nodes span regression, tsa (time series), statespace, discrete, stats, and iolib subpackages. Prefer the subpackage in the sentence (\"…used by statsmodels.tsa\"). Results-wrapper classes are common — describe the result object they wrap (fitted values, parameters, inference).",
+   "glossary": "regression, time series (ARIMA/SARIMAX/VAR), statespace, MLE, fit, results, formula API, distribution, hypothesis test, prediction, panel",
+   "exemplars": [
+    {
+     "name": "MLEModel (tsa/statespace/mlemodel.py)",
+     "desc": "Base state-space model estimated by maximum likelihood via the Kalman filter."
+    },
+    {
+     "name": "PredictionResults (tsa/base/prediction.py)",
+     "desc": "Wrapper holding out-of-sample prediction values with confidence intervals."
+    },
+    {
+     "name": "SimpleTable (iolib/table.py)",
+     "desc": "Formats tabular results as plain text, LaTeX, or HTML for reporting."
+    }
+   ]
+  },
+  "scikit-learn": {
+   "emphasis": "ML nodes must be described by their API CONTRACT, not internals. For estimators: fit/predict/transform/score role, what they optimize. Loss classes get math-level one-liners. Never mention C/JNI internals.",
+   "glossary": "estimator, fit/predict/transform, hyperparameter search, cross-validation, loss, regularization, kernel, clustering, pipeline, scoring, transformer",
+   "exemplars": [
+    {
+     "name": "HalfSquaredError (_loss/loss.py)",
+     "desc": "Half squared-error (least-squares) loss."
+    },
+    {
+     "name": "PinballLoss (_loss/loss.py)",
+     "desc": "Pinball (quantile) loss for quantile regression."
+    },
+    {
+     "name": "BaseEstimator (base.py)",
+     "desc": "Base class for all estimators — provides get_params/set_params and repr."
+    }
+   ]
+  },
+  "xgboost": {
+   "emphasis": "Distinguish the high-level Python API (Booster, DMatrix, callbacks, cv, sklearn wrapper) from native-library bindings. Loss classes get math-level one-liners. Never mention C/JNI internals.",
+   "glossary": "Booster, DMatrix, gradient boosting, tree, objective/loss, early stopping, callback, native library, sklearn wrapper, feature importance, prediction",
+   "exemplars": [
+    {
+     "name": "XGBoostError (_c_api.py)",
+     "desc": "Base exception raised for errors coming from the XGBoost native library."
+    },
+    {
+     "name": "TrainingCallback (callback.py)",
+     "desc": "Base class for training callbacks — early stopping, checkpointing, and custom logic."
+    },
+    {
+     "name": "compat.py",
+     "desc": "Compatibility shims for optional dependencies (pandas, scipy, sklearn)."
+    }
+   ]
+  },
+  "lightgbm": {
+   "emphasis": "Distinguish the high-level Python API (Booster, Dataset, callbacks, sklearn wrapper) from native-library bindings. Config/serialization helpers are common.",
+   "glossary": "Dataset, Booster, gradient boosting, tree, objective/loss, early stopping, native library, sklearn wrapper, feature importance, params",
+   "exemplars": [
+    {
+     "name": "Dataset (basic.py)",
+     "desc": "LightGBM's internal dataset — bins features and holds labels/weights for efficient training."
+    },
+    {
+     "name": ".get() (basic.py)",
+     "desc": "Looks up a parameter value honoring LightGBM's configuration aliases."
+    },
+    {
+     "name": "basic.py",
+     "desc": "Module defining the low-level Booster and Dataset wrappers over the native library."
+    }
+   ]
+  },
+  "optuna": {
+   "emphasis": "ML/hyperparameter-optimization nodes: describe samplers, pruners, distributions, studies, and integration adapters by their search-contract role. Never mention test harnesses.",
+   "glossary": "hyperparameter search, trial, sampler, pruner, study, distribution, objective function, TPE, multi-objective, integration adapter, Gaussian process",
+   "exemplars": [
+    {
+     "name": "FloatDistribution (distributions.py)",
+     "desc": "A continuous (optionally log-scaled or stepped) float search-space distribution."
+    },
+    {
+     "name": "BaseAcquisitionFunc (_gp/acqf.py)",
+     "desc": "Abstract base for acquisition functions used by the Gaussian-process sampler."
+    },
+    {
+     "name": "distributions.py",
+     "desc": "Module defining the parameter search-space distributions."
+    }
+   ]
+  },
+  "vectorbt": {
+   "emphasis": "Backtesting pipeline actors: describe each node by its ROLE in the backtest flow (accessor, portfolio, signals, indicators, generic machinery) with vectorized/grouped semantics and pandas integration in mind.",
+   "glossary": "accessor (.vbt), portfolio, signals, indicator, ArrayWrapper, vectorized, grouped, pandas integration, re-wrap, backtest",
+   "exemplars": [
+    {
+     "name": "ArrayWrapper (base/array_wrapper.py)",
+     "desc": "Wraps a NumPy array with pandas index/columns metadata for named, grouped access."
+    },
+    {
+     "name": "BaseAccessor (base/accessors.py)",
+     "desc": "Base for vectorbt's pandas (.vbt) accessors."
+    },
+    {
+     "name": "RustSupport (_engine.py)",
+     "desc": "Shim/flag for optional Rust-accelerated routines."
+    }
+   ]
+  },
+  "backtrader": {
+   "emphasis": "Event-loop backtesting actors: describe each node by its ROLE in the backtest flow (engine, broker, feed, strategy, analyzer, indicator, commission scheme) using backtrader's own vocabulary.",
+   "glossary": "Cerebro, broker, data feed, OHLCV bar, strategy, analyzer, indicator, commission, order, fill, position, timeframe, session",
+   "exemplars": [
+    {
+     "name": "Cerebro (cerebro.py)",
+     "desc": "The engine — assembles data, strategies, broker, and analyzers and runs the backtest."
+    },
+    {
+     "name": "BackBroker (brokers/bbroker.py)",
+     "desc": "The simulated broker — fills orders and tracks cash, value, and positions."
+    },
+    {
+     "name": "TimeFrame (dataseries.py)",
+     "desc": "Enum of bar time frames (Ticks, Minutes, Days, …)."
+    }
+   ]
+  },
+  "ta-lib": {
+   "emphasis": "INPUT OVERRIDE: the label is a Cython indicator wrapper like \"__pyx_pw_5talib_7_ta_lib_19ACCBANDS()\"; the payload's name field carries the CLEAN indicator name (e.g. ACCBANDS). Describe the INDICATOR API, never the Cython plumbing — every node is an indicator function. For each indicator write: \"<EXPANDED FULL NAME> — <one-sentence functional definition>\" (ACCBANDS -> Acceleration Bands; ADX -> Average Directional Movement Index; APO -> Absolute Price Oscillator), stating what it measures or computes at technical-analysis-dictionary level. Always include the full-name expansion — it is the searchable key. Never mention Cython, wrappers, or C internals. LENGTH TIER OVERRIDE: <= 22 words; single sentence, single em-dash.",
+   "glossary": "moving average, EMA/SMA, oscillator, volatility band, momentum, trend strength, support/resistance, accumulation/distribution, price channels, cycle",
+   "exemplars": [
+    {
+     "name": "ACCBANDS",
+     "desc": "Acceleration Bands — volatility bands plotted a set factor above and below a simple moving average."
+    },
+    {
+     "name": "ADOSC",
+     "desc": "Chaikin A/D Oscillator — the difference between fast and slow EMAs of the Accumulation/Distribution line."
+    },
+    {
+     "name": "ADX",
+     "desc": "Average Directional Movement Index — measures trend strength on a 0–100 scale, regardless of direction."
+    }
+   ]
+  }
+ }
+}
