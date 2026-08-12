@@ -9,10 +9,10 @@ source_repo: numpy/numpy
 source_commit: ab2199763cb17878cd8f34fcbc97106c5397f922
 extraction_date: 2026-07-29
 graph:
-  nodes: 8104
-  edges: 13281
+  nodes: 8306
+  edges: 13483
   community_count: 670
-  graph_hash: 65eb865357d8f26a
+  graph_hash: df005c66bd19581a
 tags:
 - numpy
 - core
@@ -25,10 +25,10 @@ The foundational array computing layer. The `ndarray` is an N-dimensional homoge
 
 ## Quick Reference
 
-| API | Signature | Description | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node |
-|-----|-----------|-------------|
-| `array` | `np.array(object, dtype=None)` | Create an ndarray from array-like input | _core/defchararray.py:L1221 |
-| `asarray` | `np.asarray(a, dtype=None)` | Convert to ndarray — no copy if input is already ndarray | _core/defchararray.py:L1368 |
+| API | Signature | Description | Graph Node |
+|---|---------|-----------|----------|
+| `array` | `np.array(object, dtype=None)` | Create an ndarray from array-like input | `__init__.py` |
+| `asarray` | `np.asarray(a, dtype=None)` | Convert to ndarray — no copy if input is already ndarray | `_core/_asarray.py` |
 | `arange` | `np.arange([start,] stop[, step])` | Evenly spaced values within a half-open interval | _core/src/multiarray/ctors.c:L3093 |
 | `linspace` | `np.linspace(start, stop, num=50)` | Evenly spaced numbers over a closed interval | _core/function_base.py:L28 |
 | `reshape` | `np.reshape(a, newshape)` | Reshape ndarray without changing data | _core/fromnumeric.py:L224 |

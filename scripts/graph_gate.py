@@ -120,6 +120,37 @@ def check_c5(lib):
     return p.exists(), "exists" if p.exists() else "missing"
 
 
+def check_c6(lib, g):
+    """API-surface coverage (GRAPH_SPEC §5.6, ADR-0008): every curated-manifest
+    entry must resolve in the graph, and the committed probe report must show
+    >=95% coverage when it exists. Libs without manifest/report pass trivially
+    (probe pending) — enforcement is per-library opt-in."""
+    labels = {n.get("label", "") for n in g["nodes"]}
+    mpath = ROOT / "tools" / "curated" / f"{lib}.json"
+    if not mpath.exists():
+        return True, "no manifest (probe pending)"
+    manifest = json.load(open(mpath))
+    unresolved = []
+    for s in manifest.get("symbols", []):
+        lbl = s["label"]
+        if lbl in labels:
+            continue
+        if lbl.endswith("()") and lbl[:-2] in labels:
+            continue
+        if not lbl.endswith("()") and f"{lbl}()" in labels:
+            continue
+        unresolved.append(lbl)
+    ok = not unresolved
+    counts = f"curated={len(manifest.get('symbols', []))} unresolved={len(unresolved)}"
+    rpath = ROOT / "docs" / "reference" / "api-surface" / f"{lib}.json"
+    if rpath.exists():
+        data = json.load(open(rpath))
+        cov = float(data.get("coverage", 0.0))
+        ok = ok and cov >= 95.0
+        counts += f" surface_coverage={cov:.1f}% (target 95.0%)"
+    return ok, counts
+
+
 def check(lib, lock):
     g, deg = describe_nodes.load(lib)
     labels = labels_map(lib)
@@ -129,6 +160,7 @@ def check(lib, lock):
         "c3": {"name": "god nodes", **dict(zip(["ok", "counts"], check_c3(g, deg, lib)))},
         "c4": {"name": "pin", **dict(zip(["ok", "counts"], check_c4(g, lib, lock)))},
         "c5": {"name": "audited", **dict(zip(["ok", "counts"], check_c5(lib)))},
+        "c6": {"name": "api surface", **dict(zip(["ok", "counts"], check_c6(lib, g)))},
     }
 
 

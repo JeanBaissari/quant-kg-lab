@@ -34,8 +34,8 @@ Extracted from scikit-learn knowledge graph. Source: `sklearn.preprocessing` mod
 ## Quick Reference
 ### Scalers (Numerical Features)
 
-| Class | Purpose | Key Params | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node |
-|-------|---------|------------|
+| Class | Purpose | Key Params | Graph Node |
+|-----|-------|----------|----------|
 | `StandardScaler` | Zero-mean, unit-variance scaling | `with_mean`, `with_std` | preprocessing/_data.py:L742 |
 | `MinMaxScaler` | Scale to [0, 1] or custom range | `feature_range` | preprocessing/_data.py:L305 |
 | `MaxAbsScaler` | Scale by max absolute value (sparse-safe) | (none) | preprocessing/_data.py:L1190 |

@@ -11,3 +11,4 @@ Graph: `knowledge_graphs/ta-lib/.graphify/graph.json` · GRAPH_SPEC §5 · gener
 | c3 god nodes | PASS | top20=20 noise=0 |
 | c4 pin | PASS | expected=a9ff1b47b3ddbd57274116645d688c0ed677338b found=a9ff1b47b3ddbd57274116645d688c0ed677338b (graph) |
 | c5 audited | PASS | exists |
+| c6 api surface | PASS | no manifest (probe pending) |

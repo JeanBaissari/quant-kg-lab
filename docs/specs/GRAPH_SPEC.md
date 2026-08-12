@@ -110,6 +110,21 @@ A rebuilt graph is **gold standard** only when ALL hold:
    `scripts/rebuild_graph.sh <lib>` reproduces the graph.
 5. **Audited** — `docs/reference/edge-audits/edge-audit-<lib>.md` regenerated; INFERRED ratio reported (sklearn's
    53%-inferred graph is the known worst case to re-check).
+6. **API-surface coverage** — ≥ 95% of the library's public top-level symbols resolve to a
+   graph node **or** a curated-manifest entry (`tools/curated/<lib>.json`, ADR-0008) **or** an
+   explicit manifest exclusion. Measured by `scripts/api_surface_diff.py <lib>` (committed
+   report in `docs/reference/api-surface/<lib>.md`), enforced by
+   `scripts/verify_citations.py --require-complete <lib>` on every skill Quick Reference row.
+
+### 5.1 Language-coverage note (criterion 6, ADR-0008)
+
+Tree-sitter has **no Cython grammar** and extracts only Python `def`s: whole `.pyx` modules
+(M1), C-only ufuncs/builtins like `arange` or `dtype` (M2), and a few Python-def'd symbols
+inside known files (M3) can never appear from re-extraction alone. The curated manifest is the
+sanctioned mechanism: nodes carry a real description and a truthful `source_file` (the module
+where the symbol is bound), joined to that module via a CURATED `contains` link. A symbol
+without a node and without a manifest entry is a **gate failure** — silent extraction gaps are
+no longer acceptable.
 
 ## 6. Noise-filter policy
 

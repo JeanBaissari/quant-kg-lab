@@ -11,3 +11,4 @@ Graph: `knowledge_graphs/vectorbt/.graphify/graph.json` · GRAPH_SPEC §5 · gen
 | c3 god nodes | PASS | top20=20 noise=0 |
 | c4 pin | PASS | expected=f9897528f675114e6b34790178dbb2ca137acb51 found=f9897528f675114e6b34790178dbb2ca137acb51 (graph) |
 | c5 audited | PASS | exists |
+| c6 api surface | PASS | no manifest (probe pending) |

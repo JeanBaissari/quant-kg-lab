@@ -11,3 +11,4 @@ Graph: `knowledge_graphs/xgboost/.graphify/graph.json` · GRAPH_SPEC §5 · gene
 | c3 god nodes | PASS | top20=20 noise=0 |
 | c4 pin | PASS | expected=2a4786e61e08b41f63916089c35a10d0ac4626d2 found=2a4786e61e08b41f63916089c35a10d0ac4626d2 (graph) |
 | c5 audited | PASS | exists |
+| c6 api surface | PASS | no manifest (probe pending) |

@@ -78021,6 +78021,1824 @@
    "community": 78,
    "community_name": "Community 78",
    "description": "Randomly permute a sequence, or return a permuted range of length n."
+  },
+  {
+   "id": "curated_false_",
+   "label": "False_",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Boolean type (True or False), stored as a byte."
+  },
+  {
+   "id": "curated_scalartype",
+   "label": "ScalarType",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Built-in immutable sequence."
+  },
+  {
+   "id": "curated_true_",
+   "label": "True_",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Boolean type (True or False), stored as a byte."
+  },
+  {
+   "id": "curated_abs",
+   "label": "abs()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "absolute(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_absolute",
+   "label": "absolute()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "absolute(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_acos",
+   "label": "acos()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "arccos(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_acosh",
+   "label": "acosh()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "arccosh(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_add",
+   "label": "add()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "add(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_arange",
+   "label": "arange()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "arange([start,] stop[, step,], dtype=None, *, device=None, like=None)."
+  },
+  {
+   "id": "curated_arccosh",
+   "label": "arccosh()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "arccosh(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_arcsinh",
+   "label": "arcsinh()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "arcsinh(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_arctan",
+   "label": "arctan()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "arctan(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_arctan2",
+   "label": "arctan2()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "arctan2(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_array2string",
+   "label": "array2string()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Return a string representation of an array."
+  },
+  {
+   "id": "curated_ascontiguousarray",
+   "label": "ascontiguousarray()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "ascontiguousarray(a, dtype=None, *, like=None)."
+  },
+  {
+   "id": "curated_asfortranarray",
+   "label": "asfortranarray()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "asfortranarray(a, dtype=None, *, like=None)."
+  },
+  {
+   "id": "curated_asin",
+   "label": "asin()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "arcsin(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_asinh",
+   "label": "asinh()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "arcsinh(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_atan",
+   "label": "atan()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "arctan(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_atan2",
+   "label": "atan2()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "arctan2(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_atanh",
+   "label": "atanh()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "arctanh(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_bitwise_and",
+   "label": "bitwise_and()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "bitwise_and(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_bitwise_count",
+   "label": "bitwise_count()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "bitwise_count(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_bitwise_invert",
+   "label": "bitwise_invert()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "invert(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_bitwise_left_shift",
+   "label": "bitwise_left_shift()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "left_shift(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_bitwise_not",
+   "label": "bitwise_not()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "invert(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_bitwise_or",
+   "label": "bitwise_or()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "bitwise_or(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_bitwise_right_shift",
+   "label": "bitwise_right_shift()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "right_shift(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_bitwise_xor",
+   "label": "bitwise_xor()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "bitwise_xor(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_block",
+   "label": "block()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Assemble an nd-array from nested lists of blocks."
+  },
+  {
+   "id": "curated_bool",
+   "label": "bool",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Boolean type (True or False), stored as a byte."
+  },
+  {
+   "id": "curated_bool_",
+   "label": "bool_",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Boolean type (True or False), stored as a byte."
+  },
+  {
+   "id": "curated_broadcast",
+   "label": "broadcast",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Produce an object that mimics broadcasting."
+  },
+  {
+   "id": "curated_broadcast_to",
+   "label": "broadcast_to()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Broadcast an array to a new shape."
+  },
+  {
+   "id": "curated_busdaycalendar",
+   "label": "busdaycalendar",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "busdaycalendar(weekmask='1111100', holidays=None)."
+  },
+  {
+   "id": "curated_byte",
+   "label": "byte",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Signed integer type, compatible with C ``char``."
+  },
+  {
+   "id": "curated_bytes_",
+   "label": "bytes_",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "A byte string."
+  },
+  {
+   "id": "curated_c_",
+   "label": "c_",
+   "file_type": "code",
+   "source_file": "lib/_index_tricks_impl.py",
+   "community": 61,
+   "community_name": "Community 61",
+   "description": "Translates slice objects to concatenation along the second axis."
+  },
+  {
+   "id": "curated_cbrt",
+   "label": "cbrt()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "cbrt(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_cdouble",
+   "label": "cdouble",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Complex number type composed of two double-precision floating-point."
+  },
+  {
+   "id": "curated_ceil",
+   "label": "ceil()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "ceil(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_char",
+   "label": "char",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "This module contains a set of functions for vectorized string."
+  },
+  {
+   "id": "curated_character",
+   "label": "character",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Abstract base class of all character string scalar types."
+  },
+  {
+   "id": "curated_clongdouble",
+   "label": "clongdouble",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Complex number type composed of two extended-precision floating-point."
+  },
+  {
+   "id": "curated_complex128",
+   "label": "complex128",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Complex number type composed of two double-precision floating-point."
+  },
+  {
+   "id": "curated_complex256",
+   "label": "complex256",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Complex number type composed of two extended-precision floating-point."
+  },
+  {
+   "id": "curated_complex64",
+   "label": "complex64",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Complex number type composed of two single-precision floating-point."
+  },
+  {
+   "id": "curated_complexfloating",
+   "label": "complexfloating",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Abstract base class of all complex number scalar types that are made up of."
+  },
+  {
+   "id": "curated_concat",
+   "label": "concat()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "concatenate(."
+  },
+  {
+   "id": "curated_conj",
+   "label": "conj()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "conjugate(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_conjugate",
+   "label": "conjugate()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "conjugate(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_copysign",
+   "label": "copysign()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "copysign(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_core",
+   "label": "core",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "The `numpy.core` submodule exists solely for backward compatibility."
+  },
+  {
+   "id": "curated_cos",
+   "label": "cos()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "cos(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_cosh",
+   "label": "cosh()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "cosh(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_csingle",
+   "label": "csingle",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Complex number type composed of two single-precision floating-point."
+  },
+  {
+   "id": "curated_ctypeslib",
+   "label": "ctypeslib",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "============================."
+  },
+  {
+   "id": "curated_datetime64",
+   "label": "datetime64",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "If created from a 64-bit integer, it represents an offset from."
+  },
+  {
+   "id": "curated_datetime_data",
+   "label": "datetime_data()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "datetime_data(dtype, /)."
+  },
+  {
+   "id": "curated_deg2rad",
+   "label": "deg2rad()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "deg2rad(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_degrees",
+   "label": "degrees()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "degrees(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_diag_indices_from",
+   "label": "diag_indices_from()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Return the indices to access the main diagonal of an n-dimensional array."
+  },
+  {
+   "id": "curated_divide",
+   "label": "divide()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "divide(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_divmod",
+   "label": "divmod()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "divmod(x1, x2[, out1, out2], / [, out=(None, None)], *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_double",
+   "label": "double",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Double-precision floating-point number type, compatible with Python."
+  },
+  {
+   "id": "curated_dtype",
+   "label": "dtype",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "dtype(dtype, align=False, copy=False, [metadata])."
+  },
+  {
+   "id": "curated_dtypes",
+   "label": "dtypes",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "This module is home to specific dtypes related functionality and their classes."
+  },
+  {
+   "id": "curated_e",
+   "label": "e",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Convert a string or number to a floating point number, if possible."
+  },
+  {
+   "id": "curated_emath",
+   "label": "emath",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Wrapper functions to more user-friendly calling of certain math functions."
+  },
+  {
+   "id": "curated_euler_gamma",
+   "label": "euler_gamma",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Convert a string or number to a floating point number, if possible."
+  },
+  {
+   "id": "curated_exceptions",
+   "label": "exceptions",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Exceptions and Warnings (:mod:`numpy.exceptions`)."
+  },
+  {
+   "id": "curated_exp",
+   "label": "exp()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "exp(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_exp2",
+   "label": "exp2()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "exp2(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_expm1",
+   "label": "expm1()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "expm1(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_f2py",
+   "label": "f2py",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Fortran to Python Interface Generator."
+  },
+  {
+   "id": "curated_fabs",
+   "label": "fabs()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "fabs(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_flatiter",
+   "label": "flatiter",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Flat iterator object to iterate over arrays."
+  },
+  {
+   "id": "curated_flexible",
+   "label": "flexible",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Abstract base class of all scalar types without predefined length."
+  },
+  {
+   "id": "curated_float128",
+   "label": "float128",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Extended-precision floating-point number type, compatible with C."
+  },
+  {
+   "id": "curated_float16",
+   "label": "float16",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Half-precision floating-point number type."
+  },
+  {
+   "id": "curated_float32",
+   "label": "float32",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Single-precision floating-point number type, compatible with C ``float``."
+  },
+  {
+   "id": "curated_float64",
+   "label": "float64",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Double-precision floating-point number type, compatible with Python."
+  },
+  {
+   "id": "curated_float_power",
+   "label": "float_power()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "float_power(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_floating",
+   "label": "floating",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Abstract base class of all floating-point scalar types."
+  },
+  {
+   "id": "curated_floor",
+   "label": "floor()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "floor(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_floor_divide",
+   "label": "floor_divide()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "floor_divide(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_fmax",
+   "label": "fmax()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "fmax(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_fmin",
+   "label": "fmin()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "fmin(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_fmod",
+   "label": "fmod()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "fmod(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_frexp",
+   "label": "frexp()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "frexp(x[, out1, out2], / [, out=(None, None)], *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_frombuffer",
+   "label": "frombuffer()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "frombuffer(buffer, dtype=float, count=-1, offset=0, *, like=None)."
+  },
+  {
+   "id": "curated_fromiter",
+   "label": "fromiter()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "fromiter(iter, dtype, count=-1, *, like=None)."
+  },
+  {
+   "id": "curated_frompyfunc",
+   "label": "frompyfunc()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "frompyfunc(func, /, nin, nout, *[, identity])."
+  },
+  {
+   "id": "curated_generic",
+   "label": "generic",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Base class for numpy scalar types."
+  },
+  {
+   "id": "curated_half",
+   "label": "half",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Half-precision floating-point number type."
+  },
+  {
+   "id": "curated_heaviside",
+   "label": "heaviside()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "heaviside(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_hypot",
+   "label": "hypot()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "hypot(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_index_exp",
+   "label": "index_exp",
+   "file_type": "code",
+   "source_file": "lib/_index_tricks_impl.py",
+   "community": 61,
+   "community_name": "Community 61",
+   "description": "A nicer way to build up index tuples for arrays."
+  },
+  {
+   "id": "curated_inf",
+   "label": "inf",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Convert a string or number to a floating point number, if possible."
+  },
+  {
+   "id": "curated_info",
+   "label": "info()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Get help information for an array, function, class, or module."
+  },
+  {
+   "id": "curated_int16",
+   "label": "int16",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Signed integer type, compatible with C ``short``."
+  },
+  {
+   "id": "curated_int32",
+   "label": "int32",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Signed integer type, compatible with C ``int``."
+  },
+  {
+   "id": "curated_int64",
+   "label": "int64",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Default signed integer type, 64bit on 64bit systems and 32bit on 32bit."
+  },
+  {
+   "id": "curated_int8",
+   "label": "int8",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Signed integer type, compatible with C ``char``."
+  },
+  {
+   "id": "curated_int_",
+   "label": "int_",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Default signed integer type, 64bit on 64bit systems and 32bit on 32bit."
+  },
+  {
+   "id": "curated_intc",
+   "label": "intc",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Signed integer type, compatible with C ``int``."
+  },
+  {
+   "id": "curated_integer",
+   "label": "integer",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Abstract base class of all integer scalar types."
+  },
+  {
+   "id": "curated_intp",
+   "label": "intp",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Default signed integer type, 64bit on 64bit systems and 32bit on 32bit."
+  },
+  {
+   "id": "curated_invert",
+   "label": "invert()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "invert(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_isfinite",
+   "label": "isfinite()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "isfinite(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_isinf",
+   "label": "isinf()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "isinf(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_isnan",
+   "label": "isnan()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "isnan(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_isnat",
+   "label": "isnat()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "isnat(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_ldexp",
+   "label": "ldexp()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "ldexp(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_lib",
+   "label": "lib",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "``numpy.lib`` is mostly a space for implementing functions that don't."
+  },
+  {
+   "id": "curated_linalg",
+   "label": "linalg",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "``numpy.linalg``."
+  },
+  {
+   "id": "curated_little_endian",
+   "label": "little_endian",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "bool(x) -> bool."
+  },
+  {
+   "id": "curated_log1p",
+   "label": "log1p()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "log1p(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_logaddexp",
+   "label": "logaddexp()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "logaddexp(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_logaddexp2",
+   "label": "logaddexp2()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "logaddexp2(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_logical_and",
+   "label": "logical_and()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "logical_and(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_logical_not",
+   "label": "logical_not()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "logical_not(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_logical_or",
+   "label": "logical_or()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "logical_or(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_logical_xor",
+   "label": "logical_xor()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "logical_xor(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_long",
+   "label": "long",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Default signed integer type, 64bit on 64bit systems and 32bit on 32bit."
+  },
+  {
+   "id": "curated_longdouble",
+   "label": "longdouble",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Extended-precision floating-point number type, compatible with C."
+  },
+  {
+   "id": "curated_longlong",
+   "label": "longlong",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Signed integer type, compatible with C ``long long``."
+  },
+  {
+   "id": "curated_ma",
+   "label": "ma",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "=============."
+  },
+  {
+   "id": "curated_matvec",
+   "label": "matvec()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "matvec(x1, x2, /, out=None, *, casting='same_kind', order='K', dtype=None, subok=True[, signature, axes, axis])."
+  },
+  {
+   "id": "curated_maximum",
+   "label": "maximum()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "maximum(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_mgrid",
+   "label": "mgrid",
+   "file_type": "code",
+   "source_file": "lib/_index_tricks_impl.py",
+   "community": 61,
+   "community_name": "Community 61",
+   "description": "An instance which returns a dense multi-dimensional \"meshgrid\"."
+  },
+  {
+   "id": "curated_minimum",
+   "label": "minimum()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "minimum(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_modf",
+   "label": "modf()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "modf(x[, out1, out2], / [, out=(None, None)], *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_nan",
+   "label": "nan",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Convert a string or number to a floating point number, if possible."
+  },
+  {
+   "id": "curated_nanmedian",
+   "label": "nanmedian()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Compute the median along the specified axis, while ignoring NaNs."
+  },
+  {
+   "id": "curated_nditer",
+   "label": "nditer",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "nditer(op, flags=None, op_flags=None, op_dtypes=None, order='K',."
+  },
+  {
+   "id": "curated_negative",
+   "label": "negative()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "negative(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_nested_iters",
+   "label": "nested_iters()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "nested_iters(op, axes, flags=None, op_flags=None, op_dtypes=None,     order=\"K\", casting=\"safe\", buffersize=0)."
+  },
+  {
+   "id": "curated_newaxis",
+   "label": "newaxis",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Public NumPy API symbol `np.newaxis` (C-implemented or namespace; see docs)."
+  },
+  {
+   "id": "curated_nextafter",
+   "label": "nextafter()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "nextafter(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_number",
+   "label": "number",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Abstract base class of all numeric scalar types."
+  },
+  {
+   "id": "curated_object_",
+   "label": "object_",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Any Python object."
+  },
+  {
+   "id": "curated_ogrid",
+   "label": "ogrid",
+   "file_type": "code",
+   "source_file": "lib/_index_tricks_impl.py",
+   "community": 61,
+   "community_name": "Community 61",
+   "description": "An instance which returns an open multi-dimensional \"meshgrid\"."
+  },
+  {
+   "id": "curated_permute_dims",
+   "label": "permute_dims()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Returns an array with axes transposed."
+  },
+  {
+   "id": "curated_pi",
+   "label": "pi",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Convert a string or number to a floating point number, if possible."
+  },
+  {
+   "id": "curated_polynomial",
+   "label": "polynomial",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "A sub-package for efficiently dealing with polynomials."
+  },
+  {
+   "id": "curated_positive",
+   "label": "positive()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "positive(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_pow",
+   "label": "pow()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "power(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_promote_types",
+   "label": "promote_types()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "promote_types(type1, type2)."
+  },
+  {
+   "id": "curated_r_",
+   "label": "r_",
+   "file_type": "code",
+   "source_file": "lib/_index_tricks_impl.py",
+   "community": 61,
+   "community_name": "Community 61",
+   "description": "Translates slice objects to concatenation along the first axis."
+  },
+  {
+   "id": "curated_rad2deg",
+   "label": "rad2deg()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "rad2deg(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_radians",
+   "label": "radians()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "radians(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_rec",
+   "label": "rec",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "This module contains a set of functions for record arrays."
+  },
+  {
+   "id": "curated_reciprocal",
+   "label": "reciprocal()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "reciprocal(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_remainder",
+   "label": "remainder()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "remainder(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_rint",
+   "label": "rint()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "rint(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_row_stack",
+   "label": "row_stack()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Stack arrays in sequence vertically (row wise)."
+  },
+  {
+   "id": "curated_s_",
+   "label": "s_",
+   "file_type": "code",
+   "source_file": "lib/_index_tricks_impl.py",
+   "community": 61,
+   "community_name": "Community 61",
+   "description": "A nicer way to build up index tuples for arrays."
+  },
+  {
+   "id": "curated_sctypedict",
+   "label": "sctypeDict",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "dict() -> new empty dictionary."
+  },
+  {
+   "id": "curated_short",
+   "label": "short",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Signed integer type, compatible with C ``short``."
+  },
+  {
+   "id": "curated_show_config",
+   "label": "show_config()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Show libraries and system information on which NumPy was built."
+  },
+  {
+   "id": "curated_sign",
+   "label": "sign()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "sign(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_signbit",
+   "label": "signbit()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "signbit(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_signedinteger",
+   "label": "signedinteger",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Abstract base class of all signed integer scalar types."
+  },
+  {
+   "id": "curated_sin",
+   "label": "sin()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "sin(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_single",
+   "label": "single",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Single-precision floating-point number type, compatible with C ``float``."
+  },
+  {
+   "id": "curated_sinh",
+   "label": "sinh()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "sinh(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_sort_complex",
+   "label": "sort_complex()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Sort a complex array using the real part first, then the imaginary part."
+  },
+  {
+   "id": "curated_spacing",
+   "label": "spacing()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "spacing(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_square",
+   "label": "square()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "square(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_str_",
+   "label": "str_",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "A unicode string."
+  },
+  {
+   "id": "curated_strings",
+   "label": "strings",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "This module contains a set of functions for vectorized string."
+  },
+  {
+   "id": "curated_subtract",
+   "label": "subtract()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "subtract(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_tan",
+   "label": "tan()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "tan(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_tanh",
+   "label": "tanh()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "tanh(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_test",
+   "label": "test()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Pytest test runner."
+  },
+  {
+   "id": "curated_testing",
+   "label": "testing",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Common test support for all numpy test scripts."
+  },
+  {
+   "id": "curated_timedelta64",
+   "label": "timedelta64",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "A timedelta stored as a 64-bit integer."
+  },
+  {
+   "id": "curated_trapz",
+   "label": "trapz()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "`trapz` is deprecated in NumPy 2.0."
+  },
+  {
+   "id": "curated_trim_zeros",
+   "label": "trim_zeros()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Remove values along a dimension which are zero along all other."
+  },
+  {
+   "id": "curated_true_divide",
+   "label": "true_divide()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "divide(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_trunc",
+   "label": "trunc()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "trunc(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+  },
+  {
+   "id": "curated_typecodes",
+   "label": "typecodes",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "dict() -> new empty dictionary."
+  },
+  {
+   "id": "curated_typing",
+   "label": "typing",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "============================."
+  },
+  {
+   "id": "curated_ubyte",
+   "label": "ubyte",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Unsigned integer type, compatible with C ``unsigned char``."
+  },
+  {
+   "id": "curated_ufunc",
+   "label": "ufunc",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Functions that operate element by element on whole arrays."
+  },
+  {
+   "id": "curated_uint",
+   "label": "uint",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Unsigned signed integer type, 64bit on 64bit systems and 32bit on 32bit."
+  },
+  {
+   "id": "curated_uint16",
+   "label": "uint16",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Unsigned integer type, compatible with C ``unsigned short``."
+  },
+  {
+   "id": "curated_uint32",
+   "label": "uint32",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Unsigned integer type, compatible with C ``unsigned int``."
+  },
+  {
+   "id": "curated_uint64",
+   "label": "uint64",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Unsigned signed integer type, 64bit on 64bit systems and 32bit on 32bit."
+  },
+  {
+   "id": "curated_uint8",
+   "label": "uint8",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Unsigned integer type, compatible with C ``unsigned char``."
+  },
+  {
+   "id": "curated_uintc",
+   "label": "uintc",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Unsigned integer type, compatible with C ``unsigned int``."
+  },
+  {
+   "id": "curated_uintp",
+   "label": "uintp",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Unsigned signed integer type, 64bit on 64bit systems and 32bit on 32bit."
+  },
+  {
+   "id": "curated_ulong",
+   "label": "ulong",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Unsigned signed integer type, 64bit on 64bit systems and 32bit on 32bit."
+  },
+  {
+   "id": "curated_ulonglong",
+   "label": "ulonglong",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Signed integer type, compatible with C ``unsigned long long``."
+  },
+  {
+   "id": "curated_unsignedinteger",
+   "label": "unsignedinteger",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Abstract base class of all unsigned integer scalar types."
+  },
+  {
+   "id": "curated_ushort",
+   "label": "ushort",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Unsigned integer type, compatible with C ``unsigned short``."
+  },
+  {
+   "id": "curated_vecmat",
+   "label": "vecmat()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "vecmat(x1, x2, /, out=None, *, casting='same_kind', order='K', dtype=None, subok=True[, signature, axes, axis])."
+  },
+  {
+   "id": "curated_void",
+   "label": "void",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "np.void(length_or_data, /, dtype=None)."
+  },
+  {
+   "id": "curated_array",
+   "label": "array()",
+   "file_type": "code",
+   "source_file": "__init__.py",
+   "community": 78,
+   "community_name": "Community 78",
+   "description": "Create an ndarray from array-like input \u2014 the top-level array constructor (C-implemented; the chararray/masked-array variants are separate functions)."
+  },
+  {
+   "id": "curated_asarray",
+   "label": "asarray()",
+   "file_type": "code",
+   "source_file": "_core/_asarray.py",
+   "community": 358,
+   "community_name": "Community 358",
+   "description": "Convert the input to an ndarray, copying only when necessary \u2014 the as*array family entry point (numpy._core._asarray)."
+  },
+  {
+   "id": "curated_asanyarray",
+   "label": "asanyarray()",
+   "file_type": "code",
+   "source_file": "_core/_asarray.py",
+   "community": 358,
+   "community_name": "Community 358",
+   "description": "Convert the input to an ndarray or subclass thereof without copying when possible (numpy._core._asarray)."
   }
  ],
  "links": [
@@ -237384,6 +239202,2228 @@
    "weight": 1,
    "_src": "random_init",
    "_tgt": "curated_permutation",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_false_",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_false_",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_scalartype",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_scalartype",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_true_",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_true_",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_abs",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_abs",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_absolute",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_absolute",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_acos",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_acos",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_acosh",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_acosh",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_add",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_add",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_arange",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_arange",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_arccosh",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_arccosh",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_arcsinh",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_arcsinh",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_arctan",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_arctan",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_arctan2",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_arctan2",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_array2string",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_array2string",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_ascontiguousarray",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_ascontiguousarray",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_asfortranarray",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_asfortranarray",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_asin",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_asin",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_asinh",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_asinh",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_atan",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_atan",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_atan2",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_atan2",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_atanh",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_atanh",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_bitwise_and",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_bitwise_and",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_bitwise_count",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_bitwise_count",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_bitwise_invert",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_bitwise_invert",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_bitwise_left_shift",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_bitwise_left_shift",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_bitwise_not",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_bitwise_not",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_bitwise_or",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_bitwise_or",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_bitwise_right_shift",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_bitwise_right_shift",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_bitwise_xor",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_bitwise_xor",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_block",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_block",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_bool",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_bool",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_bool_",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_bool_",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_broadcast",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_broadcast",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_broadcast_to",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_broadcast_to",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_busdaycalendar",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_busdaycalendar",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_byte",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_byte",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_bytes_",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_bytes_",
+   "confidence_score": 1
+  },
+  {
+   "source": "lib_index_tricks_impl",
+   "target": "curated_c_",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "lib/_index_tricks_impl.py",
+   "weight": 1,
+   "_src": "lib_index_tricks_impl",
+   "_tgt": "curated_c_",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_cbrt",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_cbrt",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_cdouble",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_cdouble",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_ceil",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_ceil",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_char",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_char",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_character",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_character",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_clongdouble",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_clongdouble",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_complex128",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_complex128",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_complex256",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_complex256",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_complex64",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_complex64",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_complexfloating",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_complexfloating",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_concat",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_concat",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_conj",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_conj",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_conjugate",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_conjugate",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_copysign",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_copysign",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_core",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_core",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_cos",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_cos",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_cosh",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_cosh",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_csingle",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_csingle",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_ctypeslib",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_ctypeslib",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_datetime64",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_datetime64",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_datetime_data",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_datetime_data",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_deg2rad",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_deg2rad",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_degrees",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_degrees",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_diag_indices_from",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_diag_indices_from",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_divide",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_divide",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_divmod",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_divmod",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_double",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_double",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_dtype",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_dtype",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_dtypes",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_dtypes",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_e",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_e",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_emath",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_emath",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_euler_gamma",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_euler_gamma",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_exceptions",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_exceptions",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_exp",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_exp",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_exp2",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_exp2",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_expm1",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_expm1",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_f2py",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_f2py",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_fabs",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_fabs",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_flatiter",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_flatiter",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_flexible",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_flexible",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_float128",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_float128",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_float16",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_float16",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_float32",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_float32",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_float64",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_float64",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_float_power",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_float_power",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_floating",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_floating",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_floor",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_floor",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_floor_divide",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_floor_divide",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_fmax",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_fmax",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_fmin",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_fmin",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_fmod",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_fmod",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_frexp",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_frexp",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_frombuffer",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_frombuffer",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_fromiter",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_fromiter",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_frompyfunc",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_frompyfunc",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_generic",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_generic",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_half",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_half",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_heaviside",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_heaviside",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_hypot",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_hypot",
+   "confidence_score": 1
+  },
+  {
+   "source": "lib_index_tricks_impl",
+   "target": "curated_index_exp",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "lib/_index_tricks_impl.py",
+   "weight": 1,
+   "_src": "lib_index_tricks_impl",
+   "_tgt": "curated_index_exp",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_inf",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_inf",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_info",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_info",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_int16",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_int16",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_int32",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_int32",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_int64",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_int64",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_int8",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_int8",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_int_",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_int_",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_intc",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_intc",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_integer",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_integer",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_intp",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_intp",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_invert",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_invert",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_isfinite",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_isfinite",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_isinf",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_isinf",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_isnan",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_isnan",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_isnat",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_isnat",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_ldexp",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_ldexp",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_lib",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_lib",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_linalg",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_linalg",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_little_endian",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_little_endian",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_log1p",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_log1p",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_logaddexp",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_logaddexp",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_logaddexp2",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_logaddexp2",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_logical_and",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_logical_and",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_logical_not",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_logical_not",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_logical_or",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_logical_or",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_logical_xor",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_logical_xor",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_long",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_long",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_longdouble",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_longdouble",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_longlong",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_longlong",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_ma",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_ma",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_matvec",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_matvec",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_maximum",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_maximum",
+   "confidence_score": 1
+  },
+  {
+   "source": "lib_index_tricks_impl",
+   "target": "curated_mgrid",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "lib/_index_tricks_impl.py",
+   "weight": 1,
+   "_src": "lib_index_tricks_impl",
+   "_tgt": "curated_mgrid",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_minimum",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_minimum",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_modf",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_modf",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_nan",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_nan",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_nanmedian",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_nanmedian",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_nditer",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_nditer",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_negative",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_negative",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_nested_iters",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_nested_iters",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_newaxis",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_newaxis",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_nextafter",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_nextafter",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_number",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_number",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_object_",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_object_",
+   "confidence_score": 1
+  },
+  {
+   "source": "lib_index_tricks_impl",
+   "target": "curated_ogrid",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "lib/_index_tricks_impl.py",
+   "weight": 1,
+   "_src": "lib_index_tricks_impl",
+   "_tgt": "curated_ogrid",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_permute_dims",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_permute_dims",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_pi",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_pi",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_polynomial",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_polynomial",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_positive",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_positive",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_pow",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_pow",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_promote_types",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_promote_types",
+   "confidence_score": 1
+  },
+  {
+   "source": "lib_index_tricks_impl",
+   "target": "curated_r_",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "lib/_index_tricks_impl.py",
+   "weight": 1,
+   "_src": "lib_index_tricks_impl",
+   "_tgt": "curated_r_",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_rad2deg",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_rad2deg",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_radians",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_radians",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_rec",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_rec",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_reciprocal",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_reciprocal",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_remainder",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_remainder",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_rint",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_rint",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_row_stack",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_row_stack",
+   "confidence_score": 1
+  },
+  {
+   "source": "lib_index_tricks_impl",
+   "target": "curated_s_",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "lib/_index_tricks_impl.py",
+   "weight": 1,
+   "_src": "lib_index_tricks_impl",
+   "_tgt": "curated_s_",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_sctypedict",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_sctypedict",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_short",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_short",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_show_config",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_show_config",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_sign",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_sign",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_signbit",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_signbit",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_signedinteger",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_signedinteger",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_sin",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_sin",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_single",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_single",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_sinh",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_sinh",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_sort_complex",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_sort_complex",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_spacing",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_spacing",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_square",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_square",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_str_",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_str_",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_strings",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_strings",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_subtract",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_subtract",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_tan",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_tan",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_tanh",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_tanh",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_test",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_test",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_testing",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_testing",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_timedelta64",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_timedelta64",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_trapz",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_trapz",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_trim_zeros",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_trim_zeros",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_true_divide",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_true_divide",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_trunc",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_trunc",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_typecodes",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_typecodes",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_typing",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_typing",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_ubyte",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_ubyte",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_ufunc",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_ufunc",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_uint",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_uint",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_uint16",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_uint16",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_uint32",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_uint32",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_uint64",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_uint64",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_uint8",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_uint8",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_uintc",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_uintc",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_uintp",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_uintp",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_ulong",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_ulong",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_ulonglong",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_ulonglong",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_unsignedinteger",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_unsignedinteger",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_ushort",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_ushort",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_vecmat",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_vecmat",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_void",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_void",
+   "confidence_score": 1
+  },
+  {
+   "source": "init",
+   "target": "curated_array",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "__init__.py",
+   "weight": 1,
+   "_src": "init",
+   "_tgt": "curated_array",
+   "confidence_score": 1
+  },
+  {
+   "source": "core_asarray",
+   "target": "curated_asarray",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "_core/_asarray.py",
+   "weight": 1,
+   "_src": "core_asarray",
+   "_tgt": "curated_asarray",
+   "confidence_score": 1
+  },
+  {
+   "source": "core_asarray",
+   "target": "curated_asanyarray",
+   "relation": "contains",
+   "confidence": "CURATED",
+   "source_file": "_core/_asarray.py",
+   "weight": 1,
+   "_src": "core_asarray",
+   "_tgt": "curated_asanyarray",
    "confidence_score": 1
   }
  ],

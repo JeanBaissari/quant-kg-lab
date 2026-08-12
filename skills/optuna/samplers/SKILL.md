@@ -34,8 +34,8 @@ related_skills:
 Extracted from optuna knowledge graph. Source: `optuna.samplers` module.
 
 ## Quick Reference
-| Sampler | Algorithm | Best For | Multi-Objective | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node |
-|---------|-----------|----------|-----------------|
+| Sampler | Algorithm | Best For | Multi-Objective | Graph Node |
+|-------|---------|--------|---------------|----------|
 | `TPESampler` | Tree-structured Parzen Estimator (TPE) | General-purpose Bayesian optimization (default) | No | samplers/_tpe/sampler.py:L88 |
 | `RandomSampler` | Uniform random search | Baseline, high-dimensional categorical spaces | Yes | samplers/_random.py:L19 |
 | `GridSampler` | Exhaustive grid search | Small search spaces, reproducibility | No | samplers/_grid.py:L33 |

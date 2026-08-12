@@ -9,8 +9,8 @@
     "numpy": {
       "repo": "numpy/numpy",
       "commit": "ab2199763cb17878cd8f34fcbc97106c5397f922",
-      "nodes": 8104,
-      "edges": 13281
+      "nodes": 8306,
+      "edges": 13483
     },
     "scipy": {
       "repo": "scipy/scipy",

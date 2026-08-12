@@ -51,6 +51,10 @@ docs:
   type: ADR
   status: accepted
   last_verified: '2026-08-12'
+- path: docs/adr/ADR-0008-api-surface-reconciliation.md
+  type: ADR
+  status: accepted
+  last_verified: '2026-08-12'
 - path: docs/adr/README.md
   type: Guide
   status: current
@@ -188,6 +192,10 @@ docs:
   status: generated
   last_verified: ''
 - path: docs/reference/quality-gate/gate-numpy.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/api-surface/numpy.md
   type: Generated
   status: generated
   last_verified: ''

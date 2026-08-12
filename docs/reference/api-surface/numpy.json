@@ -1,0 +1,9 @@
+{
+  "lib": "numpy",
+  "total": 499,
+  "present": 499,
+  "missing": 0,
+  "coverage": 100.0,
+  "by_mechanism": {},
+  "generated": "2026-08-12"
+}

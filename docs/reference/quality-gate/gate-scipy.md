@@ -11,3 +11,4 @@ Graph: `knowledge_graphs/scipy/.graphify/graph.json` · GRAPH_SPEC §5 · genera
 | c3 god nodes | PASS | top20=20 noise=0 |
 | c4 pin | PASS | expected=0514ef9e73297ef8d6f46379731eedc619f9d201 found=0514ef9e73297ef8d6f46379731eedc619f9d201 (graph) |
 | c5 audited | PASS | exists |
+| c6 api surface | PASS | no manifest (probe pending) |

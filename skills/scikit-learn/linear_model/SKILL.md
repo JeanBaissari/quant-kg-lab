@@ -35,8 +35,8 @@ Extracted from scikit-learn knowledge graph. Source: `sklearn.linear_model` modu
 ## Quick Reference
 ### Ordinary Least Squares & Regularized Regression
 
-| Class | Purpose | Key Params | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node |
-|-------|---------|------------|
+| Class | Purpose | Key Params | Graph Node |
+|-----|-------|----------|----------|
 | `LinearRegression` | Ordinary least squares | `fit_intercept`, `n_jobs` | linear_model/_base.py:L519 |
 | `Ridge` | L2-regularized linear regression | `alpha`, `solver`, `fit_intercept` | linear_model/_ridge.py:L1022 |
 | `RidgeCV` | Ridge with built-in CV for alpha | `alphas`, `cv`, `scoring`, `store_cv_values` | linear_model/_ridge.py:L2658 |

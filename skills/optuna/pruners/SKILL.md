@@ -33,8 +33,8 @@ related_skills:
 Extracted from optuna knowledge graph. Source: `optuna.pruners` module.
 
 ## Quick Reference
-| Pruner | Strategy | Best For | Requires Report | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node |
-|--------|----------|----------|-----------------|
+| Pruner | Strategy | Best For | Requires Report | Graph Node |
+|------|--------|--------|---------------|----------|
 | `MedianPruner` | Prune if intermediate value is worse than median of previous trials at same step | Simple early stopping | Yes | pruners/_median.py:L4 |
 | `PercentilePruner` | Prune if value is below specified percentile of previous trials | Tunable aggressiveness | Yes | : |
 | `SuccessiveHalvingPruner` | Allocate equal budget across trials, prune worst half at each rung | Fixed budget problems | Yes | pruners/_successive_halving.py:L15 |

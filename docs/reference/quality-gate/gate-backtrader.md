@@ -11,3 +11,4 @@ Graph: `knowledge_graphs/backtrader/.graphify/graph.json` · GRAPH_SPEC §5 · g
 | c3 god nodes | PASS | top20=20 noise=0 |
 | c4 pin | PASS | expected=b853d7c90b6721476eb5a5ea3135224e33db1f14 found=b853d7c90b6721476eb5a5ea3135224e33db1f14 (graph) |
 | c5 audited | PASS | exists |
+| c6 api surface | PASS | no manifest (probe pending) |

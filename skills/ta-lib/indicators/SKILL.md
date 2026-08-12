@@ -25,8 +25,8 @@ TA-Lib (Technical Analysis Library) is a C library with Python bindings via Cyth
 
 ## Quick Reference
 
-| Function | Category | Signature | Description | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node |
-|----------|----------|-----------|-------------|
+| Function | Category | Signature | Description | Graph Node |
+|--------|--------|---------|-----------|----------|
 | `SMA` | Overlap | `talib.SMA(close, timeperiod=30)` | Simple Moving Average | _ta_lib.c:L35583 |
 | `EMA` | Overlap | `talib.EMA(close, timeperiod=30)` | Exponential Moving Average | _ta_lib.c:L25986 |
 | `WMA` | Overlap | `talib.WMA(close, timeperiod=30)` | Weighted Moving Average | _ta_lib.c:L39678 |

@@ -34,8 +34,8 @@ Extracted from scikit-learn knowledge graph. Source: `sklearn.decomposition` mod
 ## Quick Reference
 ### PCA Variants
 
-| Class | Purpose | Key Params | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node |
-|-------|---------|------------|
+| Class | Purpose | Key Params | Graph Node |
+|-----|-------|----------|----------|
 | `PCA` | Principal Component Analysis (SVD) | `n_components`, `svd_solver`, `whiten`, `random_state` | decomposition/_pca.py:L113 |
 | `IncrementalPCA` | PCA on batches (out-of-core) | `n_components`, `batch_size`, `whiten` | decomposition/_incremental_pca.py:L19 |
 | `KernelPCA` | Non-linear PCA via kernel trick | `n_components`, `kernel`, `gamma`, `eigen_solver` | decomposition/_kernel_pca.py:L32 |

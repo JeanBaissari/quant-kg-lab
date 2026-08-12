@@ -11,3 +11,4 @@ Graph: `knowledge_graphs/scikit-learn/.graphify/graph.json` · GRAPH_SPEC §5 ·
 | c3 god nodes | PASS | top20=20 noise=0 |
 | c4 pin | PASS | expected=6f8b95aa2234102acc3804fc8c7a3e6bd0506bfb found=6f8b95aa2234102acc3804fc8c7a3e6bd0506bfb (graph) |
 | c5 audited | PASS | exists |
+| c6 api surface | PASS | no manifest (probe pending) |

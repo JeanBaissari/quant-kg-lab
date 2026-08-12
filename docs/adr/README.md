@@ -26,5 +26,6 @@ Lifecycle: `proposed → accepted → superseded-by: ADR-000N`.
 | [ADR-0005](ADR-0005-single-docs-surface.md) | Single `docs/` surface + doc-type taxonomy | accepted |
 | [ADR-0006](ADR-0006-package-subdir-extraction.md) | Package-subdir from-scratch re-extraction | accepted |
 | [ADR-0007](ADR-0007-distribution-bundles.md) | Graph bundles as GitHub Release assets | accepted |
+| [ADR-0008](ADR-0008-api-surface-reconciliation.md) | API-surface reconciliation for language-invisible symbols | accepted |
 
 *Last verified against the repo: 2026-08-12.*

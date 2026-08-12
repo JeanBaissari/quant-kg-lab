@@ -9,10 +9,10 @@ source_repo: numpy/numpy
 source_commit: ab2199763cb17878cd8f34fcbc97106c5397f922
 extraction_date: 2026-07-29
 graph:
-  nodes: 8104
-  edges: 13281
+  nodes: 8306
+  edges: 13483
   community_count: 670
-  graph_hash: 65eb865357d8f26a
+  graph_hash: df005c66bd19581a
 tags:
 - numpy
 - linalg
@@ -25,8 +25,8 @@ Linear algebra functions backed by BLAS and LAPACK. All functions operate on the
 
 ## Quick Reference
 
-| API | Signature | Description | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node |
-|-----|-----------|-------------|
+| API | Signature | Description | Graph Node |
+|---|---------|-----------|----------|
 | `solve` | `solve(a, b)` | Solve `a @ x = b` for x | linalg/_linalg.py:L374 |
 | `eig` | `eig(a)` | Eigenvalues and right eigenvectors of a square array | linalg/_linalg.py:L1342 |
 | `eigh` | `eigh(a, UPLO='L')` | Eigenvalues/vectors of complex Hermitian or real symmetric matrix | linalg/_linalg.py:L1489 |

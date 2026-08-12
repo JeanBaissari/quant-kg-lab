@@ -33,8 +33,8 @@ Extracted from scikit-learn knowledge graph. Source: `sklearn.feature_selection`
 ## Quick Reference
 ### Filter Methods (Univariate)
 
-| Class/Function | Purpose | Key Params | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node |
-|---------------|---------|------------|
+| Class/Function | Purpose | Key Params | Graph Node |
+|--------------|-------|----------|----------|
 | `SelectKBest` | Select top-k scoring features | `score_func`, `k` | feature_selection/_univariate_selection.py:L698 |
 | `SelectPercentile` | Select top percentile of features | `score_func`, `percentile` | feature_selection/_univariate_selection.py:L593 |
 | `SelectFpr` | Select based on FPR (false positive rate) | `score_func`, `alpha` | feature_selection/_univariate_selection.py:L809 |

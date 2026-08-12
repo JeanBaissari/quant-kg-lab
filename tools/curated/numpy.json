@@ -1,0 +1,1065 @@
+{
+  "library": "numpy",
+  "symbols": [
+    {
+      "label": "False_",
+      "source_file": "__init__.py",
+      "description": "Boolean type (True or False), stored as a byte."
+    },
+    {
+      "label": "ScalarType",
+      "source_file": "__init__.py",
+      "description": "Built-in immutable sequence."
+    },
+    {
+      "label": "True_",
+      "source_file": "__init__.py",
+      "description": "Boolean type (True or False), stored as a byte."
+    },
+    {
+      "label": "abs()",
+      "source_file": "__init__.py",
+      "description": "absolute(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "absolute()",
+      "source_file": "__init__.py",
+      "description": "absolute(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "acos()",
+      "source_file": "__init__.py",
+      "description": "arccos(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "acosh()",
+      "source_file": "__init__.py",
+      "description": "arccosh(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "add()",
+      "source_file": "__init__.py",
+      "description": "add(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "arange()",
+      "source_file": "__init__.py",
+      "description": "arange([start,] stop[, step,], dtype=None, *, device=None, like=None)."
+    },
+    {
+      "label": "arccosh()",
+      "source_file": "__init__.py",
+      "description": "arccosh(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "arcsinh()",
+      "source_file": "__init__.py",
+      "description": "arcsinh(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "arctan()",
+      "source_file": "__init__.py",
+      "description": "arctan(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "arctan2()",
+      "source_file": "__init__.py",
+      "description": "arctan2(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "array2string()",
+      "source_file": "__init__.py",
+      "description": "Return a string representation of an array."
+    },
+    {
+      "label": "ascontiguousarray()",
+      "source_file": "__init__.py",
+      "description": "ascontiguousarray(a, dtype=None, *, like=None)."
+    },
+    {
+      "label": "asfortranarray()",
+      "source_file": "__init__.py",
+      "description": "asfortranarray(a, dtype=None, *, like=None)."
+    },
+    {
+      "label": "asin()",
+      "source_file": "__init__.py",
+      "description": "arcsin(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "asinh()",
+      "source_file": "__init__.py",
+      "description": "arcsinh(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "atan()",
+      "source_file": "__init__.py",
+      "description": "arctan(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "atan2()",
+      "source_file": "__init__.py",
+      "description": "arctan2(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "atanh()",
+      "source_file": "__init__.py",
+      "description": "arctanh(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "bitwise_and()",
+      "source_file": "__init__.py",
+      "description": "bitwise_and(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "bitwise_count()",
+      "source_file": "__init__.py",
+      "description": "bitwise_count(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "bitwise_invert()",
+      "source_file": "__init__.py",
+      "description": "invert(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "bitwise_left_shift()",
+      "source_file": "__init__.py",
+      "description": "left_shift(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "bitwise_not()",
+      "source_file": "__init__.py",
+      "description": "invert(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "bitwise_or()",
+      "source_file": "__init__.py",
+      "description": "bitwise_or(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "bitwise_right_shift()",
+      "source_file": "__init__.py",
+      "description": "right_shift(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "bitwise_xor()",
+      "source_file": "__init__.py",
+      "description": "bitwise_xor(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "block()",
+      "source_file": "__init__.py",
+      "description": "Assemble an nd-array from nested lists of blocks."
+    },
+    {
+      "label": "bool",
+      "source_file": "__init__.py",
+      "description": "Boolean type (True or False), stored as a byte."
+    },
+    {
+      "label": "bool_",
+      "source_file": "__init__.py",
+      "description": "Boolean type (True or False), stored as a byte."
+    },
+    {
+      "label": "broadcast",
+      "source_file": "__init__.py",
+      "description": "Produce an object that mimics broadcasting."
+    },
+    {
+      "label": "broadcast_to()",
+      "source_file": "__init__.py",
+      "description": "Broadcast an array to a new shape."
+    },
+    {
+      "label": "busdaycalendar",
+      "source_file": "__init__.py",
+      "description": "busdaycalendar(weekmask='1111100', holidays=None)."
+    },
+    {
+      "label": "byte",
+      "source_file": "__init__.py",
+      "description": "Signed integer type, compatible with C ``char``."
+    },
+    {
+      "label": "bytes_",
+      "source_file": "__init__.py",
+      "description": "A byte string."
+    },
+    {
+      "label": "c_",
+      "source_file": "lib/_index_tricks_impl.py",
+      "description": "Translates slice objects to concatenation along the second axis."
+    },
+    {
+      "label": "cbrt()",
+      "source_file": "__init__.py",
+      "description": "cbrt(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "cdouble",
+      "source_file": "__init__.py",
+      "description": "Complex number type composed of two double-precision floating-point."
+    },
+    {
+      "label": "ceil()",
+      "source_file": "__init__.py",
+      "description": "ceil(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "char",
+      "source_file": "__init__.py",
+      "description": "This module contains a set of functions for vectorized string."
+    },
+    {
+      "label": "character",
+      "source_file": "__init__.py",
+      "description": "Abstract base class of all character string scalar types."
+    },
+    {
+      "label": "clongdouble",
+      "source_file": "__init__.py",
+      "description": "Complex number type composed of two extended-precision floating-point."
+    },
+    {
+      "label": "complex128",
+      "source_file": "__init__.py",
+      "description": "Complex number type composed of two double-precision floating-point."
+    },
+    {
+      "label": "complex256",
+      "source_file": "__init__.py",
+      "description": "Complex number type composed of two extended-precision floating-point."
+    },
+    {
+      "label": "complex64",
+      "source_file": "__init__.py",
+      "description": "Complex number type composed of two single-precision floating-point."
+    },
+    {
+      "label": "complexfloating",
+      "source_file": "__init__.py",
+      "description": "Abstract base class of all complex number scalar types that are made up of."
+    },
+    {
+      "label": "concat()",
+      "source_file": "__init__.py",
+      "description": "concatenate(."
+    },
+    {
+      "label": "conj()",
+      "source_file": "__init__.py",
+      "description": "conjugate(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "conjugate()",
+      "source_file": "__init__.py",
+      "description": "conjugate(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "copysign()",
+      "source_file": "__init__.py",
+      "description": "copysign(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "core",
+      "source_file": "__init__.py",
+      "description": "The `numpy.core` submodule exists solely for backward compatibility."
+    },
+    {
+      "label": "cos()",
+      "source_file": "__init__.py",
+      "description": "cos(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "cosh()",
+      "source_file": "__init__.py",
+      "description": "cosh(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "csingle",
+      "source_file": "__init__.py",
+      "description": "Complex number type composed of two single-precision floating-point."
+    },
+    {
+      "label": "ctypeslib",
+      "source_file": "__init__.py",
+      "description": "============================."
+    },
+    {
+      "label": "datetime64",
+      "source_file": "__init__.py",
+      "description": "If created from a 64-bit integer, it represents an offset from."
+    },
+    {
+      "label": "datetime_data()",
+      "source_file": "__init__.py",
+      "description": "datetime_data(dtype, /)."
+    },
+    {
+      "label": "deg2rad()",
+      "source_file": "__init__.py",
+      "description": "deg2rad(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "degrees()",
+      "source_file": "__init__.py",
+      "description": "degrees(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "diag_indices_from()",
+      "source_file": "__init__.py",
+      "description": "Return the indices to access the main diagonal of an n-dimensional array."
+    },
+    {
+      "label": "divide()",
+      "source_file": "__init__.py",
+      "description": "divide(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "divmod()",
+      "source_file": "__init__.py",
+      "description": "divmod(x1, x2[, out1, out2], / [, out=(None, None)], *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "double",
+      "source_file": "__init__.py",
+      "description": "Double-precision floating-point number type, compatible with Python."
+    },
+    {
+      "label": "dtype",
+      "source_file": "__init__.py",
+      "description": "dtype(dtype, align=False, copy=False, [metadata])."
+    },
+    {
+      "label": "dtypes",
+      "source_file": "__init__.py",
+      "description": "This module is home to specific dtypes related functionality and their classes."
+    },
+    {
+      "label": "e",
+      "source_file": "__init__.py",
+      "description": "Convert a string or number to a floating point number, if possible."
+    },
+    {
+      "label": "emath",
+      "source_file": "__init__.py",
+      "description": "Wrapper functions to more user-friendly calling of certain math functions."
+    },
+    {
+      "label": "euler_gamma",
+      "source_file": "__init__.py",
+      "description": "Convert a string or number to a floating point number, if possible."
+    },
+    {
+      "label": "exceptions",
+      "source_file": "__init__.py",
+      "description": "Exceptions and Warnings (:mod:`numpy.exceptions`)."
+    },
+    {
+      "label": "exp()",
+      "source_file": "__init__.py",
+      "description": "exp(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "exp2()",
+      "source_file": "__init__.py",
+      "description": "exp2(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "expm1()",
+      "source_file": "__init__.py",
+      "description": "expm1(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "f2py",
+      "source_file": "__init__.py",
+      "description": "Fortran to Python Interface Generator."
+    },
+    {
+      "label": "fabs()",
+      "source_file": "__init__.py",
+      "description": "fabs(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "flatiter",
+      "source_file": "__init__.py",
+      "description": "Flat iterator object to iterate over arrays."
+    },
+    {
+      "label": "flexible",
+      "source_file": "__init__.py",
+      "description": "Abstract base class of all scalar types without predefined length."
+    },
+    {
+      "label": "float128",
+      "source_file": "__init__.py",
+      "description": "Extended-precision floating-point number type, compatible with C."
+    },
+    {
+      "label": "float16",
+      "source_file": "__init__.py",
+      "description": "Half-precision floating-point number type."
+    },
+    {
+      "label": "float32",
+      "source_file": "__init__.py",
+      "description": "Single-precision floating-point number type, compatible with C ``float``."
+    },
+    {
+      "label": "float64",
+      "source_file": "__init__.py",
+      "description": "Double-precision floating-point number type, compatible with Python."
+    },
+    {
+      "label": "float_power()",
+      "source_file": "__init__.py",
+      "description": "float_power(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "floating",
+      "source_file": "__init__.py",
+      "description": "Abstract base class of all floating-point scalar types."
+    },
+    {
+      "label": "floor()",
+      "source_file": "__init__.py",
+      "description": "floor(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "floor_divide()",
+      "source_file": "__init__.py",
+      "description": "floor_divide(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "fmax()",
+      "source_file": "__init__.py",
+      "description": "fmax(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "fmin()",
+      "source_file": "__init__.py",
+      "description": "fmin(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "fmod()",
+      "source_file": "__init__.py",
+      "description": "fmod(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "frexp()",
+      "source_file": "__init__.py",
+      "description": "frexp(x[, out1, out2], / [, out=(None, None)], *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "frombuffer()",
+      "source_file": "__init__.py",
+      "description": "frombuffer(buffer, dtype=float, count=-1, offset=0, *, like=None)."
+    },
+    {
+      "label": "fromiter()",
+      "source_file": "__init__.py",
+      "description": "fromiter(iter, dtype, count=-1, *, like=None)."
+    },
+    {
+      "label": "frompyfunc()",
+      "source_file": "__init__.py",
+      "description": "frompyfunc(func, /, nin, nout, *[, identity])."
+    },
+    {
+      "label": "generic",
+      "source_file": "__init__.py",
+      "description": "Base class for numpy scalar types."
+    },
+    {
+      "label": "half",
+      "source_file": "__init__.py",
+      "description": "Half-precision floating-point number type."
+    },
+    {
+      "label": "heaviside()",
+      "source_file": "__init__.py",
+      "description": "heaviside(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "hypot()",
+      "source_file": "__init__.py",
+      "description": "hypot(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "index_exp",
+      "source_file": "lib/_index_tricks_impl.py",
+      "description": "A nicer way to build up index tuples for arrays."
+    },
+    {
+      "label": "inf",
+      "source_file": "__init__.py",
+      "description": "Convert a string or number to a floating point number, if possible."
+    },
+    {
+      "label": "info()",
+      "source_file": "__init__.py",
+      "description": "Get help information for an array, function, class, or module."
+    },
+    {
+      "label": "int16",
+      "source_file": "__init__.py",
+      "description": "Signed integer type, compatible with C ``short``."
+    },
+    {
+      "label": "int32",
+      "source_file": "__init__.py",
+      "description": "Signed integer type, compatible with C ``int``."
+    },
+    {
+      "label": "int64",
+      "source_file": "__init__.py",
+      "description": "Default signed integer type, 64bit on 64bit systems and 32bit on 32bit."
+    },
+    {
+      "label": "int8",
+      "source_file": "__init__.py",
+      "description": "Signed integer type, compatible with C ``char``."
+    },
+    {
+      "label": "int_",
+      "source_file": "__init__.py",
+      "description": "Default signed integer type, 64bit on 64bit systems and 32bit on 32bit."
+    },
+    {
+      "label": "intc",
+      "source_file": "__init__.py",
+      "description": "Signed integer type, compatible with C ``int``."
+    },
+    {
+      "label": "integer",
+      "source_file": "__init__.py",
+      "description": "Abstract base class of all integer scalar types."
+    },
+    {
+      "label": "intp",
+      "source_file": "__init__.py",
+      "description": "Default signed integer type, 64bit on 64bit systems and 32bit on 32bit."
+    },
+    {
+      "label": "invert()",
+      "source_file": "__init__.py",
+      "description": "invert(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "isfinite()",
+      "source_file": "__init__.py",
+      "description": "isfinite(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "isinf()",
+      "source_file": "__init__.py",
+      "description": "isinf(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "isnan()",
+      "source_file": "__init__.py",
+      "description": "isnan(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "isnat()",
+      "source_file": "__init__.py",
+      "description": "isnat(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "ldexp()",
+      "source_file": "__init__.py",
+      "description": "ldexp(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "lib",
+      "source_file": "__init__.py",
+      "description": "``numpy.lib`` is mostly a space for implementing functions that don't."
+    },
+    {
+      "label": "linalg",
+      "source_file": "__init__.py",
+      "description": "``numpy.linalg``."
+    },
+    {
+      "label": "little_endian",
+      "source_file": "__init__.py",
+      "description": "bool(x) -> bool."
+    },
+    {
+      "label": "log1p()",
+      "source_file": "__init__.py",
+      "description": "log1p(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "logaddexp()",
+      "source_file": "__init__.py",
+      "description": "logaddexp(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "logaddexp2()",
+      "source_file": "__init__.py",
+      "description": "logaddexp2(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "logical_and()",
+      "source_file": "__init__.py",
+      "description": "logical_and(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "logical_not()",
+      "source_file": "__init__.py",
+      "description": "logical_not(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "logical_or()",
+      "source_file": "__init__.py",
+      "description": "logical_or(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "logical_xor()",
+      "source_file": "__init__.py",
+      "description": "logical_xor(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "long",
+      "source_file": "__init__.py",
+      "description": "Default signed integer type, 64bit on 64bit systems and 32bit on 32bit."
+    },
+    {
+      "label": "longdouble",
+      "source_file": "__init__.py",
+      "description": "Extended-precision floating-point number type, compatible with C."
+    },
+    {
+      "label": "longlong",
+      "source_file": "__init__.py",
+      "description": "Signed integer type, compatible with C ``long long``."
+    },
+    {
+      "label": "ma",
+      "source_file": "__init__.py",
+      "description": "=============."
+    },
+    {
+      "label": "matvec()",
+      "source_file": "__init__.py",
+      "description": "matvec(x1, x2, /, out=None, *, casting='same_kind', order='K', dtype=None, subok=True[, signature, axes, axis])."
+    },
+    {
+      "label": "maximum()",
+      "source_file": "__init__.py",
+      "description": "maximum(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "mgrid",
+      "source_file": "lib/_index_tricks_impl.py",
+      "description": "An instance which returns a dense multi-dimensional \"meshgrid\"."
+    },
+    {
+      "label": "minimum()",
+      "source_file": "__init__.py",
+      "description": "minimum(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "modf()",
+      "source_file": "__init__.py",
+      "description": "modf(x[, out1, out2], / [, out=(None, None)], *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "nan",
+      "source_file": "__init__.py",
+      "description": "Convert a string or number to a floating point number, if possible."
+    },
+    {
+      "label": "nanmedian()",
+      "source_file": "__init__.py",
+      "description": "Compute the median along the specified axis, while ignoring NaNs."
+    },
+    {
+      "label": "nditer",
+      "source_file": "__init__.py",
+      "description": "nditer(op, flags=None, op_flags=None, op_dtypes=None, order='K',."
+    },
+    {
+      "label": "negative()",
+      "source_file": "__init__.py",
+      "description": "negative(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "nested_iters()",
+      "source_file": "__init__.py",
+      "description": "nested_iters(op, axes, flags=None, op_flags=None, op_dtypes=None,     order=\"K\", casting=\"safe\", buffersize=0)."
+    },
+    {
+      "label": "newaxis",
+      "source_file": "__init__.py",
+      "description": "Public NumPy API symbol `np.newaxis` (C-implemented or namespace; see docs)."
+    },
+    {
+      "label": "nextafter()",
+      "source_file": "__init__.py",
+      "description": "nextafter(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "number",
+      "source_file": "__init__.py",
+      "description": "Abstract base class of all numeric scalar types."
+    },
+    {
+      "label": "object_",
+      "source_file": "__init__.py",
+      "description": "Any Python object."
+    },
+    {
+      "label": "ogrid",
+      "source_file": "lib/_index_tricks_impl.py",
+      "description": "An instance which returns an open multi-dimensional \"meshgrid\"."
+    },
+    {
+      "label": "permute_dims()",
+      "source_file": "__init__.py",
+      "description": "Returns an array with axes transposed."
+    },
+    {
+      "label": "pi",
+      "source_file": "__init__.py",
+      "description": "Convert a string or number to a floating point number, if possible."
+    },
+    {
+      "label": "polynomial",
+      "source_file": "__init__.py",
+      "description": "A sub-package for efficiently dealing with polynomials."
+    },
+    {
+      "label": "positive()",
+      "source_file": "__init__.py",
+      "description": "positive(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "pow()",
+      "source_file": "__init__.py",
+      "description": "power(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "promote_types()",
+      "source_file": "__init__.py",
+      "description": "promote_types(type1, type2)."
+    },
+    {
+      "label": "r_",
+      "source_file": "lib/_index_tricks_impl.py",
+      "description": "Translates slice objects to concatenation along the first axis."
+    },
+    {
+      "label": "rad2deg()",
+      "source_file": "__init__.py",
+      "description": "rad2deg(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "radians()",
+      "source_file": "__init__.py",
+      "description": "radians(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "rec",
+      "source_file": "__init__.py",
+      "description": "This module contains a set of functions for record arrays."
+    },
+    {
+      "label": "reciprocal()",
+      "source_file": "__init__.py",
+      "description": "reciprocal(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "remainder()",
+      "source_file": "__init__.py",
+      "description": "remainder(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "rint()",
+      "source_file": "__init__.py",
+      "description": "rint(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "row_stack()",
+      "source_file": "__init__.py",
+      "description": "Stack arrays in sequence vertically (row wise)."
+    },
+    {
+      "label": "s_",
+      "source_file": "lib/_index_tricks_impl.py",
+      "description": "A nicer way to build up index tuples for arrays."
+    },
+    {
+      "label": "sctypeDict",
+      "source_file": "__init__.py",
+      "description": "dict() -> new empty dictionary."
+    },
+    {
+      "label": "short",
+      "source_file": "__init__.py",
+      "description": "Signed integer type, compatible with C ``short``."
+    },
+    {
+      "label": "show_config()",
+      "source_file": "__init__.py",
+      "description": "Show libraries and system information on which NumPy was built."
+    },
+    {
+      "label": "sign()",
+      "source_file": "__init__.py",
+      "description": "sign(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "signbit()",
+      "source_file": "__init__.py",
+      "description": "signbit(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "signedinteger",
+      "source_file": "__init__.py",
+      "description": "Abstract base class of all signed integer scalar types."
+    },
+    {
+      "label": "sin()",
+      "source_file": "__init__.py",
+      "description": "sin(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "single",
+      "source_file": "__init__.py",
+      "description": "Single-precision floating-point number type, compatible with C ``float``."
+    },
+    {
+      "label": "sinh()",
+      "source_file": "__init__.py",
+      "description": "sinh(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "sort_complex()",
+      "source_file": "__init__.py",
+      "description": "Sort a complex array using the real part first, then the imaginary part."
+    },
+    {
+      "label": "spacing()",
+      "source_file": "__init__.py",
+      "description": "spacing(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "square()",
+      "source_file": "__init__.py",
+      "description": "square(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "str_",
+      "source_file": "__init__.py",
+      "description": "A unicode string."
+    },
+    {
+      "label": "strings",
+      "source_file": "__init__.py",
+      "description": "This module contains a set of functions for vectorized string."
+    },
+    {
+      "label": "subtract()",
+      "source_file": "__init__.py",
+      "description": "subtract(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "tan()",
+      "source_file": "__init__.py",
+      "description": "tan(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "tanh()",
+      "source_file": "__init__.py",
+      "description": "tanh(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "test()",
+      "source_file": "__init__.py",
+      "description": "Pytest test runner."
+    },
+    {
+      "label": "testing",
+      "source_file": "__init__.py",
+      "description": "Common test support for all numpy test scripts."
+    },
+    {
+      "label": "timedelta64",
+      "source_file": "__init__.py",
+      "description": "A timedelta stored as a 64-bit integer."
+    },
+    {
+      "label": "trapz()",
+      "source_file": "__init__.py",
+      "description": "`trapz` is deprecated in NumPy 2.0."
+    },
+    {
+      "label": "trim_zeros()",
+      "source_file": "__init__.py",
+      "description": "Remove values along a dimension which are zero along all other."
+    },
+    {
+      "label": "true_divide()",
+      "source_file": "__init__.py",
+      "description": "divide(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "trunc()",
+      "source_file": "__init__.py",
+      "description": "trunc(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])."
+    },
+    {
+      "label": "typecodes",
+      "source_file": "__init__.py",
+      "description": "dict() -> new empty dictionary."
+    },
+    {
+      "label": "typing",
+      "source_file": "__init__.py",
+      "description": "============================."
+    },
+    {
+      "label": "ubyte",
+      "source_file": "__init__.py",
+      "description": "Unsigned integer type, compatible with C ``unsigned char``."
+    },
+    {
+      "label": "ufunc",
+      "source_file": "__init__.py",
+      "description": "Functions that operate element by element on whole arrays."
+    },
+    {
+      "label": "uint",
+      "source_file": "__init__.py",
+      "description": "Unsigned signed integer type, 64bit on 64bit systems and 32bit on 32bit."
+    },
+    {
+      "label": "uint16",
+      "source_file": "__init__.py",
+      "description": "Unsigned integer type, compatible with C ``unsigned short``."
+    },
+    {
+      "label": "uint32",
+      "source_file": "__init__.py",
+      "description": "Unsigned integer type, compatible with C ``unsigned int``."
+    },
+    {
+      "label": "uint64",
+      "source_file": "__init__.py",
+      "description": "Unsigned signed integer type, 64bit on 64bit systems and 32bit on 32bit."
+    },
+    {
+      "label": "uint8",
+      "source_file": "__init__.py",
+      "description": "Unsigned integer type, compatible with C ``unsigned char``."
+    },
+    {
+      "label": "uintc",
+      "source_file": "__init__.py",
+      "description": "Unsigned integer type, compatible with C ``unsigned int``."
+    },
+    {
+      "label": "uintp",
+      "source_file": "__init__.py",
+      "description": "Unsigned signed integer type, 64bit on 64bit systems and 32bit on 32bit."
+    },
+    {
+      "label": "ulong",
+      "source_file": "__init__.py",
+      "description": "Unsigned signed integer type, 64bit on 64bit systems and 32bit on 32bit."
+    },
+    {
+      "label": "ulonglong",
+      "source_file": "__init__.py",
+      "description": "Signed integer type, compatible with C ``unsigned long long``."
+    },
+    {
+      "label": "unsignedinteger",
+      "source_file": "__init__.py",
+      "description": "Abstract base class of all unsigned integer scalar types."
+    },
+    {
+      "label": "ushort",
+      "source_file": "__init__.py",
+      "description": "Unsigned integer type, compatible with C ``unsigned short``."
+    },
+    {
+      "label": "vecmat()",
+      "source_file": "__init__.py",
+      "description": "vecmat(x1, x2, /, out=None, *, casting='same_kind', order='K', dtype=None, subok=True[, signature, axes, axis])."
+    },
+    {
+      "label": "void",
+      "source_file": "__init__.py",
+      "description": "np.void(length_or_data, /, dtype=None)."
+    },
+    {
+      "label": "default_rng()",
+      "source_file": "random/__init__.py",
+      "description": "Create a new Generator seeded from a default BitGenerator (PCG64) or from explicit entropy; the modern RNG entry point for reproducible streams."
+    },
+    {
+      "label": "Generator",
+      "source_file": "random/__init__.py",
+      "description": "Primary random-number generator class wrapping a BitGenerator; hosts the distribution methods (random, normal, uniform, integers, choice, permutation, ...)."
+    },
+    {
+      "label": "PCG64()",
+      "source_file": "random/__init__.py",
+      "description": "Default BitGenerator: a counter-based PRNG with good statistical quality and speed; supports seeding and jumping."
+    },
+    {
+      "label": "SeedSequence()",
+      "source_file": "random/__init__.py",
+      "description": "Converts entropy into independent seed states for BitGenerators, enabling parallel/independent RNG streams."
+    },
+    {
+      "label": "random()",
+      "source_file": "random/__init__.py",
+      "description": "Generate uniform floats in [0, 1) from a Generator (module-level legacy alias exists on RandomState)."
+    },
+    {
+      "label": "normal()",
+      "source_file": "random/__init__.py",
+      "description": "Gaussian/normal samples with configurable loc, scale and output shape."
+    },
+    {
+      "label": "uniform()",
+      "source_file": "random/__init__.py",
+      "description": "Uniform floats in [low, high) with configurable output shape."
+    },
+    {
+      "label": "integers()",
+      "source_file": "random/__init__.py",
+      "description": "Random integers in [low, high) \u2014 Generator method (module-level numpy.random.integers was removed in NumPy 2.0)."
+    },
+    {
+      "label": "choice()",
+      "source_file": "random/__init__.py",
+      "description": "Random sample from a 1-D array, with optional probabilities and replacement."
+    },
+    {
+      "label": "permutation()",
+      "source_file": "random/__init__.py",
+      "description": "Randomly permute a sequence, or return a permuted range of length n."
+    },
+    {
+      "label": "array()",
+      "source_file": "__init__.py",
+      "description": "Create an ndarray from array-like input \u2014 the top-level array constructor (C-implemented; the chararray/masked-array variants are separate functions)."
+    },
+    {
+      "label": "asarray()",
+      "source_file": "_core/_asarray.py",
+      "description": "Convert the input to an ndarray, copying only when necessary \u2014 the as*array family entry point (numpy._core._asarray)."
+    },
+    {
+      "label": "asanyarray()",
+      "source_file": "_core/_asarray.py",
+      "description": "Convert the input to an ndarray or subclass thereof without copying when possible (numpy._core._asarray)."
+    }
+  ]
+}

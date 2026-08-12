@@ -30,8 +30,8 @@ Extracted from XGBoost knowledge graph. Sources: `python-package/xgboost/core.py
 ## Quick Reference
 ### Data Structures
 
-| API | Purpose | Key Methods | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node |
-|-----|---------|-------------|
+| API | Purpose | Key Methods | Graph Node |
+|---|-------|-----------|----------|
 | `DMatrix` | Core data matrix for training/prediction | `set_info()`, `get_label()`, `save_binary()`, `slice()` | core.py:L666 |
 | `QuantileDMatrix` | Memory-efficient DMatrix variant using quantilized data | Like DMatrix, plus `ExtMemQuantileDMatrix` for external memory | core.py:L1434 |
 | `_ProxyDMatrix` | Lazy placeholder for deferred construction (device, external memory) | `ref_data_from_numpy()`, `ref_data_from_cudf()` | core.py:L1379 |

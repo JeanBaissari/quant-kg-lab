@@ -11,3 +11,4 @@ Graph: `knowledge_graphs/statsmodels/.graphify/graph.json` · GRAPH_SPEC §5 · 
 | c3 god nodes | PASS | top20=20 noise=0 |
 | c4 pin | PASS | expected=179d1f4df4164c94c69256fc9436d578a1beb163 found=179d1f4df4164c94c69256fc9436d578a1beb163 (graph) |
 | c5 audited | PASS | exists |
+| c6 api surface | PASS | no manifest (probe pending) |

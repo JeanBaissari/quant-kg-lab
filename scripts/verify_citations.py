@@ -11,6 +11,12 @@ inside Quick Reference table cells. Resolution:
   - playbooks' cross-library citations resolve against the cited library's graph.
 URLs and docs/scripts references are ignored. Exits 1 on any dangling citation
 (CI gate, QKG_012).
+
+--require-complete <lib> (QKG_021 v2): additionally, every Quick Reference table
+row's API symbol must RESOLVE — in the owning graph's node labels, the curated
+manifest (tools/curated/<lib>.json), or the manifest's explicit exclusions.
+This closes the systemic hole where an uncited gap (e.g. `arange`) was
+invisible to every gate.
 """
 import sys, re, pathlib, json
 
@@ -20,6 +26,7 @@ SKIP = re.compile(r"^(https?://|docs/|scripts/|tests/|tools/|knowledge_graphs/)"
 PKG_OF = {"scikit-learn": "sklearn", "ta-lib": "talib", "xgboost": "xgboost",
           "lightgbm": "lightgbm", "statsmodels": "statsmodels"}
 NAME_OF = {v: k for k, v in PKG_OF.items()}
+SYM_RE = re.compile(r"`([A-Za-z_][A-Za-z0-9_.]*)`")
 
 
 def graph_sources(lib):
@@ -30,14 +37,61 @@ def graph_sources(lib):
     return {n.get("source_file", "") for n in g["nodes"] if n.get("source_file")}
 
 
+def graph_labels(lib):
+    p = ROOT / "knowledge_graphs" / lib / ".graphify" / "graph.json"
+    if not p.exists():
+        return set()
+    g = json.load(open(p))
+    return {n.get("label", "") for n in g["nodes"]}
+
+
+def manifest_labels(lib):
+    p = ROOT / "tools" / "curated" / f"{lib}.json"
+    if not p.exists():
+        return set(), set()
+    m = json.load(open(p))
+    return ({s["label"] for s in m.get("symbols", [])},
+            set(m.get("exclusions", [])))
+
+
 def lib_for_path(path):
     first = path.split("/", 1)[0]
     return NAME_OF.get(first, first)
 
 
+def check_complete(lib, labels, cur, excl):
+    """Every QR-row symbol of the lib's skills must resolve. Returns failures."""
+    bad = []
+    for p in sorted((ROOT / "skills" / lib).rglob("SKILL.md")):
+        text = p.read_text()
+        for section in re.findall(r"^## Quick Reference.*?(?=^## |\Z)", text, re.S | re.M):
+            for line in section.split("\n"):
+                line = line.strip()
+                if not line.startswith("|"):
+                    continue
+                cells = [c.strip() for c in line.strip().strip("|").split("|")]
+                if not cells or set(cells[0]) <= set("-: "):
+                    continue
+                m = SYM_RE.match(cells[0])
+                if not m:
+                    continue
+                sym = m.group(1).split(".")[-1].split("(")[0]
+                if not sym:
+                    continue
+                ok = (sym in labels or f"{sym}()" in labels
+                      or sym in cur or f"{sym}()" in cur
+                      or sym in excl or f"{sym}()" in excl)
+                if not ok:
+                    bad.append((str(p.relative_to(ROOT)), sym, cells[0]))
+    return bad
+
+
 def main():
     a = sys.argv[1:]
     libs = [x for x in a if not x.startswith("-")] or None
+    require = None
+    if "--require-complete" in a:
+        require = a[a.index("--require-complete") + 1]
     sources = {}
     dangling = []
     checked = 0
@@ -78,7 +132,20 @@ def main():
     print(f"citations checked: {checked} | dangling: {len(dangling)}")
     for f, cite in dangling[:30]:
         print(f"  {f}: {cite}")
-    return 1 if dangling else 0
+    incomplete = 0
+    if require:
+        if require not in NAME_OF.values() and require not in (
+                "numpy", "pandas", "scipy", "vectorbt", "backtrader", "optuna"):
+            print(f"unknown library: {require}")
+            return 1
+        labels = graph_labels(require)
+        cur, excl = manifest_labels(require)
+        bad = check_complete(require, labels, cur, excl)
+        incomplete = len(bad)
+        print(f"complete check ({require}): QR rows unresolved: {incomplete}")
+        for f, sym, cell in bad[:30]:
+            print(f"  {f}: {cell!r} ({sym})")
+    return 1 if (dangling or incomplete) else 0
 
 
 if __name__ == "__main__":

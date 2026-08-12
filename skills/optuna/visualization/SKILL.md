@@ -34,8 +34,8 @@ related_skills:
 Extracted from optuna knowledge graph. Source: `optuna.visualization` module.
 
 ## Quick Reference
-| Function | Plot Type | Purpose | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node | Graph Node |
-|----------|-----------|---------|
+| Function | Plot Type | Purpose | Graph Node |
+|--------|---------|-------|----------|
 | `plot_optimization_history()` | Line chart | Show objective value over trials; identify convergence | visualization/_optimization_history.py:L174 |
 | `plot_slice()` | Slice plot | Show parameter vs objective; identify promising regions | visualization/_slice.py:L148 |
 | `plot_contour()` | Contour plot | Show 2-parameter interactions as heatmap | visualization/_contour.py:L70 |

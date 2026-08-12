@@ -11,3 +11,4 @@ Graph: `knowledge_graphs/lightgbm/.graphify/graph.json` · GRAPH_SPEC §5 · gen
 | c3 god nodes | PASS | top20=20 noise=0 |
 | c4 pin | PASS | expected=f9bf8d1358cd7b5d649b47175e56543b62856f98 found=f9bf8d1358cd7b5d649b47175e56543b62856f98 (graph) |
 | c5 audited | PASS | exists |
+| c6 api surface | PASS | no manifest (probe pending) |

@@ -11,3 +11,4 @@ Graph: `knowledge_graphs/optuna/.graphify/graph.json` · GRAPH_SPEC §5 · gener
 | c3 god nodes | PASS | top20=20 noise=0 |
 | c4 pin | PASS | expected=b6f2ea62fbe7fb09d0d1c75783c65dad098d9a06 found=b6f2ea62fbe7fb09d0d1c75783c65dad098d9a06 (graph) |
 | c5 audited | PASS | exists |
+| c6 api surface | PASS | no manifest (probe pending) |
