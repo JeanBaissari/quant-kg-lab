@@ -6,8 +6,8 @@ Graph: `knowledge_graphs/pandas/.graphify/graph.json` · GRAPH_SPEC §5 · gener
 
 | criterion | status | counts |
 |---|---|---|
-| c1 real labels | FAIL | distinct=410 non_singleton=373 default_labels=410 default_graph=410 coverage=0.0% |
-| c2 descriptions | FAIL | described=40 describable=6860 pct=0.6% |
+| c1 real labels | PASS | distinct=396 non_singleton=360 default_labels=0 default_graph=0 coverage=100.0% |
+| c2 descriptions | FAIL | described=40 describable=6651 pct=0.6% |
 | c3 god nodes | PASS | top20=20 noise=0 |
 | c4 pin | FAIL | expected=982854070758cd2015fc9e64395684546b1c5444 found=absent (graph) |
 | c5 audited | PASS | exists |

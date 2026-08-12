@@ -1,22 +1,22 @@
 # Edge Audit — scikit-learn
 
-**Date**: 2026-07-29
+**Date**: 2026-08-12
 
 ## Summary
 
-- Total edges: 29241
-- EXTRACTED: 11407 (39.0%)
-- INFERRED: 17834 (61.0%)
+- Total edges: 28094
+- EXTRACTED: 11176 (39.8%)
+- INFERRED: 16918 (60.2%)
 - AMBIGUOUS: 0
 
 ## Top INFERRED Nodes
 
 - `Interval`: 2222 inferred edges
 - `StrOptions`: 2003 inferred edges
-- `BaseEstimator`: 1548 inferred edges
+- `BaseEstimator`: 1514 inferred edges
 - `TransformerMixin`: 878 inferred edges
-- `Parallel`: 763 inferred edges
 - `RegressorMixin`: 736 inferred edges
+- `Parallel`: 729 inferred edges
 - `ClassifierMixin`: 660 inferred edges
 - `HasMethods`: 601 inferred edges
 - `ConvergenceWarning`: 506 inferred edges
@@ -51,6 +51,6 @@
 - `_classes.py` ↔ `base.py`: 179
 - `_gb.py` ↔ `_param_validation.py`: 164
 - `_split.py` ↔ `_param_validation.py`: 160
-- `_test_common` ↔ `kernel_approximation.py`: 160
-- `_test_common` ↔ `multioutput.py`: 160
 - `_ridge.py` ↔ `base.py`: 159
+- `_classes.py` ↔ `_param_validation.py`: 158
+- `_hist_gradient_boosting` ↔ `base.py`: 142

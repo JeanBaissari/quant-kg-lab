@@ -6,7 +6,7 @@ Graph: `knowledge_graphs/scikit-learn/.graphify/graph.json` · GRAPH_SPEC §5 ·
 
 | criterion | status | counts |
 |---|---|---|
-| c1 real labels | FAIL | distinct=401 non_singleton=363 default_labels=401 default_graph=401 coverage=0.0% |
+| c1 real labels | PASS | distinct=367 non_singleton=346 default_labels=0 default_graph=0 coverage=100.0% |
 | c2 descriptions | FAIL | described=40 describable=4122 pct=1.0% |
 | c3 god nodes | PASS | top20=20 noise=0 |
 | c4 pin | FAIL | expected=6f8b95aa2234102acc3804fc8c7a3e6bd0506bfb found=absent (graph) |

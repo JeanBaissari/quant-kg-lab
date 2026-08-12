@@ -1,23 +1,23 @@
 # Edge Audit — pandas
 
-**Date**: 2026-07-29
+**Date**: 2026-08-12
 
 ## Summary
 
-- Total edges: 40707
-- EXTRACTED: 17144 (42.1%)
-- INFERRED: 23563 (57.9%)
+- Total edges: 39913
+- EXTRACTED: 16588 (41.6%)
+- INFERRED: 23325 (58.4%)
 - AMBIGUOUS: 0
 
 ## Top INFERRED Nodes
 
-- `DatetimeTZDtype`: 1682 inferred edges
+- `DatetimeTZDtype`: 1563 inferred edges
 - `CategoricalDtype`: 1456 inferred edges
 - `PeriodDtype`: 1069 inferred edges
 - `StringDtype`: 1012 inferred edges
 - `ArrowDtype`: 999 inferred edges
-- `IntervalDtype`: 846 inferred edges
 - `WriteBuffer`: 773 inferred edges
+- `IntervalDtype`: 727 inferred edges
 - `DataFrame`: 697 inferred edges
 - `Series`: 511 inferred edges
 - `ReadBuffer`: 480 inferred edges
