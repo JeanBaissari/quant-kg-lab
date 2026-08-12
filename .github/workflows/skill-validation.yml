@@ -18,8 +18,10 @@ on:
 jobs:
   lint:
     # Fast, deterministic GATE: frontmatter schema, unique "Use when" names, no
-    # dangling references/, source_commit matches graphs.lock, routers exist.
-    # Needs no target libraries — pure text/YAML checks.
+    # dangling references/, source_commit matches graphs.lock, routers exist,
+    # required sections + graph_hash + related_skills resolution (QKG_007).
+    # --exclude-known-debt bridges the section-debt (QKG_011) so new violations
+    # still fail; the flag is removed once the authoring wave clears the debt.
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -28,7 +30,7 @@ jobs:
           python-version: '3.11'
       - run: pip install pyyaml
       - name: Lint skills against docs/specs/SKILL_SPEC.md
-        run: python scripts/validate_skills.py --ci
+        run: python scripts/validate_skills.py --ci --exclude-known-debt
       - if: always()
         uses: actions/upload-artifact@v4
         with:
@@ -36,22 +38,26 @@ jobs:
           path: docs/reference/skill-validation-report.json
 
   api:
-    # Best-effort API + provenance validation across all 10 libraries. Non-gating:
-    # surfaces renamed/removed symbols and unresolved provenance for review.
+    # GATE: validate skill claims against the LIVE installed APIs + provenance.
+    # TA-Lib's C library is built from source so ta-lib skills really validate.
+    # A hallucinated symbol fails the PR check (QKG_008).
     runs-on: ubuntu-latest
-    continue-on-error: true
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Install target libraries (best-effort; TA-Lib needs the C lib)
+      - name: Build system TA-Lib C library
         run: |
-          sudo apt-get update && sudo apt-get install -y build-essential || true
-          pip install pyyaml numpy scipy pandas scikit-learn optuna vectorbt xgboost lightgbm backtrader || true
-          pip install TA-Lib || true
-      - name: Validate skills against live APIs + provenance
-        run: python scripts/validate_skills.py --provenance
+          sudo apt-get update && sudo apt-get install -y build-essential wget
+          cd /tmp && wget -q https://github.com/TA-Lib/ta-lib/releases/download/v0.6.4/ta-lib-0.6.4-src.tar.gz
+          tar xzf ta-lib-0.6.4-src.tar.gz && cd ta-lib-0.6.4
+          ./configure --prefix=/usr >/dev/null && make -j2 >/dev/null && sudo make install >/dev/null
+      - name: Install target libraries
+        run: |
+          pip install pyyaml numpy scipy pandas scikit-learn optuna vectorbt xgboost lightgbm backtrader TA-Lib
+      - name: Validate skills against live APIs + provenance (strict)
+        run: python scripts/validate_skills.py --strict --provenance --exclude-known-debt
       - if: always()
         uses: actions/upload-artifact@v4
         with:

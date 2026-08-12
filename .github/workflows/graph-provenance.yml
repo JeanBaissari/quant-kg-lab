@@ -1,0 +1,70 @@
+name: Graph Provenance
+
+on:
+  push:
+    paths:
+      - 'knowledge_graphs/**'
+      - 'graphs.lock'
+      - 'scripts/graph_gate.py'
+      - 'scripts/stamp_graphs.py'
+      - 'scripts/prune_graph.py'
+      - 'scripts/label_communities.py'
+  pull_request:
+    paths:
+      - 'knowledge_graphs/**'
+      - 'graphs.lock'
+  schedule:
+    - cron: '0 8 * * 1'  # informational upstream-freshness report only (never PRs)
+  workflow_dispatch:
+
+jobs:
+  provenance-gate:
+    # GATE: every committed graph must pass GRAPH_SPEC §5 — pinned (built_from_commit
+    # == graphs.lock), labeled, described >=80%, clean god nodes, audited.
+    # Supersedes the old graph-freshness.yml, which read a nonexistent git_commit
+    # field and opened a junk PR every Monday (disabled 2026-08-12, QKG_006).
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pyyaml
+      - name: Quality Gate -- all libraries
+        run: python3 scripts/graph_gate.py --ci --all
+
+  freshness-report:
+    # INFORMATIONAL only: how far upstream HEAD has moved past our graphs.lock pins.
+    # Graphs are pinned by design; drift here is expected and never blocks.
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Compare pins vs upstream HEAD
+        run: |
+          python3 - <<'PY' > graph-freshness-report.md
+          import json, subprocess, datetime
+          lock = json.load(open('graphs.lock'))['libraries']
+          rows = []
+          for lib, meta in lock.items():
+              try:
+                  head = subprocess.run(
+                      ['git', 'ls-remote', f'https://github.com/{meta["repo"]}', 'HEAD'],
+                      capture_output=True, text=True, timeout=30).stdout.split()[0]
+              except Exception as e:
+                  head = f'error: {e}'
+              rows.append(f'| {lib} | `{meta["commit"][:12]}` | `{head[:12] if head else "?"}` |')
+          print(f'# Graph freshness report — {datetime.date.today().isoformat()}')
+          print('\n| lib | pinned | upstream HEAD |\n|---|---|---|')
+          print('\n'.join(rows))
+          print('\n_Informational only — graphs are pinned to graphs.lock by design;')
+          print('re-extraction is a manual, gated process (scripts/rebuild_graph.sh)._')
+          PY
+      - name: Upload report artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: graph-freshness-report
+          path: graph-freshness-report.md
