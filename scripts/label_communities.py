@@ -51,6 +51,7 @@ def main():
     all_ids = set(by_community)
     labels = {}
     for cid in sorted(all_ids):
+        members = by_community[cid]
         ranked = sorted(members, key=lambda n: (-deg[n["id"]], n.get("id", "")))
         centroid = next((n for n in ranked if public(n, lib)), ranked[0])
         labels[str(cid)] = f"{module_path(centroid)} · {display_name(centroid.get('label'))}"
