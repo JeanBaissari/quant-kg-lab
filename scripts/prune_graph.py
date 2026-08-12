@@ -89,6 +89,11 @@ def main():
     g["nodes"] = [n for i, n in enumerate(nodes) if i not in drop]
     g["links"] = [l for l in links
                   if l["source"] not in drop_ids and l["target"] not in drop_ids]
+    live = {n.get("community") for n in g["nodes"]}
+    g.setdefault("graph", {}).setdefault("community_labels", {})
+    g["graph"]["community_labels"] = {
+        k: v for k, v in g["graph"]["community_labels"].items() if int(k) in live
+    }
     json.dump(g, open(p, "w"))
     print(f"wrote {p} (backup: {p}.prune.bak)")
     return 0
