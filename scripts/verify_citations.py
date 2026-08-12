@@ -134,8 +134,7 @@ def main():
         print(f"  {f}: {cite}")
     incomplete = 0
     if require:
-        if require not in NAME_OF.values() and require not in (
-                "numpy", "pandas", "scipy", "vectorbt", "backtrader", "optuna"):
+        if not (ROOT / "skills" / require).is_dir():
             print(f"unknown library: {require}")
             return 1
         labels = graph_labels(require)

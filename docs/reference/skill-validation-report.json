@@ -1,17 +1,48 @@
 {
   "report": {
-    "skills/statsmodels/SKILL.md": {
+    "skills/pyportfolioopt/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
-      "meta_warn": [],
+      "meta_warn": [
+        "graph meta: edges mismatch \u2014 graph has 522, skill claims 512"
+      ],
       "provenance": []
     },
-    "skills/statsmodels/core/SKILL.md": {
+    "skills/pyportfolioopt/black_litterman/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
-      "meta_warn": [],
+      "meta_warn": [
+        "graph meta: edges mismatch \u2014 graph has 522, skill claims 512"
+      ],
+      "provenance": []
+    },
+    "skills/pyportfolioopt/efficient_frontier/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [
+        "graph meta: edges mismatch \u2014 graph has 522, skill claims 512"
+      ],
+      "provenance": []
+    },
+    "skills/pyportfolioopt/expected_returns/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [
+        "graph meta: edges mismatch \u2014 graph has 522, skill claims 512"
+      ],
+      "provenance": []
+    },
+    "skills/pyportfolioopt/risk_models/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [
+        "graph meta: edges mismatch \u2014 graph has 522, skill claims 512"
+      ],
       "provenance": []
     }
   },
