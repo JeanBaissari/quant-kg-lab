@@ -1,0 +1,222 @@
+{
+  "generated": "2026-08-12",
+  "note": "Known-debt allowlist for validate_skills.py --exclude-known-debt (QKG_007 bridge). Violations listed here are demoted to info until the QKG_010/QKG_011 authoring waves clear them. Regenerate with: python scripts/validate_skills.py --dump-known-debt > tools/known_debt.json",
+  "violations": {
+    "skills/backtrader/SKILL.md": [
+      "hash:stale:50a5d1423bfb9ed9"
+    ],
+    "skills/backtrader/analyzers/SKILL.md": [
+      "hash:stale:50a5d1423bfb9ed9",
+      "section:variant:Graph Provenance"
+    ],
+    "skills/backtrader/core/SKILL.md": [
+      "hash:stale:50a5d1423bfb9ed9",
+      "section:variant:Graph Provenance"
+    ],
+    "skills/lightgbm/SKILL.md": [
+      "hash:stale:2e0aec07fa28bb91"
+    ],
+    "skills/lightgbm/core/SKILL.md": [
+      "hash:stale:2e0aec07fa28bb91",
+      "section:missing:Provenance",
+      "section:variant:Common Pitfalls"
+    ],
+    "skills/lightgbm/sklearn/SKILL.md": [
+      "hash:stale:2e0aec07fa28bb91",
+      "section:missing:Provenance"
+    ],
+    "skills/numpy/SKILL.md": [
+      "hash:stale:5d46ee50f23234f5"
+    ],
+    "skills/numpy/core/SKILL.md": [
+      "hash:stale:5d46ee50f23234f5",
+      "section:missing:Provenance",
+      "section:missing:Quick Reference"
+    ],
+    "skills/numpy/linalg/SKILL.md": [
+      "hash:stale:5d46ee50f23234f5",
+      "section:missing:Provenance",
+      "section:missing:Quick Reference"
+    ],
+    "skills/numpy/random/SKILL.md": [
+      "hash:stale:5d46ee50f23234f5",
+      "section:missing:Provenance",
+      "section:missing:Quick Reference"
+    ],
+    "skills/optuna/SKILL.md": [
+      "hash:stale:bbaed0cc3edbd3cc"
+    ],
+    "skills/optuna/distributions/SKILL.md": [
+      "hash:stale:bbaed0cc3edbd3cc",
+      "section:missing:Provenance"
+    ],
+    "skills/optuna/integration/SKILL.md": [
+      "hash:stale:bbaed0cc3edbd3cc",
+      "section:missing:Provenance"
+    ],
+    "skills/optuna/pruners/SKILL.md": [
+      "hash:stale:bbaed0cc3edbd3cc",
+      "section:missing:Provenance"
+    ],
+    "skills/optuna/samplers/SKILL.md": [
+      "hash:stale:bbaed0cc3edbd3cc",
+      "section:missing:Provenance"
+    ],
+    "skills/optuna/study/SKILL.md": [
+      "hash:stale:bbaed0cc3edbd3cc",
+      "section:missing:Provenance"
+    ],
+    "skills/optuna/trial/SKILL.md": [
+      "hash:stale:bbaed0cc3edbd3cc",
+      "section:missing:Provenance"
+    ],
+    "skills/optuna/visualization/SKILL.md": [
+      "hash:stale:bbaed0cc3edbd3cc",
+      "section:missing:Provenance"
+    ],
+    "skills/pandas/SKILL.md": [
+      "hash:stale:0aeb6376dbc643f6"
+    ],
+    "skills/pandas/core/SKILL.md": [
+      "hash:stale:0aeb6376dbc643f6",
+      "section:missing:Provenance",
+      "section:missing:Quick Reference"
+    ],
+    "skills/pandas/ts/SKILL.md": [
+      "hash:stale:0aeb6376dbc643f6",
+      "section:missing:Provenance",
+      "section:missing:Quick Reference"
+    ],
+    "skills/quant-patterns/factor-importance/SKILL.md": [
+      "composes:scikit-learn-inspection",
+      "related:scikit-learn-inspection"
+    ],
+    "skills/quant-patterns/portfolio-construction/SKILL.md": [
+      "composes:scikit-learn-covariance",
+      "related:scikit-learn-covariance"
+    ],
+    "skills/scikit-learn/SKILL.md": [
+      "hash:stale:5e57e1eae5d65690"
+    ],
+    "skills/scikit-learn/cluster/SKILL.md": [
+      "hash:stale:5e57e1eae5d65690",
+      "section:missing:Provenance"
+    ],
+    "skills/scikit-learn/compose/SKILL.md": [
+      "hash:stale:5e57e1eae5d65690",
+      "section:missing:Common Patterns",
+      "section:missing:Provenance",
+      "section:variant:Common Pitfalls"
+    ],
+    "skills/scikit-learn/decomposition/SKILL.md": [
+      "hash:stale:5e57e1eae5d65690",
+      "section:missing:Common Patterns",
+      "section:missing:Provenance",
+      "section:variant:Common Pitfalls"
+    ],
+    "skills/scikit-learn/ensemble/SKILL.md": [
+      "hash:stale:5e57e1eae5d65690",
+      "section:missing:Provenance"
+    ],
+    "skills/scikit-learn/feature_selection/SKILL.md": [
+      "hash:stale:5e57e1eae5d65690",
+      "section:missing:Common Patterns",
+      "section:missing:Provenance",
+      "section:variant:Common Pitfalls"
+    ],
+    "skills/scikit-learn/gaussian_process/SKILL.md": [
+      "hash:stale:5e57e1eae5d65690",
+      "section:missing:Provenance"
+    ],
+    "skills/scikit-learn/impute/SKILL.md": [
+      "hash:stale:5e57e1eae5d65690",
+      "section:missing:Provenance"
+    ],
+    "skills/scikit-learn/linear_model/SKILL.md": [
+      "hash:stale:5e57e1eae5d65690",
+      "section:missing:Common Patterns",
+      "section:missing:Provenance",
+      "section:variant:Common Pitfalls"
+    ],
+    "skills/scikit-learn/metrics/SKILL.md": [
+      "hash:stale:5e57e1eae5d65690",
+      "section:missing:Common Patterns",
+      "section:missing:Provenance",
+      "section:variant:Common Pitfalls"
+    ],
+    "skills/scikit-learn/model_selection/SKILL.md": [
+      "hash:stale:5e57e1eae5d65690",
+      "section:missing:Common Patterns",
+      "section:missing:Provenance",
+      "section:variant:Common Pitfalls"
+    ],
+    "skills/scikit-learn/neural_network/SKILL.md": [
+      "hash:stale:5e57e1eae5d65690",
+      "section:missing:Provenance"
+    ],
+    "skills/scikit-learn/preprocessing/SKILL.md": [
+      "hash:stale:5e57e1eae5d65690",
+      "section:missing:Common Patterns",
+      "section:missing:Provenance",
+      "section:variant:Common Pitfalls"
+    ],
+    "skills/scikit-learn/svm/SKILL.md": [
+      "hash:stale:5e57e1eae5d65690",
+      "section:missing:Provenance"
+    ],
+    "skills/scikit-learn/tree/SKILL.md": [
+      "hash:stale:5e57e1eae5d65690",
+      "section:missing:Provenance"
+    ],
+    "skills/scipy/SKILL.md": [
+      "hash:stale:15a875162a2d8fff"
+    ],
+    "skills/scipy/optimize/SKILL.md": [
+      "hash:stale:15a875162a2d8fff",
+      "section:missing:Provenance",
+      "section:missing:Quick Reference"
+    ],
+    "skills/scipy/signal/SKILL.md": [
+      "hash:stale:15a875162a2d8fff",
+      "section:missing:Provenance",
+      "section:missing:Quick Reference"
+    ],
+    "skills/scipy/stats/SKILL.md": [
+      "hash:stale:15a875162a2d8fff",
+      "section:missing:Provenance",
+      "section:missing:Quick Reference"
+    ],
+    "skills/ta-lib/indicators/SKILL.md": [
+      "hash:stale:36c21fee005ed3a6",
+      "section:missing:Quick Reference",
+      "section:variant:Graph Provenance"
+    ],
+    "skills/vectorbt/SKILL.md": [
+      "hash:stale:a6cd2c974bb82116"
+    ],
+    "skills/vectorbt/core/SKILL.md": [
+      "hash:stale:a6cd2c974bb82116",
+      "section:variant:Graph Provenance"
+    ],
+    "skills/vectorbt/portfolio/SKILL.md": [
+      "hash:stale:a6cd2c974bb82116",
+      "section:variant:Graph Provenance"
+    ],
+    "skills/vectorbt/signals/SKILL.md": [
+      "hash:stale:a6cd2c974bb82116",
+      "section:variant:Graph Provenance"
+    ],
+    "skills/xgboost/SKILL.md": [
+      "hash:stale:67ed4abe93a7205c"
+    ],
+    "skills/xgboost/core/SKILL.md": [
+      "hash:stale:67ed4abe93a7205c",
+      "section:missing:Provenance",
+      "section:variant:Common Pitfalls"
+    ],
+    "skills/xgboost/sklearn/SKILL.md": [
+      "hash:stale:67ed4abe93a7205c",
+      "section:missing:Provenance"
+    ]
+  }
+}
