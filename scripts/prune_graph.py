@@ -15,10 +15,21 @@ import sys, json, re, shutil, pathlib, collections
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 
-PATH_PATTERNS = (
-    "tests/", "/test", "test_", "*_test.py", "conftest", "asv_bench", "benchmarks/",
-    "bench/", "bench_", "examples/", "samples/", "r-package", "apps/", "/doc/", "docs/",
-    ".github", "setup.py", "versioneer", "_vendor/", "third_party/", "vendored/",
+# §6 exclude-by-path as segment-aware regexes ("test_" only matches at the start
+# of a path segment, so modules like tsa/vector_ar/hypothesis_test_results.py
+# that merely CONTAIN "test_" are not false-positived).
+PATH_REGEXES = (
+    re.compile(r"(?:^|/)(?:tests?|asv_bench|benchmarks?|examples?|samples?|docs?)/"),
+    re.compile(r"(?:^|/)test_[^/]+\.py$"),
+    re.compile(r"(?:^|/)[^/]*_test\.py$"),
+    re.compile(r"(?:^|/)conftest(?:\.py)?$"),
+    re.compile(r"(?:^|/)bench_[^/]+$"),
+    re.compile(r"(?:^|/)setup\.py$"),
+    re.compile(r"(?:^|/)\.github/"),
+    re.compile(r"(?:^|/)r-package/"),
+    re.compile(r"(?:^|/)apps/"),
+    re.compile(r"versioneer"),
+    re.compile(r"(?:^|/)(?:_vendor|third_party|vendored)/"),
 )
 SYMBOL_PATTERNS = (r"^__Pyx_", r"^__pyx_(?!pw)", r"JNI", r"_safe_call", r"^TA_")
 
@@ -36,7 +47,7 @@ def gpath(lib):
 
 def match_path(sf):
     sf = (sf or "").lower()
-    return any(p in sf for p in PATH_PATTERNS)
+    return any(r.search(sf) for r in PATH_REGEXES)
 
 
 def match_symbol(label, lib):
