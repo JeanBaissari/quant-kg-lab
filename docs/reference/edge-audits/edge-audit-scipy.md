@@ -1,12 +1,12 @@
 # Edge Audit — scipy
 
-**Date**: 2026-07-29
+**Date**: 2026-08-12
 
 ## Summary
 
-- Total edges: 23606
-- EXTRACTED: 18861 (79.9%)
-- INFERRED: 4745 (20.1%)
+- Total edges: 23466
+- EXTRACTED: 18730 (79.8%)
+- INFERRED: 4736 (20.2%)
 - AMBIGUOUS: 0
 
 ## Top INFERRED Nodes
