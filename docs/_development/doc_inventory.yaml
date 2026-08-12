@@ -175,3 +175,43 @@ docs:
   type: Spec
   status: current
   last_verified: '2026-08-06'
+- path: docs/reference/quality-gate/gate-backtrader.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/quality-gate/gate-lightgbm.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/quality-gate/gate-numpy.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/quality-gate/gate-optuna.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/quality-gate/gate-pandas.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/quality-gate/gate-scikit-learn.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/quality-gate/gate-scipy.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/quality-gate/gate-ta-lib.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/quality-gate/gate-vectorbt.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/quality-gate/gate-xgboost.md
+  type: Generated
+  status: generated
+  last_verified: ''
