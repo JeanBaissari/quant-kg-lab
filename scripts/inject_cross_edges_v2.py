@@ -47,10 +47,16 @@ ALL_BRIDGES = [
     ("scikit-learn", "Pipeline", "optuna", "Study", "tuned_by", "sklearn Pipeline parameters optimized via optuna"),
     ("scipy", "stats", "scikit-learn", "SelectKBest", "powers", "scipy.stats statistical tests drive sklearn feature selection"),
     ("scipy", "optimize", "optuna", "Study", "alternative_to", "scipy.optimize as an alternative optimization backend to optuna"),
+    ("pandas", "DataFrame", "pyportfolioopt", "expected_returns.py", "input_to", "pandas price DataFrames are the input to pypfopt expected-return estimators"),
+    ("pyportfolioopt", "BaseConvexOptimizer", "cvxpy", "Problem", "optimized_by", "pypfopt optimizers build cvxpy Problems under the hood"),
+    ("numpy", "ndarray", "cvxpy", "Variable", "backed_by", "cvxpy Variable values are numpy ndarrays"),
+    ("cvxpy", "Problem", "scipy", "OptimizeResult", "alternative_to", "cvxpy Problem solve() vs scipy.optimize minimize for optimization tasks"),
+    ("statsmodels", "OLS", "scipy", "stats", "powered_by", "statsmodels OLS inference relies on scipy.stats distributions"),
+    ("statsmodels", "OLS", "scikit-learn", "LinearRegression", "alternative_to", "statsmodels OLS (inference) vs sklearn LinearRegression (prediction)"),
+    ("pandas", "DataFrame", "statsmodels", "PandasData", "input_to", "statsmodels models consume pandas DataFrames via the formula/data layer"),
 ]
 
-ALL_LIBS = ["numpy", "scipy", "pandas", "scikit-learn", "optuna",
-            "vectorbt", "backtrader", "ta-lib", "xgboost", "lightgbm"]
+ALL_LIBS = list(json.load(open(REPO_ROOT / "graphs.lock"))["libraries"])
 
 
 def load_graph(lib):

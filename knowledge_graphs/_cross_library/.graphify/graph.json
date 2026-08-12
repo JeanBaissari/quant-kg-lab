@@ -25,10 +25,10 @@
       "source_file": "base/array_wrapper.py"
     },
     {
-      "id": "numpy::linalg_linalg",
-      "label": "_linalg.py",
+      "id": "numpy::curated_linalg",
+      "label": "linalg",
       "library": "numpy",
-      "source_file": "linalg/_linalg.py"
+      "source_file": "__init__.py"
     },
     {
       "id": "scipy::linalg_linalg_pythran",
@@ -149,6 +149,48 @@
       "label": "OptimizeResult",
       "library": "scipy",
       "source_file": ""
+    },
+    {
+      "id": "pyportfolioopt::expected_returns",
+      "label": "expected_returns.py",
+      "library": "pyportfolioopt",
+      "source_file": "expected_returns.py"
+    },
+    {
+      "id": "pyportfolioopt::base_base_optimizer_baseconvexoptimizer",
+      "label": "BaseConvexOptimizer",
+      "library": "pyportfolioopt",
+      "source_file": "base/_base_optimizer.py"
+    },
+    {
+      "id": "cvxpy::problems_problem_problem",
+      "label": "Problem",
+      "library": "cvxpy",
+      "source_file": "problems/problem.py"
+    },
+    {
+      "id": "cvxpy::expressions_variable_variable",
+      "label": "Variable",
+      "library": "cvxpy",
+      "source_file": "expressions/variable.py"
+    },
+    {
+      "id": "statsmodels::regression_linear_model_ols",
+      "label": "OLS",
+      "library": "statsmodels",
+      "source_file": "regression/linear_model.py"
+    },
+    {
+      "id": "scikit-learn::linear_model_base_linearregression",
+      "label": "LinearRegression",
+      "library": "scikit-learn",
+      "source_file": "linear_model/_base.py"
+    },
+    {
+      "id": "statsmodels::base_data_pandasdata",
+      "label": "PandasData",
+      "library": "statsmodels",
+      "source_file": "base/data.py"
     }
   ],
   "links": [
@@ -167,7 +209,7 @@
       "description": "vectorbt ArrayWrapper wraps numpy ndarray for named column access"
     },
     {
-      "source": "numpy::linalg_linalg",
+      "source": "numpy::curated_linalg",
       "target": "scipy::linalg_linalg_pythran",
       "relation": "superset_of",
       "confidence": "CURATED",
@@ -284,6 +326,55 @@
       "relation": "alternative_to",
       "confidence": "CURATED",
       "description": "scipy.optimize as an alternative optimization backend to optuna"
+    },
+    {
+      "source": "pandas::dataframe",
+      "target": "pyportfolioopt::expected_returns",
+      "relation": "input_to",
+      "confidence": "CURATED",
+      "description": "pandas price DataFrames are the input to pypfopt expected-return estimators"
+    },
+    {
+      "source": "pyportfolioopt::base_base_optimizer_baseconvexoptimizer",
+      "target": "cvxpy::problems_problem_problem",
+      "relation": "optimized_by",
+      "confidence": "CURATED",
+      "description": "pypfopt optimizers build cvxpy Problems under the hood"
+    },
+    {
+      "source": "numpy::ndarray",
+      "target": "cvxpy::expressions_variable_variable",
+      "relation": "backed_by",
+      "confidence": "CURATED",
+      "description": "cvxpy Variable values are numpy ndarrays"
+    },
+    {
+      "source": "cvxpy::problems_problem_problem",
+      "target": "scipy::optimizeresult",
+      "relation": "alternative_to",
+      "confidence": "CURATED",
+      "description": "cvxpy Problem solve() vs scipy.optimize minimize for optimization tasks"
+    },
+    {
+      "source": "statsmodels::regression_linear_model_ols",
+      "target": "scipy::ndimage_measurements_stats",
+      "relation": "powered_by",
+      "confidence": "CURATED",
+      "description": "statsmodels OLS inference relies on scipy.stats distributions"
+    },
+    {
+      "source": "statsmodels::regression_linear_model_ols",
+      "target": "scikit-learn::linear_model_base_linearregression",
+      "relation": "alternative_to",
+      "confidence": "CURATED",
+      "description": "statsmodels OLS (inference) vs sklearn LinearRegression (prediction)"
+    },
+    {
+      "source": "pandas::dataframe",
+      "target": "statsmodels::base_data_pandasdata",
+      "relation": "input_to",
+      "confidence": "CURATED",
+      "description": "statsmodels models consume pandas DataFrames via the formula/data layer"
     }
   ],
   "hyperedges": []

@@ -17,7 +17,7 @@
     {
       "bridge": "numpy.linalg -> scipy.linalg",
       "status": "RESOLVED",
-      "source": "numpy::_linalg.py",
+      "source": "numpy::linalg",
       "target": "scipy::_linalg_pythran.py",
       "relation": "superset_of"
     },
@@ -132,8 +132,57 @@
       "source": "scipy::OptimizeResult",
       "target": "optuna::Study",
       "relation": "alternative_to"
+    },
+    {
+      "bridge": "pandas.DataFrame -> pyportfolioopt.expected_returns.py",
+      "status": "RESOLVED",
+      "source": "pandas::DataFrame",
+      "target": "pyportfolioopt::expected_returns.py",
+      "relation": "input_to"
+    },
+    {
+      "bridge": "pyportfolioopt.BaseConvexOptimizer -> cvxpy.Problem",
+      "status": "RESOLVED",
+      "source": "pyportfolioopt::BaseConvexOptimizer",
+      "target": "cvxpy::Problem",
+      "relation": "optimized_by"
+    },
+    {
+      "bridge": "numpy.ndarray -> cvxpy.Variable",
+      "status": "RESOLVED",
+      "source": "numpy::ndarray",
+      "target": "cvxpy::Variable",
+      "relation": "backed_by"
+    },
+    {
+      "bridge": "cvxpy.Problem -> scipy.OptimizeResult",
+      "status": "RESOLVED",
+      "source": "cvxpy::Problem",
+      "target": "scipy::OptimizeResult",
+      "relation": "alternative_to"
+    },
+    {
+      "bridge": "statsmodels.OLS -> scipy.stats",
+      "status": "RESOLVED",
+      "source": "statsmodels::OLS",
+      "target": "scipy::_stats()",
+      "relation": "powered_by"
+    },
+    {
+      "bridge": "statsmodels.OLS -> scikit-learn.LinearRegression",
+      "status": "RESOLVED",
+      "source": "statsmodels::OLS",
+      "target": "scikit-learn::LinearRegression",
+      "relation": "alternative_to"
+    },
+    {
+      "bridge": "pandas.DataFrame -> statsmodels.PandasData",
+      "status": "RESOLVED",
+      "source": "pandas::DataFrame",
+      "target": "statsmodels::PandasData",
+      "relation": "input_to"
     }
   ],
-  "resolved": 19,
-  "attempted": 19
+  "resolved": 26,
+  "attempted": 26
 }
