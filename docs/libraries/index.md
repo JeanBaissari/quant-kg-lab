@@ -14,6 +14,7 @@ Per-library hubs, grouped by tier. Each hub indexes that library's skills, graph
 - [numpy](numpy/index.md) — numpy/numpy
 - [scipy](scipy/index.md) — scipy/scipy
 - [pandas](pandas/index.md) — pandas-dev/pandas
+- [statsmodels](statsmodels/index.md) — statsmodels/statsmodels
 
 ## ML & Optimization
 

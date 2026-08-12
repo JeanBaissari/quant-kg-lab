@@ -63,6 +63,10 @@ docs:
   type: Guide
   status: current
   last_verified: '2026-08-06'
+- path: docs/guides/onboarding-checklist.md
+  type: Guide
+  status: current
+  last_verified: '2026-08-12'
 - path: docs/guides/workflows.md
   type: Guide
   status: current
@@ -74,51 +78,55 @@ docs:
 - path: docs/libraries/backtrader/index.md
   type: Generated
   status: generated
-  last_verified: '2026-08-06'
+  last_verified: '2026-08-12'
 - path: docs/libraries/index.md
   type: Generated
   status: generated
-  last_verified: '2026-08-06'
+  last_verified: '2026-08-12'
 - path: docs/libraries/lightgbm/index.md
   type: Generated
   status: generated
-  last_verified: '2026-08-06'
+  last_verified: '2026-08-12'
 - path: docs/libraries/numpy/index.md
   type: Generated
   status: generated
-  last_verified: '2026-08-06'
+  last_verified: '2026-08-12'
 - path: docs/libraries/optuna/index.md
   type: Generated
   status: generated
-  last_verified: '2026-08-06'
+  last_verified: '2026-08-12'
 - path: docs/libraries/pandas/index.md
   type: Generated
   status: generated
-  last_verified: '2026-08-06'
+  last_verified: '2026-08-12'
 - path: docs/libraries/quant-patterns/index.md
   type: Generated
   status: generated
-  last_verified: '2026-08-06'
+  last_verified: '2026-08-12'
 - path: docs/libraries/scikit-learn/index.md
   type: Generated
   status: generated
-  last_verified: '2026-08-06'
+  last_verified: '2026-08-12'
 - path: docs/libraries/scipy/index.md
   type: Generated
   status: generated
-  last_verified: '2026-08-06'
+  last_verified: '2026-08-12'
+- path: docs/libraries/statsmodels/index.md
+  type: Generated
+  status: generated
+  last_verified: '2026-08-12'
 - path: docs/libraries/ta-lib/index.md
   type: Generated
   status: generated
-  last_verified: '2026-08-06'
+  last_verified: '2026-08-12'
 - path: docs/libraries/vectorbt/index.md
   type: Generated
   status: generated
-  last_verified: '2026-08-06'
+  last_verified: '2026-08-12'
 - path: docs/libraries/xgboost/index.md
   type: Generated
   status: generated
-  last_verified: '2026-08-06'
+  last_verified: '2026-08-12'
 - path: docs/narrative/before-after.md
   type: Narrative
   status: current
@@ -151,6 +159,10 @@ docs:
   type: Generated
   status: generated
   last_verified: ''
+- path: docs/reference/edge-audits/edge-audit-statsmodels.md
+  type: Generated
+  status: generated
+  last_verified: ''
 - path: docs/reference/edge-audits/edge-audit-ta-lib.md
   type: Generated
   status: generated
@@ -163,18 +175,6 @@ docs:
   type: Generated
   status: generated
   last_verified: ''
-- path: docs/reference/unified-index.md
-  type: Generated
-  status: generated
-  last_verified: ''
-- path: docs/specs/GRAPH_SPEC.md
-  type: Spec
-  status: current
-  last_verified: '2026-08-06'
-- path: docs/specs/SKILL_SPEC.md
-  type: Spec
-  status: current
-  last_verified: '2026-08-06'
 - path: docs/reference/quality-gate/gate-backtrader.md
   type: Generated
   status: generated
@@ -203,6 +203,10 @@ docs:
   type: Generated
   status: generated
   last_verified: ''
+- path: docs/reference/quality-gate/gate-statsmodels.md
+  type: Generated
+  status: generated
+  last_verified: ''
 - path: docs/reference/quality-gate/gate-ta-lib.md
   type: Generated
   status: generated
@@ -215,3 +219,15 @@ docs:
   type: Generated
   status: generated
   last_verified: ''
+- path: docs/reference/unified-index.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/specs/GRAPH_SPEC.md
+  type: Spec
+  status: current
+  last_verified: '2026-08-06'
+- path: docs/specs/SKILL_SPEC.md
+  type: Spec
+  status: current
+  last_verified: '2026-08-06'

@@ -65,6 +65,12 @@
       "commit": "f9bf8d1358cd7b5d649b47175e56543b62856f98",
       "nodes": 593,
       "edges": 2029
+    },
+    "statsmodels": {
+      "repo": "statsmodels/statsmodels",
+      "commit": "179d1f4df4164c94c69256fc9436d578a1beb163",
+      "nodes": 11616,
+      "edges": 33529
     }
   }
 }
