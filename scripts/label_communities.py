@@ -46,14 +46,11 @@ def main():
     for n in g["nodes"]:
         by_community[n.get("community")].append(n)
 
-    label_keys = g.get("graph", {}).get("community_labels", {})
-    all_ids = set(by_community) | {int(k) for k in label_keys}
+    # Label ONLY live communities (members present in the graph). Stale keys
+    # whose members were pruned are dropped — never written as "empty".
+    all_ids = set(by_community)
     labels = {}
     for cid in sorted(all_ids):
-        members = by_community.get(cid)
-        if not members:
-            labels[str(cid)] = "empty"
-            continue
         ranked = sorted(members, key=lambda n: (-deg[n["id"]], n.get("id", "")))
         centroid = next((n for n in ranked if public(n, lib)), ranked[0])
         labels[str(cid)] = f"{module_path(centroid)} · {display_name(centroid.get('label'))}"
