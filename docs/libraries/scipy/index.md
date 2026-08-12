@@ -8,7 +8,7 @@
 **Domain**: Foundation
 **Source**: scipy/scipy@0514ef9e7329
 **Graph**: 14193 nodes · 23606 edges
-**Last Verified**: 2026-08-06
+**Last Verified**: 2026-08-12
 
 ## Overview
 

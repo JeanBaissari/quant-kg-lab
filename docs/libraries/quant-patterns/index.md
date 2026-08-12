@@ -6,7 +6,7 @@
 **Status**: current
 **Library**: quant-patterns
 **Domain**: Workflows
-**Last Verified**: 2026-08-06
+**Last Verified**: 2026-08-12
 
 ## Overview
 

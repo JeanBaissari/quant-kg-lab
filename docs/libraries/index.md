@@ -5,7 +5,7 @@
 **Type**: Library Index
 **Status**: current
 **Domain**: (index)
-**Last Verified**: 2026-08-06
+**Last Verified**: 2026-08-12
 
 Per-library hubs, grouped by tier. Each hub indexes that library's skills, graph provenance, and cross-library bridges.
 

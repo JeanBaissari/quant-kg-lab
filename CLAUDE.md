@@ -21,7 +21,7 @@ knowledge_graphs/<lib>/.graphify/   graph.json + GRAPH_REPORT.md + .graphify_lab
 knowledge_graphs/<lib>/repo/        upstream source clone                                  (gitignored)
 skills/<lib>/<module>/SKILL.md      atomic skill        skills/<lib>/SKILL.md = router
 skills/quant-patterns/              cross-library workflow playbooks
-scripts/                            rebuild / query / validate / audit / bridge tooling (stdlib only)
+scripts/                            rebuild / query / validate / audit / bridge tooling (stdlib + PyYAML)
 docs/                               index.md hub → specs/ guides/ libraries/ reference/ adr/ audit/ narrative/ _development/
 graphs.lock                         pinned upstream commit per library — the reproducibility anchor
 ```
@@ -53,7 +53,7 @@ python scripts/doc_audit.py [--ci|--write]     # lint docs against docs/_develop
 - Every `Quick Reference` row should cite a graph node (`source_file:line`) that resolves in
   `graph.json` — this is what makes a skill *verifiable*.
 - **Never** link a `references/*` file that doesn't exist. Generate it with
-  `scripts/extract_skill_refs.py` or omit the section.
+  `scripts/extract_skill_refs.py <lib> <community> --out <dir>` or omit the section.
 - `source_commit` in skill frontmatter MUST match `graphs.lock`.
 - Skills are **copy-in**, not a package — do not add packaging/publish config.
 
