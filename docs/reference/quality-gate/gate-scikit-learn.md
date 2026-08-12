@@ -9,5 +9,5 @@ Graph: `knowledge_graphs/scikit-learn/.graphify/graph.json` · GRAPH_SPEC §5 ·
 | c1 real labels | PASS | distinct=367 non_singleton=346 default_labels=0 default_graph=0 coverage=100.0% |
 | c2 descriptions | PASS | described=3339 describable=4122 pct=81.0% |
 | c3 god nodes | PASS | top20=20 noise=0 |
-| c4 pin | FAIL | expected=6f8b95aa2234102acc3804fc8c7a3e6bd0506bfb found=absent (graph) |
+| c4 pin | PASS | expected=6f8b95aa2234102acc3804fc8c7a3e6bd0506bfb found=6f8b95aa2234102acc3804fc8c7a3e6bd0506bfb (graph) |
 | c5 audited | PASS | exists |

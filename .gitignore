@@ -38,3 +38,4 @@ knowledge_graphs/*/repo/
 *.labels.bak
 .graphify/describe-log.jsonl
 .graphify/prompt-*.txt
+*.stamp.bak

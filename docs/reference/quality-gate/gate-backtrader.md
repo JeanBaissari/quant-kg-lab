@@ -9,5 +9,5 @@ Graph: `knowledge_graphs/backtrader/.graphify/graph.json` · GRAPH_SPEC §5 · g
 | c1 real labels | PASS | distinct=206 non_singleton=194 default_labels=0 default_graph=0 coverage=100.0% |
 | c2 descriptions | PASS | described=1702 describable=2025 pct=84.0% |
 | c3 god nodes | PASS | top20=20 noise=0 |
-| c4 pin | FAIL | expected=b853d7c90b6721476eb5a5ea3135224e33db1f14 found=absent (graph) |
+| c4 pin | PASS | expected=b853d7c90b6721476eb5a5ea3135224e33db1f14 found=b853d7c90b6721476eb5a5ea3135224e33db1f14 (graph) |
 | c5 audited | PASS | exists |
