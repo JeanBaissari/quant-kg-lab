@@ -13,38 +13,43 @@ related_skills: [scikit-learn-model-selection, optuna-study]
 
 Standard k-fold cross-validation leaks future information in time-series data. Walk-forward validation (also called backtesting or time-series CV) preserves temporal order by training on past data and testing on future data.
 
-## Pattern
+## Steps
 
-```python
-from sklearn.model_selection import TimeSeriesSplit
-import numpy as np
+1. **Set up sequential splits** — `scikit-learn-model-selection`: `TimeSeriesSplit` trains on the past and tests on the future. Graph node: `sklearn.model_selection.TimeSeriesSplit` (`sklearn/model_selection/_split.py`).
+2. **Add purging** — remove training samples that overlap the test period; the purge window must cover the label horizon.
+3. **Add an embargo** — leave a gap between the last train sample and the test window to kill leakage from autocorrelated returns.
+4. **Run the walk-forward loop** — fit on train, predict test, across all folds, with optional purging inline:
+   ```python
+   from sklearn.model_selection import TimeSeriesSplit
+   import numpy as np
 
-def walk_forward_validate(X, y, model, n_splits=5, purge_window=0):
-    """Walk-forward validation with optional purging."""
-    tscv = TimeSeriesSplit(n_splits=n_splits)
-    results = []
-    
-    for train_idx, test_idx in tscv.split(X):
-        if purge_window > 0:
-            # Purge: remove training samples too close to test period
-            test_start = test_idx[0]
-            train_idx = train_idx[train_idx < test_start - purge_window]
-        
-        model.fit(X[train_idx], y[train_idx])
-        pred = model.predict(X[test_idx])
-        results.append(pred)
-    
-    return results
-```
+   def walk_forward_validate(X, y, model, n_splits=5, purge_window=0):
+       """Walk-forward validation with optional purging."""
+       tscv = TimeSeriesSplit(n_splits=n_splits)
+       results = []
+       
+       for train_idx, test_idx in tscv.split(X):
+           if purge_window > 0:
+               # Purge: remove training samples too close to test period
+               test_start = test_idx[0]
+               train_idx = train_idx[train_idx < test_start - purge_window]
+           
+           model.fit(X[train_idx], y[train_idx])
+           pred = model.predict(X[test_idx])
+           results.append(pred)
+       
+       return results
+   ```
+   For sparse label horizons, combinatorial purge — cross-validating over multiple purge windows — is the advanced pattern.
+5. **Tune the protocol itself with Optuna** — `optuna-study`: search the purge window and fold count as part of the HPO objective. Graph node: `optuna.study.Study.optimize` (`optuna/study/study.py`).
+   ```python
+   import optuna
 
-## Key Concepts
-
-| Concept | Description | Graph Node |
-|---------|-------------|------------|
-| TimeSeriesSplit | Sequential train/test splits preserving order | `sklearn.model_selection.TimeSeriesSplit` |
-| Purging | Remove training data overlapping with test period | Custom implementation |
-| Embargo | Gap between train and test to avoid leakage | Custom implementation |
-| Combinatorial Purge | Cross-validation with multiple purge windows | Advanced pattern |
+   def objective(trial):
+       purge_window = trial.suggest_int("purge_window", 0, 30)
+       n_splits = trial.suggest_int("n_splits", 3, 10)
+       # ... walk-forward validate and return Sharpe
+   ```
 
 ## Pitfalls
 
@@ -52,18 +57,13 @@ def walk_forward_validate(X, y, model, n_splits=5, purge_window=0):
 2. **Stationarity assumption**: Walk-forward assumes regime stability within windows.
 3. **Purge window sizing**: Too small → leakage; too large → insufficient training data.
 
-## Integration with Optuna
+## Composed Skills & Bridges
 
-```python
-import optuna
-
-def objective(trial):
-    purge_window = trial.suggest_int("purge_window", 0, 30)
-    n_splits = trial.suggest_int("n_splits", 3, 10)
-    # ... walk-forward validate and return Sharpe
-```
-
-## References
-
-- `sklearn.model_selection.TimeSeriesSplit` — graph node: `sklearn/model_selection/_split.py`
-- `optuna.study.Study.optimize` — graph node: `optuna/study/study.py`
+| Skill / Bridge | Role in this workflow |
+|----------------|-----------------------|
+| `scikit-learn-model-selection` | `TimeSeriesSplit` sequential folds (Steps 1, 4) |
+| `optuna-study` | tune purge/embargo protocol inside HPO (Step 5) |
+| `quant-full-pipeline` | consumer playbook — leak-free split stage of the research loop |
+| `quant-factor-research` | consumer playbook — OOS IC/importance validation |
+| `quant-ml-strategy` | consumer playbook — OOS model predictions |
+| `quant-hpo-optimization` | consumer playbook — walk-forward HPO objective |
