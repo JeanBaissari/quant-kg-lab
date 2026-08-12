@@ -26,6 +26,7 @@ from collections import Counter
 from pathlib import Path
 
 import describe_nodes
+from prune_graph import LIB_EXTRA_SYMBOLS
 
 ROOT = describe_nodes.ROOT
 ALL = ["numpy", "scipy", "pandas", "scikit-learn", "optuna",
@@ -79,15 +80,22 @@ def check_c2(g, lib):
     return pct >= 80.0, f"described={described} describable={len(pub)} pct={pct:.1f}%"
 
 
-def check_c3(g, deg):
+def check_c3(g, deg, lib):
+    # §6 "retain but demote": rank god nodes over public-API code nodes only, so
+    # rationale/docstring nodes cannot dominate centrality.
     byid = {n["id"]: n for n in g["nodes"]}
-    top = sorted(deg, key=lambda x: -deg[x])[:20]
+    public_ids = {n["id"] for n in g["nodes"] if describe_nodes.public(n, lib)}
+    top = sorted((nid for nid in public_ids), key=lambda x: -deg[x])[:20]
     hits = []
     for nid in top:
         n = byid.get(nid, {})
         lbl = n.get("label") or ""
         sf = (n.get("source_file") or "").lower()
+        # ta-lib exception (§6): __pyx_pw_ indicator wrappers ARE the public API.
+        if lib == "ta-lib" and describe_nodes.talib_name(lbl):
+            continue
         if any(p.search(lbl) for p in NOISE_SYM) or NOISE_TEST.match(lbl) \
+                or any(s in lbl for s in LIB_EXTRA_SYMBOLS.get(lib, ())) \
                 or any(p in sf for p in describe_nodes.NOISE):
             hits.append(f"{nid}({lbl})")
     counts = f"top20={len(top)} noise={len(hits)}"
@@ -117,7 +125,7 @@ def check(lib, lock):
     return {
         "c1": {"name": "real labels", **dict(zip(["ok", "counts"], check_c1(g, labels)))},
         "c2": {"name": "descriptions", **dict(zip(["ok", "counts"], check_c2(g, lib)))},
-        "c3": {"name": "god nodes", **dict(zip(["ok", "counts"], check_c3(g, deg)))},
+        "c3": {"name": "god nodes", **dict(zip(["ok", "counts"], check_c3(g, deg, lib)))},
         "c4": {"name": "pin", **dict(zip(["ok", "counts"], check_c4(g, lib, lock)))},
         "c5": {"name": "audited", **dict(zip(["ok", "counts"], check_c5(lib)))},
     }
