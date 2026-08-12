@@ -4,20 +4,20 @@
 
 ## Summary
 
-- Total edges: 4252
-- EXTRACTED: 3194 (75.1%)
-- INFERRED: 1058 (24.9%)
+- Total edges: 4010
+- EXTRACTED: 3000 (74.8%)
+- INFERRED: 1010 (25.2%)
 - AMBIGUOUS: 0
 
 ## Top INFERRED Nodes
 
-- `BaseDistribution`: 194 inferred edges
-- `Study`: 193 inferred edges
-- `StudyDirection`: 137 inferred edges
-- `FloatDistribution`: 76 inferred edges
-- `CategoricalDistribution`: 71 inferred edges
-- `IntDistribution`: 66 inferred edges
-- `FrozenStudy`: 60 inferred edges
+- `Study`: 187 inferred edges
+- `BaseDistribution`: 183 inferred edges
+- `StudyDirection`: 135 inferred edges
+- `CategoricalDistribution`: 63 inferred edges
+- `FloatDistribution`: 63 inferred edges
+- `IntDistribution`: 60 inferred edges
+- `FrozenStudy`: 58 inferred edges
 - `TrialState`: 41 inferred edges
 - `LazyRandomState`: 37 inferred edges
 - `StudySummary`: 34 inferred edges
@@ -45,7 +45,6 @@
 - `_base.py` ↔ `_frozen.py`: 30
 - `_base.py` ↔ `_study_direction.py`: 30
 - `_rdb` ↔ `_study_direction.py`: 24
-- `pytest_samplers.py` ↔ `distributions.py`: 24
 - `_trial.py` ↔ `study.py`: 21
 - `acqf.py` ↔ `gp.py`: 16
 - `_ped_anova` ↔ `distributions.py`: 16
@@ -54,3 +53,4 @@
 - `_fixed.py` ↔ `distributions.py`: 16
 - `terminator.py` ↔ `erroreval.py`: 15
 - `matplotlib` ↔ `study.py`: 13
+- `search_space.py` ↔ `distributions.py`: 12

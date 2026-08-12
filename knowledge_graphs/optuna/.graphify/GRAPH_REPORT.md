@@ -5,10 +5,10 @@
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2318 nodes · 4252 edges · 180 communities detected
-- Extraction: 75% EXTRACTED · 25% INFERRED · 0% AMBIGUOUS · INFERRED: 1058 edges (avg confidence: 0.5)
+- 2205 nodes · 4010 edges · 223 communities detected
+- Extraction: 75% EXTRACTED · 25% INFERRED · 0% AMBIGUOUS · INFERRED: 1010 edges (avg confidence: 0.5)
 - Token cost: 0 input · 0 output
-- Edge kinds: uses: 1058 · method: 1017 · calls: 768 · contains: 638 · rationale_for: 412 · inherits: 175 · imports_from: 150 · imports: 34
+- Edge kinds: uses: 1010 · method: 936 · calls: 697 · contains: 610 · rationale_for: 411 · imports_from: 147 · inherits: 166 · imports: 33
 
 
 ## Input Scope
@@ -21,15 +21,15 @@
 - Built from Git commit: `b6f2ea6`
 - Compare this hash to `git rev-parse HEAD` before trusting freshness-sensitive graph output.
 ## God Nodes (most connected - your core abstractions)
-1. `Study` - 227 edges
-2. `BaseDistribution` - 207 edges
-3. `StudyDirection` - 139 edges
-4. `FloatDistribution` - 88 edges
-5. `CategoricalDistribution` - 81 edges
-6. `IntDistribution` - 78 edges
-7. `FrozenStudy` - 68 edges
-8. `RDBStorage` - 57 edges
-9. `StorageTestCase` - 50 edges
+1. `Study` - 221 edges
+2. `BaseDistribution` - 196 edges
+3. `_typing.py` - 142 edges
+4. `StudyDirection` - 137 edges
+5. `FloatDistribution` - 75 edges
+6. `CategoricalDistribution` - 73 edges
+7. `IntDistribution` - 72 edges
+8. `FrozenStudy` - 66 edges
+9. `RDBStorage` - 57 edges
 10. `TrialState` - 44 edges
 
 ## Surprising Connections (you probably didn't know these)

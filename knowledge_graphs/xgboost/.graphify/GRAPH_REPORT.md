@@ -5,10 +5,10 @@
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1632 nodes · 4415 edges · 80 communities detected
-- Extraction: 54% EXTRACTED · 46% INFERRED · 0% AMBIGUOUS · INFERRED: 2010 edges (avg confidence: 0.5)
+- 1631 nodes · 4318 edges · 80 communities detected
+- Extraction: 56% EXTRACTED · 44% INFERRED · 0% AMBIGUOUS · INFERRED: 1920 edges (avg confidence: 0.5)
 - Token cost: 0 input · 0 output
-- Edge kinds: uses: 2010 · rationale_for: 598 · calls: 584 · contains: 561 · method: 374 · imports_from: 189 · inherits: 99
+- Edge kinds: uses: 1920 · rationale_for: 597 · calls: 584 · contains: 560 · method: 370 · imports_from: 189 · inherits: 98
 
 
 ## Input Scope
@@ -26,11 +26,11 @@
 3. `Objective` - 146 edges
 4. `Booster` - 144 edges
 5. `TransformedDf` - 133 edges
-6. `PandasTransformed` - 105 edges
-7. `ArrowTransformed` - 105 edges
+6. `ArrowTransformed` - 105 edges
+7. `PandasTransformed` - 105 edges
 8. `XGBoostError` - 102 edges
 9. `TreeObjective` - 100 edges
-10. `IteratorForTest` - 97 edges
+10. `data.py` - 94 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `XGBoost Experimental Federated Learning related API.` --uses--> `RabitTracker`  [INFERRED]

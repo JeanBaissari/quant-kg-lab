@@ -6,8 +6,8 @@ Graph: `knowledge_graphs/optuna/.graphify/graph.json` · GRAPH_SPEC §5 · gener
 
 | criterion | status | counts |
 |---|---|---|
-| c1 real labels | FAIL | distinct=226 non_singleton=182 default_labels=226 default_graph=226 coverage=0.0% |
+| c1 real labels | PASS | distinct=223 non_singleton=179 default_labels=0 default_graph=0 coverage=100.0% |
 | c2 descriptions | FAIL | described=34 describable=1323 pct=2.6% |
-| c3 god nodes | FAIL | top20=20 noise=1 hits=testing_pytest_storages_storagetestcase(StorageTestCase) |
+| c3 god nodes | PASS | top20=20 noise=0 |
 | c4 pin | FAIL | expected=b6f2ea62fbe7fb09d0d1c75783c65dad098d9a06 found=absent (graph) |
 | c5 audited | PASS | exists |
