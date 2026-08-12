@@ -36,6 +36,7 @@ knowledge_graphs/*/repo/
 # Graphify backups (prune/label/describe safety copies)
 *.prune.bak
 *.labels.bak
+*.curated.bak
+*.stamp.bak
 .graphify/describe-log.jsonl
 .graphify/prompt-*.txt
-*.stamp.bak
