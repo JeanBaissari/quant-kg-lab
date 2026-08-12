@@ -61,10 +61,28 @@
 - `python3 scripts/build_library_docs.py` is lock-driven; add `<lib>` to its `DOMAIN` taxonomy if missing. It regenerates **all** hubs — revert the date-only diffs of the other libraries before committing.
 - **Verify**: `docs/libraries/<lib>/index.md` exists with the pinned `Source` commit and graph counts.
 
+## 7.5 API-surface probe (language-invisible symbols) — NEW, mandatory
+
+Extraction only sees Python `def`s: Cython modules (`.pyx`) and C-only symbols
+(`arange`, ufuncs, scalar types) **cannot ever appear from re-extraction**
+(see F8 — numpy's template case). After the description wave:
+
+- `python3 scripts/api_surface_diff.py <lib> --manifest` — diff public top-level
+  symbols vs the graph, classify M1/M2/M3, emit `tools/curated/<lib>.json`
+  (descriptions harvested from the live API).
+- Review the manifest (spot-check ~10 descriptions + every `source_file` is
+  truthful), then `python3 scripts/inject_curated_nodes.py <lib> --apply`.
+- Regenerate the probe report + surface json: `python3 scripts/api_surface_diff.py <lib>`.
+- **Verify**: `python3 scripts/api_surface_diff.py <lib> --ci` exit 0 (coverage
+  ≥95%); `python3 scripts/graph_gate.py <lib>` → **c6 PASS**; skill QR rows
+  complete: `python3 scripts/verify_citations.py --require-complete <lib>` exit 0.
+- Restamp the library's skill `graph:` blocks (nodes/edges/hash) and sync
+  `graphs.lock` counts — curated nodes are part of graph.json.
+
 ## 8. Sync + gate + commit
 
 - Set `graph.json` → `graph.built_from_commit` = pin (no stamp tool is committed yet — see Findings F4), and sync `graphs.lock` node/edge counts to the final graph.
-- Regenerate the gate report: `python3 scripts/graph_gate.py <lib>`.
+- Regenerate the gate report: `python3 scripts/graph_gate.py <lib>` (c1–c6).
 - Commit per step (pin/extract, prune, labels, audit, hub, checklist, tool fixes separately). Never commit `repo/` or `.graphify` intermediates.
 
 ## Findings (QKG_019 stress run — statsmodels)
@@ -106,5 +124,22 @@
   `scene.json`, `reconciliation-candidates.json`, `workspace-manifest.json`, `studio/`) are
   ignored in practice. Stage only the three canonical artifacts (graph.json, GRAPH_REPORT.md,
   .graphify_labels.json) until the patterns are fixed.
+- **F8 — Language-invisible API surface (QKG_021 template case, numpy).** tree-sitter has no
+  Cython grammar and extracts only Python `def`s. numpy: 199/499 top-level symbols absent —
+  whole `.pyx` modules (`random/_generator.pyx`), C-only ufuncs/builtins (`arange`, `sin`,
+  `dtype` — no `def` exists anywhere), plus a few Python-def'd misses (`array2string`).
+  Re-extraction **cannot** fix M1/M2. Mechanism (ADR-0008): curated manifest
+  (`tools/curated/<lib>.json`) → curated nodes with truthful `source_file`; gate criterion c6;
+  `--require-complete` on skill QR rows. Run step 7.5 for every library.
+- **F9 — Label collisions between submodules and the top-level API.** `np.array` resolves to
+  `_core/defchararray.py`'s char-array `array()` — label-resolution can't tell them apart.
+  Curate the top-level symbol explicitly (source `__init__.py` / true binding module) and cite
+  the curated node in the skill; verify with a spot check of `array`/`asarray`-class rows
+  (`verify_citations.py --require-complete` + a human look at first-column collisions).
+- **F10 — Inline-duplicated table headers (tooling hygiene).** The annotation tool appended a
+  `Graph Node` header cell per row, leaving single-line headers like
+  `| API | Signature | Description | Graph Node | Graph Node | …` in 11 skills (numpy/linalg
+  had 19). Consecutive-line checks miss inline repeats — scan for `line.count('| Graph Node |') > 1`
+  after any annotation wave before committing.
 
 *Last verified against the repo: 2026-08-12.*
