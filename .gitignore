@@ -33,3 +33,5 @@ node_modules/
 # Cloned repos (too large, reclone via scripts/setup.sh)
 knowledge_graphs/*/repo/
 
+*.prune.bak
+*.labels.bak
