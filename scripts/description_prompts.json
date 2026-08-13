@@ -457,6 +457,25 @@
         }
       ],
       "payload_note": "Write exactly ONE semantic sentence per node \u2014 a functional summary a quant user can act on. Never produce code; never quote source."
+    },
+    "catboost": {
+      "emphasis": "catboost is a gradient-boosting library with NATIVE categorical-feature support: CatBoostClassifier/CatBoostRegressor/CatBoostRanker (core.py \u2014 cat_features, text_features, embedding_features, missing-value handling, loss_function choices, eval metrics, model save/load), Pool (pool.py \u2014 the data container with cat_features/group_id/pairs), cv (cv.py \u2014 cross-validation with fold_count/partition_random_seed), metrics (metrics.py \u2014 classification/regression metric enums), utils (eval_metric evaluation, shap importances, get_feature_importance, plot helpers), train (train.py \u2014 low-level train function), datasets (datasets.py \u2014 titanic/amazon/higgs loaders). Describe each class/function's boosting role and key parameters \u2014 they are all sklearn-compatible where applicable.",
+      "glossary": "catboost, cat_features, Pool, ordered boosting, symmetric trees, loss function, eval metric, cross-validation, feature importance, shap, ranking",
+      "exemplars": [
+        {
+          "name": "CatBoostClassifier (core.py)",
+          "desc": "catboost CatBoostClassifier: gradient-boosting classifier with native categorical handling \u2014 fit(X, y, cat_features=[...]), predict, predict_proba, get_feature_importance."
+        },
+        {
+          "name": "Pool (pool.py)",
+          "desc": "catboost Pool: the data container \u2014 X/y/cat_features/group_id/pairs; what every fit/cv call consumes."
+        },
+        {
+          "name": "cv (cv.py)",
+          "desc": "catboost cv(Pool, params, fold_count): cross-validated training returning per-fold eval-metric scores."
+        }
+      ],
+      "payload_note": "Write exactly ONE semantic sentence per node \u2014 a functional summary a quant user can act on. Never produce code; never quote source."
     }
   }
 }
