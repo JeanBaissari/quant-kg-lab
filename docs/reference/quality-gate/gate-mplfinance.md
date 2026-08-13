@@ -9,6 +9,6 @@ Graph: `knowledge_graphs/mplfinance/.graphify/graph.json` · GRAPH_SPEC §5 · g
 | c1 real labels | PASS | distinct=31 non_singleton=12 default_labels=0 default_graph=0 coverage=100.0% |
 | c2 descriptions | PASS | described=56 describable=56 pct=100.0% |
 | c3 god nodes | PASS | top20=20 noise=0 |
-| c4 pin | FAIL | expected=493811dac9a203de7ec148fb95504e7d3f400ba5 found=53e2b2295a582d09edbfb57039112d57f9b416a1 (graph) |
+| c4 pin | PASS | expected=493811dac9a203de7ec148fb95504e7d3f400ba5 found=493811dac9a203de7ec148fb95504e7d3f400ba5 (graph) |
 | c5 audited | PASS | exists |
-| c6 api surface | PASS | no manifest (probe pending) |
+| c6 api surface | PASS | curated=0 unresolved=0 surface_coverage=100.0% (target 95.0%) |

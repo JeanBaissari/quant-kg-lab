@@ -153,8 +153,8 @@
     "mplfinance": {
       "repo": "matplotlib/mplfinance",
       "commit": "493811dac9a203de7ec148fb95504e7d3f400ba5",
-      "nodes": 0,
-      "edges": 0
+      "nodes": 244,
+      "edges": 317
     }
   }
 }
