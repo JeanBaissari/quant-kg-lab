@@ -99,6 +99,10 @@ docs:
   type: Generated
   status: generated
   last_verified: '2026-08-13'
+- path: docs/libraries/catboost/index.md
+  type: Generated
+  status: generated
+  last_verified: '2026-08-13'
 - path: docs/libraries/cvxpy/index.md
   type: Generated
   status: generated
@@ -271,6 +275,10 @@ docs:
   type: Generated
   status: generated
   last_verified: ''
+- path: docs/reference/edge-audits/edge-audit-catboost.md
+  type: Generated
+  status: generated
+  last_verified: ''
 - path: docs/reference/edge-audits/edge-audit-cvxpy.md
   type: Generated
   status: generated
@@ -368,6 +376,10 @@ docs:
   status: generated
   last_verified: ''
 - path: docs/reference/quality-gate/gate-backtrader.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/quality-gate/gate-catboost.md
   type: Generated
   status: generated
   last_verified: ''

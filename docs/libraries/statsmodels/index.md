@@ -20,6 +20,8 @@ Hub for the **statsmodels** library (Foundation tier). The per-module API refere
 |-------|--------|--------|
 | [`statsmodels`](../../../skills/statsmodels/SKILL.md) | (router) | working with statsmodels — the statistical-modelling entry point. Router indexin |
 | [`statsmodels-core`](../../../skills/statsmodels/core/SKILL.md) | `statsmodels.core` | building statistical models in Python |
+| [`statsmodels-diagnostics`](../../../skills/statsmodels/diagnostics/SKILL.md) | `statsmodels.diagnostics` | diagnosing fitted models with statsmodels |
+| [`statsmodels-glm`](../../../skills/statsmodels/glm/SKILL.md) | `statsmodels.glm` | fitting generalized linear models with statsmodels |
 | [`statsmodels-statespace`](../../../skills/statsmodels/statespace/SKILL.md) | `statsmodels.statespace` | statsmodels state-space models |
 | [`statsmodels-tsa`](../../../skills/statsmodels/tsa/SKILL.md) | `statsmodels.tsa` | forecasting time series with statsmodels |
 | [`statsmodels-vector-ar`](../../../skills/statsmodels/vector_ar/SKILL.md) | `statsmodels.vector_ar` | modelling multivariate time series with statsmodels |
@@ -41,6 +43,7 @@ Hub for the **statsmodels** library (Foundation tier). The per-module API refere
 | arch::ARCHModel | statsmodels::OLS | feeds |
 | shap::Explainer | statsmodels::OLS | explains |
 | pyfolio::timeseries.py | statsmodels::OLS | powered_by |
+| pymc::Model | statsmodels::OLS | alternative_to |
 
 ## Related
 

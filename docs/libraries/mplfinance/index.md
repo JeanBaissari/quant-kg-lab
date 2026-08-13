@@ -18,6 +18,7 @@ Hub for the **mplfinance** library (Quant Tools tier). The per-module API refere
 
 | Skill | Module | Covers |
 |-------|--------|--------|
+| [`mplfinance`](../../../skills/mplfinance/SKILL.md) | (router) | charting financial data with mplfinance — plot() with candle/OHLC/line/renko/pnf |
 
 ## Graph provenance
 
@@ -25,6 +26,12 @@ Hub for the **mplfinance** library (Quant Tools tier). The per-module API refere
 - **Communities**: 31
 - **Edge audit**: [edge-audit-mplfinance.md](../../reference/edge-audits/edge-audit-mplfinance.md)
 - **Rebuild**: `scripts/rebuild_graph.sh mplfinance`
+
+## Cross-library bridges
+
+| Source | Target | Relation |
+|--------|--------|----------|
+| mplfinance::_get_valid_plot_types() | pandas::DataFrame | consumes |
 
 ## Related
 

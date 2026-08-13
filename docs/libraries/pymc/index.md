@@ -30,6 +30,14 @@ Hub for the **pymc** library (Bayesian Modelling tier). The per-module API refer
 - **Edge audit**: [edge-audit-pymc.md](../../reference/edge-audits/edge-audit-pymc.md)
 - **Rebuild**: `scripts/rebuild_graph.sh pymc`
 
+## Cross-library bridges
+
+| Source | Target | Relation |
+|--------|--------|----------|
+| pymc::Model | statsmodels::OLS | alternative_to |
+| pymc::GARCH11 | arch::ARCHModel | alternative_to |
+| pymc::.sample_stats_to_xarray() | optuna::Study | alternative_to |
+
 ## Related
 
 - [Libraries index](../index.md) — the domain taxonomy

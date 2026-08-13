@@ -18,10 +18,12 @@ Hub for the **numpy** library (Foundation tier). The per-module API reference li
 
 | Skill | Module | Covers |
 |-------|--------|--------|
-| [`numpy`](../../../skills/numpy/SKILL.md) | (router) | working with NumPy. Router indexing the 3 numpy sub-skills; load the sub-skill f |
+| [`numpy`](../../../skills/numpy/SKILL.md) | (router) | working with NumPy. Router indexing the 5 numpy sub-skills; load the sub-skill f |
 | [`numpy-core`](../../../skills/numpy/core/SKILL.md) | `numpy.core` | NumPy arrays |
+| [`numpy-io`](../../../skills/numpy/io/SKILL.md) | `numpy.io` | reading or writing NumPy arrays |
 | [`numpy-linalg`](../../../skills/numpy/linalg/SKILL.md) | `numpy.linalg` | doing linear algebra with NumPy |
 | [`numpy-random`](../../../skills/numpy/random/SKILL.md) | `numpy.random` | generating random numbers with NumPy |
+| [`numpy-ufuncs`](../../../skills/numpy/ufuncs/SKILL.md) | `numpy.ufuncs` | NumPy universal functions |
 
 ## Graph provenance
 

@@ -57,6 +57,8 @@ Hub for the **scikit-learn** library (ML & Optimization tier). The per-module AP
 | alphalens::performance.py | scikit-learn::BaseEstimator | feeds |
 | shap::Explainer | scikit-learn::BaseEstimator | explains |
 | polars::DataFrame | scikit-learn::BaseEstimator | input_to |
+| imbalanced-learn::SMOTE | scikit-learn::Pipeline | compatible_with |
+| imbalanced-learn::BalancedRandomForestClassifier | scikit-learn::RandomForestClassifier | alternative_to |
 
 ## Related
 

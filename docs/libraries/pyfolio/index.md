@@ -36,6 +36,9 @@ Hub for the **pyfolio** library (Quant Tools tier). The per-module API reference
 | alphalens::tears.py | pyfolio::tears.py | feeds |
 | pyfolio::timeseries.py | statsmodels::OLS | powered_by |
 | arch::ARCHModel | pyfolio::timeseries.py | feeds |
+| empyrical::sharpe_ratio() | pyfolio::timeseries.py | feeds |
+| empyrical::perf_attrib.py | pyfolio::perf_attrib.py | feeds |
+| quantstats::full() | pyfolio::timeseries.py | alternative_to |
 
 ## Related
 

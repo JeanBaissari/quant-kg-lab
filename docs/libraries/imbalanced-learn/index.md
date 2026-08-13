@@ -30,6 +30,13 @@ Hub for the **imbalanced-learn** library (ML & Optimization tier). The per-modul
 - **Edge audit**: [edge-audit-imbalanced-learn.md](../../reference/edge-audits/edge-audit-imbalanced-learn.md)
 - **Rebuild**: `scripts/rebuild_graph.sh imbalanced-learn`
 
+## Cross-library bridges
+
+| Source | Target | Relation |
+|--------|--------|----------|
+| imbalanced-learn::SMOTE | scikit-learn::Pipeline | compatible_with |
+| imbalanced-learn::BalancedRandomForestClassifier | scikit-learn::RandomForestClassifier | alternative_to |
+
 ## Related
 
 - [Libraries index](../index.md) — the domain taxonomy

@@ -28,6 +28,7 @@ Per-library hubs, grouped by tier. Each hub indexes that library's skills, graph
 
 ## ML & Optimization
 
+- [catboost](catboost/index.md) — catboost/catboost
 - [cvxpy](cvxpy/index.md) — cvxpy/cvxpy
 - [imbalanced-learn](imbalanced-learn/index.md) — scikit-learn-contrib/imbalanced-learn
 - [lightgbm](lightgbm/index.md) — microsoft/LightGBM

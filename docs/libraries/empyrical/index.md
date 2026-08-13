@@ -29,6 +29,14 @@ Hub for the **empyrical** library (Quant Tools tier). The per-module API referen
 - **Edge audit**: [edge-audit-empyrical.md](../../reference/edge-audits/edge-audit-empyrical.md)
 - **Rebuild**: `scripts/rebuild_graph.sh empyrical`
 
+## Cross-library bridges
+
+| Source | Target | Relation |
+|--------|--------|----------|
+| empyrical::sharpe_ratio() | pyfolio::timeseries.py | feeds |
+| empyrical::perf_attrib.py | pyfolio::perf_attrib.py | feeds |
+| quantstats::metrics() | empyrical::sharpe_ratio() | powered_by |
+
 ## Related
 
 - [Libraries index](../index.md) — the domain taxonomy

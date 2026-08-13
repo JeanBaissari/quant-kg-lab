@@ -44,6 +44,9 @@ Hub for the **pandas** library (Foundation tier). The per-module API reference l
 | pandas::DataFrame | arch::ARCHModel | input_to |
 | pandas::DataFrame | riskfolio::Portfolio | input_to |
 | polars::DataFrame | pandas::DataFrame | alternative_to |
+| yfinance::Ticker | pandas::DataFrame | feeds |
+| yfinance::_DownloadCtx | pandas::DataFrame | feeds |
+| mplfinance::_get_valid_plot_types() | pandas::DataFrame | consumes |
 
 ## Related
 

@@ -39,6 +39,7 @@ Hub for the **arch** library (Statistical Models tier). The per-module API refer
 | arch::ADF | scipy::_stats() | powered_by |
 | pandas::DataFrame | arch::ARCHModel | input_to |
 | arch::ARCHModel | pyfolio::timeseries.py | feeds |
+| pymc::GARCH11 | arch::ARCHModel | alternative_to |
 
 ## Related
 

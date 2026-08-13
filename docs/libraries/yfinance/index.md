@@ -29,6 +29,13 @@ Hub for the **yfinance** library (Foundation tier). The per-module API reference
 - **Edge audit**: [edge-audit-yfinance.md](../../reference/edge-audits/edge-audit-yfinance.md)
 - **Rebuild**: `scripts/rebuild_graph.sh yfinance`
 
+## Cross-library bridges
+
+| Source | Target | Relation |
+|--------|--------|----------|
+| yfinance::Ticker | pandas::DataFrame | feeds |
+| yfinance::_DownloadCtx | pandas::DataFrame | feeds |
+
 ## Related
 
 - [Libraries index](../index.md) — the domain taxonomy

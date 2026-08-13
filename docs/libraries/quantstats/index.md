@@ -30,6 +30,13 @@ Hub for the **quantstats** library (Quant Tools tier). The per-module API refere
 - **Edge audit**: [edge-audit-quantstats.md](../../reference/edge-audits/edge-audit-quantstats.md)
 - **Rebuild**: `scripts/rebuild_graph.sh quantstats`
 
+## Cross-library bridges
+
+| Source | Target | Relation |
+|--------|--------|----------|
+| quantstats::metrics() | empyrical::sharpe_ratio() | powered_by |
+| quantstats::full() | pyfolio::timeseries.py | alternative_to |
+
 ## Related
 
 - [Libraries index](../index.md) — the domain taxonomy

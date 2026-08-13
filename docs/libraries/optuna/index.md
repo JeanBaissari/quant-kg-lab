@@ -7,7 +7,7 @@
 **Library**: optuna
 **Domain**: ML & Optimization
 **Source**: optuna/optuna@b6f2ea62fbe7
-**Graph**: 2205 nodes · 4010 edges
+**Graph**: 2208 nodes · 4013 edges
 **Last Verified**: 2026-08-13
 
 ## Overview
@@ -43,6 +43,7 @@ Hub for the **optuna** library (ML & Optimization tier). The per-module API refe
 | xgboost::TrainingCallback | optuna::Study | optimized_by |
 | scikit-learn::Pipeline | optuna::Study | tuned_by |
 | scipy::OptimizeResult | optuna::Study | alternative_to |
+| pymc::.sample_stats_to_xarray() | optuna::Study | alternative_to |
 
 ## Related
 
