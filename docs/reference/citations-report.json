@@ -1,10 +1,8 @@
 {
-  "generated": "2026-08-13T23:09:27+00:00",
-  "git_sha": "d875d97",
-  "checked": 55,
+  "generated": "2026-08-13T23:10:39+00:00",
+  "git_sha": "68bf1d0",
+  "checked": 1147,
   "dangling": 0,
-  "require_complete": {
-    "darts": 0
-  },
-  "pass": false
+  "require_complete": {},
+  "pass": true
 }

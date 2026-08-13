@@ -81,8 +81,11 @@ noise-filter policy, and the graph quality gate.
 | [imbalanced-learn](https://github.com/scikit-learn-contrib/imbalanced-learn) | Class-imbalance resampling | 611 · 865 |
 | [pymc](https://github.com/pymc-devs/pymc) | Bayesian / probabilistic modelling | 4,067 · 11,144 |
 | [mplfinance](https://github.com/matplotlib/mplfinance) | Financial charting | 244 · 317 |
+| [catboost](https://github.com/catboost/catboost) | Gradient boosting (native categoricals) | 793 · 1,569 |
+| [ta](https://github.com/bukosabino/ta) | Pure-Python technical analysis | 538 · 1,208 |
+| [darts](https://github.com/unit8co/darts) | ML time-series forecasting | 3,954 · 8,240 |
 
-**Total: ~87K nodes / ~219K edges across 25 graphs.** Pinned commits in `graphs.lock`; every
+**Total: ~92K nodes / ~230K edges across 28 graphs.** Pinned commits in `graphs.lock`; every
 graph passes the [quality gate](docs/specs/GRAPH_SPEC.md#5-quality-gate) (labels, descriptions,
 god nodes, pin, audit, API-surface coverage).
 
@@ -135,11 +138,11 @@ python scripts/validate_skills.py --ci  # verify skill claims against live APIs
 
 ## Status
 
-**Gold standard reached for all 25 libraries**: every graph passes the quality gate (real
+**Gold standard reached for all 28 libraries**: every graph passes the quality gate (real
 community labels, ≥80% semantic descriptions, clean god nodes, `built_from_commit` pinned,
-audited edges, ≥95% API-surface coverage); 123 spec-normalized skills (16 routers + 95
-modules + 12 playbooks) with live-API validation, graph-node citations (998, 0 dangling) and
-a green citation gate with `--require-complete` on every library; 59/59 precise cross-library
+audited edges, ≥95% API-surface coverage); 136 spec-normalized skills (16 routers + 108
+modules + 12 playbooks) with live-API validation, graph-node citations (1147, 0 dangling) and
+a green citation gate with `--require-complete` on every library; 71/71 precise cross-library
 bridges as a curated overlay; workflow playbooks across the whole stack; provenance-gated CI.
 See `ROADMAP.md` for the phased plan and current state.
 

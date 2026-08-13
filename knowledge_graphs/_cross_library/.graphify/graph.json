@@ -341,6 +341,48 @@
       "label": "_get_valid_plot_types()",
       "library": "mplfinance",
       "source_file": "_arg_validators.py"
+    },
+    {
+      "id": "catboost::core_catboostclassifier",
+      "label": "CatBoostClassifier",
+      "library": "catboost",
+      "source_file": "core.py"
+    },
+    {
+      "id": "catboost::core_pool",
+      "label": "Pool",
+      "library": "catboost",
+      "source_file": "core.py"
+    },
+    {
+      "id": "ta::wrapper_add_all_ta_features",
+      "label": "add_all_ta_features()",
+      "library": "ta",
+      "source_file": "wrapper.py"
+    },
+    {
+      "id": "ta::momentum_rsiindicator",
+      "label": "RSIIndicator",
+      "library": "ta",
+      "source_file": "momentum.py"
+    },
+    {
+      "id": "ta::trend_macd",
+      "label": "MACD",
+      "library": "ta",
+      "source_file": "trend.py"
+    },
+    {
+      "id": "darts::timeseries_timeseries",
+      "label": "TimeSeries",
+      "library": "darts",
+      "source_file": "timeseries.py"
+    },
+    {
+      "id": "darts::forecasting_forecasting_model_forecastingmodel",
+      "label": "ForecastingModel",
+      "library": "darts",
+      "source_file": "models/forecasting/forecasting_model.py"
     }
   ],
   "links": [
@@ -756,6 +798,90 @@
       "relation": "consumes",
       "confidence": "CURATED",
       "description": "mplfinance plot() renders pandas OHLCV DataFrames"
+    },
+    {
+      "source": "catboost::core_catboostclassifier",
+      "target": "scikit-learn::pipeline_pipeline",
+      "relation": "compatible_with",
+      "confidence": "CURATED",
+      "description": "CatBoostClassifier implements the sklearn API, usable in Pipelines"
+    },
+    {
+      "source": "catboost::core_catboostclassifier",
+      "target": "xgboost::sklearn_xgbclassifier",
+      "relation": "alternative_to",
+      "confidence": "CURATED",
+      "description": "catboost vs xgboost for boosted classification"
+    },
+    {
+      "source": "catboost::core_catboostclassifier",
+      "target": "lightgbm::lgbmclassifier",
+      "relation": "alternative_to",
+      "confidence": "CURATED",
+      "description": "catboost vs lightgbm \u2014 native categoricals vs leaf-wise growth"
+    },
+    {
+      "source": "catboost::core_pool",
+      "target": "shap::explainer",
+      "relation": "explains",
+      "confidence": "CURATED",
+      "description": "shap TreeExplainer explains catboost models natively"
+    },
+    {
+      "source": "catboost::core_catboostclassifier",
+      "target": "optuna::study_study_study",
+      "relation": "optimized_by",
+      "confidence": "CURATED",
+      "description": "optuna integration (OptunaCatBoost) tunes catboost"
+    },
+    {
+      "source": "ta::wrapper_add_all_ta_features",
+      "target": "pandas::dataframe",
+      "relation": "consumes",
+      "confidence": "CURATED",
+      "description": "ta add_all_ta_features expands pandas DataFrames with indicator columns"
+    },
+    {
+      "source": "ta::momentum_rsiindicator",
+      "target": "ta-lib::ta_lib_pyx_pw_5talib_7_ta_lib_287rsi",
+      "relation": "alternative_to",
+      "confidence": "CURATED",
+      "description": "ta pure-Python RSI vs ta-lib C-bound RSI \u2014 same family, no system C library"
+    },
+    {
+      "source": "ta::trend_macd",
+      "target": "vectorbt::signals_factory_signalfactory",
+      "relation": "feeds",
+      "confidence": "CURATED",
+      "description": "ta MACD signals feed vectorbt SignalFactory strategies"
+    },
+    {
+      "source": "darts::timeseries_timeseries",
+      "target": "pandas::dataframe",
+      "relation": "consumes",
+      "confidence": "CURATED",
+      "description": "darts TimeSeries built from pandas DataFrames via from_dataframe"
+    },
+    {
+      "source": "darts::forecasting_forecasting_model_forecastingmodel",
+      "target": "statsmodels::regression_linear_model_ols",
+      "relation": "alternative_to",
+      "confidence": "CURATED",
+      "description": "darts ML forecasting vs statsmodels econometric regression"
+    },
+    {
+      "source": "darts::forecasting_forecasting_model_forecastingmodel",
+      "target": "pymc::model_core_model",
+      "relation": "alternative_to",
+      "confidence": "CURATED",
+      "description": "darts deep/ML forecasting vs pymc Bayesian forecasting"
+    },
+    {
+      "source": "darts::timeseries_timeseries",
+      "target": "yfinance::ticker_ticker",
+      "relation": "feeds",
+      "confidence": "CURATED",
+      "description": "yfinance history feeds darts TimeSeries forecasting"
     }
   ],
   "hyperedges": []

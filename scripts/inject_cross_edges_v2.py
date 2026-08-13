@@ -87,6 +87,18 @@ ALL_BRIDGES = [
     ("pymc", "GARCH11", "arch", "ARCHModel", "alternative_to", "pymc GARCH11 Bayesian vol model vs arch frequentist GARCH"),
     ("pymc", "sample", "optuna", "Study", "alternative_to", "MCMC posterior sampling vs optuna optimization for parameter inference"),
     ("mplfinance", "plot", "pandas", "DataFrame", "consumes", "mplfinance plot() renders pandas OHLCV DataFrames"),
+    ("catboost", "CatBoostClassifier", "scikit-learn", "Pipeline", "compatible_with", "CatBoostClassifier implements the sklearn API, usable in Pipelines"),
+    ("catboost", "CatBoostClassifier", "xgboost", "XGBClassifier", "alternative_to", "catboost vs xgboost for boosted classification"),
+    ("catboost", "CatBoostClassifier", "lightgbm", "LGBMClassifier", "alternative_to", "catboost vs lightgbm — native categoricals vs leaf-wise growth"),
+    ("catboost", "Pool", "shap", "Explainer", "explains", "shap TreeExplainer explains catboost models natively"),
+    ("catboost", "CatBoostClassifier", "optuna", "Study", "optimized_by", "optuna integration (OptunaCatBoost) tunes catboost"),
+    ("ta", "add_all_ta_features", "pandas", "DataFrame", "consumes", "ta add_all_ta_features expands pandas DataFrames with indicator columns"),
+    ("ta", "RSIIndicator", "ta-lib", "RSI", "alternative_to", "ta pure-Python RSI vs ta-lib C-bound RSI — same family, no system C library"),
+    ("ta", "MACD", "vectorbt", "SignalFactory", "feeds", "ta MACD signals feed vectorbt SignalFactory strategies"),
+    ("darts", "TimeSeries", "pandas", "DataFrame", "consumes", "darts TimeSeries built from pandas DataFrames via from_dataframe"),
+    ("darts", "ForecastingModel", "statsmodels", "OLS", "alternative_to", "darts ML forecasting vs statsmodels econometric regression"),
+    ("darts", "ForecastingModel", "pymc", "Model", "alternative_to", "darts deep/ML forecasting vs pymc Bayesian forecasting"),
+    ("darts", "TimeSeries", "yfinance", "Ticker", "feeds", "yfinance history feeds darts TimeSeries forecasting"),
 ]
 
 

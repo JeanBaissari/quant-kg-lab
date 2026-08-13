@@ -412,8 +412,92 @@
       "source": "mplfinance::_get_valid_plot_types()",
       "target": "pandas::DataFrame",
       "relation": "consumes"
+    },
+    {
+      "bridge": "catboost.CatBoostClassifier -> scikit-learn.Pipeline",
+      "status": "RESOLVED",
+      "source": "catboost::CatBoostClassifier",
+      "target": "scikit-learn::Pipeline",
+      "relation": "compatible_with"
+    },
+    {
+      "bridge": "catboost.CatBoostClassifier -> xgboost.XGBClassifier",
+      "status": "RESOLVED",
+      "source": "catboost::CatBoostClassifier",
+      "target": "xgboost::XGBClassifier",
+      "relation": "alternative_to"
+    },
+    {
+      "bridge": "catboost.CatBoostClassifier -> lightgbm.LGBMClassifier",
+      "status": "RESOLVED",
+      "source": "catboost::CatBoostClassifier",
+      "target": "lightgbm::LGBMClassifier",
+      "relation": "alternative_to"
+    },
+    {
+      "bridge": "catboost.Pool -> shap.Explainer",
+      "status": "RESOLVED",
+      "source": "catboost::Pool",
+      "target": "shap::Explainer",
+      "relation": "explains"
+    },
+    {
+      "bridge": "catboost.CatBoostClassifier -> optuna.Study",
+      "status": "RESOLVED",
+      "source": "catboost::CatBoostClassifier",
+      "target": "optuna::Study",
+      "relation": "optimized_by"
+    },
+    {
+      "bridge": "ta.add_all_ta_features -> pandas.DataFrame",
+      "status": "RESOLVED",
+      "source": "ta::add_all_ta_features()",
+      "target": "pandas::DataFrame",
+      "relation": "consumes"
+    },
+    {
+      "bridge": "ta.RSIIndicator -> ta-lib.RSI",
+      "status": "RESOLVED",
+      "source": "ta::RSIIndicator",
+      "target": "ta-lib::__pyx_pw_5talib_7_ta_lib_287RSI()",
+      "relation": "alternative_to"
+    },
+    {
+      "bridge": "ta.MACD -> vectorbt.SignalFactory",
+      "status": "RESOLVED",
+      "source": "ta::MACD",
+      "target": "vectorbt::SignalFactory",
+      "relation": "feeds"
+    },
+    {
+      "bridge": "darts.TimeSeries -> pandas.DataFrame",
+      "status": "RESOLVED",
+      "source": "darts::TimeSeries",
+      "target": "pandas::DataFrame",
+      "relation": "consumes"
+    },
+    {
+      "bridge": "darts.ForecastingModel -> statsmodels.OLS",
+      "status": "RESOLVED",
+      "source": "darts::ForecastingModel",
+      "target": "statsmodels::OLS",
+      "relation": "alternative_to"
+    },
+    {
+      "bridge": "darts.ForecastingModel -> pymc.Model",
+      "status": "RESOLVED",
+      "source": "darts::ForecastingModel",
+      "target": "pymc::Model",
+      "relation": "alternative_to"
+    },
+    {
+      "bridge": "darts.TimeSeries -> yfinance.Ticker",
+      "status": "RESOLVED",
+      "source": "darts::TimeSeries",
+      "target": "yfinance::Ticker",
+      "relation": "feeds"
     }
   ],
-  "resolved": 59,
-  "attempted": 59
+  "resolved": 71,
+  "attempted": 71
 }
