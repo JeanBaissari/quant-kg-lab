@@ -9,6 +9,6 @@ Graph: `knowledge_graphs/yfinance/.graphify/graph.json` · GRAPH_SPEC §5 · gen
 | c1 real labels | PASS | distinct=52 non_singleton=46 default_labels=0 default_graph=0 coverage=100.0% |
 | c2 descriptions | PASS | described=591 describable=608 pct=97.2% |
 | c3 god nodes | PASS | top20=20 noise=0 |
-| c4 pin | FAIL | expected=93eb4c234acc7d0cf9d176e602b8443179546253 found=d7166e8cc60dca5ee9efe897b94efd1a25bbf2e0 (graph) |
+| c4 pin | PASS | expected=93eb4c234acc7d0cf9d176e602b8443179546253 found=93eb4c234acc7d0cf9d176e602b8443179546253 (graph) |
 | c5 audited | PASS | exists |
-| c6 api surface | PASS | no manifest (probe pending) |
+| c6 api surface | PASS | curated=0 unresolved=0 surface_coverage=100.0% (target 95.0%) |
