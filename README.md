@@ -56,7 +56,7 @@ noise-filter policy, and the graph quality gate.
 |---------|--------|---------------|
 | [pandas](https://github.com/pandas-dev/pandas) | Data frames, time series | 11,368 · 39,913 |
 | [scipy](https://github.com/scipy/scipy) | Stats, optimize, signal | 14,071 · 23,466 |
-| [numpy](https://github.com/numpy/numpy) | Arrays, linalg, random | 8,104 · 13,281 |
+| [numpy](https://github.com/numpy/numpy) | Arrays, linalg, random | 8,306 · 13,483 |
 | [scikit-learn](https://github.com/scikit-learn/scikit-learn) | Machine learning | 8,450 · 28,094 |
 | [xgboost](https://github.com/dmlc/xgboost) | Gradient boosting | 1,631 · 4,318 |
 | [vectorbt](https://github.com/polakowo/vectorbt) | Vectorized backtesting | 3,682 · 9,212 |

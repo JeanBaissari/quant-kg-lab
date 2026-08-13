@@ -1,0 +1,7 @@
+{
+  "library": "scikit-learn",
+  "symbols": [],
+  "exclusions": [
+    "mean_tweedie_deviance"
+  ]
+}

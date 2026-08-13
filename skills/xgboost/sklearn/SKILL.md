@@ -58,20 +58,20 @@ Extracted from XGBoost knowledge graph. Source: `python-package/xgboost/sklearn.
 
 ### Common Parameters
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `n_estimators` | int | 100 | Number of boosting rounds |
-| `max_depth` | int | 6 | Maximum tree depth |
-| `learning_rate` | float | 0.3 | Step size shrinkage (eta) |
-| `objective` | str | 'reg:squarederror' | Learning objective |
-| `booster` | str | 'gbtree' | Booster type: 'gbtree', 'gblinear', 'dart' | core.py:L1750 |
-| `eval_metric` | str/list | None | Metric(s) for evaluation |
-| `early_stopping_rounds` | int | None | Rounds without improvement before stopping |
-| `importance_type` | str | 'gain' | Feature importance metric: 'gain', 'weight', 'cover', 'total_gain', 'total_cover' |
-| `device` | str | 'cpu' | 'cpu', 'cuda', 'gpu' | — |
-| `enable_categorical` | bool | False | Enable categorical feature support |
-| `max_cat_to_onehot` | int | 4 | Max categories for one-hot encoding |
-| `verbosity` | int | 1 | 0 (silent), 1 (warning), 2 (info), 3 (debug) |
+| Parameter | Type | Default | Description | Source |
+|-----------|------|---------|-------------|--------|
+| `n_estimators` | int | 100 | Number of boosting rounds | `sklearn.py:L866` |
+| `max_depth` | int | 6 | Maximum tree depth | `sklearn.py:L866` |
+| `learning_rate` | float | 0.3 | Step size shrinkage (eta) | `sklearn.py:L866` |
+| `objective` | str | 'reg:squarederror' | Learning objective | `sklearn.py:L866` |
+| `booster` | str | 'gbtree' | Booster type: 'gbtree', 'gblinear', 'dart' | `core.py:L1750` |
+| `eval_metric` | str/list | None | Metric(s) for evaluation | `sklearn.py:L866` |
+| `early_stopping_rounds` | int | None | Rounds without improvement before stopping | `sklearn.py:L866` |
+| `importance_type` | str | 'gain' | Feature importance metric: 'gain', 'weight', 'cover', 'total_gain', 'total_cover' | `sklearn.py:L866` |
+| `device` | str | 'cpu' | 'cpu', 'cuda', 'gpu' | `sklearn.py:L866` |
+| `enable_categorical` | bool | False | Enable categorical feature support | `sklearn.py:L866` |
+| `max_cat_to_onehot` | int | 4 | Max categories for one-hot encoding | `sklearn.py:L866` |
+| `verbosity` | int | 1 | 0 (silent), 1 (warning), 2 (info), 3 (debug) | `sklearn.py:L866` |
 
 ## Common Patterns
 

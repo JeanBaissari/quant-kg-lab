@@ -56,7 +56,7 @@ ALL_BRIDGES = [
     ("pandas", "DataFrame", "statsmodels", "PandasData", "input_to", "statsmodels models consume pandas DataFrames via the formula/data layer"),
     ("alphalens", "performance.py", "pandas", "DataFrame", "input_to", "alphalens factor analysis consumes pandas price/factor DataFrames"),
     ("alphalens", "performance.py", "scikit-learn", "BaseEstimator", "feeds", "alphalens IC/quantile analytics validate sklearn-estimator factor models"),
-    ("alphalens", "tears.py", "pyfolio", "performance.py", "feeds", "alphalens tear sheets feed pyfolio portfolio-level reporting"),
+    ("alphalens", "tears.py", "pyfolio", "tears.py", "feeds", "alphalens tear sheets feed pyfolio tear-sheet reporting (performance.py module not retained in pyfolio graph)"),
     ("arch", "ARCHModel", "statsmodels", "OLS", "feeds", "arch volatility forecasts feed statsmodels regression/risk models"),
     ("arch", "ADF", "scipy", "stats", "powered_by", "arch unit-root tests rely on scipy.stats distributions"),
     ("pandas", "DataFrame", "arch", "ARCHModel", "input_to", "arch models consume pandas Series/DataFrames"),

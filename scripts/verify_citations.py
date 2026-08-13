@@ -22,6 +22,9 @@ import sys, re, pathlib, json
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 CITE_RE = re.compile(r"`([A-Za-z0-9_./-]+\.(?:py|c)(?::L?\d+)?)`")
+# unbackticked file:line spans inside QR rows (ta-lib `_ta_lib.c:L26643`, sklearn
+# `decomposition/_fastica.py:L1`, …) — same shape, no backticks (QKG_033)
+ANY_CITE_RE = re.compile(r"([A-Za-z0-9_./-]+\.(?:py|c)(?::L?\d+)?)")
 SKIP = re.compile(r"^(https?://|docs/|scripts/|tests/|tools/|knowledge_graphs/)")
 PKG_OF = {"scikit-learn": "sklearn", "ta-lib": "talib", "xgboost": "xgboost",
           "lightgbm": "lightgbm", "statsmodels": "statsmodels"}
@@ -52,6 +55,29 @@ def manifest_labels(lib):
     m = json.load(open(p))
     return ({s["label"] for s in m.get("symbols", [])},
             set(m.get("exclusions", [])))
+
+
+def _strip_prefix(bare, lib):
+    """Strip a leading '<lib>/' or '<pkg>/' segment (citations are module-qualified;
+    graph source_file values are package-relative) + the legacy python-package/ prefix."""
+    if "/" in bare:
+        head = bare.split("/", 1)[0]
+        if head in NAME_OF or head == lib:
+            bare = bare.split("/", 1)[1]
+    if bare.startswith("python-package/"):
+        bare = "/".join(bare.split("/")[2:])
+    return bare
+
+
+def _file_cited(row, gsrc, lib):
+    """A QR row is file-cited when it carries a source-file span that resolves in the
+    owning graph — backticked or not (QKG_033: ta-lib/sklearn/optuna/xgboost/lightgbm
+    rows cite unbackticked `file:line`; vectorbt rows cite backticked `<lib>/file.py`)."""
+    for span in ANY_CITE_RE.findall(row):
+        bare = _strip_prefix(re.sub(r":L?\d+$", "", span), lib)
+        if bare in gsrc or any(sf.endswith("/" + bare) for sf in gsrc):
+            return True
+    return False
 
 
 def lib_for_path(path):
@@ -89,12 +115,7 @@ def check_complete(lib, labels, cur, excl):
                       or sym in cur or f"{sym}()" in cur
                       or sym in excl or f"{sym}()" in excl)
                 if not ok:
-                    cited = [f2 for f2 in CITE_RE.findall(line)]
-                    file_ok = any(
-                        re.sub(r":L?\d+$", "", f2) in gsrc
-                        or any(sf.endswith("/" + re.sub(r":L?\d+$", "", f2)) for sf in gsrc)
-                        for f2 in cited)
-                    if file_ok:
+                    if _file_cited(line, gsrc, lib):
                         continue
                     bad.append((str(p.relative_to(ROOT)), sym, cells[0]))
     return bad

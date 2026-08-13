@@ -60,44 +60,44 @@ Extracted from LightGBM knowledge graph. Source: `python-package/lightgbm/sklear
 
 ### Common Parameters
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `n_estimators` | int | 100 | Number of boosting rounds |
-| `num_leaves` | int | 31 | Maximum tree leaves (leaf-wise growth) |
-| `max_depth` | int | -1 | Max tree depth; -1 = no limit |
-| `learning_rate` | float | 0.1 | Step size shrinkage |
-| `objective` | str | 'regression' | Objective: 'regression', 'binary', 'multiclass', 'lambdarank' |
-| `boosting_type` | str | 'gbdt' | 'gbdt', 'dart', 'goss', 'rf' |
-| `metric` | str/list | '' | Metric: 'rmse', 'binary_logloss', 'auc', 'ndcg', etc. |
-| `num_iterations` | int | 100 | Alias for `n_estimators` (both work) |
-| `early_stopping_rounds` | int | 0 | Rounds without improvement; 0 = disabled |
-| `importance_type` | str | 'split' | 'split' (default) or 'gain' |
-| `device_type` | str | 'cpu' | 'cpu', 'cuda', 'gpu' |
-| `n_jobs` | int | -1 | Number of parallel threads; -1 = all cores |
-| `verbosity` | int | 1 | -1 (silent), 0 (warnings only), 1 (info), >1 (debug) |
-| `feature_fraction` | float | 1.0 | Column subsampling ratio (alias: `colsample_bytree`) |
-| `bagging_fraction` | float | 1.0 | Row subsampling ratio (alias: `subsample`) |
-| `bagging_freq` | int | 0 | Frequency for bagging; 0 = disabled |
-| `reg_alpha` | float | 0.0 | L1 regularization |
-| `reg_lambda` | float | 0.0 | L2 regularization |
-| `min_child_samples` | int | 20 | Minimum data in leaf (alias: `min_data_in_leaf`) |
-| `categorical_feature` | list | 'auto' | Categorical feature indices/names; 'auto' = infer |
-| `class_weight` | dict/str | None | Class weights for classifier; 'balanced' auto-computes |
+| Parameter | Type | Default | Description | Source |
+|-----------|------|---------|-------------|--------|
+| `n_estimators` | int | 100 | Number of boosting rounds | `sklearn.py:L575` |
+| `num_leaves` | int | 31 | Maximum tree leaves (leaf-wise growth) | `sklearn.py:L575` |
+| `max_depth` | int | -1 | Max tree depth; -1 = no limit | `sklearn.py:L575` |
+| `learning_rate` | float | 0.1 | Step size shrinkage | `sklearn.py:L575` |
+| `objective` | str | 'regression' | Objective: 'regression', 'binary', 'multiclass', 'lambdarank' | `sklearn.py:L575` |
+| `boosting_type` | str | 'gbdt' | 'gbdt', 'dart', 'goss', 'rf' | `sklearn.py:L575` |
+| `metric` | str/list | '' | Metric: 'rmse', 'binary_logloss', 'auc', 'ndcg', etc. | `sklearn.py:L575` |
+| `num_iterations` | int | 100 | Alias for `n_estimators` (both work) | `sklearn.py:L575` |
+| `early_stopping_rounds` | int | 0 | Rounds without improvement; 0 = disabled | `sklearn.py:L575` |
+| `importance_type` | str | 'split' | 'split' (default) or 'gain' | `sklearn.py:L575` |
+| `device_type` | str | 'cpu' | 'cpu', 'cuda', 'gpu' | `sklearn.py:L575` |
+| `n_jobs` | int | -1 | Number of parallel threads; -1 = all cores | `sklearn.py:L575` |
+| `verbosity` | int | 1 | -1 (silent), 0 (warnings only), 1 (info), >1 (debug) | `sklearn.py:L575` |
+| `feature_fraction` | float | 1.0 | Column subsampling ratio (alias: `colsample_bytree`) | `sklearn.py:L575` |
+| `bagging_fraction` | float | 1.0 | Row subsampling ratio (alias: `subsample`) | `sklearn.py:L575` |
+| `bagging_freq` | int | 0 | Frequency for bagging; 0 = disabled | `sklearn.py:L575` |
+| `reg_alpha` | float | 0.0 | L1 regularization | `sklearn.py:L575` |
+| `reg_lambda` | float | 0.0 | L2 regularization | `sklearn.py:L575` |
+| `min_child_samples` | int | 20 | Minimum data in leaf (alias: `min_data_in_leaf`) | `sklearn.py:L575` |
+| `categorical_feature` | list | 'auto' | Categorical feature indices/names; 'auto' = infer | `sklearn.py:L575` |
+| `class_weight` | dict/str | None | Class weights for classifier; 'balanced' auto-computes | `sklearn.py:L575` |
 
 ### Parameter Aliases
 
 | Primary | Alias | Graph Node |
 |---------|-------|-----------|
-| `n_estimators` | `num_iterations`, `n_estimators`, `num_round`, `num_trees` | — |
-| `learning_rate` | `eta`, `shrinkage_rate` | — |
-| `num_leaves` | `num_leaf` | — |
-| `feature_fraction` | `colsample_bytree` | — |
-| `bagging_fraction` | `subsample`, `sub_row` | — |
-| `bagging_freq` | `subsample_freq` | — |
-| `min_child_samples` | `min_data_in_leaf` | — |
-| `reg_alpha` | `lambda_l1` | — |
-| `reg_lambda` | `lambda_l2` | — |
-| `device_type` | `device`, `boosting` | — |
+| `n_estimators` | `num_iterations`, `n_estimators`, `num_round`, `num_trees` | `sklearn.py:L575` |
+| `learning_rate` | `eta`, `shrinkage_rate` | `sklearn.py:L575` |
+| `num_leaves` | `num_leaf` | `sklearn.py:L575` |
+| `feature_fraction` | `colsample_bytree` | `sklearn.py:L575` |
+| `bagging_fraction` | `subsample`, `sub_row` | `sklearn.py:L575` |
+| `bagging_freq` | `subsample_freq` | `sklearn.py:L575` |
+| `min_child_samples` | `min_data_in_leaf` | `sklearn.py:L575` |
+| `reg_alpha` | `lambda_l1` | `sklearn.py:L575` |
+| `reg_lambda` | `lambda_l2` | `sklearn.py:L575` |
+| `device_type` | `device`, `boosting` | `sklearn.py:L575` |
 
 ## Common Patterns
 

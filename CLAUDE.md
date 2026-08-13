@@ -52,8 +52,9 @@ python scripts/doc_audit.py [--ci|--write]     # lint docs against docs/_develop
 - `description` starts with **"Use when …"**.
 - Every `Quick Reference` row should cite a graph node (`source_file:line`) that resolves in
   `graph.json` — this is what makes a skill *verifiable*.
-- **Never** link a `references/*` file that doesn't exist. Generate it with
-  `scripts/extract_skill_refs.py <lib> <community> --out <dir>` or omit the section.
+- **Never** link a `references/*` file that doesn't exist. The `references/` convention was
+  retired in the QKG_011/012 skill-content wave — citation truth lives in Quick Reference rows
+  as `source_file:line` (verified by `scripts/verify_citations.py`), not in generated files.
 - `source_commit` in skill frontmatter MUST match `graphs.lock`.
 - Skills are **copy-in**, not a package — do not add packaging/publish config.
 

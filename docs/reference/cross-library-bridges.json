@@ -197,9 +197,11 @@
       "relation": "feeds"
     },
     {
-      "bridge": "alphalens.tears.py -> pyfolio.performance.py",
-      "status": "UNRESOLVED",
-      "missing": "performance.py"
+      "bridge": "alphalens.tears.py -> pyfolio.tears.py",
+      "status": "RESOLVED",
+      "source": "alphalens::tears.py",
+      "target": "pyfolio::tears.py",
+      "relation": "feeds"
     },
     {
       "bridge": "arch.ARCHModel -> statsmodels.OLS",
@@ -293,6 +295,6 @@
       "relation": "input_to"
     }
   ],
-  "resolved": 41,
+  "resolved": 42,
   "attempted": 42
 }

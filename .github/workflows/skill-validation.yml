@@ -32,8 +32,11 @@ jobs:
         run: python scripts/validate_skills.py --ci
       - name: Verify graph-node citations resolve (QKG_012)
         run: python scripts/verify_citations.py
-      - name: Verify numpy QR rows are complete (QKG_021/GRAPH_SPEC c6)
-        run: python scripts/verify_citations.py --require-complete numpy
+      - name: Verify QR rows are complete for every library (QKG_021/033, GRAPH_SPEC c6)
+        run: |
+          for lib in $(python3 -c "import json; print(' '.join(json.load(open('graphs.lock'))['libraries']))"); do
+            python scripts/verify_citations.py --require-complete "$lib"
+          done
       - if: always()
         uses: actions/upload-artifact@v4
         with:

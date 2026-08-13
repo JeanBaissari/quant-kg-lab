@@ -70,13 +70,13 @@ API importance. Full definitions: `docs/specs/GRAPH_SPEC.md` §5 and `docs/specs
 - [x] Provenance check: every cited graph node resolves in `graph.json` (QKG_012 — `verify_citations.py` gate, 264/0)
 - [x] CI installs all 10 libraries (11 incl. statsmodels); validation + provenance gate PRs; pin versions in frontmatter (QKG_008)
 
-## Phase 4 — Composable quant stack  ✅ (concept index pending)
+## Phase 4 — Composable quant stack  ✅
 
 - [x] `scripts/inject_cross_edges_v2.py` resolves bridges precisely + writes a `_cross_library` overlay graph
 - [x] Playbooks authored: `quant-full-pipeline`, `quant-factor-research`, `quant-ml-strategy` (+5 more, §7 anatomy)
 - [x] `docs/reference/unified-index.md` regenerated via `scripts/build_unified_index.py` (domain overlay)
-- [x] The 3 noise-only bridges re-resolved (ta-lib Cython wrappers, backtrader `DataBase`) — 19/19
-- [ ] Node-level concept index (unified-index v2) — drafted as QKG_017
+- [x] The 3 noise-only bridges re-resolved (ta-lib Cython wrappers, backtrader `DataBase`) — 19/19 → 42/42
+- [x] Node-level concept index (unified-index v2) — QKG_017, live
 
 ## Phase 5 — Docs standardization & the before/after narrative  ✅
 

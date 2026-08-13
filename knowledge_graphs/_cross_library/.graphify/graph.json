@@ -199,6 +199,18 @@
       "source_file": "performance.py"
     },
     {
+      "id": "alphalens::tears",
+      "label": "tears.py",
+      "library": "alphalens",
+      "source_file": "tears.py"
+    },
+    {
+      "id": "pyfolio::tears",
+      "label": "tears.py",
+      "library": "pyfolio",
+      "source_file": "tears.py"
+    },
+    {
       "id": "arch::univariate_base_archmodel",
       "label": "ARCHModel",
       "library": "arch",
@@ -443,6 +455,13 @@
       "relation": "feeds",
       "confidence": "CURATED",
       "description": "alphalens IC/quantile analytics validate sklearn-estimator factor models"
+    },
+    {
+      "source": "alphalens::tears",
+      "target": "pyfolio::tears",
+      "relation": "feeds",
+      "confidence": "CURATED",
+      "description": "alphalens tear sheets feed pyfolio tear-sheet reporting (performance.py module not retained in pyfolio graph)"
     },
     {
       "source": "arch::univariate_base_archmodel",
