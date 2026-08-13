@@ -381,6 +381,25 @@
         }
       ],
       "payload_note": "Write exactly ONE semantic sentence per node \u2014 a functional summary a quant user can act on. Never produce code; never quote source."
+    },
+    "yfinance": {
+      "emphasis": "yfinance is a Yahoo Finance data-download client: Ticker (ticker.py \u2014 history/fast_info/analysis/calendar/earnings/financials/options/splits/actions/get_info), Tickers (multi-ticker batch), Screener (screener/screener.py \u2014 market screeners), search (search.py \u2014 symbol search), domain (sector/industry/market classification), scrapers (history/quote/analysis/fundamentals \u2014 the HTTP layer), data.py (download() multi-symbol history), shared.py, utils, live.py. Describe each function's client role: what data it fetches and its key parameters. The pricing_pb2.py module is generated protobuf \u2014 describe it briefly as the protobuf message layer.",
+      "glossary": "Ticker, history, fast_info, download, screener, search, fundamentals, options, dividends, splits, sector, industry, Yahoo Finance API",
+      "exemplars": [
+        {
+          "name": "Ticker (ticker.py)",
+          "desc": "yfinance Ticker class: per-symbol client \u2014 .history() OHLCV bars, .fast_info for quote snapshot, .info/.get_info() fundamentals, .earnings/.calendar/.analysis."
+        },
+        {
+          "name": "download (data.py)",
+          "desc": "yfinance download(tickers, period/interval): batch history fetch across symbols into one DataFrame (MultiIndex columns)."
+        },
+        {
+          "name": "history (scrapers/history.py)",
+          "desc": "yfinance history scraper: fetches OHLCV price history with period/interval/start/end parameters, returns a DataFrame."
+        }
+      ],
+      "payload_note": "Write exactly ONE semantic sentence per node \u2014 a functional summary a quant user can act on. Never produce code; never quote source."
     }
   }
 }
