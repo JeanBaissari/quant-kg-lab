@@ -7,7 +7,7 @@
 **Library**: ta
 **Domain**: Quant Tools
 **Source**: bukosabino/ta@a890410710a6
-**Graph**: 537 nodes · 1207 edges
+**Graph**: 538 nodes · 1208 edges
 **Last Verified**: 2026-08-13
 
 ## Overview
@@ -18,10 +18,11 @@ Hub for the **ta** library (Quant Tools tier). The per-module API reference live
 
 | Skill | Module | Covers |
 |-------|--------|--------|
+| [`ta`](../../../skills/ta/SKILL.md) | (router) | computing technical indicators with ta — pure-Python pandas-native indicators (t |
 
 ## Graph provenance
 
-- **God nodes** (public-API hubs, noise-filtered): `IndicatorMixin` (259), `IndicatorMixin` (43), `trend.py` (43), `momentum.py` (30), `volatility.py` (27), `BollingerBands` (27)
+- **God nodes** (public-API hubs, noise-filtered): `IndicatorMixin` (259), `trend.py` (44), `IndicatorMixin` (43), `momentum.py` (30), `volatility.py` (27), `BollingerBands` (27)
 - **Communities**: 42
 - **Edge audit**: [edge-audit-ta.md](../../reference/edge-audits/edge-audit-ta.md)
 - **Rebuild**: `scripts/rebuild_graph.sh ta`

@@ -23,7 +23,7 @@ DOMAIN = {
     "ML & Optimization": ["scikit-learn", "xgboost", "lightgbm", "optuna", "cvxpy", "imbalanced-learn", "catboost"],
     "Quant Tools": ["vectorbt", "backtrader", "ta-lib", "pyportfolioopt", "riskfolio",
                     "alphalens", "pyfolio", "empyrical", "quantstats", "mplfinance", "ta"],
-    "Statistical Models": ["arch"],
+    "Statistical Models": ["arch", "darts"],
     "Explainability": ["shap"],
     "Bayesian Modelling": ["pymc"],
 }

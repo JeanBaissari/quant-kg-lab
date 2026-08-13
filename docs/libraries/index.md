@@ -53,6 +53,7 @@ Per-library hubs, grouped by tier. Each hub indexes that library's skills, graph
 ## Statistical Models
 
 - [arch](arch/index.md) — bashtage/arch
+- [darts](darts/index.md) — unit8co/darts
 
 ## Workflows
 

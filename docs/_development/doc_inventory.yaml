@@ -107,6 +107,10 @@ docs:
   type: Generated
   status: generated
   last_verified: '2026-08-13'
+- path: docs/libraries/darts/index.md
+  type: Generated
+  status: generated
+  last_verified: '2026-08-13'
 - path: docs/libraries/empyrical/index.md
   type: Generated
   status: generated
@@ -267,6 +271,10 @@ docs:
   type: Generated
   status: generated
   last_verified: ''
+- path: docs/reference/api-surface/ta.md
+  type: Generated
+  status: generated
+  last_verified: ''
 - path: docs/reference/api-surface/yfinance.md
   type: Generated
   status: generated
@@ -288,6 +296,10 @@ docs:
   status: generated
   last_verified: ''
 - path: docs/reference/edge-audits/edge-audit-cvxpy.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/edge-audits/edge-audit-darts.md
   type: Generated
   status: generated
   last_verified: ''
@@ -396,6 +408,10 @@ docs:
   status: generated
   last_verified: ''
 - path: docs/reference/quality-gate/gate-cvxpy.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/quality-gate/gate-darts.md
   type: Generated
   status: generated
   last_verified: ''
