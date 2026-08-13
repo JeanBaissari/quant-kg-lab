@@ -20,7 +20,7 @@ LOCK = json.load(open(ROOT / "graphs.lock"))["libraries"]
 
 DOMAIN = {
     "Foundation": ["numpy", "scipy", "pandas", "statsmodels", "polars", "yfinance"],
-    "ML & Optimization": ["scikit-learn", "xgboost", "lightgbm", "optuna", "cvxpy"],
+    "ML & Optimization": ["scikit-learn", "xgboost", "lightgbm", "optuna", "cvxpy", "imbalanced-learn"],
     "Quant Tools": ["vectorbt", "backtrader", "ta-lib", "pyportfolioopt", "riskfolio",
                     "alphalens", "pyfolio", "empyrical", "quantstats"],
     "Statistical Models": ["arch"],

@@ -18,6 +18,9 @@ Hub for the **yfinance** library (Foundation tier). The per-module API reference
 
 | Skill | Module | Covers |
 |-------|--------|--------|
+| [`yfinance`](../../../skills/yfinance/SKILL.md) | (router) | working with yfinance — the market-data entry point. Router indexing the yfinanc |
+| [`yfinance-download`](../../../skills/yfinance/download/SKILL.md) | `yfinance.download` | fetching multi-symbol market data with yfinance |
+| [`yfinance-ticker`](../../../skills/yfinance/ticker/SKILL.md) | `yfinance.ticker` | fetching per-symbol market data with yfinance |
 
 ## Graph provenance
 
