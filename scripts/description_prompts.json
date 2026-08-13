@@ -343,6 +343,25 @@
           "desc": "polars expression constructor: pl.col('name') selects a column into an expression pipeline."
         }
       ]
+    },
+    "empyrical": {
+      "emphasis": "empyrical is a performance-metrics library (originally from the Quantopian ecosystem): portfolio/strategy performance statistics computed from returns series \u2014 annual_return, annual_volatility, sharpe_ratio, sortino_ratio, omega_ratio, calmar_ratio, max_drawdown, alpha/beta vs a benchmark, downside_risk, tail_ratio, information_ratio (IC/IR), stability, perf_attrib decomposition. Modules: stats.py (the metric functions), perf_attrib.py (factor attribution), periods.py (annualization factors), utils.py (helpers), deprecate.py. It is pure Python with no I/O \u2014 describe each metric's semantics and its inputs.",
+      "glossary": "Sharpe ratio, Sortino ratio, max drawdown, alpha, beta, information ratio, downside risk, annualization, perf attrib, factor exposure",
+      "exemplars": [
+        {
+          "name": "sharpe_ratio (stats.py)",
+          "desc": "empyrical sharpe_ratio(returns, risk_free=0, period='daily', annualization=None): computes the annualized Sharpe ratio of a returns series."
+        },
+        {
+          "name": "max_drawdown (stats.py)",
+          "desc": "empyrical max_drawdown(returns): returns the largest peak-to-trough drawdown as a positive fraction."
+        },
+        {
+          "name": "alpha_beta (stats.py)",
+          "desc": "empyrical alpha_beta(returns, factor_returns): regresses returns on a benchmark factor series and returns (alpha, beta)."
+        }
+      ],
+      "payload_note": "Write exactly ONE semantic sentence per node \u2014 a functional summary a quant user can act on. Never produce code; never quote source."
     }
   }
 }
