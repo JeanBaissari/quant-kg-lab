@@ -542,6 +542,42 @@
       "meta_warn": [],
       "provenance": []
     },
+    "skills/quantstats/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [
+        "graph meta: community_count mismatch \u2014 graph has 51, skill claims 48"
+      ],
+      "provenance": []
+    },
+    "skills/quantstats/plots/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [
+        "graph meta: community_count mismatch \u2014 graph has 51, skill claims 48"
+      ],
+      "provenance": []
+    },
+    "skills/quantstats/reports/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [
+        "graph meta: community_count mismatch \u2014 graph has 51, skill claims 48"
+      ],
+      "provenance": []
+    },
+    "skills/quantstats/stats/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [
+        "graph meta: community_count mismatch \u2014 graph has 51, skill claims 48"
+      ],
+      "provenance": []
+    },
     "skills/riskfolio/SKILL.md": {
       "lint": [],
       "api_fail": [],

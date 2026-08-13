@@ -211,6 +211,10 @@ docs:
   type: Generated
   status: generated
   last_verified: ''
+- path: docs/reference/api-surface/quantstats.md
+  type: Generated
+  status: generated
+  last_verified: ''
 - path: docs/reference/api-surface/riskfolio.md
   type: Generated
   status: generated

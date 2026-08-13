@@ -34,6 +34,7 @@
 | polars | — | 5296 · 16925 | 5 | [`polars`](../../skills/polars/SKILL.md) |
 | pyfolio | — | 305 · 361 | 2 | [`pyfolio`](../../skills/pyfolio/SKILL.md) |
 | pyportfolioopt | — | 342 · 512 | 4 | [`pyportfolioopt`](../../skills/pyportfolioopt/SKILL.md) |
+| quantstats | — | 393 · 531 | 3 | [`quantstats`](../../skills/quantstats/SKILL.md) |
 | riskfolio | — | 426 · 599 | 3 | [`riskfolio`](../../skills/riskfolio/SKILL.md) |
 | shap | — | 1277 · 1752 | 3 | [`shap`](../../skills/shap/SKILL.md) |
 
@@ -161,6 +162,12 @@
 - [`pyportfolioopt-efficient-frontier`](../../skills/pyportfolioopt/efficient_frontier/SKILL.md) — Use when optimizing a portfolio with PyPortfolioOpt — mean-variance EfficientFrontier, max_sharpe, min_volatility, efficient_return/risk, and weight cleaning.
 - [`pyportfolioopt-expected-returns`](../../skills/pyportfolioopt/expected_returns/SKILL.md) — Use when estimating expected returns with PyPortfolioOpt — mean_historical_return, capm_return, return_model, and returns_from_prices.
 - [`pyportfolioopt-risk-models`](../../skills/pyportfolioopt/risk_models/SKILL.md) — Use when estimating a covariance/risk model with PyPortfolioOpt — sample_cov, shrunk covariance (Ledoit-Wolf), risk_matrix, and matrix repair.
+
+### quantstats
+- [`quantstats`](../../skills/quantstats/SKILL.md) *(router)* — Use when working with quantstats — the portfolio-analytics entry point. Router indexing the quantstats sub-skills; load the sub-skill for the layer you need.
+- [`quantstats-plots`](../../skills/quantstats/plots/SKILL.md) — Use when plotting portfolio analytics with quantstats — returns/drawdown/rolling/heatmap/distribution plots, the plotting wrappers, and montecarlo simulations.
+- [`quantstats-reports`](../../skills/quantstats/reports/SKILL.md) — Use when generating quantstats HTML tear-sheet reports — metrics()/full()/basic()/html()/plots(), benchmark preparation, and report embedding.
+- [`quantstats-stats`](../../skills/quantstats/stats/SKILL.md) — Use when computing portfolio analytics metrics with quantstats — sharpe/sortino/cagr/max_drawdown/VaR/CVaR/kelly/ulcer/win-rate and the extended risk-metric family.
 
 ### riskfolio
 - [`riskfolio`](../../skills/riskfolio/SKILL.md) *(router)* — Use when working with Riskfolio-Lib — the portfolio-optimization entry point. Router indexing the riskfolio sub-skills; load the sub-skill for the construction method you need.
