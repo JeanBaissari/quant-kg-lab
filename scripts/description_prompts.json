@@ -362,6 +362,25 @@
         }
       ],
       "payload_note": "Write exactly ONE semantic sentence per node \u2014 a functional summary a quant user can act on. Never produce code; never quote source."
+    },
+    "quantstats": {
+      "emphasis": "quantstats is a portfolio analytics + reporting library: statistics (stats.py \u2014 sharpe, sortino, cagr, max_drawdown, var, calmar, volatility, skew, kurtosis, win-rate, best/worst day), reports (reports.py \u2014 HTML/tear-sheet generation, metrics()/full()/html()), plots (plots.py \u2014 returns/drawdown/rolling plots, heatmaps, distribution), montecarlo (simulations, VaR/ES from simulated paths), utils (data helpers, benchmark mapping), _plotting (plotly/matplotlib backends). It depends on empyrical for core metrics. Describe each function's role in the analytics/reporting workflow \u2014 what it computes or renders and its key inputs.",
+      "glossary": "Sharpe, Sortino, CAGR, max drawdown, VaR, Calmar, tear sheet, HTML report, benchmark, montecarlo, heatmap, skew, kurtosis, win rate",
+      "exemplars": [
+        {
+          "name": "metrics (stats.py)",
+          "desc": "quantstats stats.metrics(returns, rf=0, display=True): computes the full metric table (returns, vol, sharpe, sortino, drawdown, var, skew, kurtosis...) as a DataFrame/HTML block."
+        },
+        {
+          "name": "full (reports.py)",
+          "desc": "quantstats reports.full(returns, benchmark): builds the complete HTML tear-sheet report (metrics + plots) and renders/saves it."
+        },
+        {
+          "name": "html (reports.py)",
+          "desc": "quantstats reports.html(returns, benchmark): returns the HTML string of the full tear-sheet report without rendering."
+        }
+      ],
+      "payload_note": "Write exactly ONE semantic sentence per node \u2014 a functional summary a quant user can act on. Never produce code; never quote source."
     }
   }
 }
