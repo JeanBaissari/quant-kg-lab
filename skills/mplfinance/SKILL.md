@@ -84,4 +84,4 @@ Graph: `knowledge_graphs/mplfinance/.graphify/graph.json` — 244 nodes · 317 e
 
 - [ ] `mpf.plot(df, type="candle", volume=True, savefig="t.png")` renders headless
 - [ ] `make_addplot(series)` overlays on the price panel
-- [ ] QR rows cite `plotting.py`/`addplot.py`/`_styles.py` resolvable in the mplfinance graph
+- [ ] QR rows cite `plotting.py`/`_styles.py`/`_utils.py` resolvable in the mplfinance graph
