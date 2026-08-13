@@ -1,6 +1,7 @@
 ---
 name: yfinance-download
-description: "Use when fetching multi-symbol market data with yfinance — download() batches, Tickers, search, screeners, and the shared YfData request layer."
+description: "Use when fetching multi-symbol market data with yfinance \u2014 download()\
+  \ batches, Tickers, search, screeners, and the shared YfData request layer."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -10,7 +11,7 @@ extraction_date: 2026-08-13
 graph:
   nodes: 823
   edges: 1584
-  community_count: 45
+  community_count: 52
   graph_hash: 897483b2af81c8f8
 tags:
 - yfinance

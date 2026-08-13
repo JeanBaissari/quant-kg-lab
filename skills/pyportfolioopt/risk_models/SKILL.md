@@ -1,6 +1,7 @@
 ---
 name: pyportfolioopt-risk-models
-description: "Use when estimating a covariance/risk model with PyPortfolioOpt — sample_cov, shrunk covariance (Ledoit-Wolf), risk_matrix, and matrix repair."
+description: "Use when estimating a covariance/risk model with PyPortfolioOpt \u2014\
+  \ sample_cov, shrunk covariance (Ledoit-Wolf), risk_matrix, and matrix repair."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -9,7 +10,7 @@ source_commit: a6638d2e06dae6f444fd022cfd4b3c528902a85b
 extraction_date: 2026-08-12
 graph:
   nodes: 342
-  edges: 512
+  edges: 522
   community_count: 16
   graph_hash: 50f7a3628b7218f1
 tags:

@@ -1,6 +1,8 @@
 ---
 name: mplfinance
-description: "Use when charting financial data with mplfinance — plot() with candle/OHLC/line/renko/pnf types, addplot overlays, styles, volume panels, and market colors."
+description: "Use when charting financial data with mplfinance \u2014 plot() with\
+  \ candle/OHLC/line/renko/pnf types, addplot overlays, styles, volume panels, and\
+  \ market colors."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -10,7 +12,7 @@ extraction_date: 2026-08-13
 graph:
   nodes: 244
   edges: 317
-  community_count: 12
+  community_count: 31
   graph_hash: 9e4084dc3d4e6492
 tags:
 - mplfinance

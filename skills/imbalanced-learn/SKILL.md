@@ -1,6 +1,8 @@
 ---
 name: imbalanced-learn
-description: "Use when working with imbalanced-learn — the class-imbalance entry point. Router indexing the imblearn sub-skills; load the sub-skill for the resampling layer you need."
+description: "Use when working with imbalanced-learn \u2014 the class-imbalance entry\
+  \ point. Router indexing the imblearn sub-skills; load the sub-skill for the resampling\
+  \ layer you need."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -10,7 +12,7 @@ extraction_date: 2026-08-13
 graph:
   nodes: 611
   edges: 865
-  community_count: 41
+  community_count: 43
   graph_hash: f6c2a46427904f14
 tags:
 - imbalanced-learn

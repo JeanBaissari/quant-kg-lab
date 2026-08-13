@@ -6,9 +6,9 @@ Graph: `knowledge_graphs/optuna/.graphify/graph.json` · GRAPH_SPEC §5 · gener
 
 | criterion | status | counts |
 |---|---|---|
-| c1 real labels | PASS | distinct=223 non_singleton=179 default_labels=0 default_graph=0 coverage=100.0% |
-| c2 descriptions | PASS | described=1128 describable=1323 pct=85.3% |
+| c1 real labels | PASS | distinct=223 non_singleton=181 default_labels=0 default_graph=0 coverage=100.0% |
+| c2 descriptions | PASS | described=1131 describable=1326 pct=85.3% |
 | c3 god nodes | PASS | top20=20 noise=0 |
 | c4 pin | PASS | expected=b6f2ea62fbe7fb09d0d1c75783c65dad098d9a06 found=b6f2ea62fbe7fb09d0d1c75783c65dad098d9a06 (graph) |
 | c5 audited | PASS | exists |
-| c6 api surface | PASS | no manifest (probe pending) |
+| c6 api surface | PASS | curated=3 unresolved=0 |

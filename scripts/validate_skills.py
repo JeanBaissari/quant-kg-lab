@@ -135,6 +135,47 @@ def all_installed_symbols(deep=False):
                 merged.setdefault(k, v)
     return merged
 
+
+# ------------------------------------------------------------------ curated
+_CURATED = {}
+def curated_symbols(lib):
+    """Curated-manifest labels (tools/curated/<lib>.json, ADR-0008): symbols the
+    graph cannot extract (Cython/C-only/lazy-loaded) but that ARE public API.
+    A claim resolving in the manifest is real — never an api_fail (QKG_050)."""
+    if lib in _CURATED:
+        return _CURATED[lib]
+    p = REPO_ROOT / "tools" / "curated" / f"{lib}.json"
+    syms = set()
+    if p.exists():
+        m = json.load(open(p))
+        for s in m.get("symbols", []):
+            lbl = s.get("label", "").rstrip("()")
+            if lbl:
+                syms.add(lbl)
+    _CURATED[lib] = syms
+    return syms
+
+
+# ------------------------------------------------------------- global universe
+_GLOBAL = None
+def global_universe():
+    """Every symbol visible anywhere in the ecosystem: all installed libraries'
+    deep symbol sets + every committed graph's node labels + every curated
+    manifest. Used to distinguish cross-library references (real, resolved
+    elsewhere) from hallucinations (resolve nowhere) — QKG_050."""
+    global _GLOBAL
+    if _GLOBAL is not None:
+        return _GLOBAL
+    merged = set()
+    for lib in LOCK:
+        deep = library_symbols(lib, deep=True)
+        if deep:
+            merged.update(deep)
+        merged.update(graph_node_labels(lib))
+        merged.update(curated_symbols(lib))
+    _GLOBAL = merged
+    return _GLOBAL
+
 # --------------------------------------------------------------- claim extract
 def strip_sections(text, headers):
     """Remove named `## <header>` sections (they cite OTHER libraries / internal nodes,
@@ -153,13 +194,40 @@ def strip_sections(text, headers):
     return "\n".join(out)
 
 def extract_claims(text):
+    """Classes/functions/source-files claimed by a skill's QR tables.
+
+    QKG_050: table-header-aware — rows inside parameter/alias/attribute tables
+    (headers like ``Parameter``/``Alias``/``Primary``/``Attribute``) are documented
+    API surface, NOT callable claims: ``n_estimators``, ``booster_`` and friends
+    must not be validated as functions against the live library.
+    """
     classes, functions, srcfiles = set(), set(), set()
-    for line in text.split("\n"):                                        # table col 1 (the API column)
+    # Strong param-table markers (QKG_050): a table whose header names one of these
+    # documents parameters/aliases/attributes, not callable API. ("Description" /
+    # "Graph Node" alone do NOT mark a table — they appear in every QR table.)
+    param_tables = {"parameter", "alias", "primary", "attribute", "default"}
+    # Cross-library comparison tables (e.g. "| LightGBM | XGBoost |") compare API
+    # surfaces; their rows are not own-library claims (QKG_050).
+    lib_names = set(LOCK) | {"sklearn", "pandas", "numpy", "scipy", "xgboost",
+                             "lightgbm", "optuna", "talib", "vectorbt", "backtrader"}
+    in_table, header_is_param = False, False
+    for line in text.split("\n"):
         if not line.lstrip().startswith("|"):
+            in_table, header_is_param = False, False
             continue
         cells = [c.strip() for c in line.strip().strip("|").split("|")]
-        if not cells or set(cells[0]) <= set("-: "):                     # skip separator rows
-            continue
+        if not cells or set(cells[0]) <= set("-: "):
+            continue                                     # separator row
+        if not in_table:
+            # first | row after non-table text = table header (unless it is a
+            # separator-only row, which was skipped above)
+            in_table = True
+            header_is_param = (any(c.lower() in param_tables for c in cells)
+                               or any(c.strip().lower() in lib_names for c in cells))
+            if header_is_param:
+                continue
+        if header_is_param:
+            continue                                     # param/alias/attribute rows
         m = re.match(r"`([A-Za-z_][A-Za-z0-9_.]*)`", cells[0])
         if not m:
             continue
@@ -415,18 +483,24 @@ def main():
             classes, functions, _ = extract_claims(api_text)
             own = library_symbols(lib)
             labels = graph_node_labels(lib)
-            if own is None and not labels:
+            curated = curated_symbols(lib)
+            if own is None and not labels and not curated:
                 r["api_warn"].append(f"{lib} not installed — API check skipped")
             else:
                 deep = library_symbols(lib, deep=True) or {}
                 mod_ok = module_importable(lib, parts[1])
                 installed = own is not None
+                universe = global_universe()
                 for c in sorted(classes):
-                    if (own and c in own) or in_graph_labels(labels, c):
+                    if (own and c in own) or in_graph_labels(labels, c) or c in curated:
                         continue
                     if not installed:
                         r["api_warn"].append(
                             f"class {c}: not found (library not installed, no graph node)")
+                    elif c in universe:
+                        r["api_warn"].append(
+                            f"class {c}: cross-library reference (resolved in another "
+                            "library/graph — not a hallucination)")
                     elif c in deep:
                         r["api_warn"].append(f"class {c}: internal/private (real, not public API)")
                     elif not mod_ok:
@@ -436,11 +510,15 @@ def main():
                         r["api_fail"].append(
                             f"class {c}: NOT FOUND — review (renamed/removed/hallucinated)")
                 for fn in sorted(functions):
-                    if (own and fn in own) or in_graph_labels(labels, fn):
+                    if (own and fn in own) or in_graph_labels(labels, fn) or fn in curated:
                         continue
                     if not installed:
                         r["api_warn"].append(
                             f"func {fn}: not found (library not installed, no graph node)")
+                    elif fn in universe:
+                        r["api_warn"].append(
+                            f"func {fn}: cross-library reference (resolved in another "
+                            "library/graph — not a hallucination)")
                     elif fn in deep:
                         r["api_warn"].append(f"func {fn}: internal/private (real, not public API)")
                     elif not mod_ok:

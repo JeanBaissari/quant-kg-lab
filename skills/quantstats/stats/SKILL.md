@@ -1,6 +1,8 @@
 ---
 name: quantstats-stats
-description: "Use when computing portfolio analytics metrics with quantstats — sharpe/sortino/cagr/max_drawdown/VaR/CVaR/kelly/ulcer/win-rate and the extended risk-metric family."
+description: "Use when computing portfolio analytics metrics with quantstats \u2014\
+  \ sharpe/sortino/cagr/max_drawdown/VaR/CVaR/kelly/ulcer/win-rate and the extended\
+  \ risk-metric family."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -10,7 +12,7 @@ extraction_date: 2026-08-13
 graph:
   nodes: 393
   edges: 531
-  community_count: 48
+  community_count: 51
   graph_hash: 98393f286b04d0d2
 tags:
 - quantstats

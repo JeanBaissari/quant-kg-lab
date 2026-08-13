@@ -1,6 +1,8 @@
 ---
 name: pyportfolioopt
-description: "Use when working with PyPortfolioOpt — the portfolio-optimization entry point. Router indexing the pypfopt sub-skills; load the sub-skill for the estimator you need."
+description: "Use when working with PyPortfolioOpt \u2014 the portfolio-optimization\
+  \ entry point. Router indexing the pypfopt sub-skills; load the sub-skill for the\
+  \ estimator you need."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -9,7 +11,7 @@ source_commit: a6638d2e06dae6f444fd022cfd4b3c528902a85b
 extraction_date: 2026-08-12
 graph:
   nodes: 342
-  edges: 512
+  edges: 522
   community_count: 16
   graph_hash: 50f7a3628b7218f1
 tags:

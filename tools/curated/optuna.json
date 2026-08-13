@@ -1,0 +1,21 @@
+{
+  "library": "optuna",
+  "symbols": [
+    {
+      "label": "LightGBMTunerCV",
+      "source_file": "integration/lightgbm.py",
+      "description": "optuna.integration LightGBMTunerCV: cross-validated LightGBM hyperparameter tuning via Optuna — sklearn-CV-compatible tuner over LightGBM datasets."
+    },
+    {
+      "label": "OptunaSearchCV",
+      "source_file": "integration/sklearn.py",
+      "description": "optuna.integration OptunaSearchCV: sklearn GridSearchCV-compatible hyperparameter search backed by an Optuna study."
+    },
+    {
+      "label": "TorchDistributedTrial",
+      "source_file": "integration/pytorch_distributed.py",
+      "description": "optuna.integration TorchDistributedTrial: distributed PyTorch trial wrapper synchronizing suggest_* calls across ranks."
+    }
+  ],
+  "exclusions": []
+}

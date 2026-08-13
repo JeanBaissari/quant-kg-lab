@@ -1,6 +1,7 @@
 ---
 name: pymc-sampling
-description: "Use when sampling PyMC models — pm.sample()/sample_posterior_predictive()/sample_prior_predictive(), NUTS/HMC step selection and tuning, backends, and arviz diagnostics (rhat/ess/summary)."
+description: "Use when sampling PyMC models \u2014 pm.sample()/sample_posterior_predictive()/sample_prior_predictive(),\
+  \ NUTS/HMC step selection and tuning, backends, and arviz diagnostics (rhat/ess/summary)."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -10,7 +11,7 @@ extraction_date: 2026-08-13
 graph:
   nodes: 4067
   edges: 11144
-  community_count: 135
+  community_count: 156
   graph_hash: f7ea65eb6c16067f
 tags:
 - pymc

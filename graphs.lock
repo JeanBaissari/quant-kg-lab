@@ -33,8 +33,8 @@
     "optuna": {
       "repo": "optuna/optuna",
       "commit": "b6f2ea62fbe7fb09d0d1c75783c65dad098d9a06",
-      "nodes": 2205,
-      "edges": 4010
+      "nodes": 2208,
+      "edges": 4013
     },
     "vectorbt": {
       "repo": "polakowo/vectorbt",

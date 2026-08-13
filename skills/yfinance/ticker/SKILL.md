@@ -1,6 +1,8 @@
 ---
 name: yfinance-ticker
-description: "Use when fetching per-symbol market data with yfinance — Ticker history, fast_info, fundamentals (income/financials/balance/cashflow), actions, options, holders, calendar, and the scrapers behind them."
+description: "Use when fetching per-symbol market data with yfinance \u2014 Ticker\
+  \ history, fast_info, fundamentals (income/financials/balance/cashflow), actions,\
+  \ options, holders, calendar, and the scrapers behind them."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -10,7 +12,7 @@ extraction_date: 2026-08-13
 graph:
   nodes: 823
   edges: 1584
-  community_count: 45
+  community_count: 52
   graph_hash: 897483b2af81c8f8
 tags:
 - yfinance

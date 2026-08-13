@@ -1,6 +1,8 @@
 ---
 name: pymc
-description: "Use when working with pymc — the Bayesian-modelling entry point. Router indexing the pymc sub-skills; load the sub-skill for the modelling stage you need."
+description: "Use when working with pymc \u2014 the Bayesian-modelling entry point.\
+  \ Router indexing the pymc sub-skills; load the sub-skill for the modelling stage\
+  \ you need."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -10,7 +12,7 @@ extraction_date: 2026-08-13
 graph:
   nodes: 4067
   edges: 11144
-  community_count: 135
+  community_count: 156
   graph_hash: f7ea65eb6c16067f
 tags:
 - pymc

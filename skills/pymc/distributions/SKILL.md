@@ -1,6 +1,8 @@
 ---
 name: pymc-distributions
-description: "Use when choosing PyMC prior distributions — continuous/discrete/multivariate families, timeseries priors (RandomWalk/AR/GARCH11), transforms, and distribution registration."
+description: "Use when choosing PyMC prior distributions \u2014 continuous/discrete/multivariate\
+  \ families, timeseries priors (RandomWalk/AR/GARCH11), transforms, and distribution\
+  \ registration."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -10,7 +12,7 @@ extraction_date: 2026-08-13
 graph:
   nodes: 4067
   edges: 11144
-  community_count: 135
+  community_count: 156
   graph_hash: f7ea65eb6c16067f
 tags:
 - pymc

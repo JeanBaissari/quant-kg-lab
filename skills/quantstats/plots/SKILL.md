@@ -1,6 +1,7 @@
 ---
 name: quantstats-plots
-description: "Use when plotting portfolio analytics with quantstats — returns/drawdown/rolling/heatmap/distribution plots, the plotting wrappers, and montecarlo simulations."
+description: "Use when plotting portfolio analytics with quantstats \u2014 returns/drawdown/rolling/heatmap/distribution\
+  \ plots, the plotting wrappers, and montecarlo simulations."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -10,7 +11,7 @@ extraction_date: 2026-08-13
 graph:
   nodes: 393
   edges: 531
-  community_count: 48
+  community_count: 51
   graph_hash: 98393f286b04d0d2
 tags:
 - quantstats

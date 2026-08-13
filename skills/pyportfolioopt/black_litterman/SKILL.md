@@ -1,6 +1,8 @@
 ---
 name: pyportfolioopt-black-litterman
-description: "Use when combining market-implied priors with investor views via the Black-Litterman model — BlackLittermanModel, market-implied returns, posterior weights."
+description: "Use when combining market-implied priors with investor views via the\
+  \ Black-Litterman model \u2014 BlackLittermanModel, market-implied returns, posterior\
+  \ weights."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -9,7 +11,7 @@ source_commit: a6638d2e06dae6f444fd022cfd4b3c528902a85b
 extraction_date: 2026-08-12
 graph:
   nodes: 342
-  edges: 512
+  edges: 522
   community_count: 16
   graph_hash: 50f7a3628b7218f1
 tags:

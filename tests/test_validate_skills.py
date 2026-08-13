@@ -41,6 +41,7 @@ STALEHASH_REL = "skills/numpy/stalehash/SKILL.md"
 DANGLING_REL = "skills/numpy/dangling/SKILL.md"
 BADCOMMIT_REL = "skills/numpy/badcommit/SKILL.md"
 HALLUCINATED_REL = "skills/numpy/linalg/SKILL.md"
+PARAMS_REL = "skills/numpy/params/SKILL.md"
 ROUTER_REL = "skills/numpy/SKILL.md"
 PLAYBOOK_REL = "skills/quant-patterns/bridge/SKILL.md"
 
@@ -173,14 +174,34 @@ class TestModuleScopedApi(ValidatorTestCase):
         self.assertIn("func ictus_flip", joined, joined)
         self.assertIn("class QuandaryRegression", joined, joined)
 
-    def test_cross_library_symbol_no_longer_passes(self):
+    def test_cross_library_symbol_is_warn_not_fail(self):
+        # QKG_050 contract: a class that resolves in ANOTHER library's graph (or any
+        # installed library) is a documented cross-library reference — it must be a
+        # visible warning, not an api_fail. Only symbols that resolve NOWHERE are
+        # hallucinations (test_hallucinated_api_fails above).
         if not NUMPY_INSTALLED:
             self.skipTest("numpy not installed — fixture requires an installed library")
         self.run_main()
-        api_fail = self.report_for(HALLUCINATED_REL)["api_fail"]
-        # StandardScaler lives in scikit-learn, not numpy: under the module-scoped
-        # universe it must fail instead of passing via another installed library.
-        self.assertTrue(any("class StandardScaler" in m for m in api_fail), api_fail)
+        report = self.report_for(HALLUCINATED_REL)
+        joined_fail = "\n".join(report["api_fail"])
+        joined_warn = "\n".join(report["api_warn"])
+        # StandardScaler lives in scikit-learn's graph → cross-library reference (warn)
+        self.assertTrue(any("class StandardScaler" in m for m in report["api_warn"]),
+                        joined_warn)
+        self.assertNotIn("class StandardScaler", joined_fail, joined_fail)
+
+    def test_parameter_table_rows_are_not_api_claims(self):
+        # QKG_050: parameter/alias tables document surface, not callables — rows
+        # like `n_estimators` / `learning_rate` must never become api_fails.
+        if not NUMPY_INSTALLED:
+            self.skipTest("numpy not installed — fixture requires an installed library")
+        self.run_main("--strict")
+        report = self.report_for(PARAMS_REL)
+        joined = "\n".join(report["api_fail"])
+        self.assertNotIn("n_estimators", joined, joined)
+        self.assertNotIn("max_depth", joined, joined)
+        self.assertNotIn("learning_rate", joined, joined)
+        self.assertEqual(report["api_fail"], [], report["api_fail"])
 
 
 class TestExitCodes(ValidatorTestCase):

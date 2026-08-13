@@ -1,6 +1,8 @@
 ---
 name: pyportfolioopt-efficient-frontier
-description: "Use when optimizing a portfolio with PyPortfolioOpt — mean-variance EfficientFrontier, max_sharpe, min_volatility, efficient_return/risk, and weight cleaning."
+description: "Use when optimizing a portfolio with PyPortfolioOpt \u2014 mean-variance\
+  \ EfficientFrontier, max_sharpe, min_volatility, efficient_return/risk, and weight\
+  \ cleaning."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -9,7 +11,7 @@ source_commit: a6638d2e06dae6f444fd022cfd4b3c528902a85b
 extraction_date: 2026-08-12
 graph:
   nodes: 342
-  edges: 512
+  edges: 522
   community_count: 16
   graph_hash: 50f7a3628b7218f1
 tags:

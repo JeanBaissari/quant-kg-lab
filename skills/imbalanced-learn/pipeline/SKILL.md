@@ -1,6 +1,8 @@
 ---
 name: imbalanced-learn-pipeline
-description: "Use when building sampling-aware pipelines with imblearn — Pipeline/make_pipeline that hold samplers between transformers and estimators, and the imbalanced scoring/metrics surface."
+description: "Use when building sampling-aware pipelines with imblearn \u2014 Pipeline/make_pipeline\
+  \ that hold samplers between transformers and estimators, and the imbalanced scoring/metrics\
+  \ surface."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -10,7 +12,7 @@ extraction_date: 2026-08-13
 graph:
   nodes: 611
   edges: 865
-  community_count: 41
+  community_count: 43
   graph_hash: f6c2a46427904f14
 tags:
 - imbalanced-learn

@@ -1,6 +1,7 @@
 ---
 name: quantstats-reports
-description: "Use when generating quantstats HTML tear-sheet reports — metrics()/full()/basic()/html()/plots(), benchmark preparation, and report embedding."
+description: "Use when generating quantstats HTML tear-sheet reports \u2014 metrics()/full()/basic()/html()/plots(),\
+  \ benchmark preparation, and report embedding."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -10,7 +11,7 @@ extraction_date: 2026-08-13
 graph:
   nodes: 393
   edges: 531
-  community_count: 48
+  community_count: 51
   graph_hash: 98393f286b04d0d2
 tags:
 - quantstats

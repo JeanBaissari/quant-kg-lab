@@ -20,7 +20,7 @@
 | pandas | Foundation Layer | 11368 · 39913 | 3 | [`pandas`](../../skills/pandas/SKILL.md) |
 | scipy | Foundation Layer | 14071 · 23466 | 3 | [`scipy`](../../skills/scipy/SKILL.md) |
 | lightgbm | ML & Optimization | 593 · 2029 | 2 | [`lightgbm`](../../skills/lightgbm/SKILL.md) |
-| optuna | ML & Optimization | 2205 · 4010 | 7 | [`optuna`](../../skills/optuna/SKILL.md) |
+| optuna | ML & Optimization | 2208 · 4013 | 7 | [`optuna`](../../skills/optuna/SKILL.md) |
 | scikit-learn | ML & Optimization | 8450 · 28094 | 16 | [`scikit-learn`](../../skills/scikit-learn/SKILL.md) |
 | xgboost | ML & Optimization | 1631 · 4318 | 2 | [`xgboost`](../../skills/xgboost/SKILL.md) |
 | backtrader | Quant Tools | 2680 · 4964 | 2 | [`backtrader`](../../skills/backtrader/SKILL.md) |

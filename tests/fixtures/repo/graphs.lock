@@ -1,10 +1,16 @@
 {
-  "_comment": "Fixture graphs.lock for tests/test_validate_skills.py — pinned to the real numpy commit so the source_commit check has a ground truth.",
+  "_comment": "Fixture graphs.lock for tests/test_validate_skills.py \u2014 pinned to the real numpy commit so the source_commit check has a ground truth.",
   "libraries": {
     "numpy": {
       "repo": "numpy/numpy",
       "commit": "ab2199763cb17878cd8f34fcbc97106c5397f922",
       "nodes": 3,
+      "edges": 0
+    },
+    "scikit-learn": {
+      "repo": "scikit-learn/scikit-learn",
+      "commit": "6f8b95aa2234102acc3804fc8c7a3e6bd0506bfb",
+      "nodes": 0,
       "edges": 0
     }
   }

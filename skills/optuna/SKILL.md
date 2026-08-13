@@ -10,10 +10,10 @@ source_repo: optuna/optuna
 source_commit: b6f2ea62fbe7fb09d0d1c75783c65dad098d9a06
 extraction_date: 2026-07-29
 graph:
-  nodes: 2205
-  edges: 4010
+  nodes: 2208
+  edges: 4013
   community_count: 226
-  graph_hash: fa73620b99133289
+  graph_hash: f183610fc15fb948
 tags:
 - optuna
 - hyperparameter-optimization

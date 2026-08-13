@@ -1,6 +1,7 @@
 ---
 name: cvxpy-cone
-description: "Use when working with cvxpy constraints — equality/inequality, second-order, exponential, power and PSD cones that make a problem DCP-solvable."
+description: "Use when working with cvxpy constraints \u2014 equality/inequality,\
+  \ second-order, exponential, power and PSD cones that make a problem DCP-solvable."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -8,8 +9,8 @@ source_repo: cvxpy/cvxpy
 source_commit: e3b50dccf808e52e36f7b134b710e0e245742cc0
 extraction_date: 2026-08-12
 graph:
-  nodes: 6379
-  edges: 16514
+  nodes: 6380
+  edges: 16515
   community_count: 297
   graph_hash: 844b4634a60894f8
 tags:

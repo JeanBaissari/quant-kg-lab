@@ -1,6 +1,8 @@
 ---
 name: yfinance
-description: "Use when working with yfinance — the market-data entry point. Router indexing the yfinance sub-skills; load the sub-skill for the fetch pattern you need."
+description: "Use when working with yfinance \u2014 the market-data entry point. Router\
+  \ indexing the yfinance sub-skills; load the sub-skill for the fetch pattern you\
+  \ need."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -10,7 +12,7 @@ extraction_date: 2026-08-13
 graph:
   nodes: 823
   edges: 1584
-  community_count: 45
+  community_count: 52
   graph_hash: 897483b2af81c8f8
 tags:
 - yfinance

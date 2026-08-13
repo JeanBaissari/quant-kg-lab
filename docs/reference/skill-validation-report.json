@@ -88,10 +88,7 @@
       "lint": [],
       "api_fail": [],
       "api_warn": [],
-      "meta_warn": [
-        "graph meta: nodes mismatch \u2014 graph has 6380, skill claims 6379",
-        "graph meta: edges mismatch \u2014 graph has 16515, skill claims 16514"
-      ],
+      "meta_warn": [],
       "provenance": []
     },
     "skills/cvxpy/atoms/SKILL.md": {
@@ -107,30 +104,21 @@
       "api_warn": [
         "class PowCone: not found (library not installed, no graph node)"
       ],
-      "meta_warn": [
-        "graph meta: nodes mismatch \u2014 graph has 6380, skill claims 6379",
-        "graph meta: edges mismatch \u2014 graph has 16515, skill claims 16514"
-      ],
+      "meta_warn": [],
       "provenance": []
     },
     "skills/cvxpy/core/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
-      "meta_warn": [
-        "graph meta: nodes mismatch \u2014 graph has 6380, skill claims 6379",
-        "graph meta: edges mismatch \u2014 graph has 16515, skill claims 16514"
-      ],
+      "meta_warn": [],
       "provenance": []
     },
     "skills/cvxpy/problems/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
-      "meta_warn": [
-        "graph meta: nodes mismatch \u2014 graph has 6380, skill claims 6379",
-        "graph meta: edges mismatch \u2014 graph has 16515, skill claims 16514"
-      ],
+      "meta_warn": [],
       "provenance": []
     },
     "skills/cvxpy/solvers/SKILL.md": {
@@ -169,36 +157,28 @@
       "lint": [],
       "api_fail": [],
       "api_warn": [],
-      "meta_warn": [
-        "graph meta: community_count mismatch \u2014 graph has 43, skill claims 41"
-      ],
+      "meta_warn": [],
       "provenance": []
     },
     "skills/imbalanced-learn/ensemble/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
-      "meta_warn": [
-        "graph meta: community_count mismatch \u2014 graph has 43, skill claims 41"
-      ],
+      "meta_warn": [],
       "provenance": []
     },
     "skills/imbalanced-learn/pipeline/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
-      "meta_warn": [
-        "graph meta: community_count mismatch \u2014 graph has 43, skill claims 41"
-      ],
+      "meta_warn": [],
       "provenance": []
     },
     "skills/imbalanced-learn/samplers/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
-      "meta_warn": [
-        "graph meta: community_count mismatch \u2014 graph has 43, skill claims 41"
-      ],
+      "meta_warn": [],
       "provenance": []
     },
     "skills/lightgbm/SKILL.md": {
@@ -211,9 +191,7 @@
     "skills/lightgbm/core/SKILL.md": {
       "lint": [],
       "api_fail": [],
-      "api_warn": [
-        "func num_leaves: not found (library not installed, no graph node)"
-      ],
+      "api_warn": [],
       "meta_warn": [],
       "provenance": []
     },
@@ -223,41 +201,7 @@
       "api_warn": [
         "class GridSearchCV: not found (library not installed, no graph node)",
         "class XGBClassifier: not found (library not installed, no graph node)",
-        "class XGBRegressor: not found (library not installed, no graph node)",
-        "func bagging_fraction: not found (library not installed, no graph node)",
-        "func bagging_freq: not found (library not installed, no graph node)",
-        "func best_iteration_: not found (library not installed, no graph node)",
-        "func best_score_: not found (library not installed, no graph node)",
-        "func booster_: not found (library not installed, no graph node)",
-        "func boosting_type: not found (library not installed, no graph node)",
-        "func categorical_feature: not found (library not installed, no graph node)",
-        "func class_weight: not found (library not installed, no graph node)",
-        "func classes_: not found (library not installed, no graph node)",
-        "func device_type: not found (library not installed, no graph node)",
-        "func early_stopping_rounds: not found (library not installed, no graph node)",
-        "func evals_result_: not found (library not installed, no graph node)",
-        "func feature_fraction: not found (library not installed, no graph node)",
-        "func feature_importances_: not found (library not installed, no graph node)",
-        "func feature_name_: not found (library not installed, no graph node)",
-        "func feature_names_in_: not found (library not installed, no graph node)",
-        "func importance_type: not found (library not installed, no graph node)",
-        "func learning_rate: not found (library not installed, no graph node)",
-        "func max_depth: not found (library not installed, no graph node)",
-        "func metric: not found (library not installed, no graph node)",
-        "func min_child_samples: not found (library not installed, no graph node)",
-        "func n_classes_: not found (library not installed, no graph node)",
-        "func n_estimators: not found (library not installed, no graph node)",
-        "func n_estimators_: not found (library not installed, no graph node)",
-        "func n_features_in_: not found (library not installed, no graph node)",
-        "func n_iter_: not found (library not installed, no graph node)",
-        "func n_jobs: not found (library not installed, no graph node)",
-        "func num_iterations: not found (library not installed, no graph node)",
-        "func num_leaves: not found (library not installed, no graph node)",
-        "func objective: not found (library not installed, no graph node)",
-        "func objective_: not found (library not installed, no graph node)",
-        "func reg_alpha: not found (library not installed, no graph node)",
-        "func reg_lambda: not found (library not installed, no graph node)",
-        "func verbosity: not found (library not installed, no graph node)"
+        "class XGBRegressor: not found (library not installed, no graph node)"
       ],
       "meta_warn": [],
       "provenance": []
@@ -266,9 +210,7 @@
       "lint": [],
       "api_fail": [],
       "api_warn": [],
-      "meta_warn": [
-        "graph meta: community_count mismatch \u2014 graph has 31, skill claims 12"
-      ],
+      "meta_warn": [],
       "provenance": []
     },
     "skills/numpy/SKILL.md": {
@@ -317,10 +259,7 @@
       "lint": [],
       "api_fail": [],
       "api_warn": [
-        "class GridSearchCV: not found (library not installed, no graph node)",
-        "class LightGBMTunerCV: not found (library not installed, no graph node)",
-        "class OptunaSearchCV: not found (library not installed, no graph node)",
-        "class TorchDistributedTrial: not found (library not installed, no graph node)"
+        "class GridSearchCV: not found (library not installed, no graph node)"
       ],
       "meta_warn": [],
       "provenance": []
@@ -462,81 +401,63 @@
       "lint": [],
       "api_fail": [],
       "api_warn": [],
-      "meta_warn": [
-        "graph meta: community_count mismatch \u2014 graph has 156, skill claims 135"
-      ],
+      "meta_warn": [],
       "provenance": []
     },
     "skills/pymc/distributions/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
-      "meta_warn": [
-        "graph meta: community_count mismatch \u2014 graph has 156, skill claims 135"
-      ],
+      "meta_warn": [],
       "provenance": []
     },
     "skills/pymc/model/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
-      "meta_warn": [
-        "graph meta: community_count mismatch \u2014 graph has 156, skill claims 135"
-      ],
+      "meta_warn": [],
       "provenance": []
     },
     "skills/pymc/sampling/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
-      "meta_warn": [
-        "graph meta: community_count mismatch \u2014 graph has 156, skill claims 135"
-      ],
+      "meta_warn": [],
       "provenance": []
     },
     "skills/pyportfolioopt/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
-      "meta_warn": [
-        "graph meta: edges mismatch \u2014 graph has 522, skill claims 512"
-      ],
+      "meta_warn": [],
       "provenance": []
     },
     "skills/pyportfolioopt/black_litterman/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
-      "meta_warn": [
-        "graph meta: edges mismatch \u2014 graph has 522, skill claims 512"
-      ],
+      "meta_warn": [],
       "provenance": []
     },
     "skills/pyportfolioopt/efficient_frontier/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
-      "meta_warn": [
-        "graph meta: edges mismatch \u2014 graph has 522, skill claims 512"
-      ],
+      "meta_warn": [],
       "provenance": []
     },
     "skills/pyportfolioopt/expected_returns/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
-      "meta_warn": [
-        "graph meta: edges mismatch \u2014 graph has 522, skill claims 512"
-      ],
+      "meta_warn": [],
       "provenance": []
     },
     "skills/pyportfolioopt/risk_models/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
-      "meta_warn": [
-        "graph meta: edges mismatch \u2014 graph has 522, skill claims 512"
-      ],
+      "meta_warn": [],
       "provenance": []
     },
     "skills/quant-patterns/explainability/SKILL.md": {
@@ -627,36 +548,28 @@
       "lint": [],
       "api_fail": [],
       "api_warn": [],
-      "meta_warn": [
-        "graph meta: community_count mismatch \u2014 graph has 51, skill claims 48"
-      ],
+      "meta_warn": [],
       "provenance": []
     },
     "skills/quantstats/plots/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
-      "meta_warn": [
-        "graph meta: community_count mismatch \u2014 graph has 51, skill claims 48"
-      ],
+      "meta_warn": [],
       "provenance": []
     },
     "skills/quantstats/reports/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
-      "meta_warn": [
-        "graph meta: community_count mismatch \u2014 graph has 51, skill claims 48"
-      ],
+      "meta_warn": [],
       "provenance": []
     },
     "skills/quantstats/stats/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
-      "meta_warn": [
-        "graph meta: community_count mismatch \u2014 graph has 51, skill claims 48"
-      ],
+      "meta_warn": [],
       "provenance": []
     },
     "skills/riskfolio/SKILL.md": {
@@ -989,29 +902,7 @@
     "skills/xgboost/sklearn/SKILL.md": {
       "lint": [],
       "api_fail": [],
-      "api_warn": [
-        "func best_iteration_: not found (library not installed, no graph node)",
-        "func best_score_: not found (library not installed, no graph node)",
-        "func booster: not found (library not installed, no graph node)",
-        "func booster_: not found (library not installed, no graph node)",
-        "func classes_: not found (library not installed, no graph node)",
-        "func coef_: not found (library not installed, no graph node)",
-        "func device: not found (library not installed, no graph node)",
-        "func early_stopping_rounds: not found (library not installed, no graph node)",
-        "func enable_categorical: not found (library not installed, no graph node)",
-        "func eval_metric: not found (library not installed, no graph node)",
-        "func evals_result_: not found (library not installed, no graph node)",
-        "func feature_importances_: not found (library not installed, no graph node)",
-        "func feature_names_in_: not found (library not installed, no graph node)",
-        "func importance_type: not found (library not installed, no graph node)",
-        "func learning_rate: not found (library not installed, no graph node)",
-        "func max_cat_to_onehot: not found (library not installed, no graph node)",
-        "func max_depth: not found (library not installed, no graph node)",
-        "func n_estimators: not found (library not installed, no graph node)",
-        "func n_features_in_: not found (library not installed, no graph node)",
-        "func objective: not found (library not installed, no graph node)",
-        "func verbosity: not found (library not installed, no graph node)"
-      ],
+      "api_warn": [],
       "meta_warn": [],
       "provenance": []
     },
@@ -1019,9 +910,7 @@
       "lint": [],
       "api_fail": [],
       "api_warn": [],
-      "meta_warn": [
-        "graph meta: community_count mismatch \u2014 graph has 52, skill claims 45"
-      ],
+      "meta_warn": [],
       "provenance": []
     },
     "skills/yfinance/download/SKILL.md": {
@@ -1030,18 +919,14 @@
       "api_warn": [
         "class Screener: not found (library not installed, no graph node)"
       ],
-      "meta_warn": [
-        "graph meta: community_count mismatch \u2014 graph has 52, skill claims 45"
-      ],
+      "meta_warn": [],
       "provenance": []
     },
     "skills/yfinance/ticker/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
-      "meta_warn": [
-        "graph meta: community_count mismatch \u2014 graph has 52, skill claims 45"
-      ],
+      "meta_warn": [],
       "provenance": []
     }
   },

@@ -1,6 +1,8 @@
 ---
 name: imbalanced-learn-samplers
-description: "Use when resampling imbalanced data with imblearn — SMOTE/ADASYN/BorderlineSMOTE oversampling, NearMiss/RandomUnderSampler/ENN undersampling, SMOTENC/SMOTEN categorical variants, and combined SMOTEENN/SMOTETomek."
+description: "Use when resampling imbalanced data with imblearn \u2014 SMOTE/ADASYN/BorderlineSMOTE\
+  \ oversampling, NearMiss/RandomUnderSampler/ENN undersampling, SMOTENC/SMOTEN categorical\
+  \ variants, and combined SMOTEENN/SMOTETomek."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -10,7 +12,7 @@ extraction_date: 2026-08-13
 graph:
   nodes: 611
   edges: 865
-  community_count: 41
+  community_count: 43
   graph_hash: f6c2a46427904f14
 tags:
 - imbalanced-learn

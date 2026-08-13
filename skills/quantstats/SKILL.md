@@ -1,6 +1,8 @@
 ---
 name: quantstats
-description: "Use when working with quantstats — the portfolio-analytics entry point. Router indexing the quantstats sub-skills; load the sub-skill for the layer you need."
+description: "Use when working with quantstats \u2014 the portfolio-analytics entry\
+  \ point. Router indexing the quantstats sub-skills; load the sub-skill for the layer\
+  \ you need."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -10,7 +12,7 @@ extraction_date: 2026-08-13
 graph:
   nodes: 393
   edges: 531
-  community_count: 48
+  community_count: 51
   graph_hash: 98393f286b04d0d2
 tags:
 - quantstats
