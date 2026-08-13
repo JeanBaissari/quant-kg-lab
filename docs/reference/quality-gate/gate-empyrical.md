@@ -11,4 +11,4 @@ Graph: `knowledge_graphs/empyrical/.graphify/graph.json` · GRAPH_SPEC §5 · ge
 | c3 god nodes | PASS | top20=20 noise=0 |
 | c4 pin | FAIL | expected=40f61b4f229df10898d46d08f7b1bdc543c0f99c found=e25c841be32dea020d9dc1c92572092a4a30ed4a (graph) |
 | c5 audited | PASS | exists |
-| c6 api surface | PASS | no manifest (probe pending) |
+| c6 api surface | PASS | curated=0 unresolved=0 surface_coverage=100.0% (target 95.0%) |
