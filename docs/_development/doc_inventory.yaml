@@ -120,14 +120,14 @@ docs:
   status: generated
   last_verified: '2026-08-12'
 - path: docs/libraries/statsmodels/index.md
+  type: Generated
+  status: generated
+  last_verified: '2026-08-12'
 - path: docs/libraries/cvxpy/index.md
-  type: Library Index
+  type: Generated
   status: generated
   last_verified: '2026-08-12'
 - path: docs/libraries/pyportfolioopt/index.md
-  type: Library Index
-  status: generated
-  last_verified: '2026-08-12'
   type: Generated
   status: generated
   last_verified: '2026-08-12'

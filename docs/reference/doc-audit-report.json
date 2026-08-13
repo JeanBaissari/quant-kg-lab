@@ -1,13 +1,10 @@
 {
   "errors": {},
-  "census_errors": [
-    "doc not in census: docs/libraries/cvxpy/index.md",
-    "doc not in census: docs/libraries/pyportfolioopt/index.md"
-  ],
+  "census_errors": [],
   "totals": {
     "docs": 65,
     "identity": 0,
     "links": 0,
-    "census": 2
+    "census": 0
   }
 }
