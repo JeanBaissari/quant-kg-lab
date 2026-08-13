@@ -13,8 +13,9 @@ Usage:
   python3 scripts/build_site.py            # writes _site/index.html + siblings
 """
 import html
-import re
+import json
 import pathlib
+import re
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / "_site"
@@ -145,7 +146,70 @@ def main():
         body = render((ROOT / src).read_text())
         (OUT / name).write_text(page(title, body))
         print(f"wrote {OUT / name}")
+    _build_status(OUT)
     return 0
+
+
+REF = ROOT / "docs" / "reference"
+STATUS_SOURCES = ("skill-validation-report.json", "citations-report.json",
+                  "quality-gate-summary.json", "cross-library-bridges.json",
+                  "doc-audit-report.json")
+
+
+def _load(name):
+    p = REF / name
+    return json.loads(p.read_text()) if p.exists() else None
+
+
+def _build_status(out):
+    """QKG_052: aggregate the report backbone into status.json + status.html."""
+    val = _load("skill-validation-report.json")
+    cit = _load("citations-report.json")
+    gate = _load("quality-gate-summary.json")
+    bridges = _load("cross-library-bridges.json")
+    doc = _load("doc-audit-report.json")
+    status = {
+        "generated": max((d.get("generated", "") for d in (val, cit, gate) if d), default=""),
+        "gate": bool(gate and gate.get("pass")),
+        "citations": bool(cit and cit.get("pass")),
+        "validate": bool(val and val.get("pass")),
+        "doc_audit": bool(doc and not doc.get("errors") and not doc.get("census_errors")),
+        "bridges": (bridges or {}).get("resolved"),
+        "bridges_attempted": (bridges or {}).get("attempted"),
+        "totals": (val or {}).get("totals", {}),
+        "citations_counts": {"checked": (cit or {}).get("checked"),
+                             "dangling": (cit or {}).get("dangling")},
+        "libraries": [{"lib": l["lib"], "pass": l["pass"], "criteria": l["criteria"]}
+                      for l in (gate or {}).get("libraries", [])],
+    }
+    (out / "status.json").write_text(json.dumps(status, indent=2) + "\n")
+
+    rows = []
+    for l in status["libraries"]:
+        crit = " · ".join(f"{k}:{'✅' if v['pass'] else '❌'}" for k, v in l["criteria"].items())
+        rows.append(f"<tr><td>{html.escape(l['lib'])}</td><td>{'✅' if l['pass'] else '❌'}</td>"
+                    f"<td>{crit}</td></tr>")
+    t = (val or {}).get("totals", {})
+    body = f"""
+<h1>Status</h1>
+<p>Generated {html.escape(status['generated'])} · gate {'✅' if status['gate'] else '❌'} ·
+citations {'✅' if status['citations'] else '❌'} · validate {'✅' if status['validate'] else '❌'} ·
+doc-audit {'✅' if status['doc_audit'] else '❌'}</p>
+<h2>Headline</h2>
+<table><thead><tr><th>Metric</th><th>Value</th></tr></thead><tbody>
+<tr><td>Skills lint / api-fail / api-warn</td><td>{t.get('lint', '–')} / {t.get('api_fail', '–')} / {t.get('api_warn', '–')}</td></tr>
+<tr><td>Citations checked / dangling</td><td>{status['citations_counts']['checked']} / {status['citations_counts']['dangling']}</td></tr>
+<tr><td>Bridges resolved</td><td>{status['bridges']} / {status['bridges_attempted']}</td></tr>
+<tr><td>Docs / identity errors</td><td>{(doc or {}).get('totals', {}).get('docs', '–')} / {(doc or {}).get('totals', {}).get('identity', '–')}</td></tr>
+</tbody></table>
+<h2>Quality gate per library</h2>
+<table><thead><tr><th>Library</th><th>Pass</th><th>Criteria</th></tr></thead><tbody>
+{''.join(rows)}
+</tbody></table>
+"""
+    (out / "status.html").write_text(page("Status — quant-kg-lab", body))
+    print(f"wrote {out / 'status.json'} + {out / 'status.html'}")
+    return status
 
 
 if __name__ == "__main__":

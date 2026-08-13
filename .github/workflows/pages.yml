@@ -9,9 +9,11 @@ on:
     branches: [main]
     paths:
       - 'docs/reference/unified-index.md'
+      - 'docs/reference/*.json'
       - 'QUICKSTART.md'
       - 'README.md'
       - 'scripts/build_site.py'
+      - 'scripts/emit_badge.py'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
 
@@ -30,7 +32,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Build static site (stdlib-only renderer)
-        run: python3 scripts/build_site.py
+        run: |
+          python3 scripts/build_site.py
+          python3 scripts/emit_badge.py
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
