@@ -476,6 +476,25 @@
         }
       ],
       "payload_note": "Write exactly ONE semantic sentence per node \u2014 a functional summary a quant user can act on. Never produce code; never quote source."
+    },
+    "ta": {
+      "emphasis": "ta is a pure-Python technical-analysis library (pandas-native, the successor to pandas-ta's niche): trend (trend.py \u2014 SMA/EMA/WMA/DEMA/TEMA, MACD, ADX, Aroon, Ichimoku, PSAR, CCIMOM...), momentum (momentum.py \u2014 RSI, Stochastic, Williams %R, ROC, TRIX, Ultimate Oscillator, TSINe...), volatility (volatility.py \u2014 Bollinger Bands, Average True Range, Keltner, Donchian), volume (volume.py \u2014 OBV, MFI, VWAP, Ease of Movement), others (others.py \u2014 daily return, log return, cumulative return), wrapper (wrapper.py \u2014 the consolidated ta.add_all_ta_features(df) entry), utils (utils.py \u2014 indicators listing/helpers). Describe each indicator's formula role and parameters \u2014 the module is a set of pandas Series-in/Series-out functions.",
+      "glossary": "SMA, EMA, MACD, RSI, Bollinger, ATR, VWAP, OBV, MFI, ADX, Ichimoku, stochastic, Williams %R, pandas",
+      "exemplars": [
+        {
+          "name": "add_all_ta_features (wrapper.py)",
+          "desc": "ta add_all_ta_features(df, open, high, low, close, volume, fillna=False): adds the full indicator suite as new columns to a DataFrame."
+        },
+        {
+          "name": "rsi (momentum.py)",
+          "desc": "ta rsi(close, window=14, fillna=False): Relative Strength Index series over a window."
+        },
+        {
+          "name": "macd (trend.py)",
+          "desc": "ta macd(close, window_slow=26, window_fast=12, window_sign=9): MACD line/signal/histogram series tuple."
+        }
+      ],
+      "payload_note": "Write exactly ONE semantic sentence per node \u2014 a functional summary a quant user can act on. Never produce code; never quote source."
     }
   }
 }
