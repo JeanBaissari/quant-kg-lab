@@ -60,7 +60,11 @@ def lib_for_path(path):
 
 
 def check_complete(lib, labels, cur, excl):
-    """Every QR-row symbol of the lib's skills must resolve. Returns failures."""
+    """Every QR-row symbol of the lib's skills must resolve — as a node label,
+    a curated entry, an explicit exclusion, OR via a resolvable source-file
+    citation in the same row (method rows, e.g. `group_by` → lazyframe/group_by.py).
+    Returns failures."""
+    gsrc = graph_sources(lib)
     bad = []
     for p in sorted((ROOT / "skills" / lib).rglob("SKILL.md")):
         text = p.read_text()
@@ -85,6 +89,13 @@ def check_complete(lib, labels, cur, excl):
                       or sym in cur or f"{sym}()" in cur
                       or sym in excl or f"{sym}()" in excl)
                 if not ok:
+                    cited = [f2 for f2 in CITE_RE.findall(line)]
+                    file_ok = any(
+                        re.sub(r":L?\d+$", "", f2) in gsrc
+                        or any(sf.endswith("/" + re.sub(r":L?\d+$", "", f2)) for sf in gsrc)
+                        for f2 in cited)
+                    if file_ok:
+                        continue
                     bad.append((str(p.relative_to(ROOT)), sym, cells[0]))
     return bad
 

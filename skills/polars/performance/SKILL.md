@@ -31,7 +31,7 @@ optimization flags, and the parallelism rules behind polars' speed.
 
 | API | Source File | Description |
 |-----|------------|-------------|
-| `LazyFrame` | `lazyframe/base.py` | Lazy query plan — optimized and executed by collect()/sink_* |
+| `LazyFrame` | `lazyframe/frame.py` | Lazy query plan — optimized and executed by collect()/sink_* |
 | `QueryOptFlags` | `lazyframe/opt_flags.py` | Optimization flags (predicate pushdown, projection pushdown) |
 | `scan_parquet` / `sink_parquet` | `lazyframe/` + `io/` | Streaming read/write — constant memory |
 | `collect()` | `lazyframe/frame.py` | Executes the plan eagerly |
