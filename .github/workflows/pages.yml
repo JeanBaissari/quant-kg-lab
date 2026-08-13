@@ -1,0 +1,45 @@
+name: pages
+
+# QKG_041 — publish the unified index + QUICKSTART as a static GitHub Pages site.
+# Note: Pages on a PRIVATE repo requires a GitHub Pro plan; the workflow is ready
+# either way and activates automatically once the repo is public or the plan allows.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'docs/reference/unified-index.md'
+      - 'QUICKSTART.md'
+      - 'README.md'
+      - 'scripts/build_site.py'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build static site (stdlib-only renderer)
+        run: python3 scripts/build_site.py
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

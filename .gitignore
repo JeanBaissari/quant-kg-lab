@@ -67,3 +67,4 @@ knowledge_graphs/*/repo/
 *.curated.bak
 *.stamp.bak
 dist/
+_site/

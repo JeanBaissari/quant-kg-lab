@@ -2,6 +2,8 @@
 
 **A quantitative knowledge-graph laboratory** — it extracts structured knowledge graphs from
 premier scientific-Python libraries and distills them into **verifiable, copy-in agent skills**
+
+> 🚀 **New here?** Start with [`QUICKSTART.md`](QUICKSTART.md) — consume the knowledge base in 2 minutes.
 for quantitative research and development.
 
 Not a package to install. A knowledge base to **copy from** — every skill traces back to a
