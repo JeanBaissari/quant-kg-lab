@@ -32,28 +32,34 @@ breakdowns and information coefficients (IC).
 
 | API | Source File | Description |
 |-----|------------|-------------|
-| `FactorData` | `utils/data.py` | Wraps factor values + prices + group data; `compute_returns()` builds forward returns |
-| `performance.py` | `performance.py` | Factor returns, IC, quantile and turnover analytics |
-| `utils.py` | `utils.py` | Data preparation helpers for forward-return alignment |
-| `mean_information_coefficient` | `performance.py` | Mean IC over the period with std and IC quantiles |
+| `get_clean_factor_and_forward_returns` | `utils.py:L666` | Prepare factor + prices → aligned forward-return panel (the pipeline entry point) |
+| `get_clean_factor` | `utils.py:L453` | Clean factor values (winsorize, z-score, group mapping) without returns |
+| `compute_forward_returns` | `utils.py:L216` | Build forward returns from prices for the given periods |
+| `quantize_factor` | `utils.py:L85` | Bin factor values into quantiles for group analysis |
+| `mean_information_coefficient` | `performance.py:L77` | Mean IC over the period with std and IC quantiles |
+| `factor_information_coefficient` | `performance.py:L28` | Per-period IC series for the factor |
+| `mean_return_by_quantile` | `performance.py:L453` | Mean returns by quantile — the monotonicity check |
+| `factor_alpha_beta` | `performance.py:L258` | Regression alpha/beta of factor returns vs benchmark |
 
 ## Common Patterns
 
-- **Factor tear sheet pipeline**: `factor_data = alphalens.utils.get_clean_factor_and_forward_returns(factor, prices,
-  quantiles=5, periods=(1, 5, 10))` → `alphalens.performance.factor_alpha_beta` / IC
-  metrics → tear sheets.
-- **Quantile returns**: `alphalens.performance.mean_return_by_quantile(factor_data)` — the
-  monotonicity check (top-quantile beats bottom) is the factor's core signal.
-- **IC series**: `alphalens.performance.factor_information_coefficient(factor_data)` — then
-  mean/vol of IC across periods.
+- **Factor tear sheet pipeline**: `get_clean_factor_and_forward_returns(factor, prices,
+  quantiles=5, periods=(1, 5, 10))` → IC/quantile analytics → tear sheets.
+- **Quantile returns**: `mean_return_by_quantile(factor_data)` — monotonic top-vs-bottom
+  spread is the factor's core signal; confirm with `compute_mean_returns_spread`.
+- **IC series**: `factor_information_coefficient(factor_data)` then
+  `mean_information_coefficient` for the period summary.
+- **Alpha/beta**: `factor_alpha_beta(factor_data, benchmark)` — risk-adjusted factor
+  contribution.
 
 ## Pitfalls
 
-- **Alignment**: factor values must be indexed by (timestamp, asset) with a MultiIndex on
-  `factor`; prices as a wide DataFrame — mixing formats silently produces empty returns.
-- **Lookahead**: `periods` are forward returns; ensure the factor itself only uses data known
-  at `t` or the IC is inflated.
-- **Group data**: omit or provide correctly — wrong group labels distort quantile grouping.
+- **Alignment**: factor values indexed by (timestamp, asset) MultiIndex; prices as a wide
+  DataFrame — mismatched formats silently yield empty panels.
+- **Lookahead**: `periods` are forward returns; the factor must use only data known at `t`
+  or IC is inflated.
+- **Version pin**: this graph is pinned at `77084f1e` (2020-04-27) — the modern
+  `utils/data.py` split (FactorData) does not exist here; use the function API above.
 
 ## Provenance
 

@@ -7,8 +7,8 @@ Graph: `knowledge_graphs/arch/.graphify/graph.json` · GRAPH_SPEC §5 · generat
 | criterion | status | counts |
 |---|---|---|
 | c1 real labels | PASS | distinct=135 non_singleton=118 default_labels=0 default_graph=0 coverage=100.0% |
-| c2 descriptions | FAIL | described=674 describable=876 pct=76.9% |
+| c2 descriptions | PASS | described=831 describable=881 pct=94.3% |
 | c3 god nodes | PASS | top20=20 noise=0 |
-| c4 pin | FAIL | expected=704bb70e48372e3ccccdde7da379811657ad0224 found=62a2da135e6d3fd1b2bd56851faa2b1d0010b864 (graph) |
+| c4 pin | PASS | expected=704bb70e48372e3ccccdde7da379811657ad0224 found=704bb70e48372e3ccccdde7da379811657ad0224 (graph) |
 | c5 audited | PASS | exists |
-| c6 api surface | PASS | no manifest (probe pending) |
+| c6 api surface | PASS | curated=5 unresolved=0 surface_coverage=100.0% (target 95.0%) |

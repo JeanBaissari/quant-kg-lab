@@ -1,12 +1,10 @@
 {
   "errors": {},
-  "census_errors": [
-    "census lists missing doc: docs/reference/api-surface/arch.md"
-  ],
+  "census_errors": [],
   "totals": {
-    "docs": 70,
+    "docs": 71,
     "identity": 0,
     "links": 0,
-    "census": 1
+    "census": 0
   }
 }

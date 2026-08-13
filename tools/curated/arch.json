@@ -1,0 +1,30 @@
+{
+  "library": "arch",
+  "symbols": [
+    {
+      "label": "compat",
+      "source_file": "__init__.py",
+      "description": "Public NumPy API symbol `np.compat` (C-implemented or namespace; see docs)."
+    },
+    {
+      "label": "univariate",
+      "source_file": "__init__.py",
+      "description": "Public NumPy API symbol `np.univariate` (C-implemented or namespace; see docs)."
+    },
+    {
+      "label": "utility",
+      "source_file": "__init__.py",
+      "description": "Public NumPy API symbol `np.utility` (C-implemented or namespace; see docs)."
+    },
+    {
+      "label": "vendor",
+      "source_file": "__init__.py",
+      "description": "Public NumPy API symbol `np.vendor` (C-implemented or namespace; see docs)."
+    },
+    {
+      "label": "version_tuple",
+      "source_file": "__init__.py",
+      "description": "Built-in immutable sequence."
+    }
+  ]
+}
