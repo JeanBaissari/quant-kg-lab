@@ -27,7 +27,7 @@
 | ta-lib | Quant Tools | 381 · 379 | 1 | — |
 | vectorbt | Quant Tools | 3682 · 9212 | 3 | [`vectorbt`](../../skills/vectorbt/SKILL.md) |
 | statsmodels | Statistical Models | 11616 · 33529 | 1 | [`statsmodels`](../../skills/statsmodels/SKILL.md) |
-| cvxpy | — | 0 · 0 | 0 | — |
+| cvxpy | — | 6380 · 16515 | 3 | [`cvxpy`](../../skills/cvxpy/SKILL.md) |
 | pyportfolioopt | — | 342 · 512 | 4 | [`pyportfolioopt`](../../skills/pyportfolioopt/SKILL.md) |
 
 ## Skills index
@@ -105,6 +105,12 @@
 ### statsmodels
 - [`statsmodels`](../../skills/statsmodels/SKILL.md) *(router)* — Use when working with statsmodels — the statistical-modelling entry point. Router indexing the statsmodels sub-skills; load the sub-skill for the model family you need.
 - [`statsmodels-core`](../../skills/statsmodels/core/SKILL.md) — Use when building statistical models in Python — OLS/GLS/WLS, GLM, model results and diagnostics, formula API, and summary tables.
+
+### cvxpy
+- [`cvxpy`](../../skills/cvxpy/SKILL.md) *(router)* — Use when working with cvxpy — the convex-optimization entry point. Router indexing the cvxpy sub-skills; load the sub-skill for the layer you need.
+- [`cvxpy-cone`](../../skills/cvxpy/cone/SKILL.md) — Use when working with cvxpy constraints — equality/inequality, second-order, exponential, power and PSD cones that make a problem DCP-solvable.
+- [`cvxpy-core`](../../skills/cvxpy/core/SKILL.md) — Use when solving convex optimization problems with cvxpy — variables, parameters, objectives, Problem.solve(), and DCP analysis.
+- [`cvxpy-problems`](../../skills/cvxpy/problems/SKILL.md) — Use when driving cvxpy problem lifecycle — Problem.solve() options, solver stats, warm starts, and solver selection (SCS/ECOS/OSQP/Clarabel).
 
 ### pyportfolioopt
 - [`pyportfolioopt`](../../skills/pyportfolioopt/SKILL.md) *(router)* — Use when working with PyPortfolioOpt — the portfolio-optimization entry point. Router indexing the pypfopt sub-skills; load the sub-skill for the estimator you need.

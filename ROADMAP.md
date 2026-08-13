@@ -9,15 +9,15 @@
 
 | Layer | State |
 |-------|-------|
-| Knowledge graphs | 11/11 extracted (~65K nodes, ~163K edges), incl. statsmodels stress wave |
-| Semantic node descriptions | **11/11 ≥80%** (81–100%; ta-lib 93.8%) — `describe_nodes.py --auto` via opencode; numpy random API curated (QKG_021) |
-| Community labels | **11/11 real** (0 default `"Community N"`; e.g. pandas 396, scipy 1061, statsmodels 638) |
-| Quality Gate | **11/11 GREEN** (c1 labels · c2 descriptions · c3 god nodes · c4 pin · c5 audited) — `scripts/graph_gate.py --ci --all` exits 0 |
-| Skills | 56 `SKILL.md` (9 routers + 39 modules + 8 playbooks), uniform template, 0 dangling refs; graph blocks synced (QKG_010); content wave done (QKG_011–013): canonical headers, auto-Provenance, Common Patterns, playbook §7, citation gate **264/0** (QKG_012) |
-| Skill validation | validator v2 (sections/hash/related-skills, module-scoped API) gates plain `--ci`; API/TA-Lib gating live (QKG_008); citation gate in lint job; known-debt bridge retired |
-| Cross-library bridges | 19/19 resolved, injected as `_cross_library` overlay (24 nodes) |
-| Docs | 54-doc governed corpus, `doc_audit.py --ci` green; gate reports in `docs/reference/quality-gate/` |
-| CI | lint + docs + provenance gates active; freshness cron replaced by provenance gate + informational report (QKG_006) |
+| Knowledge graphs | **13/13 extracted** (~72K nodes, ~180K edges) — incl. statsmodels, cvxpy, PyPortfolioOpt |
+| Semantic node descriptions | **13/13 ≥80%** (81–100%; ta-lib 93.8%) — `describe_nodes.py --auto` via opencode; numpy random API curated (QKG_021) |
+| Community labels | **13/13 real** (0 default `"Community N"`) |
+| Quality Gate | **13/13 GREEN** (c1 labels · c2 descriptions · c3 god nodes · c4 pin · c5 audited · **c6 API-surface** — ADR-0008) — `scripts/graph_gate.py --ci --all` exits 0 |
+| Skills | **65 `SKILL.md`** (11 routers + 46 modules + 8 playbooks), uniform template, 0 dangling refs; citation gate **311/0** (QKG_012); numpy complete-check live in CI (QKG_021) |
+| Skill validation | validator v2 (sections/hash/related-skills, module-scoped API) gates plain `--ci`; API/TA-Lib gating live (QKG_008) |
+| Cross-library bridges | **26/26 resolved**, injected as `_cross_library` overlay (31 nodes) — incl. cvxpy/pypfopt/statsmodels wiring |
+| Docs | 65-doc governed corpus, `doc_audit.py --ci` green; concept index live (QKG_017) |
+| CI | lint + docs + provenance + artifact-safety gates active; freshness cron replaced by provenance gate (QKG_006) |
 
 ## Gold-standard bar (per library)
 
@@ -87,10 +87,13 @@ API importance. Full definitions: `docs/specs/GRAPH_SPEC.md` §5 and `docs/specs
 ## Phase 6 — Library expansion (gated on the gold standard)
 
 ✅ **statsmodels** onboarded as a parallel stress wave (QKG_019, gate 5/5, 7 findings codified
-in `docs/guides/onboarding-checklist.md`). Next, in priority order: **cvxpy**,
-**PyPortfolioOpt** (+ statsmodels skills wave — QKG_020), then arch, riskfolio-lib, pyfolio,
-alphalens, polars, shap. Rationale in `docs/archive/AUDIT.md` §5.2. Every new library must
-pass the quality gate on day one (QKG_018 playbook).
+in `docs/guides/onboarding-checklist.md`). ✅ **cvxpy** + **PyPortfolioOpt** onboarded through
+the QKG_018 playbook (QKG_020): both graphs pass the quality gate on day one (c1–c6), skills
+waves landed (cvxpy core/cone/problems + router; PyPortfolioOpt ef/risk/returns/bl + router;
+statsmodels core + router), bridges extended 19→26, and every onboarded library now runs the
+mandatory API-surface probe (checklist step 7.5, ADR-0008). Next in the queue: **arch,
+riskfolio-lib, pyfolio, alphalens, polars, shap**. Rationale in `docs/archive/AUDIT.md` §5.2.
+Every new library must pass the quality gate on day one (QKG_018 playbook).
 
 ---
 

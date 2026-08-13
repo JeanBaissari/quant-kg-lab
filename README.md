@@ -29,7 +29,7 @@ Two things make it more than a pile of library docs:
 
 ```
 quant-kg-lab/
-├── knowledge_graphs/<lib>/.graphify/   # graph.json + GRAPH_REPORT.md + labels (11 libraries)
+├── knowledge_graphs/<lib>/.graphify/   # graph.json + GRAPH_REPORT.md + labels (13 libraries)
 ├── skills/<lib>/<module>/SKILL.md      # atomic, per-module skills (+ routers)
 │   └── quant-patterns/                 #   cross-library workflow playbooks
 ├── scripts/                            # rebuild, query, validate, audit, bundle tooling
@@ -65,10 +65,12 @@ noise-filter policy, and the graph quality gate.
 | [lightgbm](https://github.com/microsoft/LightGBM) | Gradient boosting | 593 · 2,029 |
 | [ta-lib](https://github.com/TA-Lib/ta-lib-python) | Technical indicators | 381 · 379 |
 | [statsmodels](https://github.com/statsmodels/statsmodels) | Statistical models (regression, GLM, time series) | 11,616 · 33,529 |
+| [cvxpy](https://github.com/cvxpy/cvxpy) | Convex optimization | 6,380 · 16,515 |
+| [PyPortfolioOpt](https://github.com/robertmartin8/PyPortfolioOpt) | Portfolio optimization | 342 · 512 |
 
-**Total: ~65K nodes / ~163K edges across 11 graphs.** Pinned commits in `graphs.lock`; every
+**Total: ~72K nodes / ~180K edges across 13 graphs.** Pinned commits in `graphs.lock`; every
 graph passes the [quality gate](docs/specs/GRAPH_SPEC.md#5-quality-gate) (labels, descriptions,
-god nodes, pin, audit).
+god nodes, pin, audit, API-surface coverage).
 
 ## Using a skill (copy-in)
 
@@ -119,12 +121,13 @@ python scripts/validate_skills.py --ci  # verify skill claims against live APIs
 
 ## Status
 
-**Gold standard reached for all 11 libraries**: every graph passes the quality gate (real
+**Gold standard reached for all 13 libraries**: every graph passes the quality gate (real
 community labels, ≥80% semantic descriptions, clean god nodes, `built_from_commit` pinned,
-audited edges); 56 spec-normalized skills with live-API validation, graph-node citations and a
-green citation gate; 19/19 precise cross-library bridges as a curated overlay; workflow
-playbooks across the whole stack; provenance-gated CI. See `ROADMAP.md` for the phased plan,
-remaining polish, and the expansion queue (cvxpy, PyPortfolioOpt…).
+audited edges, ≥95% API-surface coverage); 65 spec-normalized skills with live-API validation,
+graph-node citations and a green citation gate; 26/26 precise cross-library bridges as a
+curated overlay; workflow playbooks across the whole stack; provenance-gated CI. See
+`ROADMAP.md` for the phased plan, remaining polish, and the expansion queue (arch,
+riskfolio-lib, pyfolio, alphalens, polars, shap…).
 
 ## License
 
