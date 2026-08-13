@@ -17,6 +17,9 @@ tags:
 - router
 related_skills:
 - statsmodels-core
+- statsmodels-tsa
+- statsmodels-statespace
+- statsmodels-vector-ar
 - pandas-core
 - scipy-stats
 ---
@@ -31,6 +34,9 @@ generalized linear models, model results, diagnostics, and the formula API.
 | Skill | Scope |
 |-------|-------|
 | [statsmodels-core](core/SKILL.md) | OLS/GLS/WLS, GLM, LikelihoodModel, formula API, summaries — the workhorse surface |
+| [statsmodels-tsa](tsa/SKILL.md) | ARIMA/SARIMAX, ExponentialSmoothing, arima specification API |
+| [statsmodels-statespace](statespace/SKILL.md) | MLEModel/MLEResults, Kalman filtering, news analysis |
+| [statsmodels-vector-ar](vector_ar/SKILL.md) | VAR/VECM, impulse response, Granger causality |
 
 ## Common Patterns
 
