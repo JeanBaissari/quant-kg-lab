@@ -262,6 +262,15 @@
       "meta_warn": [],
       "provenance": []
     },
+    "skills/mplfinance/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [
+        "graph meta: community_count mismatch \u2014 graph has 31, skill claims 12"
+      ],
+      "provenance": []
+    },
     "skills/numpy/SKILL.md": {
       "lint": [],
       "api_fail": [],

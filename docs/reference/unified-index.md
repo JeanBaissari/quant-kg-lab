@@ -32,6 +32,7 @@
 | cvxpy | — | 6380 · 16515 | 5 | [`cvxpy`](../../skills/cvxpy/SKILL.md) |
 | empyrical | — | 180 · 258 | 2 | [`empyrical`](../../skills/empyrical/SKILL.md) |
 | imbalanced-learn | — | 611 · 865 | 3 | [`imbalanced-learn`](../../skills/imbalanced-learn/SKILL.md) |
+| mplfinance | — | 244 · 317 | 0 | [`mplfinance`](../../skills/mplfinance/SKILL.md) |
 | polars | — | 5296 · 16925 | 5 | [`polars`](../../skills/polars/SKILL.md) |
 | pyfolio | — | 305 · 361 | 2 | [`pyfolio`](../../skills/pyfolio/SKILL.md) |
 | pymc | — | 4067 · 11144 | 3 | [`pymc`](../../skills/pymc/SKILL.md) |
@@ -151,6 +152,9 @@
 - [`imbalanced-learn-ensemble`](../../skills/imbalanced-learn/ensemble/SKILL.md) — Use when training balanced ensembles with imblearn — BalancedBaggingClassifier, BalancedRandomForestClassifier, EasyEnsembleClassifier, RUSBoostClassifier, and the imbalanced metrics (geometric mean, imbalanced report).
 - [`imbalanced-learn-pipeline`](../../skills/imbalanced-learn/pipeline/SKILL.md) — Use when building sampling-aware pipelines with imblearn — Pipeline/make_pipeline that hold samplers between transformers and estimators, and the imbalanced scoring/metrics surface.
 - [`imbalanced-learn-samplers`](../../skills/imbalanced-learn/samplers/SKILL.md) — Use when resampling imbalanced data with imblearn — SMOTE/ADASYN/BorderlineSMOTE oversampling, NearMiss/RandomUnderSampler/ENN undersampling, SMOTENC/SMOTEN categorical variants, and combined SMOTEENN/SMOTETomek.
+
+### mplfinance
+- [`mplfinance`](../../skills/mplfinance/SKILL.md) *(router)* — Use when charting financial data with mplfinance — plot() with candle/OHLC/line/renko/pnf types, addplot overlays, styles, volume panels, and market colors.
 
 ### polars
 - [`polars`](../../skills/polars/SKILL.md) *(router)* — Use when working with polars — the DataFrame entry point. Router indexing the polars sub-skills; load the sub-skill for the layer you need.

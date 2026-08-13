@@ -215,6 +215,10 @@ docs:
   type: Generated
   status: generated
   last_verified: ''
+- path: docs/reference/api-surface/mplfinance.md
+  type: Generated
+  status: generated
+  last_verified: ''
 - path: docs/reference/api-surface/numpy.md
   type: Generated
   status: generated
