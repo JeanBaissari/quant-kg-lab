@@ -328,8 +328,92 @@
       "source": "arch::ARCHModel",
       "target": "pyfolio::timeseries.py",
       "relation": "feeds"
+    },
+    {
+      "bridge": "empyrical.sharpe_ratio -> pyfolio.timeseries.py",
+      "status": "RESOLVED",
+      "source": "empyrical::sharpe_ratio()",
+      "target": "pyfolio::timeseries.py",
+      "relation": "feeds"
+    },
+    {
+      "bridge": "empyrical.perf_attrib -> pyfolio.perf_attrib.py",
+      "status": "RESOLVED",
+      "source": "empyrical::perf_attrib.py",
+      "target": "pyfolio::perf_attrib.py",
+      "relation": "feeds"
+    },
+    {
+      "bridge": "quantstats.metrics -> empyrical.sharpe_ratio",
+      "status": "RESOLVED",
+      "source": "quantstats::metrics()",
+      "target": "empyrical::sharpe_ratio()",
+      "relation": "powered_by"
+    },
+    {
+      "bridge": "quantstats.full -> pyfolio.timeseries.py",
+      "status": "RESOLVED",
+      "source": "quantstats::full()",
+      "target": "pyfolio::timeseries.py",
+      "relation": "alternative_to"
+    },
+    {
+      "bridge": "yfinance.Ticker -> pandas.DataFrame",
+      "status": "RESOLVED",
+      "source": "yfinance::Ticker",
+      "target": "pandas::DataFrame",
+      "relation": "feeds"
+    },
+    {
+      "bridge": "yfinance.download -> pandas.DataFrame",
+      "status": "RESOLVED",
+      "source": "yfinance::_DownloadCtx",
+      "target": "pandas::DataFrame",
+      "relation": "feeds"
+    },
+    {
+      "bridge": "imbalanced-learn.SMOTE -> scikit-learn.Pipeline",
+      "status": "RESOLVED",
+      "source": "imbalanced-learn::SMOTE",
+      "target": "scikit-learn::Pipeline",
+      "relation": "compatible_with"
+    },
+    {
+      "bridge": "imbalanced-learn.BalancedRandomForestClassifier -> scikit-learn.RandomForestClassifier",
+      "status": "RESOLVED",
+      "source": "imbalanced-learn::BalancedRandomForestClassifier",
+      "target": "scikit-learn::RandomForestClassifier",
+      "relation": "alternative_to"
+    },
+    {
+      "bridge": "pymc.Model -> statsmodels.OLS",
+      "status": "RESOLVED",
+      "source": "pymc::Model",
+      "target": "statsmodels::OLS",
+      "relation": "alternative_to"
+    },
+    {
+      "bridge": "pymc.GARCH11 -> arch.ARCHModel",
+      "status": "RESOLVED",
+      "source": "pymc::GARCH11",
+      "target": "arch::ARCHModel",
+      "relation": "alternative_to"
+    },
+    {
+      "bridge": "pymc.sample -> optuna.Study",
+      "status": "RESOLVED",
+      "source": "pymc::.sample_stats_to_xarray()",
+      "target": "optuna::Study",
+      "relation": "alternative_to"
+    },
+    {
+      "bridge": "mplfinance.plot -> pandas.DataFrame",
+      "status": "RESOLVED",
+      "source": "mplfinance::_get_valid_plot_types()",
+      "target": "pandas::DataFrame",
+      "relation": "consumes"
     }
   ],
-  "resolved": 47,
-  "attempted": 47
+  "resolved": 59,
+  "attempted": 59
 }

@@ -75,6 +75,18 @@ ALL_BRIDGES = [
     ("shap", "Explainer", "statsmodels", "OLS", "explains", "shap LinearExplainer explains statsmodels OLS models"),
     ("pyfolio", "timeseries.py", "statsmodels", "OLS", "powered_by", "pyfolio perf attribution relies on statsmodels regression"),
     ("arch", "ARCHModel", "pyfolio", "timeseries.py", "feeds", "arch volatility forecasts feed pyfolio performance reporting"),
+    ("empyrical", "sharpe_ratio", "pyfolio", "timeseries.py", "feeds", "empyrical metric primitives feed pyfolio performance statistics"),
+    ("empyrical", "perf_attrib", "pyfolio", "perf_attrib.py", "feeds", "empyrical factor attribution feeds pyfolio perf-attrib tear sheets"),
+    ("quantstats", "metrics", "empyrical", "sharpe_ratio", "powered_by", "quantstats metrics build on empyrical primitives"),
+    ("quantstats", "full", "pyfolio", "timeseries.py", "alternative_to", "quantstats full() tear sheet vs pyfolio full tear sheet for reporting"),
+    ("yfinance", "Ticker", "pandas", "DataFrame", "feeds", "yfinance Ticker.history() returns pandas DataFrames"),
+    ("yfinance", "download", "pandas", "DataFrame", "feeds", "yfinance download() returns a pandas MultiIndex history frame"),
+    ("imbalanced-learn", "SMOTE", "scikit-learn", "Pipeline", "compatible_with", "imblearn samplers fit into scikit-learn pipelines via imblearn.pipeline"),
+    ("imbalanced-learn", "BalancedRandomForestClassifier", "scikit-learn", "RandomForestClassifier", "alternative_to", "balanced random forest vs sklearn RF for imbalanced data"),
+    ("pymc", "Model", "statsmodels", "OLS", "alternative_to", "Bayesian model vs statsmodels frequentist regression for uncertainty"),
+    ("pymc", "GARCH11", "arch", "ARCHModel", "alternative_to", "pymc GARCH11 Bayesian vol model vs arch frequentist GARCH"),
+    ("pymc", "sample", "optuna", "Study", "alternative_to", "MCMC posterior sampling vs optuna optimization for parameter inference"),
+    ("mplfinance", "plot", "pandas", "DataFrame", "consumes", "mplfinance plot() renders pandas OHLCV DataFrames"),
 ]
 
 

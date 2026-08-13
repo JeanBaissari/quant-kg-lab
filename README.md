@@ -75,8 +75,14 @@ noise-filter policy, and the graph quality gate.
 | [Riskfolio-Lib](https://github.com/dcajasn/Riskfolio-Lib) | Portfolio optimization suite | 426 · 599 |
 | [shap](https://github.com/shap/shap) | Model explainability | 1,277 · 1,752 |
 | [polars](https://github.com/pola-rs/polars) | Fast DataFrame library | 5,296 · 16,925 |
+| [empyrical](https://github.com/Quantopian/empyrical) | Performance-metric primitives | 180 · 258 |
+| [quantstats](https://github.com/ranaroussi/quantstats) | Portfolio analytics + tear sheets | 393 · 531 |
+| [yfinance](https://github.com/ranaroussi/yfinance) | Market data download | 823 · 1,584 |
+| [imbalanced-learn](https://github.com/scikit-learn-contrib/imbalanced-learn) | Class-imbalance resampling | 611 · 865 |
+| [pymc](https://github.com/pymc-devs/pymc) | Bayesian / probabilistic modelling | 4,067 · 11,144 |
+| [mplfinance](https://github.com/matplotlib/mplfinance) | Financial charting | 244 · 317 |
 
-**Total: ~76K nodes / ~200K edges across 19 graphs.** Pinned commits in `graphs.lock`; every
+**Total: ~87K nodes / ~219K edges across 25 graphs.** Pinned commits in `graphs.lock`; every
 graph passes the [quality gate](docs/specs/GRAPH_SPEC.md#5-quality-gate) (labels, descriptions,
 god nodes, pin, audit, API-surface coverage).
 
@@ -129,11 +135,11 @@ python scripts/validate_skills.py --ci  # verify skill claims against live APIs
 
 ## Status
 
-**Gold standard reached for all 19 libraries**: every graph passes the quality gate (real
+**Gold standard reached for all 25 libraries**: every graph passes the quality gate (real
 community labels, ≥80% semantic descriptions, clean god nodes, `built_from_commit` pinned,
-audited edges, ≥95% API-surface coverage); 104 spec-normalized skills (13 routers + 79
-modules + 12 playbooks) with live-API validation, graph-node citations (726, 0 dangling) and
-a green citation gate with `--require-complete` on every library; 47/47 precise cross-library
+audited edges, ≥95% API-surface coverage); 123 spec-normalized skills (16 routers + 95
+modules + 12 playbooks) with live-API validation, graph-node citations (998, 0 dangling) and
+a green citation gate with `--require-complete` on every library; 59/59 precise cross-library
 bridges as a curated overlay; workflow playbooks across the whole stack; provenance-gated CI.
 See `ROADMAP.md` for the phased plan and current state.
 

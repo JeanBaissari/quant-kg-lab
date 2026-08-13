@@ -263,6 +263,84 @@
       "label": "timeseries.py",
       "library": "pyfolio",
       "source_file": "timeseries.py"
+    },
+    {
+      "id": "empyrical::stats_sharpe_ratio",
+      "label": "sharpe_ratio()",
+      "library": "empyrical",
+      "source_file": "stats.py"
+    },
+    {
+      "id": "empyrical::perf_attrib",
+      "label": "perf_attrib.py",
+      "library": "empyrical",
+      "source_file": "perf_attrib.py"
+    },
+    {
+      "id": "pyfolio::perf_attrib",
+      "label": "perf_attrib.py",
+      "library": "pyfolio",
+      "source_file": "perf_attrib.py"
+    },
+    {
+      "id": "quantstats::reports_metrics",
+      "label": "metrics()",
+      "library": "quantstats",
+      "source_file": "reports.py"
+    },
+    {
+      "id": "quantstats::reports_full",
+      "label": "full()",
+      "library": "quantstats",
+      "source_file": "reports.py"
+    },
+    {
+      "id": "yfinance::ticker_ticker",
+      "label": "Ticker",
+      "library": "yfinance",
+      "source_file": "ticker.py"
+    },
+    {
+      "id": "yfinance::multi_downloadctx",
+      "label": "_DownloadCtx",
+      "library": "yfinance",
+      "source_file": "multi.py"
+    },
+    {
+      "id": "imbalanced-learn::smote_base_smote",
+      "label": "SMOTE",
+      "library": "imbalanced-learn",
+      "source_file": "over_sampling/_smote/base.py"
+    },
+    {
+      "id": "imbalanced-learn::ensemble_forest_balancedrandomforestclassifier",
+      "label": "BalancedRandomForestClassifier",
+      "library": "imbalanced-learn",
+      "source_file": "ensemble/_forest.py"
+    },
+    {
+      "id": "pymc::model_core_model",
+      "label": "Model",
+      "library": "pymc",
+      "source_file": "model/core.py"
+    },
+    {
+      "id": "pymc::distributions_timeseries_garch11",
+      "label": "GARCH11",
+      "library": "pymc",
+      "source_file": "distributions/timeseries.py"
+    },
+    {
+      "id": "pymc::backends_arviz_datatreeconverter_sample_stats_to_xarray",
+      "label": ".sample_stats_to_xarray()",
+      "library": "pymc",
+      "source_file": "backends/arviz.py"
+    },
+    {
+      "id": "mplfinance::arg_validators_get_valid_plot_types",
+      "label": "_get_valid_plot_types()",
+      "library": "mplfinance",
+      "source_file": "_arg_validators.py"
     }
   ],
   "links": [
@@ -594,6 +672,90 @@
       "relation": "feeds",
       "confidence": "CURATED",
       "description": "arch volatility forecasts feed pyfolio performance reporting"
+    },
+    {
+      "source": "empyrical::stats_sharpe_ratio",
+      "target": "pyfolio::timeseries",
+      "relation": "feeds",
+      "confidence": "CURATED",
+      "description": "empyrical metric primitives feed pyfolio performance statistics"
+    },
+    {
+      "source": "empyrical::perf_attrib",
+      "target": "pyfolio::perf_attrib",
+      "relation": "feeds",
+      "confidence": "CURATED",
+      "description": "empyrical factor attribution feeds pyfolio perf-attrib tear sheets"
+    },
+    {
+      "source": "quantstats::reports_metrics",
+      "target": "empyrical::stats_sharpe_ratio",
+      "relation": "powered_by",
+      "confidence": "CURATED",
+      "description": "quantstats metrics build on empyrical primitives"
+    },
+    {
+      "source": "quantstats::reports_full",
+      "target": "pyfolio::timeseries",
+      "relation": "alternative_to",
+      "confidence": "CURATED",
+      "description": "quantstats full() tear sheet vs pyfolio full tear sheet for reporting"
+    },
+    {
+      "source": "yfinance::ticker_ticker",
+      "target": "pandas::dataframe",
+      "relation": "feeds",
+      "confidence": "CURATED",
+      "description": "yfinance Ticker.history() returns pandas DataFrames"
+    },
+    {
+      "source": "yfinance::multi_downloadctx",
+      "target": "pandas::dataframe",
+      "relation": "feeds",
+      "confidence": "CURATED",
+      "description": "yfinance download() returns a pandas MultiIndex history frame"
+    },
+    {
+      "source": "imbalanced-learn::smote_base_smote",
+      "target": "scikit-learn::pipeline_pipeline",
+      "relation": "compatible_with",
+      "confidence": "CURATED",
+      "description": "imblearn samplers fit into scikit-learn pipelines via imblearn.pipeline"
+    },
+    {
+      "source": "imbalanced-learn::ensemble_forest_balancedrandomforestclassifier",
+      "target": "scikit-learn::ensemble_forest_randomforestclassifier",
+      "relation": "alternative_to",
+      "confidence": "CURATED",
+      "description": "balanced random forest vs sklearn RF for imbalanced data"
+    },
+    {
+      "source": "pymc::model_core_model",
+      "target": "statsmodels::regression_linear_model_ols",
+      "relation": "alternative_to",
+      "confidence": "CURATED",
+      "description": "Bayesian model vs statsmodels frequentist regression for uncertainty"
+    },
+    {
+      "source": "pymc::distributions_timeseries_garch11",
+      "target": "arch::univariate_base_archmodel",
+      "relation": "alternative_to",
+      "confidence": "CURATED",
+      "description": "pymc GARCH11 Bayesian vol model vs arch frequentist GARCH"
+    },
+    {
+      "source": "pymc::backends_arviz_datatreeconverter_sample_stats_to_xarray",
+      "target": "optuna::study_study_study",
+      "relation": "alternative_to",
+      "confidence": "CURATED",
+      "description": "MCMC posterior sampling vs optuna optimization for parameter inference"
+    },
+    {
+      "source": "mplfinance::arg_validators_get_valid_plot_types",
+      "target": "pandas::dataframe",
+      "relation": "consumes",
+      "confidence": "CURATED",
+      "description": "mplfinance plot() renders pandas OHLCV DataFrames"
     }
   ],
   "hyperedges": []
