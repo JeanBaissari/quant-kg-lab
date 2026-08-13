@@ -107,6 +107,12 @@
       "commit": "632a9e48fbaf2b9f8e83864a492332364b6ed32c",
       "nodes": 426,
       "edges": 599
+    },
+    "shap": {
+      "repo": "shap/shap",
+      "commit": "df974a1966294b9c7acebb1373fd6dc5445d1d3d",
+      "nodes": 0,
+      "edges": 0
     }
   }
 }

@@ -307,6 +307,24 @@
           "desc": "Riskfolio-Lib returns estimators: mean/historical/exponential returns for the optimizer input."
         }
       ]
+    },
+    "shap": {
+      "emphasis": "shap explains model predictions: Explainer (Tree/Linear/Kernel/Deep/Exact), Explanation objects (values, base_values, data), maskers (Independent/Tabular/Partition), plots (summary/force/waterfall/beeswarm/bar), and benchmarking. Note the C++/Cython core (cext/cutils) is absent \u2014 describe the Python API surface.",
+      "glossary": "SHAP, Shapley values, Explainer, masker, base value, feature attribution, waterfall, beeswarm, TreeExplainer",
+      "exemplars": [
+        {
+          "name": "TreeExplainer (explainers/_tree.py)",
+          "desc": "shap TreeExplainer: exact SHAP for tree ensembles (xgboost/lightgbm/sklearn) with tree_limit and interaction support."
+        },
+        {
+          "name": "Explanation (_explanation.py)",
+          "desc": "shap Explanation: the unified output object \u2014 values, base_values, data, feature_names; carries .plot()."
+        },
+        {
+          "name": "waterfall_plot (plots/_waterfall.py)",
+          "desc": "shap waterfall plot: base value to prediction, contributions stacked per feature."
+        }
+      ]
     }
   }
 }
