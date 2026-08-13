@@ -27,14 +27,14 @@ Temporal data manipulation: frequency conversion (`resample`), moving window com
 
 | API | Source File | Degree | Description |
 |-----|------------|--------|-------------|
-| `DatetimeIndex` | `core/indexes/datetimes.py` | 54 | Immutable ndarray-like of datetime64 for axis indexing |
-| `Resampler` | `core/resample.py` | 290 | GroupBy-like resampling for frequency conversion (down/upsampling) |
-| `Rolling` | `core/window/rolling.py` | 32 | Fixed-size moving window (mean, std, corr, apply) |
-| `Expanding` | `core/window/expanding.py` | 30 | Expanding (cumulative) window from start of series |
-| `ExponentialMovingWindow` | `core/window/ewm.py` | 20 | Exponentially weighted moving window (EWMA, EWMSD, EWMCorr) |
-| `BaseWindow` | `core/window/rolling.py` | 35 | Base class for Rolling, Expanding, EWM windows |
-| `PeriodIndex` | `core/indexes/period.py` | 27 | Immutable ndarray of periods (e.g., '2023-Q1') |
-| `TimedeltaIndex` | `core/indexes/timedeltas.py` | 17 | Immutable ndarray of timedelta64 for duration indexing |
+| `DatetimeIndex` | `core/indexes/datetimes.py:L148` | 54 | Immutable ndarray-like of datetime64 for axis indexing |
+| `Resampler` | `core/resample.py:L119` | 290 | GroupBy-like resampling for frequency conversion (down/upsampling) |
+| `Rolling` | `core/window/rolling.py:L1955` | 32 | Fixed-size moving window (mean, std, corr, apply) |
+| `Expanding` | `core/window/expanding.py:L43` | 30 | Expanding (cumulative) window from start of series |
+| `ExponentialMovingWindow` | `core/window/ewm.py:L127` | 20 | Exponentially weighted moving window (EWMA, EWMSD, EWMCorr) |
+| `BaseWindow` | `core/window/rolling.py:L116` | 35 | Base class for Rolling, Expanding, EWM windows |
+| `PeriodIndex` | `core/indexes/period.py:L92` | 27 | Immutable ndarray of periods (e.g., '2023-Q1') |
+| `TimedeltaIndex` | `core/indexes/timedeltas.py:L107` | 17 | Immutable ndarray of timedelta64 for duration indexing |
 | `date_range()` | `core/indexes/datetimes.py` | 3 | Fixed-frequency DatetimeIndex generator |
 | `to_datetime()` | `core/tools/datetimes.py` | 6 | Convert scalars, arrays, Series to datetime |
 

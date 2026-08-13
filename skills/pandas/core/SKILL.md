@@ -27,16 +27,16 @@ The core pandas data structures and operations: `DataFrame` (2-D labeled tabular
 
 | API | Source File | Degree | Description |
 |-----|------------|--------|-------------|
-| `DataFrame` | `core/frame.py` | 848 | Two-dimensional, size-mutable, potentially heterogeneous tabular data |
-| `Series` | `core/series.py` | 648 | One-dimensional ndarray with axis labels (including time series) |
-| `MultiIndex` | `core/indexes/multi.py` | 523 | Multi-level / hierarchical index for higher-dimensional data |
-| `ExtensionArray` | `core/arrays/base.py` | 397 | Abstract interface for custom array types backed by any storage |
-| `RangeIndex` | `core/indexes/range.py` | 428 | Optimized integer index for monotonic integer ranges |
-| `DatetimeArray` | `core/arrays/datetimes.py` | 222 | Array of datetime64 data with timezone support |
-| `Index` | `core/indexes/base.py` | 212 | Immutable sequence for axis labeling |
-| `GroupBy` | `core/groupby/groupby.py` | 76 | Split-apply-combine grouping operation |
-| `Resampler` | `core/resample.py` | 290 | GroupBy-like resampling for time-series data |
-| `DataFrameGroupBy` | `core/groupby/generic.py` | 34 | GroupBy for DataFrames with aggregation/transform/apply |
+| `DataFrame` | `core/frame.py:L273` | 848 | Two-dimensional, size-mutable, potentially heterogeneous tabular data |
+| `Series` | `core/series.py:L211` | 648 | One-dimensional ndarray with axis labels (including time series) |
+| `MultiIndex` | `core/indexes/multi.py:L201` | 523 | Multi-level / hierarchical index for higher-dimensional data |
+| `ExtensionArray` | `core/arrays/base.py:L122` | 397 | Abstract interface for custom array types backed by any storage |
+| `RangeIndex` | `core/indexes/range.py:L88` | 428 | Optimized integer index for monotonic integer ranges |
+| `DatetimeArray` | `core/arrays/datetimes.py:L163` | 222 | Array of datetime64 data with timezone support |
+| `Index` | `core/indexes/base.py:L313` | 212 | Immutable sequence for axis labeling |
+| `GroupBy` | `core/groupby/groupby.py:L752` | 76 | Split-apply-combine grouping operation |
+| `Resampler` | `core/resample.py:L119` | 290 | GroupBy-like resampling for time-series data |
+| `DataFrameGroupBy` | `core/groupby/generic.py:L2090` | 34 | GroupBy for DataFrames with aggregation/transform/apply |
 
 ### Additional Key APIs (by degree rank)
 
