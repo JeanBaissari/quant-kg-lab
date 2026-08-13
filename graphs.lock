@@ -159,8 +159,8 @@
     "catboost": {
       "repo": "catboost/catboost",
       "commit": "549af60ecd40819be138046cd9c5ec737dca5e3b",
-      "nodes": 0,
-      "edges": 0
+      "nodes": 793,
+      "edges": 1569
     }
   }
 }
