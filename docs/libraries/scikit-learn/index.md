@@ -8,7 +8,7 @@
 **Domain**: ML & Optimization
 **Source**: scikit-learn/scikit-learn@6f8b95aa2234
 **Graph**: 8450 nodes · 28094 edges
-**Last Verified**: 2026-08-12
+**Last Verified**: 2026-08-13
 
 ## Overview
 
@@ -54,6 +54,9 @@ Hub for the **scikit-learn** library (ML & Optimization tier). The per-module AP
 | scikit-learn::Pipeline | optuna::Study | tuned_by |
 | scipy::_stats() | scikit-learn::SelectKBest | powers |
 | statsmodels::OLS | scikit-learn::LinearRegression | alternative_to |
+| alphalens::performance.py | scikit-learn::BaseEstimator | feeds |
+| shap::Explainer | scikit-learn::BaseEstimator | explains |
+| polars::DataFrame | scikit-learn::BaseEstimator | input_to |
 
 ## Related
 

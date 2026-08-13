@@ -257,6 +257,12 @@
       "label": "DataFrame",
       "library": "polars",
       "source_file": "dataframe/frame.py"
+    },
+    {
+      "id": "pyfolio::timeseries",
+      "label": "timeseries.py",
+      "library": "pyfolio",
+      "source_file": "timeseries.py"
     }
   ],
   "links": [
@@ -553,6 +559,41 @@
       "relation": "input_to",
       "confidence": "CURATED",
       "description": "polars-converted data feeds sklearn fit()"
+    },
+    {
+      "source": "polars::dataframe_frame_dataframe",
+      "target": "vectorbt::portfolio_base_portfolio",
+      "relation": "input_to",
+      "confidence": "CURATED",
+      "description": "polars DataFrame feeds vectorbt Portfolio simulation"
+    },
+    {
+      "source": "riskfolio::src_portfolio_portfolio",
+      "target": "polars::dataframe_frame_dataframe",
+      "relation": "consumes",
+      "confidence": "CURATED",
+      "description": "riskfolio Portfolio consumes polars DataFrames at the boundary"
+    },
+    {
+      "source": "shap::explainer",
+      "target": "statsmodels::regression_linear_model_ols",
+      "relation": "explains",
+      "confidence": "CURATED",
+      "description": "shap LinearExplainer explains statsmodels OLS models"
+    },
+    {
+      "source": "pyfolio::timeseries",
+      "target": "statsmodels::regression_linear_model_ols",
+      "relation": "powered_by",
+      "confidence": "CURATED",
+      "description": "pyfolio perf attribution relies on statsmodels regression"
+    },
+    {
+      "source": "arch::univariate_base_archmodel",
+      "target": "pyfolio::timeseries",
+      "relation": "feeds",
+      "confidence": "CURATED",
+      "description": "arch volatility forecasts feed pyfolio performance reporting"
     }
   ],
   "hyperedges": []

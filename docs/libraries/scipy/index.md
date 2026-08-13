@@ -8,7 +8,7 @@
 **Domain**: Foundation
 **Source**: scipy/scipy@0514ef9e7329
 **Graph**: 14071 nodes · 23466 edges
-**Last Verified**: 2026-08-12
+**Last Verified**: 2026-08-13
 
 ## Overview
 
@@ -39,6 +39,8 @@ Hub for the **scipy** library (Foundation tier). The per-module API reference li
 | scipy::OptimizeResult | optuna::Study | alternative_to |
 | cvxpy::Problem | scipy::OptimizeResult | alternative_to |
 | statsmodels::OLS | scipy::_stats() | powered_by |
+| arch::ADF | scipy::_stats() | powered_by |
+| riskfolio::Portfolio | scipy::OptimizeResult | alternative_to |
 
 ## Related
 

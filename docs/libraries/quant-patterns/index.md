@@ -6,7 +6,7 @@
 **Status**: current
 **Library**: quant-patterns
 **Domain**: Workflows
-**Last Verified**: 2026-08-12
+**Last Verified**: 2026-08-13
 
 ## Overview
 
@@ -16,13 +16,17 @@ Cross-library workflow playbooks — the composable-stack layer. Each composes a
 
 | Playbook | Covers |
 |----------|--------|
+| [`quant-explainability`](../../../skills/quant-patterns/explainability/SKILL.md) | explaining a fitted quant model |
 | [`quant-factor-importance`](../../../skills/quant-patterns/factor-importance/SKILL.md) | ranking features by predictive power in trading models |
 | [`quant-factor-research`](../../../skills/quant-patterns/factor-research/SKILL.md) | researching alpha factors |
+| [`quant-factor-tearsheets`](../../../skills/quant-patterns/factor-tearsheets/SKILL.md) | turning a factor into evidence |
 | [`quant-full-pipeline`](../../../skills/quant-patterns/full-pipeline/SKILL.md) | building an end-to-end quantitative research loop |
 | [`quant-hpo-optimization`](../../../skills/quant-patterns/hpo-optimization/SKILL.md) | tuning trading strategy hyperparameters via Bayesian optimization |
 | [`quant-ml-strategy`](../../../skills/quant-patterns/ml-strategy/SKILL.md) | turning a machine-learning model into a tradable strategy |
 | [`quant-portfolio-construction`](../../../skills/quant-patterns/portfolio-construction/SKILL.md) | building portfolios from strategy signals |
+| [`quant-portfolio-optimization`](../../../skills/quant-patterns/portfolio-optimization/SKILL.md) | building portfolios from expected returns and risk models |
 | [`quant-regime-detection`](../../../skills/quant-patterns/regime-detection/SKILL.md) | detecting market regimes for conditional strategy switching |
+| [`quant-volatility-modelling`](../../../skills/quant-patterns/volatility-modelling/SKILL.md) | modelling and forecasting volatility |
 | [`quant-walk-forward-validation`](../../../skills/quant-patterns/walk-forward-validation/SKILL.md) | implementing walk-forward validation, time-series cross-validation, or rolling/expanding window backtesting for trading strategies |
 
 ## Related

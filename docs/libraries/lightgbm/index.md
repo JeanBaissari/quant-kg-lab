@@ -8,7 +8,7 @@
 **Domain**: ML & Optimization
 **Source**: microsoft/LightGBM@f9bf8d1358cd
 **Graph**: 593 nodes · 2029 edges
-**Last Verified**: 2026-08-12
+**Last Verified**: 2026-08-13
 
 ## Overview
 
@@ -34,6 +34,7 @@ Hub for the **lightgbm** library (ML & Optimization tier). The per-module API re
 | Source | Target | Relation |
 |--------|--------|----------|
 | lightgbm::LGBMClassifier | scikit-learn::GridSearchCV | compatible_with |
+| shap::Explainer | lightgbm::Booster | explains |
 
 ## Related
 

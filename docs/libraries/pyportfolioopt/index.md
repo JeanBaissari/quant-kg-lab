@@ -8,7 +8,7 @@
 **Domain**: Quant Tools
 **Source**: robertmartin8/PyPortfolioOpt@a6638d2e06da
 **Graph**: 342 nodes · 522 edges
-**Last Verified**: 2026-08-12
+**Last Verified**: 2026-08-13
 
 ## Overview
 
@@ -37,6 +37,7 @@ Hub for the **pyportfolioopt** library (Quant Tools tier). The per-module API re
 |--------|--------|----------|
 | pandas::DataFrame | pyportfolioopt::expected_returns.py | input_to |
 | pyportfolioopt::BaseConvexOptimizer | cvxpy::Problem | optimized_by |
+| riskfolio::Portfolio | pyportfolioopt::EfficientFrontier | alternative_to |
 
 ## Related
 

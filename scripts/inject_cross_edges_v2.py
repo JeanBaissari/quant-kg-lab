@@ -70,6 +70,11 @@ ALL_BRIDGES = [
     ("polars", "DataFrame", "pandas", "DataFrame", "alternative_to", "polars DataFrame vs pandas DataFrame for tabular workloads"),
     ("polars", "DataFrame", "numpy", "ndarray", "backed_by", "polars columns/values backed by numpy arrays at the boundary"),
     ("polars", "DataFrame", "scikit-learn", "BaseEstimator", "input_to", "polars-converted data feeds sklearn fit()"),
+    ("polars", "DataFrame", "vectorbt", "Portfolio", "input_to", "polars DataFrame feeds vectorbt Portfolio simulation"),
+    ("riskfolio", "Portfolio", "polars", "DataFrame", "consumes", "riskfolio Portfolio consumes polars DataFrames at the boundary"),
+    ("shap", "Explainer", "statsmodels", "OLS", "explains", "shap LinearExplainer explains statsmodels OLS models"),
+    ("pyfolio", "timeseries.py", "statsmodels", "OLS", "powered_by", "pyfolio perf attribution relies on statsmodels regression"),
+    ("arch", "ARCHModel", "pyfolio", "timeseries.py", "feeds", "arch volatility forecasts feed pyfolio performance reporting"),
 ]
 
 

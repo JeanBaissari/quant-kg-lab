@@ -293,8 +293,43 @@
       "source": "polars::DataFrame",
       "target": "scikit-learn::BaseEstimator",
       "relation": "input_to"
+    },
+    {
+      "bridge": "polars.DataFrame -> vectorbt.Portfolio",
+      "status": "RESOLVED",
+      "source": "polars::DataFrame",
+      "target": "vectorbt::Portfolio",
+      "relation": "input_to"
+    },
+    {
+      "bridge": "riskfolio.Portfolio -> polars.DataFrame",
+      "status": "RESOLVED",
+      "source": "riskfolio::Portfolio",
+      "target": "polars::DataFrame",
+      "relation": "consumes"
+    },
+    {
+      "bridge": "shap.Explainer -> statsmodels.OLS",
+      "status": "RESOLVED",
+      "source": "shap::Explainer",
+      "target": "statsmodels::OLS",
+      "relation": "explains"
+    },
+    {
+      "bridge": "pyfolio.timeseries.py -> statsmodels.OLS",
+      "status": "RESOLVED",
+      "source": "pyfolio::timeseries.py",
+      "target": "statsmodels::OLS",
+      "relation": "powered_by"
+    },
+    {
+      "bridge": "arch.ARCHModel -> pyfolio.timeseries.py",
+      "status": "RESOLVED",
+      "source": "arch::ARCHModel",
+      "target": "pyfolio::timeseries.py",
+      "relation": "feeds"
     }
   ],
-  "resolved": 42,
-  "attempted": 42
+  "resolved": 47,
+  "attempted": 47
 }

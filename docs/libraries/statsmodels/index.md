@@ -8,7 +8,7 @@
 **Domain**: Foundation
 **Source**: statsmodels/statsmodels@179d1f4df416
 **Graph**: 11616 nodes · 33529 edges
-**Last Verified**: 2026-08-12
+**Last Verified**: 2026-08-13
 
 ## Overview
 
@@ -20,6 +20,9 @@ Hub for the **statsmodels** library (Foundation tier). The per-module API refere
 |-------|--------|--------|
 | [`statsmodels`](../../../skills/statsmodels/SKILL.md) | (router) | working with statsmodels — the statistical-modelling entry point. Router indexin |
 | [`statsmodels-core`](../../../skills/statsmodels/core/SKILL.md) | `statsmodels.core` | building statistical models in Python |
+| [`statsmodels-statespace`](../../../skills/statsmodels/statespace/SKILL.md) | `statsmodels.statespace` | statsmodels state-space models |
+| [`statsmodels-tsa`](../../../skills/statsmodels/tsa/SKILL.md) | `statsmodels.tsa` | forecasting time series with statsmodels |
+| [`statsmodels-vector-ar`](../../../skills/statsmodels/vector_ar/SKILL.md) | `statsmodels.vector_ar` | modelling multivariate time series with statsmodels |
 
 ## Graph provenance
 
@@ -35,6 +38,7 @@ Hub for the **statsmodels** library (Foundation tier). The per-module API refere
 | statsmodels::OLS | scipy::_stats() | powered_by |
 | statsmodels::OLS | scikit-learn::LinearRegression | alternative_to |
 | pandas::DataFrame | statsmodels::PandasData | input_to |
+| arch::ARCHModel | statsmodels::OLS | feeds |
 
 ## Related
 

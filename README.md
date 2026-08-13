@@ -127,13 +127,13 @@ python scripts/validate_skills.py --ci  # verify skill claims against live APIs
 
 ## Status
 
-**Gold standard reached for all 13 libraries**: every graph passes the quality gate (real
+**Gold standard reached for all 19 libraries**: every graph passes the quality gate (real
 community labels, ≥80% semantic descriptions, clean god nodes, `built_from_commit` pinned,
-audited edges, ≥95% API-surface coverage); 65 spec-normalized skills with live-API validation,
-graph-node citations and a green citation gate; 41/42 precise cross-library bridges as a
-curated overlay; workflow playbooks across the whole stack; provenance-gated CI. See
-`ROADMAP.md` for the phased plan, remaining polish, and the expansion queue (arch,
-riskfolio-lib, pyfolio, alphalens, polars, shap…).
+audited edges, ≥95% API-surface coverage); 104 spec-normalized skills (13 routers + 79
+modules + 12 playbooks) with live-API validation, graph-node citations (726, 0 dangling) and
+a green citation gate with `--require-complete` on every library; 47/47 precise cross-library
+bridges as a curated overlay; workflow playbooks across the whole stack; provenance-gated CI.
+See `ROADMAP.md` for the phased plan and current state.
 
 ## License
 

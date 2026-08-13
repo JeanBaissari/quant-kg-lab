@@ -8,7 +8,7 @@
 **Domain**: Foundation
 **Source**: pandas-dev/pandas@982854070758
 **Graph**: 11368 nodes · 39913 edges
-**Last Verified**: 2026-08-12
+**Last Verified**: 2026-08-13
 
 ## Overview
 
@@ -20,6 +20,7 @@ Hub for the **pandas** library (Foundation tier). The per-module API reference l
 |-------|--------|--------|
 | [`pandas`](../../../skills/pandas/SKILL.md) | (router) | working with pandas. Router indexing the 2 pandas sub-skills; load the sub-skill |
 | [`pandas-core`](../../../skills/pandas/core/SKILL.md) | `pandas.core` | manipulating tabular data with pandas |
+| [`pandas-groupby`](../../../skills/pandas/groupby/SKILL.md) | `pandas.groupby` | doing split-apply-combine with pandas |
 | [`pandas-ts`](../../../skills/pandas/ts/SKILL.md) | `pandas.ts` | pandas time series |
 
 ## Graph provenance
@@ -39,6 +40,10 @@ Hub for the **pandas** library (Foundation tier). The per-module API reference l
 | pandas::DataFrame | backtrader::DataBase | consumed_by |
 | pandas::DataFrame | pyportfolioopt::expected_returns.py | input_to |
 | pandas::DataFrame | statsmodels::PandasData | input_to |
+| alphalens::performance.py | pandas::DataFrame | input_to |
+| pandas::DataFrame | arch::ARCHModel | input_to |
+| pandas::DataFrame | riskfolio::Portfolio | input_to |
+| polars::DataFrame | pandas::DataFrame | alternative_to |
 
 ## Related
 

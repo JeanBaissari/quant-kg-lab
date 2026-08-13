@@ -8,7 +8,7 @@
 **Domain**: Foundation
 **Source**: numpy/numpy@ab2199763cb1
 **Graph**: 8306 nodes · 13483 edges
-**Last Verified**: 2026-08-12
+**Last Verified**: 2026-08-13
 
 ## Overview
 
@@ -38,6 +38,7 @@ Hub for the **numpy** library (Foundation tier). The per-module API reference li
 | numpy::ndarray | vectorbt::ArrayWrapper | wrapped_by |
 | numpy::linalg | scipy::_linalg_pythran.py | superset_of |
 | numpy::ndarray | cvxpy::Variable | backed_by |
+| polars::DataFrame | numpy::ndarray | backed_by |
 
 ## Related
 

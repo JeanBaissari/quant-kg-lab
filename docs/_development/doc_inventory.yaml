@@ -18,7 +18,7 @@ docs:
 - path: docs/_development/standards.md
   type: Spec
   status: current
-  last_verified: '2026-08-12'
+  last_verified: '2026-08-06'
 - path: docs/_development/templates/README.md
   type: Guide
   status: current
@@ -83,71 +83,143 @@ docs:
   type: Guide
   status: current
   last_verified: '2026-08-06'
+- path: docs/libraries/alphalens/index.md
+  type: Generated
+  status: generated
+  last_verified: '2026-08-13'
+- path: docs/libraries/arch/index.md
+  type: Generated
+  status: generated
+  last_verified: '2026-08-13'
 - path: docs/libraries/backtrader/index.md
   type: Generated
   status: generated
-  last_verified: '2026-08-12'
-- path: docs/libraries/index.md
-  type: Generated
-  status: generated
-  last_verified: '2026-08-12'
-- path: docs/libraries/lightgbm/index.md
-  type: Generated
-  status: generated
-  last_verified: '2026-08-12'
-- path: docs/libraries/numpy/index.md
-  type: Generated
-  status: generated
-  last_verified: '2026-08-12'
-- path: docs/libraries/optuna/index.md
-  type: Generated
-  status: generated
-  last_verified: '2026-08-12'
-- path: docs/libraries/pandas/index.md
-  type: Generated
-  status: generated
-  last_verified: '2026-08-12'
-- path: docs/libraries/quant-patterns/index.md
-  type: Generated
-  status: generated
-  last_verified: '2026-08-12'
-- path: docs/libraries/scikit-learn/index.md
-  type: Generated
-  status: generated
-  last_verified: '2026-08-12'
-- path: docs/libraries/scipy/index.md
-  type: Generated
-  status: generated
-  last_verified: '2026-08-12'
-- path: docs/libraries/statsmodels/index.md
-  type: Generated
-  status: generated
-  last_verified: '2026-08-12'
+  last_verified: '2026-08-13'
 - path: docs/libraries/cvxpy/index.md
   type: Generated
   status: generated
-  last_verified: '2026-08-12'
+  last_verified: '2026-08-13'
+- path: docs/libraries/index.md
+  type: Generated
+  status: generated
+  last_verified: '2026-08-13'
+- path: docs/libraries/lightgbm/index.md
+  type: Generated
+  status: generated
+  last_verified: '2026-08-13'
+- path: docs/libraries/numpy/index.md
+  type: Generated
+  status: generated
+  last_verified: '2026-08-13'
+- path: docs/libraries/optuna/index.md
+  type: Generated
+  status: generated
+  last_verified: '2026-08-13'
+- path: docs/libraries/pandas/index.md
+  type: Generated
+  status: generated
+  last_verified: '2026-08-13'
+- path: docs/libraries/polars/index.md
+  type: Generated
+  status: generated
+  last_verified: '2026-08-13'
+- path: docs/libraries/pyfolio/index.md
+  type: Generated
+  status: generated
+  last_verified: '2026-08-13'
 - path: docs/libraries/pyportfolioopt/index.md
   type: Generated
   status: generated
-  last_verified: '2026-08-12'
+  last_verified: '2026-08-13'
+- path: docs/libraries/quant-patterns/index.md
+  type: Generated
+  status: generated
+  last_verified: '2026-08-13'
+- path: docs/libraries/riskfolio/index.md
+  type: Generated
+  status: generated
+  last_verified: '2026-08-13'
+- path: docs/libraries/scikit-learn/index.md
+  type: Generated
+  status: generated
+  last_verified: '2026-08-13'
+- path: docs/libraries/scipy/index.md
+  type: Generated
+  status: generated
+  last_verified: '2026-08-13'
+- path: docs/libraries/shap/index.md
+  type: Generated
+  status: generated
+  last_verified: '2026-08-13'
+- path: docs/libraries/statsmodels/index.md
+  type: Generated
+  status: generated
+  last_verified: '2026-08-13'
 - path: docs/libraries/ta-lib/index.md
   type: Generated
   status: generated
-  last_verified: '2026-08-12'
+  last_verified: '2026-08-13'
 - path: docs/libraries/vectorbt/index.md
   type: Generated
   status: generated
-  last_verified: '2026-08-12'
+  last_verified: '2026-08-13'
 - path: docs/libraries/xgboost/index.md
   type: Generated
   status: generated
-  last_verified: '2026-08-12'
+  last_verified: '2026-08-13'
 - path: docs/narrative/before-after.md
   type: Narrative
   status: current
   last_verified: '2026-08-06'
+- path: docs/reference/api-surface/alphalens.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/api-surface/arch.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/api-surface/cvxpy.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/api-surface/numpy.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/api-surface/polars.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/api-surface/pyfolio.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/api-surface/pyportfolioopt.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/api-surface/riskfolio.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/api-surface/shap.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/edge-audits/edge-audit-alphalens.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/edge-audits/edge-audit-arch.md
+  type: Generated
+  status: generated
+  last_verified: ''
 - path: docs/reference/edge-audits/edge-audit-backtrader.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/edge-audits/edge-audit-cvxpy.md
   type: Generated
   status: generated
   last_verified: ''
@@ -167,11 +239,31 @@ docs:
   type: Generated
   status: generated
   last_verified: ''
+- path: docs/reference/edge-audits/edge-audit-polars.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/edge-audits/edge-audit-pyfolio.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/edge-audits/edge-audit-pyportfolioopt.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/edge-audits/edge-audit-riskfolio.md
+  type: Generated
+  status: generated
+  last_verified: ''
 - path: docs/reference/edge-audits/edge-audit-scikit-learn.md
   type: Generated
   status: generated
   last_verified: ''
 - path: docs/reference/edge-audits/edge-audit-scipy.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/edge-audits/edge-audit-shap.md
   type: Generated
   status: generated
   last_verified: ''
@@ -191,7 +283,19 @@ docs:
   type: Generated
   status: generated
   last_verified: ''
+- path: docs/reference/quality-gate/gate-alphalens.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/quality-gate/gate-arch.md
+  type: Generated
+  status: generated
+  last_verified: ''
 - path: docs/reference/quality-gate/gate-backtrader.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/quality-gate/gate-cvxpy.md
   type: Generated
   status: generated
   last_verified: ''
@@ -203,110 +307,6 @@ docs:
   type: Generated
   status: generated
   last_verified: ''
-- path: docs/reference/api-surface/numpy.md
-  type: Generated
-  status: generated
-  last_verified: ''
-- path: docs/reference/api-surface/pyportfolioopt.md
-  type: Generated
-  status: generated
-  last_verified: ''
-- path: docs/reference/api-surface/cvxpy.md
-  type: Generated
-  status: generated
-  last_verified: ''
-- path: docs/reference/api-surface/arch.md
-  type: Generated
-  status: generated
-  last_verified: ''
-- path: docs/reference/api-surface/alphalens.md
-  type: Generated
-  status: generated
-  last_verified: ''
-- path: docs/reference/edge-audits/edge-audit-arch.md
-  type: Generated
-  status: generated
-  last_verified: ''
-- path: docs/reference/edge-audits/edge-audit-alphalens.md
-  type: Generated
-  status: generated
-  last_verified: ''
-- path: docs/reference/edge-audits/edge-audit-pyfolio.md
-  type: Generated
-  status: generated
-  last_verified: ''
-- path: docs/reference/api-surface/pyfolio.md
-  type: Generated
-  status: generated
-  last_verified: ''
-- path: docs/reference/quality-gate/gate-pyfolio.md
-  type: Generated
-  status: generated
-  last_verified: ''
-- path: docs/reference/edge-audits/edge-audit-riskfolio.md
-  type: Generated
-  status: generated
-  last_verified: ''
-- path: docs/reference/api-surface/shap.md
-  type: Generated
-  status: generated
-  last_verified: ''
-- path: docs/reference/quality-gate/gate-shap.md
-  type: Generated
-  status: generated
-  last_verified: ''
-- path: docs/reference/edge-audits/edge-audit-shap.md
-  type: Generated
-  status: generated
-  last_verified: ''
-- path: docs/reference/api-surface/polars.md
-  type: Generated
-  status: generated
-  last_verified: ''
-- path: docs/reference/quality-gate/gate-polars.md
-  type: Generated
-  status: generated
-  last_verified: ''
-- path: docs/reference/edge-audits/edge-audit-polars.md
-  type: Generated
-  status: generated
-  last_verified: ''
-- path: docs/reference/api-surface/riskfolio.md
-  type: Generated
-  status: generated
-  last_verified: ''
-- path: docs/reference/quality-gate/gate-riskfolio.md
-  type: Generated
-  status: generated
-  last_verified: ''
-- path: docs/reference/quality-gate/gate-arch.md
-  type: Generated
-  status: generated
-  last_verified: ''
-- path: docs/reference/quality-gate/gate-alphalens.md
-  type: Generated
-  status: generated
-  last_verified: ''
-- path: docs/reference/quality-gate/gate-cvxpy.md
-  type: Generated
-  status: generated
-  last_verified: ''
-- path: docs/reference/edge-audits/edge-audit-cvxpy.md
-  type: Generated
-  status: generated
-  last_verified: ''
-- path: docs/reference/edge-audits/edge-audit-pyportfolioopt.md
-  type: Generated
-  status: generated
-  last_verified: ''
-- path: docs/reference/quality-gate/gate-cvxpy.md
-  type: Generated
-  status: generated
-  last_verified: ''
-- path: docs/reference/quality-gate/gate-pyportfolioopt.md
-  type: Generated
-  status: generated
-  last_verified: ''
 - path: docs/reference/quality-gate/gate-optuna.md
   type: Generated
   status: generated
@@ -315,11 +315,31 @@ docs:
   type: Generated
   status: generated
   last_verified: ''
+- path: docs/reference/quality-gate/gate-polars.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/quality-gate/gate-pyfolio.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/quality-gate/gate-pyportfolioopt.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/quality-gate/gate-riskfolio.md
+  type: Generated
+  status: generated
+  last_verified: ''
 - path: docs/reference/quality-gate/gate-scikit-learn.md
   type: Generated
   status: generated
   last_verified: ''
 - path: docs/reference/quality-gate/gate-scipy.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/quality-gate/gate-shap.md
   type: Generated
   status: generated
   last_verified: ''

@@ -8,7 +8,7 @@
 **Domain**: ML & Optimization
 **Source**: dmlc/xgboost@2a4786e61e08
 **Graph**: 1631 nodes · 4318 edges
-**Last Verified**: 2026-08-12
+**Last Verified**: 2026-08-13
 
 ## Overview
 
@@ -36,6 +36,7 @@ Hub for the **xgboost** library (ML & Optimization tier). The per-module API ref
 | xgboost::XGBClassifier | scikit-learn::Pipeline | compatible_with |
 | xgboost::XGBRegressor | vectorbt::Portfolio | predicts_for |
 | xgboost::TrainingCallback | optuna::Study | optimized_by |
+| shap::Explainer | xgboost::Booster | explains |
 
 ## Related
 

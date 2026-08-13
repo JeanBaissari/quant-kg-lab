@@ -7,8 +7,8 @@
 **Library**: cvxpy
 **Domain**: ML & Optimization
 **Source**: cvxpy/cvxpy@e3b50dccf808
-**Graph**: 6379 nodes · 16514 edges
-**Last Verified**: 2026-08-12
+**Graph**: 6380 nodes · 16515 edges
+**Last Verified**: 2026-08-13
 
 ## Overview
 
@@ -19,9 +19,11 @@ Hub for the **cvxpy** library (ML & Optimization tier). The per-module API refer
 | Skill | Module | Covers |
 |-------|--------|--------|
 | [`cvxpy`](../../../skills/cvxpy/SKILL.md) | (router) | working with cvxpy — the convex-optimization entry point. Router indexing the cv |
+| [`cvxpy-atoms`](../../../skills/cvxpy/atoms/SKILL.md) | `cvxpy.atoms` | choosing cvxpy atoms |
 | [`cvxpy-cone`](../../../skills/cvxpy/cone/SKILL.md) | `cvxpy.cone` | cvxpy constraints |
 | [`cvxpy-core`](../../../skills/cvxpy/core/SKILL.md) | `cvxpy.core` | solving convex optimization problems with cvxpy |
 | [`cvxpy-problems`](../../../skills/cvxpy/problems/SKILL.md) | `cvxpy.problems` | driving cvxpy problem lifecycle |
+| [`cvxpy-solvers`](../../../skills/cvxpy/solvers/SKILL.md) | `cvxpy.solvers` | choosing and tuning cvxpy solvers |
 
 ## Graph provenance
 
@@ -37,6 +39,7 @@ Hub for the **cvxpy** library (ML & Optimization tier). The per-module API refer
 | pyportfolioopt::BaseConvexOptimizer | cvxpy::Problem | optimized_by |
 | numpy::ndarray | cvxpy::Variable | backed_by |
 | cvxpy::Problem | scipy::OptimizeResult | alternative_to |
+| riskfolio::Portfolio | cvxpy::Problem | optimized_by |
 
 ## Related
 

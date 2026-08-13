@@ -5,14 +5,19 @@
 **Type**: Library Index
 **Status**: current
 **Domain**: (index)
-**Last Verified**: 2026-08-12
+**Last Verified**: 2026-08-13
 
 Per-library hubs, grouped by tier. Each hub indexes that library's skills, graph provenance, and cross-library bridges.
+
+## Explainability
+
+- [shap](shap/index.md) — shap/shap
 
 ## Foundation
 
 - [numpy](numpy/index.md) — numpy/numpy
 - [pandas](pandas/index.md) — pandas-dev/pandas
+- [polars](polars/index.md) — pola-rs/polars
 - [scipy](scipy/index.md) — scipy/scipy
 - [statsmodels](statsmodels/index.md) — statsmodels/statsmodels
 
@@ -26,10 +31,17 @@ Per-library hubs, grouped by tier. Each hub indexes that library's skills, graph
 
 ## Quant Tools
 
+- [alphalens](alphalens/index.md) — quantopian/alphalens
 - [backtrader](backtrader/index.md) — mementum/backtrader
+- [pyfolio](pyfolio/index.md) — quantopian/pyfolio
 - [pyportfolioopt](pyportfolioopt/index.md) — robertmartin8/PyPortfolioOpt
+- [riskfolio](riskfolio/index.md) — dcajasn/Riskfolio-Lib
 - [ta-lib](ta-lib/index.md) — TA-Lib/ta-lib-python
 - [vectorbt](vectorbt/index.md) — polakowo/vectorbt
+
+## Statistical Models
+
+- [arch](arch/index.md) — bashtage/arch
 
 ## Workflows
 
