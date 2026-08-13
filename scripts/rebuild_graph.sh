@@ -39,7 +39,7 @@ else echo "ERROR: graphify not found. Set GRAPHIFY_CLI to dist/cli.js (see heade
 pkg_subdir() { case "$1" in
   scikit-learn) echo sklearn;; ta-lib) echo talib;;
   xgboost) echo python-package/xgboost;; lightgbm) echo python-package/lightgbm;;
-  pyportfolioopt) echo pypfopt;; imbalanced-learn) echo imblearn;;
+  pyportfolioopt) echo pypfopt;; imbalanced-learn) echo imblearn;; mplfinance) echo src/mplfinance;;
   *) echo "$1";; esac; }
 
 read -r REPO COMMIT < <(python3 - "$LOCK" "$LIB" <<'PY'
