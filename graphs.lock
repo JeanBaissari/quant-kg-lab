@@ -119,6 +119,12 @@
       "commit": "1f779c90256872c50a16622ce0e4e4f11e885b1a",
       "nodes": 5296,
       "edges": 16925
+    },
+    "empyrical": {
+      "repo": "Quantopian/empyrical",
+      "commit": "9b1beb2745623ae631d8fb690248496e3cd9dc9f",
+      "nodes": 0,
+      "edges": 0
     }
   }
 }
