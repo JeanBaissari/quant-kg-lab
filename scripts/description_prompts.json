@@ -419,6 +419,25 @@
         }
       ],
       "payload_note": "Write exactly ONE semantic sentence per node \u2014 a functional summary a quant user can act on. Never produce code; never quote source."
+    },
+    "pymc": {
+      "emphasis": "PyMC is a probabilistic-programming library (Bayesian modeling): Model (model/core.py \u2014 the Bayesian model container: deterministic/observed/free_rv registries, modelcontext), distributions (distributions/ \u2014 continuous (Normal, StudentT, HalfCauchy, LogNormal, Beta, Gamma, Exponential, Pareto...), discrete (Bernoulli, Binomial, Poisson, NegativeBinomial...), multivariate (MvNormal, Dirichlet, LKJ, Multinomial...), timeseries (AR, GARCH11, RandomWalk, GaussianRandomWalk), mixture, transforms), sampling (sample/sample_posterior_posterior (sampling/forward.py), sample_posterior_predictive, sample_predictive, init methods (jitter+adapt_diag, adapt_full), nuts (NUTS \u2014 mass matrix, step size adaptation), mc backends (backends/ \u2014 ndarray, arviz, zarr, mcbackend)), model building (model_graph (model/graph.py), InitialPoint, compute_log_prob), stats (stats/ \u2014 summary, ess, rhat, effective sample diagnostics), data (data.py \u2014 Minibatch, ConstantData, as_tensor_variable), math (math/ \u2014 operators, logsumexp), exceptions. Describe each class/function's Bayesian role: what it declares, samples, or computes.",
+      "glossary": "Bayesian, posterior, prior, likelihood, NUTS, HMC, Metropolis, trace, rhat, ess, effective sample size, posterior predictive, model, distribution, random walk, AR, GARCH, PyMC",
+      "exemplars": [
+        {
+          "name": "Model (model/core.py)",
+          "desc": "pymc Model: the Bayesian model container \u2014 with pm.Model() as m: declares priors/observed/latent variables; m is the context for sample()."
+        },
+        {
+          "name": "sample (sampling/forward.py)",
+          "desc": "pymc sample(draws, tune, chains, cores): runs MCMC (NUTS default) and returns an InferenceData trace with posterior/tuning samples."
+        },
+        {
+          "name": "sample_posterior_predictive",
+          "desc": "pymc sample_posterior_predictive(trace): draws new data from the posterior \u2014 the Bayesian backtest/forecast distribution."
+        }
+      ],
+      "payload_note": "Write exactly ONE semantic sentence per node \u2014 a functional summary a quant user can act on. Never produce code; never quote source."
     }
   }
 }
