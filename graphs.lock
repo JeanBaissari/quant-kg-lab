@@ -83,6 +83,18 @@
       "commit": "a6638d2e06dae6f444fd022cfd4b3c528902a85b",
       "nodes": 342,
       "edges": 512
+    },
+    "arch": {
+      "repo": "bashtage/arch",
+      "commit": "704bb70e48372e3ccccdde7da379811657ad0224",
+      "nodes": 0,
+      "edges": 0
+    },
+    "alphalens": {
+      "repo": "quantopian/alphalens",
+      "commit": "77084f1e4c2c0be407e032d444fb19e4be4b0f37",
+      "nodes": 0,
+      "edges": 0
     }
   }
 }
