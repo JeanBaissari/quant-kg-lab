@@ -165,8 +165,8 @@
     "ta": {
       "repo": "bukosabino/ta",
       "commit": "a890410710a6e483c9ba08da7f3dd5089e4b9dff",
-      "nodes": 0,
-      "edges": 0
+      "nodes": 538,
+      "edges": 1208
     }
   }
 }

@@ -7,8 +7,8 @@ Graph: `knowledge_graphs/ta/.graphify/graph.json` · GRAPH_SPEC §5 · generated
 | criterion | status | counts |
 |---|---|---|
 | c1 real labels | PASS | distinct=42 non_singleton=42 default_labels=0 default_graph=0 coverage=100.0% |
-| c2 descriptions | PASS | described=273 describable=308 pct=88.6% |
+| c2 descriptions | PASS | described=274 describable=309 pct=88.7% |
 | c3 god nodes | PASS | top20=20 noise=0 |
-| c4 pin | FAIL | expected=a890410710a6e483c9ba08da7f3dd5089e4b9dff found=aeaaa272f4bf6ff96212f44db20081bb791d2d8f (graph) |
+| c4 pin | PASS | expected=a890410710a6e483c9ba08da7f3dd5089e4b9dff found=a890410710a6e483c9ba08da7f3dd5089e4b9dff (graph) |
 | c5 audited | PASS | exists |
-| c6 api surface | PASS | no manifest (probe pending) |
+| c6 api surface | PASS | curated=1 unresolved=0 surface_coverage=100.0% (target 95.0%) |

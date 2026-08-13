@@ -1,0 +1,10 @@
+{
+  "library": "ta",
+  "symbols": [
+    {
+      "label": "macd()",
+      "source_file": "trend.py",
+      "description": "Moving Average Convergence Divergence (MACD)."
+    }
+  ]
+}
