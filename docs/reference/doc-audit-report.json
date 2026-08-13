@@ -1,10 +1,13 @@
 {
   "errors": {},
-  "census_errors": [],
+  "census_errors": [
+    "doc not in census: docs/reference/api-surface/pyfolio.md",
+    "doc not in census: docs/reference/quality-gate/gate-pyfolio.md"
+  ],
   "totals": {
-    "docs": 73,
+    "docs": 75,
     "identity": 0,
     "links": 0,
-    "census": 0
+    "census": 2
   }
 }
