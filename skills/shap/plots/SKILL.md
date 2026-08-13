@@ -35,7 +35,7 @@ and `dependence_plot` (feature interaction).
 | `beeswarm()` | `plots/_beeswarm.py` | Global summary: feature importance with value distribution |
 | `force_plot()` | `plots/_force.py` | Additive force layout for single or multiple rows |
 | `bar_plot()` | `plots/_bar.py` | Mean |SHAP| bar summary |
-| `dependence_plot()` | `plots/_dependence.py` | Feature value vs SHAP value (interaction view) |
+| `dependence_plot()` | `plots/_scatter.py` | Feature value vs SHAP value — at this pin a legacy alias of `dependence_legacy` (see `shap/__init__.py`) |
 | `plots/resources/` | `plots/resources/` | Bundled JS/logo assets for interactive force plots |
 
 ## Common Patterns
