@@ -34,12 +34,12 @@ pre-estimation gate for volatility models and cointegration setups.
 | `ADF` | `unitroot/unitroot.py:L672` | Augmented Dickey-Fuller test — null: unit root |
 | `PhillipsPerron` | `unitroot/unitroot.py:L1012` | Phillips-Perron test — robust to serial correlation |
 | `KPSS` | `unitroot/unitroot.py:L1215` | Kwiatkowski-Phillips-Schmidt-Shin — null: stationary |
-| `StationarityTest` | `unitroot/unitroot.py` | Shared base: `stat`, `pvalue`, `critical_values`, `.summary()` |
 
 ## Common Patterns
 
 - **Stationarity gate**: `ADF(series).pvalue < 0.05` → reject unit root; cross-check with
-  `KPSS(series).pvalue > 0.05` (null: stationary).
+  `KPSS(series).pvalue > 0.05` (null: stationary). Each test exposes `stat`, `pvalue`,
+  `critical_values` and `.summary()`.
 - **Pair strategy pre-check**: Engle-Granger cointegration (`arch.unitroot.cointegration`)
   before pairs trading.
 - **On returns vs levels**: test LEVELS for vol-model inputs; returns are usually stationary.

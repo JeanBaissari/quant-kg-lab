@@ -42,9 +42,7 @@
     "skills/arch/unitroot/SKILL.md": {
       "lint": [],
       "api_fail": [],
-      "api_warn": [
-        "class StationarityTest: not found (library not installed, no graph node)"
-      ],
+      "api_warn": [],
       "meta_warn": [],
       "provenance": []
     },
