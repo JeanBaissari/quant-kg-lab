@@ -1,6 +1,6 @@
 {
-  "generated": "2026-08-13T20:47:34+00:00",
-  "git_sha": "45ad8f3",
+  "generated": "2026-08-13T22:22:45+00:00",
+  "git_sha": "ae2dce2",
   "mode": {
     "ci": true,
     "strict": false,
@@ -90,6 +90,42 @@
       "api_fail": [],
       "api_warn": [],
       "meta_warn": [],
+      "provenance": []
+    },
+    "skills/catboost/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [
+        "graph meta: community_count mismatch \u2014 graph has 52, skill claims 38"
+      ],
+      "provenance": []
+    },
+    "skills/catboost/core/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [
+        "graph meta: community_count mismatch \u2014 graph has 52, skill claims 38"
+      ],
+      "provenance": []
+    },
+    "skills/catboost/evaluation/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [
+        "graph meta: community_count mismatch \u2014 graph has 52, skill claims 38"
+      ],
+      "provenance": []
+    },
+    "skills/catboost/pool/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [
+        "graph meta: community_count mismatch \u2014 graph has 52, skill claims 38"
+      ],
       "provenance": []
     },
     "skills/cvxpy/SKILL.md": {
@@ -972,6 +1008,6 @@
     "api_fail": 0,
     "provenance": 0,
     "api_warn": 52,
-    "meta_warn": 0
+    "meta_warn": 4
   }
 }

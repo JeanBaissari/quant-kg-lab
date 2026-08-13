@@ -29,6 +29,7 @@
 | statsmodels | Statistical Models | 11616 · 33529 | 6 | [`statsmodels`](../../skills/statsmodels/SKILL.md) |
 | alphalens | — | 172 · 231 | 2 | [`alphalens`](../../skills/alphalens/SKILL.md) |
 | arch | — | 1367 · 3900 | 4 | [`arch`](../../skills/arch/SKILL.md) |
+| catboost | — | 793 · 1569 | 3 | [`catboost`](../../skills/catboost/SKILL.md) |
 | cvxpy | — | 6380 · 16515 | 5 | [`cvxpy`](../../skills/cvxpy/SKILL.md) |
 | empyrical | — | 180 · 258 | 2 | [`empyrical`](../../skills/empyrical/SKILL.md) |
 | imbalanced-learn | — | 611 · 865 | 3 | [`imbalanced-learn`](../../skills/imbalanced-learn/SKILL.md) |
@@ -137,6 +138,12 @@
 - [`arch-forecast`](../../skills/arch/forecast/SKILL.md) — Use when forecasting with arch models — forecast()/rolling_forecast, variance vs mean forecasts, analytic/simulation/bootstrap methods, and ARCHModelForecast result objects.
 - [`arch-unitroot`](../../skills/arch/unitroot/SKILL.md) — Use when testing for unit roots and stationarity with arch — ADF, Phillips-Perron, KPSS, and cointegration tests.
 - [`arch-volatility`](../../skills/arch/volatility/SKILL.md) — Use when modelling conditional volatility with arch — ARCH/GARCH/EGARCH fits, conditional_volatility, and forecast().
+
+### catboost
+- [`catboost`](../../skills/catboost/SKILL.md) *(router)* — Use when working with catboost — the boosting entry point. Router indexing the catboost sub-skills; load the sub-skill for the layer you need.
+- [`catboost-core`](../../skills/catboost/core/SKILL.md) — Use when training catboost models — CatBoostClassifier/Regressor/Ranker, loss_function and eval_metric choices, native categorical handling, model persistence, and feature importance.
+- [`catboost-evaluation`](../../skills/catboost/evaluation/SKILL.md) — Use when cross-validating or evaluating catboost models — cv() fold training, CatboostEvaluation model comparison, metric evaluation results, and fold handling.
+- [`catboost-pool`](../../skills/catboost/pool/SKILL.md) — Use when building catboost data containers — Pool with cat_features/text_features/group_id/pairs, and the from_dataframe/from_numpy constructors.
 
 ### cvxpy
 - [`cvxpy`](../../skills/cvxpy/SKILL.md) *(router)* — Use when working with cvxpy — the convex-optimization entry point. Router indexing the cvxpy sub-skills; load the sub-skill for the layer you need.
