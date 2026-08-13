@@ -270,8 +270,29 @@
       "source": "shap::Explainer",
       "target": "lightgbm::Booster",
       "relation": "explains"
+    },
+    {
+      "bridge": "polars.DataFrame -> pandas.DataFrame",
+      "status": "RESOLVED",
+      "source": "polars::DataFrame",
+      "target": "pandas::DataFrame",
+      "relation": "alternative_to"
+    },
+    {
+      "bridge": "polars.DataFrame -> numpy.ndarray",
+      "status": "RESOLVED",
+      "source": "polars::DataFrame",
+      "target": "numpy::ndarray",
+      "relation": "backed_by"
+    },
+    {
+      "bridge": "polars.DataFrame -> scikit-learn.BaseEstimator",
+      "status": "RESOLVED",
+      "source": "polars::DataFrame",
+      "target": "scikit-learn::BaseEstimator",
+      "relation": "input_to"
     }
   ],
-  "resolved": 38,
-  "attempted": 39
+  "resolved": 41,
+  "attempted": 42
 }

@@ -117,8 +117,8 @@
     "polars": {
       "repo": "pola-rs/polars",
       "commit": "1f779c90256872c50a16622ce0e4e4f11e885b1a",
-      "nodes": 0,
-      "edges": 0
+      "nodes": 5296,
+      "edges": 16925
     }
   }
 }

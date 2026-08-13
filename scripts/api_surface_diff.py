@@ -28,7 +28,7 @@ THRESHOLD = 95.0
 IMPORT_NAME = {"scikit-learn": "sklearn", "ta-lib": "talib", "pyportfolioopt": "pypfopt"}
 PKG_OF = {"scikit-learn": "sklearn", "ta-lib": "talib", "pyportfolioopt": "pypfopt",
           "arch": "arch", "alphalens": "alphalens", "pyfolio": "pyfolio",
-          "riskfolio": "riskfolio", "polars": "polars", "shap": "shap"}
+          "riskfolio": "riskfolio", "polars": "py-polars/src/polars", "shap": "shap"}
 
 BUILTIN_TYPES = {"builtin_function_or_method", "method_descriptor",
                  "_ArrayFunctionDispatcher", "getset_descriptor", "classmethod",

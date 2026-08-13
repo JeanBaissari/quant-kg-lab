@@ -17,7 +17,7 @@
 | Library | Domain | Nodes · Edges | Skills | Router |
 |---------|--------|---------------|--------|--------|
 | numpy | Foundation Layer | 8306 · 13483 | 3 | [`numpy`](../../skills/numpy/SKILL.md) |
-| pandas | Foundation Layer | 11368 · 39913 | 2 | [`pandas`](../../skills/pandas/SKILL.md) |
+| pandas | Foundation Layer | 11368 · 39913 | 3 | [`pandas`](../../skills/pandas/SKILL.md) |
 | scipy | Foundation Layer | 14071 · 23466 | 3 | [`scipy`](../../skills/scipy/SKILL.md) |
 | lightgbm | ML & Optimization | 593 · 2029 | 2 | [`lightgbm`](../../skills/lightgbm/SKILL.md) |
 | optuna | ML & Optimization | 2205 · 4010 | 7 | [`optuna`](../../skills/optuna/SKILL.md) |
@@ -26,13 +26,15 @@
 | backtrader | Quant Tools | 2680 · 4964 | 2 | [`backtrader`](../../skills/backtrader/SKILL.md) |
 | ta-lib | Quant Tools | 381 · 379 | 1 | — |
 | vectorbt | Quant Tools | 3682 · 9212 | 3 | [`vectorbt`](../../skills/vectorbt/SKILL.md) |
-| statsmodels | Statistical Models | 11616 · 33529 | 1 | [`statsmodels`](../../skills/statsmodels/SKILL.md) |
+| statsmodels | Statistical Models | 11616 · 33529 | 4 | [`statsmodels`](../../skills/statsmodels/SKILL.md) |
 | alphalens | — | 172 · 231 | 2 | [`alphalens`](../../skills/alphalens/SKILL.md) |
 | arch | — | 1367 · 3900 | 3 | [`arch`](../../skills/arch/SKILL.md) |
 | cvxpy | — | 6380 · 16515 | 3 | [`cvxpy`](../../skills/cvxpy/SKILL.md) |
+| polars | — | 5296 · 16925 | 3 | [`polars`](../../skills/polars/SKILL.md) |
 | pyfolio | — | 305 · 361 | 2 | [`pyfolio`](../../skills/pyfolio/SKILL.md) |
 | pyportfolioopt | — | 342 · 512 | 4 | [`pyportfolioopt`](../../skills/pyportfolioopt/SKILL.md) |
 | riskfolio | — | 426 · 599 | 3 | [`riskfolio`](../../skills/riskfolio/SKILL.md) |
+| shap | — | 1277 · 1752 | 2 | [`shap`](../../skills/shap/SKILL.md) |
 
 ## Skills index
 
@@ -45,6 +47,7 @@
 ### pandas
 - [`pandas`](../../skills/pandas/SKILL.md) *(router)* — Use when working with pandas. Router indexing the 2 pandas sub-skills; load the sub-skill for the module you need.
 - [`pandas-core`](../../skills/pandas/core/SKILL.md) — Use when manipulating tabular data with pandas — DataFrame, Series, Index, GroupBy, merge, concat, pivot, and melt.
+- [`pandas-groupby`](../../skills/pandas/groupby/SKILL.md) — Use when doing split-apply-combine with pandas — DataFrameGroupBy, agg/apply/transform, rolling group statistics, and resampling workflows.
 - [`pandas-ts`](../../skills/pandas/ts/SKILL.md) — Use when working with pandas time series — resample, rolling, expanding, ewm, shift, diff, pct_change, and DateOffset.
 
 ### scipy
@@ -109,6 +112,9 @@
 ### statsmodels
 - [`statsmodels`](../../skills/statsmodels/SKILL.md) *(router)* — Use when working with statsmodels — the statistical-modelling entry point. Router indexing the statsmodels sub-skills; load the sub-skill for the model family you need.
 - [`statsmodels-core`](../../skills/statsmodels/core/SKILL.md) — Use when building statistical models in Python — OLS/GLS/WLS, GLM, model results and diagnostics, formula API, and summary tables.
+- [`statsmodels-statespace`](../../skills/statsmodels/statespace/SKILL.md) — Use when working with statsmodels state-space models — MLEModel, MLEResults, Initialization, and news/impact analysis.
+- [`statsmodels-tsa`](../../skills/statsmodels/tsa/SKILL.md) — Use when forecasting time series with statsmodels — ARIMA/SARIMAX, ExponentialSmoothing, and the arima process tools.
+- [`statsmodels-vector-ar`](../../skills/statsmodels/vector_ar/SKILL.md) — Use when modelling multivariate time series with statsmodels — VAR/VECM, impulse-response analysis, and causality/whiteness tests.
 
 ### alphalens
 - [`alphalens`](../../skills/alphalens/SKILL.md) *(router)* — Use when working with alphalens — the factor-analysis entry point. Router indexing the alphalens sub-skills; load the sub-skill for the analysis layer you need.
@@ -127,6 +133,12 @@
 - [`cvxpy-core`](../../skills/cvxpy/core/SKILL.md) — Use when solving convex optimization problems with cvxpy — variables, parameters, objectives, Problem.solve(), and DCP analysis.
 - [`cvxpy-problems`](../../skills/cvxpy/problems/SKILL.md) — Use when driving cvxpy problem lifecycle — Problem.solve() options, solver stats, warm starts, and solver selection (SCS/ECOS/OSQP/Clarabel).
 
+### polars
+- [`polars`](../../skills/polars/SKILL.md) *(router)* — Use when working with polars — the DataFrame entry point. Router indexing the polars sub-skills; load the sub-skill for the layer you need.
+- [`polars-dataframe`](../../skills/polars/dataframe/SKILL.md) — Use when working with polars DataFrames and Series — construction, IO (read/scan parquet+csv), schema, and the eager API.
+- [`polars-expressions`](../../skills/polars/expressions/SKILL.md) — Use when building polars expression pipelines — col, select/filter/with_columns, group_by aggregations, window functions, and join/reshape operations.
+- [`polars-performance`](../../skills/polars/performance/SKILL.md) — Use when optimizing polars pipelines — lazy execution, scan/sink streaming, query planning, and parallelization.
+
 ### pyfolio
 - [`pyfolio`](../../skills/pyfolio/SKILL.md) *(router)* — Use when working with pyfolio — the portfolio-reporting entry point. Router indexing the pyfolio sub-skills; load the sub-skill for the reporting layer you need.
 - [`pyfolio-tearsheets`](../../skills/pyfolio/tearsheets/SKILL.md) — Use when generating portfolio tear sheets with pyfolio — create_returns_tear_sheet, create_full_tear_sheet, and performance statistics.
@@ -144,6 +156,11 @@
 - [`riskfolio-hrp`](../../skills/riskfolio/hrp/SKILL.md) — Use when building hierarchical portfolio strategies with Riskfolio-Lib — HCPortfolio, HRP/HERC, DBHT clustering, and codependence measures.
 - [`riskfolio-portfolio`](../../skills/riskfolio/portfolio/SKILL.md) — Use when building constrained portfolio optimizations with Riskfolio-Lib — Portfolio, risk measures, constraints, and the cvxpy-backed optimization() call.
 - [`riskfolio-risk-measures`](../../skills/riskfolio/risk_measures/SKILL.md) — Use when working with Riskfolio-Lib risk measures and risk contribution — Sharpe_Risk, Risk_Contribution, CVaR/CDaR/MAD/LPM families, and matrix helpers.
+
+### shap
+- [`shap`](../../skills/shap/SKILL.md) *(router)* — Use when working with shap — the model-explainability entry point. Router indexing the shap sub-skills; load the sub-skill for the layer you need.
+- [`shap-explainers`](../../skills/shap/explainers/SKILL.md) — Use when computing SHAP values with shap — Explainer (Tree/Linear/Kernel/Deep), Explanation objects, and maskers.
+- [`shap-plots`](../../skills/shap/plots/SKILL.md) — Use when visualizing SHAP explanations — waterfall, summary/beeswarm, force, bar, and dependence plots.
 
 ## Workflow playbooks (composable stack)
 
@@ -195,6 +212,12 @@
 | riskfolio::Portfolio | pyportfolioopt::EfficientFrontier | alternative_to |
 | pandas::DataFrame | riskfolio::Portfolio | input_to |
 | riskfolio::Portfolio | scipy::OptimizeResult | alternative_to |
+| shap::Explainer | scikit-learn::BaseEstimator | explains |
+| shap::Explainer | xgboost::Booster | explains |
+| shap::Explainer | lightgbm::Booster | explains |
+| polars::DataFrame | pandas::DataFrame | alternative_to |
+| polars::DataFrame | numpy::ndarray | backed_by |
+| polars::DataFrame | scikit-learn::BaseEstimator | input_to |
 
 _Generated by `scripts/inject_cross_edges_v2.py`; overlay graph at `knowledge_graphs/_cross_library/`. A few endpoints that exist only as Cython/internal nodes (e.g. ta-lib RSI/MACD) are omitted._
 

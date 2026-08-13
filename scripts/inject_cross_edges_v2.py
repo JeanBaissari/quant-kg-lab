@@ -67,7 +67,11 @@ ALL_BRIDGES = [
     ("shap", "Explainer", "scikit-learn", "BaseEstimator", "explains", "shap Explainer explains sklearn estimators"),
     ("shap", "Explainer", "xgboost", "Booster", "explains", "shap TreeExplainer explains xgboost models"),
     ("shap", "Explainer", "lightgbm", "Booster", "explains", "shap TreeExplainer explains lightgbm models"),
+    ("polars", "DataFrame", "pandas", "DataFrame", "alternative_to", "polars DataFrame vs pandas DataFrame for tabular workloads"),
+    ("polars", "DataFrame", "numpy", "ndarray", "backed_by", "polars columns/values backed by numpy arrays at the boundary"),
+    ("polars", "DataFrame", "scikit-learn", "BaseEstimator", "input_to", "polars-converted data feeds sklearn fit()"),
 ]
+
 
 
 

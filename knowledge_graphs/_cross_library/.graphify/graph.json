@@ -239,6 +239,12 @@
       "label": "Booster",
       "library": "lightgbm",
       "source_file": "basic.py"
+    },
+    {
+      "id": "polars::dataframe_frame_dataframe",
+      "label": "DataFrame",
+      "library": "polars",
+      "source_file": "dataframe/frame.py"
     }
   ],
   "links": [
@@ -507,6 +513,27 @@
       "relation": "explains",
       "confidence": "CURATED",
       "description": "shap TreeExplainer explains lightgbm models"
+    },
+    {
+      "source": "polars::dataframe_frame_dataframe",
+      "target": "pandas::dataframe",
+      "relation": "alternative_to",
+      "confidence": "CURATED",
+      "description": "polars DataFrame vs pandas DataFrame for tabular workloads"
+    },
+    {
+      "source": "polars::dataframe_frame_dataframe",
+      "target": "numpy::ndarray",
+      "relation": "backed_by",
+      "confidence": "CURATED",
+      "description": "polars columns/values backed by numpy arrays at the boundary"
+    },
+    {
+      "source": "polars::dataframe_frame_dataframe",
+      "target": "scikit-learn::base_baseestimator",
+      "relation": "input_to",
+      "confidence": "CURATED",
+      "description": "polars-converted data feeds sklearn fit()"
     }
   ],
   "hyperedges": []

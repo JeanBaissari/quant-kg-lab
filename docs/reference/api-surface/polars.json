@@ -1,0 +1,9 @@
+{
+  "lib": "polars",
+  "total": 680,
+  "present": 680,
+  "missing": 0,
+  "coverage": 100.0,
+  "by_mechanism": {},
+  "generated": "2026-08-12"
+}
