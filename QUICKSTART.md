@@ -50,18 +50,17 @@ cp -r skills/scipy/stats ~/.claude/skills/scipy-stats
 ```
 
 Everything you need is in the release assets — no repo clone required. Verify a bundle's
-integrity:
+integrity with the **consumer contract** (QKG_053):
 
 ```bash
-python3 - <<'EOF'
-import json, hashlib, zipfile
-m = json.load(open("bundle.json"))
-with zipfile.ZipFile("qkg-scipy.zip") as z:
-    for art, sha in m["libraries"]["scipy"]["artifacts"].items():
-        assert hashlib.sha256(z.read(art)).hexdigest() == sha
-print("scipy bundle intact")
-EOF
+python3 scripts/validate_bundle.py dist            # full release dir
+python3 scripts/validate_bundle.py dist scipy      # single library
 ```
+
+It asserts: manifest schema + per-file/zip sha256, sanctioned arcnames only (no absolute
+paths, no gitignored intermediates), `graph.json.built_from_commit` == manifest commit,
+node/edge counts, and every skill's `graph_hash` == the bundled graph it cites. The same
+tool runs in the release workflow — a release that fails verification never ships.
 
 ## What you get
 
