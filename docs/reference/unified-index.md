@@ -34,6 +34,7 @@
 | imbalanced-learn | — | 611 · 865 | 3 | [`imbalanced-learn`](../../skills/imbalanced-learn/SKILL.md) |
 | polars | — | 5296 · 16925 | 5 | [`polars`](../../skills/polars/SKILL.md) |
 | pyfolio | — | 305 · 361 | 2 | [`pyfolio`](../../skills/pyfolio/SKILL.md) |
+| pymc | — | 4067 · 11144 | 3 | [`pymc`](../../skills/pymc/SKILL.md) |
 | pyportfolioopt | — | 342 · 512 | 4 | [`pyportfolioopt`](../../skills/pyportfolioopt/SKILL.md) |
 | quantstats | — | 393 · 531 | 3 | [`quantstats`](../../skills/quantstats/SKILL.md) |
 | riskfolio | — | 426 · 599 | 3 | [`riskfolio`](../../skills/riskfolio/SKILL.md) |
@@ -163,6 +164,12 @@
 - [`pyfolio`](../../skills/pyfolio/SKILL.md) *(router)* — Use when working with pyfolio — the portfolio-reporting entry point. Router indexing the pyfolio sub-skills; load the sub-skill for the reporting layer you need.
 - [`pyfolio-tearsheets`](../../skills/pyfolio/tearsheets/SKILL.md) — Use when generating portfolio tear sheets with pyfolio — create_returns_tear_sheet, create_full_tear_sheet, and performance statistics.
 - [`pyfolio-timeseries`](../../skills/pyfolio/timeseries/SKILL.md) — Use when computing portfolio performance statistics with pyfolio — perf_stats, rolling Sharpe/drawdown, drawdown series, and timeseries analytics.
+
+### pymc
+- [`pymc`](../../skills/pymc/SKILL.md) *(router)* — Use when working with pymc — the Bayesian-modelling entry point. Router indexing the pymc sub-skills; load the sub-skill for the modelling stage you need.
+- [`pymc-distributions`](../../skills/pymc/distributions/SKILL.md) — Use when choosing PyMC prior distributions — continuous/discrete/multivariate families, timeseries priors (RandomWalk/AR/GARCH11), transforms, and distribution registration.
+- [`pymc-model`](../../skills/pymc/model/SKILL.md) — Use when declaring PyMC Bayesian models — Model context, priors/observed/free_rv registries, deterministic nodes, modelcontext, and the data layer (Minibatch, ConstantData).
+- [`pymc-sampling`](../../skills/pymc/sampling/SKILL.md) — Use when sampling PyMC models — pm.sample()/sample_posterior_predictive()/sample_prior_predictive(), NUTS/HMC step selection and tuning, backends, and arviz diagnostics (rhat/ess/summary).
 
 ### pyportfolioopt
 - [`pyportfolioopt`](../../skills/pyportfolioopt/SKILL.md) *(router)* — Use when working with PyPortfolioOpt — the portfolio-optimization entry point. Router indexing the pypfopt sub-skills; load the sub-skill for the estimator you need.

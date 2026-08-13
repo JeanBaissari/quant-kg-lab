@@ -223,6 +223,10 @@ docs:
   type: Generated
   status: generated
   last_verified: ''
+- path: docs/reference/api-surface/pymc.md
+  type: Generated
+  status: generated
+  last_verified: ''
 - path: docs/reference/api-surface/pyportfolioopt.md
   type: Generated
   status: generated

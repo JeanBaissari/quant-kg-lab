@@ -449,6 +449,42 @@
       "meta_warn": [],
       "provenance": []
     },
+    "skills/pymc/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [
+        "graph meta: community_count mismatch \u2014 graph has 156, skill claims 135"
+      ],
+      "provenance": []
+    },
+    "skills/pymc/distributions/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [
+        "graph meta: community_count mismatch \u2014 graph has 156, skill claims 135"
+      ],
+      "provenance": []
+    },
+    "skills/pymc/model/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [
+        "graph meta: community_count mismatch \u2014 graph has 156, skill claims 135"
+      ],
+      "provenance": []
+    },
+    "skills/pymc/sampling/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [
+        "graph meta: community_count mismatch \u2014 graph has 156, skill claims 135"
+      ],
+      "provenance": []
+    },
     "skills/pyportfolioopt/SKILL.md": {
       "lint": [],
       "api_fail": [],
