@@ -18,6 +18,10 @@ Hub for the **quantstats** library (Quant Tools tier). The per-module API refere
 
 | Skill | Module | Covers |
 |-------|--------|--------|
+| [`quantstats`](../../../skills/quantstats/SKILL.md) | (router) | working with quantstats — the portfolio-analytics entry point. Router indexing t |
+| [`quantstats-plots`](../../../skills/quantstats/plots/SKILL.md) | `quantstats.plots` | plotting portfolio analytics with quantstats |
+| [`quantstats-reports`](../../../skills/quantstats/reports/SKILL.md) | `quantstats.reports` | generating quantstats HTML tear-sheet reports |
+| [`quantstats-stats`](../../../skills/quantstats/stats/SKILL.md) | `quantstats.stats` | computing portfolio analytics metrics with quantstats |
 
 ## Graph provenance
 

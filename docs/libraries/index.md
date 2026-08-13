@@ -20,6 +20,7 @@ Per-library hubs, grouped by tier. Each hub indexes that library's skills, graph
 - [polars](polars/index.md) — pola-rs/polars
 - [scipy](scipy/index.md) — scipy/scipy
 - [statsmodels](statsmodels/index.md) — statsmodels/statsmodels
+- [yfinance](yfinance/index.md) — ranaroussi/yfinance
 
 ## ML & Optimization
 
