@@ -1,16 +1,12 @@
 {
   "errors": {},
   "census_errors": [
-    "doc not in census: docs/reference/api-surface/alphalens.md",
-    "doc not in census: docs/reference/edge-audits/edge-audit-alphalens.md",
-    "doc not in census: docs/reference/edge-audits/edge-audit-arch.md",
-    "doc not in census: docs/reference/quality-gate/gate-alphalens.md",
-    "doc not in census: docs/reference/quality-gate/gate-arch.md"
+    "census lists missing doc: docs/reference/api-surface/arch.md"
   ],
   "totals": {
     "docs": 70,
     "identity": 0,
     "links": 0,
-    "census": 5
+    "census": 1
   }
 }

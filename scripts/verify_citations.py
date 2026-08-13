@@ -78,6 +78,8 @@ def check_complete(lib, labels, cur, excl):
                 sym = m.group(1).split(".")[-1].split("(")[0]
                 if not sym:
                     continue
+                if sym.endswith((".py", ".pyx", ".c")):
+                    continue  # module-node cells (e.g. `plotting.py`), not API symbols
                 ok = (sym in labels or f"{sym}()" in labels
                       or sym in cur or f"{sym}()" in cur
                       or sym in excl or f"{sym}()" in excl)

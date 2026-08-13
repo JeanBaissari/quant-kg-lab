@@ -215,6 +215,30 @@ docs:
   type: Generated
   status: generated
   last_verified: ''
+- path: docs/reference/api-surface/arch.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/api-surface/alphalens.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/edge-audits/edge-audit-arch.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/edge-audits/edge-audit-alphalens.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/quality-gate/gate-arch.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/quality-gate/gate-alphalens.md
+  type: Generated
+  status: generated
+  last_verified: ''
 - path: docs/reference/quality-gate/gate-cvxpy.md
   type: Generated
   status: generated
