@@ -1,0 +1,909 @@
+{
+  "generated": "2026-08-13T20:05:25+00:00",
+  "git_sha": "123450f",
+  "mode": "all",
+  "ci": true,
+  "pass": true,
+  "libraries": [
+    {
+      "lib": "numpy",
+      "pass": true,
+      "criteria": {
+        "c1": {
+          "name": "real labels",
+          "pass": true,
+          "counts": "distinct=619 non_singleton=595 default_labels=0 default_graph=0 coverage=100.0%"
+        },
+        "c2": {
+          "name": "descriptions",
+          "pass": true,
+          "counts": "described=4620 describable=5520 pct=83.7%"
+        },
+        "c3": {
+          "name": "god nodes",
+          "pass": true,
+          "counts": "top20=20 noise=0"
+        },
+        "c4": {
+          "name": "pin",
+          "pass": true,
+          "counts": "expected=ab2199763cb17878cd8f34fcbc97106c5397f922 found=ab2199763cb17878cd8f34fcbc97106c5397f922 (graph)"
+        },
+        "c5": {
+          "name": "audited",
+          "pass": true,
+          "counts": "exists"
+        },
+        "c6": {
+          "name": "api surface",
+          "pass": true,
+          "counts": "curated=212 unresolved=0 surface_coverage=100.0% (target 95.0%)"
+        }
+      }
+    },
+    {
+      "lib": "scipy",
+      "pass": true,
+      "criteria": {
+        "c1": {
+          "name": "real labels",
+          "pass": true,
+          "counts": "distinct=1061 non_singleton=1042 default_labels=0 default_graph=0 coverage=100.0%"
+        },
+        "c2": {
+          "name": "descriptions",
+          "pass": true,
+          "counts": "described=6984 describable=8640 pct=80.8%"
+        },
+        "c3": {
+          "name": "god nodes",
+          "pass": true,
+          "counts": "top20=20 noise=0"
+        },
+        "c4": {
+          "name": "pin",
+          "pass": true,
+          "counts": "expected=0514ef9e73297ef8d6f46379731eedc619f9d201 found=0514ef9e73297ef8d6f46379731eedc619f9d201 (graph)"
+        },
+        "c5": {
+          "name": "audited",
+          "pass": true,
+          "counts": "exists"
+        },
+        "c6": {
+          "name": "api surface",
+          "pass": true,
+          "counts": "no manifest (probe pending)"
+        }
+      }
+    },
+    {
+      "lib": "pandas",
+      "pass": true,
+      "criteria": {
+        "c1": {
+          "name": "real labels",
+          "pass": true,
+          "counts": "distinct=396 non_singleton=360 default_labels=0 default_graph=0 coverage=100.0%"
+        },
+        "c2": {
+          "name": "descriptions",
+          "pass": true,
+          "counts": "described=5382 describable=6651 pct=80.9%"
+        },
+        "c3": {
+          "name": "god nodes",
+          "pass": true,
+          "counts": "top20=20 noise=0"
+        },
+        "c4": {
+          "name": "pin",
+          "pass": true,
+          "counts": "expected=982854070758cd2015fc9e64395684546b1c5444 found=982854070758cd2015fc9e64395684546b1c5444 (graph)"
+        },
+        "c5": {
+          "name": "audited",
+          "pass": true,
+          "counts": "exists"
+        },
+        "c6": {
+          "name": "api surface",
+          "pass": true,
+          "counts": "no manifest (probe pending)"
+        }
+      }
+    },
+    {
+      "lib": "scikit-learn",
+      "pass": true,
+      "criteria": {
+        "c1": {
+          "name": "real labels",
+          "pass": true,
+          "counts": "distinct=367 non_singleton=346 default_labels=0 default_graph=0 coverage=100.0%"
+        },
+        "c2": {
+          "name": "descriptions",
+          "pass": true,
+          "counts": "described=3339 describable=4122 pct=81.0%"
+        },
+        "c3": {
+          "name": "god nodes",
+          "pass": true,
+          "counts": "top20=20 noise=0"
+        },
+        "c4": {
+          "name": "pin",
+          "pass": true,
+          "counts": "expected=6f8b95aa2234102acc3804fc8c7a3e6bd0506bfb found=6f8b95aa2234102acc3804fc8c7a3e6bd0506bfb (graph)"
+        },
+        "c5": {
+          "name": "audited",
+          "pass": true,
+          "counts": "exists"
+        },
+        "c6": {
+          "name": "api surface",
+          "pass": true,
+          "counts": "curated=0 unresolved=0"
+        }
+      }
+    },
+    {
+      "lib": "optuna",
+      "pass": true,
+      "criteria": {
+        "c1": {
+          "name": "real labels",
+          "pass": true,
+          "counts": "distinct=223 non_singleton=181 default_labels=0 default_graph=0 coverage=100.0%"
+        },
+        "c2": {
+          "name": "descriptions",
+          "pass": true,
+          "counts": "described=1131 describable=1326 pct=85.3%"
+        },
+        "c3": {
+          "name": "god nodes",
+          "pass": true,
+          "counts": "top20=20 noise=0"
+        },
+        "c4": {
+          "name": "pin",
+          "pass": true,
+          "counts": "expected=b6f2ea62fbe7fb09d0d1c75783c65dad098d9a06 found=b6f2ea62fbe7fb09d0d1c75783c65dad098d9a06 (graph)"
+        },
+        "c5": {
+          "name": "audited",
+          "pass": true,
+          "counts": "exists"
+        },
+        "c6": {
+          "name": "api surface",
+          "pass": true,
+          "counts": "curated=3 unresolved=0"
+        }
+      }
+    },
+    {
+      "lib": "vectorbt",
+      "pass": true,
+      "criteria": {
+        "c1": {
+          "name": "real labels",
+          "pass": true,
+          "counts": "distinct=353 non_singleton=340 default_labels=0 default_graph=0 coverage=100.0%"
+        },
+        "c2": {
+          "name": "descriptions",
+          "pass": true,
+          "counts": "described=1742 describable=1974 pct=88.2%"
+        },
+        "c3": {
+          "name": "god nodes",
+          "pass": true,
+          "counts": "top20=20 noise=0"
+        },
+        "c4": {
+          "name": "pin",
+          "pass": true,
+          "counts": "expected=f9897528f675114e6b34790178dbb2ca137acb51 found=f9897528f675114e6b34790178dbb2ca137acb51 (graph)"
+        },
+        "c5": {
+          "name": "audited",
+          "pass": true,
+          "counts": "exists"
+        },
+        "c6": {
+          "name": "api surface",
+          "pass": true,
+          "counts": "no manifest (probe pending)"
+        }
+      }
+    },
+    {
+      "lib": "backtrader",
+      "pass": true,
+      "criteria": {
+        "c1": {
+          "name": "real labels",
+          "pass": true,
+          "counts": "distinct=206 non_singleton=194 default_labels=0 default_graph=0 coverage=100.0%"
+        },
+        "c2": {
+          "name": "descriptions",
+          "pass": true,
+          "counts": "described=1702 describable=2025 pct=84.0%"
+        },
+        "c3": {
+          "name": "god nodes",
+          "pass": true,
+          "counts": "top20=20 noise=0"
+        },
+        "c4": {
+          "name": "pin",
+          "pass": true,
+          "counts": "expected=b853d7c90b6721476eb5a5ea3135224e33db1f14 found=b853d7c90b6721476eb5a5ea3135224e33db1f14 (graph)"
+        },
+        "c5": {
+          "name": "audited",
+          "pass": true,
+          "counts": "exists"
+        },
+        "c6": {
+          "name": "api surface",
+          "pass": true,
+          "counts": "no manifest (probe pending)"
+        }
+      }
+    },
+    {
+      "lib": "ta-lib",
+      "pass": true,
+      "criteria": {
+        "c1": {
+          "name": "real labels",
+          "pass": true,
+          "counts": "distinct=174 non_singleton=21 default_labels=0 default_graph=0 coverage=100.0%"
+        },
+        "c2": {
+          "name": "descriptions",
+          "pass": true,
+          "counts": "described=346 describable=369 pct=93.8%"
+        },
+        "c3": {
+          "name": "god nodes",
+          "pass": true,
+          "counts": "top20=20 noise=0"
+        },
+        "c4": {
+          "name": "pin",
+          "pass": true,
+          "counts": "expected=a9ff1b47b3ddbd57274116645d688c0ed677338b found=a9ff1b47b3ddbd57274116645d688c0ed677338b (graph)"
+        },
+        "c5": {
+          "name": "audited",
+          "pass": true,
+          "counts": "exists"
+        },
+        "c6": {
+          "name": "api surface",
+          "pass": true,
+          "counts": "no manifest (probe pending)"
+        }
+      }
+    },
+    {
+      "lib": "xgboost",
+      "pass": true,
+      "criteria": {
+        "c1": {
+          "name": "real labels",
+          "pass": true,
+          "counts": "distinct=80 non_singleton=80 default_labels=0 default_graph=0 coverage=100.0%"
+        },
+        "c2": {
+          "name": "descriptions",
+          "pass": true,
+          "counts": "described=707 describable=840 pct=84.2%"
+        },
+        "c3": {
+          "name": "god nodes",
+          "pass": true,
+          "counts": "top20=20 noise=0"
+        },
+        "c4": {
+          "name": "pin",
+          "pass": true,
+          "counts": "expected=2a4786e61e08b41f63916089c35a10d0ac4626d2 found=2a4786e61e08b41f63916089c35a10d0ac4626d2 (graph)"
+        },
+        "c5": {
+          "name": "audited",
+          "pass": true,
+          "counts": "exists"
+        },
+        "c6": {
+          "name": "api surface",
+          "pass": true,
+          "counts": "no manifest (probe pending)"
+        }
+      }
+    },
+    {
+      "lib": "lightgbm",
+      "pass": true,
+      "criteria": {
+        "c1": {
+          "name": "real labels",
+          "pass": true,
+          "counts": "distinct=17 non_singleton=17 default_labels=0 default_graph=0 coverage=100.0%"
+        },
+        "c2": {
+          "name": "descriptions",
+          "pass": true,
+          "counts": "described=219 describable=260 pct=84.2%"
+        },
+        "c3": {
+          "name": "god nodes",
+          "pass": true,
+          "counts": "top20=20 noise=0"
+        },
+        "c4": {
+          "name": "pin",
+          "pass": true,
+          "counts": "expected=f9bf8d1358cd7b5d649b47175e56543b62856f98 found=f9bf8d1358cd7b5d649b47175e56543b62856f98 (graph)"
+        },
+        "c5": {
+          "name": "audited",
+          "pass": true,
+          "counts": "exists"
+        },
+        "c6": {
+          "name": "api surface",
+          "pass": true,
+          "counts": "no manifest (probe pending)"
+        }
+      }
+    },
+    {
+      "lib": "statsmodels",
+      "pass": true,
+      "criteria": {
+        "c1": {
+          "name": "real labels",
+          "pass": true,
+          "counts": "distinct=638 non_singleton=546 default_labels=0 default_graph=0 coverage=100.0%"
+        },
+        "c2": {
+          "name": "descriptions",
+          "pass": true,
+          "counts": "described=5062 describable=6157 pct=82.2%"
+        },
+        "c3": {
+          "name": "god nodes",
+          "pass": true,
+          "counts": "top20=20 noise=0"
+        },
+        "c4": {
+          "name": "pin",
+          "pass": true,
+          "counts": "expected=179d1f4df4164c94c69256fc9436d578a1beb163 found=179d1f4df4164c94c69256fc9436d578a1beb163 (graph)"
+        },
+        "c5": {
+          "name": "audited",
+          "pass": true,
+          "counts": "exists"
+        },
+        "c6": {
+          "name": "api surface",
+          "pass": true,
+          "counts": "no manifest (probe pending)"
+        }
+      }
+    },
+    {
+      "lib": "cvxpy",
+      "pass": true,
+      "criteria": {
+        "c1": {
+          "name": "real labels",
+          "pass": true,
+          "counts": "distinct=297 non_singleton=292 default_labels=0 default_graph=0 coverage=100.0%"
+        },
+        "c2": {
+          "name": "descriptions",
+          "pass": true,
+          "counts": "described=3107 describable=3664 pct=84.8%"
+        },
+        "c3": {
+          "name": "god nodes",
+          "pass": true,
+          "counts": "top20=20 noise=0"
+        },
+        "c4": {
+          "name": "pin",
+          "pass": true,
+          "counts": "expected=e3b50dccf808e52e36f7b134b710e0e245742cc0 found=e3b50dccf808e52e36f7b134b710e0e245742cc0 (graph)"
+        },
+        "c5": {
+          "name": "audited",
+          "pass": true,
+          "counts": "exists"
+        },
+        "c6": {
+          "name": "api surface",
+          "pass": true,
+          "counts": "curated=50 unresolved=0 surface_coverage=100.0% (target 95.0%)"
+        }
+      }
+    },
+    {
+      "lib": "pyportfolioopt",
+      "pass": true,
+      "criteria": {
+        "c1": {
+          "name": "real labels",
+          "pass": true,
+          "counts": "distinct=16 non_singleton=15 default_labels=0 default_graph=0 coverage=100.0%"
+        },
+        "c2": {
+          "name": "descriptions",
+          "pass": true,
+          "counts": "described=168 describable=183 pct=91.8%"
+        },
+        "c3": {
+          "name": "god nodes",
+          "pass": true,
+          "counts": "top20=20 noise=0"
+        },
+        "c4": {
+          "name": "pin",
+          "pass": true,
+          "counts": "expected=a6638d2e06dae6f444fd022cfd4b3c528902a85b found=a6638d2e06dae6f444fd022cfd4b3c528902a85b (graph)"
+        },
+        "c5": {
+          "name": "audited",
+          "pass": true,
+          "counts": "exists"
+        },
+        "c6": {
+          "name": "api surface",
+          "pass": true,
+          "counts": "curated=10 unresolved=0 surface_coverage=100.0% (target 95.0%)"
+        }
+      }
+    },
+    {
+      "lib": "arch",
+      "pass": true,
+      "criteria": {
+        "c1": {
+          "name": "real labels",
+          "pass": true,
+          "counts": "distinct=135 non_singleton=118 default_labels=0 default_graph=0 coverage=100.0%"
+        },
+        "c2": {
+          "name": "descriptions",
+          "pass": true,
+          "counts": "described=831 describable=881 pct=94.3%"
+        },
+        "c3": {
+          "name": "god nodes",
+          "pass": true,
+          "counts": "top20=20 noise=0"
+        },
+        "c4": {
+          "name": "pin",
+          "pass": true,
+          "counts": "expected=704bb70e48372e3ccccdde7da379811657ad0224 found=704bb70e48372e3ccccdde7da379811657ad0224 (graph)"
+        },
+        "c5": {
+          "name": "audited",
+          "pass": true,
+          "counts": "exists"
+        },
+        "c6": {
+          "name": "api surface",
+          "pass": true,
+          "counts": "curated=5 unresolved=0 surface_coverage=100.0% (target 95.0%)"
+        }
+      }
+    },
+    {
+      "lib": "alphalens",
+      "pass": true,
+      "criteria": {
+        "c1": {
+          "name": "real labels",
+          "pass": true,
+          "counts": "distinct=5 non_singleton=5 default_labels=0 default_graph=0 coverage=100.0%"
+        },
+        "c2": {
+          "name": "descriptions",
+          "pass": true,
+          "counts": "described=79 describable=91 pct=86.8%"
+        },
+        "c3": {
+          "name": "god nodes",
+          "pass": true,
+          "counts": "top20=20 noise=0"
+        },
+        "c4": {
+          "name": "pin",
+          "pass": true,
+          "counts": "expected=77084f1e4c2c0be407e032d444fb19e4be4b0f37 found=77084f1e4c2c0be407e032d444fb19e4be4b0f37 (graph)"
+        },
+        "c5": {
+          "name": "audited",
+          "pass": true,
+          "counts": "exists"
+        },
+        "c6": {
+          "name": "api surface",
+          "pass": true,
+          "counts": "curated=0 unresolved=0 surface_coverage=100.0% (target 95.0%)"
+        }
+      }
+    },
+    {
+      "lib": "pyfolio",
+      "pass": true,
+      "criteria": {
+        "c1": {
+          "name": "real labels",
+          "pass": true,
+          "counts": "distinct=61 non_singleton=60 default_labels=0 default_graph=0 coverage=100.0%"
+        },
+        "c2": {
+          "name": "descriptions",
+          "pass": true,
+          "counts": "described=131 describable=163 pct=80.4%"
+        },
+        "c3": {
+          "name": "god nodes",
+          "pass": true,
+          "counts": "top20=20 noise=0"
+        },
+        "c4": {
+          "name": "pin",
+          "pass": true,
+          "counts": "expected=4b901f6d73aa02ceb6d04b7d83502e5c6f2e81aa found=4b901f6d73aa02ceb6d04b7d83502e5c6f2e81aa (graph)"
+        },
+        "c5": {
+          "name": "audited",
+          "pass": true,
+          "counts": "exists"
+        },
+        "c6": {
+          "name": "api surface",
+          "pass": true,
+          "counts": "curated=0 unresolved=0 surface_coverage=100.0% (target 95.0%)"
+        }
+      }
+    },
+    {
+      "lib": "riskfolio",
+      "pass": true,
+      "criteria": {
+        "c1": {
+          "name": "real labels",
+          "pass": true,
+          "counts": "distinct=29 non_singleton=26 default_labels=0 default_graph=0 coverage=100.0%"
+        },
+        "c2": {
+          "name": "descriptions",
+          "pass": true,
+          "counts": "described=225 describable=243 pct=92.6%"
+        },
+        "c3": {
+          "name": "god nodes",
+          "pass": true,
+          "counts": "top20=20 noise=0"
+        },
+        "c4": {
+          "name": "pin",
+          "pass": true,
+          "counts": "expected=632a9e48fbaf2b9f8e83864a492332364b6ed32c found=632a9e48fbaf2b9f8e83864a492332364b6ed32c (graph)"
+        },
+        "c5": {
+          "name": "audited",
+          "pass": true,
+          "counts": "exists"
+        },
+        "c6": {
+          "name": "api surface",
+          "pass": true,
+          "counts": "curated=0 unresolved=0 surface_coverage=100.0% (target 95.0%)"
+        }
+      }
+    },
+    {
+      "lib": "shap",
+      "pass": true,
+      "criteria": {
+        "c1": {
+          "name": "real labels",
+          "pass": true,
+          "counts": "distinct=109 non_singleton=101 default_labels=0 default_graph=0 coverage=99.0%"
+        },
+        "c2": {
+          "name": "descriptions",
+          "pass": true,
+          "counts": "described=621 describable=745 pct=83.4%"
+        },
+        "c3": {
+          "name": "god nodes",
+          "pass": true,
+          "counts": "top20=20 noise=0"
+        },
+        "c4": {
+          "name": "pin",
+          "pass": true,
+          "counts": "expected=df974a1966294b9c7acebb1373fd6dc5445d1d3d found=df974a1966294b9c7acebb1373fd6dc5445d1d3d (graph)"
+        },
+        "c5": {
+          "name": "audited",
+          "pass": true,
+          "counts": "exists"
+        },
+        "c6": {
+          "name": "api surface",
+          "pass": true,
+          "counts": "curated=122 unresolved=0 surface_coverage=100.0% (target 95.0%)"
+        }
+      }
+    },
+    {
+      "lib": "polars",
+      "pass": true,
+      "criteria": {
+        "c1": {
+          "name": "real labels",
+          "pass": true,
+          "counts": "distinct=485 non_singleton=453 default_labels=0 default_graph=0 coverage=100.0%"
+        },
+        "c2": {
+          "name": "descriptions",
+          "pass": true,
+          "counts": "described=2252 describable=2759 pct=81.6%"
+        },
+        "c3": {
+          "name": "god nodes",
+          "pass": true,
+          "counts": "top20=20 noise=0"
+        },
+        "c4": {
+          "name": "pin",
+          "pass": true,
+          "counts": "expected=1f779c90256872c50a16622ce0e4e4f11e885b1a found=1f779c90256872c50a16622ce0e4e4f11e885b1a (graph)"
+        },
+        "c5": {
+          "name": "audited",
+          "pass": true,
+          "counts": "exists"
+        },
+        "c6": {
+          "name": "api surface",
+          "pass": true,
+          "counts": "curated=0 unresolved=0 surface_coverage=100.0% (target 95.0%)"
+        }
+      }
+    },
+    {
+      "lib": "empyrical",
+      "pass": true,
+      "criteria": {
+        "c1": {
+          "name": "real labels",
+          "pass": true,
+          "counts": "distinct=23 non_singleton=23 default_labels=0 default_graph=0 coverage=100.0%"
+        },
+        "c2": {
+          "name": "descriptions",
+          "pass": true,
+          "counts": "described=83 describable=89 pct=93.3%"
+        },
+        "c3": {
+          "name": "god nodes",
+          "pass": true,
+          "counts": "top20=20 noise=0"
+        },
+        "c4": {
+          "name": "pin",
+          "pass": true,
+          "counts": "expected=40f61b4f229df10898d46d08f7b1bdc543c0f99c found=40f61b4f229df10898d46d08f7b1bdc543c0f99c (graph)"
+        },
+        "c5": {
+          "name": "audited",
+          "pass": true,
+          "counts": "exists"
+        },
+        "c6": {
+          "name": "api surface",
+          "pass": true,
+          "counts": "curated=0 unresolved=0 surface_coverage=100.0% (target 95.0%)"
+        }
+      }
+    },
+    {
+      "lib": "quantstats",
+      "pass": true,
+      "criteria": {
+        "c1": {
+          "name": "real labels",
+          "pass": true,
+          "counts": "distinct=51 non_singleton=48 default_labels=0 default_graph=0 coverage=100.0%"
+        },
+        "c2": {
+          "name": "descriptions",
+          "pass": true,
+          "counts": "described=158 describable=169 pct=93.5%"
+        },
+        "c3": {
+          "name": "god nodes",
+          "pass": true,
+          "counts": "top20=20 noise=0"
+        },
+        "c4": {
+          "name": "pin",
+          "pass": true,
+          "counts": "expected=fbd10daed0227aa0d10da6513f1b15e7e98d7fae found=fbd10daed0227aa0d10da6513f1b15e7e98d7fae (graph)"
+        },
+        "c5": {
+          "name": "audited",
+          "pass": true,
+          "counts": "exists"
+        },
+        "c6": {
+          "name": "api surface",
+          "pass": true,
+          "counts": "curated=0 unresolved=0 surface_coverage=100.0% (target 95.0%)"
+        }
+      }
+    },
+    {
+      "lib": "yfinance",
+      "pass": true,
+      "criteria": {
+        "c1": {
+          "name": "real labels",
+          "pass": true,
+          "counts": "distinct=52 non_singleton=46 default_labels=0 default_graph=0 coverage=100.0%"
+        },
+        "c2": {
+          "name": "descriptions",
+          "pass": true,
+          "counts": "described=591 describable=608 pct=97.2%"
+        },
+        "c3": {
+          "name": "god nodes",
+          "pass": true,
+          "counts": "top20=20 noise=0"
+        },
+        "c4": {
+          "name": "pin",
+          "pass": true,
+          "counts": "expected=93eb4c234acc7d0cf9d176e602b8443179546253 found=93eb4c234acc7d0cf9d176e602b8443179546253 (graph)"
+        },
+        "c5": {
+          "name": "audited",
+          "pass": true,
+          "counts": "exists"
+        },
+        "c6": {
+          "name": "api surface",
+          "pass": true,
+          "counts": "curated=0 unresolved=0 surface_coverage=100.0% (target 95.0%)"
+        }
+      }
+    },
+    {
+      "lib": "imbalanced-learn",
+      "pass": true,
+      "criteria": {
+        "c1": {
+          "name": "real labels",
+          "pass": true,
+          "counts": "distinct=43 non_singleton=41 default_labels=0 default_graph=0 coverage=100.0%"
+        },
+        "c2": {
+          "name": "descriptions",
+          "pass": true,
+          "counts": "described=252 describable=298 pct=84.6%"
+        },
+        "c3": {
+          "name": "god nodes",
+          "pass": true,
+          "counts": "top20=20 noise=0"
+        },
+        "c4": {
+          "name": "pin",
+          "pass": true,
+          "counts": "expected=8504e95f0160f61d1b617ca66f779646d2ee609e found=8504e95f0160f61d1b617ca66f779646d2ee609e (graph)"
+        },
+        "c5": {
+          "name": "audited",
+          "pass": true,
+          "counts": "exists"
+        },
+        "c6": {
+          "name": "api surface",
+          "pass": true,
+          "counts": "curated=0 unresolved=0 surface_coverage=100.0% (target 95.0%)"
+        }
+      }
+    },
+    {
+      "lib": "pymc",
+      "pass": true,
+      "criteria": {
+        "c1": {
+          "name": "real labels",
+          "pass": true,
+          "counts": "distinct=156 non_singleton=140 default_labels=0 default_graph=0 coverage=100.0%"
+        },
+        "c2": {
+          "name": "descriptions",
+          "pass": true,
+          "counts": "described=2270 describable=2738 pct=82.9%"
+        },
+        "c3": {
+          "name": "god nodes",
+          "pass": true,
+          "counts": "top20=20 noise=0"
+        },
+        "c4": {
+          "name": "pin",
+          "pass": true,
+          "counts": "expected=47bdf54a27a4246498994de700e8d55e99eb2d49 found=47bdf54a27a4246498994de700e8d55e99eb2d49 (graph)"
+        },
+        "c5": {
+          "name": "audited",
+          "pass": true,
+          "counts": "exists"
+        },
+        "c6": {
+          "name": "api surface",
+          "pass": true,
+          "counts": "curated=8 unresolved=0 surface_coverage=100.0% (target 95.0%)"
+        }
+      }
+    },
+    {
+      "lib": "mplfinance",
+      "pass": true,
+      "criteria": {
+        "c1": {
+          "name": "real labels",
+          "pass": true,
+          "counts": "distinct=31 non_singleton=12 default_labels=0 default_graph=0 coverage=100.0%"
+        },
+        "c2": {
+          "name": "descriptions",
+          "pass": true,
+          "counts": "described=56 describable=56 pct=100.0%"
+        },
+        "c3": {
+          "name": "god nodes",
+          "pass": true,
+          "counts": "top20=20 noise=0"
+        },
+        "c4": {
+          "name": "pin",
+          "pass": true,
+          "counts": "expected=493811dac9a203de7ec148fb95504e7d3f400ba5 found=493811dac9a203de7ec148fb95504e7d3f400ba5 (graph)"
+        },
+        "c5": {
+          "name": "audited",
+          "pass": true,
+          "counts": "exists"
+        },
+        "c6": {
+          "name": "api surface",
+          "pass": true,
+          "counts": "curated=0 unresolved=0 surface_coverage=100.0% (target 95.0%)"
+        }
+      }
+    }
+  ]
+}

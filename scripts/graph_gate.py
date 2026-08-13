@@ -196,6 +196,29 @@ def main():
     results = {lib: check(lib, lock) for lib in libs}
     for lib, res in results.items():
         write_report(lib, res)
+    # QKG_051: persist the gate evidence — timestamped, SHA-stamped, per-criterion.
+    import subprocess as _sp, datetime as _dt
+    sha = ""
+    try:
+        sha = _sp.run(["git", "-C", str(ROOT), "rev-parse", "--short", "HEAD"],
+                      capture_output=True, text=True, timeout=10).stdout.strip()
+    except Exception:
+        pass
+    summary = {
+        "generated": _dt.datetime.now(_dt.timezone.utc).isoformat(timespec="seconds"),
+        "git_sha": sha,
+        "mode": "all" if "--all" in args else "single",
+        "ci": ci,
+        "pass": all(v["ok"] for res in results.values() for v in res.values()),
+        "libraries": [
+            {"lib": lib, "pass": all(v["ok"] for v in res.values()),
+             "criteria": {k: {"name": v["name"], "pass": v["ok"], "counts": v["counts"]}
+                          for k, v in res.items()}}
+            for lib, res in results.items()],
+    }
+    (ROOT / "docs" / "reference").mkdir(parents=True, exist_ok=True)
+    (ROOT / "docs" / "reference" / "quality-gate-summary.json").write_text(
+        json.dumps(summary, indent=2) + "\n")
     if as_json:
         doc = {"generated_by": "scripts/graph_gate.py",
                "mode": "all" if "--all" in args else "single",

@@ -1,4 +1,12 @@
 {
+  "generated": "2026-08-13T20:06:02+00:00",
+  "git_sha": "123450f",
+  "mode": {
+    "ci": true,
+    "strict": false,
+    "provenance": false
+  },
+  "pass": true,
   "report": {
     "skills/alphalens/SKILL.md": {
       "lint": [],
@@ -934,6 +942,8 @@
   "totals": {
     "lint": 0,
     "api_fail": 0,
-    "provenance": 0
+    "provenance": 0,
+    "api_warn": 52,
+    "meta_warn": 0
   }
 }

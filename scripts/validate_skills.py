@@ -606,11 +606,29 @@ def main():
     print(f"\n=== Summary ===  lint={n_lint}  api_fail={n_api}  provenance={n_prov}{extra}")
     for r in report.values():
         r.pop("_keys", None)                # internal key bookkeeping, not part of the report
+    # QKG_051: timestamped, SHA-stamped, gated evidence — the report backbone.
+    import subprocess as _sp
+    sha = ""
+    try:
+        sha = _sp.run(["git", "-C", str(REPO_ROOT), "rev-parse", "--short", "HEAD"],
+                      capture_output=True, text=True, timeout=10).stdout.strip()
+    except Exception:
+        pass
+    n_warn = sum(len(r.get("api_warn", [])) for r in report.values())
+    n_meta = sum(len(r.get("meta_warn", [])) for r in report.values())
+    payload = {
+        "generated": datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds"),
+        "git_sha": sha,
+        "mode": {"ci": ci, "strict": strict, "provenance": provenance},
+        "pass": n_lint == 0 and (not strict or n_api == 0),
+        "report": report,
+        "router_errors": router_errs,
+        "totals": {"lint": n_lint, "api_fail": n_api, "provenance": n_prov,
+                   "api_warn": n_warn, "meta_warn": n_meta},
+    }
     (REPO_ROOT / "docs" / "reference").mkdir(parents=True, exist_ok=True)
     with open(REPO_ROOT / "docs" / "reference" / "skill-validation-report.json", "w") as f:
-        json.dump({"report": report, "router_errors": router_errs,
-                   "totals": {"lint": n_lint, "api_fail": n_api, "provenance": n_prov}},
-                  f, indent=2, default=list)
+        json.dump(payload, f, indent=2, default=list)
     if ci and n_lint > 0:
         sys.exit(1)
     if strict and (n_lint > 0 or n_api > 0):

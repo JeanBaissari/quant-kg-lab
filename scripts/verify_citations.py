@@ -85,6 +85,11 @@ def lib_for_path(path):
     return NAME_OF.get(first, first)
 
 
+def _lock_libs():
+    p = ROOT / "graphs.lock"
+    return json.load(open(p))["libraries"] if p.exists() else {}
+
+
 def check_complete(lib, labels, cur, excl):
     """Every QR-row symbol of the lib's skills must resolve — as a node label,
     a curated entry, an explicit exclusion, OR via a resolvable source-file
@@ -168,6 +173,7 @@ def main():
     for f, cite in dangling[:30]:
         print(f"  {f}: {cite}")
     incomplete = 0
+    require_results = {}
     if require:
         if not (ROOT / "skills" / require).is_dir():
             print(f"unknown library: {require}")
@@ -176,9 +182,34 @@ def main():
         cur, excl = manifest_labels(require)
         bad = check_complete(require, labels, cur, excl)
         incomplete = len(bad)
+        require_results[require] = incomplete
         print(f"complete check ({require}): QR rows unresolved: {incomplete}")
         for f, sym, cell in bad[:30]:
             print(f"  {f}: {cell!r} ({sym})")
+    if not require:
+        for lib in sorted(_lock_libs()):
+            bad = check_complete(lib, graph_labels(lib), *manifest_labels(lib))
+            if bad:
+                require_results[lib] = len(bad)
+    # QKG_051: persist the citation evidence — timestamped, SHA-stamped, gated.
+    import subprocess as _sp, datetime as _dt
+    sha = ""
+    try:
+        sha = _sp.run(["git", "-C", str(ROOT), "rev-parse", "--short", "HEAD"],
+                      capture_output=True, text=True, timeout=10).stdout.strip()
+    except Exception:
+        pass
+    report = {
+        "generated": _dt.datetime.now(_dt.timezone.utc).isoformat(timespec="seconds"),
+        "git_sha": sha,
+        "checked": checked,
+        "dangling": len(dangling),
+        "require_complete": require_results,
+        "pass": len(dangling) == 0 and not require_results,
+    }
+    (ROOT / "docs" / "reference").mkdir(parents=True, exist_ok=True)
+    (ROOT / "docs" / "reference" / "citations-report.json").write_text(
+        json.dumps(report, indent=2) + "\n")
     return 1 if (dangling or incomplete) else 0
 
 
