@@ -44,19 +44,19 @@ across every model.
 | `SKLearnModel` | `models/forecasting/sklearn_model.py:L101` | sklearn regressors as forecasters (wrapping) |
 | `SKLearnModelWithCategoricalFeatures` | `models/forecasting/sklearn_model.py:L1629` | sklearn wrapper with categorical covariate support |
 | `CatBoostModel` | `models/forecasting/catboost_model.py` | CatBoost forecaster — native categoricals |
-| `LightGBMModel` | `models/forecasting/lightgbm_model.py` | LightGBM forecaster |
+| `LightGBMModel` | `models/forecasting/lgbm.py:L35` | LightGBM forecaster |
 | `LinearRegressionModel` | `models/forecasting/linear_regression_model.py` | Linear regression forecaster |
 | `RandomForest` | `models/forecasting/random_forest.py` | Random forest forecaster |
-| `XGBModel` | `models/forecasting/xgboost_model.py` | XGBoost forecaster |
+| `XGBModel` | `models/forecasting/xgboost.py:L60` | XGBoost forecaster |
 | `NBEATSModel` | `models/forecasting/nbeats.py` | N-BEATS — deep basis-expansion forecaster |
 | `NHiTSModel` | `models/forecasting/nhits.py` | N-HiTS — hierarchical interpolation, multi-horizon |
 | `TCNModel` | `models/forecasting/tcn_model.py` | Temporal convolution network |
 | `BlockRNNModel` | `models/forecasting/block_rnn_model.py` | Block RNN — LSTM/GRU forecasters |
 | `DLinearModel` | `models/forecasting/dlinear.py` | DLinear — linear decomposition forecaster |
 | `NLinearModel` | `models/forecasting/nlinear.py` | NLinear — normalization + linear |
-| `PatchTSTFMModel` | `models/forecasting/patch_tst.py` | PatchTST foundation-style transformer |
+| `PatchTSTFMModel` | `models/forecasting/patchtst_fm_model.py:L373` | PatchTST foundation-style transformer |
 | `Chronos2Model` | `models/forecasting/chronos2_model.py` | Chronos2 — LLM-style token forecasting |
-| `NeuralForecastModel` | `models/forecasting/neuralforecast_model.py` | NeuralForecast integration |
+| `NeuralForecastModel` | `models/forecasting/nf_model.py:L336` | NeuralForecast integration |
 | `StatsForecastModel` | `models/forecasting/sf_model.py:L39` | StatsForecast integration |
 | `FoundationModel` | `models/forecasting/foundation_model.py:L20` | Foundation-model adapter (zero-shot) |
 | `EnsembleModel` | `models/forecasting/ensemble_model.py:L43` | Ensemble of forecasters |
