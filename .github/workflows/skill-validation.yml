@@ -13,6 +13,9 @@ on:
       - 'skills/**'
       - 'scripts/validate_skills.py'
       - 'graphs.lock'
+  schedule:
+    - cron: '0 6 * * *'   # QKG_054: nightly validation keeps the evidence permanent
+  workflow_dispatch:
   workflow_dispatch:
 
 jobs:
@@ -69,3 +72,40 @@ jobs:
         with:
           name: skill-validation-report-full
           path: docs/reference/skill-validation-report.json
+
+  publish:
+    # QKG_054: on schedule only, commit the fresh reports back so the evidence is
+    # permanent (artifacts expire in 90 days) and the Pages status stays current.
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    needs: [lint, api]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pyyaml
+      - name: Regenerate reports (gate + citations + validate + status)
+        run: |
+          python3 scripts/graph_gate.py --ci --all || true
+          python3 scripts/verify_citations.py || true
+          python3 scripts/validate_skills.py --ci || true
+          python3 scripts/doc_audit.py --write || true
+          python3 scripts/build_site.py
+          python3 scripts/emit_badge.py
+      - name: Commit report refresh (if changed)
+        run: |
+          git config user.name "qkg-bot"
+          git config user.email "qkg-bot@users.noreply.github.com"
+          git add docs/reference/*.json docs/reference/status.json 2>/dev/null || true
+          git add _site 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: refresh validation reports (nightly, QKG_054)" || true
+            git push origin main || true
+          else
+            echo "no report drift — nothing to commit"
+          fi
