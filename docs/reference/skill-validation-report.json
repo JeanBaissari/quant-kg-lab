@@ -23,6 +23,38 @@
       "meta_warn": [],
       "provenance": []
     },
+    "skills/arch/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/arch/bootstrap/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "func py: not found (library not installed, no graph node)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/arch/unitroot/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class StationarityTest: not found (library not installed, no graph node)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/arch/volatility/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
     "skills/backtrader/SKILL.md": {
       "lint": [],
       "api_fail": [],

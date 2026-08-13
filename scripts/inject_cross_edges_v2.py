@@ -57,7 +57,11 @@ ALL_BRIDGES = [
     ("alphalens", "performance.py", "pandas", "DataFrame", "input_to", "alphalens factor analysis consumes pandas price/factor DataFrames"),
     ("alphalens", "performance.py", "scikit-learn", "BaseEstimator", "feeds", "alphalens IC/quantile analytics validate sklearn-estimator factor models"),
     ("alphalens", "tears.py", "pyfolio", "performance.py", "feeds", "alphalens tear sheets feed pyfolio portfolio-level reporting"),
+    ("arch", "ARCHModel", "statsmodels", "OLS", "feeds", "arch volatility forecasts feed statsmodels regression/risk models"),
+    ("arch", "ADF", "scipy", "stats", "powered_by", "arch unit-root tests rely on scipy.stats distributions"),
+    ("pandas", "DataFrame", "arch", "ARCHModel", "input_to", "arch models consume pandas Series/DataFrames"),
 ]
+
 
 
 ALL_LIBS = list(json.load(open(REPO_ROOT / "graphs.lock"))["libraries"])

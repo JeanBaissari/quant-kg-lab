@@ -197,6 +197,18 @@
       "label": "performance.py",
       "library": "alphalens",
       "source_file": "performance.py"
+    },
+    {
+      "id": "arch::univariate_base_archmodel",
+      "label": "ARCHModel",
+      "library": "arch",
+      "source_file": "univariate/base.py"
+    },
+    {
+      "id": "arch::unitroot_unitroot_adf",
+      "label": "ADF",
+      "library": "arch",
+      "source_file": "unitroot/unitroot.py"
     }
   ],
   "links": [
@@ -395,6 +407,27 @@
       "relation": "feeds",
       "confidence": "CURATED",
       "description": "alphalens IC/quantile analytics validate sklearn-estimator factor models"
+    },
+    {
+      "source": "arch::univariate_base_archmodel",
+      "target": "statsmodels::regression_linear_model_ols",
+      "relation": "feeds",
+      "confidence": "CURATED",
+      "description": "arch volatility forecasts feed statsmodels regression/risk models"
+    },
+    {
+      "source": "arch::unitroot_unitroot_adf",
+      "target": "scipy::ndimage_measurements_stats",
+      "relation": "powered_by",
+      "confidence": "CURATED",
+      "description": "arch unit-root tests rely on scipy.stats distributions"
+    },
+    {
+      "source": "pandas::dataframe",
+      "target": "arch::univariate_base_archmodel",
+      "relation": "input_to",
+      "confidence": "CURATED",
+      "description": "arch models consume pandas Series/DataFrames"
     }
   ],
   "hyperedges": []

@@ -87,8 +87,8 @@
     "arch": {
       "repo": "bashtage/arch",
       "commit": "704bb70e48372e3ccccdde7da379811657ad0224",
-      "nodes": 0,
-      "edges": 0
+      "nodes": 1367,
+      "edges": 3900
     },
     "alphalens": {
       "repo": "quantopian/alphalens",

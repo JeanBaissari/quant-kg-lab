@@ -200,8 +200,29 @@
       "bridge": "alphalens.tears.py -> pyfolio.performance.py",
       "status": "UNRESOLVED",
       "missing": "performance.py"
+    },
+    {
+      "bridge": "arch.ARCHModel -> statsmodels.OLS",
+      "status": "RESOLVED",
+      "source": "arch::ARCHModel",
+      "target": "statsmodels::OLS",
+      "relation": "feeds"
+    },
+    {
+      "bridge": "arch.ADF -> scipy.stats",
+      "status": "RESOLVED",
+      "source": "arch::ADF",
+      "target": "scipy::_stats()",
+      "relation": "powered_by"
+    },
+    {
+      "bridge": "pandas.DataFrame -> arch.ARCHModel",
+      "status": "RESOLVED",
+      "source": "pandas::DataFrame",
+      "target": "arch::ARCHModel",
+      "relation": "input_to"
     }
   ],
-  "resolved": 28,
-  "attempted": 29
+  "resolved": 31,
+  "attempted": 32
 }
