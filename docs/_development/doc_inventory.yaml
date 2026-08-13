@@ -139,6 +139,10 @@ docs:
   type: Generated
   status: generated
   last_verified: '2026-08-13'
+- path: docs/libraries/quantstats/index.md
+  type: Generated
+  status: generated
+  last_verified: '2026-08-13'
 - path: docs/libraries/riskfolio/index.md
   type: Generated
   status: generated
@@ -263,6 +267,10 @@ docs:
   type: Generated
   status: generated
   last_verified: ''
+- path: docs/reference/edge-audits/edge-audit-quantstats.md
+  type: Generated
+  status: generated
+  last_verified: ''
 - path: docs/reference/edge-audits/edge-audit-riskfolio.md
   type: Generated
   status: generated
@@ -340,6 +348,10 @@ docs:
   status: generated
   last_verified: ''
 - path: docs/reference/quality-gate/gate-pyportfolioopt.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/quality-gate/gate-quantstats.md
   type: Generated
   status: generated
   last_verified: ''

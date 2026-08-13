@@ -18,6 +18,9 @@ Hub for the **empyrical** library (Quant Tools tier). The per-module API referen
 
 | Skill | Module | Covers |
 |-------|--------|--------|
+| [`empyrical`](../../../skills/empyrical/SKILL.md) | (router) | working with empyrical — the portfolio-metrics entry point. Router indexing the  |
+| [`empyrical-perf-attrib`](../../../skills/empyrical/perf-attrib/SKILL.md) | `empyrical.perf-attrib` | decomposing portfolio performance into factor exposures |
+| [`empyrical-stats`](../../../skills/empyrical/stats/SKILL.md) | `empyrical.stats` | computing portfolio/strategy performance metrics from returns |
 
 ## Graph provenance
 
