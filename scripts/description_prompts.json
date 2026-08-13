@@ -495,6 +495,25 @@
         }
       ],
       "payload_note": "Write exactly ONE semantic sentence per node \u2014 a functional summary a quant user can act on. Never produce code; never quote source."
+    },
+    "darts": {
+      "emphasis": "darts is an ML time-series forecasting library: models (models/ \u2014 forecasting models: Naive/ExponentialSmoothing/ARIMA/Theta/LinearRegression/RNN/LSTM/TCN/Transformer/NHiTS/N-BEATS/RegressionModel/Prophet/CatBoostModel/LightGBMModel/XGBModel/RandomForest/...), TimeSeries (timeseries.py \u2014 the core container: univariate/multivariate, frequency handling, window ops, imputation, preprocessing), metrics (metrics/ \u2014 mape, smape, mase, mse, mae, quantile_loss, mql, r2_score, coefficient_of_variation), backtesting (backtesting.py \u2014 historical_forecasts, GridSearch on backtest, model selection), datasets (datasets/ \u2014 AirPassengers/ETTh/energy loaders), utils (utils/ \u2014 scalers, feature engineering, statistics, model summary), explainability (explainability/ \u2014 SHAP integration). Describe each class/function's forecasting role and key parameters.",
+      "glossary": "TimeSeries, forecasting, backtest, historical forecasts, metrics, MAPE, SMAPE, MASE, N-BEATS, NHiTS, TCN, LSTM, RNN, transformer, quantile, scaler, imputation, covariates",
+      "exemplars": [
+        {
+          "name": "TimeSeries (timeseries.py)",
+          "desc": "darts TimeSeries: the core series container \u2014 univariate/multivariate, frequency-aware, with windowing, imputation, and preprocessing methods."
+        },
+        {
+          "name": "historical_forecasts (backtesting.py)",
+          "desc": "darts historical_forecasts(series, model, start, forecast_horizon): rolling out-of-sample forecasts \u2014 the backtesting/validation loop."
+        },
+        {
+          "name": "mape (metrics.py)",
+          "desc": "darts metrics.mape(actual, pred): mean absolute percentage error between two series."
+        }
+      ],
+      "payload_note": "Write exactly ONE semantic sentence per node \u2014 a functional summary a quant user can act on. Never produce code; never quote source."
     }
   }
 }
