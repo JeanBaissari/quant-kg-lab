@@ -249,8 +249,29 @@
       "source": "riskfolio::Portfolio",
       "target": "scipy::OptimizeResult",
       "relation": "alternative_to"
+    },
+    {
+      "bridge": "shap.Explainer -> scikit-learn.BaseEstimator",
+      "status": "RESOLVED",
+      "source": "shap::Explainer",
+      "target": "scikit-learn::BaseEstimator",
+      "relation": "explains"
+    },
+    {
+      "bridge": "shap.Explainer -> xgboost.Booster",
+      "status": "RESOLVED",
+      "source": "shap::Explainer",
+      "target": "xgboost::Booster",
+      "relation": "explains"
+    },
+    {
+      "bridge": "shap.Explainer -> lightgbm.Booster",
+      "status": "RESOLVED",
+      "source": "shap::Explainer",
+      "target": "lightgbm::Booster",
+      "relation": "explains"
     }
   ],
-  "resolved": 35,
-  "attempted": 36
+  "resolved": 38,
+  "attempted": 39
 }

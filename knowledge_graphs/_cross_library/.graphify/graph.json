@@ -221,6 +221,24 @@
       "label": "EfficientFrontier",
       "library": "pyportfolioopt",
       "source_file": ""
+    },
+    {
+      "id": "shap::explainer",
+      "label": "Explainer",
+      "library": "shap",
+      "source_file": ""
+    },
+    {
+      "id": "xgboost::core_booster",
+      "label": "Booster",
+      "library": "xgboost",
+      "source_file": "core.py"
+    },
+    {
+      "id": "lightgbm::basic_booster",
+      "label": "Booster",
+      "library": "lightgbm",
+      "source_file": "basic.py"
     }
   ],
   "links": [
@@ -468,6 +486,27 @@
       "relation": "alternative_to",
       "confidence": "CURATED",
       "description": "riskfolio risk optimization vs scipy.optimize"
+    },
+    {
+      "source": "shap::explainer",
+      "target": "scikit-learn::base_baseestimator",
+      "relation": "explains",
+      "confidence": "CURATED",
+      "description": "shap Explainer explains sklearn estimators"
+    },
+    {
+      "source": "shap::explainer",
+      "target": "xgboost::core_booster",
+      "relation": "explains",
+      "confidence": "CURATED",
+      "description": "shap TreeExplainer explains xgboost models"
+    },
+    {
+      "source": "shap::explainer",
+      "target": "lightgbm::basic_booster",
+      "relation": "explains",
+      "confidence": "CURATED",
+      "description": "shap TreeExplainer explains lightgbm models"
     }
   ],
   "hyperedges": []

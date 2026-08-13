@@ -64,7 +64,11 @@ ALL_BRIDGES = [
     ("riskfolio", "Portfolio", "pyportfolioopt", "EfficientFrontier", "alternative_to", "riskfolio constrained optimization vs pypfopt EfficientFrontier"),
     ("pandas", "DataFrame", "riskfolio", "Portfolio", "input_to", "riskfolio consumes pandas returns DataFrames"),
     ("riskfolio", "Portfolio", "scipy", "OptimizeResult", "alternative_to", "riskfolio risk optimization vs scipy.optimize"),
+    ("shap", "Explainer", "scikit-learn", "BaseEstimator", "explains", "shap Explainer explains sklearn estimators"),
+    ("shap", "Explainer", "xgboost", "Booster", "explains", "shap TreeExplainer explains xgboost models"),
+    ("shap", "Explainer", "lightgbm", "Booster", "explains", "shap TreeExplainer explains lightgbm models"),
 ]
+
 
 
 

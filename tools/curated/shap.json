@@ -1,0 +1,615 @@
+{
+  "library": "shap",
+  "symbols": [
+    {
+      "label": "ComputeTime",
+      "source_file": "benchmark/_compute.py",
+      "description": "Extracts a runtime benchmark result from the passed Explanation."
+    },
+    {
+      "label": "ExplanationError",
+      "source_file": "benchmark/_explanation_error.py",
+      "description": "A measure of the explanation error relative to a model's actual output."
+    },
+    {
+      "label": "BenchmarkResult",
+      "source_file": "benchmark/_result.py",
+      "description": "The result of a benchmark run."
+    },
+    {
+      "label": "SequentialMasker",
+      "source_file": "benchmark/_sequential.py",
+      "description": "Public NumPy API symbol `np.SequentialMasker` (C-implemented or namespace; see docs)."
+    },
+    {
+      "label": "SequentialPerturbation",
+      "source_file": "benchmark/_sequential.py",
+      "description": "Public NumPy API symbol `np.SequentialPerturbation` (C-implemented or namespace; see docs)."
+    },
+    {
+      "label": "experiments()",
+      "source_file": "benchmark/experiments.py",
+      "description": "Public NumPy API symbol `np.experiments` (C-implemented or namespace; see docs)."
+    },
+    {
+      "label": "run_experiment()",
+      "source_file": "benchmark/experiments.py",
+      "description": "Public NumPy API symbol `np.run_experiment` (C-implemented or namespace; see docs)."
+    },
+    {
+      "label": "run_experiments_helper()",
+      "source_file": "benchmark/experiments.py",
+      "description": "Public NumPy API symbol `np.run_experiments_helper` (C-implemented or namespace; see docs)."
+    },
+    {
+      "label": "run_experiments()",
+      "source_file": "benchmark/experiments.py",
+      "description": "Public NumPy API symbol `np.run_experiments` (C-implemented or namespace; see docs)."
+    },
+    {
+      "label": "run_remote_experiments()",
+      "source_file": "benchmark/experiments.py",
+      "description": "Use ssh to run the experiments on remote machines in parallel."
+    },
+    {
+      "label": "update()",
+      "source_file": "benchmark/framework.py",
+      "description": "Public NumPy API symbol `np.update` (C-implemented or namespace; see docs)."
+    },
+    {
+      "label": "get_benchmark()",
+      "source_file": "benchmark/framework.py",
+      "description": "Public NumPy API symbol `np.get_benchmark` (C-implemented or namespace; see docs)."
+    },
+    {
+      "label": "get_metrics()",
+      "source_file": "benchmark/framework.py",
+      "description": "Public NumPy API symbol `np.get_metrics` (C-implemented or namespace; see docs)."
+    },
+    {
+      "label": "trend_plot()",
+      "source_file": "benchmark/framework.py",
+      "description": "Public NumPy API symbol `np.trend_plot` (C-implemented or namespace; see docs)."
+    },
+    {
+      "label": "compare_plot()",
+      "source_file": "benchmark/framework.py",
+      "description": "Public NumPy API symbol `np.compare_plot` (C-implemented or namespace; see docs)."
+    },
+    {
+      "label": "remove_retrain()",
+      "source_file": "benchmark/measures.py",
+      "description": "The model is retrained for each test sample with the important features set to a constant."
+    },
+    {
+      "label": "remove_mask()",
+      "source_file": "benchmark/measures.py",
+      "description": "Each test sample is masked by setting the important features to a constant."
+    },
+    {
+      "label": "remove_impute()",
+      "source_file": "benchmark/measures.py",
+      "description": "The model is reevaluated for each test sample with the important features set to an imputed value."
+    },
+    {
+      "label": "remove_resample()",
+      "source_file": "benchmark/measures.py",
+      "description": "The model is reevaluated for each test sample with the important features set to resample background values."
+    },
+    {
+      "label": "batch_remove_retrain()",
+      "source_file": "benchmark/measures.py",
+      "description": "An approximation of holdout that only retraines the model once."
+    },
+    {
+      "label": "keep_retrain()",
+      "source_file": "benchmark/measures.py",
+      "description": "The model is retrained for each test sample with the non-important features set to a constant."
+    },
+    {
+      "label": "keep_mask()",
+      "source_file": "benchmark/measures.py",
+      "description": "The model is reevaluated for each test sample with the non-important features set to their mean."
+    },
+    {
+      "label": "keep_impute()",
+      "source_file": "benchmark/measures.py",
+      "description": "The model is reevaluated for each test sample with the non-important features set to an imputed value."
+    },
+    {
+      "label": "keep_resample()",
+      "source_file": "benchmark/measures.py",
+      "description": "The model is reevaluated for each test sample with the non-important features set to resample background values."
+    },
+    {
+      "label": "batch_keep_retrain()",
+      "source_file": "benchmark/measures.py",
+      "description": "An approximation of keep that only retraines the model once."
+    },
+    {
+      "label": "local_accuracy()",
+      "source_file": "benchmark/measures.py",
+      "description": "The how well do the features plus a constant base rate sum up to the model output."
+    },
+    {
+      "label": "to_array()",
+      "source_file": "benchmark/measures.py",
+      "description": "Public NumPy API symbol `np.to_array` (C-implemented or namespace; see docs)."
+    },
+    {
+      "label": "const_rand()",
+      "source_file": "benchmark/measures.py",
+      "description": "Generate a random array with a fixed seed."
+    },
+    {
+      "label": "const_shuffle()",
+      "source_file": "benchmark/measures.py",
+      "description": "Shuffle an array in-place with a fixed seed."
+    },
+    {
+      "label": "strip_list()",
+      "source_file": "benchmark/measures.py",
+      "description": "This assumes that if you have a list of outputs you just want the second one (the second class is the '1' class)."
+    },
+    {
+      "label": "linear_shap_corr()",
+      "source_file": "benchmark/methods.py",
+      "description": "Linear SHAP (corr 1000)."
+    },
+    {
+      "label": "linear_shap_ind()",
+      "source_file": "benchmark/methods.py",
+      "description": "Linear SHAP (ind)."
+    },
+    {
+      "label": "coef()",
+      "source_file": "benchmark/methods.py",
+      "description": "Coefficients."
+    },
+    {
+      "label": "random()",
+      "source_file": "benchmark/methods.py",
+      "description": "Public NumPy API symbol `np.random` (C-implemented or namespace; see docs)."
+    },
+    {
+      "label": "kernel_shap_1000_meanref()",
+      "source_file": "benchmark/methods.py",
+      "description": "Kernel SHAP 1000 mean ref."
+    },
+    {
+      "label": "sampling_shap_1000()",
+      "source_file": "benchmark/methods.py",
+      "description": "Public NumPy API symbol `np.sampling_shap_1000` (C-implemented or namespace; see docs)."
+    },
+    {
+      "label": "tree_shap_tree_path_dependent()",
+      "source_file": "benchmark/methods.py",
+      "description": "TreeExplainer."
+    },
+    {
+      "label": "tree_shap_independent_200()",
+      "source_file": "benchmark/methods.py",
+      "description": "TreeExplainer (independent)."
+    },
+    {
+      "label": "mean_abs_tree_shap()",
+      "source_file": "benchmark/methods.py",
+      "description": "mean(|TreeExplainer|)."
+    },
+    {
+      "label": "saabas()",
+      "source_file": "benchmark/methods.py",
+      "description": "Public NumPy API symbol `np.saabas` (C-implemented or namespace; see docs)."
+    },
+    {
+      "label": "tree_gain()",
+      "source_file": "benchmark/methods.py",
+      "description": "Gain/Gini Importance."
+    },
+    {
+      "label": "lime_tabular_regression_1000()",
+      "source_file": "benchmark/methods.py",
+      "description": "LIME Tabular 1000."
+    },
+    {
+      "label": "lime_tabular_classification_1000()",
+      "source_file": "benchmark/methods.py",
+      "description": "LIME Tabular 1000."
+    },
+    {
+      "label": "maple()",
+      "source_file": "benchmark/methods.py",
+      "description": "Public NumPy API symbol `np.maple` (C-implemented or namespace; see docs)."
+    },
+    {
+      "label": "tree_maple()",
+      "source_file": "benchmark/methods.py",
+      "description": "Public NumPy API symbol `np.tree_maple` (C-implemented or namespace; see docs)."
+    },
+    {
+      "label": "deep_shap()",
+      "source_file": "benchmark/methods.py",
+      "description": "Deep SHAP (DeepLIFT)."
+    },
+    {
+      "label": "expected_gradients()",
+      "source_file": "benchmark/methods.py",
+      "description": "Expected Gradients."
+    },
+    {
+      "label": "runtime()",
+      "source_file": "benchmark/metrics.py",
+      "description": "Runtime (sec / 1k samples)."
+    },
+    {
+      "label": "local_accuracy()",
+      "source_file": "benchmark/measures.py",
+      "description": "The how well do the features plus a constant base rate sum up to the model output."
+    },
+    {
+      "label": "consistency_guarantees()",
+      "source_file": "benchmark/metrics.py",
+      "description": "Consistency Guarantees."
+    },
+    {
+      "label": "keep_positive_mask()",
+      "source_file": "benchmark/metrics.py",
+      "description": "Keep Positive (mask)."
+    },
+    {
+      "label": "keep_negative_mask()",
+      "source_file": "benchmark/metrics.py",
+      "description": "Keep Negative (mask)."
+    },
+    {
+      "label": "keep_absolute_mask__r2()",
+      "source_file": "benchmark/metrics.py",
+      "description": "Keep Absolute (mask)."
+    },
+    {
+      "label": "keep_absolute_mask__roc_auc()",
+      "source_file": "benchmark/metrics.py",
+      "description": "Keep Absolute (mask)."
+    },
+    {
+      "label": "remove_positive_mask()",
+      "source_file": "benchmark/metrics.py",
+      "description": "Remove Positive (mask)."
+    },
+    {
+      "label": "remove_negative_mask()",
+      "source_file": "benchmark/metrics.py",
+      "description": "Remove Negative (mask)."
+    },
+    {
+      "label": "remove_absolute_mask__r2()",
+      "source_file": "benchmark/metrics.py",
+      "description": "Remove Absolute (mask)."
+    },
+    {
+      "label": "remove_absolute_mask__roc_auc()",
+      "source_file": "benchmark/metrics.py",
+      "description": "Remove Absolute (mask)."
+    },
+    {
+      "label": "keep_positive_resample()",
+      "source_file": "benchmark/metrics.py",
+      "description": "Keep Positive (resample)."
+    },
+    {
+      "label": "keep_negative_resample()",
+      "source_file": "benchmark/metrics.py",
+      "description": "Keep Negative (resample)."
+    },
+    {
+      "label": "keep_absolute_resample__r2()",
+      "source_file": "benchmark/metrics.py",
+      "description": "Keep Absolute (resample)."
+    },
+    {
+      "label": "keep_absolute_resample__roc_auc()",
+      "source_file": "benchmark/metrics.py",
+      "description": "Keep Absolute (resample)."
+    },
+    {
+      "label": "remove_positive_resample()",
+      "source_file": "benchmark/metrics.py",
+      "description": "Remove Positive (resample)."
+    },
+    {
+      "label": "remove_negative_resample()",
+      "source_file": "benchmark/metrics.py",
+      "description": "Remove Negative (resample)."
+    },
+    {
+      "label": "remove_absolute_resample__r2()",
+      "source_file": "benchmark/metrics.py",
+      "description": "Remove Absolute (resample)."
+    },
+    {
+      "label": "remove_absolute_resample__roc_auc()",
+      "source_file": "benchmark/metrics.py",
+      "description": "Remove Absolute (resample)."
+    },
+    {
+      "label": "keep_positive_impute()",
+      "source_file": "benchmark/metrics.py",
+      "description": "Keep Positive (impute)."
+    },
+    {
+      "label": "keep_negative_impute()",
+      "source_file": "benchmark/metrics.py",
+      "description": "Keep Negative (impute)."
+    },
+    {
+      "label": "keep_absolute_impute__r2()",
+      "source_file": "benchmark/metrics.py",
+      "description": "Keep Absolute (impute)."
+    },
+    {
+      "label": "keep_absolute_impute__roc_auc()",
+      "source_file": "benchmark/metrics.py",
+      "description": "Keep Absolute (impute)."
+    },
+    {
+      "label": "remove_positive_impute()",
+      "source_file": "benchmark/metrics.py",
+      "description": "Remove Positive (impute)."
+    },
+    {
+      "label": "remove_negative_impute()",
+      "source_file": "benchmark/metrics.py",
+      "description": "Remove Negative (impute)."
+    },
+    {
+      "label": "remove_absolute_impute__r2()",
+      "source_file": "benchmark/metrics.py",
+      "description": "Remove Absolute (impute)."
+    },
+    {
+      "label": "remove_absolute_impute__roc_auc()",
+      "source_file": "benchmark/metrics.py",
+      "description": "Remove Absolute (impute)."
+    },
+    {
+      "label": "keep_positive_retrain()",
+      "source_file": "benchmark/metrics.py",
+      "description": "Keep Positive (retrain)."
+    },
+    {
+      "label": "keep_negative_retrain()",
+      "source_file": "benchmark/metrics.py",
+      "description": "Keep Negative (retrain)."
+    },
+    {
+      "label": "remove_positive_retrain()",
+      "source_file": "benchmark/metrics.py",
+      "description": "Remove Positive (retrain)."
+    },
+    {
+      "label": "remove_negative_retrain()",
+      "source_file": "benchmark/metrics.py",
+      "description": "Remove Negative (retrain)."
+    },
+    {
+      "label": "batch_remove_absolute_retrain__r2()",
+      "source_file": "benchmark/metrics.py",
+      "description": "Batch Remove Absolute (retrain)."
+    },
+    {
+      "label": "batch_keep_absolute_retrain__r2()",
+      "source_file": "benchmark/metrics.py",
+      "description": "Batch Keep Absolute (retrain)."
+    },
+    {
+      "label": "batch_remove_absolute_retrain__roc_auc()",
+      "source_file": "benchmark/metrics.py",
+      "description": "Batch Remove Absolute (retrain)."
+    },
+    {
+      "label": "batch_keep_absolute_retrain__roc_auc()",
+      "source_file": "benchmark/metrics.py",
+      "description": "Batch Keep Absolute (retrain)."
+    },
+    {
+      "label": "human_and_00()",
+      "source_file": "benchmark/metrics.py",
+      "description": "AND (false/false)."
+    },
+    {
+      "label": "human_and_01()",
+      "source_file": "benchmark/metrics.py",
+      "description": "AND (false/true)."
+    },
+    {
+      "label": "human_and_11()",
+      "source_file": "benchmark/metrics.py",
+      "description": "AND (true/true)."
+    },
+    {
+      "label": "human_or_00()",
+      "source_file": "benchmark/metrics.py",
+      "description": "OR (false/false)."
+    },
+    {
+      "label": "human_or_01()",
+      "source_file": "benchmark/metrics.py",
+      "description": "OR (false/true)."
+    },
+    {
+      "label": "human_or_11()",
+      "source_file": "benchmark/metrics.py",
+      "description": "OR (true/true)."
+    },
+    {
+      "label": "human_xor_00()",
+      "source_file": "benchmark/metrics.py",
+      "description": "XOR (false/false)."
+    },
+    {
+      "label": "human_xor_01()",
+      "source_file": "benchmark/metrics.py",
+      "description": "XOR (false/true)."
+    },
+    {
+      "label": "human_xor_11()",
+      "source_file": "benchmark/metrics.py",
+      "description": "XOR (true/true)."
+    },
+    {
+      "label": "human_sum_00()",
+      "source_file": "benchmark/metrics.py",
+      "description": "SUM (false/false)."
+    },
+    {
+      "label": "human_sum_01()",
+      "source_file": "benchmark/metrics.py",
+      "description": "SUM (false/true)."
+    },
+    {
+      "label": "human_sum_11()",
+      "source_file": "benchmark/metrics.py",
+      "description": "SUM (true/true)."
+    },
+    {
+      "label": "KerasWrap",
+      "source_file": "benchmark/models.py",
+      "description": "A wrapper that allows us to set parameters in the constructor and do a reset before fitting."
+    },
+    {
+      "label": "corrgroups60__lasso()",
+      "source_file": "benchmark/models.py",
+      "description": "Lasso Regression."
+    },
+    {
+      "label": "corrgroups60__ridge()",
+      "source_file": "benchmark/models.py",
+      "description": "Ridge Regression."
+    },
+    {
+      "label": "corrgroups60__decision_tree()",
+      "source_file": "benchmark/models.py",
+      "description": "Decision Tree."
+    },
+    {
+      "label": "corrgroups60__random_forest()",
+      "source_file": "benchmark/models.py",
+      "description": "Random Forest."
+    },
+    {
+      "label": "corrgroups60__gbm()",
+      "source_file": "benchmark/models.py",
+      "description": "Gradient Boosted Trees."
+    },
+    {
+      "label": "corrgroups60__ffnn()",
+      "source_file": "benchmark/models.py",
+      "description": "4-Layer Neural Network."
+    },
+    {
+      "label": "independentlinear60__lasso()",
+      "source_file": "benchmark/models.py",
+      "description": "Lasso Regression."
+    },
+    {
+      "label": "independentlinear60__ridge()",
+      "source_file": "benchmark/models.py",
+      "description": "Ridge Regression."
+    },
+    {
+      "label": "independentlinear60__decision_tree()",
+      "source_file": "benchmark/models.py",
+      "description": "Decision Tree."
+    },
+    {
+      "label": "independentlinear60__random_forest()",
+      "source_file": "benchmark/models.py",
+      "description": "Random Forest."
+    },
+    {
+      "label": "independentlinear60__gbm()",
+      "source_file": "benchmark/models.py",
+      "description": "Gradient Boosted Trees."
+    },
+    {
+      "label": "independentlinear60__ffnn()",
+      "source_file": "benchmark/models.py",
+      "description": "4-Layer Neural Network."
+    },
+    {
+      "label": "cric__lasso()",
+      "source_file": "benchmark/models.py",
+      "description": "Lasso Regression."
+    },
+    {
+      "label": "cric__ridge()",
+      "source_file": "benchmark/models.py",
+      "description": "Ridge Regression."
+    },
+    {
+      "label": "cric__decision_tree()",
+      "source_file": "benchmark/models.py",
+      "description": "Decision Tree."
+    },
+    {
+      "label": "cric__random_forest()",
+      "source_file": "benchmark/models.py",
+      "description": "Random Forest."
+    },
+    {
+      "label": "cric__gbm()",
+      "source_file": "benchmark/models.py",
+      "description": "Gradient Boosted Trees."
+    },
+    {
+      "label": "cric__ffnn()",
+      "source_file": "benchmark/models.py",
+      "description": "4-Layer Neural Network."
+    },
+    {
+      "label": "human__decision_tree()",
+      "source_file": "benchmark/models.py",
+      "description": "Decision Tree."
+    },
+    {
+      "label": "get_method_color()",
+      "source_file": "benchmark/plots.py",
+      "description": "Public NumPy API symbol `np.get_method_color` (C-implemented or namespace; see docs)."
+    },
+    {
+      "label": "get_method_linestyle()",
+      "source_file": "benchmark/plots.py",
+      "description": "Public NumPy API symbol `np.get_method_linestyle` (C-implemented or namespace; see docs)."
+    },
+    {
+      "label": "get_metric_attr()",
+      "source_file": "benchmark/plots.py",
+      "description": "Public NumPy API symbol `np.get_metric_attr` (C-implemented or namespace; see docs)."
+    },
+    {
+      "label": "plot_curve()",
+      "source_file": "benchmark/plots.py",
+      "description": "Public NumPy API symbol `np.plot_curve` (C-implemented or namespace; see docs)."
+    },
+    {
+      "label": "plot_human()",
+      "source_file": "benchmark/plots.py",
+      "description": "Public NumPy API symbol `np.plot_human` (C-implemented or namespace; see docs)."
+    },
+    {
+      "label": "make_grid()",
+      "source_file": "benchmark/plots.py",
+      "description": "Public NumPy API symbol `np.make_grid` (C-implemented or namespace; see docs)."
+    },
+    {
+      "label": "plot_grids()",
+      "source_file": "benchmark/plots.py",
+      "description": "Public NumPy API symbol `np.plot_grids` (C-implemented or namespace; see docs)."
+    },
+    {
+      "label": "MAPLE",
+      "source_file": "_maple.py",
+      "description": "shap MAPLE explainer alias: model-agnostic local explanations (the Maple class lives in explainers/other/_maple.py; the top-level MAPLE binding mirrors it)."
+    }
+  ]
+}

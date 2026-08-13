@@ -247,6 +247,18 @@ docs:
   type: Generated
   status: generated
   last_verified: ''
+- path: docs/reference/api-surface/shap.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/quality-gate/gate-shap.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/edge-audits/edge-audit-shap.md
+  type: Generated
+  status: generated
+  last_verified: ''
 - path: docs/reference/api-surface/riskfolio.md
   type: Generated
   status: generated

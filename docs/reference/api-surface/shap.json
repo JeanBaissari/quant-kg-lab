@@ -1,0 +1,9 @@
+{
+  "lib": "shap",
+  "total": 387,
+  "present": 387,
+  "missing": 0,
+  "coverage": 100.0,
+  "by_mechanism": {},
+  "generated": "2026-08-12"
+}
