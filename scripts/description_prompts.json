@@ -325,6 +325,24 @@
           "desc": "shap waterfall plot: base value to prediction, contributions stacked per feature."
         }
       ]
+    },
+    "polars": {
+      "emphasis": "polars is the Rust-core DataFrame library; this graph covers the Python API (src layout): DataFrame/LazyFrame/Series, expressions (col/pl.col, filter/group_by/window), IO (read_csv/parquet/scan), datatypes, functions (concat, range), catalog, config. The Rust engine is absent \u2014 describe the Python-facing API.",
+      "glossary": "LazyFrame, DataFrame, expression, group_by, window, scan_parquet, lazy execution, schema, streaming",
+      "exemplars": [
+        {
+          "name": "DataFrame (dataframe/base.py)",
+          "desc": "polars DataFrame: the eager tabular structure \u2014 select/filter/group_by/join; converted from LazyFrame via .collect()."
+        },
+        {
+          "name": "LazyFrame (lazyframe/base.py)",
+          "desc": "polars LazyFrame: lazy query plan \u2014 scan/sink; optimized and executed by .collect()/sink_parquet."
+        },
+        {
+          "name": "col (functions/col.py)",
+          "desc": "polars expression constructor: pl.col('name') selects a column into an expression pipeline."
+        }
+      ]
     }
   }
 }
