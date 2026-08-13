@@ -59,5 +59,7 @@ jobs:
           EOF
       - uses: softprops/action-gh-release@v2
         with:
-          files: dist/*.zip
+          files: |
+            dist/*.zip
+            dist/bundle.json
           generate_release_notes: true
