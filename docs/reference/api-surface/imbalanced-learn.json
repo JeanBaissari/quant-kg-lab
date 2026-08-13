@@ -1,0 +1,9 @@
+{
+  "lib": "imbalanced-learn",
+  "total": 87,
+  "present": 87,
+  "missing": 0,
+  "coverage": 100.0,
+  "by_mechanism": {},
+  "generated": "2026-08-12"
+}
