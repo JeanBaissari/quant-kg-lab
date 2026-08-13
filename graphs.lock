@@ -123,8 +123,8 @@
     "empyrical": {
       "repo": "Quantopian/empyrical",
       "commit": "40f61b4f229df10898d46d08f7b1bdc543c0f99c",
-      "nodes": 0,
-      "edges": 0
+      "nodes": 180,
+      "edges": 258
     }
   }
 }
