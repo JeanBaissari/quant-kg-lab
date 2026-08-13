@@ -2,7 +2,7 @@
 
 # Quality Gate — numpy
 
-Graph: `knowledge_graphs/numpy/.graphify/graph.json` · GRAPH_SPEC §5 · generated 2026-08-12
+Graph: `knowledge_graphs/numpy/.graphify/graph.json` · GRAPH_SPEC §5 · generated 2026-08-13
 
 | criterion | status | counts |
 |---|---|---|

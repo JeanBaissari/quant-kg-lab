@@ -181,8 +181,27 @@
       "source": "pandas::DataFrame",
       "target": "statsmodels::PandasData",
       "relation": "input_to"
+    },
+    {
+      "bridge": "alphalens.performance.py -> pandas.DataFrame",
+      "status": "RESOLVED",
+      "source": "alphalens::performance.py",
+      "target": "pandas::DataFrame",
+      "relation": "input_to"
+    },
+    {
+      "bridge": "alphalens.performance.py -> scikit-learn.BaseEstimator",
+      "status": "RESOLVED",
+      "source": "alphalens::performance.py",
+      "target": "scikit-learn::BaseEstimator",
+      "relation": "feeds"
+    },
+    {
+      "bridge": "alphalens.tears.py -> pyfolio.performance.py",
+      "status": "UNRESOLVED",
+      "missing": "performance.py"
     }
   ],
-  "resolved": 26,
-  "attempted": 26
+  "resolved": 28,
+  "attempted": 29
 }

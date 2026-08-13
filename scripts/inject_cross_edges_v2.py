@@ -54,7 +54,11 @@ ALL_BRIDGES = [
     ("statsmodels", "OLS", "scipy", "stats", "powered_by", "statsmodels OLS inference relies on scipy.stats distributions"),
     ("statsmodels", "OLS", "scikit-learn", "LinearRegression", "alternative_to", "statsmodels OLS (inference) vs sklearn LinearRegression (prediction)"),
     ("pandas", "DataFrame", "statsmodels", "PandasData", "input_to", "statsmodels models consume pandas DataFrames via the formula/data layer"),
+    ("alphalens", "performance.py", "pandas", "DataFrame", "input_to", "alphalens factor analysis consumes pandas price/factor DataFrames"),
+    ("alphalens", "performance.py", "scikit-learn", "BaseEstimator", "feeds", "alphalens IC/quantile analytics validate sklearn-estimator factor models"),
+    ("alphalens", "tears.py", "pyfolio", "performance.py", "feeds", "alphalens tear sheets feed pyfolio portfolio-level reporting"),
 ]
+
 
 ALL_LIBS = list(json.load(open(REPO_ROOT / "graphs.lock"))["libraries"])
 

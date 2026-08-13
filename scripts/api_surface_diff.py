@@ -26,6 +26,9 @@ import sys, json, types, importlib, pathlib
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 THRESHOLD = 95.0
 IMPORT_NAME = {"scikit-learn": "sklearn", "ta-lib": "talib", "pyportfolioopt": "pypfopt"}
+PKG_OF = {"scikit-learn": "sklearn", "ta-lib": "talib", "pyportfolioopt": "pypfopt",
+          "arch": "arch", "alphalens": "alphalens", "pyfolio": "pyfolio",
+          "riskfolio": "riskfolio", "polars": "polars", "shap": "shap"}
 
 BUILTIN_TYPES = {"builtin_function_or_method", "method_descriptor",
                  "_ArrayFunctionDispatcher", "getset_descriptor", "classmethod",
@@ -93,6 +96,34 @@ def _module_file(modname, lib):
         return None
 
 
+def ast_symbols(lib, pkg):
+    """AST fallback when the library can't be imported (old quantopian-era
+    packages break on py3.12, e.g. alphalens' setup.py). Walks the pinned
+    clone's package dir for top-level public symbols + their docstrings."""
+    import ast
+    root = ROOT / "knowledge_graphs" / lib / "repo" / pkg
+    if not root.is_dir():
+        return None
+    out = []
+    for p in sorted(root.rglob("*.py")):
+        rel = str(p.relative_to(root))
+        if rel.startswith("tests") or "/tests/" in rel or p.name.startswith("test_"):
+            continue
+        try:
+            tree = ast.parse(p.read_text(errors="replace"))
+        except Exception:
+            continue
+        for node in tree.body:
+            if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef)) \
+                    and not node.name.startswith("_"):
+                doc = ast.get_docstring(node) or ""
+                out.append({"symbol": node.name,
+                            "kind": "class" if isinstance(node, ast.ClassDef) else "func",
+                            "description": doc.strip().split("\n")[0][:220] if doc else "",
+                            "source_file": str(rel)})
+    return out
+
+
 def load_graph(lib):
     p = ROOT / "knowledge_graphs" / lib / ".graphify" / "graph.json"
     return json.load(open(p)) if p.exists() else None
@@ -113,16 +144,32 @@ def main():
         sys.exit(f"no graph for {lib}")
     labels = graph_labels(g)
     gsrc = {n.get("source_file", "") for n in g["nodes"]}
-    mod = importlib.import_module(IMPORT_NAME.get(lib, lib))
-    symbols = [s for s in dir(mod) if not s.startswith("_")]
+    pkg = PKG_OF.get(lib, lib)
+    ast_syms = None
+    try:
+        mod = importlib.import_module(IMPORT_NAME.get(lib, lib))
+        symbols = [s for s in dir(mod) if not s.startswith("_")]
+        obj_of = lambda s: getattr(mod, s, None)
+    except Exception:
+        ast_syms = ast_symbols(lib, pkg)
+        if ast_syms is None:
+            sys.exit(f"{lib}: cannot import (venv needed) and no pinned clone for AST fallback")
+        symbols = [s["symbol"] for s in ast_syms]
+        obj_of = lambda s: None
     missing, present = [], 0
     for s in symbols:
         if resolve(labels, s):
             present += 1
             continue
-        obj = getattr(mod, s, None)
-        mech, src = classify(obj, s, gsrc, labels, lib)
-        doc = getattr(obj, "__doc__", None) or ""
+        obj = obj_of(s)
+        if obj is not None:
+            mech, src = classify(obj, s, gsrc, labels, lib)
+            doc = getattr(obj, "__doc__", None) or ""
+        else:
+            info = next((a for a in ast_syms if a["symbol"] == s), {})
+            mech = "M2b-unimportable" + ("-class" if info.get("kind") == "class" else "")
+            src = info.get("source_file")
+            doc = info.get("description", "")
         missing.append({"symbol": s, "mechanism": mech, "source_file": src,
                         "description": _desc(doc, s, obj)})
     coverage = 100.0 * present / len(symbols) if symbols else 100.0
@@ -151,7 +198,7 @@ def main():
         for m in missing:
             obj = getattr(mod, m["symbol"], None)
             curated.append({
-                "label": _label(m["symbol"], obj),
+                "label": _label(m["symbol"], obj, m["mechanism"]),
                 "source_file": m["source_file"] or "__init__.py",
                 "description": m["description"],
             })
@@ -172,7 +219,11 @@ def _desc(doc, sym, obj):
     return d[:220]
 
 
-def _label(sym, obj):
+def _label(sym, obj, mech=""):
+    if mech.startswith("M2b-unimportable-class"):
+        return sym
+    if mech.startswith("M2b-unimportable"):
+        return f"{sym}()"
     if isinstance(obj, type):
         return sym                      # classes/types are cited bare
     if callable(obj):

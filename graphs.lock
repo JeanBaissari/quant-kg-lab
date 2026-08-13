@@ -93,8 +93,8 @@
     "alphalens": {
       "repo": "quantopian/alphalens",
       "commit": "77084f1e4c2c0be407e032d444fb19e4be4b0f37",
-      "nodes": 0,
-      "edges": 0
+      "nodes": 172,
+      "edges": 231
     }
   }
 }

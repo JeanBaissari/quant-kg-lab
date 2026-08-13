@@ -235,6 +235,42 @@
           "desc": "pypfopt risk model: sample covariance matrix of asset returns."
         }
       ]
+    },
+    "arch": {
+      "emphasis": "arch is a volatility-modelling library (ARCH/GARCH family, unit-root tests, bootstrap). Modules: univariate (ARCH/EGARCH/GJR fits, forecasts), unitroot (ADF/Phillips-Perron/KPSS tests), bootstrap, covariance (CCC/DCC), utility. Note the Cython recursions core is absent \u2014 describe the Python API surface around it.",
+      "glossary": "ARCH, GARCH, EGARCH, GJR, unit root, ADF, Phillips-Perron, KPSS, conditional volatility, resampling, DCC",
+      "exemplars": [
+        {
+          "name": "ARCH (univariate/volatility.py)",
+          "desc": "arch ARCH/GARCH model class: fit(update_freq=0) returns a results object with conditional_volatility, params, forecasts via forecast()."
+        },
+        {
+          "name": "ADF (unitroot/stationarity.py)",
+          "desc": "arch ADF unit-root test: returns the test statistic, p-value, and critical values (Engle-Granger style)."
+        },
+        {
+          "name": "bootstrap (bootstrap/base.py)",
+          "desc": "arch bootstrap: stationary and circular block resampling for confidence intervals on statistics."
+        }
+      ]
+    },
+    "alphalens": {
+      "emphasis": "alphalens analyses alpha/factor performance: factor data (FactorData), returns analysis (cumulative returns by quantile), information coefficient (IC) analysis (mean_ic, ic_by_factor), tearsheets, and event studies. Describe each node's role in the factor-research pipeline.",
+      "glossary": "factor, IC, quantile, alpha, tearsheet, cumulative return, factor weight, event study, long-short",
+      "exemplars": [
+        {
+          "name": "FactorData (alphalens/utils/data.py)",
+          "desc": "alphalens FactorData: wraps factor values + prices + group data; compute_returns() builds forward returns; tear sheet entry point."
+        },
+        {
+          "name": "mean_information_coefficient (performance.py)",
+          "desc": "alphalens mean IC over the period with std and IC quantiles \u2014 the factor's predictive power summary."
+        },
+        {
+          "name": "create_returns_tear_sheet (tears.py)",
+          "desc": "alphalens returns tear sheet: quantile cumulative returns, spread, and turnover plots for a factor."
+        }
+      ]
     }
   }
 }

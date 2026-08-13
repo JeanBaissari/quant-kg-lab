@@ -191,6 +191,12 @@
       "label": "PandasData",
       "library": "statsmodels",
       "source_file": "base/data.py"
+    },
+    {
+      "id": "alphalens::performance",
+      "label": "performance.py",
+      "library": "alphalens",
+      "source_file": "performance.py"
     }
   ],
   "links": [
@@ -375,6 +381,20 @@
       "relation": "input_to",
       "confidence": "CURATED",
       "description": "statsmodels models consume pandas DataFrames via the formula/data layer"
+    },
+    {
+      "source": "alphalens::performance",
+      "target": "pandas::dataframe",
+      "relation": "input_to",
+      "confidence": "CURATED",
+      "description": "alphalens factor analysis consumes pandas price/factor DataFrames"
+    },
+    {
+      "source": "alphalens::performance",
+      "target": "scikit-learn::base_baseestimator",
+      "relation": "feeds",
+      "confidence": "CURATED",
+      "description": "alphalens IC/quantile analytics validate sklearn-estimator factor models"
     }
   ],
   "hyperedges": []
