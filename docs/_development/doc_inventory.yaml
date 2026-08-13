@@ -187,6 +187,10 @@ docs:
   type: Generated
   status: generated
   last_verified: ''
+- path: docs/reference/api-surface/empyrical.md
+  type: Generated
+  status: generated
+  last_verified: ''
 - path: docs/reference/api-surface/numpy.md
   type: Generated
   status: generated

@@ -30,6 +30,7 @@
 | alphalens | — | 172 · 231 | 2 | [`alphalens`](../../skills/alphalens/SKILL.md) |
 | arch | — | 1367 · 3900 | 4 | [`arch`](../../skills/arch/SKILL.md) |
 | cvxpy | — | 6380 · 16515 | 5 | [`cvxpy`](../../skills/cvxpy/SKILL.md) |
+| empyrical | — | 180 · 258 | 2 | [`empyrical`](../../skills/empyrical/SKILL.md) |
 | polars | — | 5296 · 16925 | 5 | [`polars`](../../skills/polars/SKILL.md) |
 | pyfolio | — | 305 · 361 | 2 | [`pyfolio`](../../skills/pyfolio/SKILL.md) |
 | pyportfolioopt | — | 342 · 512 | 4 | [`pyportfolioopt`](../../skills/pyportfolioopt/SKILL.md) |
@@ -135,6 +136,11 @@
 - [`cvxpy-core`](../../skills/cvxpy/core/SKILL.md) — Use when solving convex optimization problems with cvxpy — variables, parameters, objectives, Problem.solve(), and DCP analysis.
 - [`cvxpy-problems`](../../skills/cvxpy/problems/SKILL.md) — Use when driving cvxpy problem lifecycle — Problem.solve() options, solver stats, warm starts, and solver selection (SCS/ECOS/OSQP/Clarabel).
 - [`cvxpy-solvers`](../../skills/cvxpy/solvers/SKILL.md) — Use when choosing and tuning cvxpy solvers — solver families and tradeoffs, dual values, solver options, warm starts, and reading solver_stats.
+
+### empyrical
+- [`empyrical`](../../skills/empyrical/SKILL.md) *(router)* — Use when working with empyrical — the portfolio-metrics entry point. Router indexing the empyrical sub-skills; load the sub-skill for the metric family you need.
+- [`empyrical-perf-attrib`](../../skills/empyrical/perf-attrib/SKILL.md) — Use when decomposing portfolio performance into factor exposures — perf_attrib and compute_exposures for factor-model attribution of returns.
+- [`empyrical-stats`](../../skills/empyrical/stats/SKILL.md) — Use when computing portfolio/strategy performance metrics from returns — annual return/volatility, Sharpe/Sortino/omega/Calmar ratios, max drawdown, alpha/beta, downside risk, tail ratio, stability, and cumulative-return helpers.
 
 ### polars
 - [`polars`](../../skills/polars/SKILL.md) *(router)* — Use when working with polars — the DataFrame entry point. Router indexing the polars sub-skills; load the sub-skill for the layer you need.

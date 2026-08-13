@@ -142,6 +142,29 @@
       "meta_warn": [],
       "provenance": []
     },
+    "skills/empyrical/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/empyrical/perf-attrib/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "func py: not found (library not installed, no graph node)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/empyrical/stats/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
     "skills/lightgbm/SKILL.md": {
       "lint": [],
       "api_fail": [],
