@@ -227,6 +227,10 @@ docs:
   type: Generated
   status: generated
   last_verified: ''
+- path: docs/reference/api-surface/darts.md
+  type: Generated
+  status: generated
+  last_verified: ''
 - path: docs/reference/api-surface/empyrical.md
   type: Generated
   status: generated

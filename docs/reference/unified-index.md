@@ -31,6 +31,7 @@
 | arch | — | 1367 · 3900 | 4 | [`arch`](../../skills/arch/SKILL.md) |
 | catboost | — | 793 · 1569 | 3 | [`catboost`](../../skills/catboost/SKILL.md) |
 | cvxpy | — | 6380 · 16515 | 5 | [`cvxpy`](../../skills/cvxpy/SKILL.md) |
+| darts | — | 3954 · 8240 | 3 | [`darts`](../../skills/darts/SKILL.md) |
 | empyrical | — | 180 · 258 | 2 | [`empyrical`](../../skills/empyrical/SKILL.md) |
 | imbalanced-learn | — | 611 · 865 | 3 | [`imbalanced-learn`](../../skills/imbalanced-learn/SKILL.md) |
 | mplfinance | — | 244 · 317 | 0 | [`mplfinance`](../../skills/mplfinance/SKILL.md) |
@@ -153,6 +154,12 @@
 - [`cvxpy-core`](../../skills/cvxpy/core/SKILL.md) — Use when solving convex optimization problems with cvxpy — variables, parameters, objectives, Problem.solve(), and DCP analysis.
 - [`cvxpy-problems`](../../skills/cvxpy/problems/SKILL.md) — Use when driving cvxpy problem lifecycle — Problem.solve() options, solver stats, warm starts, and solver selection (SCS/ECOS/OSQP/Clarabel).
 - [`cvxpy-solvers`](../../skills/cvxpy/solvers/SKILL.md) — Use when choosing and tuning cvxpy solvers — solver families and tradeoffs, dual values, solver options, warm starts, and reading solver_stats.
+
+### darts
+- [`darts`](../../skills/darts/SKILL.md) *(router)* — Use when working with darts — the forecasting entry point. Router indexing the darts sub-skills; load the sub-skill for the forecasting stage you need.
+- [`darts-backtesting`](../../skills/darts/backtesting/SKILL.md) — Use when validating darts forecasts — historical_forecasts rolling out-of-sample evaluation, backtest-driven model selection, and grid search over forecasting parameters.
+- [`darts-models`](../../skills/darts/models/SKILL.md) — Use when choosing a darts forecasting model — the model zoo (naive/statistical/ML/deep/ensemble/conformal families), fit/predict contract, and covariates support.
+- [`darts-timeseries`](../../skills/darts/timeseries/SKILL.md) — Use when working with darts TimeSeries containers and forecasting metrics — series construction/alignment, frequency handling, imputation, and the metric family (MAPE/SMAPE/MASE/RMSE/quantile).
 
 ### empyrical
 - [`empyrical`](../../skills/empyrical/SKILL.md) *(router)* — Use when working with empyrical — the portfolio-metrics entry point. Router indexing the empyrical sub-skills; load the sub-skill for the metric family you need.

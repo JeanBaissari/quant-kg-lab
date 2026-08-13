@@ -1,6 +1,6 @@
 {
-  "generated": "2026-08-13T22:32:39+00:00",
-  "git_sha": "b70d588",
+  "generated": "2026-08-13T23:05:26+00:00",
+  "git_sha": "a91d486",
   "mode": {
     "ci": true,
     "strict": false,
@@ -171,6 +171,34 @@
       "api_warn": [
         "class HiGHS: not found (library not installed, no graph node)"
       ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/darts/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/darts/backtesting/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/darts/models/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/darts/timeseries/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
       "meta_warn": [],
       "provenance": []
     },
