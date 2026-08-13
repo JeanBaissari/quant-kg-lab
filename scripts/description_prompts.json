@@ -400,6 +400,25 @@
         }
       ],
       "payload_note": "Write exactly ONE semantic sentence per node \u2014 a functional summary a quant user can act on. Never produce code; never quote source."
+    },
+    "imbalanced-learn": {
+      "emphasis": "imbalanced-learn (imblearn) is a scikit-learn-compatible class-imbalance toolkit: samplers (over/under/combined \u2014 RandomOverSampler, SMOTE, ADASYN, BorderlineSMOTE, NearMiss, RandomUnderSampler, SMOTENC, SMOTEN, SMOTEENN, SMOTETomek, EditedNearestNeighbours), pipeline (Pipeline, make_pipeline \u2014 sampling-aware), ensemble (BalancedBaggingClassifier, BalancedRandomForestClassifier, EasyEnsembleClassifier, RUSBoostClassifier), metrics (classification_report_imbalanced, geometric_mean_score, make_scorer), under_sampling/over_sampling/combine packages, datasets (fetch_datasets, make_imbalance), base (BaseSampler, SamplerMixin), utils (check_target_type, _validation). Describe each class/function's resampling role and key parameters \u2014 they all follow the sklearn fit/resample/sample or fit_transform API.",
+      "glossary": "SMOTE, oversampling, undersampling, random undersampling, NearMiss, ADASYN, borderline, SMOTEENN, balanced bagging, balanced random forest, geometric mean, imbalanced dataset, sampling strategy",
+      "exemplars": [
+        {
+          "name": "SMOTE (over_sampling)",
+          "desc": "imblearn SMOTE: synthetic minority oversampling via k-NN interpolation \u2014 fit_resample(X, y) returns augmented X/y."
+        },
+        {
+          "name": "Pipeline (pipeline.py)",
+          "desc": "imblearn Pipeline: sklearn-pipeline with sampling-aware steps \u2014 samplers can run inside the pipeline between transformers and estimators."
+        },
+        {
+          "name": "BalancedRandomForestClassifier (ensemble)",
+          "desc": "imblearn BalancedRandomForestClassifier: random forest with balanced bootstrap sampling per tree for imbalanced classes."
+        }
+      ],
+      "payload_note": "Write exactly ONE semantic sentence per node \u2014 a functional summary a quant user can act on. Never produce code; never quote source."
     }
   }
 }
