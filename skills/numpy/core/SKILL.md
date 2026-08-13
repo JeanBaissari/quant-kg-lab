@@ -21,7 +21,7 @@ related_skills: []
 
 # NumPy Core (`numpy._core` / `numpy`)
 
-The foundational array computing layer. The `ndarray` is an N-dimensional homogeneous array backed by a contiguous C buffer with stride-based indexing. Universal functions (ufuncs) provide element-wise operations with broadcasting.
+The foundational array computing layer: the `ndarray` (N-dimensional homogeneous array over a contiguous C buffer, stride-based indexing), array creation, indexing/slicing, reshaping, reductions, sorting, and the dtype system. Ufuncs/broadcasting/einsum live in `numpy-ufuncs`; array persistence in `numpy-io`.
 
 ## Quick Reference
 
@@ -36,7 +36,6 @@ The foundational array computing layer. The `ndarray` is an N-dimensional homoge
 | `mean` | `np.mean(a, axis=None)` | Arithmetic mean along specified axis | _core/fromnumeric.py:L3804 |
 | `concatenate` | `np.concatenate((a1, a2, ...), axis=0)` | Join arrays along an existing axis | _core/multiarray.py:L198 |
 | `sort` | `np.sort(a, axis=-1)` | Return a sorted copy of an array | _core/fromnumeric.py:L1000 |
-| `einsum` | `np.einsum(subscripts, *operands)` | Einstein summation convention | _core/einsumfunc.py:L1243 |
 
 ## Architecture Overview
 
@@ -206,89 +205,6 @@ np.pad(a, pad_width, mode='constant') # pad with values
 np.block([[A, B], [C, D]])            # assemble from nested lists
 ```
 
-## Universal Functions (ufuncs)
-
-Ufuncs operate element-wise on arrays with broadcasting. They are the core of NumPy's performance — implemented in C with SIMD optimizations.
-
-```python
-import numpy as np
-
-a = np.array([1, 2, 3, 4])
-b = np.array([10, 20, 30, 40])
-
-# Arithmetic ufuncs
-np.add(a, b)       # [11, 22, 33, 44]
-np.subtract(a, b)  # [-9, -18, -27, -36]
-np.multiply(a, b)  # [10, 40, 90, 160]
-np.divide(a, b)    # [0.1, 0.1, 0.1, 0.1]
-np.power(a, 2)     # [1, 4, 9, 16]
-np.mod(a, 3)       # [1, 2, 0, 1]
-
-# Math ufuncs
-np.sin(a), np.cos(a), np.tan(a)
-np.exp(a), np.log(a), np.log10(a)
-np.sqrt(a)
-np.abs(-a)
-
-# Comparison ufuncs
-np.greater(a, b)          # element-wise a > b
-np.less(a, b)
-np.equal(a, b)
-np.not_equal(a, b)
-np.greater_equal(a, b)
-np.less_equal(a, b)
-np.logical_and(a > 1, a < 4)
-np.logical_or(a < 2, a > 3)
-
-# Reduction methods
-np.add.reduce(a)           # sum all elements
-np.multiply.reduce(a)      # product of all elements
-np.add.accumulate(a)       # cumulative sum: [1, 3, 6, 10]
-np.multiply.outer(a, b)    # outer product: (4, 4) array
-
-# In-place operations
-np.add.at(arr, indices, values)  # unbuffered in-place addition at indices
-
-# Ufunc configuration
-np.seterr(all='warn')            # set floating-point error handling
-np.geterr()                      # get current settings
-np.seterrcall(log_callback)      # set error callback
-err = np.errstate(divide='ignore')  # context manager for error handling
-```
-
-## Broadcasting
-
-The mechanism that allows ufuncs to handle differently-shaped arrays by implicitly expanding dimensions:
-
-```
-Rules:
-1. If arrays have different numbers of dimensions, prepend 1s to the smaller shape
-2. Arrays with size 1 along a dimension act as if they had the larger size
-3. If a dimension differs and neither is 1, broadcasting fails (ValueError)
-
-Examples:
-  (3,)     + (3,)     → (3,)      ✓
-  (3, 1)   + (1, 4)   → (3, 4)    ✓
-  (3, 4)   + (4,)     → (3, 4)    ✓  (4,) prepended to (1, 4)
-  (3, 4)   + (3, 1)   → (3, 4)    ✓
-  (3, 4)   + (5, 4)   → ERROR     ✗  (3 ≠ 5)
-  (3, 4)   + (3,)     → ERROR     ✗  (4 ≠ 3 after prepending)
-```
-
-```python
-# Broadcasting in practice
-a = np.array([1, 2, 3])           # (3,)
-b = np.array([10, 20, 30, 40])    # (4,)
-c = a[:, np.newaxis] + b          # (3, 4) via broadcasting
-
-# Verify broadcast shape
-np.broadcast_shapes((3, 1), (1, 4))  # (3, 4)
-
-# Explicit broadcast
-np.broadcast_to(a[:, None], (3, 4))  # (3, 4)
-np.broadcast_arrays(a[:, None], b)   # list of broadcast arrays
-```
-
 ## Reductions & Statistics
 
 Reductions collapse axes by applying a function:
@@ -408,60 +324,6 @@ np.can_cast(np.float64, np.int32)     # False (lossy)
 # Info functions
 np.iinfo(np.int32)   # integer info (min, max, bits)
 np.finfo(np.float64) # float info (eps, min, max, precision)
-```
-
-## einstein Summation (einsum)
-
-The Swiss Army knife of tensor operations:
-
-```python
-# Matrix multiplication: ij,jk → ik
-np.einsum('ij,jk->ik', A, B)
-
-# Hadamard (element-wise) product: ij,ij → ij
-np.einsum('ij,ij->ij', A, B)
-
-# Outer product: i,j → ij
-np.einsum('i,j->ij', a, b)
-
-# Trace: ii →
-np.einsum('ii->', A)
-
-# Diagonal: ii → i
-np.einsum('ii->i', A)
-
-# Batch matmul: bij,bjk → bik
-np.einsum('bij,bjk->bik', A_batch, B_batch)
-
-# Transpose: ij → ji
-np.einsum('ij->ji', A)
-
-# Sum over axis: ij → j
-np.einsum('ij->j', A)
-
-# Optimized path
-path = np.einsum_path('ij,jk,kl->il', A, B, C)  # returns optimal contraction order
-result = np.einsum('ij,jk,kl->il', A, B, C, optimize=path[0])
-```
-
-## I/O
-
-```python
-# Text
-np.loadtxt('data.csv', delimiter=',', skiprows=1)     # simple text
-np.savetxt('out.csv', data, delimiter=',', fmt='%.6f')
-np.genfromtxt('data.csv', delimiter=',', missing_values='NA')  # handles missing
-
-# Binary (.npy / .npz)
-np.save('arr.npy', arr)                                # single array
-np.load('arr.npy')                                     # load it back
-np.savez('multi.npz', a=arr1, b=arr2)                  # multiple arrays (uncompressed)
-np.savez_compressed('multi.npz', a=arr1, b=arr2)       # compressed
-data = np.load('multi.npz')                            # dict-like: data['a'], data['b']
-
-# Memory mapping (large files)
-mmap = np.load('arr.npy', mmap_mode='r')              # no full load — works on disk
-mmap = np.memmap('large.dat', dtype='float32', mode='r', shape=(1000000,))
 ```
 
 ## Common Patterns

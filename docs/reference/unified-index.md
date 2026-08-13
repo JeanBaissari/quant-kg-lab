@@ -16,7 +16,7 @@
 
 | Library | Domain | Nodes · Edges | Skills | Router |
 |---------|--------|---------------|--------|--------|
-| numpy | Foundation Layer | 8306 · 13483 | 3 | [`numpy`](../../skills/numpy/SKILL.md) |
+| numpy | Foundation Layer | 8306 · 13483 | 5 | [`numpy`](../../skills/numpy/SKILL.md) |
 | pandas | Foundation Layer | 11368 · 39913 | 3 | [`pandas`](../../skills/pandas/SKILL.md) |
 | scipy | Foundation Layer | 14071 · 23466 | 3 | [`scipy`](../../skills/scipy/SKILL.md) |
 | lightgbm | ML & Optimization | 593 · 2029 | 2 | [`lightgbm`](../../skills/lightgbm/SKILL.md) |
@@ -45,10 +45,12 @@
 ## Skills index
 
 ### numpy
-- [`numpy`](../../skills/numpy/SKILL.md) *(router)* — Use when working with NumPy. Router indexing the 3 numpy sub-skills; load the sub-skill for the module you need.
+- [`numpy`](../../skills/numpy/SKILL.md) *(router)* — Use when working with NumPy. Router indexing the 5 numpy sub-skills; load the sub-skill for the module you need.
 - [`numpy-core`](../../skills/numpy/core/SKILL.md) — Use when working with NumPy arrays — ndarray, ufuncs, broadcasting, indexing, dtypes, and array creation.
+- [`numpy-io`](../../skills/numpy/io/SKILL.md) — Use when reading or writing NumPy arrays — loadtxt/savetxt/genfromtxt text I/O, save/load/savez binary .npy/.npz round-trips, and memmap for large on-disk arrays.
 - [`numpy-linalg`](../../skills/numpy/linalg/SKILL.md) — Use when doing linear algebra with NumPy — solve, eig/eigh, svd, qr, cholesky, inv, det, and norm.
 - [`numpy-random`](../../skills/numpy/random/SKILL.md) — Use when generating random numbers with NumPy — Generator, default_rng, distributions, permutation, and seeding.
+- [`numpy-ufuncs`](../../skills/numpy/ufuncs/SKILL.md) — Use when working with NumPy universal functions — element-wise ufuncs (arithmetic/math/comparison), reduction methods, broadcasting rules, einsum, and error-state configuration.
 
 ### pandas
 - [`pandas`](../../skills/pandas/SKILL.md) *(router)* — Use when working with pandas. Router indexing the 2 pandas sub-skills; load the sub-skill for the module you need.

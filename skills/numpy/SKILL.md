@@ -1,6 +1,6 @@
 ---
 name: numpy
-description: Use when working with NumPy. Router indexing the 3 numpy sub-skills;
+description: Use when working with NumPy. Router indexing the 5 numpy sub-skills;
   load the sub-skill for the module you need.
 version: 0.2.0
 author: quant-kg-lab
@@ -17,18 +17,22 @@ tags:
 - numpy
 related_skills:
 - numpy-core
+- numpy-ufuncs
+- numpy-io
 - numpy-linalg
 - numpy-random
 ---
 
 # NumPy (router)
 
-Indexes the 3 spec-driven NumPy sub-skills. Load the one for the module you need.
+Indexes the 5 spec-driven NumPy sub-skills. Load the one for the module you need.
 
 ## Sub-skills
 | Skill | Module | Covers |
 |-------|--------|--------|
-| [numpy-core](core/SKILL.md) | `numpy.core` | NumPy arrays |
+| [numpy-core](core/SKILL.md) | `numpy.core` | NumPy arrays — creation, indexing, dtype |
+| [numpy-ufuncs](ufuncs/SKILL.md) | `numpy.ufuncs` | element-wise ufuncs, broadcasting, einsum |
+| [numpy-io](io/SKILL.md) | `numpy.io` | loadtxt/save/load/memmap persistence |
 | [numpy-linalg](linalg/SKILL.md) | `numpy.linalg` | linear algebra with NumPy |
 | [numpy-random](random/SKILL.md) | `numpy.random` | random numbers with NumPy |
 
