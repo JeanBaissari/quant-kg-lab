@@ -247,6 +247,14 @@ docs:
   type: Generated
   status: generated
   last_verified: ''
+- path: docs/reference/api-surface/riskfolio.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/quality-gate/gate-riskfolio.md
+  type: Generated
+  status: generated
+  last_verified: ''
 - path: docs/reference/quality-gate/gate-arch.md
   type: Generated
   status: generated
