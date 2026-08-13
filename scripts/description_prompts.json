@@ -438,6 +438,25 @@
         }
       ],
       "payload_note": "Write exactly ONE semantic sentence per node \u2014 a functional summary a quant user can act on. Never produce code; never quote source."
+    },
+    "mplfinance": {
+      "emphasis": "mplfinance is a matplotlib-based financial-charting library: plot (plotting.py \u2014 mpf.plot() with type='candle'/'ohlc'/'line'/'renko'/'pnf'/'hollow_and_filled', style, volume panels, mav, addplot overlays, panels, figscale), make_addplot (addplot.py), styles (themes like 'yahoo','binance','charles','nightclouds' \u2014 make_mpf_style), _helpers (date/volume/panel helpers), BaseMarketColors (colors.py), _display (df display helpers). Describe each function's charting role and key parameters.",
+      "glossary": "candlestick, OHLC, renko, point-and-figure, addplot, style, mav, volume, panels, market colors, matplotlib",
+      "exemplars": [
+        {
+          "name": "plot (plotting.py)",
+          "desc": "mplfinance plot(data, type='candle', style='yahoo', volume=True): renders a financial chart from OHLCV data with style/panels/addplots."
+        },
+        {
+          "name": "make_addplot (addplot.py)",
+          "desc": "mplfinance make_addplot(series, panel=0, type='line'): builds an overlay series (e.g. moving average, indicator) to add to a plot."
+        },
+        {
+          "name": "make_mpf_style (styles.py)",
+          "desc": "mplfinance make_mpf_style(base_mpf_style='yahoo', ...): builds a custom chart style (colors, gridlines, facecolor)."
+        }
+      ],
+      "payload_note": "Write exactly ONE semantic sentence per node \u2014 a functional summary a quant user can act on. Never produce code; never quote source."
     }
   }
 }
