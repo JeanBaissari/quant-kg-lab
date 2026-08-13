@@ -19,6 +19,8 @@ related_skills:
 - polars-dataframe
 - polars-expressions
 - polars-performance
+- polars-io
+- polars-lazyframe
 - pandas
 - numpy
 ---
@@ -32,9 +34,11 @@ and streaming performance — the high-throughput counterpart to pandas.
 
 | Skill | Scope |
 |-------|-------|
-| [dataframe](dataframe/SKILL.md) | DataFrame/Series, schema, IO, conversions |
+| [dataframe](dataframe/SKILL.md) | DataFrame/Series, schema, group_by/join/reshape, conversions |
 | [expressions](expressions/SKILL.md) | col/select/group_by/window/join expression pipelines |
 | [performance](performance/SKILL.md) | LazyFrame plans, scan/sink streaming, optimization flags |
+| [io](io/SKILL.md) | read/scan/sink — CSV, Parquet, IPC, JSON, database, cloud |
+| [lazyframe](lazyframe/SKILL.md) | LazyFrame plans, collect/sink, SQLContext, query planning |
 
 ## Common Patterns
 

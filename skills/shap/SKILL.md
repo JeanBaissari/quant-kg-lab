@@ -18,6 +18,7 @@ tags:
 related_skills:
 - shap-explainers
 - shap-plots
+- shap-maskers
 - xgboost
 - lightgbm
 - scikit-learn
@@ -32,8 +33,9 @@ layer over the boosting/linear stack.
 
 | Skill | Scope |
 |-------|-------|
-| [explainers](explainers/SKILL.md) | Explainer variants, Explanation, maskers, TreeExplainer |
-| [plots](plots/SKILL.md) | waterfall/beeswarm/force/bar/dependence plots |
+| [explainers](explainers/SKILL.md) | Explainer variants (Tree/Kernel/Linear/Deep), Explanation, additivity checks |
+| [plots](plots/SKILL.md) | waterfall/beeswarm/force/bar/dependence/decision plots |
+| [maskers](maskers/SKILL.md) | Tabular/Image/Partition/Composite maskers, background data |
 
 ## Common Patterns
 
@@ -41,6 +43,8 @@ layer over the boosting/linear stack.
   directions match thesis.
 - **Signal explainability**: TreeExplainer on the live xgboost/lightgbm model for each
   signal batch.
+- **Report discipline**: fix the masker + background once per model version, so
+  comparisons across time are apples-to-apples.
 
 ## Provenance
 
@@ -49,5 +53,5 @@ Graph: `knowledge_graphs/shap/.graphify/graph.json` — 1277 nodes · 1752 edges
 
 ## Verification Checklist
 
-- [ ] Router links resolve to the 2 module skills
+- [ ] Router links resolve to the 3 module skills
 - [ ] `related_skills` names resolve to real skills

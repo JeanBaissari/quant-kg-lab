@@ -32,12 +32,17 @@ cone programs.
 
 | API | Source File | Description |
 |-----|------------|-------------|
-| `Equality` | `constraints/zero.py` | Affine equality constraint `expr == 0` (built by `==`) |
-| `NonPos` | `constraints/nonpos.py` | Affine inequality `expr <= 0` (built by `<=`) |
-| `SOC` | `constraints/second_order.py` | Second-order cone constraint `||x|| <= t` |
-| `ExpCone` | `constraints/exponential.py` | Exponential cone (log/exp constraints) |
-| `PSD` | `constraints/psd.py` | Positive-semidefinite constraint on a symmetric matrix variable |
+| `Equality` | `constraints/zero.py:L105` | Affine equality constraint `expr == 0` (built by `==`) |
+| `NonPos` | `constraints/nonpos.py:L25` | Affine inequality `expr <= 0` (built by `<=`) |
+| `SOC` | `constraints/second_order.py:L25` | Second-order cone constraint `||x|| <= t` |
+| `ExpCone` | `constraints/exponential.py:L30` | Exponential cone (log/exp constraints) |
+| `PSD` | `constraints/psd.py:L25` | Positive-semidefinite constraint on a symmetric matrix variable |
 | `Constraint` | `constraints/constraint.py` | Base class: `dual_value`, violation, and canonicalization hooks |
+| `PowCone` | `constraints/power.py` | Power cone x^α y^(1-α) >= |z| — convex constraints with powers |
+| `Zero` | `constraints/zero.py` | Canonical equality used by the solver reduction layer |
+| `NonNeg` | `constraints/nonpos.py` | Canonical inequality `expr >= 0` |
+| `Constraint.violation()` | `constraints/constraint.py` | Measure of how far a candidate point violates the constraint |
+| `Constraint.dual_value` | `constraints/constraint.py` | Shadow price / KKT multiplier after solve |
 
 ## Common Patterns
 
@@ -48,6 +53,11 @@ cone programs.
   constraint.
 - **Inspect duals**: `constraint.dual_value` after solve — shadow prices for finance
   (portfolio risk budget sensitivity).
+- **Bounding norms**: `cp.norm(w - w0, 2) <= tol` — turnover/weight deviation caps via SOC.
+- **Exponential-cone utility**: `cp.sum(cp.log(w)) <= target` style constraints — log
+  utility with a floor (requires ExpCone-capable solvers: SCS/Clarabel/ECOS).
+- **Block-diagonal PSD**: `X = Variable((n, n), PSD=True)` then `X[sub, sub]` blocks —
+  keep block structure explicit for faster canonicalization.
 
 ## Pitfalls
 
@@ -56,13 +66,20 @@ cone programs.
 - **Strict inequalities are not supported** — `x > 0` is rejected; use `x >= eps` with a
   small positive `eps`.
 - **Non-affine constraints** (e.g. `x * y <= 1`) break DCP — reformulate with the right cone.
+- **SOC(t, x) argument order**: `SOC(t, x)` means `||x|| <= t` — the scalar comes FIRST;
+  swapping is a silent wrong model.
+- **PSD on non-symmetric input**: passing a non-symmetric expression to a PSD constraint
+  errors — build `X = Variable((n, n), symmetric=True)` or `X + X.T`.
+- **ExpCone solver support**: ECOS and some QP solvers cannot handle exponential cones —
+  fall back to SCS/Clarabel or check `installed_solvers()`.
 
 ## Provenance
 
-Graph: `knowledge_graphs/cvxpy/.graphify/graph.json` — 6330 nodes · 16465 edges ·
+Graph: `knowledge_graphs/cvxpy/.graphify/graph.json` — 6380 nodes · 16465 edges ·
 297 communities · graphify @ e3b50dccf808, backend opencode.
 
 ## Verification Checklist
 
 - [ ] `[A @ x == b, G @ x <= h]`-style problems solve with SCS
 - [ ] `SOC(t, x)` constraint is DCP
+- [ ] `constraint.dual_value` populated after solve

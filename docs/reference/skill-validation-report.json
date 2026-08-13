@@ -84,10 +84,19 @@
       ],
       "provenance": []
     },
-    "skills/cvxpy/cone/SKILL.md": {
+    "skills/cvxpy/atoms/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/cvxpy/cone/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class PowCone: not found (library not installed, no graph node)"
+      ],
       "meta_warn": [
         "graph meta: nodes mismatch \u2014 graph has 6380, skill claims 6379",
         "graph meta: edges mismatch \u2014 graph has 16515, skill claims 16514"
@@ -112,6 +121,15 @@
         "graph meta: nodes mismatch \u2014 graph has 6380, skill claims 6379",
         "graph meta: edges mismatch \u2014 graph has 16515, skill claims 16514"
       ],
+      "provenance": []
+    },
+    "skills/cvxpy/solvers/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class HiGHS: not found (library not installed, no graph node)"
+      ],
+      "meta_warn": [],
       "provenance": []
     },
     "skills/lightgbm/SKILL.md": {
@@ -302,9 +320,7 @@
     "skills/polars/dataframe/SKILL.md": {
       "lint": [],
       "api_fail": [],
-      "api_warn": [
-        "func py: not found (library not installed, no graph node)"
-      ],
+      "api_warn": [],
       "meta_warn": [],
       "provenance": []
     },
@@ -315,6 +331,20 @@
         "func col: not found (library not installed, no graph node)",
         "func group_by: not found (library not installed, no graph node)"
       ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/polars/io/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/polars/lazyframe/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
       "meta_warn": [],
       "provenance": []
     },
@@ -648,9 +678,14 @@
     "skills/shap/explainers/SKILL.md": {
       "lint": [],
       "api_fail": [],
-      "api_warn": [
-        "func py: not found (library not installed, no graph node)"
-      ],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/shap/maskers/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
       "meta_warn": [],
       "provenance": []
     },

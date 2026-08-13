@@ -29,12 +29,12 @@
 | statsmodels | Statistical Models | 11616 · 33529 | 4 | [`statsmodels`](../../skills/statsmodels/SKILL.md) |
 | alphalens | — | 172 · 231 | 2 | [`alphalens`](../../skills/alphalens/SKILL.md) |
 | arch | — | 1367 · 3900 | 3 | [`arch`](../../skills/arch/SKILL.md) |
-| cvxpy | — | 6380 · 16515 | 3 | [`cvxpy`](../../skills/cvxpy/SKILL.md) |
-| polars | — | 5296 · 16925 | 3 | [`polars`](../../skills/polars/SKILL.md) |
+| cvxpy | — | 6380 · 16515 | 5 | [`cvxpy`](../../skills/cvxpy/SKILL.md) |
+| polars | — | 5296 · 16925 | 5 | [`polars`](../../skills/polars/SKILL.md) |
 | pyfolio | — | 305 · 361 | 2 | [`pyfolio`](../../skills/pyfolio/SKILL.md) |
 | pyportfolioopt | — | 342 · 512 | 4 | [`pyportfolioopt`](../../skills/pyportfolioopt/SKILL.md) |
 | riskfolio | — | 426 · 599 | 3 | [`riskfolio`](../../skills/riskfolio/SKILL.md) |
-| shap | — | 1277 · 1752 | 2 | [`shap`](../../skills/shap/SKILL.md) |
+| shap | — | 1277 · 1752 | 3 | [`shap`](../../skills/shap/SKILL.md) |
 
 ## Skills index
 
@@ -129,14 +129,18 @@
 
 ### cvxpy
 - [`cvxpy`](../../skills/cvxpy/SKILL.md) *(router)* — Use when working with cvxpy — the convex-optimization entry point. Router indexing the cvxpy sub-skills; load the sub-skill for the layer you need.
+- [`cvxpy-atoms`](../../skills/cvxpy/atoms/SKILL.md) — Use when choosing cvxpy atoms — norm/quad_form/elementwise functions, matrix atoms, and the curvature rules that keep models DCP.
 - [`cvxpy-cone`](../../skills/cvxpy/cone/SKILL.md) — Use when working with cvxpy constraints — equality/inequality, second-order, exponential, power and PSD cones that make a problem DCP-solvable.
 - [`cvxpy-core`](../../skills/cvxpy/core/SKILL.md) — Use when solving convex optimization problems with cvxpy — variables, parameters, objectives, Problem.solve(), and DCP analysis.
 - [`cvxpy-problems`](../../skills/cvxpy/problems/SKILL.md) — Use when driving cvxpy problem lifecycle — Problem.solve() options, solver stats, warm starts, and solver selection (SCS/ECOS/OSQP/Clarabel).
+- [`cvxpy-solvers`](../../skills/cvxpy/solvers/SKILL.md) — Use when choosing and tuning cvxpy solvers — solver families and tradeoffs, dual values, solver options, warm starts, and reading solver_stats.
 
 ### polars
 - [`polars`](../../skills/polars/SKILL.md) *(router)* — Use when working with polars — the DataFrame entry point. Router indexing the polars sub-skills; load the sub-skill for the layer you need.
-- [`polars-dataframe`](../../skills/polars/dataframe/SKILL.md) — Use when working with polars DataFrames and Series — construction, IO (read/scan parquet+csv), schema, and the eager API.
+- [`polars-dataframe`](../../skills/polars/dataframe/SKILL.md) — Use when working with polars DataFrames and Series — construction, schema control, group_by/join/reshape operations, and pandas interop.
 - [`polars-expressions`](../../skills/polars/expressions/SKILL.md) — Use when building polars expression pipelines — col, select/filter/with_columns, group_by aggregations, window functions, and join/reshape operations.
+- [`polars-io`](../../skills/polars/io/SKILL.md) — Use when reading or writing data with polars — CSV/Parquet/IPC/JSON/NDJSON/Arrow, lazy scan/sink streaming, database and cloud sources.
+- [`polars-lazyframe`](../../skills/polars/lazyframe/SKILL.md) — Use when working with polars LazyFrame — building lazy query plans, collect/sink execution, query planning (explain/inspect), and SQLContext.
 - [`polars-performance`](../../skills/polars/performance/SKILL.md) — Use when optimizing polars pipelines — lazy execution, scan/sink streaming, query planning, and parallelization.
 
 ### pyfolio
@@ -160,6 +164,7 @@
 ### shap
 - [`shap`](../../skills/shap/SKILL.md) *(router)* — Use when working with shap — the model-explainability entry point. Router indexing the shap sub-skills; load the sub-skill for the layer you need.
 - [`shap-explainers`](../../skills/shap/explainers/SKILL.md) — Use when computing SHAP values with shap — Explainer (Tree/Linear/Kernel/Deep), Explanation objects, and maskers.
+- [`shap-maskers`](../../skills/shap/maskers/SKILL.md) — Use when shaping model inputs for SHAP — Tabular/Image/Partition/Composite maskers, background datasets, and how masking defines what SHAP values mean.
 - [`shap-plots`](../../skills/shap/plots/SKILL.md) — Use when visualizing SHAP explanations — waterfall, summary/beeswarm, force, bar, and dependence plots.
 
 ## Workflow playbooks (composable stack)
@@ -205,6 +210,7 @@
 | pandas::DataFrame | statsmodels::PandasData | input_to |
 | alphalens::performance.py | pandas::DataFrame | input_to |
 | alphalens::performance.py | scikit-learn::BaseEstimator | feeds |
+| alphalens::tears.py | pyfolio::tears.py | feeds |
 | arch::ARCHModel | statsmodels::OLS | feeds |
 | arch::ADF | scipy::_stats() | powered_by |
 | pandas::DataFrame | arch::ARCHModel | input_to |

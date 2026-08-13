@@ -19,6 +19,8 @@ related_skills:
 - cvxpy-core
 - cvxpy-cone
 - cvxpy-problems
+- cvxpy-atoms
+- cvxpy-solvers
 - numpy-core
 - pyportfolioopt-efficient-frontier
 ---
@@ -26,16 +28,18 @@ related_skills:
 # cvxpy
 
 Disciplined convex programming in Python: variables, objectives, conic
-constraints, and solvers — the engine underneath portfolio optimizers like
-PyPortfolioOpt.
+constraints, atoms, and solvers — the engine underneath portfolio optimizers
+like PyPortfolioOpt.
 
 ## Sub-skills
 
 | Skill | Scope |
 |-------|-------|
-| [core](core/SKILL.md) | Variable/Parameter/Constant, Minimize/Maximize, atoms (norm, quad_form, sum_squares), DCP |
+| [core](core/SKILL.md) | Variable/Parameter/Constant, Minimize/Maximize, DCP |
 | [cone](cone/SKILL.md) | Equality/NonPos/SOC/ExpCone/PSD constraints, dual values |
-| [problems](problems/SKILL.md) | Problem.solve(), solver selection (SCS/ECOS/OSQP/Clarabel), warm starts, stats |
+| [problems](problems/SKILL.md) | Problem.solve(), status/stats, warm starts, canonicalization |
+| [atoms](atoms/SKILL.md) | norm/quad_form/elementwise/matrix atoms, curvature rules |
+| [solvers](solvers/SKILL.md) | solver families (Clarabel/SCS/OSQP/ECOS), solver_opts, duals |
 
 ## Common Patterns
 
@@ -46,10 +50,10 @@ PyPortfolioOpt.
 
 ## Provenance
 
-Graph: `knowledge_graphs/cvxpy/.graphify/graph.json` — 6330 nodes · 16465 edges ·
+Graph: `knowledge_graphs/cvxpy/.graphify/graph.json` — 6380 nodes · 16465 edges ·
 297 communities · graphify @ e3b50dccf808, backend opencode.
 
 ## Verification Checklist
 
-- [ ] Router links resolve to the 3 module skills
+- [ ] Router links resolve to the 5 module skills
 - [ ] `related_skills` names resolve to real skills

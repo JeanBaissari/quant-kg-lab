@@ -35,9 +35,24 @@ functions, and joins.
 | `col` | `functions/col.py` | Expression constructor: `pl.col("name")` |
 | `select` / `with_columns` | `dataframe/frame.py` | Expression application — project or add columns |
 | `group_by` | `lazyframe/group_by.py` | Grouped aggregation: `df.group_by("k").agg(pl.col("v").mean())` |
-| `functions/` | `functions/` | Expression constructors: col, lit, concat, range, duration helpers |
-| `expr/` | `expr/` | Expression classes: Expr with .mean/.sum/.rank/.shift/.diff |
-| `datatype_expr/` | `datatype_expr/` | Datatype-related expressions (cast, dtype checks) |
+| `Expr` | `expr/expr.py` | Expression class — deg 254 hub: .mean/.sum/.rank/.shift/.diff/.over/.rolling |
+| `lit` | `functions/lit.py` | Constant expression — `pl.lit(1.0)` |
+| `when` / `then` / `otherwise` | `functions/whenthen.py` | Conditional expression — `pl.when(c).then(a).otherwise(b)` |
+| `concat` | `functions/` | Horizontal/vertical frame concat — `pl.concat([df1, df2])` |
+| `Expr.cast` | `expr/expr.py:L2181` | Type cast — `pl.col("v").cast(pl.Float64)` |
+| `Expr.rank` | `expr/expr.py` | Rank — `.rank(method="average"\|"min"\|"dense")` |
+| `Expr.over` | `expr/expr.py` | Window clause — `.rank().over("date")` |
+| `Expr.rolling_*` | `expr/expr.py` | Rolling aggregations — `.rolling_mean(20)` etc. |
+| `Expr.shift` / `Expr.diff` | `expr/expr.py` | Lag / first-difference — return construction |
+| `Expr.ewm_*` | `expr/expr.py` | Exponentially weighted — `.ewm_mean(span=20)` |
+| `Expr.qcut` / `Expr.cut` | `expr/expr.py` | Quantile binning — factor-quantile building |
+| `Expr.filter` | `expr/expr.py` | Row filter inside expressions |
+| `Expr.is_nan` / `Expr.is_null` | `expr/expr.py` | Missing-value masks |
+| `Expr.str` | `expr/string.py` | String namespace — `.str.starts_with/.contains/.to_datetime` |
+| `Expr.dt` | `expr/datetime.py` | Datetime namespace — `.dt.month/.dt.weekday/.dt.round` |
+| `Expr.arr` | `expr/list.py` | List namespace — `.arr.explode/.arr.first/.arr.sum` |
+| `functions/aggregation` | `functions/aggregation/` | Aggregate constructors — horizontal/vertical reductions |
+| `functions/range` | `functions/range/` | Range constructors — int_range, date_range, datetime_range |
 
 ## Common Patterns
 
@@ -47,6 +62,14 @@ functions, and joins.
 - **Shifts/diffs**: `pl.col("px").shift(1)` / `.diff()` — return construction.
 - **Casting**: `pl.col("v").cast(pl.Float64)` — explicit, no silent coercion.
 - **Joins**: `df1.join(df2, on="asset", how="left")`.
+- **Conditional factors**: `pl.when(pl.col("ret") > 0).then(1).otherwise(-1)`.
+- **Rolling volatility**: `pl.col("ret").rolling_std(20)` — or per-group with
+  `.over("asset")`.
+- **Factor quantiles**: `pl.col("ret").qcut(5, labels=["q1".."q5"])` — equal-count bins
+  for cross-sectional portfolio construction.
+- **Time features**: `pl.col("date").dt.month().alias("month")` — calendar features.
+- **String preprocessing**: `pl.col("ticker").str.to_uppercase()`, `.str.replace(...)`.
+- **NaN handling**: `.fill_null(0)` / `.drop_nans()` — explicit missing-value policy.
 
 ## Pitfalls
 
@@ -54,6 +77,13 @@ functions, and joins.
   semantics for rolling uses.
 - **Column pruning**: unused columns in lazy plans are not materialized — results may
   differ from eager expectations when inspecting intermediates.
+- **`alias` after window**: `.rank().over("date").alias("r")` — without alias the
+  result column name is derived from the full expression and can be awkward to join on.
+- **`when` without `otherwise`**: unmatched rows become null, not zero — be explicit.
+- **rolling windows are centered by default in some `rolling_*` variants**: check the
+  `center`/`window_size` arguments for look-ahead bias in backtests.
+- **`str`/`dt` namespaces only on the right dtype**: calling `.dt.*` on a non-datetime
+  column raises — cast first (`pl.col("date").cast(pl.Datetime)`).
 
 ## Provenance
 
