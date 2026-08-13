@@ -37,6 +37,7 @@
 | quantstats | — | 393 · 531 | 3 | [`quantstats`](../../skills/quantstats/SKILL.md) |
 | riskfolio | — | 426 · 599 | 3 | [`riskfolio`](../../skills/riskfolio/SKILL.md) |
 | shap | — | 1277 · 1752 | 3 | [`shap`](../../skills/shap/SKILL.md) |
+| yfinance | — | 823 · 1584 | 2 | [`yfinance`](../../skills/yfinance/SKILL.md) |
 
 ## Skills index
 
@@ -180,6 +181,11 @@
 - [`shap-explainers`](../../skills/shap/explainers/SKILL.md) — Use when computing SHAP values with shap — Explainer (Tree/Linear/Kernel/Deep), Explanation objects, and maskers.
 - [`shap-maskers`](../../skills/shap/maskers/SKILL.md) — Use when shaping model inputs for SHAP — Tabular/Image/Partition/Composite maskers, background datasets, and how masking defines what SHAP values mean.
 - [`shap-plots`](../../skills/shap/plots/SKILL.md) — Use when visualizing SHAP explanations — waterfall, summary/beeswarm, force, bar, and dependence plots.
+
+### yfinance
+- [`yfinance`](../../skills/yfinance/SKILL.md) *(router)* — Use when working with yfinance — the market-data entry point. Router indexing the yfinance sub-skills; load the sub-skill for the fetch pattern you need.
+- [`yfinance-download`](../../skills/yfinance/download/SKILL.md) — Use when fetching multi-symbol market data with yfinance — download() batches, Tickers, search, screeners, and the shared YfData request layer.
+- [`yfinance-ticker`](../../skills/yfinance/ticker/SKILL.md) — Use when fetching per-symbol market data with yfinance — Ticker history, fast_info, fundamentals (income/financials/balance/cashflow), actions, options, holders, calendar, and the scrapers behind them.
 
 ## Workflow playbooks (composable stack)
 

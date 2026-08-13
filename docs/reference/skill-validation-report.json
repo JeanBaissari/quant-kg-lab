@@ -933,6 +933,35 @@
       ],
       "meta_warn": [],
       "provenance": []
+    },
+    "skills/yfinance/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [
+        "graph meta: community_count mismatch \u2014 graph has 52, skill claims 45"
+      ],
+      "provenance": []
+    },
+    "skills/yfinance/download/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class Screener: not found (library not installed, no graph node)"
+      ],
+      "meta_warn": [
+        "graph meta: community_count mismatch \u2014 graph has 52, skill claims 45"
+      ],
+      "provenance": []
+    },
+    "skills/yfinance/ticker/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [
+        "graph meta: community_count mismatch \u2014 graph has 52, skill claims 45"
+      ],
+      "provenance": []
     }
   },
   "router_errors": [],
