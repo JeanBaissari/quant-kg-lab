@@ -4,9 +4,9 @@ description: "Use when building portfolios from strategy signals — mean-varian
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
-composes: [scikit-learn-covariance, scikit-learn-decomposition]
+composes: [scikit-learn-covariance, scikit-learn-decomposition, quant-portfolio-optimization, pyportfolioopt-efficient-frontier, riskfolio-portfolio]
 tags: [quantitative-finance, portfolio-optimization, risk-parity, mean-variance, position-sizing]
-related_skills: [scikit-learn-covariance, scikit-learn-decomposition]
+related_skills: [scikit-learn-covariance, scikit-learn-decomposition, quant-portfolio-optimization, pyportfolioopt-efficient-frontier, riskfolio-portfolio]
 ---
 
 # Portfolio Construction & Position Sizing

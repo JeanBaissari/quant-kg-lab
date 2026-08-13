@@ -435,6 +435,13 @@
       ],
       "provenance": []
     },
+    "skills/quant-patterns/explainability/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
     "skills/quant-patterns/factor-importance/SKILL.md": {
       "lint": [],
       "api_fail": [],
@@ -443,6 +450,13 @@
       "provenance": []
     },
     "skills/quant-patterns/factor-research/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/quant-patterns/factor-tearsheets/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
@@ -477,7 +491,21 @@
       "meta_warn": [],
       "provenance": []
     },
+    "skills/quant-patterns/portfolio-optimization/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
     "skills/quant-patterns/regime-detection/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/quant-patterns/volatility-modelling/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],

@@ -4,9 +4,9 @@ description: "Use when researching alpha factors — building candidate features
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
-composes: [quant-full-pipeline, quant-factor-importance, quant-walk-forward-validation]
+composes: [quant-full-pipeline, quant-factor-importance, quant-walk-forward-validation, quant-factor-tearsheets, alphalens-factor-analysis]
 tags: [quantitative-finance, factor-research, feature-selection, alpha, workflow]
-related_skills: [quant-full-pipeline, quant-factor-importance, quant-walk-forward-validation]
+related_skills: [quant-full-pipeline, quant-factor-importance, quant-walk-forward-validation, quant-factor-tearsheets, alphalens-factor-analysis]
 ---
 
 # Quant Factor Research (data → features → importance → selection → validation)
