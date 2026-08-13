@@ -1,6 +1,6 @@
 {
-  "generated": "2026-08-13T22:22:45+00:00",
-  "git_sha": "ae2dce2",
+  "generated": "2026-08-13T22:32:39+00:00",
+  "git_sha": "b70d588",
   "mode": {
     "ci": true,
     "strict": false,
@@ -885,6 +885,13 @@
       "provenance": []
     },
     "skills/statsmodels/vector_ar/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/ta/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],

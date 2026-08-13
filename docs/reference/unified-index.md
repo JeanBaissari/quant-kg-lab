@@ -41,6 +41,7 @@
 | quantstats | — | 393 · 531 | 3 | [`quantstats`](../../skills/quantstats/SKILL.md) |
 | riskfolio | — | 426 · 599 | 3 | [`riskfolio`](../../skills/riskfolio/SKILL.md) |
 | shap | — | 1277 · 1752 | 3 | [`shap`](../../skills/shap/SKILL.md) |
+| ta | — | 538 · 1208 | 0 | [`ta`](../../skills/ta/SKILL.md) |
 | yfinance | — | 823 · 1584 | 2 | [`yfinance`](../../skills/yfinance/SKILL.md) |
 
 ## Skills index
@@ -210,6 +211,9 @@
 - [`shap-explainers`](../../skills/shap/explainers/SKILL.md) — Use when computing SHAP values with shap — Explainer (Tree/Linear/Kernel/Deep), Explanation objects, and maskers.
 - [`shap-maskers`](../../skills/shap/maskers/SKILL.md) — Use when shaping model inputs for SHAP — Tabular/Image/Partition/Composite maskers, background datasets, and how masking defines what SHAP values mean.
 - [`shap-plots`](../../skills/shap/plots/SKILL.md) — Use when visualizing SHAP explanations — waterfall, summary/beeswarm, force, bar, and dependence plots.
+
+### ta
+- [`ta`](../../skills/ta/SKILL.md) *(router)* — Use when computing technical indicators with ta — pure-Python pandas-native indicators (trend/momentum/volatility/volume), add_all_ta_features, and the ta-lib alternative without the system C library.
 
 ### yfinance
 - [`yfinance`](../../skills/yfinance/SKILL.md) *(router)* — Use when working with yfinance — the market-data entry point. Router indexing the yfinance sub-skills; load the sub-skill for the fetch pattern you need.
