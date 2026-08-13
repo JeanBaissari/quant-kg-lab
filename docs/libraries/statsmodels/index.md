@@ -39,6 +39,8 @@ Hub for the **statsmodels** library (Foundation tier). The per-module API refere
 | statsmodels::OLS | scikit-learn::LinearRegression | alternative_to |
 | pandas::DataFrame | statsmodels::PandasData | input_to |
 | arch::ARCHModel | statsmodels::OLS | feeds |
+| shap::Explainer | statsmodels::OLS | explains |
+| pyfolio::timeseries.py | statsmodels::OLS | powered_by |
 
 ## Related
 

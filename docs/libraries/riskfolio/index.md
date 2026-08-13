@@ -38,6 +38,7 @@ Hub for the **riskfolio** library (Quant Tools tier). The per-module API referen
 | riskfolio::Portfolio | pyportfolioopt::EfficientFrontier | alternative_to |
 | pandas::DataFrame | riskfolio::Portfolio | input_to |
 | riskfolio::Portfolio | scipy::OptimizeResult | alternative_to |
+| riskfolio::Portfolio | polars::DataFrame | consumes |
 
 ## Related
 

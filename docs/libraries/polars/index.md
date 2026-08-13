@@ -39,6 +39,8 @@ Hub for the **polars** library (Foundation tier). The per-module API reference l
 | polars::DataFrame | pandas::DataFrame | alternative_to |
 | polars::DataFrame | numpy::ndarray | backed_by |
 | polars::DataFrame | scikit-learn::BaseEstimator | input_to |
+| polars::DataFrame | vectorbt::Portfolio | input_to |
+| riskfolio::Portfolio | polars::DataFrame | consumes |
 
 ## Related
 

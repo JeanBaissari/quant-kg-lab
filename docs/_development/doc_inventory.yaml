@@ -99,6 +99,10 @@ docs:
   type: Generated
   status: generated
   last_verified: '2026-08-13'
+- path: docs/libraries/empyrical/index.md
+  type: Generated
+  status: generated
+  last_verified: '2026-08-13'
 - path: docs/libraries/index.md
   type: Generated
   status: generated
@@ -223,6 +227,10 @@ docs:
   type: Generated
   status: generated
   last_verified: ''
+- path: docs/reference/edge-audits/edge-audit-empyrical.md
+  type: Generated
+  status: generated
+  last_verified: ''
 - path: docs/reference/edge-audits/edge-audit-lightgbm.md
   type: Generated
   status: generated
@@ -296,6 +304,10 @@ docs:
   status: generated
   last_verified: ''
 - path: docs/reference/quality-gate/gate-cvxpy.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/quality-gate/gate-empyrical.md
   type: Generated
   status: generated
   last_verified: ''

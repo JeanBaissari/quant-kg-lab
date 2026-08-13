@@ -37,6 +37,7 @@ Hub for the **shap** library (Explainability tier). The per-module API reference
 | shap::Explainer | scikit-learn::BaseEstimator | explains |
 | shap::Explainer | xgboost::Booster | explains |
 | shap::Explainer | lightgbm::Booster | explains |
+| shap::Explainer | statsmodels::OLS | explains |
 
 ## Related
 

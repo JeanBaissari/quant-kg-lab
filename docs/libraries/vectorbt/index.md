@@ -42,6 +42,7 @@ Hub for the **vectorbt** library (Quant Tools tier). The per-module API referenc
 | backtrader::Strategy | vectorbt::Portfolio | alternative_to |
 | xgboost::XGBRegressor | vectorbt::Portfolio | predicts_for |
 | scikit-learn::RandomForestClassifier | vectorbt::SignalFactory | powers |
+| polars::DataFrame | vectorbt::Portfolio | input_to |
 
 ## Related
 
