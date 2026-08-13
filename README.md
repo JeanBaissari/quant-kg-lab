@@ -67,8 +67,14 @@ noise-filter policy, and the graph quality gate.
 | [statsmodels](https://github.com/statsmodels/statsmodels) | Statistical models (regression, GLM, time series) | 11,616 · 33,529 |
 | [cvxpy](https://github.com/cvxpy/cvxpy) | Convex optimization | 6,380 · 16,515 |
 | [PyPortfolioOpt](https://github.com/robertmartin8/PyPortfolioOpt) | Portfolio optimization | 342 · 512 |
+| [arch](https://github.com/bashtage/arch) | Volatility modelling (ARCH/GARCH) | 1,367 · 3,900 |
+| [alphalens](https://github.com/quantopian/alphalens) | Factor analysis | 172 · 231 |
+| [pyfolio](https://github.com/quantopian/pyfolio) | Portfolio tear sheets | 305 · 361 |
+| [Riskfolio-Lib](https://github.com/dcajasn/Riskfolio-Lib) | Portfolio optimization suite | 426 · 599 |
+| [shap](https://github.com/shap/shap) | Model explainability | 1,277 · 1,752 |
+| [polars](https://github.com/pola-rs/polars) | Fast DataFrame library | 5,296 · 16,925 |
 
-**Total: ~72K nodes / ~180K edges across 13 graphs.** Pinned commits in `graphs.lock`; every
+**Total: ~76K nodes / ~200K edges across 19 graphs.** Pinned commits in `graphs.lock`; every
 graph passes the [quality gate](docs/specs/GRAPH_SPEC.md#5-quality-gate) (labels, descriptions,
 god nodes, pin, audit, API-surface coverage).
 
@@ -124,7 +130,7 @@ python scripts/validate_skills.py --ci  # verify skill claims against live APIs
 **Gold standard reached for all 13 libraries**: every graph passes the quality gate (real
 community labels, ≥80% semantic descriptions, clean god nodes, `built_from_commit` pinned,
 audited edges, ≥95% API-surface coverage); 65 spec-normalized skills with live-API validation,
-graph-node citations and a green citation gate; 26/26 precise cross-library bridges as a
+graph-node citations and a green citation gate; 41/42 precise cross-library bridges as a
 curated overlay; workflow playbooks across the whole stack; provenance-gated CI. See
 `ROADMAP.md` for the phased plan, remaining polish, and the expansion queue (arch,
 riskfolio-lib, pyfolio, alphalens, polars, shap…).
