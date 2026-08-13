@@ -143,6 +143,12 @@
       "commit": "8504e95f0160f61d1b617ca66f779646d2ee609e",
       "nodes": 611,
       "edges": 865
+    },
+    "pymc": {
+      "repo": "pymc-devs/pymc",
+      "commit": "47bdf54a27a4246498994de700e8d55e99eb2d49",
+      "nodes": 0,
+      "edges": 0
     }
   }
 }
