@@ -34,15 +34,22 @@ pre-estimation gate for volatility models and cointegration setups.
 | `ADF` | `unitroot/unitroot.py:L672` | Augmented Dickey-Fuller test — null: unit root |
 | `PhillipsPerron` | `unitroot/unitroot.py:L1012` | Phillips-Perron test — robust to serial correlation |
 | `KPSS` | `unitroot/unitroot.py:L1215` | Kwiatkowski-Phillips-Schmidt-Shin — null: stationary |
+| `phillips_ouliaris()` | `unitroot/_phillips_ouliaris.py:L134` | Phillips-Ouliaris cointegration test — residual-based, two series |
+| `engle_granger()` | `unitroot/_engle_granger.py:L25` | Engle-Granger two-step cointegration test |
+| `EngleGrangerTestResults` | `unitroot/_engle_granger.py:L108` | EG results — rho, lags, summary, critical values |
+| `ADF.pvalues` / `.stat` | `unitroot/unitroot.py` | Test statistic + MacKinnon p-values |
+| `.lags` / `.max_lags` | `unitroot/_engle_granger.py:L163` | Optimal lag selection used in the test |
 
 ## Common Patterns
 
 - **Stationarity gate**: `ADF(series).pvalue < 0.05` → reject unit root; cross-check with
   `KPSS(series).pvalue > 0.05` (null: stationary). Each test exposes `stat`, `pvalue`,
   `critical_values` and `.summary()`.
-- **Pair strategy pre-check**: Engle-Granger cointegration (`arch.unitroot.cointegration`)
-  before pairs trading.
+- **Pair strategy pre-check**: `engle_granger(y, x)` / `phillips_ouliaris(...)` before
+  pairs trading — stationary residuals imply a cointegrating vector.
 - **On returns vs levels**: test LEVELS for vol-model inputs; returns are usually stationary.
+- **Cointegration workflow**: run EG on the pair, check the residual ADF via the EG result
+  (`rho`, `pvalue`), and only trade pairs whose residuals are stationary.
 
 ## Pitfalls
 

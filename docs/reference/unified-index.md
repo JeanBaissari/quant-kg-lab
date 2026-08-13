@@ -28,7 +28,7 @@
 | vectorbt | Quant Tools | 3682 · 9212 | 3 | [`vectorbt`](../../skills/vectorbt/SKILL.md) |
 | statsmodels | Statistical Models | 11616 · 33529 | 4 | [`statsmodels`](../../skills/statsmodels/SKILL.md) |
 | alphalens | — | 172 · 231 | 2 | [`alphalens`](../../skills/alphalens/SKILL.md) |
-| arch | — | 1367 · 3900 | 3 | [`arch`](../../skills/arch/SKILL.md) |
+| arch | — | 1367 · 3900 | 4 | [`arch`](../../skills/arch/SKILL.md) |
 | cvxpy | — | 6380 · 16515 | 5 | [`cvxpy`](../../skills/cvxpy/SKILL.md) |
 | polars | — | 5296 · 16925 | 5 | [`polars`](../../skills/polars/SKILL.md) |
 | pyfolio | — | 305 · 361 | 2 | [`pyfolio`](../../skills/pyfolio/SKILL.md) |
@@ -124,6 +124,7 @@
 ### arch
 - [`arch`](../../skills/arch/SKILL.md) *(router)* — Use when working with arch — the volatility/unit-root entry point. Router indexing the arch sub-skills; load the sub-skill for the domain you need.
 - [`arch-bootstrap`](../../skills/arch/bootstrap/SKILL.md) — Use when resampling statistics with arch — stationary/circular block bootstrap for confidence intervals on estimators.
+- [`arch-forecast`](../../skills/arch/forecast/SKILL.md) — Use when forecasting with arch models — forecast()/rolling_forecast, variance vs mean forecasts, analytic/simulation/bootstrap methods, and ARCHModelForecast result objects.
 - [`arch-unitroot`](../../skills/arch/unitroot/SKILL.md) — Use when testing for unit roots and stationarity with arch — ADF, Phillips-Perron, KPSS, and cointegration tests.
 - [`arch-volatility`](../../skills/arch/volatility/SKILL.md) — Use when modelling conditional volatility with arch — ARCH/GARCH/EGARCH fits, conditional_volatility, and forecast().
 

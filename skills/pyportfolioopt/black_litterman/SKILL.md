@@ -32,9 +32,16 @@ investor views into a posterior return distribution — then optimized through
 
 | API | Source File | Description |
 |-----|------------|-------------|
-| `BlackLittermanModel` | `black_litterman.py` | Combines market-implied prior returns with investor views to produce posterior estimates |
-| `market_implied_prior_returns` | `black_litterman.py` | CAPM-implied prior returns from market caps + risk aversion |
-| `market_implied_risk_aversion` | `black_litterman.py` | Implied risk-aversion coefficient from the market portfolio |
+| `BlackLittermanModel` | `black_litterman.py:L100` | Combines market-implied prior returns with investor views to produce posterior estimates |
+| `market_implied_prior_returns()` | `black_litterman.py:L19` | CAPM-implied prior returns from market caps + risk aversion |
+| `market_implied_risk_aversion()` | `black_litterman.py:L60` | Implied risk-aversion coefficient from the market portfolio |
+| `BlackLittermanModel.bl_returns()` | `black_litterman.py:L417` | Posterior expected returns after views |
+| `BlackLittermanModel.bl_cov()` | `black_litterman.py:L445` | Posterior covariance after views |
+| `BlackLittermanModel.bl_weights()` | `black_litterman.py:L474` | Posterior weights from a Markowitz solve |
+| `BlackLittermanModel.default_omega()` | `black_litterman.py:L366` | Default view-confidence matrix (prior-scaled) |
+| `BlackLittermanModel.idzorek_method()` | `black_litterman.py:L380` | Idzorek's confidence-based omega calibration |
+| `BlackLittermanModel.optimize()` | `black_litterman.py:L512` | Full posterior → optimal weights pipeline |
+| `BlackLittermanModel.portfolio_performance()` | `black_litterman.py:L518` | Expected perf of the BL portfolio |
 
 ## Common Patterns
 
@@ -44,6 +51,12 @@ investor views into a posterior return distribution — then optimized through
 - **View uncertainty**: the default `omega` follows the model's heuristic; pass explicit
   uncertainty for trusted views.
 - **Posterior weights**: `bl.bl_weights()` — or optimize the posterior returns directly.
+- **Confidence calibration**: `bl.idzorek_method(views, confidences)` — turn analyst
+  confidence percentages into omega, the Idzorek (1995) approach.
+- **Full pipeline**: `bl.optimize()` then `bl.portfolio_performance()` — posterior →
+  weights → metrics in one call.
+- **Prior sanity**: compare `bl.bl_returns()` vs `market_implied_prior_returns()` — views
+  should tilt, not overturn, the market prior.
 
 ## Pitfalls
 
@@ -51,6 +64,10 @@ investor views into a posterior return distribution — then optimized through
   estimators silently distorts the posterior.
 - **Views format**: absolute views as {asset: target_return}; relative views need the
   P/Q formulation — keep the dict form unless you need pairs.
+- **tau sensitivity**: the prior-shrinkage parameter τ (default 1/len(returns)) controls how
+  strongly views move the posterior — small τ = views barely matter, large τ = prior fades.
+- **omega dominance**: a poorly scaled omega (tiny uncertainty) can make the posterior
+  collapse onto the views — check `bl_returns()` dispersion before optimizing.
 
 ## Provenance
 

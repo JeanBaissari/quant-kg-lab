@@ -19,6 +19,7 @@ related_skills:
 - arch-volatility
 - arch-unitroot
 - arch-bootstrap
+- arch-forecast
 - statsmodels-core
 ---
 
@@ -34,6 +35,7 @@ resampling — the risk/volatility pillar of the quant stack.
 | [volatility](volatility/SKILL.md) | arch_model, GARCH/EGARCH, fit/forecast, conditional_volatility |
 | [unitroot](unitroot/SKILL.md) | ADF, Phillips-Perron, KPSS, cointegration |
 | [bootstrap](bootstrap/SKILL.md) | Stationary/circular block bootstrap, conf_int |
+| [forecast](forecast/SKILL.md) | forecast()/rolling_forecast, variance paths, method selection |
 
 ## Common Patterns
 

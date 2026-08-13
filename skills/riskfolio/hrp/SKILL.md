@@ -32,8 +32,15 @@ inversion needed, robust to ill-conditioned matrices.
 
 | API | Source File | Description |
 |-----|------------|-------------|
-| `HCPortfolio` | `src/HCPortfolio.py` | Hierarchical clustering portfolio — HRP/HERC optimization |
-| `HCPortfolio.optimization()` | `src/HCPortfolio.py` | Solves the hierarchical portfolio given model/linkage/codependence |
+| `HCPortfolio` | `src/HCPortfolio.py:L26` | Hierarchical clustering portfolio — HRP/HERC optimization |
+| `HCPortfolio.optimization()` | `src/HCPortfolio.py:L760` | Solves the hierarchical portfolio given model/linkage/codependence |
+| `HCPortfolio.returns()` | `src/HCPortfolio.py:L110` | Accessor for the returns matrix |
+| `HCPortfolio.kappa()` | `src/HCPortfolio.py:L129` | Codependence matrix — pearson/spearman/abs_pearson/distance |
+| `HCPortfolio.kappa_g()` | `src/HCPortfolio.py:L149` | Generalised codependence (higher-moment aware) |
+| `HCPortfolio.p_em()` | `src/HCPortfolio.py:L169` | Expected-mimicking portfolios per cluster |
+| `HCPortfolio.p_esm()` | `src/HCPortfolio.py:L184` | Expected-shortfall-mimicking portfolios per cluster |
+| `HCPortfolio._hierarchical_clustering()` | `src/HCPortfolio.py:L341` | Linkage clustering over the codependence matrix |
+| `HCPortfolio._recursive_bisection()` | `src/HCPortfolio.py:L414` | Top-down weight bisection (HRP core) |
 | `DBHT.py` | `src/DBHT.py` | Directed Bubble Hierarchical Tree clustering |
 | `PlotFunctions.py` | `src/PlotFunctions.py` | Frontier/cluster plotting helpers |
 
@@ -44,6 +51,12 @@ inversion needed, robust to ill-conditioned matrices.
 - **HERC**: `model='HERC'` with `rm='CVaR'` — hierarchical equal risk contribution.
 - **Codependence options**: pearson/spearman/abs_pearson/distance — pick per data
   distribution.
+- **Tail-aware clusters**: `p_esm()` — expected-shortfall-mimicking portfolios per cluster
+  when returns are fat-tailed; `p_em()` for the mean-mimicking baseline.
+- **Linkage choice**: single/complete/average/ward change the dendrogram structure —
+  compare weight stability across linkages before committing.
+- **Stability check**: perturb the returns window and re-optimize — HRP weights should
+  move less than MV weights under the same perturbation.
 
 ## Pitfalls
 

@@ -39,6 +39,13 @@
       "meta_warn": [],
       "provenance": []
     },
+    "skills/arch/forecast/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
     "skills/arch/unitroot/SKILL.md": {
       "lint": [],
       "api_fail": [],
@@ -49,7 +56,10 @@
     "skills/arch/volatility/SKILL.md": {
       "lint": [],
       "api_fail": [],
-      "api_warn": [],
+      "api_warn": [
+        "class SkewStudentT: not found (library not installed, no graph node)",
+        "class StudentT: not found (library not installed, no graph node)"
+      ],
       "meta_warn": [],
       "provenance": []
     },
@@ -505,7 +515,6 @@
       "api_fail": [],
       "api_warn": [
         "class AuxFunctions: not found (library not installed, no graph node)",
-        "class ConstraintsFunctions: not found (library not installed, no graph node)",
         "class ParamsEstimation: not found (library not installed, no graph node)"
       ],
       "meta_warn": [],

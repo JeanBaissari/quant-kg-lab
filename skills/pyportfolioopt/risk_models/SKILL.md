@@ -31,10 +31,18 @@ shrinkage estimators (`CovarianceShrinkage` — Ledoit-Wolf and friends), and
 
 | API | Source File | Description |
 |-----|------------|-------------|
-| `risk_matrix()` | `risk_models.py` | Computes a covariance matrix using the specified risk-model method |
-| `CovarianceShrinkage` | `risk_models.py` | Estimates a shrunk covariance matrix (Ledoit-Wolf and related methods) |
-| `fix_nonpositive_semidefinite()` | `risk_models.py` | Repairs a covariance matrix that is not positive semidefinite |
-| `sample_cov` | `risk_models.py` | Sample covariance of asset returns (annualized) |
+| `risk_matrix()` | `risk_models.py:L116` | Computes a covariance matrix using the specified risk-model method |
+| `CovarianceShrinkage` | `risk_models.py:L412` | Estimates a shrunk covariance matrix (Ledoit-Wolf and related methods) |
+| `fix_nonpositive_semidefinite()` | `risk_models.py:L57` | Repairs a covariance matrix that is not positive semidefinite |
+| `sample_cov()` | `risk_models.py:L172` | Sample covariance of asset returns (annualized) |
+| `semicovariance()` | `risk_models.py:L206` | Downside-only covariance — penalizes negative co-movements |
+| `exp_cov()` | `risk_models.py:L281` | Exponentially weighted covariance — recent returns weighted more |
+| `min_cov_determinant()` | `risk_models.py:L330` | Minimum-covariance-determinant robust estimate |
+| `cov_to_corr()` / `corr_to_cov()` | `risk_models.py:L366` | Convert between covariance and correlation matrices |
+| `CovarianceShrinkage.shrunk_covariance()` | `risk_models.py:L484` | Shrinkage estimate (default Ledoit-Wolf single-factor) |
+| `CovarianceShrinkage.ledoit_wolf()` | `risk_models.py:L509` | Ledoit-Wolf shrinkage to a single-factor target |
+| `CovarianceShrinkage.oracle_approximating()` | `risk_models.py:L657` | Oracle-approximating shrinkage — optimal asymptotically |
+| `_is_positive_semidefinite()` | `risk_models.py:L33` | PSD check — pre-flight before feeding cvxpy |
 
 ## Common Patterns
 
@@ -43,6 +51,12 @@ shrinkage estimators (`CovarianceShrinkage` — Ledoit-Wolf and friends), and
 - **Shrinkage for noisy estimates**: `CovarianceShrinkage(prices).ledoit_wolf()` — shrinks
   toward a structured target; preferred for many-asset, short-history universes.
 - **PSD repair**: `fix_nonpositive_semidefinite(S)` before feeding cvxpy-based optimizers.
+- **Downside risk**: `semicovariance(prices)` — covariance of returns below the mean;
+  pairs naturally with `EfficientSemivariance`.
+- **Recency weighting**: `exp_cov(prices, span=60)` — recent regime weighted more than
+  `sample_cov`; use for fast-moving factor books.
+- **Correlation views**: `cov_to_corr(S)` for clustering/risk-parity work; `corr_to_cov`
+  to rebuild S from a shrunk correlation + diagonal variances.
 
 ## Pitfalls
 
@@ -50,6 +64,10 @@ shrinkage estimators (`CovarianceShrinkage` — Ledoit-Wolf and friends), and
   the estimator.
 - **Non-PSD covariance**: sample covariance from fewer observations than assets is singular —
   shrink or repair, or the optimizer's solver fails.
+- **Annualization**: sample_cov/exp_cov annualize by default — if you feed `frequency`
+  wrong, Sharpe/vol estimates in `portfolio_performance` are off by sqrt(252).
+- **OAS vs LW**: `oracle_approximating()` is asymptotically optimal but can be unstable on
+  very short samples — default to `ledoit_wolf()` unless the universe is long.
 
 ## Provenance
 

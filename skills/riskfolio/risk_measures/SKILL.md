@@ -40,13 +40,24 @@ LPM), risk contribution decomposition, and the matrix estimators
 | `LPM()` | `src/RiskFunctions.py` | Lower partial moment risk |
 | `MAD()` / `SemiDeviation()` | `src/RiskFunctions.py` | Mean-absolute-deviation and semi-deviation risks |
 | `cppfunctions.py` | `external/cppfunctions.py` | Python wrappers for the C++ matrix kernels (duplication, commutation, covariance families) |
+| `semi_covariance_matrix()` | `external/cppfunctions.py:L148` | Downside covariance kernel |
+| `coskewness_matrix()` | `external/cppfunctions.py:L193` | Third-moment matrix — skew-aware optimization |
+| `cokurtosis_matrix()` | `external/cppfunctions.py:L283` | Fourth-moment matrix — tail-aware optimization |
 
 ## Common Patterns
 
-- **Risk decomposition**: `Risk_Contribution(w, cov)` — which assets drive portfolio risk.
-- **Tail-risk comparisons**: CVaR/CDaR vs MV across quantiles when selecting the objective.
-- **Higher-moment matrices**: `covariance_matrix`, `coskewness_matrix`,
-  `cokurtosis_matrix` from `cppfunctions.py` for 3rd/4th-moment optimizations.
+- **Risk decomposition**: `Risk_Contribution(w, cov)` — per-asset contribution to total
+  risk; the input to risk-parity work.
+- **Tail measures**: `CVaR_Hist(returns, alpha)` — historical CVaR; combine with
+  `rm='CVaR'` in the optimizer for tail-aware portfolios.
+- **Downside-focused**: `SemiDeviation`/`LPM` — penalize only below-target returns;
+  match to the strategy's return objective.
+- **Higher moments**: `coskewness_matrix` / `cokurtosis_matrix` — feed `rm='SKEW'` /
+  `rm='KURT'` models for non-Gaussian universes.
+- **Risk-budget report**: combine `Risk_Contribution` + `Risk_Margin` per asset into a
+  table — where the risk actually lives before rebalancing.
+- **Cross-measure validation**: compute MV, CVaR, and MAD on the same portfolio and compare
+  orderings — tail-focused measures rank assets differently than variance.
 
 ## Pitfalls
 
