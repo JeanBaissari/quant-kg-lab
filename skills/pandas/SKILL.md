@@ -18,6 +18,7 @@ tags:
 related_skills:
 - pandas-core
 - pandas-ts
+- pandas-groupby
 ---
 
 # pandas (router)
@@ -29,6 +30,7 @@ Indexes the 2 spec-driven pandas sub-skills. Load the one for the module you nee
 |-------|--------|--------|
 | [pandas-core](core/SKILL.md) | `pandas.core` | tabular data with pandas |
 | [pandas-ts](ts/SKILL.md) | `pandas.ts` | pandas time series |
+| [pandas-groupby](groupby/SKILL.md) | `pandas.groupby` | split-apply-combine, group stats, resampling |
 
 ## Provenance
 

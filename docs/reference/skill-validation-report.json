@@ -1,34 +1,27 @@
 {
   "report": {
-    "skills/statsmodels/SKILL.md": {
+    "skills/pandas/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
       "meta_warn": [],
       "provenance": []
     },
-    "skills/statsmodels/core/SKILL.md": {
+    "skills/pandas/core/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
       "meta_warn": [],
       "provenance": []
     },
-    "skills/statsmodels/statespace/SKILL.md": {
+    "skills/pandas/groupby/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
       "meta_warn": [],
       "provenance": []
     },
-    "skills/statsmodels/tsa/SKILL.md": {
-      "lint": [],
-      "api_fail": [],
-      "api_warn": [],
-      "meta_warn": [],
-      "provenance": []
-    },
-    "skills/statsmodels/vector_ar/SKILL.md": {
+    "skills/pandas/ts/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
