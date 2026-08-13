@@ -16,7 +16,7 @@
 | Skills | **65 `SKILL.md`** (11 routers + 46 modules + 8 playbooks), uniform template, 0 dangling refs; citation gate **311/0** (QKG_012); numpy complete-check live in CI (QKG_021) |
 | Skill validation | validator v2 (sections/hash/related-skills, module-scoped API) gates plain `--ci`; API/TA-Lib gating live (QKG_008) |
 | Cross-library bridges | **26/26 resolved**, injected as `_cross_library` overlay (31 nodes) — incl. cvxpy/pypfopt/statsmodels wiring |
-| Docs | 65-doc governed corpus, `doc_audit.py --ci` green; concept index live (QKG_017) |
+| Docs | 83-doc governed corpus, `doc_audit.py --ci` green; concept index live (QKG_017) |
 | CI | lint + docs + provenance + artifact-safety gates active; freshness cron replaced by provenance gate (QKG_006) |
 
 ## Gold-standard bar (per library)
