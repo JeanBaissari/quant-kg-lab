@@ -1,0 +1,45 @@
+{
+  "library": "pymc",
+  "symbols": [
+    {
+      "label": "CustomDist",
+      "source_file": "distributions/custom.py",
+      "description": "A helper class to create custom distributions."
+    },
+    {
+      "label": "support_point()",
+      "source_file": "distributions/distribution.py",
+      "description": "Choose a representative point/value that can be used to start optimization or MCMC sampling."
+    },
+    {
+      "label": "moment()",
+      "source_file": "distributions/distribution.py",
+      "description": "Public NumPy API symbol `np.moment` (C-implemented or namespace; see docs)."
+    },
+    {
+      "label": "mean()",
+      "source_file": "distributions/moments/means.py",
+      "description": "Compute the expected value of a random variable."
+    },
+    {
+      "label": "OrderedMultinomial",
+      "source_file": "distributions/multivariate.py",
+      "description": "Wrapper class for Ordered Multinomial distributions."
+    },
+    {
+      "label": "LKJCholeskyCov",
+      "source_file": "distributions/multivariate.py",
+      "description": "Wrapper class for covariance matrix with LKJ distributed correlations."
+    },
+    {
+      "label": "change_dist_size()",
+      "source_file": "distributions/shape_utils.py",
+      "description": "Change or expand the size of a Distribution."
+    },
+    {
+      "label": "Truncated",
+      "source_file": "distributions/truncated.py",
+      "description": "Truncated distribution."
+    }
+  ]
+}

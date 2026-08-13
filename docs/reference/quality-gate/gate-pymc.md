@@ -7,8 +7,8 @@ Graph: `knowledge_graphs/pymc/.graphify/graph.json` · GRAPH_SPEC §5 · generat
 | criterion | status | counts |
 |---|---|---|
 | c1 real labels | PASS | distinct=156 non_singleton=140 default_labels=0 default_graph=0 coverage=100.0% |
-| c2 descriptions | PASS | described=2262 describable=2730 pct=82.9% |
+| c2 descriptions | PASS | described=2270 describable=2738 pct=82.9% |
 | c3 god nodes | PASS | top20=20 noise=0 |
-| c4 pin | FAIL | expected=47bdf54a27a4246498994de700e8d55e99eb2d49 found=927d2b95f1aa74ab39708a4bc657f9999ad71ccb (graph) |
+| c4 pin | PASS | expected=47bdf54a27a4246498994de700e8d55e99eb2d49 found=47bdf54a27a4246498994de700e8d55e99eb2d49 (graph) |
 | c5 audited | PASS | exists |
-| c6 api surface | PASS | no manifest (probe pending) |
+| c6 api surface | PASS | curated=8 unresolved=0 surface_coverage=100.0% (target 95.0%) |

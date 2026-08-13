@@ -147,8 +147,8 @@
     "pymc": {
       "repo": "pymc-devs/pymc",
       "commit": "47bdf54a27a4246498994de700e8d55e99eb2d49",
-      "nodes": 0,
-      "edges": 0
+      "nodes": 4067,
+      "edges": 11144
     }
   }
 }
