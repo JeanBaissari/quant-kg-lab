@@ -37,7 +37,7 @@ plus `ExponentialSmoothing` for trend/seasonal baselines.
 | `SARIMAXParams` | `tsa/arima/params.py` | Parameter container for ARIMA-family models |
 | `ArmaProcess` | `tsa/arima_process.py` | ARMA process simulation and ACV/PSD analytics |
 | `ARMAEstimationResult` | `tsa/arima/estimators/_base.py` | Estimation result container (params, cov, fit stats) |
-| `tsa/arima/estimators/` | `tsa/arima/estimators/` | Estimators: statespace, conditional-sum-of-squares, etc. |
+| `tsa/arima/estimators/` | Estimators: statespace, conditional-sum-of-squares, etc. |
 
 ## Common Patterns
 

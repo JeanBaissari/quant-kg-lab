@@ -35,7 +35,7 @@ Extracted from scikit-learn knowledge graph. Source: `sklearn.preprocessing` mod
 ### Scalers (Numerical Features)
 
 | Class | Purpose | Key Params | Graph Node |
-|-----|-------|----------|----------|
+| ----- | ------- | ---------- |
 | `StandardScaler` | Zero-mean, unit-variance scaling | `with_mean`, `with_std` | preprocessing/_data.py:L742 |
 | `MinMaxScaler` | Scale to [0, 1] or custom range | `feature_range` | preprocessing/_data.py:L305 |
 | `MaxAbsScaler` | Scale by max absolute value (sparse-safe) | (none) | preprocessing/_data.py:L1190 |
@@ -71,18 +71,18 @@ Extracted from scikit-learn knowledge graph. Source: `sklearn.preprocessing` mod
 
 ### Standalone Functions
 
-| Function | Purpose | covariance/_elliptic_envelope.py:L187 | covariance/_elliptic_envelope.py:L187 |
+| Function | Purpose | covariance/_elliptic_envelope.py:L187 |
 |----------|---------|
-| `scale` | Standardize (equiv. `StandardScaler`) | preprocessing/_data.py:L146 | preprocessing/_data.py:L146 |
-| `minmax_scale` | Min-max scale (equiv. `MinMaxScaler`) | preprocessing/_data.py:L631 | preprocessing/_data.py:L631 |
-| `maxabs_scale` | Max-abs scale (equiv. `MaxAbsScaler`) | preprocessing/_data.py:L1458 | preprocessing/_data.py:L1458 |
-| `robust_scale` | Robust scale (equiv. `RobustScaler`) | preprocessing/_data.py:L1831 | preprocessing/_data.py:L1831 |
-| `normalize` | Row-wise normalize (equiv. `Normalizer`) | preprocessing/_data.py:L1978 | preprocessing/_data.py:L1978 |
-| `binarize` | Threshold binarize (equiv. `Binarizer`) | preprocessing/_data.py:L2236 | preprocessing/_data.py:L2236 |
-| `label_binarize` | One-vs-all binary encoding | preprocessing/_label.py:L474 | preprocessing/_label.py:L474 |
-| `add_dummy_feature` | Add constant bias column | preprocessing/_data.py:L2612 | preprocessing/_data.py:L2612 |
-| `power_transform` | Box-Cox / Yeo-Johnson (equiv. `PowerTransformer`) | preprocessing/_data.py:L3659 | preprocessing/_data.py:L3659 |
-| `quantile_transform` | Quantile transform (equiv. `QuantileTransformer`) | preprocessing/_data.py:L3113 | preprocessing/_data.py:L3113 |
+| `scale` | Standardize (equiv. `StandardScaler`) | preprocessing/_data.py:L146 |
+| `minmax_scale` | Min-max scale (equiv. `MinMaxScaler`) | preprocessing/_data.py:L631 |
+| `maxabs_scale` | Max-abs scale (equiv. `MaxAbsScaler`) | preprocessing/_data.py:L1458 |
+| `robust_scale` | Robust scale (equiv. `RobustScaler`) | preprocessing/_data.py:L1831 |
+| `normalize` | Row-wise normalize (equiv. `Normalizer`) | preprocessing/_data.py:L1978 |
+| `binarize` | Threshold binarize (equiv. `Binarizer`) | preprocessing/_data.py:L2236 |
+| `label_binarize` | One-vs-all binary encoding | preprocessing/_label.py:L474 |
+| `add_dummy_feature` | Add constant bias column | preprocessing/_data.py:L2612 |
+| `power_transform` | Box-Cox / Yeo-Johnson (equiv. `PowerTransformer`) | preprocessing/_data.py:L3659 |
+| `quantile_transform` | Quantile transform (equiv. `QuantileTransformer`) | preprocessing/_data.py:L3113 |
 
 ## Common Patterns
 

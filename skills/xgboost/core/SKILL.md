@@ -47,19 +47,19 @@ Extracted from XGBoost knowledge graph. Sources: `python-package/xgboost/core.py
 
 ### Callbacks
 
-| Callback | Purpose | _c_api.py:L55 | _c_api.py:L55 |
+| Callback | Purpose | _c_api.py:L55 |
 |----------|---------|
-| `TrainingCallback` | Base interface for custom callbacks (`before_training`, `after_training`, `before_iteration`, `after_iteration`) | callback.py:L51 | callback.py:L51 |
-| `EarlyStopping` | Stop training when evaluation metric stops improving (`rounds`, `metric_name`, `minimize`) | callback.py:L311 | callback.py:L311 |
-| `CallbackContainer` | Internal container that sequences multiple callbacks | callback.py:L149 | callback.py:L149 |
-| `LearningRateScheduler` | Schedule learning rate by iteration | callback.py:L272 | callback.py:L272 |
+| `TrainingCallback` | Base interface for custom callbacks (`before_training`, `after_training`, `before_iteration`, `after_iteration`) | callback.py:L51 |
+| `EarlyStopping` | Stop training when evaluation metric stops improving (`rounds`, `metric_name`, `minimize`) | callback.py:L311 |
+| `CallbackContainer` | Internal container that sequences multiple callbacks | callback.py:L149 |
+| `LearningRateScheduler` | Schedule learning rate by iteration | callback.py:L272 |
 
 ### CV Utilities
 
-| API | Purpose | _c_api.py:L1 | _c_api.py:L1 |
+| API | Purpose | _c_api.py:L1 |
 |-----|---------|
-| `CVPack` | Holds one fold of CV — booster + dtrain/dtest | training.py:L212 | training.py:L212 |
-| `_PackedBooster` | Lightweight pack of CV boosters | training.py:L239 | training.py:L239 |
+| `CVPack` | Holds one fold of CV — booster + dtrain/dtest | training.py:L212 |
+| `_PackedBooster` | Lightweight pack of CV boosters | training.py:L239 |
 
 ## Common Patterns
 
@@ -166,7 +166,7 @@ importance = model.get_score(importance_type='gain')
 ## Cross-Library Bridges
 
 | Source | Target | Relation | Description |
-|--------|--------|----------|-------------|
+| -------- | ---------- | ------------- |
 | `xgboost.DMatrix` | `sklearn.model_selection.GridSearchCV` | **data_source** | DMatrix feeds into sklearn CV (via `eval_set` wrapper) |
 | `xgboost.Booster` | `optuna.Trial` | **optimization_target** | Booster params tuned via optuna `suggest_float/suggest_int` |
 | `xgboost.train()` | `optuna.integration.XGBoostPruningCallback` | **callback_bridge** | Optuna pruning integrates as a training callback |

@@ -34,7 +34,7 @@ Extracted from scikit-learn knowledge graph. Source: `sklearn.feature_selection`
 ### Filter Methods (Univariate)
 
 | Class/Function | Purpose | Key Params | Graph Node |
-|--------------|-------|----------|----------|
+| -------------- | ------- | ---------- |
 | `SelectKBest` | Select top-k scoring features | `score_func`, `k` | feature_selection/_univariate_selection.py:L698 |
 | `SelectPercentile` | Select top percentile of features | `score_func`, `percentile` | feature_selection/_univariate_selection.py:L593 |
 | `SelectFpr` | Select based on FPR (false positive rate) | `score_func`, `alpha` | feature_selection/_univariate_selection.py:L809 |
@@ -76,9 +76,9 @@ Extracted from scikit-learn knowledge graph. Source: `sklearn.feature_selection`
 
 ### Base Mixin
 
-| Class | Purpose | externals/array_api_compat/common/_typing.py:L39 | externals/array_api_compat/common/_typing.py:L39 |
+| Class | Purpose | externals/array_api_compat/common/_typing.py:L39 |
 |-------|---------|
-| `SelectorMixin` | Mixin providing `get_support()` and `inverse_transform()` to all selectors | feature_selection/_base.py:L27 | feature_selection/_base.py:L27 |
+| `SelectorMixin` | Mixin providing `get_support()` and `inverse_transform()` to all selectors | feature_selection/_base.py:L27 |
 
 ## Common Patterns
 

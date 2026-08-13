@@ -40,7 +40,7 @@ and `dependence_plot` (feature interaction).
 | `image_plot()` | `plots/_image.py` | Image-model explanations — pixel/region attributions overlaid |
 | `heatmap()` | `plots/_heatmap.py` | Per-sample × feature heatmap of SHAP values |
 | `embedding_plot()` | `plots/_embedding.py` | SHAP values projected into an embedding space |
-| `plots/resources/` | `plots/resources/` | Bundled JS/logo assets for interactive force plots |
+| `plots/resources/` | Bundled JS/logo assets for interactive force plots |
 
 ## Common Patterns
 

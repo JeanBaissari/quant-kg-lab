@@ -316,9 +316,23 @@ def in_graph_labels(labels, sym):
     or bare type names (e.g. 'ndarray'); accept either spelling."""
     return sym in labels or f"{sym}()" in labels
 
+def _lint_table_dups(text, _lint):
+    """F10 (onboarding-checklist): a table row whose cells repeat a value (the old
+    annotation tool appended the Graph Node column twice). Ignore rows where the
+    duplicated value is a plain separator or a pipe-heavy false positive."""
+    for i, line in enumerate(text.split("\n"), 1):
+        if not line.lstrip().startswith("|"):
+            continue
+        cells = [c.strip() for c in line.strip().strip("|").split("|")]
+        for c in set(cells):
+            if c and cells.count(c) > 1 and len(c) > 6 and "`" in c and "||" not in c:
+                _lint("table:dup-cell", f"row {i}: duplicated cell value {c!r}")
+
+
 def collect_headers(body):
-    """`## <Header>` set outside code fences — the section inventory for §3 checks."""
-    headers, in_fence = set(), False
+    """`## <Header>` list outside code fences — the section inventory for §3 checks.
+    Returns (ordered list, duplicates) — QKG_057: repeated headers are now caught."""
+    headers, in_fence, dups = [], False, []
     for line in body.split("\n"):
         if line.strip().startswith("```"):
             in_fence = not in_fence
@@ -327,8 +341,11 @@ def collect_headers(body):
             continue
         m = re.match(r"^##\s+(\S.*?)\s*$", line)
         if m:
-            headers.add(m.group(1))
-    return headers
+            h = m.group(1)
+            if h in headers:
+                dups.append(h)
+            headers.append(h)
+    return headers, dups
 
 # ------------------------------------------------------------------------ main
 def main():
@@ -429,7 +446,9 @@ def main():
         is_router = lib != "quant-patterns" and len(parts) == 2 \
             and isinstance(fm, dict) and fm.get("name") == lib
         if lib != "quant-patterns" and not is_router:
-            headers = collect_headers(body)
+            headers, dup_headers = collect_headers(body)
+            for h in dup_headers:
+                _lint(f"section:duplicate:{h}", f"duplicate section header: ## {h}")
             for req in REQUIRED_SECTIONS:
                 if req in headers:
                     continue
@@ -440,6 +459,7 @@ def main():
                           f"section variant: '{variant}' — spec requires '## {req}'")
                 else:
                     _lint(f"section:missing:{req}", f"missing required section: ## {req}")
+            _lint_table_dups(text, _lint)
 
         # ---- graph_hash + graph meta (any skill carrying a `graph:` block)
         gblock = fm.get("graph") if isinstance(fm, dict) else None

@@ -123,6 +123,29 @@ class TestSectionCheck(ValidatorTestCase):
         self.assertEqual(code, 0)
         self.assertEqual(self.report_for(PLAYBOOK_REL)["lint"], [])
 
+    def test_duplicate_section_header_fails_ci(self):
+        # QKG_057: a repeated `## ` header must be a lint violation.
+        p = self.root / "skills" / "numpy" / "core" / "SKILL.md"
+        t = p.read_text().replace("## Common Patterns", "## Common Patterns\n\n## Common Patterns", 1)
+        p.write_text(t)
+        code, _ = self.run_main("--ci")
+        self.assertEqual(code, 1)
+        lint = self.report_for(CORE_REL)["lint"]
+        self.assertTrue(any("duplicate section header" in m for m in lint), lint)
+
+    def test_table_dup_cell_fails_ci(self):
+        # QKG_057/F10: a table row whose cells repeat a value (old annotation tool
+        # appended the Graph Node column twice) must be a lint violation.
+        p = self.root / "skills" / "numpy" / "core" / "SKILL.md"
+        t = p.read_text()
+        t = t.replace("| `array` | `array.py:L1` | Create an ndarray | `dtype` |",
+                      "| `array` | `array.py:L1` | Create an ndarray | `array.py:L1` | `array.py:L1` |")
+        p.write_text(t)
+        code, _ = self.run_main("--ci")
+        self.assertEqual(code, 1)
+        lint = self.report_for(CORE_REL)["lint"]
+        self.assertTrue(any("duplicated cell value" in m for m in lint), lint)
+
 
 class TestGraphHashCheck(ValidatorTestCase):
     def test_stale_hash_fails_ci(self):

@@ -31,7 +31,7 @@ with a `conf_int` helper for percentile confidence intervals on any statistic.
 
 | API | Source File | Description |
 |-----|------------|-------------|
-| `bootstrap/base.py` | `bootstrap/base.py` | Bootstrap base: `conf_int(stat_func, reps)` percentile intervals |
+| `bootstrap/base.py` | Bootstrap base: `conf_int(stat_func, reps)` percentile intervals |
 | `StationaryBootstrap` | `bootstrap/base.py` | Politis-Romano stationary bootstrap (random block lengths) |
 | `CircularBlockBootstrap` | `bootstrap/base.py` | Fixed-length circular block resampling |
 | `_samplers_python.py` | `bootstrap/_samplers_python.py` | Pure-Python sampler implementations (Cython `_samplers.pyx` is curated-absent) |

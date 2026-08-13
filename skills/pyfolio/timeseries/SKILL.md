@@ -55,7 +55,7 @@ drawdown analysis — the numbers behind the tear sheets.
 | `perf_stats_bootstrap()` | `timeseries.py:L742` | Bootstrap CI around performance stats |
 | `forecast_cone_bootstrap()` | `timeseries.py:L1149` | Monte-Carlo forecast cone from bootstrap |
 | `simulate_paths()` | `timeseries.py:L1077` | Simulated return paths for the cone |
-| `plotting.py` | `plotting.py` | Chart helpers: returns/drawdown/rolling panels |
+| `plotting.py` | Chart helpers: returns/drawdown/rolling panels |
 
 ## Common Patterns
 

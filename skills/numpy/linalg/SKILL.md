@@ -40,28 +40,28 @@ Linear algebra functions backed by BLAS and LAPACK. All functions operate on the
 
 ### Additional APIs (by degree rank from knowledge graph)
 
-| API | Description | _core/code_generators/generate_numpy_api.py:L1 | _core/code_generators/generate_numpy_api.py:L1 |
+| API | Description | _core/code_generators/generate_numpy_api.py:L1 |
 |-----|-------------|
-| `eigvals(a)` | Eigenvalues of a general matrix | linalg/_linalg.py:L1157 | linalg/_linalg.py:L1157 |
-| `eigvalsh(a, UPLO='L')` | Eigenvalues of Hermitian/symmetric matrix | linalg/_linalg.py:L1245 | linalg/_linalg.py:L1245 |
-| `pinv(a, rcond=1e-15)` | Moore-Penrose pseudo-inverse | linalg/_linalg.py:L2129 | linalg/_linalg.py:L2129 |
-| `slogdet(a)` | Sign and natural log of determinant (avoids overflow) | linalg/_linalg.py:L2247 | linalg/_linalg.py:L2247 |
-| `cond(x, p=None)` | Condition number of a matrix | linalg/_linalg.py:L1889 | linalg/_linalg.py:L1889 |
-| `tensorinv(a, ind=2)` | Inverse of an N-dimensional array | linalg/_linalg.py:L472 | linalg/_linalg.py:L472 |
-| `tensorsolve(a, b, axes=None)` | Solve tensor equation `a @ x = b` | linalg/_linalg.py:L293 | linalg/_linalg.py:L293 |
-| `matrix_power(a, n)` | Raise a square matrix to integer power n | linalg/_linalg.py:L667 | linalg/_linalg.py:L667 |
-| `matrix_rank(M, tol=None)` | Matrix rank using SVD method | linalg/_linalg.py:L2010 | linalg/_linalg.py:L2010 |
-| `multi_dot(arrays)` | Optimal order dot product of 2+ arrays | linalg/_linalg.py:L2839 | linalg/_linalg.py:L2839 |
-| `svdvals(x)` | Singular values only (no vectors) | linalg/_linalg.py:L1835 | linalg/_linalg.py:L1835 |
-| `outer(a, b)` | Outer product of two vectors | _core/numeric.py:L906 | _core/numeric.py:L906 |
-| `matmul(x1, x2)` | Matrix product of two arrays | linalg/_linalg.py:L3292 | linalg/_linalg.py:L3292 |
-| `matrix_norm(x, ord='fro', axis=...)` | Matrix norm only | linalg/_linalg.py:L3414 | linalg/_linalg.py:L3414 |
-| `vector_norm(x, ord=2, axis=None)` | Vector norm only | linalg/_linalg.py:L3477 | linalg/_linalg.py:L3477 |
-| `cross(a, b, axisa=-1, axisb=-1, axisc=-1)` | Cross product of 3-element vectors | _core/numeric.py:L1565 | _core/numeric.py:L1565 |
-| `vecdot(x1, x2, axis=-1)` | Vector dot product along an axis | linalg/_linalg.py:L3579 | linalg/_linalg.py:L3579 |
-| `diagonal(x, offset=0, axis1=0, axis2=1)` | Return specified diagonals | _core/fromnumeric.py:L1750 | _core/fromnumeric.py:L1750 |
-| `trace(x, offset=0, axis1=0, axis2=1)` | Sum along specified diagonals | _core/fromnumeric.py:L1886 | _core/fromnumeric.py:L1886 |
-| `matrix_transpose(x)` | Transpose a matrix (or stack of matrices) | _core/fromnumeric.py:L702 | _core/fromnumeric.py:L702 |
+| `eigvals(a)` | Eigenvalues of a general matrix | linalg/_linalg.py:L1157 |
+| `eigvalsh(a, UPLO='L')` | Eigenvalues of Hermitian/symmetric matrix | linalg/_linalg.py:L1245 |
+| `pinv(a, rcond=1e-15)` | Moore-Penrose pseudo-inverse | linalg/_linalg.py:L2129 |
+| `slogdet(a)` | Sign and natural log of determinant (avoids overflow) | linalg/_linalg.py:L2247 |
+| `cond(x, p=None)` | Condition number of a matrix | linalg/_linalg.py:L1889 |
+| `tensorinv(a, ind=2)` | Inverse of an N-dimensional array | linalg/_linalg.py:L472 |
+| `tensorsolve(a, b, axes=None)` | Solve tensor equation `a @ x = b` | linalg/_linalg.py:L293 |
+| `matrix_power(a, n)` | Raise a square matrix to integer power n | linalg/_linalg.py:L667 |
+| `matrix_rank(M, tol=None)` | Matrix rank using SVD method | linalg/_linalg.py:L2010 |
+| `multi_dot(arrays)` | Optimal order dot product of 2+ arrays | linalg/_linalg.py:L2839 |
+| `svdvals(x)` | Singular values only (no vectors) | linalg/_linalg.py:L1835 |
+| `outer(a, b)` | Outer product of two vectors | _core/numeric.py:L906 |
+| `matmul(x1, x2)` | Matrix product of two arrays | linalg/_linalg.py:L3292 |
+| `matrix_norm(x, ord='fro', axis=...)` | Matrix norm only | linalg/_linalg.py:L3414 |
+| `vector_norm(x, ord=2, axis=None)` | Vector norm only | linalg/_linalg.py:L3477 |
+| `cross(a, b, axisa=-1, axisb=-1, axisc=-1)` | Cross product of 3-element vectors | _core/numeric.py:L1565 |
+| `vecdot(x1, x2, axis=-1)` | Vector dot product along an axis | linalg/_linalg.py:L3579 |
+| `diagonal(x, offset=0, axis1=0, axis2=1)` | Return specified diagonals | _core/fromnumeric.py:L1750 |
+| `trace(x, offset=0, axis1=0, axis2=1)` | Sum along specified diagonals | _core/fromnumeric.py:L1886 |
+| `matrix_transpose(x)` | Transpose a matrix (or stack of matrices) | _core/fromnumeric.py:L702 |
 
 ### Result Types
 
@@ -156,7 +156,7 @@ except LinAlgError:
 ## Cross-Library Bridges
 
 | Source | Target | Relation | Description |
-|--------|--------|----------|-------------|
+| -------- | ---------- | ------------- |
 | numpy.linalg | `scipy.linalg` | **superset_of** | scipy.linalg extends numpy.linalg with additional decompositions (LU, Schur, polar, etc.) and sparse support |
 | numpy.linalg | `scipy.sparse.linalg` | **data_source** | scipy sparse solvers consume numpy arrays as input |
 
