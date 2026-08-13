@@ -9,6 +9,6 @@ Graph: `knowledge_graphs/quantstats/.graphify/graph.json` · GRAPH_SPEC §5 · g
 | c1 real labels | PASS | distinct=51 non_singleton=48 default_labels=0 default_graph=0 coverage=100.0% |
 | c2 descriptions | PASS | described=158 describable=169 pct=93.5% |
 | c3 god nodes | PASS | top20=20 noise=0 |
-| c4 pin | FAIL | expected=fbd10daed0227aa0d10da6513f1b15e7e98d7fae found=2e1eb3cbaea748690da37166f80213606ac92b0b (graph) |
+| c4 pin | PASS | expected=fbd10daed0227aa0d10da6513f1b15e7e98d7fae found=fbd10daed0227aa0d10da6513f1b15e7e98d7fae (graph) |
 | c5 audited | PASS | exists |
-| c6 api surface | PASS | no manifest (probe pending) |
+| c6 api surface | PASS | curated=0 unresolved=0 surface_coverage=100.0% (target 95.0%) |

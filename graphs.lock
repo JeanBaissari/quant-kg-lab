@@ -129,8 +129,8 @@
     "quantstats": {
       "repo": "ranaroussi/quantstats",
       "commit": "fbd10daed0227aa0d10da6513f1b15e7e98d7fae",
-      "nodes": 0,
-      "edges": 0
+      "nodes": 393,
+      "edges": 531
     }
   }
 }
