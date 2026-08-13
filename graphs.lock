@@ -141,8 +141,8 @@
     "imbalanced-learn": {
       "repo": "scikit-learn-contrib/imbalanced-learn",
       "commit": "8504e95f0160f61d1b617ca66f779646d2ee609e",
-      "nodes": 0,
-      "edges": 0
+      "nodes": 611,
+      "edges": 865
     }
   }
 }
