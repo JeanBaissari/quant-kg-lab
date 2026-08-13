@@ -18,6 +18,10 @@ Hub for the **catboost** library (ML & Optimization tier). The per-module API re
 
 | Skill | Module | Covers |
 |-------|--------|--------|
+| [`catboost`](../../../skills/catboost/SKILL.md) | (router) | working with catboost — the boosting entry point. Router indexing the catboost s |
+| [`catboost-core`](../../../skills/catboost/core/SKILL.md) | `catboost.core` | training catboost models |
+| [`catboost-evaluation`](../../../skills/catboost/evaluation/SKILL.md) | `catboost.evaluation` | cross-validating or evaluating catboost models |
+| [`catboost-pool`](../../../skills/catboost/pool/SKILL.md) | `catboost.pool` | building catboost data containers |
 
 ## Graph provenance
 

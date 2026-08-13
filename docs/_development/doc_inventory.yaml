@@ -183,6 +183,10 @@ docs:
   type: Generated
   status: generated
   last_verified: '2026-08-13'
+- path: docs/libraries/ta/index.md
+  type: Generated
+  status: generated
+  last_verified: '2026-08-13'
 - path: docs/libraries/ta-lib/index.md
   type: Generated
   status: generated
@@ -359,6 +363,10 @@ docs:
   type: Generated
   status: generated
   last_verified: ''
+- path: docs/reference/edge-audits/edge-audit-ta.md
+  type: Generated
+  status: generated
+  last_verified: ''
 - path: docs/reference/edge-audits/edge-audit-vectorbt.md
   type: Generated
   status: generated
@@ -460,6 +468,10 @@ docs:
   status: generated
   last_verified: ''
 - path: docs/reference/quality-gate/gate-ta-lib.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/quality-gate/gate-ta.md
   type: Generated
   status: generated
   last_verified: ''

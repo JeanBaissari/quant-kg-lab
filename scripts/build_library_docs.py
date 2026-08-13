@@ -22,7 +22,7 @@ DOMAIN = {
     "Foundation": ["numpy", "scipy", "pandas", "statsmodels", "polars", "yfinance"],
     "ML & Optimization": ["scikit-learn", "xgboost", "lightgbm", "optuna", "cvxpy", "imbalanced-learn", "catboost"],
     "Quant Tools": ["vectorbt", "backtrader", "ta-lib", "pyportfolioopt", "riskfolio",
-                    "alphalens", "pyfolio", "empyrical", "quantstats", "mplfinance"],
+                    "alphalens", "pyfolio", "empyrical", "quantstats", "mplfinance", "ta"],
     "Statistical Models": ["arch"],
     "Explainability": ["shap"],
     "Bayesian Modelling": ["pymc"],

@@ -46,6 +46,7 @@ Per-library hubs, grouped by tier. Each hub indexes that library's skills, graph
 - [pyportfolioopt](pyportfolioopt/index.md) — robertmartin8/PyPortfolioOpt
 - [quantstats](quantstats/index.md) — ranaroussi/quantstats
 - [riskfolio](riskfolio/index.md) — dcajasn/Riskfolio-Lib
+- [ta](ta/index.md) — bukosabino/ta
 - [ta-lib](ta-lib/index.md) — TA-Lib/ta-lib-python
 - [vectorbt](vectorbt/index.md) — polakowo/vectorbt
 
