@@ -9,6 +9,6 @@ Graph: `knowledge_graphs/imbalanced-learn/.graphify/graph.json` · GRAPH_SPEC §
 | c1 real labels | PASS | distinct=43 non_singleton=41 default_labels=0 default_graph=0 coverage=100.0% |
 | c2 descriptions | PASS | described=252 describable=298 pct=84.6% |
 | c3 god nodes | PASS | top20=20 noise=0 |
-| c4 pin | FAIL | expected=8504e95f0160f61d1b617ca66f779646d2ee609e found=99dd555990409d2cdce7a906b077c4ca15023828 (graph) |
+| c4 pin | PASS | expected=8504e95f0160f61d1b617ca66f779646d2ee609e found=8504e95f0160f61d1b617ca66f779646d2ee609e (graph) |
 | c5 audited | PASS | exists |
-| c6 api surface | PASS | no manifest (probe pending) |
+| c6 api surface | PASS | curated=0 unresolved=0 surface_coverage=100.0% (target 95.0%) |

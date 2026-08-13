@@ -31,6 +31,7 @@
 | arch | — | 1367 · 3900 | 4 | [`arch`](../../skills/arch/SKILL.md) |
 | cvxpy | — | 6380 · 16515 | 5 | [`cvxpy`](../../skills/cvxpy/SKILL.md) |
 | empyrical | — | 180 · 258 | 2 | [`empyrical`](../../skills/empyrical/SKILL.md) |
+| imbalanced-learn | — | 611 · 865 | 3 | [`imbalanced-learn`](../../skills/imbalanced-learn/SKILL.md) |
 | polars | — | 5296 · 16925 | 5 | [`polars`](../../skills/polars/SKILL.md) |
 | pyfolio | — | 305 · 361 | 2 | [`pyfolio`](../../skills/pyfolio/SKILL.md) |
 | pyportfolioopt | — | 342 · 512 | 4 | [`pyportfolioopt`](../../skills/pyportfolioopt/SKILL.md) |
@@ -143,6 +144,12 @@
 - [`empyrical`](../../skills/empyrical/SKILL.md) *(router)* — Use when working with empyrical — the portfolio-metrics entry point. Router indexing the empyrical sub-skills; load the sub-skill for the metric family you need.
 - [`empyrical-perf-attrib`](../../skills/empyrical/perf-attrib/SKILL.md) — Use when decomposing portfolio performance into factor exposures — perf_attrib and compute_exposures for factor-model attribution of returns.
 - [`empyrical-stats`](../../skills/empyrical/stats/SKILL.md) — Use when computing portfolio/strategy performance metrics from returns — annual return/volatility, Sharpe/Sortino/omega/Calmar ratios, max drawdown, alpha/beta, downside risk, tail ratio, stability, and cumulative-return helpers.
+
+### imbalanced-learn
+- [`imbalanced-learn`](../../skills/imbalanced-learn/SKILL.md) *(router)* — Use when working with imbalanced-learn — the class-imbalance entry point. Router indexing the imblearn sub-skills; load the sub-skill for the resampling layer you need.
+- [`imbalanced-learn-ensemble`](../../skills/imbalanced-learn/ensemble/SKILL.md) — Use when training balanced ensembles with imblearn — BalancedBaggingClassifier, BalancedRandomForestClassifier, EasyEnsembleClassifier, RUSBoostClassifier, and the imbalanced metrics (geometric mean, imbalanced report).
+- [`imbalanced-learn-pipeline`](../../skills/imbalanced-learn/pipeline/SKILL.md) — Use when building sampling-aware pipelines with imblearn — Pipeline/make_pipeline that hold samplers between transformers and estimators, and the imbalanced scoring/metrics surface.
+- [`imbalanced-learn-samplers`](../../skills/imbalanced-learn/samplers/SKILL.md) — Use when resampling imbalanced data with imblearn — SMOTE/ADASYN/BorderlineSMOTE oversampling, NearMiss/RandomUnderSampler/ENN undersampling, SMOTENC/SMOTEN categorical variants, and combined SMOTEENN/SMOTETomek.
 
 ### polars
 - [`polars`](../../skills/polars/SKILL.md) *(router)* — Use when working with polars — the DataFrame entry point. Router indexing the polars sub-skills; load the sub-skill for the layer you need.

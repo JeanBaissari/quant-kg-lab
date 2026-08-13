@@ -165,6 +165,42 @@
       "meta_warn": [],
       "provenance": []
     },
+    "skills/imbalanced-learn/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [
+        "graph meta: community_count mismatch \u2014 graph has 43, skill claims 41"
+      ],
+      "provenance": []
+    },
+    "skills/imbalanced-learn/ensemble/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [
+        "graph meta: community_count mismatch \u2014 graph has 43, skill claims 41"
+      ],
+      "provenance": []
+    },
+    "skills/imbalanced-learn/pipeline/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [
+        "graph meta: community_count mismatch \u2014 graph has 43, skill claims 41"
+      ],
+      "provenance": []
+    },
+    "skills/imbalanced-learn/samplers/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [
+        "graph meta: community_count mismatch \u2014 graph has 43, skill claims 41"
+      ],
+      "provenance": []
+    },
     "skills/lightgbm/SKILL.md": {
       "lint": [],
       "api_fail": [],
