@@ -7,7 +7,7 @@
 **Library**: ta-lib
 **Domain**: Quant Tools
 **Source**: TA-Lib/ta-lib-python@a9ff1b47b3dd
-**Graph**: 1140 nodes · 5352 edges
+**Graph**: 381 nodes · 379 edges
 **Last Verified**: 2026-08-12
 
 ## Overview
@@ -22,8 +22,8 @@ Hub for the **ta-lib** library (Quant Tools tier). The per-module API reference 
 
 ## Graph provenance
 
-- **God nodes** (public-API hubs, noise-filtered): `_ta_lib.c` (1132), `__init__.py` (4), `abstract.py` (2), `get_function_groups()` (2), `get_functions()` (2), `Function()` (1)
-- **Communities**: 203
+- **God nodes** (public-API hubs, noise-filtered): `_ta_lib.c` (373), `__init__.py` (4), `abstract.py` (2), `get_function_groups()` (2), `get_functions()` (2), `Function()` (1)
+- **Communities**: 174
 - **Edge audit**: [edge-audit-ta-lib.md](../../reference/edge-audits/edge-audit-ta-lib.md)
 - **Rebuild**: `scripts/rebuild_graph.sh ta-lib`
 

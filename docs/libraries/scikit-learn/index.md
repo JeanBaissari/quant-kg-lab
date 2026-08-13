@@ -7,7 +7,7 @@
 **Library**: scikit-learn
 **Domain**: ML & Optimization
 **Source**: scikit-learn/scikit-learn@6f8b95aa2234
-**Graph**: 8662 nodes · 29241 edges
+**Graph**: 8450 nodes · 28094 edges
 **Last Verified**: 2026-08-12
 
 ## Overview
@@ -21,11 +21,13 @@ Hub for the **scikit-learn** library (ML & Optimization tier). The per-module AP
 | [`scikit-learn`](../../../skills/scikit-learn/SKILL.md) | (router) | working with scikit-learn. Router indexing the 14 scikit-learn sub-skills; load  |
 | [`scikit-learn-cluster`](../../../skills/scikit-learn/cluster/SKILL.md) | `sklearn.cluster` | scikit-learn Clustering |
 | [`scikit-learn-compose`](../../../skills/scikit-learn/compose/SKILL.md) | `sklearn.compose` | building composite estimators and pipelines in scikit-learn |
+| [`scikit-learn-covariance`](../../../skills/scikit-learn/covariance/SKILL.md) | `sklearn.covariance` | estimating return covariance for portfolio risk |
 | [`scikit-learn-decomposition`](../../../skills/scikit-learn/decomposition/SKILL.md) | `sklearn.decomposition` | scikit-learn matrix decomposition and dimensionality reduction |
 | [`scikit-learn-ensemble`](../../../skills/scikit-learn/ensemble/SKILL.md) | `sklearn.ensemble` | scikit-learn Ensemble methods |
 | [`scikit-learn-feature-selection`](../../../skills/scikit-learn/feature_selection/SKILL.md) | `sklearn.feature_selection` | scikit-learn feature selection |
 | [`scikit-learn-gaussian-process`](../../../skills/scikit-learn/gaussian_process/SKILL.md) | `sklearn.gaussian_process` | scikit-learn Gaussian Processes |
 | [`scikit-learn-impute`](../../../skills/scikit-learn/impute/SKILL.md) | `sklearn.impute` | scikit-learn Imputation |
+| [`scikit-learn-inspection`](../../../skills/scikit-learn/inspection/SKILL.md) | `sklearn.inspection` | explaining fitted models in quant pipelines |
 | [`scikit-learn-linear-model`](../../../skills/scikit-learn/linear_model/SKILL.md) | `sklearn.linear_model` | scikit-learn linear models |
 | [`scikit-learn-metrics`](../../../skills/scikit-learn/metrics/SKILL.md) | `sklearn.metrics` | scikit-learn metrics, scoring functions, pairwise distances, or clustering evaluation |
 | [`scikit-learn-model-selection`](../../../skills/scikit-learn/model_selection/SKILL.md) | `sklearn.model_selection` | scikit-learn model selection, cross-validation, hyperparameter tuning, or GridSearchCV/RandomizedSearchCV workflows |
@@ -36,8 +38,8 @@ Hub for the **scikit-learn** library (ML & Optimization tier). The per-module AP
 
 ## Graph provenance
 
-- **God nodes** (public-API hubs, noise-filtered): `Interval` (2234), `StrOptions` (2007), `BaseEstimator` (1565), `TransformerMixin` (883), `Parallel` (766), `RegressorMixin` (740)
-- **Communities**: 401
+- **God nodes** (public-API hubs, noise-filtered): `Interval` (2234), `StrOptions` (2007), `BaseEstimator` (1531), `TransformerMixin` (883), `RegressorMixin` (740), `Parallel` (732)
+- **Communities**: 367
 - **Edge audit**: [edge-audit-scikit-learn.md](../../reference/edge-audits/edge-audit-scikit-learn.md)
 - **Rebuild**: `scripts/rebuild_graph.sh scikit-learn`
 
@@ -51,6 +53,7 @@ Hub for the **scikit-learn** library (ML & Optimization tier). The per-module AP
 | scikit-learn::RandomForestClassifier | vectorbt::SignalFactory | powers |
 | scikit-learn::Pipeline | optuna::Study | tuned_by |
 | scipy::_stats() | scikit-learn::SelectKBest | powers |
+| statsmodels::OLS | scikit-learn::LinearRegression | alternative_to |
 
 ## Related
 

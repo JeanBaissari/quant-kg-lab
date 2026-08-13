@@ -12,7 +12,7 @@ With --include-dist: also dist/** (bundles produced by scripts/export_bundle.py)
 
 Exits 1 on any hit. Designed to be cheap and deterministic (stdlib only).
 """
-import sys, pathlib, re
+import sys, pathlib, re, json, subprocess
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SCAN_DIRS = ("knowledge_graphs", "skills", "docs/reference")
@@ -24,14 +24,20 @@ INTERMEDIATE = ("/repo/", "node_modules/", "cost.json", ".prune.bak", ".labels.b
 
 def scan():
     hits = []
+    # tracked files only — gitignored intermediates (repo/, .graphify cache,
+    # studio/, backups) are never shipped, so they are not scanned (QKG_018 F7)
+    tracked = set()
+    r = subprocess.run(["git", "-C", str(ROOT), "ls-files"],
+                       capture_output=True, text=True)
+    if r.returncode == 0:
+        tracked = {str(ROOT / f) for f in r.stdout.split("\n") if f}
     for d in SCAN_DIRS:
         root = ROOT / d
         if not root.exists():
             continue
         for p in root.rglob("*"):
-            if p.is_file() and p.suffix in (".json", ".md", ".py", ".yml", ".yaml"):
-                if "/repo/" in str(p.relative_to(ROOT)):
-                    continue  # upstream clones are gitignored — never shipped
+            if (p.is_file() and p.suffix in (".json", ".md", ".py", ".yml", ".yaml")
+                    and str(p) in tracked):
                 _check(p, hits)
     for name in SCAN_FILES:
         p = ROOT / name
@@ -55,9 +61,18 @@ def _check(p, hits):
     for pat in ABSOLUTE:
         if pat in text:
             hits.append((str(rel), f"absolute path {pat!r}"))
-    # intermediate markers only in graph artifacts (graph.json) and bundles —
-    # prose mentions of "/repo/" in GRAPH_REPORT.md are documentation, not leaks
+    # intermediate markers only in graph artifacts (graph.json) and bundles,
+    # and only against path-like fields — node descriptions/labels legitimately
+    # mention e.g. https://en.wikipedia.org/wiki/... (cvxpy Gershgorin label)
     if p.suffix in (".json", ".zip"):
+        if p.suffix == ".json" and p.name == "graph.json":
+            try:
+                g = json.loads(text)
+                text = "\n".join(
+                    str(n.get("source_file", "")) + "|" + str(n.get("id", ""))
+                    for n in g.get("nodes", []))
+            except Exception:
+                pass
         for pat in INTERMEDIATE:
             if pat in text:
                 hits.append((str(rel), f"intermediate marker {pat!r}"))

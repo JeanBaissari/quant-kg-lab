@@ -7,7 +7,7 @@
 **Library**: optuna
 **Domain**: ML & Optimization
 **Source**: optuna/optuna@b6f2ea62fbe7
-**Graph**: 2318 nodes · 4252 edges
+**Graph**: 2205 nodes · 4010 edges
 **Last Verified**: 2026-08-12
 
 ## Overview
@@ -29,8 +29,8 @@ Hub for the **optuna** library (ML & Optimization tier). The per-module API refe
 
 ## Graph provenance
 
-- **God nodes** (public-API hubs, noise-filtered): `Study` (227), `BaseDistribution` (207), `_typing.py` (145), `StudyDirection` (139), `FloatDistribution` (88), `CategoricalDistribution` (81)
-- **Communities**: 226
+- **God nodes** (public-API hubs, noise-filtered): `Study` (221), `BaseDistribution` (196), `_typing.py` (142), `StudyDirection` (137), `FloatDistribution` (75), `CategoricalDistribution` (73)
+- **Communities**: 223
 - **Edge audit**: [edge-audit-optuna.md](../../reference/edge-audits/edge-audit-optuna.md)
 - **Rebuild**: `scripts/rebuild_graph.sh optuna`
 

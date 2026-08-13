@@ -7,7 +7,7 @@
 **Library**: scipy
 **Domain**: Foundation
 **Source**: scipy/scipy@0514ef9e7329
-**Graph**: 14193 nodes · 23606 edges
+**Graph**: 14071 nodes · 23466 edges
 **Last Verified**: 2026-08-12
 
 ## Overview
@@ -26,7 +26,7 @@ Hub for the **scipy** library (Foundation tier). The per-module API reference li
 ## Graph provenance
 
 - **God nodes** (public-API hubs, noise-filtered): `CensoredData` (342), `FitError` (320), `rv_continuous` (278), `cython_special_wrappers.cpp` (265), `LowLevelCallable` (250), `UnivariateDistribution` (196)
-- **Communities**: 1076
+- **Communities**: 1061
 - **Edge audit**: [edge-audit-scipy.md](../../reference/edge-audits/edge-audit-scipy.md)
 - **Rebuild**: `scripts/rebuild_graph.sh scipy`
 
@@ -34,9 +34,11 @@ Hub for the **scipy** library (Foundation tier). The per-module API reference li
 
 | Source | Target | Relation |
 |--------|--------|----------|
-| numpy::_linalg.py | scipy::_linalg_pythran.py | superset_of |
+| numpy::linalg | scipy::_linalg_pythran.py | superset_of |
 | scipy::_stats() | scikit-learn::SelectKBest | powers |
 | scipy::OptimizeResult | optuna::Study | alternative_to |
+| cvxpy::Problem | scipy::OptimizeResult | alternative_to |
+| statsmodels::OLS | scipy::_stats() | powered_by |
 
 ## Related
 

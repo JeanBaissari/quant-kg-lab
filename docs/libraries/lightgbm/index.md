@@ -7,7 +7,7 @@
 **Library**: lightgbm
 **Domain**: ML & Optimization
 **Source**: microsoft/LightGBM@f9bf8d1358cd
-**Graph**: 594 nodes · 2099 edges
+**Graph**: 593 nodes · 2029 edges
 **Last Verified**: 2026-08-12
 
 ## Overview
@@ -24,7 +24,7 @@ Hub for the **lightgbm** library (ML & Optimization tier). The per-module API re
 
 ## Graph provenance
 
-- **God nodes** (public-API hubs, noise-filtered): `pd_DataFrame` (231), `pd_Series` (173), `pd_CategoricalDtype` (142), `Booster` (138), `Dataset` (120), `LightGBMError` (118)
+- **God nodes** (public-API hubs, noise-filtered): `pd_DataFrame` (231), `pd_Series` (173), `pd_CategoricalDtype` (142), `Booster` (138), `Dataset` (120), `LightGBMError` (117)
 - **Communities**: 17
 - **Edge audit**: [edge-audit-lightgbm.md](../../reference/edge-audits/edge-audit-lightgbm.md)
 - **Rebuild**: `scripts/rebuild_graph.sh lightgbm`

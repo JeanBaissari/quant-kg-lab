@@ -20,8 +20,8 @@ LOCK = json.load(open(ROOT / "graphs.lock"))["libraries"]
 
 DOMAIN = {
     "Foundation": ["numpy", "scipy", "pandas", "statsmodels"],
-    "ML & Optimization": ["scikit-learn", "xgboost", "lightgbm", "optuna"],
-    "Quant Tools": ["vectorbt", "backtrader", "ta-lib"],
+    "ML & Optimization": ["scikit-learn", "xgboost", "lightgbm", "optuna", "cvxpy"],
+    "Quant Tools": ["vectorbt", "backtrader", "ta-lib", "pyportfolioopt"],
 }
 LIB_DOMAIN = {lib: dom for dom, libs in DOMAIN.items() for lib in libs}
 IMPORT_NAME = {"scikit-learn": "sklearn", "ta-lib": "talib"}

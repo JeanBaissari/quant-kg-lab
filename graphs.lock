@@ -75,8 +75,8 @@
     "cvxpy": {
       "repo": "cvxpy/cvxpy",
       "commit": "e3b50dccf808e52e36f7b134b710e0e245742cc0",
-      "nodes": 0,
-      "edges": 0
+      "nodes": 6380,
+      "edges": 16515
     },
     "pyportfolioopt": {
       "repo": "robertmartin8/PyPortfolioOpt",

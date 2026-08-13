@@ -7,7 +7,7 @@
 **Library**: pandas
 **Domain**: Foundation
 **Source**: pandas-dev/pandas@982854070758
-**Graph**: 11837 nodes · 40707 edges
+**Graph**: 11368 nodes · 39913 edges
 **Last Verified**: 2026-08-12
 
 ## Overview
@@ -24,8 +24,8 @@ Hub for the **pandas** library (Foundation tier). The per-module API reference l
 
 ## Graph provenance
 
-- **God nodes** (public-API hubs, noise-filtered): `DatetimeTZDtype` (1701), `CategoricalDtype` (1480), `PeriodDtype` (1087), `StringDtype` (1031), `ArrowDtype` (1018), `DataFrame` (887)
-- **Communities**: 410
+- **God nodes** (public-API hubs, noise-filtered): `DatetimeTZDtype` (1582), `CategoricalDtype` (1480), `PeriodDtype` (1087), `StringDtype` (1031), `ArrowDtype` (1018), `DataFrame` (887)
+- **Communities**: 396
 - **Edge audit**: [edge-audit-pandas.md](../../reference/edge-audits/edge-audit-pandas.md)
 - **Rebuild**: `scripts/rebuild_graph.sh pandas`
 
@@ -37,6 +37,8 @@ Hub for the **pandas** library (Foundation tier). The per-module API reference l
 | pandas::DataFrame | scikit-learn::BaseEstimator | input_to |
 | pandas::DataFrame | vectorbt::Portfolio | input_to |
 | pandas::DataFrame | backtrader::DataBase | consumed_by |
+| pandas::DataFrame | pyportfolioopt::expected_returns.py | input_to |
+| pandas::DataFrame | statsmodels::PandasData | input_to |
 
 ## Related
 

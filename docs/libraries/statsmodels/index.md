@@ -18,6 +18,8 @@ Hub for the **statsmodels** library (Foundation tier). The per-module API refere
 
 | Skill | Module | Covers |
 |-------|--------|--------|
+| [`statsmodels`](../../../skills/statsmodels/SKILL.md) | (router) | working with statsmodels — the statistical-modelling entry point. Router indexin |
+| [`statsmodels-core`](../../../skills/statsmodels/core/SKILL.md) | `statsmodels.core` | building statistical models in Python |
 
 ## Graph provenance
 
@@ -25,6 +27,14 @@ Hub for the **statsmodels** library (Foundation tier). The per-module API refere
 - **Communities**: 638
 - **Edge audit**: [edge-audit-statsmodels.md](../../reference/edge-audits/edge-audit-statsmodels.md)
 - **Rebuild**: `scripts/rebuild_graph.sh statsmodels`
+
+## Cross-library bridges
+
+| Source | Target | Relation |
+|--------|--------|----------|
+| statsmodels::OLS | scipy::_stats() | powered_by |
+| statsmodels::OLS | scikit-learn::LinearRegression | alternative_to |
+| pandas::DataFrame | statsmodels::PandasData | input_to |
 
 ## Related
 

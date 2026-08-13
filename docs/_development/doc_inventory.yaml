@@ -120,6 +120,14 @@ docs:
   status: generated
   last_verified: '2026-08-12'
 - path: docs/libraries/statsmodels/index.md
+- path: docs/libraries/cvxpy/index.md
+  type: Library Index
+  status: generated
+  last_verified: '2026-08-12'
+- path: docs/libraries/pyportfolioopt/index.md
+  type: Library Index
+  status: generated
+  last_verified: '2026-08-12'
   type: Generated
   status: generated
   last_verified: '2026-08-12'
@@ -200,6 +208,14 @@ docs:
   status: generated
   last_verified: ''
 - path: docs/reference/api-surface/pyportfolioopt.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/api-surface/cvxpy.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/quality-gate/gate-cvxpy.md
   type: Generated
   status: generated
   last_verified: ''

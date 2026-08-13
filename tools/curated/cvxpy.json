@@ -1,0 +1,255 @@
+{
+  "library": "cvxpy",
+  "symbols": [
+    {
+      "label": "COO_CANON_BACKEND",
+      "source_file": "__init__.py",
+      "description": "str(object='') -> str."
+    },
+    {
+      "label": "CPP_CANON_BACKEND",
+      "source_file": "__init__.py",
+      "description": "str(object='') -> str."
+    },
+    {
+      "label": "EXP_ATOMS",
+      "source_file": "__init__.py",
+      "description": "Built-in mutable sequence."
+    },
+    {
+      "label": "GP_EXP_ATOMS",
+      "source_file": "__init__.py",
+      "description": "Built-in mutable sequence."
+    },
+    {
+      "label": "GP_NONPOS_ATOMS",
+      "source_file": "__init__.py",
+      "description": "Built-in mutable sequence."
+    },
+    {
+      "label": "INFEASIBLE",
+      "source_file": "__init__.py",
+      "description": "str(object='') -> str."
+    },
+    {
+      "label": "INFEASIBLE_INACCURATE",
+      "source_file": "__init__.py",
+      "description": "str(object='') -> str."
+    },
+    {
+      "label": "NONPOS_ATOMS",
+      "source_file": "__init__.py",
+      "description": "Built-in mutable sequence."
+    },
+    {
+      "label": "OPTIMAL",
+      "source_file": "__init__.py",
+      "description": "str(object='') -> str."
+    },
+    {
+      "label": "OPTIMAL_INACCURATE",
+      "source_file": "__init__.py",
+      "description": "str(object='') -> str."
+    },
+    {
+      "label": "POWCONE_ATOMS",
+      "source_file": "__init__.py",
+      "description": "Built-in mutable sequence."
+    },
+    {
+      "label": "POWCONE_ND_ATOMS",
+      "source_file": "__init__.py",
+      "description": "Built-in mutable sequence."
+    },
+    {
+      "label": "PSD_ATOMS",
+      "source_file": "__init__.py",
+      "description": "Built-in mutable sequence."
+    },
+    {
+      "label": "Pnorm",
+      "source_file": "atoms/pnorm.py",
+      "description": "The vector p-norm, for p not equal to 1 or infinity."
+    },
+    {
+      "label": "Power",
+      "source_file": "atoms/elementwise/power.py",
+      "description": "Elementwise power function :math:`f(x) = x^p`."
+    },
+    {
+      "label": "ROBUST_KKTSOLVER",
+      "source_file": "__init__.py",
+      "description": "str(object='') -> str."
+    },
+    {
+      "label": "RUST_CANON_BACKEND",
+      "source_file": "__init__.py",
+      "description": "str(object='') -> str."
+    },
+    {
+      "label": "SCIPY_CANON_BACKEND",
+      "source_file": "__init__.py",
+      "description": "str(object='') -> str."
+    },
+    {
+      "label": "SOC_ATOMS",
+      "source_file": "__init__.py",
+      "description": "Built-in mutable sequence."
+    },
+    {
+      "label": "SOLVER_ERROR",
+      "source_file": "__init__.py",
+      "description": "str(object='') -> str."
+    },
+    {
+      "label": "Trace",
+      "source_file": "atoms/affine/trace.py",
+      "description": "The sum of the diagonal entries of a matrix."
+    },
+    {
+      "label": "UNBOUNDED",
+      "source_file": "__init__.py",
+      "description": "str(object='') -> str."
+    },
+    {
+      "label": "UNBOUNDED_INACCURATE",
+      "source_file": "__init__.py",
+      "description": "str(object='') -> str."
+    },
+    {
+      "label": "USER_LIMIT",
+      "source_file": "__init__.py",
+      "description": "str(object='') -> str."
+    },
+    {
+      "label": "affine",
+      "source_file": "__init__.py",
+      "description": "Copyright 2013 Steven Diamond."
+    },
+    {
+      "label": "atom",
+      "source_file": "__init__.py",
+      "description": "Copyright 2013 Steven Diamond."
+    },
+    {
+      "label": "atoms",
+      "source_file": "__init__.py",
+      "description": "Copyright 2013 Steven Diamond."
+    },
+    {
+      "label": "axis_atom",
+      "source_file": "__init__.py",
+      "description": "Copyright 2013 Steven Diamond."
+    },
+    {
+      "label": "constraints",
+      "source_file": "__init__.py",
+      "description": "Copyright 2013 Steven Diamond, 2022 - the CVXPY Authors."
+    },
+    {
+      "label": "cvxcore",
+      "source_file": "__init__.py",
+      "description": "Public NumPy API symbol `np.cvxcore` (C-implemented or namespace; see docs)."
+    },
+    {
+      "label": "elementwise",
+      "source_file": "__init__.py",
+      "description": "Copyright 2013 Steven Diamond."
+    },
+    {
+      "label": "error",
+      "source_file": "__init__.py",
+      "description": "Copyright 2013 Steven Diamond."
+    },
+    {
+      "label": "errormsg",
+      "source_file": "__init__.py",
+      "description": "Public NumPy API symbol `np.errormsg` (C-implemented or namespace; see docs)."
+    },
+    {
+      "label": "expressions",
+      "source_file": "__init__.py",
+      "description": "Copyright 2013 Steven Diamond."
+    },
+    {
+      "label": "interface",
+      "source_file": "__init__.py",
+      "description": "Copyright 2013 Steven Diamond."
+    },
+    {
+      "label": "lin_ops",
+      "source_file": "__init__.py",
+      "description": "Copyright 2013 Steven Diamond."
+    },
+    {
+      "label": "logic",
+      "source_file": "__init__.py",
+      "description": "Copyright, the CVXPY authors."
+    },
+    {
+      "label": "nlp",
+      "source_file": "__init__.py",
+      "description": "cvxpy.nlp \u2014 Namespace for NLP (nonlinear programming) atoms."
+    },
+    {
+      "label": "norm_nuc",
+      "source_file": "__init__.py",
+      "description": "Copyright 2013 Steven Diamond."
+    },
+    {
+      "label": "problems",
+      "source_file": "__init__.py",
+      "description": "Copyright 2013 Steven Diamond."
+    },
+    {
+      "label": "prod()",
+      "source_file": "atoms/prod.py",
+      "description": "Multiply the entries of an expression."
+    },
+    {
+      "label": "reductions",
+      "source_file": "__init__.py",
+      "description": "Copyright 2017 Robin Verschueren."
+    },
+    {
+      "label": "settings",
+      "source_file": "__init__.py",
+      "description": "Copyright 2013 Steven Diamond."
+    },
+    {
+      "label": "stats",
+      "source_file": "__init__.py",
+      "description": "Copyright 2013 CVXPY Developers."
+    },
+    {
+      "label": "sum()",
+      "source_file": "atoms/affine/sum.py",
+      "description": "Sum the entries of an expression over a given axis."
+    },
+    {
+      "label": "suppfunc",
+      "source_file": "transforms/suppfunc.py",
+      "description": "Given a list of CVXPY Constraint objects :math:`\\texttt{constraints}`."
+    },
+    {
+      "label": "total_variation",
+      "source_file": "__init__.py",
+      "description": "Copyright 2013 Steven Diamond."
+    },
+    {
+      "label": "transforms",
+      "source_file": "__init__.py",
+      "description": "Copyright 2013 Steven Diamond."
+    },
+    {
+      "label": "utilities",
+      "source_file": "__init__.py",
+      "description": "Copyright 2013 Steven Diamond."
+    },
+    {
+      "label": "Clarabel",
+      "source_file": "reductions/solvers/conic_solvers/clarabel_conif.py",
+      "description": "cvxpy solver interface for the Clarabel interior-point conic solver (external package)."
+    }
+  ]
+}

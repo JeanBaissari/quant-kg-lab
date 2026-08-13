@@ -7,7 +7,7 @@
 **Library**: numpy
 **Domain**: Foundation
 **Source**: numpy/numpy@ab2199763cb1
-**Graph**: 8345 nodes · 13507 edges
+**Graph**: 8306 nodes · 13483 edges
 **Last Verified**: 2026-08-12
 
 ## Overview
@@ -25,8 +25,8 @@ Hub for the **numpy** library (Foundation tier). The per-module API reference li
 
 ## Graph provenance
 
-- **God nodes** (public-API hubs, noise-filtered): `ABCPolyBase` (251), `MaskedArray` (151), `f2c_d_lapack.c` (124), `f2c_s_lapack.c` (124), `auxfuncs.py` (117), `core.py` (115)
-- **Communities**: 670
+- **God nodes** (public-API hubs, noise-filtered): `ABCPolyBase` (251), `__init__.py` (221), `MaskedArray` (151), `f2c_d_lapack.c` (124), `f2c_s_lapack.c` (124), `auxfuncs.py` (117)
+- **Communities**: 619
 - **Edge audit**: [edge-audit-numpy.md](../../reference/edge-audits/edge-audit-numpy.md)
 - **Rebuild**: `scripts/rebuild_graph.sh numpy`
 
@@ -36,7 +36,8 @@ Hub for the **numpy** library (Foundation tier). The per-module API reference li
 |--------|--------|----------|
 | numpy::ndarray | pandas::DataFrame | backed_by |
 | numpy::ndarray | vectorbt::ArrayWrapper | wrapped_by |
-| numpy::_linalg.py | scipy::_linalg_pythran.py | superset_of |
+| numpy::linalg | scipy::_linalg_pythran.py | superset_of |
+| numpy::ndarray | cvxpy::Variable | backed_by |
 
 ## Related
 

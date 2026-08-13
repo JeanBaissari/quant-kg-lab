@@ -12,22 +12,24 @@ Per-library hubs, grouped by tier. Each hub indexes that library's skills, graph
 ## Foundation
 
 - [numpy](numpy/index.md) — numpy/numpy
-- [scipy](scipy/index.md) — scipy/scipy
 - [pandas](pandas/index.md) — pandas-dev/pandas
+- [scipy](scipy/index.md) — scipy/scipy
 - [statsmodels](statsmodels/index.md) — statsmodels/statsmodels
 
 ## ML & Optimization
 
-- [scikit-learn](scikit-learn/index.md) — scikit-learn/scikit-learn
-- [xgboost](xgboost/index.md) — dmlc/xgboost
+- [cvxpy](cvxpy/index.md) — cvxpy/cvxpy
 - [lightgbm](lightgbm/index.md) — microsoft/LightGBM
 - [optuna](optuna/index.md) — optuna/optuna
+- [scikit-learn](scikit-learn/index.md) — scikit-learn/scikit-learn
+- [xgboost](xgboost/index.md) — dmlc/xgboost
 
 ## Quant Tools
 
-- [vectorbt](vectorbt/index.md) — polakowo/vectorbt
 - [backtrader](backtrader/index.md) — mementum/backtrader
+- [pyportfolioopt](pyportfolioopt/index.md) — robertmartin8/PyPortfolioOpt
 - [ta-lib](ta-lib/index.md) — TA-Lib/ta-lib-python
+- [vectorbt](vectorbt/index.md) — polakowo/vectorbt
 
 ## Workflows
 

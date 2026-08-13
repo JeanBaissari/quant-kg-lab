@@ -7,8 +7,8 @@ Graph: `knowledge_graphs/cvxpy/.graphify/graph.json` · GRAPH_SPEC §5 · genera
 | criterion | status | counts |
 |---|---|---|
 | c1 real labels | PASS | distinct=297 non_singleton=292 default_labels=0 default_graph=0 coverage=100.0% |
-| c2 descriptions | FAIL | described=0 describable=3614 pct=0.0% |
+| c2 descriptions | PASS | described=3107 describable=3664 pct=84.8% |
 | c3 god nodes | PASS | top20=20 noise=0 |
-| c4 pin | FAIL | expected=e3b50dccf808e52e36f7b134b710e0e245742cc0 found=7da364f24184e26976f9b1c197bcdf3af28710d7 (graph) |
+| c4 pin | PASS | expected=e3b50dccf808e52e36f7b134b710e0e245742cc0 found=e3b50dccf808e52e36f7b134b710e0e245742cc0 (graph) |
 | c5 audited | PASS | exists |
-| c6 api surface | PASS | no manifest (probe pending) |
+| c6 api surface | PASS | curated=50 unresolved=0 surface_coverage=100.0% (target 95.0%) |
