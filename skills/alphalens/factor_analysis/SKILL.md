@@ -59,7 +59,7 @@ breakdowns and information coefficients (IC).
 - **Lookahead**: `periods` are forward returns; the factor must use only data known at `t`
   or IC is inflated.
 - **Version pin**: this graph is pinned at `77084f1e` (2020-04-27) — the modern
-  `utils/data.py` split (FactorData) does not exist here; use the function API above.
+  utils/data.py split (FactorData) does not exist here; use the function API above.
 
 ## Provenance
 
