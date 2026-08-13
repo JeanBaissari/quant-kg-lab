@@ -31,10 +31,30 @@ drawdown analysis — the numbers behind the tear sheets.
 
 | API | Source File | Description |
 |-----|------------|-------------|
-| `timeseries.py` | `timeseries.py` | Module implementing returns-based performance statistics |
-| `perf_stats` | `timeseries.py` | Performance statistics table: annual return/vol, Sharpe, Sortino, max drawdown |
-| `rolling_sharpe` | `timeseries.py` | Rolling Sharpe ratio series over the period |
-| `max_drawdown` | `timeseries.py` | Maximum drawdown magnitude and its window |
+| `perf_stats()` | `timeseries.py:L692` | Performance statistics table: annual return/vol, Sharpe, Sortino, max drawdown |
+| `rolling_sharpe()` | `timeseries.py:L1050` | Rolling Sharpe ratio series over the period |
+| `rolling_volatility()` | `timeseries.py:L1028` | Rolling annualized volatility |
+| `rolling_beta()` | `timeseries.py:L507` | Rolling beta vs a benchmark series |
+| `max_drawdown()` | `timeseries.py:L63` | Maximum drawdown magnitude and its window |
+| `get_max_drawdown_underwater()` | `timeseries.py:L870` | Underwater curve — drawdown over time |
+| `get_top_drawdowns()` | `timeseries.py:L931` | The n worst drawdown episodes |
+| `gen_drawdown_table()` | `timeseries.py:L974` | Drawdown summary table (depth, length, recovery) |
+| `annual_return()` | `timeseries.py:L87` | Annualized return |
+| `annual_volatility()` | `timeseries.py:L111` | Annualized volatility |
+| `sharpe_ratio()` | `timeseries.py:L262` | Sharpe with configurable risk-free rate |
+| `sortino_ratio()` | `timeseries.py:L202` | Downside-deviation-based ratio |
+| `calmar_ratio()` | `timeseries.py:L135` | Annual return / max drawdown |
+| `omega_ratio()` | `timeseries.py:L164` | Probability-weighted gain/loss ratio |
+| `tail_ratio()` | `timeseries.py:L390` | Right/left tail ratio — skew of returns |
+| `value_at_risk()` | `timeseries.py:L626` | Parametric/historical VaR |
+| `var_cov_var_normal()` | `timeseries.py:L38` | Normal parametric VaR |
+| `alpha_beta()` | `timeseries.py:L294` | Regression alpha/beta vs benchmark |
+| `stability_of_timeseries()` | `timeseries.py:L368` | R² of the cumulative-return trend — strategy stability |
+| `cum_returns()` | `timeseries.py:L459` | Cumulative returns series |
+| `aggregate_returns()` | `timeseries.py:L486` | Aggregate to periods (weekly/monthly/quarterly) |
+| `perf_stats_bootstrap()` | `timeseries.py:L742` | Bootstrap CI around performance stats |
+| `forecast_cone_bootstrap()` | `timeseries.py:L1149` | Monte-Carlo forecast cone from bootstrap |
+| `simulate_paths()` | `timeseries.py:L1077` | Simulated return paths for the cone |
 | `plotting.py` | `plotting.py` | Chart helpers: returns/drawdown/rolling panels |
 
 ## Common Patterns
@@ -46,6 +66,14 @@ drawdown analysis — the numbers behind the tear sheets.
 - **Drawdown drill-down**: `max_drawdown(returns)` for the worst window; `drawdown(returns)`
   for the full series.
 - **Monthly heatmaps**: `plotting.plot_monthly_returns_heatmap(returns)`.
+- **Risk metrics for reporting**: `sortino_ratio`, `calmar_ratio`, `omega_ratio`, `tail_ratio`
+  — the tail-aware complement to plain Sharpe.
+- **Strategy stability**: `stability_of_timeseries(returns)` — R² of the trend; low values
+  mean the "edge" is episodic, not persistent.
+- **Uncertainty quantification**: `perf_stats_bootstrap(returns)` — CIs around the headline
+  stats instead of point estimates.
+- **VaR discipline**: `value_at_risk(returns, cutoff=0.05)` for the position-sizing layer;
+  cross-check `var_cov_var_normal` (parametric) vs historical.
 
 ## Pitfalls
 

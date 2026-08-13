@@ -30,11 +30,13 @@ factor-research output format that feeds pyfolio for portfolio-level reporting.
 
 | API | Source File | Description |
 |-----|------------|-------------|
-| `create_returns_tear_sheet()` | `tears.py` | Returns tear sheet: quantile cumulative returns, spread, and turnover |
-| `create_information_tear_sheet()` | `tears.py` | IC tear sheet: IC time series, histogram, QQ, and mean IC by quantile |
-| `create_event_returns_tear_sheet()` | `tears.py` | Event-study returns around an event window |
-| `create_event_study_tear_sheet()` | `tears.py` | Event study: abnormal returns and cumulative abnormal returns |
-| `GridFigure` | `tears.py` | Coordinates tear sheet charts across a grid of subplots |
+| `create_returns_tear_sheet()` | `tears.py:L179` | Returns tear sheet: quantile cumulative returns, spread, and turnover |
+| `create_information_tear_sheet()` | `tears.py:L348` | IC tear sheet: IC time series, histogram, QQ, and mean IC by quantile |
+| `create_summary_tear_sheet()` | `tears.py:L62` | Compact headline table: IC, quantile spread, alpha/beta |
+| `create_turnover_tear_sheet()` | `tears.py:L410` | Turnover by quantile + rank autocorrelation |
+| `create_full_tear_sheet()` | `tears.py:L489` | All tear sheets in one pass |
+| `create_event_returns_tear_sheet()` | `tears.py:L530` | Event-study returns around an event window |
+| `GridFigure` | `tears.py:L26` | Coordinates tear sheet charts across a grid of subplots |
 | `plotting.py` | `plotting.py` | Style contexts and chart helpers for tear sheets |
 
 ## Common Patterns
@@ -42,8 +44,12 @@ factor-research output format that feeds pyfolio for portfolio-level reporting.
 - **Quick report**: `alphalens.tears.create_returns_tear_sheet(factor_data)` — full
   quantile/IC/turnover report in one call.
 - **IC deep-dive**: `create_information_tear_sheet(factor_data)` after the returns sheet.
-- **Event studies**: `create_event_study_tear_sheet(returns, events, ...)` for
+- **Event studies**: `create_event_returns_tear_sheet(returns, events, ...)` for
   announcements/data releases.
+- **Headline table**: `create_summary_tear_sheet(factor_data)` — the one-glance metric
+  block for a factor review deck.
+- **Benchmark-relative**: pass `benchmark_rets` where supported — factor contribution
+  after market adjustment.
 
 ## Pitfalls
 

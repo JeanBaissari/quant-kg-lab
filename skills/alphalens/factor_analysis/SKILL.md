@@ -40,6 +40,18 @@ breakdowns and information coefficients (IC).
 | `factor_information_coefficient` | `performance.py:L28` | Per-period IC series for the factor |
 | `mean_return_by_quantile` | `performance.py:L453` | Mean returns by quantile — the monotonicity check |
 | `factor_alpha_beta` | `performance.py:L258` | Regression alpha/beta of factor returns vs benchmark |
+| `factor_weights()` | `performance.py:L129` | Factor-value-weighted portfolio returns (long-short) |
+| `factor_returns()` | `performance.py:L208` | Period-by-period factor portfolio returns |
+| `cumulative_returns()` | `performance.py:L333` | Cumulative factor returns over the sample |
+| `positions()` | `performance.py:L355` | Daily long/short positions implied by the factor |
+| `compute_mean_returns_spread()` | `performance.py:L520` | Top-minus-bottom quantile spread — the monotonicity magnitude |
+| `quantile_turnover()` | `performance.py:L568` | Fraction of names changing quantile between rebalances |
+| `factor_rank_autocorrelation()` | `performance.py:L601` | Rank persistence of the factor — stability of signal |
+| `common_start_returns()` | `performance.py:L642` | Align returns to a common start window |
+| `average_cumulative_return_by_quantile()` | `performance.py:L730` | Event-style cumulative returns per quantile |
+| `factor_cumulative_returns()` | `performance.py:L866` | Cumulative factor-return series for plotting |
+| `factor_positions()` | `performance.py:L936` | Position series per quantile for turnover analysis |
+| `create_pyfolio_input()` | `performance.py:L1008` | Convert alphalens analysis → pyfolio-compatible returns/positions |
 
 ## Common Patterns
 
@@ -51,6 +63,15 @@ breakdowns and information coefficients (IC).
   `mean_information_coefficient` for the period summary.
 - **Alpha/beta**: `factor_alpha_beta(factor_data, benchmark)` — risk-adjusted factor
   contribution.
+- **Turnover discipline**: `quantile_turnover(factor_data)` + `factor_rank_autocorrelation`
+  — a factor with high IC but churning ranks dies after transaction costs.
+- **Group-neutral factors**: pass `groupby` data to `get_clean_factor...` and compare
+  `mean_return_by_quantile(..., by_group=True)` — neutralize sector biases before
+  concluding.
+- **Event study**: `average_cumulative_return_by_quantile(factor_data)` — how quantile
+  membership performs around rebalance dates.
+- **pyfolio handoff**: `create_pyfolio_input(factor_data, ...)` — factor long-short
+  returns straight into pyfolio tear sheets.
 
 ## Pitfalls
 

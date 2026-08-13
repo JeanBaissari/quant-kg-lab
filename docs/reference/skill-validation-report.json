@@ -377,9 +377,7 @@
     "skills/pyfolio/tearsheets/SKILL.md": {
       "lint": [],
       "api_fail": [],
-      "api_warn": [
-        "func py: not found (library not installed, no graph node)"
-      ],
+      "api_warn": [],
       "meta_warn": [],
       "provenance": []
     },

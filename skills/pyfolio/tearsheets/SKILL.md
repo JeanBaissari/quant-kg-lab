@@ -31,12 +31,15 @@ the reporting layer of the factor-research stack (alphalens feeds it).
 
 | API | Source File | Description |
 |-----|------------|-------------|
-| `create_full_tear_sheet()` | `tears.py` | Assembles the full pyfolio report combining returns, positions, transactions and round trips |
-| `create_returns_tear_sheet()` | `tears.py` | Returns tear sheet: cumulative returns, drawdown, rolling Sharpe, monthly heatmap |
-| `create_position_tear_sheet()` | `tears.py` | Position concentration and sector exposure charts |
-| `create_transaction_tear_sheet()` | `tears.py` | Turnover and transaction-cost analysis |
-| `create_round_trip_tear_sheet()` | `tears.py` | Round-trip (per-trade) performance analysis |
-| `tears.py` | `tears.py` | Module implementing pyfolio tear sheets and their assemblies |
+| `create_full_tear_sheet()` | `tears.py:L55` | Assembles the full pyfolio report combining returns, positions, transactions and round trips |
+| `create_simple_tear_sheet()` | `tears.py:L231` | Lightweight report: returns + headline stats only |
+| `create_returns_tear_sheet()` | `tears.py:L409` | Returns tear sheet: cumulative returns, drawdown, rolling Sharpe, monthly heatmap |
+| `create_position_tear_sheet()` | `tears.py:L599` | Position concentration and sector exposure charts |
+| `create_txn_tear_sheet()` | `tears.py:L694` | Turnover and transaction-cost analysis |
+| `create_round_trip_tear_sheet()` | `tears.py:L780` | Round-trip (per-trade) performance analysis |
+| `create_interesting_times_tear_sheet()` | `tears.py:L870` | Drawdown-period behavior drill-down |
+| `create_capacity_tear_sheet()` | `tears.py:L954` | Capacity/liquidity analysis of the strategy |
+| `create_perf_attrib_tear_sheet()` | `tears.py:L1066` | Factor attribution of performance |
 
 ## Common Patterns
 
