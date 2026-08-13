@@ -33,8 +33,8 @@ functions, and joins.
 | API | Source File | Description |
 |-----|------------|-------------|
 | `col` | `functions/col.py` | Expression constructor: `pl.col("name")` |
-| `select` / `with_columns` | `dataframe/base.py` | Expression application — project or add columns |
-| `group_by` | `dataframe/base.py` | Grouped aggregation: `df.group_by("k").agg(pl.col("v").mean())` |
+| `select` / `with_columns` | `dataframe/frame.py` | Expression application — project or add columns |
+| `group_by` | `lazyframe/group_by.py` | Grouped aggregation: `df.group_by("k").agg(pl.col("v").mean())` |
 | `functions/` | `functions/` | Expression constructors: col, lit, concat, range, duration helpers |
 | `expr/` | `expr/` | Expression classes: Expr with .mean/.sum/.rank/.shift/.diff |
 | `datatype_expr/` | `datatype_expr/` | Datatype-related expressions (cast, dtype checks) |
