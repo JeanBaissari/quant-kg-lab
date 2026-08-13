@@ -48,4 +48,15 @@ first runs the quality gate.
 - `dist/` branch mirror — deferred: release assets already give plain-URL downloads; add the
   mirror if scripted consumers need it.
 
-*Last verified against the repo: 2026-08-12.*
+## Addendum (2026-08-13, QKG_040) — skills tarball + semver tags
+
+- Releases ship **qkg-skills.zip** (all library skills, copy-in layout) and
+  **qkg-quant-patterns.zip** (playbooks) alongside the 19 graph bundles + overlay — the
+  "consumers get graphs + skills without graphify" promise is now literal, under the same
+  safety assertions (zero absolute paths) and byte-identical manifest contract.
+- Tag scheme is **semver** (`v0.2.0`, …). The first release used a commit-hash tag
+  (`v1eec0ffa2b6b`) before the semver convention; `bundle.json` keeps per-library
+  `graphs.lock` commits as the reproducibility anchor, so tags stay human-readable while
+  pins remain machine-verifiable.
+
+*Last verified against the repo: 2026-08-13.*

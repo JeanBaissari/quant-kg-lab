@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Export versioned knowledge-base bundles (ADR-0007, QKG_014).
+"""Export versioned knowledge-base bundles (ADR-0007, QKG_014, QKG_040).
 
 Bundles are the distribution artifact of the gold-standard knowledge base: a
 consumer unzips one per library (or `all`) and gets the same committed artifacts
@@ -8,6 +8,7 @@ the repo ships — no graphify, no network, no rebuild.
 Bundle contents (exactly the sanctioned artifacts):
   graph.json · GRAPH_REPORT.md · .graphify_labels.json
   (+ knowledge_graphs/_cross_library overlay when exporting `all`)
+  (+ qkg-skills.zip / qkg-quant-patterns.zip skills tarballs, QKG_040)
 
 Safety invariants (asserted, not assumed — ADR-0007 / QKG_015):
   - no absolute paths (/home/, /Users/, drive letters) anywhere in a bundle;
@@ -18,6 +19,7 @@ Safety invariants (asserted, not assumed — ADR-0007 / QKG_015):
 Usage:
   python3 scripts/export_bundle.py --lib all --out dist
   python3 scripts/export_bundle.py --lib scipy --out dist --tag v9828540707ab
+  python3 scripts/export_bundle.py --lib all --out dist --tag v0.2.0
 """
 import sys, os, json, zipfile, hashlib, pathlib, tempfile
 
@@ -79,6 +81,34 @@ def main():
     mpath = outdir / "bundle.json"
     mpath.write_text(json.dumps(manifest, indent=2) + "\n")
     print(f"manifest: {mpath.relative_to(ROOT)}")
+    if libs == "all":
+        _export_skills(outdir, tag, manifest)
+    mpath.write_text(json.dumps(manifest, indent=2) + "\n")
+
+
+SKILL_FILES = ("SKILL.md",)
+
+
+def _export_skills(outdir, tag, manifest):
+    """Skills tarballs (QKG_040): qkg-skills.zip (all library skills, copy-in layout)
+    + qkg-quant-patterns.zip (playbooks). Same safety + manifest contract as graphs."""
+    lib_skills = sorted((ROOT / "skills").rglob("SKILL.md"))
+    playbooks = [p for p in lib_skills if p.relative_to(ROOT / "skills").parts[0] == "quant-patterns"]
+    library_skills = [p for p in lib_skills if p not in playbooks]
+    for name, files in (("skills", library_skills), ("quant-patterns", playbooks)):
+        if not files:
+            continue
+        zip_path = outdir / f"qkg-{name}.zip"
+        _assert_safe(files, name)
+        arts = {}
+        with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as z:
+            for f in files:
+                arc = str(f.relative_to(ROOT / "skills"))
+                z.write(f, arcname=arc)
+                arts[arc] = _sha256(f)
+        manifest[name] = {"zip_sha256": _sha256(zip_path), "artifacts": arts,
+                          "skill_count": len(files), "tag": tag}
+        print(f"{name}: {zip_path.relative_to(ROOT)}  ({len(files)} SKILL.md files)")
 
 
 def _counts(lib, lock):

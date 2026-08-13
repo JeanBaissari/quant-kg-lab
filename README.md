@@ -94,15 +94,15 @@ carried along and ignored safely by agents that don't use it.
 ## Consume without rebuilding
 
 Every tag ships versioned bundles as **GitHub Release assets** (ADR-0007): one zip per library
-plus the cross-library overlay, with a `bundle.json` manifest (per-file sha256, pinned commit,
-node/edge counts). Bundles carry the **graphs** — the knowledge base skills cite; skills
-themselves stay copy-in from this repo. No graphify, no network, no rebuild:
+plus the cross-library overlay, the **skills tarball** (`qkg-skills.zip`, all skills in
+copy-in layout) and the playbooks (`qkg-quant-patterns.zip`), with a `bundle.json` manifest
+(per-file sha256, pinned commit, node/edge counts). No graphify, no network, no rebuild:
 
 ```bash
-# 1. Download the bundle for a library from the release (tag = graphs.lock commit)
-unzip qkg-scipy.zip && unzip qkg-cross-library-overlay.zip
-#    → scipy/graph.json + scipy/GRAPH_REPORT.md + scipy/.graphify_labels.json
-# 2. Copy the skills you need (copy-in, per SKILL_SPEC) — from this repo
+# 1. Download the release assets (v0.2.0+): graph bundles + skills tarball
+unzip qkg-scipy.zip && unzip qkg-cross-library-overlay.zip && unzip qkg-skills.zip
+#    → scipy/graph.json + GRAPH_REPORT.md + labels  ·  skills/scipy/... (copy-in)
+# 2. Copy the skills you need (copy-in, per SKILL_SPEC)
 cp -r skills/scipy/stats ~/.claude/skills/scipy-stats
 # 3. Verify skills against your installed library (with the repo checkout)
 python3 scripts/validate_skills.py --ci scipy

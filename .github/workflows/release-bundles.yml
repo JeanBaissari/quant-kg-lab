@@ -22,7 +22,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Quality gate (11/11 must pass)
+      - name: Quality gate (all libraries must pass)
         run: python3 scripts/graph_gate.py --ci --all
       - name: Doc audit
         run: python3 scripts/doc_audit.py --ci
@@ -49,7 +49,12 @@ jobs:
                   with zipfile.ZipFile(path) as z:
                       data = z.read(art)
                   assert hashlib.sha256(data).hexdigest() == sha, f"{lib}: {art} hash mismatch"
-          print(f"verified {len(m['libraries'])} bundles byte-identical to manifest")
+          for fam in ('skills', 'quant-patterns'):
+              e = m[fam]
+              with zipfile.ZipFile(pathlib.Path('dist') / f"qkg-{fam}.zip") as z:
+                  for art, sha in e['artifacts'].items():
+                      assert hashlib.sha256(z.read(art)).hexdigest() == sha, f"{fam}: {art} hash mismatch"
+          print(f"verified {len(m['libraries'])} bundles + 2 skills tarballs byte-identical to manifest")
           EOF
       - uses: softprops/action-gh-release@v2
         with:
