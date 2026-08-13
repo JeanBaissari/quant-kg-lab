@@ -209,6 +209,18 @@
       "label": "ADF",
       "library": "arch",
       "source_file": "unitroot/unitroot.py"
+    },
+    {
+      "id": "riskfolio::src_portfolio_portfolio",
+      "label": "Portfolio",
+      "library": "riskfolio",
+      "source_file": "src/Portfolio.py"
+    },
+    {
+      "id": "pyportfolioopt::efficientfrontier",
+      "label": "EfficientFrontier",
+      "library": "pyportfolioopt",
+      "source_file": ""
     }
   ],
   "links": [
@@ -428,6 +440,34 @@
       "relation": "input_to",
       "confidence": "CURATED",
       "description": "arch models consume pandas Series/DataFrames"
+    },
+    {
+      "source": "riskfolio::src_portfolio_portfolio",
+      "target": "cvxpy::problems_problem_problem",
+      "relation": "optimized_by",
+      "confidence": "CURATED",
+      "description": "riskfolio Portfolio builds cvxpy Problems for optimization"
+    },
+    {
+      "source": "riskfolio::src_portfolio_portfolio",
+      "target": "pyportfolioopt::efficientfrontier",
+      "relation": "alternative_to",
+      "confidence": "CURATED",
+      "description": "riskfolio constrained optimization vs pypfopt EfficientFrontier"
+    },
+    {
+      "source": "pandas::dataframe",
+      "target": "riskfolio::src_portfolio_portfolio",
+      "relation": "input_to",
+      "confidence": "CURATED",
+      "description": "riskfolio consumes pandas returns DataFrames"
+    },
+    {
+      "source": "riskfolio::src_portfolio_portfolio",
+      "target": "scipy::optimizeresult",
+      "relation": "alternative_to",
+      "confidence": "CURATED",
+      "description": "riskfolio risk optimization vs scipy.optimize"
     }
   ],
   "hyperedges": []

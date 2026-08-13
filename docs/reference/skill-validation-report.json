@@ -1,5 +1,290 @@
 {
   "report": {
+    "skills/alphalens/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/alphalens/factor_analysis/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/alphalens/tearsheets/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "func py: not found (library not installed, no graph node)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/arch/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/arch/bootstrap/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "func py: not found (library not installed, no graph node)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/arch/unitroot/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/arch/volatility/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/backtrader/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/backtrader/analyzers/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/backtrader/core/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/cvxpy/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [
+        "graph meta: nodes mismatch \u2014 graph has 6380, skill claims 6379",
+        "graph meta: edges mismatch \u2014 graph has 16515, skill claims 16514"
+      ],
+      "provenance": []
+    },
+    "skills/cvxpy/cone/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [
+        "graph meta: nodes mismatch \u2014 graph has 6380, skill claims 6379",
+        "graph meta: edges mismatch \u2014 graph has 16515, skill claims 16514"
+      ],
+      "provenance": []
+    },
+    "skills/cvxpy/core/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [
+        "graph meta: nodes mismatch \u2014 graph has 6380, skill claims 6379",
+        "graph meta: edges mismatch \u2014 graph has 16515, skill claims 16514"
+      ],
+      "provenance": []
+    },
+    "skills/cvxpy/problems/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [
+        "graph meta: nodes mismatch \u2014 graph has 6380, skill claims 6379",
+        "graph meta: edges mismatch \u2014 graph has 16515, skill claims 16514"
+      ],
+      "provenance": []
+    },
+    "skills/lightgbm/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/lightgbm/core/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "func num_leaves: not found (library not installed, no graph node)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/lightgbm/sklearn/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class GridSearchCV: not found (library not installed, no graph node)",
+        "class XGBClassifier: not found (library not installed, no graph node)",
+        "class XGBRegressor: not found (library not installed, no graph node)",
+        "func bagging_fraction: not found (library not installed, no graph node)",
+        "func bagging_freq: not found (library not installed, no graph node)",
+        "func best_iteration_: not found (library not installed, no graph node)",
+        "func best_score_: not found (library not installed, no graph node)",
+        "func booster_: not found (library not installed, no graph node)",
+        "func boosting_type: not found (library not installed, no graph node)",
+        "func categorical_feature: not found (library not installed, no graph node)",
+        "func class_weight: not found (library not installed, no graph node)",
+        "func classes_: not found (library not installed, no graph node)",
+        "func device_type: not found (library not installed, no graph node)",
+        "func early_stopping_rounds: not found (library not installed, no graph node)",
+        "func evals_result_: not found (library not installed, no graph node)",
+        "func feature_fraction: not found (library not installed, no graph node)",
+        "func feature_importances_: not found (library not installed, no graph node)",
+        "func feature_name_: not found (library not installed, no graph node)",
+        "func feature_names_in_: not found (library not installed, no graph node)",
+        "func importance_type: not found (library not installed, no graph node)",
+        "func learning_rate: not found (library not installed, no graph node)",
+        "func max_depth: not found (library not installed, no graph node)",
+        "func metric: not found (library not installed, no graph node)",
+        "func min_child_samples: not found (library not installed, no graph node)",
+        "func n_classes_: not found (library not installed, no graph node)",
+        "func n_estimators: not found (library not installed, no graph node)",
+        "func n_estimators_: not found (library not installed, no graph node)",
+        "func n_features_in_: not found (library not installed, no graph node)",
+        "func n_iter_: not found (library not installed, no graph node)",
+        "func n_jobs: not found (library not installed, no graph node)",
+        "func num_iterations: not found (library not installed, no graph node)",
+        "func num_leaves: not found (library not installed, no graph node)",
+        "func objective: not found (library not installed, no graph node)",
+        "func objective_: not found (library not installed, no graph node)",
+        "func reg_alpha: not found (library not installed, no graph node)",
+        "func reg_lambda: not found (library not installed, no graph node)",
+        "func verbosity: not found (library not installed, no graph node)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/numpy/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/numpy/core/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/numpy/linalg/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/numpy/random/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/optuna/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/optuna/distributions/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/optuna/integration/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class GridSearchCV: not found (library not installed, no graph node)",
+        "class LightGBMTunerCV: not found (library not installed, no graph node)",
+        "class OptunaSearchCV: not found (library not installed, no graph node)",
+        "class TorchDistributedTrial: not found (library not installed, no graph node)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/optuna/pruners/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/optuna/samplers/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/optuna/study/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/optuna/trial/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/optuna/visualization/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/pandas/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/pandas/core/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/pandas/ts/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
     "skills/pyfolio/SKILL.md": {
       "lint": [],
       "api_fail": [],
@@ -20,8 +305,416 @@
       "lint": [],
       "api_fail": [],
       "api_warn": [
-        "func drawdown: not found (library not installed, no graph node)",
         "func py: not found (library not installed, no graph node)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/pyportfolioopt/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [
+        "graph meta: edges mismatch \u2014 graph has 522, skill claims 512"
+      ],
+      "provenance": []
+    },
+    "skills/pyportfolioopt/black_litterman/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [
+        "graph meta: edges mismatch \u2014 graph has 522, skill claims 512"
+      ],
+      "provenance": []
+    },
+    "skills/pyportfolioopt/efficient_frontier/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [
+        "graph meta: edges mismatch \u2014 graph has 522, skill claims 512"
+      ],
+      "provenance": []
+    },
+    "skills/pyportfolioopt/expected_returns/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [
+        "graph meta: edges mismatch \u2014 graph has 522, skill claims 512"
+      ],
+      "provenance": []
+    },
+    "skills/pyportfolioopt/risk_models/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [
+        "graph meta: edges mismatch \u2014 graph has 522, skill claims 512"
+      ],
+      "provenance": []
+    },
+    "skills/quant-patterns/factor-importance/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/quant-patterns/factor-research/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/quant-patterns/full-pipeline/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/quant-patterns/hpo-optimization/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/quant-patterns/ml-strategy/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/quant-patterns/portfolio-construction/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/quant-patterns/regime-detection/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/quant-patterns/walk-forward-validation/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/riskfolio/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/riskfolio/hrp/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class DBHT: not found (library not installed, no graph node)",
+        "class PlotFunctions: not found (library not installed, no graph node)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/riskfolio/portfolio/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class AuxFunctions: not found (library not installed, no graph node)",
+        "class ConstraintsFunctions: not found (library not installed, no graph node)",
+        "class ParamsEstimation: not found (library not installed, no graph node)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/riskfolio/risk_measures/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class RiskFunctions: not found (library not installed, no graph node)",
+        "func py: not found (library not installed, no graph node)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/scikit-learn/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/scikit-learn/cluster/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/scikit-learn/compose/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/scikit-learn/covariance/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/scikit-learn/decomposition/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/scikit-learn/ensemble/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/scikit-learn/feature_selection/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/scikit-learn/gaussian_process/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/scikit-learn/impute/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/scikit-learn/inspection/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/scikit-learn/linear_model/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/scikit-learn/metrics/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/scikit-learn/model_selection/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/scikit-learn/neural_network/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/scikit-learn/preprocessing/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/scikit-learn/svm/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/scikit-learn/tree/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/scipy/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/scipy/optimize/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/scipy/signal/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/scipy/stats/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/statsmodels/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/statsmodels/core/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/ta-lib/indicators/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class AD: not found (library not installed, no graph node)",
+        "class ADOSC: not found (library not installed, no graph node)",
+        "class ADX: not found (library not installed, no graph node)",
+        "class ADXR: not found (library not installed, no graph node)",
+        "class ATR: not found (library not installed, no graph node)",
+        "class BBANDS: not found (library not installed, no graph node)",
+        "class CCI: not found (library not installed, no graph node)",
+        "class DEMA: not found (library not installed, no graph node)",
+        "class EMA: not found (library not installed, no graph node)",
+        "class HT_DCPERIOD: not found (library not installed, no graph node)",
+        "class HT_DCPHASE: not found (library not installed, no graph node)",
+        "class HT_PHASOR: not found (library not installed, no graph node)",
+        "class KAMA: not found (library not installed, no graph node)",
+        "class MACD: not found (library not installed, no graph node)",
+        "class MACDEXT: not found (library not installed, no graph node)",
+        "class MACDFIX: not found (library not installed, no graph node)",
+        "class MAMA: not found (library not installed, no graph node)",
+        "class MFI: not found (library not installed, no graph node)",
+        "class NATR: not found (library not installed, no graph node)",
+        "class OBV: not found (library not installed, no graph node)",
+        "class RSI: not found (library not installed, no graph node)",
+        "class SAR: not found (library not installed, no graph node)",
+        "class SMA: not found (library not installed, no graph node)",
+        "class STOCH: not found (library not installed, no graph node)",
+        "class STOCHF: not found (library not installed, no graph node)",
+        "class STOCHRSI: not found (library not installed, no graph node)",
+        "class TEMA: not found (library not installed, no graph node)",
+        "class ULTOSC: not found (library not installed, no graph node)",
+        "class WILLR: not found (library not installed, no graph node)",
+        "class WMA: not found (library not installed, no graph node)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/vectorbt/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/vectorbt/core/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/vectorbt/portfolio/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/vectorbt/signals/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/xgboost/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/xgboost/core/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/xgboost/sklearn/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "func best_iteration_: not found (library not installed, no graph node)",
+        "func best_score_: not found (library not installed, no graph node)",
+        "func booster: not found (library not installed, no graph node)",
+        "func booster_: not found (library not installed, no graph node)",
+        "func classes_: not found (library not installed, no graph node)",
+        "func coef_: not found (library not installed, no graph node)",
+        "func device: not found (library not installed, no graph node)",
+        "func early_stopping_rounds: not found (library not installed, no graph node)",
+        "func enable_categorical: not found (library not installed, no graph node)",
+        "func eval_metric: not found (library not installed, no graph node)",
+        "func evals_result_: not found (library not installed, no graph node)",
+        "func feature_importances_: not found (library not installed, no graph node)",
+        "func feature_names_in_: not found (library not installed, no graph node)",
+        "func importance_type: not found (library not installed, no graph node)",
+        "func learning_rate: not found (library not installed, no graph node)",
+        "func max_cat_to_onehot: not found (library not installed, no graph node)",
+        "func max_depth: not found (library not installed, no graph node)",
+        "func n_estimators: not found (library not installed, no graph node)",
+        "func n_features_in_: not found (library not installed, no graph node)",
+        "func objective: not found (library not installed, no graph node)",
+        "func verbosity: not found (library not installed, no graph node)"
       ],
       "meta_warn": [],
       "provenance": []

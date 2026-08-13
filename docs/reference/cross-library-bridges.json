@@ -221,8 +221,36 @@
       "source": "pandas::DataFrame",
       "target": "arch::ARCHModel",
       "relation": "input_to"
+    },
+    {
+      "bridge": "riskfolio.Portfolio -> cvxpy.Problem",
+      "status": "RESOLVED",
+      "source": "riskfolio::Portfolio",
+      "target": "cvxpy::Problem",
+      "relation": "optimized_by"
+    },
+    {
+      "bridge": "riskfolio.Portfolio -> pyportfolioopt.EfficientFrontier",
+      "status": "RESOLVED",
+      "source": "riskfolio::Portfolio",
+      "target": "pyportfolioopt::EfficientFrontier",
+      "relation": "alternative_to"
+    },
+    {
+      "bridge": "pandas.DataFrame -> riskfolio.Portfolio",
+      "status": "RESOLVED",
+      "source": "pandas::DataFrame",
+      "target": "riskfolio::Portfolio",
+      "relation": "input_to"
+    },
+    {
+      "bridge": "riskfolio.Portfolio -> scipy.OptimizeResult",
+      "status": "RESOLVED",
+      "source": "riskfolio::Portfolio",
+      "target": "scipy::OptimizeResult",
+      "relation": "alternative_to"
     }
   ],
-  "resolved": 31,
-  "attempted": 32
+  "resolved": 35,
+  "attempted": 36
 }

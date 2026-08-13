@@ -60,7 +60,12 @@ ALL_BRIDGES = [
     ("arch", "ARCHModel", "statsmodels", "OLS", "feeds", "arch volatility forecasts feed statsmodels regression/risk models"),
     ("arch", "ADF", "scipy", "stats", "powered_by", "arch unit-root tests rely on scipy.stats distributions"),
     ("pandas", "DataFrame", "arch", "ARCHModel", "input_to", "arch models consume pandas Series/DataFrames"),
+    ("riskfolio", "Portfolio", "cvxpy", "Problem", "optimized_by", "riskfolio Portfolio builds cvxpy Problems for optimization"),
+    ("riskfolio", "Portfolio", "pyportfolioopt", "EfficientFrontier", "alternative_to", "riskfolio constrained optimization vs pypfopt EfficientFrontier"),
+    ("pandas", "DataFrame", "riskfolio", "Portfolio", "input_to", "riskfolio consumes pandas returns DataFrames"),
+    ("riskfolio", "Portfolio", "scipy", "OptimizeResult", "alternative_to", "riskfolio risk optimization vs scipy.optimize"),
 ]
+
 
 
 

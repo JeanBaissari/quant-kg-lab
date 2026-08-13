@@ -2,22 +2,8 @@
 
 # API-surface — riskfolio
 
-Public top-level symbols: 167 · present in graph: 152 · **coverage 91.0%** (target ≥95%)
+Public top-level symbols: 167 · present in graph: 167 · **coverage 100.0%** (target ≥95%)
 
 | symbol | mechanism | defining source |
 |---|---|---|
-| duplication_matrix | M2b-unimportable | external/cppfunctions.py |
-| duplication_elimination_matrix | M2b-unimportable | external/cppfunctions.py |
-| duplication_summation_matrix | M2b-unimportable | external/cppfunctions.py |
-| commutation_matrix | M2b-unimportable | external/cppfunctions.py |
-| covariance_matrix | M2b-unimportable | external/cppfunctions.py |
-| semi_covariance_matrix | M2b-unimportable | external/cppfunctions.py |
-| coskewness_matrix | M2b-unimportable | external/cppfunctions.py |
-| semi_coskewness_matrix | M2b-unimportable | external/cppfunctions.py |
-| cokurtosis_matrix | M2b-unimportable | external/cppfunctions.py |
-| semi_cokurtosis_matrix | M2b-unimportable | external/cppfunctions.py |
-| k_eigh | M2b-unimportable | external/cppfunctions.py |
-| d_corr | M2b-unimportable | external/cppfunctions.py |
-| d_corr_matrix | M2b-unimportable | external/cppfunctions.py |
-| residuals_coskewness_fm | M2b-unimportable | external/cppfunctions.py |
-| residuals_cokurtosis_fm | M2b-unimportable | external/cppfunctions.py |
+

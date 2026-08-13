@@ -6,9 +6,9 @@ Graph: `knowledge_graphs/riskfolio/.graphify/graph.json` · GRAPH_SPEC §5 · ge
 
 | criterion | status | counts |
 |---|---|---|
-| c1 real labels | PASS | distinct=27 non_singleton=25 default_labels=0 default_graph=0 coverage=100.0% |
-| c2 descriptions | PASS | described=227 describable=227 pct=100.0% |
+| c1 real labels | PASS | distinct=29 non_singleton=26 default_labels=0 default_graph=0 coverage=100.0% |
+| c2 descriptions | PASS | described=225 describable=243 pct=92.6% |
 | c3 god nodes | PASS | top20=20 noise=0 |
 | c4 pin | PASS | expected=632a9e48fbaf2b9f8e83864a492332364b6ed32c found=632a9e48fbaf2b9f8e83864a492332364b6ed32c (graph) |
 | c5 audited | PASS | exists |
-| c6 api surface | PASS | no manifest (probe pending) |
+| c6 api surface | PASS | curated=0 unresolved=0 surface_coverage=100.0% (target 95.0%) |

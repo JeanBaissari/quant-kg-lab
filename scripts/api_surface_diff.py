@@ -157,11 +157,6 @@ def main():
         if ast_syms is None:
             sys.exit(f"{lib}: cannot import (venv needed) and no pinned clone for AST fallback")
         symbols = [s["symbol"] for s in ast_syms]
-    for s in symbols:
-        if resolve(labels, s):
-            present += 1
-            continue
-        obj = _obj_of(s, mod)
     missing, present = [], 0
     for s in symbols:
         if resolve(labels, s):

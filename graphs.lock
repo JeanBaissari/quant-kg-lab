@@ -105,8 +105,8 @@
     "riskfolio": {
       "repo": "dcajasn/Riskfolio-Lib",
       "commit": "632a9e48fbaf2b9f8e83864a492332364b6ed32c",
-      "nodes": 0,
-      "edges": 0
+      "nodes": 426,
+      "edges": 599
     }
   }
 }
