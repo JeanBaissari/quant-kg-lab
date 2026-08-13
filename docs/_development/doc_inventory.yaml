@@ -16,9 +16,9 @@ meta:
   - accepted
 docs:
 - path: docs/_development/standards.md
-  type: Generated
-  status: generated
-  last_verified: '2026-08-06'
+  type: Spec
+  status: current
+  last_verified: '2026-08-12'
 - path: docs/_development/templates/README.md
   type: Guide
   status: current
@@ -228,6 +228,14 @@ docs:
   status: generated
   last_verified: ''
 - path: docs/reference/edge-audits/edge-audit-alphalens.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/edge-audits/edge-audit-pyfolio.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/edge-audits/edge-audit-riskfolio.md
   type: Generated
   status: generated
   last_verified: ''

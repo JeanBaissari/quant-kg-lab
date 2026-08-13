@@ -271,6 +271,42 @@
           "desc": "alphalens returns tear sheet: quantile cumulative returns, spread, and turnover plots for a factor."
         }
       ]
+    },
+    "pyfolio": {
+      "emphasis": "pyfolio builds portfolio tear sheets: returns (create_returns_tear_sheet), positions (create_position_tear_sheet), transactions, benchmark comparisons, drawdown/rolling stats (perf_stats, rolling_sharpe), and round-trip analysis. Describe each function's reporting role.",
+      "glossary": "tear sheet, drawdown, Sharpe, benchmark, round trip, turnover, positions, transactions",
+      "exemplars": [
+        {
+          "name": "create_returns_tear_sheet (tears.py)",
+          "desc": "pyfolio returns tear sheet: cumulative returns, drawdown, rolling Sharpe, monthly heatmap, and perf stats in one plot."
+        },
+        {
+          "name": "perf_stats (timeseries.py)",
+          "desc": "pyfolio performance statistics table: annual return/vol, Sharpe, Sortino, max drawdown."
+        },
+        {
+          "name": "create_full_tear_sheet (tears.py)",
+          "desc": "pyfolio full tear sheet: returns, positions, transactions and round-trip analysis combined."
+        }
+      ]
+    },
+    "riskfolio": {
+      "emphasis": "Riskfolio-Lib is a portfolio-optimization suite: Portfolio (mean-variance, tails, constraints via cvxpy), HCPortfolio (HRP/HERC hierarchical clustering), risk measures (MV, CVaR, CDaR, EVaR, MAD), returns estimation, black-litterman, and plotting (risk/return frontier). Note the C++ external bindings are absent \u2014 describe the Python API.",
+      "glossary": "portfolio, CVaR, CDaR, EVaR, HRP, HERC, risk measure, frontier, constraints, black-litterman",
+      "exemplars": [
+        {
+          "name": "Portfolio (portfolio.py)",
+          "desc": "Riskfolio-Lib Portfolio: builds the optimization problem; optimization() solves it given a risk measure (MV/CVaR/CDaR/EVaR) and constraints."
+        },
+        {
+          "name": "HCPortfolio (hcp.py)",
+          "desc": "Riskfolio-Lib HCPortfolio: hierarchical clustering portfolio (HRP/HERC) \u2014 linkage + codependence + risk measures."
+        },
+        {
+          "name": "returns_estimation (returns.py)",
+          "desc": "Riskfolio-Lib returns estimators: mean/historical/exponential returns for the optimizer input."
+        }
+      ]
     }
   }
 }

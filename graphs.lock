@@ -95,6 +95,18 @@
       "commit": "77084f1e4c2c0be407e032d444fb19e4be4b0f37",
       "nodes": 172,
       "edges": 231
+    },
+    "pyfolio": {
+      "repo": "quantopian/pyfolio",
+      "commit": "4b901f6d73aa02ceb6d04b7d83502e5c6f2e81aa",
+      "nodes": 0,
+      "edges": 0
+    },
+    "riskfolio": {
+      "repo": "dcajasn/Riskfolio-Lib",
+      "commit": "632a9e48fbaf2b9f8e83864a492332364b6ed32c",
+      "nodes": 0,
+      "edges": 0
     }
   }
 }

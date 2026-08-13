@@ -125,6 +125,11 @@ Model: the current `skills/optuna/SKILL.md`. A router:
 - carries the library-level `graph:` provenance block,
 - does **not** duplicate a sub-skill's content (the sklearn router bug).
 
+**Exemption note (QKG_031, recorded 2026-08-12):** routers are exempt from the §3 body
+sections — they need no `Quick Reference`/`Common Patterns`/`Pitfalls` (their job is indexing,
+not API documentation). A single-module library (e.g. ta-lib) needs **no router at all** — the
+module skill is the entry point (lint rule 6 applies only at ≥2 sub-skills).
+
 ## 7. Playbooks (`skills/quant-patterns/`) — the composable-stack layer
 
 Playbooks are cross-library **workflow recipes**, not API surfaces. They:
