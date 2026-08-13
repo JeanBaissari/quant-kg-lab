@@ -235,6 +235,14 @@ docs:
   type: Generated
   status: generated
   last_verified: ''
+- path: docs/reference/api-surface/pyfolio.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/quality-gate/gate-pyfolio.md
+  type: Generated
+  status: generated
+  last_verified: ''
 - path: docs/reference/edge-audits/edge-audit-riskfolio.md
   type: Generated
   status: generated
