@@ -46,4 +46,5 @@ jobs:
           files: |
             dist/*.zip
             dist/bundle.json
+            dist/skills.json
           generate_release_notes: true

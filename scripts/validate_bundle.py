@@ -63,6 +63,15 @@ def check_zip(path, artifacts, label):
         pass  # zip_sha256 checked below with the manifest value
 
 
+def lib_skills_count(manifest):
+    n = 0
+    for fam in ("skills", "quant-patterns"):
+        e = manifest.get(fam)
+        if e:
+            n += e.get("skill_count", 0)
+    return n
+
+
 def main():
     args = sys.argv[1:]
     if not args:
@@ -122,6 +131,17 @@ def main():
         if sha256_bytes(zp.read_bytes()) != e.get("zip_sha256"):
             fail(f"{fam}: zip_sha256 mismatch")
         print(f"OK  {fam}: {e.get('skill_count')} SKILL.md files, zip verified")
+    sidx = d / "skills.json"
+    if sidx.exists():
+        idx = json.load(open(sidx))
+        if idx.get("schema") != "skills.json v1":
+            fail(f"skills.json: unexpected schema {idx.get('schema')!r}")
+        if len(idx.get("skills", [])) != lib_skills_count(manifest):
+            fail(f"skills.json: {len(idx.get('skills', []))} entries != "
+                 f"{lib_skills_count(manifest)} tarball entries")
+        print(f"OK  skills.json: {len(idx.get('skills', []))} indexed skills")
+    else:
+        print("skills.json absent (pre-QKG_059 release) — index check skipped")
     print("bundle verified: all invariants hold")
 
 

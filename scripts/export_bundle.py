@@ -91,10 +91,14 @@ SKILL_FILES = ("SKILL.md",)
 
 def _export_skills(outdir, tag, manifest):
     """Skills tarballs (QKG_040): qkg-skills.zip (all library skills, copy-in layout)
-    + qkg-quant-patterns.zip (playbooks). Same safety + manifest contract as graphs."""
+    + qkg-quant-patterns.zip (playbooks). Same safety + manifest contract as graphs.
+    QKG_059: also emits skills.json — the machine-readable skill index (name,
+    description, library, module, type, source_commit, graph_hash) for loaders
+    (agentskills.io / Hermes / be-quant registries)."""
     lib_skills = sorted((ROOT / "skills").rglob("SKILL.md"))
     playbooks = [p for p in lib_skills if p.relative_to(ROOT / "skills").parts[0] == "quant-patterns"]
     library_skills = [p for p in lib_skills if p not in playbooks]
+    index = []
     for name, files in (("skills", library_skills), ("quant-patterns", playbooks)):
         if not files:
             continue
@@ -106,9 +110,58 @@ def _export_skills(outdir, tag, manifest):
                 arc = str(f.relative_to(ROOT / "skills"))
                 z.write(f, arcname=arc)
                 arts[arc] = _sha256(f)
+                parts = f.relative_to(ROOT / "skills").parts
+                fm = _frontmatter(f)
+                index.append({
+                    "path": arc,
+                    "name": fm.get("name", ""),
+                    "description": fm.get("description", ""),
+                    "library": parts[0],
+                    "module": parts[1] if len(parts) > 2 else "router",
+                    "type": "playbook" if parts[0] == "quant-patterns" else "skill",
+                    "source_commit": fm.get("source_commit"),
+                    "graph_hash": (fm.get("graph") or {}).get("graph_hash"),
+                    "sha256": arts[arc],
+                })
         manifest[name] = {"zip_sha256": _sha256(zip_path), "artifacts": arts,
                           "skill_count": len(files), "tag": tag}
         print(f"{name}: {zip_path.relative_to(ROOT)}  ({len(files)} SKILL.md files)")
+    index.sort(key=lambda e: e["path"])
+    (outdir / "skills.json").write_text(
+        json.dumps({"schema": "skills.json v1", "tag": tag, "skills": index}, indent=2) + "\n")
+    print(f"skills index: {outdir / 'skills.json'}  ({len(index)} entries)")
+
+
+def _frontmatter(path):
+    """Minimal YAML-subset frontmatter read (name/description/source_commit/graph
+    block) — no yaml dependency needed for the index."""
+    text = path.read_text(errors="replace")
+    if not text.startswith("---"):
+        return {}
+    parts = text.split("---", 2)
+    if len(parts) < 3:
+        return {}
+    fm_lines = parts[1].split("\n")
+    fm, graph, section = {}, {}, None
+    for line in fm_lines:
+        line = line.rstrip()
+        if line.startswith("graph:"):
+            section = "graph"
+            continue
+        if section == "graph":
+            if line.startswith("  ") and ":" in line:
+                k, _, v = line.strip().partition(":")
+                graph[k.strip()] = v.strip().strip('"')
+            elif line and not line.startswith(" "):
+                section = None
+        if section is None and line and not line.startswith((" ", "-")) and ":" in line:
+            k, _, v = line.partition(":")
+            k = k.strip()
+            if k in ("name", "description", "source_commit"):
+                fm[k] = v.strip().strip('"')
+    if graph:
+        fm["graph"] = graph
+    return fm
 
 
 def _counts(lib, lock):

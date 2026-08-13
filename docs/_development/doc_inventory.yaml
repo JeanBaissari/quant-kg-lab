@@ -75,6 +75,10 @@ docs:
   type: Guide
   status: current
   last_verified: '2026-08-12'
+- path: docs/guides/skill-schema-reconciliation.md
+  type: Guide
+  status: current
+  last_verified: '2026-08-13'
 - path: docs/guides/workflows.md
   type: Guide
   status: current
