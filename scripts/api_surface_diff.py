@@ -29,6 +29,7 @@ IMPORT_NAME = {"scikit-learn": "sklearn", "ta-lib": "talib", "pyportfolioopt": "
 PKG_OF = {"scikit-learn": "sklearn", "ta-lib": "talib", "pyportfolioopt": "pypfopt",
          "imbalanced-learn": "imblearn",
          "mplfinance": "src/mplfinance",
+         "catboost": "python-package/catboost",
           "arch": "arch", "alphalens": "alphalens", "pyfolio": "pyfolio",
           "riskfolio": "riskfolio", "polars": "py-polars/src/polars", "shap": "shap"}
 

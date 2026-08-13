@@ -155,6 +155,12 @@
       "commit": "493811dac9a203de7ec148fb95504e7d3f400ba5",
       "nodes": 244,
       "edges": 317
+    },
+    "catboost": {
+      "repo": "catboost/catboost",
+      "commit": "549af60ecd40819be138046cd9c5ec737dca5e3b",
+      "nodes": 0,
+      "edges": 0
     }
   }
 }
