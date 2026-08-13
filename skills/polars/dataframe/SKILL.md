@@ -32,10 +32,10 @@ Eager DataFrame/Series API: construction, schemas, IO (`read_parquet`, `read_csv
 
 | API | Source File | Description |
 |-----|------------|-------------|
-| `DataFrame` | `dataframe/base.py` | The eager tabular structure — select/filter/group_by/join |
+| `DataFrame` | `dataframe/frame.py` | The eager tabular structure — select/filter/group_by/join |
 | `Series` | `series/series.py` | One-dimensional column with dtype + name |
 | `Schema` | `schema.py` | Column-name → dtype mapping object |
-| `LazyFrame` | `lazyframe/base.py` | Lazy query plan — collect()/sink_* executes it |
+| `LazyFrame` | `lazyframe/frame.py` | Lazy query plan — collect()/sink_* executes it |
 | `QueryOptFlags` | `lazyframe/opt_flags.py` | Lazy-query optimization flags |
 | `exceptions.py` | `exceptions.py` | Error types: ShapeError, ComputeError, ModuleUpgradeRequiredError |
 
