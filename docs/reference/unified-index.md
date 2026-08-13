@@ -26,7 +26,7 @@
 | backtrader | Quant Tools | 2680 · 4964 | 2 | [`backtrader`](../../skills/backtrader/SKILL.md) |
 | ta-lib | Quant Tools | 381 · 379 | 1 | — |
 | vectorbt | Quant Tools | 3682 · 9212 | 3 | [`vectorbt`](../../skills/vectorbt/SKILL.md) |
-| statsmodels | Statistical Models | 11616 · 33529 | 4 | [`statsmodels`](../../skills/statsmodels/SKILL.md) |
+| statsmodels | Statistical Models | 11616 · 33529 | 6 | [`statsmodels`](../../skills/statsmodels/SKILL.md) |
 | alphalens | — | 172 · 231 | 2 | [`alphalens`](../../skills/alphalens/SKILL.md) |
 | arch | — | 1367 · 3900 | 4 | [`arch`](../../skills/arch/SKILL.md) |
 | cvxpy | — | 6380 · 16515 | 5 | [`cvxpy`](../../skills/cvxpy/SKILL.md) |
@@ -120,6 +120,8 @@
 ### statsmodels
 - [`statsmodels`](../../skills/statsmodels/SKILL.md) *(router)* — Use when working with statsmodels — the statistical-modelling entry point. Router indexing the statsmodels sub-skills; load the sub-skill for the model family you need.
 - [`statsmodels-core`](../../skills/statsmodels/core/SKILL.md) — Use when building statistical models in Python — OLS/GLS/WLS, GLM, model results and diagnostics, formula API, and summary tables.
+- [`statsmodels-diagnostics`](../../skills/statsmodels/diagnostics/SKILL.md) — Use when diagnosing fitted models with statsmodels — residual tests (jarque_bera, durbin_watson, breusch_pagan, Ljung-Box), influence analysis (OLSInfluence/MLEInfluence, Cook's distance, VIF), ANOVA, and model-comparison tests.
+- [`statsmodels-glm`](../../skills/statsmodels/glm/SKILL.md) — Use when fitting generalized linear models with statsmodels — GLM families/links/varfuncs, GEE with covariance structures, GLMGam, robust covariance (HC0–HC3/cluster), and Tweedie models.
 - [`statsmodels-statespace`](../../skills/statsmodels/statespace/SKILL.md) — Use when working with statsmodels state-space models — MLEModel, MLEResults, Initialization, and news/impact analysis.
 - [`statsmodels-tsa`](../../skills/statsmodels/tsa/SKILL.md) — Use when forecasting time series with statsmodels — ARIMA/SARIMAX, ExponentialSmoothing, and the arima process tools.
 - [`statsmodels-vector-ar`](../../skills/statsmodels/vector_ar/SKILL.md) — Use when modelling multivariate time series with statsmodels — VAR/VECM, impulse-response analysis, and causality/whiteness tests.

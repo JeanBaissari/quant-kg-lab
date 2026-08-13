@@ -17,6 +17,8 @@ tags:
 - router
 related_skills:
 - statsmodels-core
+- statsmodels-glm
+- statsmodels-diagnostics
 - statsmodels-tsa
 - statsmodels-statespace
 - statsmodels-vector-ar
@@ -33,7 +35,9 @@ generalized linear models, model results, diagnostics, and the formula API.
 
 | Skill | Scope |
 |-------|-------|
-| [statsmodels-core](core/SKILL.md) | OLS/GLS/WLS, GLM, LikelihoodModel, formula API, summaries — the workhorse surface |
+| [statsmodels-core](core/SKILL.md) | OLS/GLS/WLS, LikelihoodModel, formula API, summaries — the workhorse surface |
+| [statsmodels-glm](glm/SKILL.md) | GLM families/links, GEE + covariance structures, GLMGam, robust covariance |
+| [statsmodels-diagnostics](diagnostics/SKILL.md) | residual tests, influence/Cook's distance, VIF, ANOVA, model comparison |
 | [statsmodels-tsa](tsa/SKILL.md) | ARIMA/SARIMAX, ExponentialSmoothing, arima specification API |
 | [statsmodels-statespace](statespace/SKILL.md) | MLEModel/MLEResults, Kalman filtering, news analysis |
 | [statsmodels-vector-ar](vector_ar/SKILL.md) | VAR/VECM, impulse response, Granger causality |
