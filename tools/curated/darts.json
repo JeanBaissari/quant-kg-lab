@@ -1,0 +1,15 @@
+{
+  "library": "darts",
+  "symbols": [
+    {
+      "label": "GlobalNaiveDrift",
+      "source_file": "models/forecasting/global_baseline_models.py",
+      "description": "darts GlobalNaiveDrift: baseline forecasting model that applies a constant drift \u2014 the average slope of the training series \u2014 to the last observed value (naive with drift)."
+    },
+    {
+      "label": "likelihood_component_names()",
+      "source_file": "utils/likelihood_models/base.py",
+      "description": "Generates formatted likelihood parameter names for components and parameter names."
+    }
+  ]
+}

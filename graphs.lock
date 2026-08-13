@@ -171,8 +171,8 @@
     "darts": {
       "repo": "unit8co/darts",
       "commit": "080b5340366b8df25e048f4cfd11ca99e3806e97",
-      "nodes": 0,
-      "edges": 0
+      "nodes": 3954,
+      "edges": 8240
     }
   }
 }
