@@ -149,6 +149,12 @@
       "commit": "47bdf54a27a4246498994de700e8d55e99eb2d49",
       "nodes": 4067,
       "edges": 11144
+    },
+    "mplfinance": {
+      "repo": "matplotlib/mplfinance",
+      "commit": "493811dac9a203de7ec148fb95504e7d3f400ba5",
+      "nodes": 0,
+      "edges": 0
     }
   }
 }
