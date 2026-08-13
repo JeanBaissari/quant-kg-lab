@@ -75,11 +75,12 @@ def check_complete(lib, labels, cur, excl):
                 m = SYM_RE.match(cells[0])
                 if not m:
                     continue
-                sym = m.group(1).split(".")[-1].split("(")[0]
+                full = m.group(1)
+                if full.endswith((".py", ".pyx", ".c")):
+                    continue  # module-node cells (e.g. `plotting.py`), not API symbols
+                sym = full.split(".")[-1].split("(")[0]
                 if not sym:
                     continue
-                if sym.endswith((".py", ".pyx", ".c")):
-                    continue  # module-node cells (e.g. `plotting.py`), not API symbols
                 ok = (sym in labels or f"{sym}()" in labels
                       or sym in cur or f"{sym}()" in cur
                       or sym in excl or f"{sym}()" in excl)
