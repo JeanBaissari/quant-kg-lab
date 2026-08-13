@@ -40,6 +40,7 @@ Per-library hubs, grouped by tier. Each hub indexes that library's skills, graph
 - [alphalens](alphalens/index.md) — quantopian/alphalens
 - [backtrader](backtrader/index.md) — mementum/backtrader
 - [empyrical](empyrical/index.md) — Quantopian/empyrical
+- [mplfinance](mplfinance/index.md) — matplotlib/mplfinance
 - [pyfolio](pyfolio/index.md) — quantopian/pyfolio
 - [pyportfolioopt](pyportfolioopt/index.md) — robertmartin8/PyPortfolioOpt
 - [quantstats](quantstats/index.md) — ranaroussi/quantstats

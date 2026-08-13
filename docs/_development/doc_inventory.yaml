@@ -115,6 +115,10 @@ docs:
   type: Generated
   status: generated
   last_verified: '2026-08-13'
+- path: docs/libraries/mplfinance/index.md
+  type: Generated
+  status: generated
+  last_verified: '2026-08-13'
 - path: docs/libraries/numpy/index.md
   type: Generated
   status: generated
@@ -275,6 +279,10 @@ docs:
   type: Generated
   status: generated
   last_verified: ''
+- path: docs/reference/edge-audits/edge-audit-mplfinance.md
+  type: Generated
+  status: generated
+  last_verified: ''
 - path: docs/reference/edge-audits/edge-audit-numpy.md
   type: Generated
   status: generated
@@ -368,6 +376,10 @@ docs:
   status: generated
   last_verified: ''
 - path: docs/reference/quality-gate/gate-lightgbm.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/quality-gate/gate-mplfinance.md
   type: Generated
   status: generated
   last_verified: ''

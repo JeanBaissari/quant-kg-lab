@@ -7,7 +7,7 @@
 **Library**: pymc
 **Domain**: Bayesian Modelling
 **Source**: pymc-devs/pymc@47bdf54a27a4
-**Graph**: 4059 nodes · 11136 edges
+**Graph**: 4067 nodes · 11144 edges
 **Last Verified**: 2026-08-13
 
 ## Overview
@@ -18,6 +18,10 @@ Hub for the **pymc** library (Bayesian Modelling tier). The per-module API refer
 
 | Skill | Module | Covers |
 |-------|--------|--------|
+| [`pymc`](../../../skills/pymc/SKILL.md) | (router) | working with pymc — the Bayesian-modelling entry point. Router indexing the pymc |
+| [`pymc-distributions`](../../../skills/pymc/distributions/SKILL.md) | `pymc.distributions` | choosing PyMC prior distributions |
+| [`pymc-model`](../../../skills/pymc/model/SKILL.md) | `pymc.model` | declaring PyMC Bayesian models |
+| [`pymc-sampling`](../../../skills/pymc/sampling/SKILL.md) | `pymc.sampling` | sampling PyMC models |
 
 ## Graph provenance
 
