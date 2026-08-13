@@ -4,8 +4,8 @@
 
 ## Summary
 
-- Total edges: 569
-- EXTRACTED: 569 (100.0%)
+- Total edges: 599
+- EXTRACTED: 599 (100.0%)
 - INFERRED: 0 (0.0%)
 - AMBIGUOUS: 0
 

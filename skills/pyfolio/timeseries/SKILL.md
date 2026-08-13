@@ -35,7 +35,6 @@ drawdown analysis — the numbers behind the tear sheets.
 | `perf_stats` | `timeseries.py` | Performance statistics table: annual return/vol, Sharpe, Sortino, max drawdown |
 | `rolling_sharpe` | `timeseries.py` | Rolling Sharpe ratio series over the period |
 | `max_drawdown` | `timeseries.py` | Maximum drawdown magnitude and its window |
-| `drawdown` | `timeseries.py` | Drawdown series from cumulative returns |
 | `plotting.py` | `plotting.py` | Chart helpers: returns/drawdown/rolling panels |
 
 ## Common Patterns

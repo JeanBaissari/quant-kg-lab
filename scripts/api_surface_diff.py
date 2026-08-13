@@ -146,22 +146,28 @@ def main():
     gsrc = {n.get("source_file", "") for n in g["nodes"]}
     pkg = PKG_OF.get(lib, lib)
     ast_syms = None
+    def _obj_of(s, mod=None):
+        return getattr(mod, s, None) if mod is not None else None
     try:
         mod = importlib.import_module(IMPORT_NAME.get(lib, lib))
         symbols = [s for s in dir(mod) if not s.startswith("_")]
-        obj_of = lambda s: getattr(mod, s, None)
     except Exception:
+        mod = None
         ast_syms = ast_symbols(lib, pkg)
         if ast_syms is None:
             sys.exit(f"{lib}: cannot import (venv needed) and no pinned clone for AST fallback")
         symbols = [s["symbol"] for s in ast_syms]
-        obj_of = lambda s: None
+    for s in symbols:
+        if resolve(labels, s):
+            present += 1
+            continue
+        obj = _obj_of(s, mod)
     missing, present = [], 0
     for s in symbols:
         if resolve(labels, s):
             present += 1
             continue
-        obj = obj_of(s)
+        obj = _obj_of(s, mod)
         if obj is not None:
             mech, src = classify(obj, s, gsrc, labels, lib)
             doc = getattr(obj, "__doc__", None) or ""

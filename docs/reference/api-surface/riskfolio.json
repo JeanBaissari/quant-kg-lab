@@ -1,0 +1,11 @@
+{
+  "lib": "riskfolio",
+  "total": 167,
+  "present": 152,
+  "missing": 15,
+  "coverage": 91.02,
+  "by_mechanism": {
+    "M2b-unimportable": 15
+  },
+  "generated": "2026-08-12"
+}
