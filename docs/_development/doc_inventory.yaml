@@ -135,6 +135,10 @@ docs:
   type: Generated
   status: generated
   last_verified: '2026-08-13'
+- path: docs/libraries/pymc/index.md
+  type: Generated
+  status: generated
+  last_verified: '2026-08-13'
 - path: docs/libraries/pyportfolioopt/index.md
   type: Generated
   status: generated
@@ -287,6 +291,10 @@ docs:
   type: Generated
   status: generated
   last_verified: ''
+- path: docs/reference/edge-audits/edge-audit-pymc.md
+  type: Generated
+  status: generated
+  last_verified: ''
 - path: docs/reference/edge-audits/edge-audit-pyportfolioopt.md
   type: Generated
   status: generated
@@ -376,6 +384,10 @@ docs:
   status: generated
   last_verified: ''
 - path: docs/reference/quality-gate/gate-pyfolio.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/quality-gate/gate-pymc.md
   type: Generated
   status: generated
   last_verified: ''

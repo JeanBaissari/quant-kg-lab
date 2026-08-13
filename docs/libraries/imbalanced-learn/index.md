@@ -18,6 +18,10 @@ Hub for the **imbalanced-learn** library (ML & Optimization tier). The per-modul
 
 | Skill | Module | Covers |
 |-------|--------|--------|
+| [`imbalanced-learn`](../../../skills/imbalanced-learn/SKILL.md) | (router) | working with imbalanced-learn — the class-imbalance entry point. Router indexing |
+| [`imbalanced-learn-ensemble`](../../../skills/imbalanced-learn/ensemble/SKILL.md) | `imbalanced-learn.ensemble` | training balanced ensembles with imblearn |
+| [`imbalanced-learn-pipeline`](../../../skills/imbalanced-learn/pipeline/SKILL.md) | `imbalanced-learn.pipeline` | building sampling-aware pipelines with imblearn |
+| [`imbalanced-learn-samplers`](../../../skills/imbalanced-learn/samplers/SKILL.md) | `imbalanced-learn.samplers` | resampling imbalanced data with imblearn |
 
 ## Graph provenance
 

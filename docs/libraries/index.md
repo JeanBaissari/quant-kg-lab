@@ -9,6 +9,10 @@
 
 Per-library hubs, grouped by tier. Each hub indexes that library's skills, graph provenance, and cross-library bridges.
 
+## Bayesian Modelling
+
+- [pymc](pymc/index.md) — pymc-devs/pymc
+
 ## Explainability
 
 - [shap](shap/index.md) — shap/shap

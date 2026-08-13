@@ -25,6 +25,7 @@ DOMAIN = {
                     "alphalens", "pyfolio", "empyrical", "quantstats"],
     "Statistical Models": ["arch"],
     "Explainability": ["shap"],
+    "Bayesian Modelling": ["pymc"],
 }
 LIB_DOMAIN = {lib: dom for dom, libs in DOMAIN.items() for lib in libs}
 IMPORT_NAME = {"scikit-learn": "sklearn", "ta-lib": "talib"}
