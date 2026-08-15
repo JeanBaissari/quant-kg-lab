@@ -8,6 +8,7 @@ Usage:
     python scripts/query_graph.py sklearn --explain "BaseEstimator"
 """
 import json
+import re
 import sys
 from pathlib import Path
 from collections import deque, Counter
@@ -23,14 +24,31 @@ def load_graph(library):
         return json.load(f)
 
 def find_nodes(graph, query):
-    """Find nodes matching a query string (substring match on label)."""
+    """Find nodes matching a query (QKG_066: tokenized AND-match).
+
+    The query is normalized (lowercase, dashes/underscores/unicode-punctuation
+    folded to spaces) and split into terms; English stop-words are dropped;
+    a node matches when EVERY remaining term appears in its label or
+    description — so `kolmogorov smirnov` hits the `ks_2samp`-adjacent nodes,
+    `kolmogorov–smirnov` (en-dash) works, and question-phrases like
+    "how does Pipeline work?" reduce to `[pipeline, work]`.
+    """
+    STOP = {"how", "does", "what", "which", "where", "when", "why", "the", "a",
+            "an", "and", "or", "in", "on", "of", "to", "for", "with", "is", "are",
+            "do", "exist", "work", "works", "any", "many", "all", "about", "using"}
     nodes = graph.get("nodes", [])
-    query_lower = query.lower()
+    tokens = []
+    for tok in re.sub(r"[–—_\-]+", " ", query.lower()).split():
+        tok = re.sub(r"[^a-z0-9]+$", "", tok)
+        if tok and tok not in STOP:
+            tokens.append(tok)
+    if not tokens:
+        return []
     matches = []
     for n in nodes:
         label = (n.get("label") or "").lower()
         desc = (n.get("description") or "").lower()
-        if query_lower in label or query_lower in desc:
+        if all(tok in label or tok in desc for tok in tokens):
             matches.append(n)
     return matches
 

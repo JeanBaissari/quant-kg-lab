@@ -1,0 +1,188 @@
+{
+  "libraries": 28,
+  "libs": [
+    {
+      "lib": "alphalens",
+      "nodes": 172,
+      "edges": 231,
+      "commit": "77084f1e4c2c"
+    },
+    {
+      "lib": "arch",
+      "nodes": 1367,
+      "edges": 3900,
+      "commit": "704bb70e4837"
+    },
+    {
+      "lib": "backtrader",
+      "nodes": 2680,
+      "edges": 4964,
+      "commit": "b853d7c90b67"
+    },
+    {
+      "lib": "catboost",
+      "nodes": 793,
+      "edges": 1569,
+      "commit": "549af60ecd40"
+    },
+    {
+      "lib": "cvxpy",
+      "nodes": 6380,
+      "edges": 16515,
+      "commit": "e3b50dccf808"
+    },
+    {
+      "lib": "darts",
+      "nodes": 3954,
+      "edges": 8240,
+      "commit": "080b5340366b"
+    },
+    {
+      "lib": "empyrical",
+      "nodes": 180,
+      "edges": 258,
+      "commit": "40f61b4f229d"
+    },
+    {
+      "lib": "imbalanced-learn",
+      "nodes": 611,
+      "edges": 865,
+      "commit": "8504e95f0160"
+    },
+    {
+      "lib": "lightgbm",
+      "nodes": 593,
+      "edges": 2029,
+      "commit": "f9bf8d1358cd"
+    },
+    {
+      "lib": "mplfinance",
+      "nodes": 244,
+      "edges": 317,
+      "commit": "493811dac9a2"
+    },
+    {
+      "lib": "numpy",
+      "nodes": 8306,
+      "edges": 13483,
+      "commit": "ab2199763cb1"
+    },
+    {
+      "lib": "optuna",
+      "nodes": 2208,
+      "edges": 4013,
+      "commit": "b6f2ea62fbe7"
+    },
+    {
+      "lib": "pandas",
+      "nodes": 11368,
+      "edges": 39913,
+      "commit": "982854070758"
+    },
+    {
+      "lib": "polars",
+      "nodes": 5296,
+      "edges": 16925,
+      "commit": "1f779c902568"
+    },
+    {
+      "lib": "pyfolio",
+      "nodes": 305,
+      "edges": 361,
+      "commit": "4b901f6d73aa"
+    },
+    {
+      "lib": "pymc",
+      "nodes": 4067,
+      "edges": 11144,
+      "commit": "47bdf54a27a4"
+    },
+    {
+      "lib": "pyportfolioopt",
+      "nodes": 342,
+      "edges": 522,
+      "commit": "a6638d2e06da"
+    },
+    {
+      "lib": "quantstats",
+      "nodes": 393,
+      "edges": 531,
+      "commit": "fbd10daed022"
+    },
+    {
+      "lib": "riskfolio",
+      "nodes": 426,
+      "edges": 599,
+      "commit": "632a9e48fbaf"
+    },
+    {
+      "lib": "scikit-learn",
+      "nodes": 8450,
+      "edges": 28094,
+      "commit": "6f8b95aa2234"
+    },
+    {
+      "lib": "scipy",
+      "nodes": 14071,
+      "edges": 23466,
+      "commit": "0514ef9e7329"
+    },
+    {
+      "lib": "shap",
+      "nodes": 1277,
+      "edges": 1752,
+      "commit": "df974a196629"
+    },
+    {
+      "lib": "statsmodels",
+      "nodes": 11616,
+      "edges": 33529,
+      "commit": "179d1f4df416"
+    },
+    {
+      "lib": "ta",
+      "nodes": 538,
+      "edges": 1208,
+      "commit": "a890410710a6"
+    },
+    {
+      "lib": "ta-lib",
+      "nodes": 381,
+      "edges": 379,
+      "commit": "a9ff1b47b3dd"
+    },
+    {
+      "lib": "vectorbt",
+      "nodes": 3682,
+      "edges": 9212,
+      "commit": "f9897528f675"
+    },
+    {
+      "lib": "xgboost",
+      "nodes": 1631,
+      "edges": 4318,
+      "commit": "2a4786e61e08"
+    },
+    {
+      "lib": "yfinance",
+      "nodes": 823,
+      "edges": 1584,
+      "commit": "93eb4c234acc"
+    }
+  ],
+  "nodes": 92154,
+  "edges": 229921,
+  "skills": 136,
+  "routers": 27,
+  "modules": 97,
+  "playbooks": 12,
+  "citations": {
+    "checked": 1147,
+    "dangling": 0
+  },
+  "bridges": {
+    "resolved": 71,
+    "attempted": 71
+  },
+  "docs": 126
+}

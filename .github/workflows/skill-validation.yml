@@ -39,6 +39,13 @@ jobs:
           for lib in $(python3 -c "import json; print(' '.join(json.load(open('graphs.lock'))['libraries']))"); do
             python scripts/verify_citations.py --require-complete "$lib"
           done
+      - name: Smoke-test the documented demo queries (QKG_066)
+        run: |
+          python3 scripts/query_graph.py scipy "kolmogorov smirnov" | grep -q "matching nodes"
+          python3 scripts/query_graph.py sklearn "How does Pipeline work?" | grep -q "matching nodes"
+          python3 scripts/query_graph.py optuna "What samplers exist?" | grep -q "matching nodes"
+          python3 scripts/query_graph.py pandas "rolling mean" | grep -q "matching nodes"
+          echo "demo queries OK"
       - if: always()
         uses: actions/upload-artifact@v4
         with:

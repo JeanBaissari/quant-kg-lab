@@ -9,10 +9,18 @@ on:
       - 'scripts/stamp_graphs.py'
       - 'scripts/prune_graph.py'
       - 'scripts/label_communities.py'
+      - 'scripts/emit_counts.py'
+      - 'README.md'
+      - 'QUICKSTART.md'
+      - 'ROADMAP.md'
   pull_request:
     paths:
       - 'knowledge_graphs/**'
       - 'graphs.lock'
+      - 'scripts/emit_counts.py'
+      - 'README.md'
+      - 'QUICKSTART.md'
+      - 'ROADMAP.md'
   schedule:
     - cron: '0 8 * * 1'  # informational upstream-freshness report only (never PRs)
   workflow_dispatch:
@@ -32,6 +40,8 @@ jobs:
       - run: pip install pyyaml
       - name: Quality Gate -- all libraries
         run: python3 scripts/graph_gate.py --ci --all
+      - name: Truth counts -- committed docs must match the canonical block (QKG_065)
+        run: python3 scripts/emit_counts.py --diff
 
   freshness-report:
     # INFORMATIONAL only: how far upstream HEAD has moved past our graphs.lock pins.

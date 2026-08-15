@@ -31,7 +31,7 @@ Two things make it more than a pile of library docs:
 
 ```
 quant-kg-lab/
-├── knowledge_graphs/<lib>/.graphify/   # graph.json + GRAPH_REPORT.md + labels (13 libraries)
+├── knowledge_graphs/<lib>/.graphify/   # graph.json + GRAPH_REPORT.md + labels (28 libraries)
 ├── skills/<lib>/<module>/SKILL.md      # atomic, per-module skills (+ routers)
 │   └── quant-patterns/                 #   cross-library workflow playbooks
 ├── scripts/                            # rebuild, query, validate, audit, bundle tooling
@@ -119,8 +119,8 @@ cp -r skills/scipy/stats ~/.claude/skills/scipy-stats
 python3 scripts/validate_skills.py --ci scipy
 ```
 
-Bundles are byte-identical across builds (`bundle.json` verifies every sha256), and are
-asserted free of absolute paths and gitignored intermediates — the same
+Bundles are sha256-verified within a release (`bundle.json` verifies every per-file
+sha256), and are asserted free of absolute paths and gitignored intermediates — the same
 `scripts/check_artifact_safety.py` check runs in CI. Build one locally with
 `python3 scripts/export_bundle.py --lib all --out dist`.
 
