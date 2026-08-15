@@ -52,15 +52,15 @@ jobs:
               --exclude 'tests/**' --exclude 'tests/' --exclude 'test_*' --exclude 'benchmarks/**' \
               --exclude 'examples/**' --exclude 'docs/**' --exclude '*.pyx' --exclude '*.txt' \
               --exclude '*.html' --exclude '*.m' --exclude '*.R' --exclude '*.f90' >/dev/null 2>&1
-            python3 -c "
-import json, os
-g = json.load(open('$PWD/out/graph.json'))
-lock = json.load(open(os.environ['LOCK']))
-exp = lock['libraries']['$lib']
-actual = (len(g['nodes']), len(g['links']))
-want = (exp['nodes'], exp['edges'])
-print(f'  extracted {actual} vs lock {want} ->', 'MATCH' if actual == want else 'DRIFT')
-"
+            python3 <<'EOF'
+            import json, os
+            g = json.load(open('$PWD/out/graph.json'))
+            lock = json.load(open(os.environ['LOCK']))
+            exp = lock['libraries']['$lib']
+            actual = (len(g['nodes']), len(g['links']))
+            want = (exp['nodes'], exp['edges'])
+            print(f'  extracted {actual} vs lock {want} ->', 'MATCH' if actual == want else 'DRIFT')
+            EOF
           done
       - name: Upload drift report
         if: always()

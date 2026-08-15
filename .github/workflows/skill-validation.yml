@@ -16,7 +16,6 @@ on:
   schedule:
     - cron: '0 6 * * *'   # QKG_054: nightly validation keeps the evidence permanent
   workflow_dispatch:
-  workflow_dispatch:
 
 jobs:
   lint:
@@ -101,8 +100,7 @@ jobs:
         run: |
           git config user.name "qkg-bot"
           git config user.email "qkg-bot@users.noreply.github.com"
-          git add docs/reference/*.json docs/reference/status.json 2>/dev/null || true
-          git add _site 2>/dev/null || true
+          git add docs/reference/*.json 2>/dev/null || true
           if ! git diff --cached --quiet; then
             git commit -m "chore: refresh validation reports (nightly, QKG_054)" || true
             git push origin main || true
