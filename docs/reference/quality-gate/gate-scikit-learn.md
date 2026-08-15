@@ -2,7 +2,7 @@
 
 # Quality Gate — scikit-learn
 
-Graph: `knowledge_graphs/scikit-learn/.graphify/graph.json` · GRAPH_SPEC §5 · generated 2026-08-13
+Graph: `knowledge_graphs/scikit-learn/.graphify/graph.json` · GRAPH_SPEC §5 · generated 2026-08-15
 
 | criterion | status | counts |
 |---|---|---|
