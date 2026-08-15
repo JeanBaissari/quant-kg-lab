@@ -104,7 +104,8 @@ def render(md_text):
         elif line.startswith("- "):
             out.append(f"<li>{inline(line[2:])}</li>")
         elif re.match(r"^\d+\. ", line):
-            out.append(f"<li>{inline(re.sub(r'^\\d+\\. ', '', line))}</li>")
+            text = re.sub(r"^\d+\. ", "", line)   # f-string cannot contain '\' pre-3.12
+            out.append(f"<li>{inline(text)}</li>")
         elif line.strip() == "":
             out.append("")
         else:
