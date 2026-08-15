@@ -1,6 +1,6 @@
 {
-  "generated": "2026-08-13T23:14:45+00:00",
-  "git_sha": "d1e7775",
+  "generated": "2026-08-15T03:12:03+00:00",
+  "git_sha": "c91b5c9",
   "mode": {
     "ci": true,
     "strict": false,
@@ -705,7 +705,9 @@
     "skills/scikit-learn/cluster/SKILL.md": {
       "lint": [],
       "api_fail": [],
-      "api_warn": [],
+      "api_warn": [
+        "class DBSCAN: not found (library not installed, no graph node)"
+      ],
       "meta_warn": [],
       "provenance": []
     },
@@ -726,7 +728,9 @@
     "skills/scikit-learn/decomposition/SKILL.md": {
       "lint": [],
       "api_fail": [],
-      "api_warn": [],
+      "api_warn": [
+        "class FastICA: not found (library not installed, no graph node)"
+      ],
       "meta_warn": [],
       "provenance": []
     },
@@ -775,7 +779,9 @@
     "skills/scikit-learn/metrics/SKILL.md": {
       "lint": [],
       "api_fail": [],
-      "api_warn": [],
+      "api_warn": [
+        "func mean_tweedie_deviance: not found (library not installed, no graph node)"
+      ],
       "meta_warn": [],
       "provenance": []
     },
@@ -988,7 +994,13 @@
     "skills/vectorbt/signals/SKILL.md": {
       "lint": [],
       "api_fail": [],
-      "api_warn": [],
+      "api_warn": [
+        "class BBANDS: not found (library not installed, no graph node)",
+        "class MA: not found (library not installed, no graph node)",
+        "class MACD: not found (library not installed, no graph node)",
+        "class RSI: not found (library not installed, no graph node)",
+        "class STOCH: not found (library not installed, no graph node)"
+      ],
       "meta_warn": [],
       "provenance": []
     },
@@ -1042,7 +1054,7 @@
     "lint": 0,
     "api_fail": 0,
     "provenance": 0,
-    "api_warn": 52,
+    "api_warn": 60,
     "meta_warn": 4
   }
 }
