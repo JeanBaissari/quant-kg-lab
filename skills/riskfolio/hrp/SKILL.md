@@ -1,6 +1,7 @@
 ---
 name: riskfolio-hrp
-description: "Use when building hierarchical portfolio strategies with Riskfolio-Lib — HCPortfolio, HRP/HERC, DBHT clustering, and codependence measures."
+description: "Use when building hierarchical portfolio strategies with Riskfolio-Lib\
+  \ \u2014 HCPortfolio, HRP/HERC, DBHT clustering, and codependence measures."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -20,7 +21,13 @@ related_skills:
 - riskfolio
 - riskfolio-portfolio
 - scipy
+target_version: '7.3.0 (dev: after 7.3.0)'
+upstream_status: current
 ---
+
+## Version Note
+
+> ⚠️ **Pin is an unreleased dev commit.** This skill describes `riskfolio` ahead of the latest PyPI release (7.3.0 (dev: after 7.3.0)). Some APIs may not exist in your installed version.
 
 # riskfolio.hrp
 

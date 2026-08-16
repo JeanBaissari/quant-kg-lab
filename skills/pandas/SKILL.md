@@ -19,7 +19,13 @@ related_skills:
 - pandas-core
 - pandas-ts
 - pandas-groupby
+target_version: '3.0.5 (dev: after 3.0.5)'
+upstream_status: current
 ---
+
+## Version Note
+
+> ⚠️ **Pin is an unreleased dev commit.** This skill describes `pandas` ahead of the latest PyPI release (3.0.5 (dev: after 3.0.5)). Some APIs may not exist in your installed version.
 
 # pandas (router)
 

@@ -1,6 +1,7 @@
 ---
 name: pyfolio-timeseries
-description: "Use when computing portfolio performance statistics with pyfolio — perf_stats, rolling Sharpe/drawdown, drawdown series, and timeseries analytics."
+description: "Use when computing portfolio performance statistics with pyfolio \u2014\
+  \ perf_stats, rolling Sharpe/drawdown, drawdown series, and timeseries analytics."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -20,7 +21,13 @@ related_skills:
 - pyfolio
 - pyfolio-tearsheets
 - pandas-core
+target_version: '0.9.2 (dev: after 0.9.2)'
+upstream_status: dead
 ---
+
+## Version Note
+
+> ⚠️ **Upstream is frozen** (no commits since the pin). This skill describes `pyfolio` at its pinned commit — an abandoned release line. Target version: 0.9.2 (dev: after 0.9.2). Verify against your installed version before use.
 
 # pyfolio.timeseries
 

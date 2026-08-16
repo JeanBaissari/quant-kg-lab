@@ -1,6 +1,8 @@
 ---
 name: empyrical
-description: "Use when working with empyrical — the portfolio-metrics entry point. Router indexing the empyrical sub-skills; load the sub-skill for the metric family you need."
+description: "Use when working with empyrical \u2014 the portfolio-metrics entry point.\
+  \ Router indexing the empyrical sub-skills; load the sub-skill for the metric family\
+  \ you need."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -22,7 +24,13 @@ related_skills:
 - pyfolio-timeseries
 - pyfolio-tearsheets
 - pandas-core
+target_version: '0.5.5 (dev: after 0.5.5)'
+upstream_status: dead
 ---
+
+## Version Note
+
+> ⚠️ **Upstream is frozen** (no commits since the pin). This skill describes `empyrical` at its pinned commit — an abandoned release line. Target version: 0.5.5 (dev: after 0.5.5). Verify against your installed version before use.
 
 # empyrical
 

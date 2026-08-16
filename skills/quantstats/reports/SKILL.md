@@ -24,6 +24,8 @@ related_skills:
 - quantstats-plots
 - empyrical-stats
 - pandas-core
+target_version: 0.0.81 (released tag v0.0.81)
+upstream_status: stale
 ---
 
 # quantstats.reports

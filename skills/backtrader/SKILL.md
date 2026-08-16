@@ -18,7 +18,13 @@ tags:
 related_skills:
 - backtrader-analyzers
 - backtrader-core
+target_version: 1.9.78.123 (untagged, on release day)
+upstream_status: dead
 ---
+
+## Version Note
+
+> ⚠️ **Upstream is frozen** (no commits since the pin). This skill describes `backtrader` at its pinned commit — an abandoned release line. Target version: 1.9.78.123 (untagged, on release day). Verify against your installed version before use.
 
 # backtrader (router)
 

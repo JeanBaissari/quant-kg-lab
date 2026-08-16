@@ -1,6 +1,7 @@
 ---
 name: polars
-description: "Use when working with polars — the DataFrame entry point. Router indexing the polars sub-skills; load the sub-skill for the layer you need."
+description: "Use when working with polars \u2014 the DataFrame entry point. Router\
+  \ indexing the polars sub-skills; load the sub-skill for the layer you need."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -23,7 +24,13 @@ related_skills:
 - polars-lazyframe
 - pandas
 - numpy
+target_version: '1.43.2 (dev: after 1.43.2)'
+upstream_status: current
 ---
+
+## Version Note
+
+> ⚠️ **Pin is an unreleased dev commit.** This skill describes `polars` ahead of the latest PyPI release (1.43.2 (dev: after 1.43.2)). Some APIs may not exist in your installed version.
 
 # polars
 

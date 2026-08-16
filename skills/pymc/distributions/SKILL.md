@@ -26,7 +26,13 @@ related_skills:
 - numpy-core
 - statsmodels-tsa
 - quant-volatility-modelling
+target_version: '6.3.0 (dev: after 6.3.0, before 6.3.1)'
+upstream_status: current
 ---
+
+## Version Note
+
+> ⚠️ **Pin is an unreleased dev commit.** This skill describes `pymc` ahead of the latest PyPI release (6.3.0 (dev: after 6.3.0, before 6.3.1)). Some APIs may not exist in your installed version.
 
 # pymc.distributions
 

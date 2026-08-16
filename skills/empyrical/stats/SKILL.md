@@ -1,6 +1,8 @@
 ---
 name: empyrical-stats
-description: "Use when computing portfolio/strategy performance metrics from returns — annual return/volatility, Sharpe/Sortino/omega/Calmar ratios, max drawdown, alpha/beta, downside risk, tail ratio, stability, and cumulative-return helpers."
+description: "Use when computing portfolio/strategy performance metrics from returns\
+  \ \u2014 annual return/volatility, Sharpe/Sortino/omega/Calmar ratios, max drawdown,\
+  \ alpha/beta, downside risk, tail ratio, stability, and cumulative-return helpers."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -24,7 +26,13 @@ related_skills:
 - pyfolio-timeseries
 - pandas-core
 - quant-volatility-modelling
+target_version: '0.5.5 (dev: after 0.5.5)'
+upstream_status: dead
 ---
+
+## Version Note
+
+> ⚠️ **Upstream is frozen** (no commits since the pin). This skill describes `empyrical` at its pinned commit — an abandoned release line. Target version: 0.5.5 (dev: after 0.5.5). Verify against your installed version before use.
 
 # empyrical.stats
 

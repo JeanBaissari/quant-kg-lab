@@ -25,6 +25,8 @@ related_skills:
 - pandas-core
 - polars-io
 - quantstats-reports
+target_version: 1.6.0 (released tag 1.6.0)
+upstream_status: current
 ---
 
 # yfinance

@@ -1,6 +1,7 @@
 ---
 name: empyrical-perf-attrib
-description: "Use when decomposing portfolio performance into factor exposures — perf_attrib and compute_exposures for factor-model attribution of returns."
+description: "Use when decomposing portfolio performance into factor exposures \u2014\
+  \ perf_attrib and compute_exposures for factor-model attribution of returns."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -23,7 +24,13 @@ related_skills:
 - pyfolio-tearsheets
 - statsmodels-core
 - pandas-core
+target_version: '0.5.5 (dev: after 0.5.5)'
+upstream_status: dead
 ---
+
+## Version Note
+
+> ⚠️ **Upstream is frozen** (no commits since the pin). This skill describes `empyrical` at its pinned commit — an abandoned release line. Target version: 0.5.5 (dev: after 0.5.5). Verify against your installed version before use.
 
 # empyrical.perf_attrib
 

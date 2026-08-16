@@ -25,7 +25,13 @@ related_skills:
 - pandas-core
 - ta-lib-indicators
 - numpy-core
+target_version: 0.12.10b0 (beta; dev after)
+upstream_status: dead
 ---
+
+## Version Note
+
+> ⚠️ **Upstream is frozen** (no commits since the pin). This skill describes `mplfinance` at its pinned commit — an abandoned release line. Target version: 0.12.10b0 (beta; dev after). Verify against your installed version before use.
 
 # mplfinance
 

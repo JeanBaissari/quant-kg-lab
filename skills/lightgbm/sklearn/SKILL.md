@@ -24,7 +24,13 @@ related_skills:
 - lightgbm-core
 - scikit-learn-model-selection
 - optuna-samplers
+target_version: '4.7.0 (dev: after 4.7.0)'
+upstream_status: current
 ---
+
+## Version Note
+
+> ⚠️ **Pin is an unreleased dev commit.** This skill describes `lightgbm` ahead of the latest PyPI release (4.7.0 (dev: after 4.7.0)). Some APIs may not exist in your installed version.
 
 # LightGBM Scikit-learn API
 

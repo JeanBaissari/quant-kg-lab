@@ -1,6 +1,8 @@
 ---
 name: riskfolio-risk-measures
-description: "Use when working with Riskfolio-Lib risk measures and risk contribution — Sharpe_Risk, Risk_Contribution, CVaR/CDaR/MAD/LPM families, and matrix helpers."
+description: "Use when working with Riskfolio-Lib risk measures and risk contribution\
+  \ \u2014 Sharpe_Risk, Risk_Contribution, CVaR/CDaR/MAD/LPM families, and matrix\
+  \ helpers."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -20,7 +22,13 @@ related_skills:
 - riskfolio
 - riskfolio-portfolio
 - scipy-stats
+target_version: '7.3.0 (dev: after 7.3.0)'
+upstream_status: current
 ---
+
+## Version Note
+
+> ⚠️ **Pin is an unreleased dev commit.** This skill describes `riskfolio` ahead of the latest PyPI release (7.3.0 (dev: after 7.3.0)). Some APIs may not exist in your installed version.
 
 # riskfolio.risk_measures
 

@@ -22,7 +22,13 @@ related_skills:
 - arch-bootstrap
 - arch-forecast
 - statsmodels-core
+target_version: '8.0.0 (dev: after 8.0.0)'
+upstream_status: current
 ---
+
+## Version Note
+
+> ⚠️ **Pin is an unreleased dev commit.** This skill describes `arch` ahead of the latest PyPI release (8.0.0 (dev: after 8.0.0)). Some APIs may not exist in your installed version.
 
 # arch
 

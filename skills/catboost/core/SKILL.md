@@ -26,7 +26,13 @@ related_skills:
 - scikit-learn-ensemble
 - shap-explainers
 - optuna-integration
+target_version: '1.2.10 (dev: after 1.2.10)'
+upstream_status: current
 ---
+
+## Version Note
+
+> ⚠️ **Pin is an unreleased dev commit.** This skill describes `catboost` ahead of the latest PyPI release (1.2.10 (dev: after 1.2.10)). Some APIs may not exist in your installed version.
 
 # catboost.core
 

@@ -24,7 +24,13 @@ related_skills:
 - xgboost-core
 - scikit-learn-model-selection
 - optuna-samplers
+target_version: '3.3.0 (dev: after 3.3.0, before 3.4.0)'
+upstream_status: current
 ---
+
+## Version Note
+
+> ⚠️ **Pin is an unreleased dev commit.** This skill describes `xgboost` ahead of the latest PyPI release (3.3.0 (dev: after 3.3.0, before 3.4.0)). Some APIs may not exist in your installed version.
 
 # XGBoost Scikit-learn API
 

@@ -1,6 +1,8 @@
 ---
 name: alphalens-factor-analysis
-description: "Use when analyzing a factor's predictive power with alphalens — FactorData, forward returns, quantile analysis, and IC (information coefficient) metrics."
+description: "Use when analyzing a factor's predictive power with alphalens \u2014\
+  \ FactorData, forward returns, quantile analysis, and IC (information coefficient)\
+  \ metrics."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -20,7 +22,13 @@ related_skills:
 - alphalens
 - alphalens-tearsheets
 - pandas-core
+target_version: 0.4.0 (released tag v0.4.0)
+upstream_status: dead
 ---
+
+## Version Note
+
+> ⚠️ **Upstream is frozen** (no commits since the pin). This skill describes `alphalens` at its pinned commit — an abandoned release line. Target version: 0.4.0 (released tag v0.4.0). Verify against your installed version before use.
 
 # alphalens.factor_analysis
 

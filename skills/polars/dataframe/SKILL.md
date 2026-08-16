@@ -1,6 +1,7 @@
 ---
 name: polars-dataframe
-description: "Use when working with polars DataFrames and Series — construction, schema control, group_by/join/reshape operations, and pandas interop."
+description: "Use when working with polars DataFrames and Series \u2014 construction,\
+  \ schema control, group_by/join/reshape operations, and pandas interop."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -25,7 +26,13 @@ related_skills:
 - polars-lazyframe
 - pandas-core
 - numpy-core
+target_version: '1.43.2 (dev: after 1.43.2)'
+upstream_status: current
 ---
+
+## Version Note
+
+> ⚠️ **Pin is an unreleased dev commit.** This skill describes `polars` ahead of the latest PyPI release (1.43.2 (dev: after 1.43.2)). Some APIs may not exist in your installed version.
 
 # polars.dataframe
 

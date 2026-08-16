@@ -1,6 +1,7 @@
 ---
 name: pyfolio-tearsheets
-description: "Use when generating portfolio tear sheets with pyfolio — create_returns_tear_sheet, create_full_tear_sheet, and performance statistics."
+description: "Use when generating portfolio tear sheets with pyfolio \u2014 create_returns_tear_sheet,\
+  \ create_full_tear_sheet, and performance statistics."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -20,7 +21,13 @@ related_skills:
 - pyfolio
 - pyfolio-timeseries
 - alphalens-tearsheets
+target_version: '0.9.2 (dev: after 0.9.2)'
+upstream_status: dead
 ---
+
+## Version Note
+
+> ⚠️ **Upstream is frozen** (no commits since the pin). This skill describes `pyfolio` at its pinned commit — an abandoned release line. Target version: 0.9.2 (dev: after 0.9.2). Verify against your installed version before use.
 
 # pyfolio.tearsheets
 

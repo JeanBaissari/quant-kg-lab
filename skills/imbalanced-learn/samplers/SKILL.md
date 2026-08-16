@@ -26,6 +26,8 @@ related_skills:
 - imbalanced-learn-pipeline
 - scikit-learn-ensemble
 - pandas-core
+target_version: 0.14.2 (released tag 0.14.2)
+upstream_status: current
 ---
 
 # imblearn.samplers

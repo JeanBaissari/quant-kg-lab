@@ -1,6 +1,7 @@
 ---
 name: polars-io
-description: "Use when reading or writing data with polars — CSV/Parquet/IPC/JSON/NDJSON/Arrow, lazy scan/sink streaming, database and cloud sources."
+description: "Use when reading or writing data with polars \u2014 CSV/Parquet/IPC/JSON/NDJSON/Arrow,\
+  \ lazy scan/sink streaming, database and cloud sources."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -24,7 +25,13 @@ related_skills:
 - polars-dataframe
 - pandas-core
 - numpy-core
+target_version: '1.43.2 (dev: after 1.43.2)'
+upstream_status: current
 ---
+
+## Version Note
+
+> ⚠️ **Pin is an unreleased dev commit.** This skill describes `polars` ahead of the latest PyPI release (1.43.2 (dev: after 1.43.2)). Some APIs may not exist in your installed version.
 
 # polars.io
 

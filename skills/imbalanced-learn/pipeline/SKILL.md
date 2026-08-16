@@ -25,6 +25,8 @@ related_skills:
 - imbalanced-learn-ensemble
 - scikit-learn-compose
 - scikit-learn-model-selection
+target_version: 0.14.2 (released tag 0.14.2)
+upstream_status: current
 ---
 
 # imblearn.pipeline

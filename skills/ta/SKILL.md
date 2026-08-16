@@ -25,7 +25,13 @@ related_skills:
 - vectorbt-signals
 - mplfinance
 - quantstats-plots
+target_version: '0.11.0 (dev: after 0.11.0)'
+upstream_status: stale
 ---
+
+## Version Note
+
+> ⚠️ **Pin is an unreleased dev commit.** This skill describes `ta` ahead of the latest PyPI release (0.11.0 (dev: after 0.11.0)). Some APIs may not exist in your installed version.
 
 # ta
 

@@ -19,7 +19,13 @@ related_skills:
 - vectorbt-core
 - vectorbt-portfolio
 - vectorbt-signals
+target_version: '1.1.0 (dev: after 1.1.0)'
+upstream_status: current
 ---
+
+## Version Note
+
+> ⚠️ **Pin is an unreleased dev commit.** This skill describes `vectorbt` ahead of the latest PyPI release (1.1.0 (dev: after 1.1.0)). Some APIs may not exist in your installed version.
 
 # vectorbt (router)
 

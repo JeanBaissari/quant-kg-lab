@@ -17,7 +17,13 @@ tags:
 - numpy
 - core
 related_skills: []
+target_version: '2.5.1 (dev: after 2.5.1, before 2.5.2)'
+upstream_status: current
 ---
+
+## Version Note
+
+> ⚠️ **Pin is an unreleased dev commit.** This skill describes `numpy` ahead of the latest PyPI release (2.5.1 (dev: after 2.5.1, before 2.5.2)). Some APIs may not exist in your installed version.
 
 # NumPy Core (`numpy._core` / `numpy`)
 

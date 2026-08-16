@@ -1,6 +1,7 @@
 ---
 name: alphalens-tearsheets
-description: "Use when generating alphalens tear sheets — returns, IC, and event-study visual reports for factor research."
+description: "Use when generating alphalens tear sheets \u2014 returns, IC, and event-study\
+  \ visual reports for factor research."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -19,7 +20,13 @@ tags:
 related_skills:
 - alphalens
 - alphalens-factor-analysis
+target_version: 0.4.0 (released tag v0.4.0)
+upstream_status: dead
 ---
+
+## Version Note
+
+> ⚠️ **Upstream is frozen** (no commits since the pin). This skill describes `alphalens` at its pinned commit — an abandoned release line. Target version: 0.4.0 (released tag v0.4.0). Verify against your installed version before use.
 
 # alphalens.tearsheets
 

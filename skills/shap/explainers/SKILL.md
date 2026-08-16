@@ -22,7 +22,13 @@ related_skills:
 - shap-plots
 - xgboost-core
 - lightgbm-core
+target_version: '0.52.0 (dev: after 0.52.0)'
+upstream_status: current
 ---
+
+## Version Note
+
+> ⚠️ **Pin is an unreleased dev commit.** This skill describes `shap` ahead of the latest PyPI release (0.52.0 (dev: after 0.52.0)). Some APIs may not exist in your installed version.
 
 # shap.explainers
 

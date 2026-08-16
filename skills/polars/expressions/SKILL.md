@@ -1,6 +1,7 @@
 ---
 name: polars-expressions
-description: "Use when building polars expression pipelines — col, select/filter/with_columns, group_by aggregations, window functions, and join/reshape operations."
+description: "Use when building polars expression pipelines \u2014 col, select/filter/with_columns,\
+  \ group_by aggregations, window functions, and join/reshape operations."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -20,7 +21,13 @@ related_skills:
 - polars
 - polars-dataframe
 - polars-performance
+target_version: '1.43.2 (dev: after 1.43.2)'
+upstream_status: current
 ---
+
+## Version Note
+
+> ⚠️ **Pin is an unreleased dev commit.** This skill describes `polars` ahead of the latest PyPI release (1.43.2 (dev: after 1.43.2)). Some APIs may not exist in your installed version.
 
 # polars.expressions
 

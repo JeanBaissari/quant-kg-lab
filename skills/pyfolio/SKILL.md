@@ -1,6 +1,8 @@
 ---
 name: pyfolio
-description: "Use when working with pyfolio — the portfolio-reporting entry point. Router indexing the pyfolio sub-skills; load the sub-skill for the reporting layer you need."
+description: "Use when working with pyfolio \u2014 the portfolio-reporting entry point.\
+  \ Router indexing the pyfolio sub-skills; load the sub-skill for the reporting layer\
+  \ you need."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -19,7 +21,13 @@ related_skills:
 - pyfolio-tearsheets
 - pyfolio-timeseries
 - alphalens
+target_version: '0.9.2 (dev: after 0.9.2)'
+upstream_status: dead
 ---
+
+## Version Note
+
+> ⚠️ **Upstream is frozen** (no commits since the pin). This skill describes `pyfolio` at its pinned commit — an abandoned release line. Target version: 0.9.2 (dev: after 0.9.2). Verify against your installed version before use.
 
 # pyfolio
 

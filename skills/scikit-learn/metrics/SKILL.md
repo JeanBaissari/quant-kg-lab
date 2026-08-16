@@ -25,7 +25,13 @@ tags:
 related_skills:
 - scikit-learn-model-selection
 - scikit-learn-preprocessing
+target_version: '1.9.0 (dev: after 1.9.0)'
+upstream_status: current
 ---
+
+## Version Note
+
+> ⚠️ **Pin is an unreleased dev commit.** This skill describes `scikit-learn` ahead of the latest PyPI release (1.9.0 (dev: after 1.9.0)). Some APIs may not exist in your installed version.
 
 # scikit-learn Metrics
 

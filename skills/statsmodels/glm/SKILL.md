@@ -26,7 +26,13 @@ related_skills:
 - statsmodels-diagnostics
 - scikit-learn-linear-model
 - pandas-core
+target_version: '0.14.6 (dev: after 0.14.6)'
+upstream_status: current
 ---
+
+## Version Note
+
+> ⚠️ **Pin is an unreleased dev commit.** This skill describes `statsmodels` ahead of the latest PyPI release (0.14.6 (dev: after 0.14.6)). Some APIs may not exist in your installed version.
 
 # statsmodels.genmod
 

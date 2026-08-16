@@ -1,6 +1,8 @@
 ---
 name: riskfolio-portfolio
-description: "Use when building constrained portfolio optimizations with Riskfolio-Lib — Portfolio, risk measures, constraints, and the cvxpy-backed optimization() call."
+description: "Use when building constrained portfolio optimizations with Riskfolio-Lib\
+  \ \u2014 Portfolio, risk measures, constraints, and the cvxpy-backed optimization()\
+  \ call."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -20,7 +22,13 @@ related_skills:
 - riskfolio
 - riskfolio-risk-measures
 - cvxpy-core
+target_version: '7.3.0 (dev: after 7.3.0)'
+upstream_status: current
 ---
+
+## Version Note
+
+> ⚠️ **Pin is an unreleased dev commit.** This skill describes `riskfolio` ahead of the latest PyPI release (7.3.0 (dev: after 7.3.0)). Some APIs may not exist in your installed version.
 
 # riskfolio.portfolio
 

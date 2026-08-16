@@ -22,7 +22,13 @@ related_skills:
 - pyportfolioopt-risk-models
 - pyportfolioopt-expected-returns
 - pyportfolioopt-black-litterman
+target_version: '1.6.0 (dev: after 1.6.0)'
+upstream_status: current
 ---
+
+## Version Note
+
+> ⚠️ **Pin is an unreleased dev commit.** This skill describes `pyportfolioopt` ahead of the latest PyPI release (1.6.0 (dev: after 1.6.0)). Some APIs may not exist in your installed version.
 
 # pypfopt
 

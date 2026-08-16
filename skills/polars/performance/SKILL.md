@@ -1,6 +1,7 @@
 ---
 name: polars-performance
-description: "Use when optimizing polars pipelines — lazy execution, scan/sink streaming, query planning, and parallelization."
+description: "Use when optimizing polars pipelines \u2014 lazy execution, scan/sink\
+  \ streaming, query planning, and parallelization."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -20,7 +21,13 @@ related_skills:
 - polars
 - polars-dataframe
 - polars-expressions
+target_version: '1.43.2 (dev: after 1.43.2)'
+upstream_status: current
 ---
+
+## Version Note
+
+> ⚠️ **Pin is an unreleased dev commit.** This skill describes `polars` ahead of the latest PyPI release (1.43.2 (dev: after 1.43.2)). Some APIs may not exist in your installed version.
 
 # polars.performance
 

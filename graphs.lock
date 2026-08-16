@@ -10,169 +10,197 @@
       "repo": "numpy/numpy",
       "commit": "ab2199763cb17878cd8f34fcbc97106c5397f922",
       "nodes": 8306,
-      "edges": 13483
+      "edges": 13483,
+      "upstream_status": "current"
     },
     "scipy": {
       "repo": "scipy/scipy",
       "commit": "0514ef9e73297ef8d6f46379731eedc619f9d201",
       "nodes": 14071,
-      "edges": 23466
+      "edges": 23466,
+      "upstream_status": "current"
     },
     "pandas": {
       "repo": "pandas-dev/pandas",
       "commit": "982854070758cd2015fc9e64395684546b1c5444",
       "nodes": 11368,
-      "edges": 39913
+      "edges": 39913,
+      "upstream_status": "current"
     },
     "scikit-learn": {
       "repo": "scikit-learn/scikit-learn",
       "commit": "6f8b95aa2234102acc3804fc8c7a3e6bd0506bfb",
       "nodes": 8450,
-      "edges": 28094
+      "edges": 28094,
+      "upstream_status": "current"
     },
     "optuna": {
       "repo": "optuna/optuna",
       "commit": "b6f2ea62fbe7fb09d0d1c75783c65dad098d9a06",
       "nodes": 2208,
-      "edges": 4013
+      "edges": 4013,
+      "upstream_status": "current"
     },
     "vectorbt": {
       "repo": "polakowo/vectorbt",
       "commit": "f9897528f675114e6b34790178dbb2ca137acb51",
       "nodes": 3682,
-      "edges": 9212
+      "edges": 9212,
+      "upstream_status": "current"
     },
     "backtrader": {
       "repo": "mementum/backtrader",
       "commit": "b853d7c90b6721476eb5a5ea3135224e33db1f14",
       "nodes": 2680,
-      "edges": 4964
+      "edges": 4964,
+      "upstream_status": "dead"
     },
     "ta-lib": {
       "repo": "TA-Lib/ta-lib-python",
       "commit": "a9ff1b47b3ddbd57274116645d688c0ed677338b",
       "nodes": 381,
-      "edges": 379
+      "edges": 379,
+      "upstream_status": "current"
     },
     "xgboost": {
       "repo": "dmlc/xgboost",
       "commit": "2a4786e61e08b41f63916089c35a10d0ac4626d2",
       "nodes": 1631,
-      "edges": 4318
+      "edges": 4318,
+      "upstream_status": "current"
     },
     "lightgbm": {
       "repo": "microsoft/LightGBM",
       "commit": "f9bf8d1358cd7b5d649b47175e56543b62856f98",
       "nodes": 593,
-      "edges": 2029
+      "edges": 2029,
+      "upstream_status": "current"
     },
     "statsmodels": {
       "repo": "statsmodels/statsmodels",
       "commit": "179d1f4df4164c94c69256fc9436d578a1beb163",
       "nodes": 11616,
-      "edges": 33529
+      "edges": 33529,
+      "upstream_status": "current"
     },
     "cvxpy": {
       "repo": "cvxpy/cvxpy",
       "commit": "e3b50dccf808e52e36f7b134b710e0e245742cc0",
       "nodes": 6380,
-      "edges": 16515
+      "edges": 16515,
+      "upstream_status": "current"
     },
     "pyportfolioopt": {
       "repo": "robertmartin8/PyPortfolioOpt",
       "commit": "a6638d2e06dae6f444fd022cfd4b3c528902a85b",
       "nodes": 342,
-      "edges": 522
+      "edges": 522,
+      "upstream_status": "current"
     },
     "arch": {
       "repo": "bashtage/arch",
       "commit": "704bb70e48372e3ccccdde7da379811657ad0224",
       "nodes": 1367,
-      "edges": 3900
+      "edges": 3900,
+      "upstream_status": "current"
     },
     "alphalens": {
       "repo": "quantopian/alphalens",
       "commit": "77084f1e4c2c0be407e032d444fb19e4be4b0f37",
       "nodes": 172,
-      "edges": 231
+      "edges": 231,
+      "upstream_status": "dead"
     },
     "pyfolio": {
       "repo": "quantopian/pyfolio",
       "commit": "4b901f6d73aa02ceb6d04b7d83502e5c6f2e81aa",
       "nodes": 305,
-      "edges": 361
+      "edges": 361,
+      "upstream_status": "dead"
     },
     "riskfolio": {
       "repo": "dcajasn/Riskfolio-Lib",
       "commit": "632a9e48fbaf2b9f8e83864a492332364b6ed32c",
       "nodes": 426,
-      "edges": 599
+      "edges": 599,
+      "upstream_status": "current"
     },
     "shap": {
       "repo": "shap/shap",
       "commit": "df974a1966294b9c7acebb1373fd6dc5445d1d3d",
       "nodes": 1277,
-      "edges": 1752
+      "edges": 1752,
+      "upstream_status": "current"
     },
     "polars": {
       "repo": "pola-rs/polars",
       "commit": "1f779c90256872c50a16622ce0e4e4f11e885b1a",
       "nodes": 5296,
-      "edges": 16925
+      "edges": 16925,
+      "upstream_status": "current"
     },
     "empyrical": {
       "repo": "Quantopian/empyrical",
       "commit": "40f61b4f229df10898d46d08f7b1bdc543c0f99c",
       "nodes": 180,
-      "edges": 258
+      "edges": 258,
+      "upstream_status": "dead"
     },
     "quantstats": {
       "repo": "ranaroussi/quantstats",
       "commit": "fbd10daed0227aa0d10da6513f1b15e7e98d7fae",
       "nodes": 393,
-      "edges": 531
+      "edges": 531,
+      "upstream_status": "stale"
     },
     "yfinance": {
       "repo": "ranaroussi/yfinance",
       "commit": "93eb4c234acc7d0cf9d176e602b8443179546253",
       "nodes": 823,
-      "edges": 1584
+      "edges": 1584,
+      "upstream_status": "current"
     },
     "imbalanced-learn": {
       "repo": "scikit-learn-contrib/imbalanced-learn",
       "commit": "8504e95f0160f61d1b617ca66f779646d2ee609e",
       "nodes": 611,
-      "edges": 865
+      "edges": 865,
+      "upstream_status": "current"
     },
     "pymc": {
       "repo": "pymc-devs/pymc",
       "commit": "47bdf54a27a4246498994de700e8d55e99eb2d49",
       "nodes": 4067,
-      "edges": 11144
+      "edges": 11144,
+      "upstream_status": "current"
     },
     "mplfinance": {
       "repo": "matplotlib/mplfinance",
       "commit": "493811dac9a203de7ec148fb95504e7d3f400ba5",
       "nodes": 244,
-      "edges": 317
+      "edges": 317,
+      "upstream_status": "dead"
     },
     "catboost": {
       "repo": "catboost/catboost",
       "commit": "549af60ecd40819be138046cd9c5ec737dca5e3b",
       "nodes": 793,
-      "edges": 1569
+      "edges": 1569,
+      "upstream_status": "current"
     },
     "ta": {
       "repo": "bukosabino/ta",
       "commit": "a890410710a6e483c9ba08da7f3dd5089e4b9dff",
       "nodes": 538,
-      "edges": 1208
+      "edges": 1208,
+      "upstream_status": "stale"
     },
     "darts": {
       "repo": "unit8co/darts",
       "commit": "080b5340366b8df25e048f4cfd11ca99e3806e97",
       "nodes": 3954,
-      "edges": 8240
+      "edges": 8240,
+      "upstream_status": "current"
     }
   }
 }

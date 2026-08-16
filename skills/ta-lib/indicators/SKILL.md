@@ -17,6 +17,8 @@ tags:
 - ta-lib
 - indicators
 related_skills: []
+target_version: 0.7.1 (released tag v0.7.1)
+upstream_status: current
 ---
 
 # TA-Lib Indicators (`talib`)

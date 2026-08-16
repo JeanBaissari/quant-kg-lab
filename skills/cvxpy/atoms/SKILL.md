@@ -25,7 +25,13 @@ related_skills:
 - cvxpy-problems
 - numpy-core
 - pyportfolioopt-efficient-frontier
+target_version: '1.9.2 (dev: after 1.9.2)'
+upstream_status: current
 ---
+
+## Version Note
+
+> ⚠️ **Pin is an unreleased dev commit.** This skill describes `cvxpy` ahead of the latest PyPI release (1.9.2 (dev: after 1.9.2)). Some APIs may not exist in your installed version.
 
 # cvxpy.atoms
 

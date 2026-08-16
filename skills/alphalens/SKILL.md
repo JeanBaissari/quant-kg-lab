@@ -1,6 +1,8 @@
 ---
 name: alphalens
-description: "Use when working with alphalens — the factor-analysis entry point. Router indexing the alphalens sub-skills; load the sub-skill for the analysis layer you need."
+description: "Use when working with alphalens \u2014 the factor-analysis entry point.\
+  \ Router indexing the alphalens sub-skills; load the sub-skill for the analysis\
+  \ layer you need."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -19,7 +21,13 @@ related_skills:
 - alphalens-factor-analysis
 - alphalens-tearsheets
 - pandas-core
+target_version: 0.4.0 (released tag v0.4.0)
+upstream_status: dead
 ---
+
+## Version Note
+
+> ⚠️ **Upstream is frozen** (no commits since the pin). This skill describes `alphalens` at its pinned commit — an abandoned release line. Target version: 0.4.0 (released tag v0.4.0). Verify against your installed version before use.
 
 # alphalens
 
