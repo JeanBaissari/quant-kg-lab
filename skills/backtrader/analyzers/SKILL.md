@@ -199,7 +199,11 @@ for year, ret in sorted(annual.items()):
 
 3. **`notify_trade` fires on trade open AND close**: Check `trade.isclosed` before computing trade metrics. Open trades at backtest end are NOT closed — they won't appear in TradeAnalyzer's `total.closed` count but will fire `notify_trade`.
 
-4. **DrawDown `fund=True` vs `fund=False`**: With `fund=True`, drawdown is calculated from the broker's total fund value (cash + positions). With `fund=False`, it's calculated from any other line (e.g., strategy value). Most use cases want `fund=True` (the default).
+4. **DrawDown `fund` default is `None`**: `DrawDown`'s `fund` parameter defaults to `None`,
+   which delegates to the broker's `fundmode` setting (which itself defaults to `False`).
+   With `fund=False`, drawdown is calculated from any line (e.g., strategy value). With
+   `fund=True`, drawdown uses the broker's total fund value (cash + positions). Most use
+   cases want `fund=True` — pass it explicitly.
 
 5. **`_name` is required for multi-analyzer access**: Without `_name='myanalyzer'`, the analyzer is accessible only by class reference — `strat.analyzers.SharpeRatio` becomes ambiguous with multiple Sharpe instances. Always set `_name`.
 

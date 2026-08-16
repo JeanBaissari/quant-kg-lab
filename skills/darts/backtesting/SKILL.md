@@ -76,8 +76,10 @@ and grid search.
   is also accepted — be explicit.
 - **Optimized path**: `supports_optimized_historical_forecasts` is False for most
   deep models — the loop is the slow path; don't expect the fast one.
-- **Horizon alignment**: `forecast_horizon` must match the model's
-  `output_chunk_length` for deep models, or predictions get truncated.
+- **Horizon alignment**: For modern darts (≥0.40), torch-based models auto-regressively
+  generate forecasts for horizons exceeding `output_chunk_length` — no truncation occurs.
+  Only `predict_likelihood_parameters` is restricted to `output_chunk_length`. Older deep
+  models without autoregressive support will truncate.
 - **Metrics on partial horizons**: compare forecasts of the SAME horizon — mixing
   1-step and 7-step metrics across candidates is invalid.
 

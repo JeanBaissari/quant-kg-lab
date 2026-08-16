@@ -1,6 +1,6 @@
 {
-  "generated": "2026-08-16T18:28:07+00:00",
-  "git_sha": "15d63a7",
+  "generated": "2026-08-16T20:21:32+00:00",
+  "git_sha": "fbdbc18",
   "mode": "all",
   "ci": true,
   "pass": true,
@@ -433,7 +433,7 @@
         "c6": {
           "name": "api surface",
           "pass": true,
-          "counts": "curated=50 unresolved=0 surface_coverage=100.0% (target 95.0%)"
+          "counts": "curated=50 unresolved=0 surface_coverage=95.9% (target 95.0%)"
         }
       }
     },
@@ -505,7 +505,7 @@
         "c6": {
           "name": "api surface",
           "pass": true,
-          "counts": "curated=5 unresolved=0 surface_coverage=100.0% (target 95.0%)"
+          "counts": "curated=5 unresolved=0 surface_coverage=97.9% (target 95.0%)"
         }
       }
     },
@@ -649,7 +649,7 @@
         "c6": {
           "name": "api surface",
           "pass": true,
-          "counts": "curated=122 unresolved=0 surface_coverage=100.0% (target 95.0%)"
+          "counts": "curated=121 unresolved=0 surface_coverage=100.0% (target 95.0%)"
         }
       }
     },

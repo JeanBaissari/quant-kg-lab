@@ -41,23 +41,20 @@ Statistical functions, probability distributions, and hypothesis tests. The work
 | `gaussian_kde` | `stats/_kde.py:L38` | — | Kernel density estimation for multivariate data |
 | `ttest_ind()` | `_stats_py.py:L6554` | 9 | Independent two-sample t-test (highest-degree test function) |
 | `mannwhitneyu()` | `_mannwhitneyu.py:L246` | 7 | Mann-Whitney U rank test |
+| `rv_continuous` | `stats/_distn_infrastructure.py:L1669` | 196 | Base class for custom continuous distributions |
+| `norm` | `stats/_new_distributions.py:L16` | — | Normal distribution (exemplar `rv_continuous` instance) |
 | `describe()` | `_stats_py.py:L1448` | 6 | Descriptive statistics summary |
 | `zscore()` | `_stats_py.py:L2673` | 4 | Compute z-scores relative to sample mean and std |
 | `bootstrap()` | `_resampling.py:L300` | 6 | Bootstrap confidence intervals for any statistic |
 
-### Additional Key APIs (by degree rank)
+### Additional Key APIs
 
 | API | Type | Description |
 |-----|------|-------------|
-| `ContinuousDistribution` | class | Modern distribution interface (scipy ≥ 1.15) | `stats/_distribution_infrastructure.py:L3533` |
-
-| `rv_continuous` | class | Legacy continuous distribution base class | `stats/_distn_infrastructure.py:L1669` |
-
-| `FitResult` | class | Result object from distribution fitting | `stats/_fit.py:L42` |
-
+| `rv_continuous` | class | Base class for custom continuous distributions; `norm`, `t`, `chi2` are instances | `stats/_distn_infrastructure.py:L1669` |
 | `CensoredData` | class | Right/left/interval-censored data container | `stats/_censored_data.py:L61` |
-
 | `QMCEngine` | class | Quasi-Monte Carlo sampling (Sobol, Halton) | `stats/_qmc.py:L799` |
+| `fit()` | function | Public fit method (scipy ≥ 1.9): `dist.fit(data)` returns `(loc, scale)` tuple | |
 
 | `pearsonr()` | function | Pearson correlation coefficient with p-value |
 | `spearmanr()` | function | Spearman rank correlation |
@@ -75,19 +72,20 @@ Statistical functions, probability distributions, and hypothesis tests. The work
 
 ## Distribution Objects
 
-Distribution classes are instantiated with shape parameters, not the module-level frozen instances:
+`stats.norm` is a frozen `rv_continuous` instance (loc=0, scale=1). To create
+distributions with different parameters, pass keyword arguments:
 
 ```python
 from scipy import stats
-# Preferred (v1.15+): ContinuousDistribution
-dist = stats.ContinuousDistribution(shape=(2,), name='norm')
 
-# Legacy approach still works
-dist = stats.norm(loc=0, scale=1)
+dist = stats.norm(loc=0, scale=1)  # frozen instance
 dist.pdf(0)      # 0.3989...
 dist.cdf(0)      # 0.5
 dist.ppf(0.975)  # 1.96
 dist.rvs(size=1000)
+
+# Custom distributions subclass rv_continuous
+# (ContinuousDistribution does NOT exist in released scipy)
 ```
 
 ## Common Patterns
@@ -157,18 +155,19 @@ print(res.confidence_interval)
 
 ### Distribution Fitting
 ```python
-# Fit a distribution to data
-params = stats.norm.fit(data)
+# Fit a distribution to data — returns (loc, scale) tuple
+params = stats.norm.fit(data)  # → (loc, scale)
+
 # Fit with censored data
 censored = stats.CensoredData(uncensored=observed, right=censored_at)
-fit = stats.norm.fit(censored)
+params = stats.norm.fit(censored)
 ```
 
 ## Pitfalls
 
 1. **`norm` is not a class, it's an instance**: `stats.norm` is a frozen `rv_continuous` instance with `loc=0, scale=1`. To create a distribution with different parameters, use `stats.norm(loc=5, scale=2)`. Do NOT try `stats.norm(loc=5, scale=2).__class__` — it returns the frozen instance, not a parameterized class.
 
-2. **Small-sample warnings on tests**: Functions like `ttest_ind`, `mannwhitneyu`, and `pearsonr` emit `SmallSampleWarning` for n < ~10. This is informational — the results are still computed — but p-values may be unreliable. Use `warnings.filterwarnings('ignore', category=stats.SmallSampleWarning)` to suppress if intentional.
+2. **Small-sample tests are unreliable but still computed**: Functions like `ttest_ind`, `mannwhitneyu`, and `pearsonr` do NOT emit a `SmallSampleWarning` — they compute without warning even at n=5. Statistical tests at very small n are unreliable but still computed — validate against known outcomes before trusting results.
 
 3. **`gaussian_kde` bandwidth scales with data range**: The default Scott's rule bandwidth can over-smooth multimodal data. For tight clusters or heavy tails, try `gaussian_kde(data, bw_method='silverman')` or manually reduce the bandwidth: `gaussian_kde(data, bw_method=0.1)`.
 
@@ -177,6 +176,8 @@ fit = stats.norm.fit(censored)
 5. **Bootstrap `BCa` method requires smooth statistics**: For discrete statistics (medians on small integer data), `BCa` can fail. Fall back to `method='percentile'` or `method='basic'`.
 
 6. **Statistical tests assume i.i.d. data**: Functions like `ttest_ind` assume independent samples. For paired data, use `ttest_rel`. For time-series data where observations are autocorrelated, standard p-values are inflated — consider block bootstrap or HAC-robust inference.
+
+7. **`ContinuousDistribution` does not exist in released scipy**: The class `ContinuousDistribution` is private (`scipy.stats._distribution_infrastructure.ContinuousDistribution`) and never exported. Use `rv_continuous` for custom distributions or `scipy.stats.norm` (and other frozen instances) for standard distributions. Use `scipy.stats.norm.fit()` for distribution fitting.
 
 ## Cross-Library Bridges
 
@@ -197,7 +198,8 @@ fit = stats.norm.fit(censored)
 - [ ] `stats.pearsonr(x, y)` returns `(r, pvalue)` — not just r
 - [ ] `stats.mannwhitneyu(a, b, alternative='two-sided')` accepts `alternative` kwarg
 - [ ] `stats.CensoredData` accepts `right`, `left`, `interval` keyword args
-- [ ] `stats.ContinuousDistribution` is available (scipy ≥ 1.15) or falls back to `rv_continuous`
+- [ ] `stats.norm.fit(data)` returns `(loc, scale)` tuple (not a FitResult object)
+- [ ] `rv_continuous` is available as base class for custom distributions
 
 ## Provenance
 

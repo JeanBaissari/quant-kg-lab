@@ -43,34 +43,38 @@ calendar data — each lazily fetched through the scrapers.
 | `TickerBase` | `base.py:L54` | Shared fetch/storage layer under Ticker (and Tickers) |
 | `.history()` | `scrapers/history.py:L41` | OHLCV history — period/interval/start/end, auto_adjust |
 | `PriceHistory` | `scrapers/history.py:L20` | History fetcher — the underlying request/parse layer |
-| `.fast_info()` | `ticker.py:L162` | Quote snapshot: last price, day range, market cap, PE |
+| `.fast_info` | `ticker.py:L162` | Quote snapshot: last price, day range, market cap, PE |
 | `FastInfo` | `scrapers/quote.py:L46` | Fast-info response object with cached fields |
-| `.info()` | `ticker.py:L158` | Full metadata dict (slower, richer than fast_info) |
-| `.income_stmt()` | `ticker.py:L201` | Income statement DataFrame |
-| `.quarterly_income_stmt()` | `ticker.py:L205` | Quarterly income statement |
-| `.ttm_income_stmt()` | `ticker.py:L209` | Trailing-twelve-months income statement |
-| `.financials()` | `ticker.py:L225` | Annual financials (revenue/earnings rows) |
-| `.balance_sheet()` | `ticker.py:L237` | Annual balance sheet |
-| `.cash_flow()` | `ticker.py:L253` | Annual cash-flow statement |
-| `.ttm_cash_flow()` | `ticker.py:L261` | TTM cash flow |
-| `.earnings()` | `ticker.py:L193` | Annual earnings history |
-| `.quarterly_earnings()` | `ticker.py:L197` | Quarterly earnings |
-| `.actions()` | `ticker.py:L150` | Dividends + splits combined |
-| `.dividends()` | `ticker.py:L138` | Dividend history |
-| `.splits()` | `ticker.py:L146` | Split history |
-| `.capital_gains()` | `ticker.py:L142` | Capital-gains distributions (funds) |
-| `.shares()` | `ticker.py:L154` | Share count history |
+| `.info` | `ticker.py:L158` | Full metadata dict (slower, richer than fast_info) |
+| `.income_stmt` | `ticker.py:L201` | Income statement DataFrame |
+| `.quarterly_income_stmt` | `ticker.py:L205` | Quarterly income statement |
+| `.ttm_income_stmt` | `ticker.py:L209` | Trailing-twelve-months income statement |
+| `.financials` | `ticker.py:L225` | Annual financials (revenue/earnings rows) |
+| `.balance_sheet` | `ticker.py:L237` | Annual balance sheet |
+| `.cash_flow` | `ticker.py:L253` | Annual cash-flow statement |
+| `.ttm_cash_flow` | `ticker.py:L261` | TTM cash flow |
+| `.earnings` | `ticker.py:L193` | Annual earnings history |
+| `.quarterly_earnings` | `ticker.py:L197` | Quarterly earnings |
+| `.actions` | `ticker.py:L150` | Dividends + splits combined |
+| `.dividends` | `ticker.py:L138` | Dividend history |
+| `.splits` | `ticker.py:L146` | Split history |
+| `.capital_gains` | `ticker.py:L142` | Capital-gains distributions (funds) |
+| `.shares` | `ticker.py:L154` | Share count history |
 | `.option_chain()` | `ticker.py:L83` | Calls/puts DataFrame pair for a date |
-| `.major_holders()` | `ticker.py:L114` | Top shareholders table |
-| `.institutional_holders()` | `ticker.py:L118` | Institutional ownership |
-| `.insider_transactions()` | `ticker.py:L130` | Insider trades |
-| `.calendar()` | `ticker.py:L170` | Next earnings/date events |
-| `.sec_filings()` | `ticker.py:L177` | Recent SEC filings list |
-| `.recommendations()` | `ticker.py:L181` | Analyst recommendations history |
-| `.upgrades_downgrades()` | `ticker.py:L189` | Rating-change events |
-| `.valuation()` | `ticker.py:L166` | Valuation metrics snapshot |
-| `.isin()` | `ticker.py:L110` | ISIN identifier for the symbol |
+| `.major_holders` | `ticker.py:L114` | Top shareholders table |
+| `.institutional_holders` | `ticker.py:L118` | Institutional ownership |
+| `.insider_transactions` | `ticker.py:L130` | Insider trades |
+| `.calendar` | `ticker.py:L170` | Next earnings/date events |
+| `.sec_filings` | `ticker.py:L177` | Recent SEC filings list |
+| `.recommendations` | `ticker.py:L181` | Analyst recommendations history |
+| `.upgrades_downgrades` | `ticker.py:L189` | Rating-change events |
+| `.valuation` | `ticker.py:L166` | Valuation metrics snapshot |
+| `.isin` | `ticker.py:L110` | ISIN identifier for the symbol |
 | `.get_info()` | `base.py:L281` | Alias/refresh path for `.info` |
+| `.get_dividends()` | `ticker.py:L138` | Getter method for dividend history |
+| `.get_splits()` | `ticker.py:L146` | Getter method for split history |
+| `.get_actions()` | `ticker.py:L150` | Getter method for dividends + splits |
+| `.get_shares()` | `ticker.py:L154` | Getter method for share count history |
 | `Analysis` | `scrapers/analysis.py:L11` | Analyst expectations scraper |
 | `Financials` | `scrapers/fundamentals.py:L43` | Financial-statement scraper |
 | `Holders` | `scrapers/holders.py:L12` | Holders scraper |
@@ -90,8 +94,7 @@ calendar data — each lazily fetched through the scrapers.
   ```
 - **Fundamental screens**: `t.income_stmt.loc["Total Revenue"]` /
   `t.balance_sheet.loc["Total Debt"]` — cross-sectional fundamental features.
-- **Action adjustment**: `t.actions()` + `t.splits()` — verify `auto_adjust` semantics
-  before computing raw (unadjusted) returns.
+- **Action adjustment**: `t.actions` + `t.splits` — property access, not method calls. Verify `auto_adjust` semantics before computing raw (unadjusted) returns.
 - **Options surface**: `t.option_chain(date)` → `calls`/`puts` frames with IV/Greeks —
   the input to volatility-surface work.
 - **Streaming**: `WebSocket`/`AsyncWebSocket` for live quotes in an event loop.
@@ -113,6 +116,10 @@ calendar data — each lazily fetched through the scrapers.
   the symbol via `yf.Search` before assuming data exists.
 - **Timezone**: `.history()` returns exchange-local timestamps — align to UTC before
   joining across markets.
+- **Ticker members are properties, not methods**: Accessing `.dividends()`, `.info()`,
+  `.fast_info()`, etc. with parentheses raises `TypeError`. Use property access:
+  `t.dividends`, `t.info`, `t.fast_info`. The `get_*()` variants (`.get_dividends()`,
+  `.get_info()`) are explicit getter methods where they exist.
 
 ## Provenance
 
@@ -122,5 +129,7 @@ Graph: `knowledge_graphs/yfinance/.graphify/graph.json` — 823 nodes · 1584 ed
 ## Verification Checklist
 
 - [ ] `yf.Ticker("AAPL").history(period="5d")` returns OHLCV rows
-- [ ] `t.fast_info()` returns a cached quote snapshot
+- [ ] `t.fast_info` returns a cached quote snapshot (property, not method call)
+- [ ] `t.info` returns full metadata dict (property, not method call)
+- [ ] `t.dividends` returns dividend history (property, not method call)
 - [ ] QR rows cite `ticker.py:L1`/`base.py:L1`/`scrapers/*.py` resolvable in the yfinance graph

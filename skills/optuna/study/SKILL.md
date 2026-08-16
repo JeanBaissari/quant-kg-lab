@@ -125,7 +125,7 @@ study.optimize(
 1. **Forgetting `load_if_exists=True`**: Without it, re-running crashes if study already exists in storage.
 2. **`timeout` vs `n_trials`**: `timeout` (seconds) only stops new trials; `n_trials` sets max count. Combine for safety.
 3. **Multi-objective `direction` must be list**: Single string `"maximize"` for single-objective; list `["maximize", "minimize"]` for multi.
-4. **Ask-and-Tell: don't forget `trial.suggest_*()`**: `study.ask()` returns a FrozenTrial; you still call `suggest_*` on it.
+4. **Ask-and-Tell: `study.ask()` returns a mutable `Trial`**: `study.ask()` returns a `Trial` object (not a `FrozenTrial`). You call `suggest_*` on it, then pass it to `study.tell(trial, value)`. Do not pass a `FrozenTrial` to `tell()` — it must be the mutable `Trial` from `ask()`.
 5. **Study deletion**: `delete_study()` requires storage reference; in-memory studies are auto-deleted at process exit.
 
 ## Verification Checklist

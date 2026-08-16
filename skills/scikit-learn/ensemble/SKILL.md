@@ -47,7 +47,7 @@ Communities: 3 ("Ensemble Methods Bagging"), 5 ("Ensemble Methods Boosting"), 23
 | `GradientBoostingRegressor` | `ensemble/_gb.py:L1734` | Gradient-boosted trees for regression | `n_estimators`, `learning_rate`, `max_depth`, `loss`, `alpha` (Huber/quantile) |
 | `BaggingClassifier` | `ensemble/_bagging.py:L683` | Bootstrap-aggregated classifier | `estimator`, `n_estimators`, `max_samples`, `bootstrap`, `oob_score` |
 | `BaggingRegressor` | `ensemble/_bagging.py:L1192` | Bootstrap-aggregated regressor | `estimator`, `n_estimators`, `max_samples`, `bootstrap` |
-| `AdaBoostClassifier` | `ensemble/_weight_boosting.py:L321` | Adaptive boosting (SAMME/SAMME.R) | `estimator`, `n_estimators`, `learning_rate`, `algorithm` |
+| `AdaBoostClassifier` | `ensemble/_weight_boosting.py:L321` | Adaptive boosting (SAMME) | `estimator`, `n_estimators`, `learning_rate`, `random_state` |
 | `AdaBoostRegressor` | `ensemble/_weight_boosting.py:L823` | AdaBoost for regression | `estimator`, `n_estimators`, `learning_rate`, `loss` |
 | `StackingClassifier` | `ensemble/_stacking.py:L422` | Stacked generalization classifier | `estimators`, `final_estimator`, `cv`, `stack_method` |
 | `StackingRegressor` | `ensemble/_stacking.py:L841` | Stacked generalization regressor | `estimators`, `final_estimator`, `cv` |

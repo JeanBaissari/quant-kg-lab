@@ -84,11 +84,13 @@ convexity. Picking the right atom is what keeps a model solvable.
 ## Pitfalls
 
 - **DCP violation**: composing convex(concave) is fine only under the
-  monotonicity rules — `norm(x) ** 2` is not DCP; use `sum_squares(x)`.
+  monotonicity rules — `norm(x) ** 2` IS DCP (cvxpy recognizes the composition);
+  but `square(norm(x))` is NOT DCP. `power(x, 0)` is allowed and returns a
+  constant-1 expression without error.
 - **PSD requirement**: `quad_form(x, P)` and `matrix_frac` require P PSD —
   pass `PSD=True` on the Parameter or use `psd_wrap`.
-- **`power()` domain**: `power(x, 0)` is not allowed; fractional powers need
-  positive arguments (constrain or use `pos()`).
+- **`power()` domain**: `power(x, 0)` is allowed and returns a constant-1 expression.
+  Fractional powers need positive arguments (constrain or use `pos()`).
 - **lambda_max needs symmetric input**: pass a symmetric variable or
   `x + x.T`-style expressions, otherwise the atom silently assumes symmetry.
 - **Large quad_forms**: `quad_form` densifies the matrix — for large P prefer

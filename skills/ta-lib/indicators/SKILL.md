@@ -71,8 +71,8 @@ TA-Lib (Technical Analysis Library) is a C library with Python bindings via Cyth
 ### Volatility Indicators (4 functions)
 `ATR`, `NATR`, `TRANGE`, `AVGDEV`
 
-### Volume Indicators (4 functions)
-`OBV`, `AD`, `ADOSC`, `LINEARREG_ANGLE`
+### Volume Indicators (3 functions)
+`OBV`, `AD`, `ADOSC`
 
 ### Price Transform (4 functions)
 `AVGPRICE`, `MEDPRICE`, `TYPPRICE`, `WCLPRICE`
@@ -86,7 +86,7 @@ TA-Lib (Technical Analysis Library) is a C library with Python bindings via Cyth
 ### Statistic Functions (9 functions)
 `BETA`, `CORREL`, `LINEARREG`, `LINEARREG_ANGLE`, `LINEARREG_INTERCEPT`, `LINEARREG_SLOPE`, `STDDEV`, `TSF`, `VAR`
 
-### Math Transform / Operators (24 functions)
+### Math Transform / Operators (26 functions)
 `ACOS`, `ASIN`, `ATAN`, `CEIL`, `COS`, `COSH`, `EXP`, `FLOOR`, `LN`, `LOG10`, `SIN`, `SINH`, `SQRT`, `TAN`, `TANH`, `ADD`, `DIV`, `MAX`, `MAXINDEX`, `MIN`, `MININDEX`, `MINMAX`, `MINMAXINDEX`, `MULT`, `SUB`, `SUM`
 
 ## Architecture Overview
@@ -181,7 +181,7 @@ bearish_engulfing = engulfing == -100
 bb_ema = talib.BBANDS(close, timeperiod=20, matype=1)  # EMA-based Bollinger
 ```
 
-### Pattern 5: Pattern 5: Full strategy signal pipeline
+### Pattern 5: Full strategy signal pipeline
 ```python
 import talib
 import numpy as np
@@ -229,7 +229,9 @@ result = sma_func.outputs  # Access via .outputs after setting inputs
 
 6. **STOCH vs STOCHF inputs**: `STOCH` returns `(slowk, slowd)` while `STOCHF` returns `(fastk, fastd)`. Their parameter names differ (`fastk_period` vs `fastk_period` with `slowk_period`/`slowd_period`). Don't confuse the two.
 
-7. **`matype` parameter idempotency**: The `matype` parameter (0=SMA, 1=EMA, etc.) defaults to 0 (SMA). Functions like BBANDS, MACDEXT, STOCH, and AROON accept `matype` but the default may not be what you expect — e.g., BBANDS with `matype=0` uses SMA for the middle band. Switch to EMA-based with `matype=1`.
+7. **STOCH uses `slowk_matype`/`slowd_matype` not `matype`**: Unlike BBANDS, STOCH takes
+   separate MA type parameters: `slowk_matype` and `slowd_matype` (both default to 0=SMA).
+   Functions like BBANDS and MACDEXT accept a single `matype` parameter.
 
 ## Cross-Library Bridges
 

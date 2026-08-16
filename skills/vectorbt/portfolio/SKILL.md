@@ -136,15 +136,15 @@ import vectorbt as vbt
 fast_windows = range(5, 30, 5)
 slow_windows = range(20, 60, 10)
 
-# Generate signals for all combinations
-signals = vbt.SignalFactory.from_params([
-    ('MA', dict(window=list(fast_windows))),
-    ('MA', dict(window=list(slow_windows)))
-], mode='cross')
+# Generate signals via IndicatorFactory.from_apply_func
+fast_ma = vbt.MA.run_combs(price, window=fast_windows, r=1, short_names='fast')
+slow_ma = vbt.MA.run_combs(price, window=slow_windows, r=1, short_names='slow')
 
-# Each param combination gets its own column pair
+entries = fast.ma_crossed_above(slow)
+exits = fast.ma_crossed_below(slow)
+
 # Run portfolio simulation
-portfolio = vbt.Portfolio.from_signals(price, *signals, freq='D')
+portfolio = vbt.Portfolio.from_signals(price, entries, exits, freq='D')
 
 # Stats → DataFrame indexed by (fast_window, slow_window)
 stats_df = portfolio.stats()

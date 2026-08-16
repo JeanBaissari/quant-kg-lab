@@ -47,7 +47,7 @@ Extracted from XGBoost knowledge graph. Sources: `python-package/xgboost/core.py
 
 | API | Purpose | Signature | _c_api.py:L1 |
 |-----|---------|-----------|
-| `train()` | Train a booster with given params | `train(params, dtrain, num_boost_round, evals, obj, feval, ...)` | dask/__init__.py:L833 |
+| `train()` | Train a booster with given params | `train(params, dtrain, num_boost_round, evals, obj, feval, ...)` | training.py:L53 |
 | `cv()` | Cross-validation | `cv(params, dtrain, nfold, num_boost_round, ...)` | training.py:L435 |
 | `Booster` | The trained model object | `predict()`, `save_model()`, `load_model()`, `dump_model()`, `get_score()`, `trees_to_dataframe()` | core.py:L1750 |
 
@@ -82,7 +82,6 @@ params = {
     'objective': 'reg:squarederror',
     'max_depth': 6,
     'learning_rate': 0.1,
-    'n_estimators': 100,
     'eval_metric': 'rmse'
 }
 

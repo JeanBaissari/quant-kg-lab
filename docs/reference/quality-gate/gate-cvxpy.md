@@ -11,4 +11,4 @@ Graph: `knowledge_graphs/cvxpy/.graphify/graph.json` · GRAPH_SPEC §5 · genera
 | c3 god nodes | PASS | top20=20 noise=0 |
 | c4 pin | PASS | expected=e3b50dccf808e52e36f7b134b710e0e245742cc0 found=e3b50dccf808e52e36f7b134b710e0e245742cc0 (graph) |
 | c5 audited | PASS | exists |
-| c6 api surface | PASS | curated=50 unresolved=0 surface_coverage=100.0% (target 95.0%) |
+| c6 api surface | PASS | curated=50 unresolved=0 surface_coverage=95.9% (target 95.0%) |

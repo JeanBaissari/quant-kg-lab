@@ -11,4 +11,4 @@ Graph: `knowledge_graphs/arch/.graphify/graph.json` · GRAPH_SPEC §5 · generat
 | c3 god nodes | PASS | top20=20 noise=0 |
 | c4 pin | PASS | expected=704bb70e48372e3ccccdde7da379811657ad0224 found=704bb70e48372e3ccccdde7da379811657ad0224 (graph) |
 | c5 audited | PASS | exists |
-| c6 api surface | PASS | curated=5 unresolved=0 surface_coverage=100.0% (target 95.0%) |
+| c6 api surface | PASS | curated=5 unresolved=0 surface_coverage=97.9% (target 95.0%) |

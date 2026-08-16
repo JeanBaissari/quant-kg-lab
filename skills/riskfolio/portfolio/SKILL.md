@@ -42,12 +42,12 @@ cvxpy — MV/CVaR/CDaR/EVaR objectives under weight/group/factor constraints.
 |-----|------------|-------------|
 | `Portfolio` | `src/Portfolio.py:L56` | Builds the optimization problem: returns, risk measure, constraints |
 | `Portfolio.optimization()` | `src/Portfolio.py:L1978` | Solves the portfolio problem and returns optimal weights |
-| `Portfolio.returns()` | `src/Portfolio.py:L510` | Accessor for the returns matrix |
-| `Portfolio.numassets()` | `src/Portfolio.py:L531` | Number of assets in the portfolio |
-| `Portfolio.ainequality()` | `src/Portfolio.py:L595` | Inequality constraint matrices (A/b) for the LP/QP form |
-| `Portfolio.binequality()` | `src/Portfolio.py:L619` | Inequality bound vector |
-| `Portfolio.arcinequality()` | `src/Portfolio.py:L639` | Return constraints (min/max per asset return) |
-| `Portfolio.afrcinequality()` | `src/Portfolio.py:L683` | Factor-return inequality matrices |
+| `Portfolio.returns` | `src/Portfolio.py:L510` | Property: access the returns matrix |
+| `Portfolio.numassets` | `src/Portfolio.py:L531` | Property: number of assets in the portfolio |
+| `Portfolio.ainequality` | `src/Portfolio.py:L595` | Property: inequality constraint matrices (A/b) for the LP/QP form |
+| `Portfolio.binequality` | `src/Portfolio.py:L619` | Property: inequality bound vector |
+| `Portfolio.arcinequality` | `src/Portfolio.py:L639` | Property: return constraints (min/max per asset return) |
+| `Portfolio.afrcinequality` | `src/Portfolio.py:L683` | Property: factor-return inequality matrices |
 | `assets_constraints()` | `src/ConstraintsFunctions.py:L37` | Weight bounds, group/sector caps, leverage limits |
 | `integer_constraints()` | `src/ConstraintsFunctions.py:L397` | Cardinality/round-lot integer constraints |
 | `assets_views()` | `src/ConstraintsFunctions.py:L717` | Views on asset returns (Black-Litterman style) |
@@ -73,8 +73,8 @@ cvxpy — MV/CVaR/CDaR/EVaR objectives under weight/group/factor constraints.
   forecast view (BL-style) without a full Black-Litterman model.
 - **Risk cap**: `risk_constraint(...)` — bind total portfolio risk to a level while
   optimizing a different objective.
-- **Custom LP/QP access**: read `port.ainequality()` / `port.binequality()` after setup —
-  audit the exact linear program before solving.
+- **Custom LP/QP access**: read `port.ainequality` / `port.binequality` after setup —
+  audit the exact linear program before solving. (Properties, not method calls.)
 
 ## Pitfalls
 
