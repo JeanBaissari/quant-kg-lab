@@ -512,7 +512,22 @@ def main():
                 installed = own is not None
                 universe = global_universe()
                 for c in sorted(classes):
-                    if (own and c in own) or in_graph_labels(labels, c) or c in curated:
+                    if (own and c in own):
+                        continue
+                    graph_or_curated = in_graph_labels(labels, c) or c in curated
+                    if graph_or_curated:
+                        if installed:
+                            if c in deep:
+                                r["api_warn"].append(
+                                    f"class {c}: internal/private module (real, not top-level)")
+                            else:
+                                r["api_fail"].append(
+                                    f"class {c}: graph-only claim — exists in the graph/curated "
+                                    "manifest but NOT in the installed library (QKG_070 reverse-"
+                                    "trust; pin may be unreleased or the symbol was removed)")
+                        else:
+                            r["api_warn"].append(
+                                f"class {c}: graph/curated-backed (installed-lib check skipped)")
                         continue
                     if not installed:
                         r["api_warn"].append(
@@ -530,7 +545,22 @@ def main():
                         r["api_fail"].append(
                             f"class {c}: NOT FOUND — review (renamed/removed/hallucinated)")
                 for fn in sorted(functions):
-                    if (own and fn in own) or in_graph_labels(labels, fn) or fn in curated:
+                    if (own and fn in own):
+                        continue
+                    graph_or_curated = in_graph_labels(labels, fn) or fn in curated
+                    if graph_or_curated:
+                        if installed:
+                            if fn in deep:
+                                r["api_warn"].append(
+                                    f"func {fn}: internal/private module (real, not top-level)")
+                            else:
+                                r["api_fail"].append(
+                                    f"func {fn}: graph-only claim — exists in the graph/curated "
+                                    "manifest but NOT in the installed library (QKG_070 reverse-"
+                                    "trust; pin may be unreleased or the symbol was removed)")
+                        else:
+                            r["api_warn"].append(
+                                f"func {fn}: graph/curated-backed (installed-lib check skipped)")
                         continue
                     if not installed:
                         r["api_warn"].append(

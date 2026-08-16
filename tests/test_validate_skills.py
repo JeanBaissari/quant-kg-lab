@@ -349,15 +349,23 @@ class TestLineAwareCitations(ValidatorTestCase):
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
 
 
-if __name__ == "__main__":
-    unittest.main()
+
+class TestReverseTrustApi(ValidatorTestCase):
+    """QKG_070: graph-backed claims absent from the INSTALLED library must fail --strict."""
+
+    def test_graph_only_claim_fails_strict_on_installed_lib(self):
+        if not NUMPY_INSTALLED:
+            self.skipTest("numpy not installed")
+        p = REAL_ROOT / "skills" / "numpy" / "core" / "SKILL.md"
+        t0 = p.read_text()
+        plant = "| `blas_fpe_check` | `_core/_asarray.py:L24` | probe | \u2014 |\n"
+        p.write_text(t0.replace("| `array` |", plant + "| `array` |", 1))
+        self.addCleanup(lambda: p.write_text(t0))
+        import subprocess
+        r = subprocess.run(
+            [sys.executable, "scripts/validate_skills.py", "--strict", "numpy"],
+            capture_output=True, text=True, cwd=str(REAL_ROOT))
+        self.assertEqual(r.returncode, 1, r.stdout + r.stderr)
+        self.assertIn("graph-only claim", r.stdout + r.stderr)
 
 
-
-if __name__ == "__main__":
-    unittest.main()
-
-
-
-if __name__ == "__main__":
-    unittest.main()

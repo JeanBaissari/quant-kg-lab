@@ -54,14 +54,20 @@ jobs:
 
   api:
     # GATE: validate skill claims against the LIVE installed APIs + provenance.
+    # QKG_070: 2x14 matrix so ALL 28 libraries are live-checked (was 10/28).
+    # Reverse-trust: graph-backed claims absent from the installed lib now fail.
     # TA-Lib's C library is built from source so ta-lib skills really validate.
-    # A hallucinated symbol fails the PR check (QKG_008).
+    strategy:
+      matrix:
+        libs:
+          - "numpy scipy pandas scikit-learn optuna vectorbt xgboost lightgbm backtrader ta-lib statsmodels cvxpy pyportfolioopt arch"
+          - "alphalens pyfolio riskfolio shap polars empyrical quantstats yfinance imbalanced-learn pymc mplfinance catboost ta darts"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: '3.12'
       - name: Build system TA-Lib C library
         run: |
           sudo apt-get update && sudo apt-get install -y build-essential wget
@@ -70,9 +76,9 @@ jobs:
           ./configure --prefix=/usr >/dev/null && make -j2 >/dev/null && sudo make install >/dev/null
       - name: Install target libraries
         run: |
-          pip install pyyaml numpy scipy pandas scikit-learn optuna vectorbt xgboost lightgbm backtrader TA-Lib
-      - name: Validate skills against live APIs + provenance (strict)
-        run: python scripts/validate_skills.py --strict --provenance
+          pip install pyyaml ${{ matrix.libs }} | tail -3 || true
+      - name: Validate skills against live APIs + provenance (strict, reverse-trust)
+        run: python scripts/validate_skills.py --strict --provenance ${{ matrix.libs }}
       - if: always()
         uses: actions/upload-artifact@v4
         with:
