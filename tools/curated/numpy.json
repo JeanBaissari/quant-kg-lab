@@ -9,7 +9,7 @@
     {
       "label": "ScalarType",
       "source_file": "__init__.py",
-      "description": "Built-in immutable sequence."
+      "description": "Type annotation: a tuple union of NumPy scalar types accepted where a scalar dtype is expected (numpy.typing.ScalarType)."
     },
     {
       "label": "True_",
@@ -284,7 +284,7 @@
     {
       "label": "ctypeslib",
       "source_file": "__init__.py",
-      "description": "============================."
+      "description": "Module `ctypeslib` \u2014 conversion helpers between NumPy arrays and C ctypes types (as_ctypes, as_array, load_library)."
     },
     {
       "label": "datetime64",
@@ -339,7 +339,7 @@
     {
       "label": "e",
       "source_file": "__init__.py",
-      "description": "Convert a string or number to a floating point number, if possible."
+      "description": "Euler's number (2.71828...), the base of the natural logarithm; a Python float constant."
     },
     {
       "label": "emath",
@@ -349,7 +349,7 @@
     {
       "label": "euler_gamma",
       "source_file": "__init__.py",
-      "description": "Convert a string or number to a floating point number, if possible."
+      "description": "Euler's constant (0.57721...), the limit of the harmonic series minus the natural log; a Python float constant."
     },
     {
       "label": "exceptions",
@@ -494,7 +494,7 @@
     {
       "label": "inf",
       "source_file": "__init__.py",
-      "description": "Convert a string or number to a floating point number, if possible."
+      "description": "Positive infinity; the float result of overflow and of division by zero in IEEE-754 arithmetic."
     },
     {
       "label": "info()",
@@ -639,7 +639,7 @@
     {
       "label": "ma",
       "source_file": "__init__.py",
-      "description": "=============."
+      "description": "Module `ma` \u2014 masked-array support: masked arrays, masked constants, and statistical functions on masked data."
     },
     {
       "label": "matvec()",
@@ -669,7 +669,7 @@
     {
       "label": "nan",
       "source_file": "__init__.py",
-      "description": "Convert a string or number to a floating point number, if possible."
+      "description": "Not-a-Number; the float result of undefined arithmetic such as 0/0 or sqrt(-1)."
     },
     {
       "label": "nanmedian()",
@@ -694,7 +694,7 @@
     {
       "label": "newaxis",
       "source_file": "__init__.py",
-      "description": "Public NumPy API symbol `np.newaxis` (C-implemented or namespace; see docs)."
+      "description": "Alias for None; insert a new axis into an array by indexing with np.newaxis, e.g. a[np.newaxis, :]."
     },
     {
       "label": "nextafter()",
@@ -724,7 +724,7 @@
     {
       "label": "pi",
       "source_file": "__init__.py",
-      "description": "Convert a string or number to a floating point number, if possible."
+      "description": "The ratio of a circle's circumference to its diameter (3.14159...); a Python float constant."
     },
     {
       "label": "polynomial",
@@ -919,7 +919,7 @@
     {
       "label": "typing",
       "source_file": "__init__.py",
-      "description": "============================."
+      "description": "Module `typing` \u2014 static-typing aliases and protocols for NumPy (ArrayLike, NDArray, DTypeLike)."
     },
     {
       "label": "ubyte",

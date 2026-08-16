@@ -114,6 +114,9 @@ whole module.
   only when you call the `*_aligned` forms — the raw forms assume aligned inputs.
 - **GPD estimators need thresholds**: the EVT calculators assume you've selected a
   tail threshold — garbage thresholds yield garbage tail metrics.
+- **Cross-library convention harmonization**: empyrical's positive drawdown magnitude
+  and 0.0 risk-free default differ from quantstats/backtrader/pypfopt — see
+  `quant-metric-conventions` before mixing metrics in one report.
 
 ## Provenance
 

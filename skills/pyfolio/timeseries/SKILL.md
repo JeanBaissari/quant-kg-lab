@@ -88,6 +88,9 @@ drawdown analysis — the numbers behind the tear sheets.
   monthly) or all ratios are wrong.
 - **NaN handling**: forward-fill gaps in returns before stats; zeros are fine, NaNs are not.
 - **Benchmark alignment**: `factor_returns` (benchmark) must share the index with returns.
+- **Cross-library convention harmonization**: pyfolio's positive drawdown magnitude
+  and 0.0 risk-free default match empyrical but differ from quantstats/backtrader —
+  see `quant-metric-conventions` before mixing metrics in one report.
 
 ## Provenance
 

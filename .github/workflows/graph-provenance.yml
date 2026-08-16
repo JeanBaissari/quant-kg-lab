@@ -40,8 +40,10 @@ jobs:
       - run: pip install pyyaml
       - name: Quality Gate -- all libraries
         run: python3 scripts/graph_gate.py --ci --all
-      - name: Truth counts -- committed docs must match the canonical block (QKG_065)
+      - name: Truth counts — committed docs must match the canonical block (QKG_065)
         run: python3 scripts/emit_counts.py --diff
+      - name: Curated descriptions — no builtin docstrings (QKG_073)
+        run: python3 scripts/check_curated_descriptions.py
 
   freshness-report:
     # INFORMATIONAL only: how far upstream HEAD has moved past our graphs.lock pins.

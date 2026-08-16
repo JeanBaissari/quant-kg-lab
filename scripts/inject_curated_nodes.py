@@ -46,15 +46,12 @@ def main():
         sf = n.get("source_file")
         if sf:
             modnodes.setdefault(sf, n)
-    added, skipped, unlinked = [], [], []
+    added, skipped, updated, unlinked = [], [], [], []
     links = list(g.get("links", []))
     existing = {(l["source"], l["target"]) for l in links}
     for entry in manifest["symbols"]:
         label = entry["label"]
-        nid = "curated_" + label.rstrip("()").lower()
-        if nid in byid:
-            skipped.append(nid)
-            continue
+        nid = entry.get("id") or ("curated_" + label.rstrip("()").lower())
         sf = entry.get("source_file") or "__init__.py"
         mod = modnodes.get(sf)
         community = mod.get("community") if mod else None
@@ -68,6 +65,15 @@ def main():
             "community_name": cname,
             "description": entry["description"],
         }
+        if nid in byid:
+            old = byid[nid]
+            if (old.get("label"), old.get("source_file"),
+                    old.get("description")) != (label, sf, entry["description"]):
+                byid[nid] = node
+                updated.append(nid)
+            else:
+                skipped.append(nid)
+            continue
         added.append(node)
         byid[nid] = node
         if mod and (mod["id"], nid) not in existing:
@@ -79,8 +85,8 @@ def main():
             })
         elif not mod:
             unlinked.append(label)
-    print(f"{lib}: {len(added)} curated nodes to add, {len(skipped)} already present, "
-          f"{len(links) - len(g.get('links', []))} contains links "
+    print(f"{lib}: {len(added)} curated nodes to add, {len(skipped)} unchanged, "
+          f"{len(updated)} updated, {len(links) - len(g.get('links', []))} contains links "
           f"({len(unlinked)} unlinked: {unlinked[:8]})")
     if not apply:
         print("dry-run: no changes written (use --apply)")

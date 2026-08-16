@@ -12,7 +12,7 @@ graph:
   nodes: 1367
   edges: 3900
   community_count: 135
-  graph_hash: e3f8bcd939a66a6d
+  graph_hash: e1c10f7f48d897c2
 tags:
 - arch
 - unitroot

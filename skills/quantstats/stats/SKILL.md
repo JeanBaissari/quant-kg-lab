@@ -93,6 +93,10 @@ kelly, ulcer, serenity). Thin wrappers extend empyrical with the trading-metric 
   frequency in any report.
 - **Risk-free consistency**: pass the same `rf`/period to sharpe and sortino or the
   report's ratios are not comparable.
+- **Cross-library convention harmonization**: quantstats returns a NEGATIVE drawdown
+  while empyrical/pyfolio return positive magnitudes, and its risk-free default (0.0)
+  differs from backtrader (0.01) and pypfopt (0.02) — see
+  `quant-metric-conventions` before comparing across libraries.
 
 ## Provenance
 

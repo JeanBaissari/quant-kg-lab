@@ -4,27 +4,27 @@
     {
       "label": "compat",
       "source_file": "__init__.py",
-      "description": "Public NumPy API symbol `np.compat` (C-implemented or namespace; see docs)."
+      "description": "Module `compat` \u2014 cross-package compatibility shims (e.g., statsmodels/scipy API backports)."
     },
     {
       "label": "univariate",
       "source_file": "__init__.py",
-      "description": "Public NumPy API symbol `np.univariate` (C-implemented or namespace; see docs)."
+      "description": "Module `univariate` \u2014 univariate volatility and mean models (ARCH, GARCH, EGARCH, ...) for conditional-volatility estimation."
     },
     {
       "label": "utility",
       "source_file": "__init__.py",
-      "description": "Public NumPy API symbol `np.utility` (C-implemented or namespace; see docs)."
+      "description": "Module `utility` \u2014 helpers: coverage-matrix computation, covariance-parameter interfaces, and date utilities."
     },
     {
       "label": "vendor",
       "source_file": "__init__.py",
-      "description": "Public NumPy API symbol `np.vendor` (C-implemented or namespace; see docs)."
+      "description": "Module `vendor` \u2014 vendored third-party code bundled for compatibility."
     },
     {
       "label": "version_tuple",
       "source_file": "__init__.py",
-      "description": "Built-in immutable sequence."
+      "description": "The installed arch version as a named tuple of (major, minor, patch) integers."
     }
   ]
 }

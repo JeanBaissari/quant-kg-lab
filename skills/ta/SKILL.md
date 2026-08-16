@@ -13,7 +13,7 @@ graph:
   nodes: 538
   edges: 1208
   community_count: 42
-  graph_hash: cbe70e45f62aaff1
+  graph_hash: 22c930724a65fb1b
 tags:
 - ta
 - technical-analysis

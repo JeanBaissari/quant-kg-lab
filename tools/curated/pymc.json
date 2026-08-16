@@ -14,7 +14,7 @@
     {
       "label": "moment()",
       "source_file": "distributions/distribution.py",
-      "description": "Public NumPy API symbol `np.moment` (C-implemented or namespace; see docs)."
+      "description": "Deprecated helper (use support_point()): returns a representative point/value of a distribution to start optimization or MCMC sampling."
     },
     {
       "label": "mean()",

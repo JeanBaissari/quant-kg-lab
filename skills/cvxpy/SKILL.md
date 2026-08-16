@@ -12,7 +12,7 @@ graph:
   nodes: 6380
   edges: 16515
   community_count: 297
-  graph_hash: e985870ca0f4d020
+  graph_hash: 0d326b4657b563eb
 tags:
 - cvxpy
 - router

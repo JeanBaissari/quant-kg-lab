@@ -1,9 +1,11 @@
 {
   "lib": "arch",
-  "total": 8,
-  "present": 8,
-  "missing": 0,
-  "coverage": 100.0,
-  "by_mechanism": {},
+  "total": 192,
+  "present": 188,
+  "missing": 4,
+  "coverage": 97.92,
+  "by_mechanism": {
+    "M2b-unimportable": 4
+  },
   "generated": "2026-08-12"
 }

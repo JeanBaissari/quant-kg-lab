@@ -2,8 +2,11 @@
 
 # API-surface — arch
 
-Public top-level symbols: 8 · present in graph: 8 · **coverage 100.0%** (target ≥95%)
+Public top-level symbols: 192 · present in graph: 188 · **coverage 97.9%** (target ≥95%)
 
 | symbol | mechanism | defining source |
 |---|---|---|
-
+| pytest_configure | M2b-unimportable | conftest.py |
+| pytest_addoption | M2b-unimportable | conftest.py |
+| pytest_runtest_setup | M2b-unimportable | conftest.py |
+| agg_backend | M2b-unimportable | conftest.py |

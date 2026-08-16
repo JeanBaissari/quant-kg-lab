@@ -19,32 +19,32 @@
     {
       "label": "SequentialMasker",
       "source_file": "benchmark/_sequential.py",
-      "description": "Public NumPy API symbol `np.SequentialMasker` (C-implemented or namespace; see docs)."
+      "description": "Benchmark class that sequentially masks input features (by sort order and perturbation type) to compute removal curves for a model."
     },
     {
       "label": "SequentialPerturbation",
       "source_file": "benchmark/_sequential.py",
-      "description": "Public NumPy API symbol `np.SequentialPerturbation` (C-implemented or namespace; see docs)."
+      "description": "Benchmark class that perturbs features sequentially and scores the model's dependence on each feature to build removal curves."
     },
     {
       "label": "experiments()",
       "source_file": "benchmark/experiments.py",
-      "description": "Public NumPy API symbol `np.experiments` (C-implemented or namespace; see docs)."
+      "description": "Benchmark-suite iterator: yields (dataset, model, method, metric) experiment tuples, optionally filtered by argument."
     },
     {
       "label": "run_experiment()",
       "source_file": "benchmark/experiments.py",
-      "description": "Public NumPy API symbol `np.run_experiment` (C-implemented or namespace; see docs)."
+      "description": "Runs a single benchmark experiment (dataset, model, method, metric) and returns its scores, with optional pickle caching."
     },
     {
       "label": "run_experiments_helper()",
       "source_file": "benchmark/experiments.py",
-      "description": "Public NumPy API symbol `np.run_experiments_helper` (C-implemented or namespace; see docs)."
+      "description": "Worker helper that unpacks an (experiment, cache_dir) tuple and runs run_experiment, for parallel execution."
     },
     {
       "label": "run_experiments()",
       "source_file": "benchmark/experiments.py",
-      "description": "Public NumPy API symbol `np.run_experiments` (C-implemented or namespace; see docs)."
+      "description": "Runs the benchmark experiments for the given filters, optionally in parallel, and returns (experiment, score) pairs."
     },
     {
       "label": "run_remote_experiments()",
@@ -54,27 +54,27 @@
     {
       "label": "update()",
       "source_file": "benchmark/framework.py",
-      "description": "Public NumPy API symbol `np.update` (C-implemented or namespace; see docs)."
+      "description": "Benchmark helper that runs a sequential-perturbation removal curve and records the (xs, ys, auc) result under the given metric key."
     },
     {
       "label": "get_benchmark()",
       "source_file": "benchmark/framework.py",
-      "description": "Public NumPy API symbol `np.get_benchmark` (C-implemented or namespace; see docs)."
+      "description": "Benchmark helper that evaluates a list of metrics against a model and its attributions, returning per-metric scores."
     },
     {
       "label": "get_metrics()",
       "source_file": "benchmark/framework.py",
-      "description": "Public NumPy API symbol `np.get_metrics` (C-implemented or namespace; see docs)."
+      "description": "Benchmark helper that selects the set of metrics shared across (or unioned from) the given benchmark results."
     },
     {
       "label": "trend_plot()",
       "source_file": "benchmark/framework.py",
-      "description": "Public NumPy API symbol `np.trend_plot` (C-implemented or namespace; see docs)."
+      "description": "Benchmark plotting helper: plots the performance-vs-feature-count trend curve for each metric in the results."
     },
     {
       "label": "compare_plot()",
       "source_file": "benchmark/framework.py",
-      "description": "Public NumPy API symbol `np.compare_plot` (C-implemented or namespace; see docs)."
+      "description": "Benchmark plotting helper: side-by-side comparison of explainer methods across shared metrics."
     },
     {
       "label": "remove_retrain()",
@@ -134,7 +134,7 @@
     {
       "label": "to_array()",
       "source_file": "benchmark/measures.py",
-      "description": "Public NumPy API symbol `np.to_array` (C-implemented or namespace; see docs)."
+      "description": "Benchmark helper that converts any pandas DataFrame arguments to numpy arrays."
     },
     {
       "label": "const_rand()",
@@ -169,7 +169,7 @@
     {
       "label": "random()",
       "source_file": "benchmark/methods.py",
-      "description": "Public NumPy API symbol `np.random` (C-implemented or namespace; see docs)."
+      "description": "Benchmark method: returns attributions from a random (baseline) explainer as a comparison reference."
     },
     {
       "label": "kernel_shap_1000_meanref()",
@@ -179,7 +179,7 @@
     {
       "label": "sampling_shap_1000()",
       "source_file": "benchmark/methods.py",
-      "description": "Public NumPy API symbol `np.sampling_shap_1000` (C-implemented or namespace; see docs)."
+      "description": "Benchmark method: SHAP values from the SamplingExplainer using 1000 samples."
     },
     {
       "label": "tree_shap_tree_path_dependent()",
@@ -199,7 +199,7 @@
     {
       "label": "saabas()",
       "source_file": "benchmark/methods.py",
-      "description": "Public NumPy API symbol `np.saabas` (C-implemented or namespace; see docs)."
+      "description": "Benchmark method: SHAP values with the Saabas (tree path-dependent) approximation via TreeExplainer(approximate=True)."
     },
     {
       "label": "tree_gain()",
@@ -219,12 +219,13 @@
     {
       "label": "maple()",
       "source_file": "benchmark/methods.py",
-      "description": "Public NumPy API symbol `np.maple` (C-implemented or namespace; see docs)."
+      "description": "Benchmark method: attributions from the MAPLE explainer (local linear approximations).",
+      "id": "curated_maple_bench"
     },
     {
       "label": "tree_maple()",
       "source_file": "benchmark/methods.py",
-      "description": "Public NumPy API symbol `np.tree_maple` (C-implemented or namespace; see docs)."
+      "description": "Benchmark method: attributions from the Tree-MAPLE explainer (local linear approximations for tree ensembles)."
     },
     {
       "label": "deep_shap()",
@@ -240,11 +241,6 @@
       "label": "runtime()",
       "source_file": "benchmark/metrics.py",
       "description": "Runtime (sec / 1k samples)."
-    },
-    {
-      "label": "local_accuracy()",
-      "source_file": "benchmark/measures.py",
-      "description": "The how well do the features plus a constant base rate sum up to the model output."
     },
     {
       "label": "consistency_guarantees()",
@@ -574,41 +570,41 @@
     {
       "label": "get_method_color()",
       "source_file": "benchmark/plots.py",
-      "description": "Public NumPy API symbol `np.get_method_color` (C-implemented or namespace; see docs)."
+      "description": "Benchmark plotting helper: returns the plotting color declared in a benchmark method's docstring metadata."
     },
     {
       "label": "get_method_linestyle()",
       "source_file": "benchmark/plots.py",
-      "description": "Public NumPy API symbol `np.get_method_linestyle` (C-implemented or namespace; see docs)."
+      "description": "Benchmark plotting helper: returns the line style declared in a benchmark method's docstring metadata."
     },
     {
       "label": "get_metric_attr()",
       "source_file": "benchmark/plots.py",
-      "description": "Public NumPy API symbol `np.get_metric_attr` (C-implemented or namespace; see docs)."
+      "description": "Benchmark plotting helper: extracts a declared attribute (e.g. transform) from a benchmark metric's docstring metadata."
     },
     {
       "label": "plot_curve()",
       "source_file": "benchmark/plots.py",
-      "description": "Public NumPy API symbol `np.plot_curve` (C-implemented or namespace; see docs)."
+      "description": "Benchmark plotting helper: runs the experiments for a dataset/model/metric and plots the performance curve per method."
     },
     {
       "label": "plot_human()",
       "source_file": "benchmark/plots.py",
-      "description": "Public NumPy API symbol `np.plot_human` (C-implemented or namespace; see docs)."
+      "description": "Benchmark plotting helper: plots the human-annotation (decision-tree proxy) comparison for a metric."
     },
     {
       "label": "make_grid()",
       "source_file": "benchmark/plots.py",
-      "description": "Public NumPy API symbol `np.make_grid` (C-implemented or namespace; see docs)."
+      "description": "Benchmark plotting helper: collects per-metric score data (with optional normalization or transform) into a grid for plotting."
     },
     {
       "label": "plot_grids()",
       "source_file": "benchmark/plots.py",
-      "description": "Public NumPy API symbol `np.plot_grids` (C-implemented or namespace; see docs)."
+      "description": "Benchmark plotting helper: runs the experiments for a dataset and a list of models and renders the full HTML grid of result plots."
     },
     {
       "label": "MAPLE",
-      "source_file": "_maple.py",
+      "source_file": "benchmark/methods.py",
       "description": "shap MAPLE explainer alias: model-agnostic local explanations (the Maple class lives in explainers/other/_maple.py; the top-level MAPLE binding mirrors it)."
     }
   ]

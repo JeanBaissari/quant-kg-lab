@@ -175,7 +175,7 @@ def main():
             src = info.get("source_file")
             doc = info.get("description", "")
         missing.append({"symbol": s, "mechanism": mech, "source_file": src,
-                        "description": _desc(doc, s, obj)})
+                        "description": _desc(doc, s, obj, lib)})
     coverage = 100.0 * present / len(symbols) if symbols else 100.0
     by_mech = {}
     for m in missing:
@@ -215,11 +215,24 @@ def main():
         sys.exit(1)
 
 
-def _desc(doc, sym, obj):
+def _desc(doc, sym, obj, lib=None):
+    """One-line semantic description for a curated symbol (QKG_073).
+
+    Never harvest `type(obj).__doc__` for value-typed symbols — `np.e`'s
+    `__doc__` is `float.__doc__`, cvxpy's OPTIMAL is `str.__doc__`, and module
+    docstrings end with '====' underlines. For non-callable/namespace symbols,
+    build a static name-based description instead."""
+    import types
     d = (doc or "").strip().split("\n")[0] if doc else ""
     d = d.strip().strip(".") + "." if d and not d.endswith(".") else d
-    if not d or len(d) < 12:
-        d = f"Public NumPy API symbol `np.{sym}` (C-implemented or namespace; see docs)."
+    is_value = not isinstance(obj, (type, types.FunctionType, types.BuiltinFunctionType,
+                                    types.MethodType)) and not callable(obj)
+    is_module = isinstance(obj, types.ModuleType)
+    if is_module:
+        d = f"Module `{sym}` — a submodule of the {lib or 'library'} package."
+    elif is_value or not d or len(d) < 12 or set(d) <= set("=-"):
+        libname = lib or "the library"
+        d = f"`{sym}` — a public symbol of {libname} (name-based description; see the package docs)."
     return d[:220]
 
 

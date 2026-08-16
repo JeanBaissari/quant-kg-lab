@@ -1,9 +1,12 @@
 {
   "lib": "cvxpy",
-  "total": 244,
-  "present": 244,
-  "missing": 0,
-  "coverage": 100.0,
-  "by_mechanism": {},
+  "total": 849,
+  "present": 814,
+  "missing": 35,
+  "coverage": 95.88,
+  "by_mechanism": {
+    "M2b-unimportable": 22,
+    "M2b-unimportable-class": 13
+  },
   "generated": "2026-08-12"
 }

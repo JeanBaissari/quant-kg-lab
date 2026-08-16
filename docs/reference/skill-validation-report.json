@@ -1,13 +1,489 @@
 {
-  "generated": "2026-08-16T18:29:00+00:00",
-  "git_sha": "15d63a7",
+  "generated": "2026-08-16T19:59:10+00:00",
+  "git_sha": "029b3f4",
   "mode": {
-    "ci": false,
-    "strict": true,
+    "ci": true,
+    "strict": false,
     "provenance": false
   },
-  "pass": false,
+  "pass": true,
   "report": {
+    "skills/alphalens/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/alphalens/factor_analysis/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "func compute_forward_returns: graph/curated-backed (installed-lib check skipped)",
+        "func factor_alpha_beta: graph/curated-backed (installed-lib check skipped)",
+        "func factor_information_coefficient: graph/curated-backed (installed-lib check skipped)",
+        "func get_clean_factor: graph/curated-backed (installed-lib check skipped)",
+        "func get_clean_factor_and_forward_returns: graph/curated-backed (installed-lib check skipped)",
+        "func mean_information_coefficient: graph/curated-backed (installed-lib check skipped)",
+        "func mean_return_by_quantile: graph/curated-backed (installed-lib check skipped)",
+        "func quantize_factor: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/alphalens/tearsheets/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class GridFigure: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/arch/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/arch/bootstrap/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class CircularBlockBootstrap: graph/curated-backed (installed-lib check skipped)",
+        "class StationaryBootstrap: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/arch/forecast/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class ARCHModelForecast: graph/curated-backed (installed-lib check skipped)",
+        "class ARCHModelForecastSimulation: graph/curated-backed (installed-lib check skipped)",
+        "class VarianceForecast: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/arch/unitroot/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class ADF: graph/curated-backed (installed-lib check skipped)",
+        "class EngleGrangerTestResults: graph/curated-backed (installed-lib check skipped)",
+        "class KPSS: graph/curated-backed (installed-lib check skipped)",
+        "class PhillipsPerron: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/arch/volatility/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class ARCHModel: graph/curated-backed (installed-lib check skipped)",
+        "class ARCHModelFixedResult: graph/curated-backed (installed-lib check skipped)",
+        "class ARCHModelResult: graph/curated-backed (installed-lib check skipped)",
+        "class Distribution: graph/curated-backed (installed-lib check skipped)",
+        "class EGARCH: graph/curated-backed (installed-lib check skipped)",
+        "class GARCH: graph/curated-backed (installed-lib check skipped)",
+        "class Normal: graph/curated-backed (installed-lib check skipped)",
+        "class SkewStudentT: not found (library not installed, no graph node)",
+        "class StudentT: not found (library not installed, no graph node)",
+        "class VolatilityProcess: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/backtrader/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/backtrader/analyzers/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class AnnualReturn: graph/curated-backed (installed-lib check skipped)",
+        "class Calmar: graph/curated-backed (installed-lib check skipped)",
+        "class DrawDown: graph/curated-backed (installed-lib check skipped)",
+        "class GrossLeverage: graph/curated-backed (installed-lib check skipped)",
+        "class LogReturnsRolling: graph/curated-backed (installed-lib check skipped)",
+        "class PeriodStats: graph/curated-backed (installed-lib check skipped)",
+        "class PositionsValue: graph/curated-backed (installed-lib check skipped)",
+        "class PyFolio: graph/curated-backed (installed-lib check skipped)",
+        "class Returns: graph/curated-backed (installed-lib check skipped)",
+        "class SQN: graph/curated-backed (installed-lib check skipped)",
+        "class SharpeRatio: graph/curated-backed (installed-lib check skipped)",
+        "class SharpeRatio_A: graph/curated-backed (installed-lib check skipped)",
+        "class TimeDrawDown: graph/curated-backed (installed-lib check skipped)",
+        "class TimeReturn: graph/curated-backed (installed-lib check skipped)",
+        "class TradeAnalyzer: graph/curated-backed (installed-lib check skipped)",
+        "class Transactions: graph/curated-backed (installed-lib check skipped)",
+        "class VWR: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/backtrader/core/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class BackBroker: graph/curated-backed (installed-lib check skipped)",
+        "class Cerebro: graph/curated-backed (installed-lib check skipped)",
+        "class CommInfoBase: graph/curated-backed (installed-lib check skipped)",
+        "class DataBase: graph/curated-backed (installed-lib check skipped)",
+        "class GenericCSVData: graph/curated-backed (installed-lib check skipped)",
+        "class LineBuffer: graph/curated-backed (installed-lib check skipped)",
+        "class LineIterator: graph/curated-backed (installed-lib check skipped)",
+        "class LineRoot: graph/curated-backed (installed-lib check skipped)",
+        "class LineSeries: graph/curated-backed (installed-lib check skipped)",
+        "class MetaParams: graph/curated-backed (installed-lib check skipped)",
+        "class Order: graph/curated-backed (installed-lib check skipped)",
+        "class Position: graph/curated-backed (installed-lib check skipped)",
+        "class SignalStrategy: graph/curated-backed (installed-lib check skipped)",
+        "class Sizer: graph/curated-backed (installed-lib check skipped)",
+        "class Strategy: graph/curated-backed (installed-lib check skipped)",
+        "class Trade: graph/curated-backed (installed-lib check skipped)",
+        "class YahooFinanceCSV: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/catboost/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/catboost/core/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class BuiltinMetric: graph/curated-backed (installed-lib check skipped)",
+        "class CatBoost: graph/curated-backed (installed-lib check skipped)",
+        "class CatBoostClassifier: graph/curated-backed (installed-lib check skipped)",
+        "class CatBoostRanker: graph/curated-backed (installed-lib check skipped)",
+        "class CatBoostRegressor: graph/curated-backed (installed-lib check skipped)",
+        "class Pool: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/catboost/evaluation/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class BuiltinMetric: graph/curated-backed (installed-lib check skipped)",
+        "class CaseEvaluationResult: graph/curated-backed (installed-lib check skipped)",
+        "class CatboostEvaluation: graph/curated-backed (installed-lib check skipped)",
+        "class ExecutionCase: graph/curated-backed (installed-lib check skipped)",
+        "class FactorUtils: graph/curated-backed (installed-lib check skipped)",
+        "class FoldModelsHandler: graph/curated-backed (installed-lib check skipped)",
+        "class FoldStorage: graph/curated-backed (installed-lib check skipped)",
+        "class MetricEvaluationResult: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/catboost/pool/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class CatBoost: graph/curated-backed (installed-lib check skipped)",
+        "class Pool: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/cvxpy/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/cvxpy/atoms/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class AddExpression: graph/curated-backed (installed-lib check skipped)",
+        "class MulExpression: graph/curated-backed (installed-lib check skipped)",
+        "func abs: graph/curated-backed (installed-lib check skipped)",
+        "func exp: graph/curated-backed (installed-lib check skipped)",
+        "func kl_div: graph/curated-backed (installed-lib check skipped)",
+        "func lambda_max: graph/curated-backed (installed-lib check skipped)",
+        "func log: graph/curated-backed (installed-lib check skipped)",
+        "func max: graph/curated-backed (installed-lib check skipped)",
+        "func min: graph/curated-backed (installed-lib check skipped)",
+        "func sum_largest: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/cvxpy/cone/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class Constraint: graph/curated-backed (installed-lib check skipped)",
+        "class Equality: graph/curated-backed (installed-lib check skipped)",
+        "class ExpCone: graph/curated-backed (installed-lib check skipped)",
+        "class NonNeg: graph/curated-backed (installed-lib check skipped)",
+        "class NonPos: graph/curated-backed (installed-lib check skipped)",
+        "class PSD: graph/curated-backed (installed-lib check skipped)",
+        "class PowCone: not found (library not installed, no graph node)",
+        "class SOC: graph/curated-backed (installed-lib check skipped)",
+        "class Zero: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/cvxpy/core/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class Constant: graph/curated-backed (installed-lib check skipped)",
+        "class Expression: graph/curated-backed (installed-lib check skipped)",
+        "class Maximize: graph/curated-backed (installed-lib check skipped)",
+        "class Minimize: graph/curated-backed (installed-lib check skipped)",
+        "class Parameter: graph/curated-backed (installed-lib check skipped)",
+        "class Problem: graph/curated-backed (installed-lib check skipped)",
+        "class Variable: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/cvxpy/problems/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class CLARABEL: graph/curated-backed (installed-lib check skipped)",
+        "class ECOS: graph/curated-backed (installed-lib check skipped)",
+        "class Minimize: graph/curated-backed (installed-lib check skipped)",
+        "class OSQP: graph/curated-backed (installed-lib check skipped)",
+        "class Problem: graph/curated-backed (installed-lib check skipped)",
+        "class SCS: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/cvxpy/solvers/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class CBC: graph/curated-backed (installed-lib check skipped)",
+        "class CLARABEL: graph/curated-backed (installed-lib check skipped)",
+        "class Constraint: graph/curated-backed (installed-lib check skipped)",
+        "class ECOS: graph/curated-backed (installed-lib check skipped)",
+        "class GLPK: graph/curated-backed (installed-lib check skipped)",
+        "class HiGHS: not found (library not installed, no graph node)",
+        "class OSQP: graph/curated-backed (installed-lib check skipped)",
+        "class Problem: graph/curated-backed (installed-lib check skipped)",
+        "class SCS: graph/curated-backed (installed-lib check skipped)",
+        "class Variable: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/darts/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/darts/backtesting/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/darts/models/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class BlockRNNModel: graph/curated-backed (installed-lib check skipped)",
+        "class CatBoostModel: graph/curated-backed (installed-lib check skipped)",
+        "class Chronos2Model: graph/curated-backed (installed-lib check skipped)",
+        "class ConformalModel: graph/curated-backed (installed-lib check skipped)",
+        "class ConformalNaiveModel: graph/curated-backed (installed-lib check skipped)",
+        "class ConformalQRModel: graph/curated-backed (installed-lib check skipped)",
+        "class DLinearModel: graph/curated-backed (installed-lib check skipped)",
+        "class EnsembleModel: graph/curated-backed (installed-lib check skipped)",
+        "class ForecastingModel: graph/curated-backed (installed-lib check skipped)",
+        "class FoundationModel: graph/curated-backed (installed-lib check skipped)",
+        "class GlobalForecastingModel: graph/curated-backed (installed-lib check skipped)",
+        "class GlobalNaiveDrift: graph/curated-backed (installed-lib check skipped)",
+        "class LightGBMModel: graph/curated-backed (installed-lib check skipped)",
+        "class LinearRegressionModel: graph/curated-backed (installed-lib check skipped)",
+        "class LocalForecastingModel: graph/curated-backed (installed-lib check skipped)",
+        "class MixedCovariatesTorchModel: graph/curated-backed (installed-lib check skipped)",
+        "class MultivariateModel: graph/curated-backed (installed-lib check skipped)",
+        "class NBEATSModel: graph/curated-backed (installed-lib check skipped)",
+        "class NHiTSModel: graph/curated-backed (installed-lib check skipped)",
+        "class NLinearModel: graph/curated-backed (installed-lib check skipped)",
+        "class NaiveEnsembleModel: graph/curated-backed (installed-lib check skipped)",
+        "class NeuralForecastModel: graph/curated-backed (installed-lib check skipped)",
+        "class PLForecastingModule: graph/curated-backed (installed-lib check skipped)",
+        "class PastCovariatesTorchModel: graph/curated-backed (installed-lib check skipped)",
+        "class PatchTSTFMModel: graph/curated-backed (installed-lib check skipped)",
+        "class RandomForest: graph/curated-backed (installed-lib check skipped)",
+        "class SKLearnModel: graph/curated-backed (installed-lib check skipped)",
+        "class SKLearnModelWithCategoricalFeatures: graph/curated-backed (installed-lib check skipped)",
+        "class StatsForecastModel: graph/curated-backed (installed-lib check skipped)",
+        "class TCNModel: graph/curated-backed (installed-lib check skipped)",
+        "class TorchForecastingModel: graph/curated-backed (installed-lib check skipped)",
+        "class XGBModel: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/darts/timeseries/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class TimeSeries: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/empyrical/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/empyrical/perf-attrib/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/empyrical/stats/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/imbalanced-learn/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/imbalanced-learn/ensemble/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class BalancedBaggingClassifier: graph/curated-backed (installed-lib check skipped)",
+        "class BalancedBatchGenerator: graph/curated-backed (installed-lib check skipped)",
+        "class BalancedRandomForestClassifier: graph/curated-backed (installed-lib check skipped)",
+        "class EasyEnsembleClassifier: graph/curated-backed (installed-lib check skipped)",
+        "class RUSBoostClassifier: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/imbalanced-learn/pipeline/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class InputTags: graph/curated-backed (installed-lib check skipped)",
+        "class InstanceHardnessCV: graph/curated-backed (installed-lib check skipped)",
+        "class Pipeline: graph/curated-backed (installed-lib check skipped)",
+        "class SamplerTags: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/imbalanced-learn/samplers/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class ADASYN: graph/curated-backed (installed-lib check skipped)",
+        "class AllKNN: graph/curated-backed (installed-lib check skipped)",
+        "class ArraysTransformer: graph/curated-backed (installed-lib check skipped)",
+        "class BaseSMOTE: graph/curated-backed (installed-lib check skipped)",
+        "class BaseSampler: graph/curated-backed (installed-lib check skipped)",
+        "class ClusterCentroids: graph/curated-backed (installed-lib check skipped)",
+        "class CondensedNearestNeighbour: graph/curated-backed (installed-lib check skipped)",
+        "class EditedNearestNeighbours: graph/curated-backed (installed-lib check skipped)",
+        "class FunctionSampler: graph/curated-backed (installed-lib check skipped)",
+        "class InputTags: graph/curated-backed (installed-lib check skipped)",
+        "class InstanceHardnessThreshold: graph/curated-backed (installed-lib check skipped)",
+        "class KMeansSMOTE: graph/curated-backed (installed-lib check skipped)",
+        "class NearMiss: graph/curated-backed (installed-lib check skipped)",
+        "class NeighbourhoodCleaningRule: graph/curated-backed (installed-lib check skipped)",
+        "class OneSidedSelection: graph/curated-backed (installed-lib check skipped)",
+        "class RandomOverSampler: graph/curated-backed (installed-lib check skipped)",
+        "class RandomUnderSampler: graph/curated-backed (installed-lib check skipped)",
+        "class RepeatedEditedNearestNeighbours: graph/curated-backed (installed-lib check skipped)",
+        "class SMOTE: graph/curated-backed (installed-lib check skipped)",
+        "class SMOTEENN: graph/curated-backed (installed-lib check skipped)",
+        "class SMOTEN: graph/curated-backed (installed-lib check skipped)",
+        "class SMOTENC: graph/curated-backed (installed-lib check skipped)",
+        "class SMOTETomek: graph/curated-backed (installed-lib check skipped)",
+        "class SamplerMixin: graph/curated-backed (installed-lib check skipped)",
+        "class TomekLinks: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/lightgbm/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/lightgbm/core/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class Booster: graph/curated-backed (installed-lib check skipped)",
+        "class CVBooster: graph/curated-backed (installed-lib check skipped)",
+        "class Dataset: graph/curated-backed (installed-lib check skipped)",
+        "class Sequence: graph/curated-backed (installed-lib check skipped)",
+        "func _InnerPredictor: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/lightgbm/sklearn/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class GridSearchCV: not found (library not installed, no graph node)",
+        "class LGBMClassifier: graph/curated-backed (installed-lib check skipped)",
+        "class LGBMModel: graph/curated-backed (installed-lib check skipped)",
+        "class LGBMRanker: graph/curated-backed (installed-lib check skipped)",
+        "class LGBMRegressor: graph/curated-backed (installed-lib check skipped)",
+        "class XGBClassifier: not found (library not installed, no graph node)",
+        "class XGBRegressor: not found (library not installed, no graph node)",
+        "func n_estimators: not found (library not installed, no graph node)",
+        "func num_leaves: not found (library not installed, no graph node)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/mplfinance/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
     "skills/numpy/SKILL.md": {
       "lint": [],
       "api_fail": [],
@@ -17,9 +493,7 @@
     },
     "skills/numpy/core/SKILL.md": {
       "lint": [],
-      "api_fail": [
-        "func blas_fpe_check: graph-only claim \u2014 exists in the graph/curated manifest but NOT in the installed library (QKG_070 reverse-trust; pin may be unreleased or the symbol was removed)"
-      ],
+      "api_fail": [],
       "api_warn": [],
       "meta_warn": [],
       "provenance": []
@@ -57,14 +531,1010 @@
       "api_warn": [],
       "meta_warn": [],
       "provenance": []
+    },
+    "skills/optuna/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/optuna/distributions/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class BaseDistribution: graph/curated-backed (installed-lib check skipped)",
+        "class CategoricalDistribution: graph/curated-backed (installed-lib check skipped)",
+        "class DiscreteUniformDistribution: graph/curated-backed (installed-lib check skipped)",
+        "class FloatDistribution: graph/curated-backed (installed-lib check skipped)",
+        "class IntDistribution: graph/curated-backed (installed-lib check skipped)",
+        "class IntLogUniformDistribution: graph/curated-backed (installed-lib check skipped)",
+        "class IntUniformDistribution: graph/curated-backed (installed-lib check skipped)",
+        "class LogUniformDistribution: graph/curated-backed (installed-lib check skipped)",
+        "class UniformDistribution: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/optuna/integration/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class GridSearchCV: not found (library not installed, no graph node)",
+        "class LightGBMTunerCV: graph/curated-backed (installed-lib check skipped)",
+        "class OptunaSearchCV: graph/curated-backed (installed-lib check skipped)",
+        "class TorchDistributedTrial: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/optuna/pruners/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class HyperbandPruner: graph/curated-backed (installed-lib check skipped)",
+        "class MedianPruner: graph/curated-backed (installed-lib check skipped)",
+        "class NopPruner: graph/curated-backed (installed-lib check skipped)",
+        "class PatientPruner: graph/curated-backed (installed-lib check skipped)",
+        "class PercentilePruner: graph/curated-backed (installed-lib check skipped)",
+        "class SuccessiveHalvingPruner: graph/curated-backed (installed-lib check skipped)",
+        "class ThresholdPruner: graph/curated-backed (installed-lib check skipped)",
+        "class WilcoxonPruner: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/optuna/samplers/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class BruteForceSampler: graph/curated-backed (installed-lib check skipped)",
+        "class CmaEsSampler: graph/curated-backed (installed-lib check skipped)",
+        "class GPSampler: graph/curated-backed (installed-lib check skipped)",
+        "class GridSampler: graph/curated-backed (installed-lib check skipped)",
+        "class NSGAIIISampler: graph/curated-backed (installed-lib check skipped)",
+        "class NSGAIISampler: graph/curated-backed (installed-lib check skipped)",
+        "class PartialFixedSampler: graph/curated-backed (installed-lib check skipped)",
+        "class QMCSampler: graph/curated-backed (installed-lib check skipped)",
+        "class RandomSampler: graph/curated-backed (installed-lib check skipped)",
+        "class TPESampler: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/optuna/study/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class Study: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/optuna/trial/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class Trial: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/optuna/visualization/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/pandas/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/pandas/core/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/pandas/groupby/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/pandas/ts/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class BaseWindow: internal/private module (real, not top-level)",
+        "class OnlineExponentialMovingWindow: internal/private module (real, not top-level)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/polars/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/polars/dataframe/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class DataFrame: graph/curated-backed (installed-lib check skipped)",
+        "class LazyFrame: graph/curated-backed (installed-lib check skipped)",
+        "class Schema: graph/curated-backed (installed-lib check skipped)",
+        "class Series: graph/curated-backed (installed-lib check skipped)",
+        "func from_numpy: graph/curated-backed (installed-lib check skipped)",
+        "func from_pandas: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/polars/expressions/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class Expr: graph/curated-backed (installed-lib check skipped)",
+        "func col: not found (library not installed, no graph node)",
+        "func concat: graph/curated-backed (installed-lib check skipped)",
+        "func group_by: not found (library not installed, no graph node)",
+        "func lit: graph/curated-backed (installed-lib check skipped)",
+        "func select: graph/curated-backed (installed-lib check skipped)",
+        "func when: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/polars/io/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "func read_avro: graph/curated-backed (installed-lib check skipped)",
+        "func read_csv: graph/curated-backed (installed-lib check skipped)",
+        "func read_csv_batched: graph/curated-backed (installed-lib check skipped)",
+        "func read_database: graph/curated-backed (installed-lib check skipped)",
+        "func read_database_uri: graph/curated-backed (installed-lib check skipped)",
+        "func read_delta: graph/curated-backed (installed-lib check skipped)",
+        "func read_excel: graph/curated-backed (installed-lib check skipped)",
+        "func read_ipc: graph/curated-backed (installed-lib check skipped)",
+        "func read_ipc_stream: graph/curated-backed (installed-lib check skipped)",
+        "func read_json: graph/curated-backed (installed-lib check skipped)",
+        "func read_ndjson: graph/curated-backed (installed-lib check skipped)",
+        "func read_ods: graph/curated-backed (installed-lib check skipped)",
+        "func read_parquet: graph/curated-backed (installed-lib check skipped)",
+        "func read_parquet_metadata: graph/curated-backed (installed-lib check skipped)",
+        "func read_parquet_schema: graph/curated-backed (installed-lib check skipped)",
+        "func scan_arrow_c_stream: graph/curated-backed (installed-lib check skipped)",
+        "func scan_csv: graph/curated-backed (installed-lib check skipped)",
+        "func scan_delta: graph/curated-backed (installed-lib check skipped)",
+        "func scan_iceberg: graph/curated-backed (installed-lib check skipped)",
+        "func scan_ipc: graph/curated-backed (installed-lib check skipped)",
+        "func scan_ndjson: graph/curated-backed (installed-lib check skipped)",
+        "func scan_parquet: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/polars/lazyframe/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class GPUEngine: graph/curated-backed (installed-lib check skipped)",
+        "class LazyFrame: graph/curated-backed (installed-lib check skipped)",
+        "class LazyGroupBy: graph/curated-backed (installed-lib check skipped)",
+        "class QueryOptFlags: graph/curated-backed (installed-lib check skipped)",
+        "class SQLContext: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/polars/performance/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class LazyFrame: graph/curated-backed (installed-lib check skipped)",
+        "class QueryOptFlags: graph/curated-backed (installed-lib check skipped)",
+        "func scan_parquet: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/pyfolio/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/pyfolio/tearsheets/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/pyfolio/timeseries/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/pymc/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/pymc/distributions/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class AR: graph/curated-backed (installed-lib check skipped)",
+        "class Bernoulli: graph/curated-backed (installed-lib check skipped)",
+        "class Beta: graph/curated-backed (installed-lib check skipped)",
+        "class Binomial: graph/curated-backed (installed-lib check skipped)",
+        "class Continuous: graph/curated-backed (installed-lib check skipped)",
+        "class CustomDist: graph/curated-backed (installed-lib check skipped)",
+        "class Dirichlet: graph/curated-backed (installed-lib check skipped)",
+        "class Discrete: graph/curated-backed (installed-lib check skipped)",
+        "class Distribution: graph/curated-backed (installed-lib check skipped)",
+        "class GARCH11: graph/curated-backed (installed-lib check skipped)",
+        "class Gamma: graph/curated-backed (installed-lib check skipped)",
+        "class HalfCauchy: graph/curated-backed (installed-lib check skipped)",
+        "class LKJCholeskyCov: graph/curated-backed (installed-lib check skipped)",
+        "class LogNormal: graph/curated-backed (installed-lib check skipped)",
+        "class MvNormal: graph/curated-backed (installed-lib check skipped)",
+        "class NegativeBinomial: graph/curated-backed (installed-lib check skipped)",
+        "class Normal: graph/curated-backed (installed-lib check skipped)",
+        "class OrderedMultinomial: graph/curated-backed (installed-lib check skipped)",
+        "class Poisson: graph/curated-backed (installed-lib check skipped)",
+        "class PredefinedRandomWalk: graph/curated-backed (installed-lib check skipped)",
+        "class RandomWalk: graph/curated-backed (installed-lib check skipped)",
+        "class StudentT: graph/curated-backed (installed-lib check skipped)",
+        "class Truncated: graph/curated-backed (installed-lib check skipped)",
+        "class Uniform: graph/curated-backed (installed-lib check skipped)",
+        "class ZeroSumTransform: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/pymc/model/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class BaseModel: graph/curated-backed (installed-lib check skipped)",
+        "class MinibatchOp: graph/curated-backed (installed-lib check skipped)",
+        "class MinibatchRandomVariable: graph/curated-backed (installed-lib check skipped)",
+        "class Model: graph/curated-backed (installed-lib check skipped)",
+        "class ModelManager: graph/curated-backed (installed-lib check skipped)",
+        "class PointFunc: graph/curated-backed (installed-lib check skipped)",
+        "class SplineWrapper: graph/curated-backed (installed-lib check skipped)",
+        "class ValueGradFunction: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/pymc/sampling/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class MultiTrace: graph/curated-backed (installed-lib check skipped)",
+        "class NDArray: graph/curated-backed (installed-lib check skipped)",
+        "class SamplingError: graph/curated-backed (installed-lib check skipped)",
+        "class SamplingIteratorCallback: graph/curated-backed (installed-lib check skipped)",
+        "func requires: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/pyportfolioopt/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/pyportfolioopt/black_litterman/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class BlackLittermanModel: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/pyportfolioopt/efficient_frontier/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class BaseConvexOptimizer: graph/curated-backed (installed-lib check skipped)",
+        "class BaseOptimizer: graph/curated-backed (installed-lib check skipped)",
+        "class DiscreteAllocation: graph/curated-backed (installed-lib check skipped)",
+        "class EfficientCDaR: graph/curated-backed (installed-lib check skipped)",
+        "class EfficientCVaR: graph/curated-backed (installed-lib check skipped)",
+        "class EfficientFrontier: graph/curated-backed (installed-lib check skipped)",
+        "class EfficientSemivariance: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/pyportfolioopt/expected_returns/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/pyportfolioopt/risk_models/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class CovarianceShrinkage: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/quant-patterns/explainability/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/quant-patterns/factor-importance/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/quant-patterns/factor-research/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/quant-patterns/factor-tearsheets/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/quant-patterns/full-pipeline/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/quant-patterns/hpo-optimization/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/quant-patterns/metric-conventions/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/quant-patterns/ml-strategy/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/quant-patterns/portfolio-construction/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/quant-patterns/portfolio-optimization/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/quant-patterns/regime-detection/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/quant-patterns/volatility-modelling/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/quant-patterns/walk-forward-validation/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/quantstats/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/quantstats/plots/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class MonteCarloResult: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/quantstats/reports/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class DataValidationError: graph/curated-backed (installed-lib check skipped)",
+        "class QuantStatsError: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/quantstats/stats/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/riskfolio/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/riskfolio/hrp/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class HCPortfolio: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/riskfolio/portfolio/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class Portfolio: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/riskfolio/risk_measures/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/scikit-learn/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/scikit-learn/cluster/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/scikit-learn/compose/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/scikit-learn/covariance/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/scikit-learn/decomposition/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/scikit-learn/ensemble/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/scikit-learn/feature_selection/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/scikit-learn/gaussian_process/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/scikit-learn/impute/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/scikit-learn/inspection/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/scikit-learn/linear_model/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/scikit-learn/metrics/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/scikit-learn/model_selection/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class BaseSearchCV: internal/private module (real, not top-level)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/scikit-learn/neural_network/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class BaseMultilayerPerceptron: internal/private module (real, not top-level)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/scikit-learn/preprocessing/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/scikit-learn/svm/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class BaseLibSVM: internal/private module (real, not top-level)",
+        "class BaseSVC: internal/private module (real, not top-level)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/scikit-learn/tree/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/scipy/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/scipy/optimize/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class DifferentialEvolutionSolver: internal/private module (real, not top-level)",
+        "class MemoizeJac: internal/private module (real, not top-level)",
+        "class ScalarFunction: internal/private module (real, not top-level)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/scipy/signal/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/scipy/stats/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class ContinuousDistribution: internal/private module (real, not top-level)",
+        "class FitResult: internal/private module (real, not top-level)",
+        "class UnivariateDistribution: internal/private module (real, not top-level)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/shap/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/shap/explainers/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class DeepExplainer: graph/curated-backed (installed-lib check skipped)",
+        "class Explainer: graph/curated-backed (installed-lib check skipped)",
+        "class Explanation: graph/curated-backed (installed-lib check skipped)",
+        "class KernelExplainer: graph/curated-backed (installed-lib check skipped)",
+        "class LinearExplainer: graph/curated-backed (installed-lib check skipped)",
+        "class Masker: graph/curated-backed (installed-lib check skipped)",
+        "class Model: graph/curated-backed (installed-lib check skipped)",
+        "class TreeExplainer: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/shap/maskers/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class Composite: graph/curated-backed (installed-lib check skipped)",
+        "class Fixed: graph/curated-backed (installed-lib check skipped)",
+        "class FixedComposite: graph/curated-backed (installed-lib check skipped)",
+        "class Image: graph/curated-backed (installed-lib check skipped)",
+        "class Masker: graph/curated-backed (installed-lib check skipped)",
+        "class OutputComposite: graph/curated-backed (installed-lib check skipped)",
+        "class Tabular: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/shap/plots/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/statsmodels/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/statsmodels/core/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class ConvergenceWarning: graph/curated-backed (installed-lib check skipped)",
+        "class FormulaManager: graph/curated-backed (installed-lib check skipped)",
+        "class GLM: graph/curated-backed (installed-lib check skipped)",
+        "class LikelihoodModel: graph/curated-backed (installed-lib check skipped)",
+        "class OLS: graph/curated-backed (installed-lib check skipped)",
+        "class PandasData: graph/curated-backed (installed-lib check skipped)",
+        "class SimpleTable: graph/curated-backed (installed-lib check skipped)",
+        "class SpecificationWarning: graph/curated-backed (installed-lib check skipped)",
+        "class ValueWarning: graph/curated-backed (installed-lib check skipped)",
+        "func add_constant: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/statsmodels/diagnostics/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class AnovaRM: graph/curated-backed (installed-lib check skipped)",
+        "class CompareMeans: graph/curated-backed (installed-lib check skipped)",
+        "class DescrStatsW: graph/curated-backed (installed-lib check skipped)",
+        "class GLMInfluence: graph/curated-backed (installed-lib check skipped)",
+        "class MLEInfluence: graph/curated-backed (installed-lib check skipped)",
+        "class OLSInfluence: graph/curated-backed (installed-lib check skipped)",
+        "class Power: graph/curated-backed (installed-lib check skipped)",
+        "class Table2x2: graph/curated-backed (installed-lib check skipped)",
+        "class TrimmedMean: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/statsmodels/glm/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class Binomial: graph/curated-backed (installed-lib check skipped)",
+        "class CovStruct: graph/curated-backed (installed-lib check skipped)",
+        "class Family: graph/curated-backed (installed-lib check skipped)",
+        "class GEE: graph/curated-backed (installed-lib check skipped)",
+        "class GEEResults: graph/curated-backed (installed-lib check skipped)",
+        "class GLM: graph/curated-backed (installed-lib check skipped)",
+        "class GLMGam: graph/curated-backed (installed-lib check skipped)",
+        "class GLMInfluence: graph/curated-backed (installed-lib check skipped)",
+        "class GLMResults: graph/curated-backed (installed-lib check skipped)",
+        "class Gamma: graph/curated-backed (installed-lib check skipped)",
+        "class Link: graph/curated-backed (installed-lib check skipped)",
+        "class NegativeBinomial: graph/curated-backed (installed-lib check skipped)",
+        "class NominalGEE: graph/curated-backed (installed-lib check skipped)",
+        "class OrdinalGEE: graph/curated-backed (installed-lib check skipped)",
+        "class Poisson: graph/curated-backed (installed-lib check skipped)",
+        "class Stationary: graph/curated-backed (installed-lib check skipped)",
+        "class Tweedie: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/statsmodels/statespace/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class DynamicFactor: graph/curated-backed (installed-lib check skipped)",
+        "class Initialization: graph/curated-backed (installed-lib check skipped)",
+        "class MLEModel: graph/curated-backed (installed-lib check skipped)",
+        "class MLEResults: graph/curated-backed (installed-lib check skipped)",
+        "class NewsResults: graph/curated-backed (installed-lib check skipped)",
+        "class SARIMAX: graph/curated-backed (installed-lib check skipped)",
+        "class SARIMAXResults: graph/curated-backed (installed-lib check skipped)",
+        "class SimulationSmoothResults: graph/curated-backed (installed-lib check skipped)",
+        "class UnobservedComponents: graph/curated-backed (installed-lib check skipped)",
+        "class VARMAX: graph/curated-backed (installed-lib check skipped)",
+        "class VARMAXResults: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/statsmodels/tsa/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class ARIMA: graph/curated-backed (installed-lib check skipped)",
+        "class ARIMAResults: graph/curated-backed (installed-lib check skipped)",
+        "class ArmaProcess: graph/curated-backed (installed-lib check skipped)",
+        "class ExponentialSmoothing: graph/curated-backed (installed-lib check skipped)",
+        "class HoltWintersResults: graph/curated-backed (installed-lib check skipped)",
+        "class SARIMAX: graph/curated-backed (installed-lib check skipped)",
+        "class SARIMAXResults: graph/curated-backed (installed-lib check skipped)",
+        "class SimpleExpSmoothing: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/statsmodels/vector_ar/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class CausalityTestResults: graph/curated-backed (installed-lib check skipped)",
+        "class IRAnalysis: graph/curated-backed (installed-lib check skipped)",
+        "class JohansenTestResult: graph/curated-backed (installed-lib check skipped)",
+        "class VAR: graph/curated-backed (installed-lib check skipped)",
+        "class VARResults: graph/curated-backed (installed-lib check skipped)",
+        "class VECM: graph/curated-backed (installed-lib check skipped)",
+        "class VECMResults: graph/curated-backed (installed-lib check skipped)",
+        "class WhitenessTestResults: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/ta/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/ta-lib/indicators/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class AD: not found (library not installed, no graph node)",
+        "class ADOSC: not found (library not installed, no graph node)",
+        "class ADX: not found (library not installed, no graph node)",
+        "class ADXR: not found (library not installed, no graph node)",
+        "class ATR: not found (library not installed, no graph node)",
+        "class BBANDS: not found (library not installed, no graph node)",
+        "class CCI: not found (library not installed, no graph node)",
+        "class DEMA: not found (library not installed, no graph node)",
+        "class EMA: not found (library not installed, no graph node)",
+        "class HT_DCPERIOD: not found (library not installed, no graph node)",
+        "class HT_DCPHASE: not found (library not installed, no graph node)",
+        "class HT_PHASOR: not found (library not installed, no graph node)",
+        "class KAMA: not found (library not installed, no graph node)",
+        "class MACD: not found (library not installed, no graph node)",
+        "class MACDEXT: not found (library not installed, no graph node)",
+        "class MACDFIX: not found (library not installed, no graph node)",
+        "class MAMA: not found (library not installed, no graph node)",
+        "class MFI: not found (library not installed, no graph node)",
+        "class NATR: not found (library not installed, no graph node)",
+        "class OBV: not found (library not installed, no graph node)",
+        "class RSI: not found (library not installed, no graph node)",
+        "class SAR: not found (library not installed, no graph node)",
+        "class SMA: not found (library not installed, no graph node)",
+        "class STOCH: not found (library not installed, no graph node)",
+        "class STOCHF: not found (library not installed, no graph node)",
+        "class STOCHRSI: not found (library not installed, no graph node)",
+        "class TEMA: not found (library not installed, no graph node)",
+        "class ULTOSC: not found (library not installed, no graph node)",
+        "class WILLR: not found (library not installed, no graph node)",
+        "class WMA: not found (library not installed, no graph node)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/vectorbt/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/vectorbt/core/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/vectorbt/portfolio/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/vectorbt/signals/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/xgboost/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/xgboost/core/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class Booster: graph/curated-backed (installed-lib check skipped)",
+        "class CVPack: graph/curated-backed (installed-lib check skipped)",
+        "class CallbackContainer: graph/curated-backed (installed-lib check skipped)",
+        "class DMatrix: graph/curated-backed (installed-lib check skipped)",
+        "class DataIter: graph/curated-backed (installed-lib check skipped)",
+        "class EarlyStopping: graph/curated-backed (installed-lib check skipped)",
+        "class LearningRateScheduler: graph/curated-backed (installed-lib check skipped)",
+        "class QuantileDMatrix: graph/curated-backed (installed-lib check skipped)",
+        "class TrainingCallback: graph/curated-backed (installed-lib check skipped)",
+        "func _PackedBooster: graph/curated-backed (installed-lib check skipped)",
+        "func _ProxyDMatrix: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/xgboost/sklearn/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class XGBClassifier: graph/curated-backed (installed-lib check skipped)",
+        "class XGBModel: graph/curated-backed (installed-lib check skipped)",
+        "class XGBRFClassifier: graph/curated-backed (installed-lib check skipped)",
+        "class XGBRFRegressor: graph/curated-backed (installed-lib check skipped)",
+        "class XGBRanker: graph/curated-backed (installed-lib check skipped)",
+        "class XGBRegressor: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/yfinance/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/yfinance/download/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class Auth: graph/curated-backed (installed-lib check skipped)",
+        "class CalendarQuery: graph/curated-backed (installed-lib check skipped)",
+        "class Calendars: graph/curated-backed (installed-lib check skipped)",
+        "class Domain: graph/curated-backed (installed-lib check skipped)",
+        "class Industry: graph/curated-backed (installed-lib check skipped)",
+        "class Lookup: graph/curated-backed (installed-lib check skipped)",
+        "class QueryBase: graph/curated-backed (installed-lib check skipped)",
+        "class Screener: not found (library not installed, no graph node)",
+        "class Search: graph/curated-backed (installed-lib check skipped)",
+        "class Sector: graph/curated-backed (installed-lib check skipped)",
+        "class SingletonMeta: graph/curated-backed (installed-lib check skipped)",
+        "class Tickers: graph/curated-backed (installed-lib check skipped)",
+        "class YFException: graph/curated-backed (installed-lib check skipped)",
+        "class YfData: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
+    },
+    "skills/yfinance/ticker/SKILL.md": {
+      "lint": [],
+      "api_fail": [],
+      "api_warn": [
+        "class Analysis: graph/curated-backed (installed-lib check skipped)",
+        "class FastInfo: graph/curated-backed (installed-lib check skipped)",
+        "class Financials: graph/curated-backed (installed-lib check skipped)",
+        "class FundsData: graph/curated-backed (installed-lib check skipped)",
+        "class Holders: graph/curated-backed (installed-lib check skipped)",
+        "class PriceHistory: graph/curated-backed (installed-lib check skipped)",
+        "class Quote: graph/curated-backed (installed-lib check skipped)",
+        "class Ticker: graph/curated-backed (installed-lib check skipped)",
+        "class TickerBase: graph/curated-backed (installed-lib check skipped)",
+        "class WebSocket: graph/curated-backed (installed-lib check skipped)",
+        "class YFDataException: graph/curated-backed (installed-lib check skipped)",
+        "class YFRateLimitError: graph/curated-backed (installed-lib check skipped)"
+      ],
+      "meta_warn": [],
+      "provenance": []
     }
   },
   "router_errors": [],
   "totals": {
     "lint": 0,
-    "api_fail": 1,
+    "api_fail": 0,
     "provenance": 0,
-    "api_warn": 5,
+    "api_warn": 497,
     "meta_warn": 0
   }
 }

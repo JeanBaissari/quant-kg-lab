@@ -13,7 +13,7 @@ graph:
   nodes: 3954
   edges: 8240
   community_count: 245
-  graph_hash: 98a2e69ac67ca67f
+  graph_hash: a7e60646dbde36e7
 tags:
 - darts
 - router

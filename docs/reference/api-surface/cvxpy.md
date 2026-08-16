@@ -2,8 +2,42 @@
 
 # API-surface — cvxpy
 
-Public top-level symbols: 244 · present in graph: 244 · **coverage 100.0%** (target ≥95%)
+Public top-level symbols: 849 · present in graph: 814 · **coverage 95.9%** (target ≥95%)
 
 | symbol | mechanism | defining source |
 |---|---|---|
-
+| Concatenate | M2b-unimportable-class | atoms/affine/concatenate.py |
+| Hstack | M2b-unimportable-class | atoms/affine/hstack.py |
+| Promote | M2b-unimportable-class | atoms/affine/promote.py |
+| Vstack | M2b-unimportable-class | atoms/affine/vstack.py |
+| get_parameter_vector | M2b-unimportable | cvxcore/python/canonInterface.py |
+| reduce_problem_data_tensor | M2b-unimportable | cvxcore/python/canonInterface.py |
+| nonzero_csc_array | M2b-unimportable | cvxcore/python/canonInterface.py |
+| A_mapping_nonzero_rows | M2b-unimportable | cvxcore/python/canonInterface.py |
+| get_matrix_from_tensor | M2b-unimportable | cvxcore/python/canonInterface.py |
+| get_default_canon_backend | M2b-unimportable | cvxcore/python/canonInterface.py |
+| get_problem_matrix | M2b-unimportable | cvxcore/python/canonInterface.py |
+| build_matrix | M2b-unimportable | cvxcore/python/cppbackend.py |
+| get_type | M2b-unimportable | cvxcore/python/cppbackend.py |
+| set_linC_data | M2b-unimportable | cvxcore/python/cppbackend.py |
+| make_linC_from_linPy | M2b-unimportable | cvxcore/python/cppbackend.py |
+| set_slice_data | M2b-unimportable | cvxcore/python/cppbackend.py |
+| build_lin_op_tree | M2b-unimportable | cvxcore/python/cppbackend.py |
+| set_matrix_data | M2b-unimportable | cvxcore/python/cppbackend.py |
+| format_matrix | M2b-unimportable | cvxcore/python/cppbackend.py |
+| SwigPyIterator | M2b-unimportable-class | cvxcore/python/cvxcore.py |
+| vecprod | M2b-unimportable | cvxcore/python/cvxcore.py |
+| vecprod_before | M2b-unimportable | cvxcore/python/cvxcore.py |
+| tensor_mul | M2b-unimportable | cvxcore/python/cvxcore.py |
+| acc_tensor | M2b-unimportable | cvxcore/python/cvxcore.py |
+| diagonalize | M2b-unimportable | cvxcore/python/cvxcore.py |
+| ProblemData | M2b-unimportable-class | cvxcore/python/cvxcore.py |
+| IntVector | M2b-unimportable-class | cvxcore/python/cvxcore.py |
+| DoubleVector | M2b-unimportable-class | cvxcore/python/cvxcore.py |
+| IntVector2D | M2b-unimportable-class | cvxcore/python/cvxcore.py |
+| DoubleVector2D | M2b-unimportable-class | cvxcore/python/cvxcore.py |
+| IntIntMap | M2b-unimportable-class | cvxcore/python/cvxcore.py |
+| LinOpVector | M2b-unimportable-class | cvxcore/python/cvxcore.py |
+| ConstLinOpVector | M2b-unimportable-class | cvxcore/python/cvxcore.py |
+| build_matrix | M2b-unimportable | cvxcore/python/cppbackend.py |
+| bisect | M2b-unimportable | reductions/solvers/bisection.py |

@@ -4,67 +4,67 @@
     {
       "label": "COO_CANON_BACKEND",
       "source_file": "__init__.py",
-      "description": "str(object='') -> str."
+      "description": "Canonicalization backend flag selecting the COO (coordinate) sparse-matrix format."
     },
     {
       "label": "CPP_CANON_BACKEND",
       "source_file": "__init__.py",
-      "description": "str(object='') -> str."
+      "description": "Canonicalization backend flag selecting the C++ (cvxcore) implementation."
     },
     {
       "label": "EXP_ATOMS",
       "source_file": "__init__.py",
-      "description": "Built-in mutable sequence."
+      "description": "Frozenset of atom names with exponential (DGP) semantics used by DCP/DGP analysis."
     },
     {
       "label": "GP_EXP_ATOMS",
       "source_file": "__init__.py",
-      "description": "Built-in mutable sequence."
+      "description": "Frozenset of atom names allowed by the geometric-program (GP) exponential rules."
     },
     {
       "label": "GP_NONPOS_ATOMS",
       "source_file": "__init__.py",
-      "description": "Built-in mutable sequence."
+      "description": "Frozenset of atom names allowed by the geometric-program (GP) nonpositive rules."
     },
     {
       "label": "INFEASIBLE",
       "source_file": "__init__.py",
-      "description": "str(object='') -> str."
+      "description": "Solver status string `infeasible`: the problem has no feasible point."
     },
     {
       "label": "INFEASIBLE_INACCURATE",
       "source_file": "__init__.py",
-      "description": "str(object='') -> str."
+      "description": "Solver status string `infeasible_inaccurate`: solver reports infeasibility with lower accuracy."
     },
     {
       "label": "NONPOS_ATOMS",
       "source_file": "__init__.py",
-      "description": "Built-in mutable sequence."
+      "description": "Frozenset of atom names whose arguments must be nonpositive for DCP analysis."
     },
     {
       "label": "OPTIMAL",
       "source_file": "__init__.py",
-      "description": "str(object='') -> str."
+      "description": "Solver status string `optimal`: the problem was solved to optimality."
     },
     {
       "label": "OPTIMAL_INACCURATE",
       "source_file": "__init__.py",
-      "description": "str(object='') -> str."
+      "description": "Solver status string `optimal_inaccurate`: an approximately optimal solution was found."
     },
     {
       "label": "POWCONE_ATOMS",
       "source_file": "__init__.py",
-      "description": "Built-in mutable sequence."
+      "description": "Frozenset of atom names involving power-cone (DGP) rules."
     },
     {
       "label": "POWCONE_ND_ATOMS",
       "source_file": "__init__.py",
-      "description": "Built-in mutable sequence."
+      "description": "Frozenset of atom names involving n-dimensional power-cone rules."
     },
     {
       "label": "PSD_ATOMS",
       "source_file": "__init__.py",
-      "description": "Built-in mutable sequence."
+      "description": "Frozenset of atom names whose values are positive semidefinite."
     },
     {
       "label": "Pnorm",
@@ -79,27 +79,27 @@
     {
       "label": "ROBUST_KKTSOLVER",
       "source_file": "__init__.py",
-      "description": "str(object='') -> str."
+      "description": "Solver flag selecting the robust (QR-based) KKT solver used in canonicalization."
     },
     {
       "label": "RUST_CANON_BACKEND",
       "source_file": "__init__.py",
-      "description": "str(object='') -> str."
+      "description": "Canonicalization backend flag selecting the Rust implementation."
     },
     {
       "label": "SCIPY_CANON_BACKEND",
       "source_file": "__init__.py",
-      "description": "str(object='') -> str."
+      "description": "Canonicalization backend flag selecting the SciPy sparse implementation."
     },
     {
       "label": "SOC_ATOMS",
       "source_file": "__init__.py",
-      "description": "Built-in mutable sequence."
+      "description": "Frozenset of atom names representable by second-order cone constraints."
     },
     {
       "label": "SOLVER_ERROR",
       "source_file": "__init__.py",
-      "description": "str(object='') -> str."
+      "description": "Solver status string `solver_error`: the solver failed with an internal error."
     },
     {
       "label": "Trace",
@@ -109,82 +109,82 @@
     {
       "label": "UNBOUNDED",
       "source_file": "__init__.py",
-      "description": "str(object='') -> str."
+      "description": "Solver status string `unbounded`: the problem is unbounded below (for minimization)."
     },
     {
       "label": "UNBOUNDED_INACCURATE",
       "source_file": "__init__.py",
-      "description": "str(object='') -> str."
+      "description": "Solver status string `unbounded_inaccurate`: solver reports unboundedness with lower accuracy."
     },
     {
       "label": "USER_LIMIT",
       "source_file": "__init__.py",
-      "description": "str(object='') -> str."
+      "description": "Solver status string `user_limit`: a user-defined limit (time or iterations) was hit."
     },
     {
       "label": "affine",
       "source_file": "__init__.py",
-      "description": "Copyright 2013 Steven Diamond."
+      "description": "Module `affine` \u2014 affine atoms: sum, concatenate, promote, and affine-combination helpers."
     },
     {
       "label": "atom",
       "source_file": "__init__.py",
-      "description": "Copyright 2013 Steven Diamond."
+      "description": "Module `atom` \u2014 the abstract Atom base class and its DCP/DGP analysis machinery."
     },
     {
       "label": "atoms",
       "source_file": "__init__.py",
-      "description": "Copyright 2013 Steven Diamond."
+      "description": "Module `atoms` \u2014 the library of atomic functions (norm, quad_form, ...) grouped by family."
     },
     {
       "label": "axis_atom",
       "source_file": "__init__.py",
-      "description": "Copyright 2013 Steven Diamond."
+      "description": "Module `axis_atom` \u2014 base class for atoms that apply along a chosen axis."
     },
     {
       "label": "constraints",
       "source_file": "__init__.py",
-      "description": "Copyright 2013 Steven Diamond, 2022 - the CVXPY Authors."
+      "description": "Module `constraints` \u2014 constraint classes (Equality, Inequality, SOC, PSD, ...) used to build problems."
     },
     {
       "label": "cvxcore",
       "source_file": "__init__.py",
-      "description": "Public NumPy API symbol `np.cvxcore` (C-implemented or namespace; see docs)."
+      "description": "Module `cvxcore` \u2014 the C++ canonicalization core behind cvxpy's matrix-compression pipeline."
     },
     {
       "label": "elementwise",
       "source_file": "__init__.py",
-      "description": "Copyright 2013 Steven Diamond."
+      "description": "Module `elementwise` \u2014 elementwise atoms (abs, power, exp, log, ...)."
     },
     {
       "label": "error",
       "source_file": "__init__.py",
-      "description": "Copyright 2013 Steven Diamond."
+      "description": "Module `error` \u2014 cvxpy exceptions (DCPError, DGPError, SolverError, ...)."
     },
     {
       "label": "errormsg",
       "source_file": "__init__.py",
-      "description": "Public NumPy API symbol `np.errormsg` (C-implemented or namespace; see docs)."
+      "description": "Module `errormsg` \u2014 helpers that generate solver error messages."
     },
     {
       "label": "expressions",
       "source_file": "__init__.py",
-      "description": "Copyright 2013 Steven Diamond."
+      "description": "Module `expressions` \u2014 the expression-tree layer: constants, variables, parameters, and general expressions."
     },
     {
       "label": "interface",
       "source_file": "__init__.py",
-      "description": "Copyright 2013 Steven Diamond."
+      "description": "Module `interface` \u2014 the matrix-interface layer abstracting numpy/scipy/sparse backends."
     },
     {
       "label": "lin_ops",
       "source_file": "__init__.py",
-      "description": "Copyright 2013 Steven Diamond."
+      "description": "Module `lin_ops` \u2014 linear-operator primitives used during canonicalization."
     },
     {
       "label": "logic",
       "source_file": "__init__.py",
-      "description": "Copyright, the CVXPY authors."
+      "description": "Module `logic` \u2014 logic-based atoms and constraints (indicator, implication, ...)."
     },
     {
       "label": "nlp",
@@ -194,12 +194,12 @@
     {
       "label": "norm_nuc",
       "source_file": "__init__.py",
-      "description": "Copyright 2013 Steven Diamond."
+      "description": "Nuclear-norm atom: the sum of the singular values of a matrix expression; promotes low-rank solutions."
     },
     {
       "label": "problems",
       "source_file": "__init__.py",
-      "description": "Copyright 2013 Steven Diamond."
+      "description": "Module `problems` \u2014 the Problem class, objectives, and the solve pipeline."
     },
     {
       "label": "prod()",
@@ -209,17 +209,17 @@
     {
       "label": "reductions",
       "source_file": "__init__.py",
-      "description": "Copyright 2017 Robin Verschueren."
+      "description": "Module `reductions` \u2014 solve-chain reductions: canonicalization, elimination, and solver compilation."
     },
     {
       "label": "settings",
       "source_file": "__init__.py",
-      "description": "Copyright 2013 Steven Diamond."
+      "description": "Module `settings` \u2014 solver names, status strings, and canonicalization-backend constants."
     },
     {
       "label": "stats",
       "source_file": "__init__.py",
-      "description": "Copyright 2013 CVXPY Developers."
+      "description": "Namespace `stats` \u2014 cvxpy statistics helpers (benchmarking and solve diagnostics)."
     },
     {
       "label": "sum()",
@@ -234,17 +234,17 @@
     {
       "label": "total_variation",
       "source_file": "__init__.py",
-      "description": "Copyright 2013 Steven Diamond."
+      "description": "Total-variation atom: the sum of the magnitudes of adjacent-element differences; promotes piecewise-constant solutions."
     },
     {
       "label": "transforms",
       "source_file": "__init__.py",
-      "description": "Copyright 2013 Steven Diamond."
+      "description": "Module `transforms` \u2014 problem transforms: linearize, partial_optimize, suppfunc, and indicator."
     },
     {
       "label": "utilities",
       "source_file": "__init__.py",
-      "description": "Copyright 2013 Steven Diamond."
+      "description": "Module `utilities` \u2014 internal helpers: DCP/DGP utilities, settings, and plotting helpers."
     },
     {
       "label": "Clarabel",

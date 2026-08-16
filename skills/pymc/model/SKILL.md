@@ -13,7 +13,7 @@ graph:
   nodes: 4067
   edges: 11144
   community_count: 156
-  graph_hash: abe838c4f6662d33
+  graph_hash: 03f0c00666b34c02
 tags:
 - pymc
 - model

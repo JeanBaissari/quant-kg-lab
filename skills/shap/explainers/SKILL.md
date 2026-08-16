@@ -12,7 +12,7 @@ graph:
   nodes: 1277
   edges: 1752
   community_count: 108
-  graph_hash: 56d741979f6b195b
+  graph_hash: 2ef1103a6cfaf03b
 tags:
 - shap
 - explainability
