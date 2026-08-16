@@ -7,6 +7,7 @@ license: MIT
 composes: [optuna-samplers, optuna-study, scikit-learn-model-selection, quant-walk-forward-validation]
 tags: [quantitative-finance, hyperparameter-optimization, bayesian-optimization, backtesting]
 related_skills: [optuna-samplers, optuna-study, scikit-learn-model-selection, quant-walk-forward-validation]
+target_version: cross-lib
 ---
 
 # Hyperparameter Optimization for Trading Strategies

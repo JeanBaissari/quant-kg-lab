@@ -7,6 +7,7 @@ license: MIT
 composes: [quant-factor-research, quant-ml-strategy, quant-walk-forward-validation]
 tags: [quantitative-finance, pipeline, backtesting, feature-engineering, workflow]
 related_skills: [quant-factor-research, quant-ml-strategy, quant-walk-forward-validation]
+target_version: cross-lib
 ---
 
 # Quant Full Pipeline (data → features → model → backtest → HPO → risk)

@@ -7,6 +7,7 @@ license: MIT
 composes: [scikit-learn-covariance, scikit-learn-decomposition, quant-portfolio-optimization, pyportfolioopt-efficient-frontier, riskfolio-portfolio]
 tags: [quantitative-finance, portfolio-optimization, risk-parity, mean-variance, position-sizing]
 related_skills: [scikit-learn-covariance, scikit-learn-decomposition, quant-portfolio-optimization, pyportfolioopt-efficient-frontier, riskfolio-portfolio]
+target_version: cross-lib
 ---
 
 # Portfolio Construction & Position Sizing
