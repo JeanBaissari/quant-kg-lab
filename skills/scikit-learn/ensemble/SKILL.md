@@ -35,22 +35,24 @@ Communities: 3 ("Ensemble Methods Bagging"), 5 ("Ensemble Methods Boosting"), 23
 ## Quick Reference
 | Class/Function | Source File | Purpose | Key Params |
 |---------------|-------------|---------|------------|
-| `RandomForestClassifier` | `ensemble/_forest.py` | RF classification; bagged trees + feature randomness | `n_estimators`, `max_depth`, `max_features`, `min_samples_split`, `oob_score` |
-| `RandomForestRegressor` | `ensemble/_forest.py` | RF regression | `n_estimators`, `max_depth`, `max_features`, `oob_score` |
-| `GradientBoostingClassifier` | `ensemble/_gb.py` | Gradient-boosted trees for classification | `n_estimators`, `learning_rate`, `max_depth`, `subsample`, `loss` |
-| `GradientBoostingRegressor` | `ensemble/_gb.py` | Gradient-boosted trees for regression | `n_estimators`, `learning_rate`, `max_depth`, `loss`, `alpha` (Huber/quantile) |
-| `BaggingClassifier` | `ensemble/_bagging.py` | Bootstrap-aggregated classifier | `estimator`, `n_estimators`, `max_samples`, `bootstrap`, `oob_score` |
-| `BaggingRegressor` | `ensemble/_bagging.py` | Bootstrap-aggregated regressor | `estimator`, `n_estimators`, `max_samples`, `bootstrap` |
-| `AdaBoostClassifier` | `ensemble/_weight_boosting.py` | Adaptive boosting (SAMME/SAMME.R) | `estimator`, `n_estimators`, `learning_rate`, `algorithm` |
-| `AdaBoostRegressor` | `ensemble/_weight_boosting.py` | AdaBoost for regression | `estimator`, `n_estimators`, `learning_rate`, `loss` |
-| `StackingClassifier` | `ensemble/_stacking.py` | Stacked generalization classifier | `estimators`, `final_estimator`, `cv`, `stack_method` |
-| `StackingRegressor` | `ensemble/_stacking.py` | Stacked generalization regressor | `estimators`, `final_estimator`, `cv` |
-| `VotingClassifier` | `ensemble/_voting.py` | Soft/hard voting over estimators | `estimators`, `voting` ('soft'/'hard'), `weights` |
-| `VotingRegressor` | `ensemble/_voting.py` | Average predictions over estimators | `estimators`, `weights` |
-| `HistGradientBoostingClassifier` | `ensemble/_hist_gradient_boosting/` | Histogram-based GBDT (fast) | `max_iter`, `learning_rate`, `max_depth`, `l2_regularization` |
-| `HistGradientBoostingRegressor` | `ensemble/_hist_gradient_boosting/` | Histogram-based GBDT regression | `max_iter`, `learning_rate`, `max_depth`, `loss` |
-| `ExtraTreesClassifier` | `ensemble/_forest.py` | Extremely randomized trees | `n_estimators`, `max_depth`, `max_features`, `bootstrap` |
-| `IsolationForest` | `ensemble/_iforest.py` | Anomaly detection via random partitioning | `n_estimators`, `max_samples`, `contamination` |
+| `RandomForestClassifier` | `ensemble/_forest.py:L1174` | RF classification; bagged trees + feature randomness | `n_estimators`, `max_depth`, `max_features`, `min_samples_split`, `oob_score` |
+| `RandomForestRegressor` | `ensemble/_forest.py:L1577` | RF regression | `n_estimators`, `max_depth`, `max_features`, `oob_score` |
+| `GradientBoostingClassifier` | `ensemble/_gb.py:L1123` | Gradient-boosted trees for classification | `n_estimators`, `learning_rate`, `max_depth`, `subsample`, `loss` |
+| `GradientBoostingRegressor` | `ensemble/_gb.py:L1734` | Gradient-boosted trees for regression | `n_estimators`, `learning_rate`, `max_depth`, `loss`, `alpha` (Huber/quantile) |
+| `BaggingClassifier` | `ensemble/_bagging.py:L683` | Bootstrap-aggregated classifier | `estimator`, `n_estimators`, `max_samples`, `bootstrap`, `oob_score` |
+| `BaggingRegressor` | `ensemble/_bagging.py:L1192` | Bootstrap-aggregated regressor | `estimator`, `n_estimators`, `max_samples`, `bootstrap` |
+| `AdaBoostClassifier` | `ensemble/_weight_boosting.py:L321` | Adaptive boosting (SAMME/SAMME.R) | `estimator`, `n_estimators`, `learning_rate`, `algorithm` |
+| `AdaBoostRegressor` | `ensemble/_weight_boosting.py:L823` | AdaBoost for regression | `estimator`, `n_estimators`, `learning_rate`, `loss` |
+| `StackingClassifier` | `ensemble/_stacking.py:L422` | Stacked generalization classifier | `estimators`, `final_estimator`, `cv`, `stack_method` |
+| `StackingRegressor` | `ensemble/_stacking.py:L841` | Stacked generalization regressor | `estimators`, `final_estimator`, `cv` |
+| `VotingClassifier` | `ensemble/_voting.py:L194` | Soft/hard voting over estimators | `estimators`, `voting` ('soft'/'hard'), `weights` |
+| `VotingRegressor` | `ensemble/_voting.py:L546` | Average predictions over estimators | `estimators`, `weights` |
+| `HistGradientBoostingClassifier` | `ensemble/_hist_gradient_boosting/` | Histogram-based GBDT (fast) | `max_iter`, `learning_rate`, `max_depth`, `l2_regularization` | `ensemble/_hist_gradient_boosting/gradient_boosting.py:L1761` |
+
+| `HistGradientBoostingRegressor` | `ensemble/_hist_gradient_boosting/` | Histogram-based GBDT regression | `max_iter`, `learning_rate`, `max_depth`, `loss` | `ensemble/_hist_gradient_boosting/gradient_boosting.py:L1359` |
+
+| `ExtraTreesClassifier` | `ensemble/_forest.py:L1963` | Extremely randomized trees | `n_estimators`, `max_depth`, `max_features`, `bootstrap` |
+| `IsolationForest` | `ensemble/_iforest.py:L54` | Anomaly detection via random partitioning | `n_estimators`, `max_samples`, `contamination` |
 
 ### Key Methods (from graph node analysis)
 

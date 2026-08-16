@@ -1,6 +1,6 @@
 {
-  "generated": "2026-08-15T06:35:41+00:00",
-  "git_sha": "e03cd8b",
+  "generated": "2026-08-16T18:10:20+00:00",
+  "git_sha": "53448ea",
   "mode": {
     "ci": true,
     "strict": false,
@@ -25,9 +25,7 @@
     "skills/alphalens/tearsheets/SKILL.md": {
       "lint": [],
       "api_fail": [],
-      "api_warn": [
-        "func py: not found (library not installed, no graph node)"
-      ],
+      "api_warn": [],
       "meta_warn": [],
       "provenance": []
     },
@@ -41,9 +39,7 @@
     "skills/arch/bootstrap/SKILL.md": {
       "lint": [],
       "api_fail": [],
-      "api_warn": [
-        "func py: not found (library not installed, no graph node)"
-      ],
+      "api_warn": [],
       "meta_warn": [],
       "provenance": []
     },
@@ -96,36 +92,28 @@
       "lint": [],
       "api_fail": [],
       "api_warn": [],
-      "meta_warn": [
-        "graph meta: community_count mismatch \u2014 graph has 52, skill claims 38"
-      ],
+      "meta_warn": [],
       "provenance": []
     },
     "skills/catboost/core/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
-      "meta_warn": [
-        "graph meta: community_count mismatch \u2014 graph has 52, skill claims 38"
-      ],
+      "meta_warn": [],
       "provenance": []
     },
     "skills/catboost/evaluation/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
-      "meta_warn": [
-        "graph meta: community_count mismatch \u2014 graph has 52, skill claims 38"
-      ],
+      "meta_warn": [],
       "provenance": []
     },
     "skills/catboost/pool/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
-      "meta_warn": [
-        "graph meta: community_count mismatch \u2014 graph has 52, skill claims 38"
-      ],
+      "meta_warn": [],
       "provenance": []
     },
     "skills/cvxpy/SKILL.md": {
@@ -212,9 +200,7 @@
     "skills/empyrical/perf-attrib/SKILL.md": {
       "lint": [],
       "api_fail": [],
-      "api_warn": [
-        "func py: not found (library not installed, no graph node)"
-      ],
+      "api_warn": [],
       "meta_warn": [],
       "provenance": []
     },
@@ -273,7 +259,9 @@
       "api_warn": [
         "class GridSearchCV: not found (library not installed, no graph node)",
         "class XGBClassifier: not found (library not installed, no graph node)",
-        "class XGBRegressor: not found (library not installed, no graph node)"
+        "class XGBRegressor: not found (library not installed, no graph node)",
+        "func n_estimators: not found (library not installed, no graph node)",
+        "func num_leaves: not found (library not installed, no graph node)"
       ],
       "meta_warn": [],
       "provenance": []
@@ -454,9 +442,7 @@
     "skills/polars/performance/SKILL.md": {
       "lint": [],
       "api_fail": [],
-      "api_warn": [
-        "func py: not found (library not installed, no graph node)"
-      ],
+      "api_warn": [],
       "meta_warn": [],
       "provenance": []
     },
@@ -477,9 +463,7 @@
     "skills/pyfolio/timeseries/SKILL.md": {
       "lint": [],
       "api_fail": [],
-      "api_warn": [
-        "func py: not found (library not installed, no graph node)"
-      ],
+      "api_warn": [],
       "meta_warn": [],
       "provenance": []
     },
@@ -668,30 +652,21 @@
     "skills/riskfolio/hrp/SKILL.md": {
       "lint": [],
       "api_fail": [],
-      "api_warn": [
-        "class DBHT: not found (library not installed, no graph node)",
-        "class PlotFunctions: not found (library not installed, no graph node)"
-      ],
+      "api_warn": [],
       "meta_warn": [],
       "provenance": []
     },
     "skills/riskfolio/portfolio/SKILL.md": {
       "lint": [],
       "api_fail": [],
-      "api_warn": [
-        "class AuxFunctions: not found (library not installed, no graph node)",
-        "class ParamsEstimation: not found (library not installed, no graph node)"
-      ],
+      "api_warn": [],
       "meta_warn": [],
       "provenance": []
     },
     "skills/riskfolio/risk_measures/SKILL.md": {
       "lint": [],
       "api_fail": [],
-      "api_warn": [
-        "class RiskFunctions: not found (library not installed, no graph node)",
-        "func py: not found (library not installed, no graph node)"
-      ],
+      "api_warn": [],
       "meta_warn": [],
       "provenance": []
     },
@@ -705,9 +680,7 @@
     "skills/scikit-learn/cluster/SKILL.md": {
       "lint": [],
       "api_fail": [],
-      "api_warn": [
-        "class DBSCAN: not found (library not installed, no graph node)"
-      ],
+      "api_warn": [],
       "meta_warn": [],
       "provenance": []
     },
@@ -728,9 +701,7 @@
     "skills/scikit-learn/decomposition/SKILL.md": {
       "lint": [],
       "api_fail": [],
-      "api_warn": [
-        "class FastICA: not found (library not installed, no graph node)"
-      ],
+      "api_warn": [],
       "meta_warn": [],
       "provenance": []
     },
@@ -779,9 +750,7 @@
     "skills/scikit-learn/metrics/SKILL.md": {
       "lint": [],
       "api_fail": [],
-      "api_warn": [
-        "func mean_tweedie_deviance: not found (library not installed, no graph node)"
-      ],
+      "api_warn": [],
       "meta_warn": [],
       "provenance": []
     },
@@ -994,13 +963,7 @@
     "skills/vectorbt/signals/SKILL.md": {
       "lint": [],
       "api_fail": [],
-      "api_warn": [
-        "class BBANDS: not found (library not installed, no graph node)",
-        "class MA: not found (library not installed, no graph node)",
-        "class MACD: not found (library not installed, no graph node)",
-        "class RSI: not found (library not installed, no graph node)",
-        "class STOCH: not found (library not installed, no graph node)"
-      ],
+      "api_warn": [],
       "meta_warn": [],
       "provenance": []
     },
@@ -1054,7 +1017,7 @@
     "lint": 0,
     "api_fail": 0,
     "provenance": 0,
-    "api_warn": 60,
-    "meta_warn": 4
+    "api_warn": 43,
+    "meta_warn": 0
   }
 }

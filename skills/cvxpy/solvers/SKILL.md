@@ -40,20 +40,20 @@ and feature availability.
 | API | Source File | Description |
 |-----|------------|-------------|
 | `CLARABEL` | `reductions/solvers/conic_solvers/clarabel_conif.py:L65` | Interior-point conic solver — default for new cvxpy; quad-objective support |
-| `SCS` | `reductions/solvers/conic_solvers/scs_conif.py` | First-order splitting conic solver — scalable, lower accuracy, warm-startable |
-| `ECOS` | `reductions/solvers/conic_solvers/ecos_conif.py` | Interior-point conic — small/medium, high accuracy |
-| `OSQP` | `reductions/solvers/qp_solvers/osqp_qpif.py` | ADMM QP solver — fast re-solves, warm-start friendly |
+| `SCS` | `reductions/solvers/conic_solvers/scs_conif.py:L82` | First-order splitting conic solver — scalable, lower accuracy, warm-startable |
+| `ECOS` | `reductions/solvers/conic_solvers/ecos_conif.py:L40` | Interior-point conic — small/medium, high accuracy |
+| `OSQP` | `reductions/solvers/qp_solvers/osqp_qpif.py:L13` | ADMM QP solver — fast re-solves, warm-start friendly |
 | `CBC` | `reductions/solvers/conic_solvers/cbc_conif.py:L28` | Mixed-integer LP solver (branch-and-cut) |
-| `GLPK` | `reductions/solvers/conic_solvers/glpk_conif.py` | LP solver — simplex/interior point via GLPK |
-| `HiGHS` | `reductions/solvers/conic_solvers/highs_conif.py` | Modern LP solver — dual simplex, fast |
-| `Problem.solve()` | `problems/problem.py` | Dispatch: solver=..., warm_start=..., solver_opts=..., verbose=... |
-| `Problem.solver_stats` | `problems/problem.py` | Solver stats: solve_time, iterations, setup_time, num_iters |
-| `Problem.status` | `problems/problem.py` | "optimal", "infeasible", "unbounded", "optimal_inaccurate", "user_limit" |
-| `Problem.value` | `problems/problem.py` | Optimal objective value after solve |
-| `Problem.unpack_results()` | `problems/problem.py` | Repack solver solution into the problem (after manual solver runs) |
-| `Constraint.dual_value` | `constraints/constraint.py` | Dual variable of a constraint — sensitivity/KKT multipliers |
-| `Variable.value` | `expressions/variable.py` | Primal solution — attribute of the variable after solve |
-| `installed_solvers()` | `reductions/solvers/defines.py` | List of solvers importable in this environment |
+| `GLPK` | `reductions/solvers/conic_solvers/glpk_conif.py:L24` | LP solver — simplex/interior point via GLPK |
+| `HiGHS` | `reductions/solvers/conic_solvers/highs_conif.py:L106` | Modern LP solver — dual simplex, fast |
+| `Problem.solve()` | `problems/problem.py:L592` | Dispatch: solver=..., warm_start=..., solver_opts=..., verbose=... |
+| `Problem.solver_stats` | `problems/problem.py:L525` | Solver stats: solve_time, iterations, setup_time, num_iters |
+| `Problem.status` | `problems/problem.py:L226` | "optimal", "infeasible", "unbounded", "optimal_inaccurate", "user_limit" |
+| `Problem.value` | `problems/problem.py:L216` | Optimal objective value after solve |
+| `Problem.unpack_results()` | `problems/problem.py:L1423` | Repack solver solution into the problem (after manual solver runs) |
+| `Constraint.dual_value` | `constraints/constraint.py:L356` | Dual variable of a constraint — sensitivity/KKT multipliers |
+| `Variable.value` | `expressions/variable.py:L34` | Primal solution — attribute of the variable after solve |
+| `installed_solvers()` | `reductions/solvers/defines.py:L120` | List of solvers importable in this environment |
 
 ## Common Patterns
 

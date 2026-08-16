@@ -33,7 +33,7 @@ cvxpy — MV/CVaR/CDaR/EVaR objectives under weight/group/factor constraints.
 | API | Source File | Description |
 |-----|------------|-------------|
 | `Portfolio` | `src/Portfolio.py:L56` | Builds the optimization problem: returns, risk measure, constraints |
-| `Portfolio.optimization()` | `src/Portfolio.py` | Solves the portfolio problem and returns optimal weights |
+| `Portfolio.optimization()` | `src/Portfolio.py:L1978` | Solves the portfolio problem and returns optimal weights |
 | `Portfolio.returns()` | `src/Portfolio.py:L510` | Accessor for the returns matrix |
 | `Portfolio.numassets()` | `src/Portfolio.py:L531` | Number of assets in the portfolio |
 | `Portfolio.ainequality()` | `src/Portfolio.py:L595` | Inequality constraint matrices (A/b) for the LP/QP form |
@@ -46,8 +46,8 @@ cvxpy — MV/CVaR/CDaR/EVaR objectives under weight/group/factor constraints.
 | `risk_constraint()` | `src/ConstraintsFunctions.py:L1745` | Portfolio-level risk cap constraint |
 | `hrp_constraints()` | `src/ConstraintsFunctions.py:L1597` | HRP-family constraint wiring |
 | `assets_clusters()` | `src/ConstraintsFunctions.py:L1428` | Cluster assignment from a codependence matrix |
-| `ParamsEstimation.py` | `src/ParamsEstimation.py` | Covariance/returns estimation parameters |
-| `AuxFunctions.py` | `src/AuxFunctions.py` | Shared helpers for the optimizer stack |
+| `ParamsEstimation.py:L1` | `src/ParamsEstimation.py:L1` | Covariance/returns estimation parameters |
+| `AuxFunctions.py:L1` | `src/AuxFunctions.py:L1` | Shared helpers for the optimizer stack |
 
 ## Common Patterns
 

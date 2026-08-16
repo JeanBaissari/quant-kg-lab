@@ -39,5 +39,5 @@ Indexes the 5 spec-driven NumPy sub-skills. Load the one for the module you need
 ## Provenance
 
 - Knowledge graph: numpy, 8094 nodes, 13271 edges, 670 communities
-- God nodes: `ABCPolyBase` (251), `MaskedArray` (151), `f2c_d_lapack.c` (124) — public-API hubs only (see GRAPH_SPEC noise filter)
+- God nodes: `ABCPolyBase` (251), `MaskedArray` (151), `f2c_d_lapack.c:L1` (124) — public-API hubs only (see GRAPH_SPEC noise filter)
 - Extraction: graphify @ ab2199763cb1, backend opencode, description coverage 83%

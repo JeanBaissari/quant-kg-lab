@@ -41,8 +41,8 @@ inversion needed, robust to ill-conditioned matrices.
 | `HCPortfolio.p_esm()` | `src/HCPortfolio.py:L184` | Expected-shortfall-mimicking portfolios per cluster |
 | `HCPortfolio._hierarchical_clustering()` | `src/HCPortfolio.py:L341` | Linkage clustering over the codependence matrix |
 | `HCPortfolio._recursive_bisection()` | `src/HCPortfolio.py:L414` | Top-down weight bisection (HRP core) |
-| `DBHT.py` | `src/DBHT.py` | Directed Bubble Hierarchical Tree clustering |
-| `PlotFunctions.py` | `src/PlotFunctions.py` | Frontier/cluster plotting helpers |
+| `DBHT.py:L1` | `src/DBHT.py:L1` | Directed Bubble Hierarchical Tree clustering |
+| `PlotFunctions.py:L1` | `src/PlotFunctions.py:L1` | Frontier/cluster plotting helpers |
 
 ## Common Patterns
 

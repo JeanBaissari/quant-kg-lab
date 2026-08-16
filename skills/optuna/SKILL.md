@@ -59,8 +59,10 @@ This top-level skill indexes seven spec-driven sub-skills covering each major Op
 
 | Node | Description |
 |------|-------------|
-| `Study` | A study corresponds to an optimization task, i.e., a set of trials |
-| `BaseDistribution` | Base class for distributions used internally by Trial and samplers |
+| `Study` | A study corresponds to an optimization task, i.e., a set of trials | `study/study.py:L68` |
+
+| `BaseDistribution` | Base class for distributions used internally by Trial and samplers | `distributions.py:L31` |
+
 | `optuna.trial` | Module providing parameter suggestion and pruning interface |
 | `optuna.study` | Module providing study lifecycle management |
 | `optuna.samplers` | Module providing sampling algorithms for parameter suggestion |
@@ -79,5 +81,5 @@ graphify explain "Study" --graph .graphify/graph.json
 ## Provenance
 
 - Knowledge graph: optuna, 2205 nodes, 4010 edges, 226 communities
-- God nodes: `Study` (221), `BaseDistribution` (196), `_typing.py` (142) — public-API hubs only (see GRAPH_SPEC noise filter)
+- God nodes: `Study` (221), `BaseDistribution` (196), `_typing.py:L1` (142) — public-API hubs only (see GRAPH_SPEC noise filter)
 - Extraction: graphify @ b6f2ea62fbe7, backend opencode, description coverage 85%

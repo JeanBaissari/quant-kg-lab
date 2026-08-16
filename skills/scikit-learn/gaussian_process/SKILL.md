@@ -35,20 +35,20 @@ Communities: 30 ("Gaussian Processes GPC"), 58 ("Gaussian Processes"), 160 ("Gau
 ## Quick Reference
 | Class/Function | Source File | Purpose | Key Params |
 |---------------|-------------|---------|------------|
-| `GaussianProcessClassifier` | `gaussian_process/_gpc.py` | GP classification with Laplace approximation | `kernel`, `optimizer`, `n_restarts_optimizer`, `max_iter_predict` |
-| `GaussianProcessRegressor` | `gaussian_process/_gpr.py` | GP regression with exact inference | `kernel`, `alpha` (noise level), `optimizer`, `n_restarts_optimizer`, `normalize_y` |
-| `RBF` | `gaussian_process/kernels.py` | Radial Basis Function (squared exponential) kernel | `length_scale`, `length_scale_bounds` |
-| `Matern` | `gaussian_process/kernels.py` | Matérn covariance kernel | `length_scale`, `nu` (0.5/1.5/2.5/∞), `length_scale_bounds` |
-| `RationalQuadratic` | `gaussian_process/kernels.py` | Rational Quadratic kernel (scale mixture of RBF) | `length_scale`, `alpha` (scale mixture), `length_scale_bounds`, `alpha_bounds` |
-| `ExpSineSquared` | `gaussian_process/kernels.py` | Periodic kernel | `length_scale`, `periodicity`, `length_scale_bounds`, `periodicity_bounds` |
-| `DotProduct` | `gaussian_process/kernels.py` | Linear (dot product) kernel | `sigma_0` (inhomogeneity), `sigma_0_bounds` |
-| `ConstantKernel` | `gaussian_process/kernels.py` | Constant kernel (amplitude scaling) | `constant_value`, `constant_value_bounds` |
-| `WhiteKernel` | `gaussian_process/kernels.py` | White noise kernel | `noise_level`, `noise_level_bounds` |
-| `Sum(k1, k2)` | `gaussian_process/kernels.py` | Sum of two kernels (OR combination) | — |
-| `Product(k1, k2)` | `gaussian_process/kernels.py` | Product of two kernels (AND combination) | — |
-| `Exponentiation(kernel, exponent)` | `gaussian_process/kernels.py` | Exponentiate a kernel | `kernel`, `exponent` |
-| `Kernel` | `gaussian_process/kernels.py` | Abstract base for all kernels | — |
-| `Hyperparameter` | `gaussian_process/kernels.py` | Descriptor for kernel hyperparameters | `name`, `value_type`, `bounds`, `n_elements`, `fixed` |
+| `GaussianProcessClassifier` | `gaussian_process/_gpc.py:L516` | GP classification with Laplace approximation | `kernel`, `optimizer`, `n_restarts_optimizer`, `max_iter_predict` |
+| `GaussianProcessRegressor` | `gaussian_process/_gpr.py:L32` | GP regression with exact inference | `kernel`, `alpha` (noise level), `optimizer`, `n_restarts_optimizer`, `normalize_y` |
+| `RBF` | `gaussian_process/kernels.py:L1448` | Radial Basis Function (squared exponential) kernel | `length_scale`, `length_scale_bounds` |
+| `Matern` | `gaussian_process/kernels.py:L1601` | Matérn covariance kernel | `length_scale`, `nu` (0.5/1.5/2.5/∞), `length_scale_bounds` |
+| `RationalQuadratic` | `gaussian_process/kernels.py:L1801` | Rational Quadratic kernel (scale mixture of RBF) | `length_scale`, `alpha` (scale mixture), `length_scale_bounds`, `alpha_bounds` |
+| `ExpSineSquared` | `gaussian_process/kernels.py:L1957` | Periodic kernel | `length_scale`, `periodicity`, `length_scale_bounds`, `periodicity_bounds` |
+| `DotProduct` | `gaussian_process/kernels.py:L2102` | Linear (dot product) kernel | `sigma_0` (inhomogeneity), `sigma_0_bounds` |
+| `ConstantKernel` | `gaussian_process/kernels.py:L1187` | Constant kernel (amplitude scaling) | `constant_value`, `constant_value_bounds` |
+| `WhiteKernel` | `gaussian_process/kernels.py:L1325` | White noise kernel | `noise_level`, `noise_level_bounds` |
+| `Sum(k1, k2)` | `gaussian_process/kernels.py:L799` | Sum of two kernels (OR combination) | — |
+| `Product(k1, k2)` | `gaussian_process/kernels.py:L896` | Product of two kernels (AND combination) | — |
+| `Exponentiation(kernel, exponent)` | `gaussian_process/kernels.py:L996` | Exponentiate a kernel | `kernel`, `exponent` |
+| `Kernel` | `gaussian_process/kernels.py:L157` | Abstract base for all kernels | — |
+| `Hyperparameter` | `gaussian_process/kernels.py:L58` | Descriptor for kernel hyperparameters | `name`, `value_type`, `bounds`, `n_elements`, `fixed` |
 
 ### Key Methods (from graph node analysis)
 

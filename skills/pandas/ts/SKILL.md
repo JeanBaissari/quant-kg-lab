@@ -35,21 +35,29 @@ Temporal data manipulation: frequency conversion (`resample`), moving window com
 | `BaseWindow` | `core/window/rolling.py:L116` | 35 | Base class for Rolling, Expanding, EWM windows |
 | `PeriodIndex` | `core/indexes/period.py:L92` | 27 | Immutable ndarray of periods (e.g., '2023-Q1') |
 | `TimedeltaIndex` | `core/indexes/timedeltas.py:L107` | 17 | Immutable ndarray of timedelta64 for duration indexing |
-| `date_range()` | `core/indexes/datetimes.py` | 3 | Fixed-frequency DatetimeIndex generator |
-| `to_datetime()` | `core/tools/datetimes.py` | 6 | Convert scalars, arrays, Series to datetime |
+| `date_range()` | `core/indexes/datetimes.py:L1481` | 3 | Fixed-frequency DatetimeIndex generator |
+| `to_datetime()` | `core/tools/datetimes.py:L767` | 6 | Convert scalars, arrays, Series to datetime |
 
 ### Additional Key APIs (by degree rank)
 
 | API | Type | Description |
 |-----|------|-------------|
-| `TimedeltaArray` | class | Array of timedelta64 with timezone-naive storage |
-| `DatetimeIndexResampler` | class | Resampler specialized for DatetimeIndex |
-| `PeriodIndexResampler` | class | Resampler specialized for PeriodIndex |
-| `RollingGroupby` | class | Rolling window within GroupBy groups |
-| `ExpandingGroupby` | class | Expanding window within GroupBy groups |
-| `ExponentialMovingWindowGroupby` | class | EWM within GroupBy groups |
-| `OnlineExponentialMovingWindow` | class | Online (streaming) EWMA for large datasets |
-| `DatetimeArray` | class | Array of datetime64 with timezone handling |
+| `TimedeltaArray` | class | Array of timedelta64 with timezone-naive storage | `core/arrays/timedeltas.py:L117` |
+
+| `DatetimeIndexResampler` | class | Resampler specialized for DatetimeIndex | `core/resample.py:L2112` |
+
+| `PeriodIndexResampler` | class | Resampler specialized for PeriodIndex | `core/resample.py:L2235` |
+
+| `RollingGroupby` | class | Rolling window within GroupBy groups | `core/window/rolling.py:L3540` |
+
+| `ExpandingGroupby` | class | Expanding window within GroupBy groups | `core/window/expanding.py:L1456` |
+
+| `ExponentialMovingWindowGroupby` | class | EWM within GroupBy groups | `core/window/ewm.py:L1016` |
+
+| `OnlineExponentialMovingWindow` | class | Online (streaming) EWMA for large datasets | `core/window/ewm.py:L1049` |
+
+| `DatetimeArray` | class | Array of datetime64 with timezone handling | `core/arrays/datetimes.py:L163` |
+
 | `asfreq()` | function | Convert time series to specified frequency |
 | `is_subperiod()` | function | Check if one offset is a subperiod of another |
 | `is_superperiod()` | function | Check if one offset is a superperiod of another |
@@ -220,5 +228,5 @@ df.groupby('symbol')['close'].ewm(span=20).mean()
 ## Provenance
 
 - Knowledge graph: pandas, 11368 nodes, 39913 edges, 410 communities
-- God nodes: `_FrequencyInferer` (28), `AbstractHolidayCalendar` (19), `holiday.py` (18) — public-API hubs only (see GRAPH_SPEC noise filter)
+- God nodes: `_FrequencyInferer` (28), `AbstractHolidayCalendar` (19), `holiday.py:L1` (18) — public-API hubs only (see GRAPH_SPEC noise filter)
 - Extraction: graphify @ 982854070758, backend opencode, description coverage 81%

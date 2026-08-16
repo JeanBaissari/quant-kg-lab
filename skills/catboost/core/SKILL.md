@@ -40,13 +40,13 @@ loss-function and eval-metric selection, native categorical features, persistenc
 |-----|------------|-------------|
 | `CatBoost` | `core.py:L2563` | Base model class — shared fit/predict/save/load machinery |
 | `CatBoostClassifier` | `core.py:L4872` | Classification — binary/multiclass, predict_proba |
-| `CatBoostRegressor` | `core.py` | Regression — quantile/multi-target variants |
-| `CatBoostRanker` | `core.py` | Ranking — group_id + pairwise losses |
+| `CatBoostRegressor` | `core.py:L5959` | Regression — quantile/multi-target variants |
+| `CatBoostRanker` | `core.py:L6369` | Ranking — group_id + pairwise losses |
 | `Pool` | `core.py:L603` | The data container — X/y/cat_features/group_id/pairs |
 | `.is_fitted()` | `core.py:L1840` | Check whether the model has been fitted |
-| `.get_feature_importance()` | `core.py` | Feature importances — PredictionValuesChange or SHAP |
-| `.save_model()` / `.load_model()` | `core.py` | Model persistence (cbm format) |
-| `.predict()` | `core.py` | Prediction — numpy/DataFrame output |
+| `.get_feature_importance()` | `core.py:L3418` | Feature importances — PredictionValuesChange or SHAP |
+| `.save_model()` / `.load_model()` | `core.py:L3735` | Model persistence (cbm format) |
+| `.predict()` | `core.py:L2563` | Prediction — numpy/DataFrame output |
 | `BuiltinMetric` | `metrics.py:L25` | Enum of built-in eval metrics (deg 123 hub) |
 
 ## Common Patterns
@@ -94,4 +94,4 @@ Graph: `knowledge_graphs/catboost/.graphify/graph.json` — 793 nodes · 1569 ed
 - [ ] `CatBoostClassifier(cat_features=[...]).fit(X, y)` trains with raw categoricals
 - [ ] `.get_feature_importance()` returns per-feature values
 - [ ] `.save_model()`/`.load_model()` round-trips
-- [ ] QR rows cite `core.py`/`metrics.py` files resolvable in the catboost graph
+- [ ] QR rows cite `core.py:L1`/`metrics.py:L1` files resolvable in the catboost graph

@@ -28,26 +28,31 @@ Statistical functions, probability distributions, and hypothesis tests. The work
 
 | API | Source File | Degree | Description |
 |-----|------------|--------|-------------|
-| `UnivariateDistribution` | `_distribution_infrastructure.py` | 196 | Base class for all continuous distributions; `norm`, `t`, `chi2` are instances |
-| `PermutationMethod` | `_resampling.py` | 105 | Resampling configuration for permutation tests |
-| `BootstrapMethod` | `_resampling.py` | 105 | Resampling configuration for bootstrap confidence intervals |
-| `MonteCarloMethod` | `_resampling.py` | 103 | Resampling configuration for Monte Carlo hypothesis tests |
-| `gaussian_kde` | `_kde.py` | — | Kernel density estimation for multivariate data |
-| `ttest_ind()` | `_stats_py.py` | 9 | Independent two-sample t-test (highest-degree test function) |
-| `mannwhitneyu()` | `_mannwhitneyu.py` | 7 | Mann-Whitney U rank test |
-| `describe()` | `_stats_py.py` | 6 | Descriptive statistics summary |
-| `zscore()` | `_stats_py.py` | 4 | Compute z-scores relative to sample mean and std |
-| `bootstrap()` | `_resampling.py` | 6 | Bootstrap confidence intervals for any statistic |
+| `UnivariateDistribution` | `stats/_distribution_infrastructure.py:L1422` | 196 | Base class for all continuous distributions; `norm`, `t`, `chi2` are instances |
+| `PermutationMethod` | `stats/_resampling.py:L2249` | 105 | Resampling configuration for permutation tests |
+| `BootstrapMethod` | `stats/_resampling.py:L2334` | 105 | Resampling configuration for bootstrap confidence intervals |
+| `MonteCarloMethod` | `stats/_resampling.py:L2179` | 103 | Resampling configuration for Monte Carlo hypothesis tests |
+| `gaussian_kde` | `stats/_kde.py:L38` | — | Kernel density estimation for multivariate data |
+| `ttest_ind()` | `_stats_py.py:L6554` | 9 | Independent two-sample t-test (highest-degree test function) |
+| `mannwhitneyu()` | `_mannwhitneyu.py:L246` | 7 | Mann-Whitney U rank test |
+| `describe()` | `_stats_py.py:L1448` | 6 | Descriptive statistics summary |
+| `zscore()` | `_stats_py.py:L2673` | 4 | Compute z-scores relative to sample mean and std |
+| `bootstrap()` | `_resampling.py:L300` | 6 | Bootstrap confidence intervals for any statistic |
 
 ### Additional Key APIs (by degree rank)
 
 | API | Type | Description |
 |-----|------|-------------|
-| `ContinuousDistribution` | class | Modern distribution interface (scipy ≥ 1.15) |
-| `rv_continuous` | class | Legacy continuous distribution base class |
-| `FitResult` | class | Result object from distribution fitting |
-| `CensoredData` | class | Right/left/interval-censored data container |
-| `QMCEngine` | class | Quasi-Monte Carlo sampling (Sobol, Halton) |
+| `ContinuousDistribution` | class | Modern distribution interface (scipy ≥ 1.15) | `stats/_distribution_infrastructure.py:L3533` |
+
+| `rv_continuous` | class | Legacy continuous distribution base class | `stats/_distn_infrastructure.py:L1669` |
+
+| `FitResult` | class | Result object from distribution fitting | `stats/_fit.py:L42` |
+
+| `CensoredData` | class | Right/left/interval-censored data container | `stats/_censored_data.py:L61` |
+
+| `QMCEngine` | class | Quasi-Monte Carlo sampling (Sobol, Halton) | `stats/_qmc.py:L799` |
+
 | `pearsonr()` | function | Pearson correlation coefficient with p-value |
 | `spearmanr()` | function | Spearman rank correlation |
 | `linregress()` | function | Linear regression with p-values |

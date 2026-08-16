@@ -27,16 +27,16 @@ Signal processing toolbox for filter design, spectral analysis, convolution, pea
 
 | API | Source File | Degree | Description |
 |-----|------------|--------|-------------|
-| `ShortTimeFFT` | `_short_time_fft.py` | 104 | Short-time Fourier transform with inverse, spectrogram, and cross-spectrogram |
-| `StateSpace` | `_ltisys.py` | 26 | Linear system in state-space representation (A, B, C, D matrices) |
-| `TransferFunction` | `_ltisys.py` | 17 | LTI system in transfer function form (num, den polynomials) |
-| `ZerosPolesGain` | `_ltisys.py` | 16 | LTI system in zero-pole-gain form |
-| `iirfilter()` | `_filter_design.py` | 15 | General IIR filter design (Butterworth, Chebyshev, elliptic) |
-| `convolve()` | `_signaltools.py` | 10 | N-dimensional convolution |
-| `lfilter()` | `_signaltools.py` | 8 | Direct-form II IIR filtering of a 1-D signal |
-| `filtfilt()` | `_signaltools.py` | 7 | Zero-phase forward-backward digital filtering |
-| `find_peaks()` | `_peak_finding.py` | 7 | Find local maxima in 1-D signal |
-| `decimate()` | `_signaltools.py` | 7 | Downsample after anti-alias filtering |
+| `ShortTimeFFT` | `signal/_short_time_fft.py:L225` | 104 | Short-time Fourier transform with inverse, spectrogram, and cross-spectrogram |
+| `StateSpace` | `signal/_ltisys.py:L1495` | 26 | Linear system in state-space representation (A, B, C, D matrices) |
+| `TransferFunction` | `signal/_ltisys.py:L733` | 17 | LTI system in transfer function form (num, den polynomials) |
+| `ZerosPolesGain` | `signal/_ltisys.py:L1137` | 16 | LTI system in zero-pole-gain form |
+| `iirfilter()` | `_filter_design.py:L2664` | 15 | General IIR filter design (Butterworth, Chebyshev, elliptic) |
+| `convolve()` | `_signaltools.py:L1393` | 10 | N-dimensional convolution |
+| `lfilter()` | `_signaltools.py:L2092` | 8 | Direct-form II IIR filtering of a 1-D signal |
+| `filtfilt()` | `_signaltools.py:L4808` | 7 | Zero-phase forward-backward digital filtering |
+| `find_peaks()` | `_peak_finding.py:L729` | 7 | Find local maxima in 1-D signal |
+| `decimate()` | `_signaltools.py:L5295` | 7 | Downsample after anti-alias filtering |
 
 ### Additional Key APIs (by degree rank)
 
@@ -62,8 +62,10 @@ Signal processing toolbox for filter design, spectral analysis, convolution, pea
 | `oaconvolve()` | function | Overlap-add convolution for large arrays |
 | `normalize()` | function | Normalize filter numerator/denominator |
 | `kaiser()` | function | Kaiser window for FIR design |
-| `CZT` | class | Chirp Z-transform |
-| `ZoomFFT` | class | Zoom FFT for narrowband analysis |
+| `CZT` | class | Chirp Z-transform | `signal/_czt.py:L92` |
+
+| `ZoomFFT` | class | Zoom FFT for narrowband analysis | `signal/_czt.py:L257` |
+
 
 ## Common Patterns
 
@@ -184,5 +186,5 @@ t_out, y_out, x_out = lsim(sys, U=input_signal, T=t)
 ## Provenance
 
 - Knowledge graph: scipy, 14071 nodes, 23466 edges, 1076 communities
-- God nodes: `_delegators.py` (111), `filter_design.py` (80), `dlti` (67) — public-API hubs only (see GRAPH_SPEC noise filter)
+- God nodes: `_delegators.py:L1` (111), `filter_design.py:L1` (80), `dlti` (67) — public-API hubs only (see GRAPH_SPEC noise filter)
 - Extraction: graphify @ 0514ef9e7329, backend opencode, description coverage 81%

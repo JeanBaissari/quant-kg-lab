@@ -252,5 +252,5 @@ result = sma_func.outputs  # Access via .outputs after setting inputs
 ## Provenance
 
 - Knowledge graph: ta-lib, 381 nodes, 379 edges, 174 communities
-- God nodes: `_ta_lib.c` (373), `__init__.py` (4), `get_functions()` (2) — public-API hubs only (see GRAPH_SPEC noise filter)
+- God nodes: `_ta_lib.c:L1` (373), `__init__.py:L1` (4), `get_functions()` (2) — public-API hubs only (see GRAPH_SPEC noise filter)
 - Extraction: graphify @ a9ff1b47b3dd, backend opencode, description coverage 100%

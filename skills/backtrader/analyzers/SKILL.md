@@ -26,23 +26,23 @@ Analyzers compute performance metrics asynchronously during a backtest. Unlike S
 ## Quick Reference
 | Analyzer | Source File | Metric | Key Output Keys |
 |----------|-------------|--------|-----------------|
-| `SharpeRatio` | `backtrader/analyzers/sharpe.py` | Risk-adjusted return (annualized) | `sharperatio` |
-| `SharpeRatio_A` | `backtrader/analyzers/sharpe.py` | Annualized Sharpe directly | `sharperatio` |
-| `DrawDown` | `backtrader/analyzers/drawdown.py` | Drawdown statistics | `max.drawdown`, `max.drawdownperiod`, `max.moneydown` |
-| `TimeDrawDown` | `backtrader/analyzers/drawdown.py` | Time-based drawdown | `max.drawdown`, `max.drawdownperiod` |
-| `TradeAnalyzer` | `backtrader/analyzers/tradeanalyzer.py` | Trade-level statistics | `total.closed`, `won.total`, `lost.total`, `pnl.net.total` |
-| `AnnualReturn` | `backtrader/analyzers/annualreturn.py` | Returns by calendar year | `{year: return_pct}` |
-| `TimeReturn` | `backtrader/analyzers/timereturn.py` | Returns by time period | dict of `{datetime: return}` |
-| `SQN` | `backtrader/analyzers/sqn.py` | System Quality Number (Van Tharp) | `sqn` |
-| `Calmar` | `backtrader/analyzers/calmar.py` | Calmar Ratio (return / max drawdown) | `calmar` |
-| `VWR` | `backtrader/analyzers/vwr.py` | Variability-Weighted Return | `vwr` |
-| `Transactions` | `backtrader/analyzers/transactions.py` | Per-data transaction log | `{data_name: [transactions]}` |
-| `PositionsValue` | `backtrader/analyzers/positions.py` | Position values over time | `{datetime: value}` |
-| `GrossLeverage` | `backtrader/analyzers/leverage.py` | Gross leverage ratio | `gross_leverage` |
-| `LogReturnsRolling` | `backtrader/analyzers/logreturnsrolling.py` | Rolling log returns | dict of rolling return arrays |
-| `PeriodStats` | `backtrader/analyzers/periodstats.py` | Stats for given timeframe | `average`, `stddev`, `positive`, `negative` |
-| `PyFolio` | `backtrader/analyzers/pyfolio.py` | PyFolio-compatible output | `returns`, `positions`, `transactions`, `gross_lev` |
-| `Returns` | `backtrader/analyzers/returns.py` | Total/average/compound returns | `rtot`, `ravg`, `rnorm`, `rnorm100` |
+| `SharpeRatio` | `analyzers/sharpe.py:L33` | Risk-adjusted return (annualized) | `sharperatio` |
+| `SharpeRatio_A` | `analyzers/sharpe.py:L209` | Annualized Sharpe directly | `sharperatio` |
+| `DrawDown` | `backtrader/analyzers/drawdown.py:L31` | Drawdown statistics | `max.drawdown`, `max.drawdownperiod`, `max.moneydown` |
+| `TimeDrawDown` | `analyzers/drawdown.py:L113` | Time-based drawdown | `max.drawdown`, `max.drawdownperiod` |
+| `TradeAnalyzer` | `analyzers/tradeanalyzer.py:L31` | Trade-level statistics | `total.closed`, `won.total`, `lost.total`, `pnl.net.total` |
+| `AnnualReturn` | `analyzers/annualreturn.py:L30` | Returns by calendar year | `{year: return_pct}` |
+| `TimeReturn` | `backtrader/analyzers/timereturn.py:L27` | Returns by time period | dict of `{datetime: return}` |
+| `SQN` | `analyzers/sqn.py:L31` | System Quality Number (Van Tharp) | `sqn` |
+| `Calmar` | `analyzers/calmar.py:L31` | Calmar Ratio (return / max drawdown) | `calmar` |
+| `VWR` | `analyzers/vwr.py:L32` | Variability-Weighted Return | `vwr` |
+| `Transactions` | `analyzers/transactions.py:L31` | Per-data transaction log | `{data_name: [transactions]}` |
+| `PositionsValue` | `analyzers/positions.py:L28` | Position values over time | `{datetime: value}` |
+| `GrossLeverage` | `analyzers/leverage.py:L27` | Gross leverage ratio | `gross_leverage` |
+| `LogReturnsRolling` | `analyzers/logreturnsrolling.py:L33` | Rolling log returns | dict of rolling return arrays |
+| `PeriodStats` | `analyzers/periodstats.py:L34` | Stats for given timeframe | `average`, `stddev`, `positive`, `negative` |
+| `PyFolio` | `analyzers/pyfolio.py:L33` | PyFolio-compatible output | `returns`, `positions`, `transactions`, `gross_lev` |
+| `Returns` | `analyzers/returns.py:L30` | Total/average/compound returns | `rtot`, `ravg`, `rnorm`, `rnorm100` |
 
 ## Key Methods (analyzer lifecycle)
 

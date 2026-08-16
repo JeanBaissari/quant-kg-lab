@@ -43,29 +43,29 @@ registration.
 | `Continuous` | `distributions/distribution.py:L714` | Base for continuous families |
 | `Discrete` | `distributions/distribution.py:L704` | Base for discrete families |
 | `Uniform` | `distributions/continuous.py:L249` | Uniform prior — bounded ignorance |
-| `Normal` | `distributions/continuous.py` | Gaussian prior — mu/sigma parametrization |
-| `HalfCauchy` | `distributions/continuous.py` | Heavy-tailed positive prior — the default for scale params |
-| `StudentT` | `distributions/continuous.py` | Fat-tailed prior — nu degrees of freedom |
-| `LogNormal` | `distributions/continuous.py` | Positive skewed prior |
-| `Beta` | `distributions/continuous.py` | [0,1] prior — proportions, hit rates |
-| `Gamma` | `distributions/continuous.py` | Positive prior — rates, variances |
-| `Bernoulli` | `distributions/discrete.py` | Binary prior — event probability |
-| `Binomial` | `distributions/discrete.py` | Count prior — n trials, p success |
-| `Poisson` | `distributions/discrete.py` | Count prior — arrivals |
-| `NegativeBinomial` | `distributions/discrete.py` | Overdispersed count prior |
-| `MvNormal` | `distributions/multivariate.py` | Multivariate Gaussian — mu/cov |
-| `Dirichlet` | `distributions/multivariate.py` | Simplex prior — weight vectors, regime probabilities |
-| `LKJCholeskyCov` | `distributions/multivariate.py` | Correlation/covariance prior — LKJ-distributed (curated M2b) |
-| `OrderedMultinomial` | `distributions/multivariate.py` | Ordered categorical model (curated M2b) |
+| `Normal` | `distributions/continuous.py:L445` | Gaussian prior — mu/sigma parametrization |
+| `HalfCauchy` | `distributions/continuous.py:L2330` | Heavy-tailed positive prior — the default for scale params |
+| `StudentT` | `distributions/continuous.py:L1855` | Fat-tailed prior — nu degrees of freedom |
+| `LogNormal` | `distributions/continuous.py:L1723` | Positive skewed prior |
+| `Beta` | `distributions/continuous.py:L1131` | [0,1] prior — proportions, hit rates |
+| `Gamma` | `distributions/continuous.py:L2415` | Positive prior — rates, variances |
+| `Bernoulli` | `distributions/discrete.py:L296` | Binary prior — event probability |
+| `Binomial` | `distributions/discrete.py:L73` | Count prior — n trials, p success |
+| `Poisson` | `distributions/discrete.py:L522` | Count prior — arrivals |
+| `NegativeBinomial` | `distributions/discrete.py:L618` | Overdispersed count prior |
+| `MvNormal` | `distributions/multivariate.py:L188` | Multivariate Gaussian — mu/cov |
+| `Dirichlet` | `distributions/multivariate.py:L515` | Simplex prior — weight vectors, regime probabilities |
+| `LKJCholeskyCov` | `distributions/multivariate.py:L1314` | Correlation/covariance prior — LKJ-distributed (curated M2b) |
+| `OrderedMultinomial` | `distributions/multivariate.py:L821` | Ordered categorical model (curated M2b) |
 | `RandomWalk` | `distributions/timeseries.py:L122` | Gaussian random-walk prior — level/regime drift |
 | `PredefinedRandomWalk` | `distributions/timeseries.py:L282` | Random walk with a fixed innovation schedule |
-| `GARCH11` | `distributions/timeseries.py` | GARCH(1,1) volatility prior — Bayesian vol modelling |
-| `AR` | `distributions/timeseries.py` | Autoregressive prior — lag structure |
-| `CustomDist` | `distributions/custom.py` | Custom distribution builder (curated M2b) |
-| `Truncated` | `distributions/truncated.py` | Truncated distribution wrapper (curated M2b) |
-| `moment()` | `distributions/moments/means.py` | Expected-value computation for a distribution |
-| `support_point()` | `distributions/distribution.py` | Representative start point for samplers/optimizers |
-| `change_dist_size()` | `distributions/shape_utils.py` | Resize a distribution's shape (curated M2b) |
+| `GARCH11` | `distributions/timeseries.py:L782` | GARCH(1,1) volatility prior — Bayesian vol modelling |
+| `AR` | `distributions/timeseries.py:L511` | Autoregressive prior — lag structure |
+| `CustomDist` | `distributions/custom.py:L478` | Custom distribution builder (curated M2b) |
+| `Truncated` | `distributions/truncated.py:L280` | Truncated distribution wrapper (curated M2b) |
+| `moment()` | `distributions/moments/means.py:L95` | Expected-value computation for a distribution |
+| `support_point()` | `distributions/distribution.py:L680` | Representative start point for samplers/optimizers |
+| `change_dist_size()` | `distributions/shape_utils.py:L240` | Resize a distribution's shape (curated M2b) |
 | `ZeroSumTransform` | `distributions/transforms.py:L644` | Zero-sum constraint transform |
 
 ## Common Patterns

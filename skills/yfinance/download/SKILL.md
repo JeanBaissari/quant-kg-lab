@@ -37,7 +37,7 @@ frame; `Tickers` gives batch object access; `Search` and the `Screener` find sym
 
 | API | Source File | Description |
 |-----|------------|-------------|
-| `download()` | `data.py` | Batch history across symbols → MultiIndex (Ticker, OHLCV) frame |
+| `download()` | `multi.py:L55` | Batch history across symbols → MultiIndex (Ticker, OHLCV) frame |
 | `YfData` | `data.py:L80` | Shared request/cookie/session layer — deg 125 hub |
 | `YfData.get()` | `data.py:L394` | Generic GET with cookie/auth handling |
 | `YfData._make_request()` | `data.py:L412` | Raw request + response plumbing |
@@ -46,7 +46,7 @@ frame; `Tickers` gives batch object access; `Search` and the `Screener` find sym
 | `Tickers` | `tickers.py:L30` | Batch Ticker collection — iterate or index by symbol |
 | `Search` | `search.py:L31` | Symbol search — `Search("apple")` → quotes list |
 | `Lookup` | `lookup.py:L34` | Symbol lookup/validation helper |
-| `Screener` | `screener/screener.py` | Market screener — preset queries (e.g. "day_gainers") |
+| `Screener` | `screener/screener.py:L64` | Market screener — preset queries (e.g. "day_gainers") |
 | `QueryBase` | `screener/query.py:L15` | Screener query base with pagination |
 | `Domain` | `domain/domain.py:L11` | Domain classification (sector/industry/market) |
 | `Sector` | `domain/sector.py:L12` | Sector taxonomy |
@@ -94,4 +94,4 @@ Graph: `knowledge_graphs/yfinance/.graphify/graph.json` — 823 nodes · 1584 ed
 
 - [ ] `yf.download(["AAPL"], period="5d")` returns a MultiIndex frame
 - [ ] `yf.Search("apple")` returns quote candidates
-- [ ] QR rows cite `data.py`/`tickers.py`/`search.py`/`screener/*.py` resolvable in the yfinance graph
+- [ ] QR rows cite `data.py:L1`/`tickers.py:L1`/`search.py:L1`/`screener/*.py` resolvable in the yfinance graph

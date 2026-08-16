@@ -36,16 +36,16 @@ p-values, and diagnostics.
 
 | API | Source File | Degree | Description |
 |-----|------------|--------|-------------|
-| `OLS` | `regression/linear_model.py` | 857 | Ordinary Least Squares — `sm.OLS(y, X).fit()`; add constant with `add_constant` |
-| `GLM` | `genmod/generalized_linear_model.py` | 375 | Generalized linear model — families (Gaussian, Binomial, Poisson), link functions |
-| `LikelihoodModel` | `base/model.py` | 331 | Abstract maximum-likelihood base — powers OLS/GLM and the discrete/tsa families |
-| `PandasData` | `base/data.py` | 360 | DataFrame handling layer — formula/endog/exog extraction from pandas |
-| `FormulaManager` | `formula/_manager.py` | 929 | Formula API engine behind `sm.formula.ols("y ~ x1 + x2", data=df)` |
-| `SimpleTable` | `iolib/table.py` | 681 | ASCII/HTML summary table renderer — powers `results.summary()` |
-| `ValueWarning` | `tools/sm_exceptions.py` | 838 | Warning class for suspicious values (e.g. missing data, NaN handling) |
-| `SpecificationWarning` | `tools/sm_exceptions.py` | 690 | Warning for model-specification concerns (rank deficiency, collinearity) |
-| `ConvergenceWarning` | `tools/sm_exceptions.py` | 658 | Warning when an optimizer does not converge (GLM/IRLS, discrete MLE) |
-| `add_constant` | `tools/tools.py` | — | Prepend a constant column to the design matrix (intercept) |
+| `OLS` | `regression/linear_model.py:L938` | 857 | Ordinary Least Squares — `sm.OLS(y, X).fit()`; add constant with `add_constant` |
+| `GLM` | `genmod/generalized_linear_model.py:L66` | 375 | Generalized linear model — families (Gaussian, Binomial, Poisson), link functions |
+| `LikelihoodModel` | `base/model.py:L283` | 331 | Abstract maximum-likelihood base — powers OLS/GLM and the discrete/tsa families |
+| `PandasData` | `base/data.py:L542` | 360 | DataFrame handling layer — formula/endog/exog extraction from pandas |
+| `FormulaManager` | `formula/_manager.py:L207` | 929 | Formula API engine behind `sm.formula.ols("y ~ x1 + x2", data=df)` |
+| `SimpleTable` | `iolib/table.py:L138` | 681 | ASCII/HTML summary table renderer — powers `results.summary()` |
+| `ValueWarning` | `tools/sm_exceptions.py:L104` | 838 | Warning class for suspicious values (e.g. missing data, NaN handling) |
+| `SpecificationWarning` | `tools/sm_exceptions.py:L128` | 690 | Warning for model-specification concerns (rank deficiency, collinearity) |
+| `ConvergenceWarning` | `tools/sm_exceptions.py:L66` | 658 | Warning when an optimizer does not converge (GLM/IRLS, discrete MLE) |
+| `add_constant` | `tools/tools.py:L85` | — | Prepend a constant column to the design matrix (intercept) |
 
 ## Common Patterns
 

@@ -36,7 +36,8 @@ Extracted from optuna knowledge graph. Source: `optuna.pruners` module.
 | Pruner | Strategy | Best For | Requires Report | Graph Node |
 |------|--------|--------|---------------|----------|
 | `MedianPruner` | Prune if intermediate value is worse than median of previous trials at same step | Simple early stopping | Yes | pruners/_median.py:L4 |
-| `PercentilePruner` | Prune if value is below specified percentile of previous trials | Tunable aggressiveness | Yes | : |
+| `PercentilePruner` | Prune if value is below specified percentile of previous trials | Tunable aggressiveness | Yes | : | `pruners/_percentile.py:L75` |
+
 | `SuccessiveHalvingPruner` | Allocate equal budget across trials, prune worst half at each rung | Fixed budget problems | Yes | pruners/_successive_halving.py:L15 |
 | `HyperbandPruner` | Adaptive budget allocation across brackets (SuccessiveHalving on steroids) | Large-scale HPO, unknown optimal budgets | Yes | pruners/_hyperband.py:L21 |
 | `ThresholdPruner` | Prune if value exceeds a fixed threshold | Known performance bounds | Yes | pruners/_threshold.py:L29 |

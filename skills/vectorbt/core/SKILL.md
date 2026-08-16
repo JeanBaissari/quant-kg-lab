@@ -26,18 +26,18 @@ The foundational layer of vectorbt. Every vectorbt object wraps a pandas DataFra
 ## Quick Reference
 | Class / Component | Source File | Purpose | Key Params |
 |-------------------|-------------|---------|------------|
-| `Config` | `vectorbt/utils/config.py` | Global configuration singleton (merged dicts) | `frozen`, `readonly`, nested keys |
-| `Configured` | `vectorbt/utils/config.py` | Mixin that reads config by class hierarchy | `options` attribute |
-| `ArrayWrapper` | `vectorbt/base/array_wrapper.py` | Uniform pandas wrapper for 1D/2D data | `wrap`, `freq`, `group_by` |
-| `Wrapping` | `vectorbt/base/array_wrapper.py` | Base class linking an object to an ArrayWrapper | `.wrapper` property |
-| `BaseAccessor` | `vectorbt/base/accessors.py` | pandas accessor base (`.vbt` namespace) | registered via `@register_accessor` |
-| `BaseSRAccessor` | `vectorbt/base/accessors.py` | Series-specific `.vbt` behavior | `_obj` (Series) |
-| `BaseDFAccessor` | `vectorbt/base/accessors.py` | DataFrame-specific `.vbt` behavior | `_obj` (DataFrame) |
-| `GenericAccessor` | `vectorbt/generic/accessors.py` | Accessor for generic (non-specialized) objects | wraps any DataFrame/Series |
-| `RustSupport` | `vectorbt/_engine.py` | Rust execution engine adapter | `engine` parameter |
-| `ColumnGrouper` | `vectorbt/base/column_grouper.py` | Column grouping/selection logic | `group_by`, `grouped` stacks |
-| `PandasIndexer` | `vectorbt/base/indexing.py` | Multi-level pandas indexing helper | `idx_arr`, `idxs` |
-| `RepEval` | `vectorbt/utils/template.py` | Template string evaluation with deferred resolution | `context`, recursive eval |
+| `Config` | `utils/config.py:L280` | Global configuration singleton (merged dicts) | `frozen`, `readonly`, nested keys |
+| `Configured` | `utils/config.py:L721` | Mixin that reads config by class hierarchy | `options` attribute |
+| `ArrayWrapper` | `base/array_wrapper.py:L109` | Uniform pandas wrapper for 1D/2D data | `wrap`, `freq`, `group_by` |
+| `Wrapping` | `base/array_wrapper.py:L725` | Base class linking an object to an ArrayWrapper | `.wrapper` property |
+| `BaseAccessor` | `base/accessors.py:L84` | pandas accessor base (`.vbt` namespace) | registered via `@register_accessor` |
+| `BaseSRAccessor` | `base/accessors.py:L779` | Series-specific `.vbt` behavior | `_obj` (Series) |
+| `BaseDFAccessor` | `base/accessors.py:L798` | DataFrame-specific `.vbt` behavior | `_obj` (DataFrame) |
+| `GenericAccessor` | `vectorbt/generic/accessors.py:L373` | Accessor for generic (non-specialized) objects | wraps any DataFrame/Series |
+| `RustSupport` | `_engine.py:L30` | Rust execution engine adapter | `engine` parameter |
+| `ColumnGrouper` | `base/column_grouper.py:L99` | Column grouping/selection logic | `group_by`, `grouped` stacks |
+| `PandasIndexer` | `base/indexing.py:L77` | Multi-level pandas indexing helper | `idx_arr`, `idxs` |
+| `RepEval` | `utils/template.py:L84` | Template string evaluation with deferred resolution | `context`, recursive eval |
 
 ## Key Methods (by degree centrality in knowledge graph)
 
@@ -155,5 +155,5 @@ price.vbt.group_by = [0, 0, 1]  # AAPL+MSFT in group 0, GOOGL in group 1
 ## Provenance
 
 - Knowledge graph: vectorbt, 3682 nodes, 9212 edges, 353 communities
-- God nodes: `RustSupport` (129), `_engine.py` (28), `OHLCVDFAccessor` (18) — public-API hubs only (see GRAPH_SPEC noise filter)
+- God nodes: `RustSupport` (129), `_engine.py:L1` (28), `OHLCVDFAccessor` (18) — public-API hubs only (see GRAPH_SPEC noise filter)
 - Extraction: graphify @ f9897528f675, backend opencode, description coverage 88%

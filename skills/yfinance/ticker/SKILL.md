@@ -68,7 +68,7 @@ calendar data — each lazily fetched through the scrapers.
 | `.upgrades_downgrades()` | `ticker.py:L189` | Rating-change events |
 | `.valuation()` | `ticker.py:L166` | Valuation metrics snapshot |
 | `.isin()` | `ticker.py:L110` | ISIN identifier for the symbol |
-| `.get_info()` | `ticker.py` | Alias/refresh path for `.info` |
+| `.get_info()` | `base.py:L281` | Alias/refresh path for `.info` |
 | `Analysis` | `scrapers/analysis.py:L11` | Analyst expectations scraper |
 | `Financials` | `scrapers/fundamentals.py:L43` | Financial-statement scraper |
 | `Holders` | `scrapers/holders.py:L12` | Holders scraper |
@@ -121,4 +121,4 @@ Graph: `knowledge_graphs/yfinance/.graphify/graph.json` — 823 nodes · 1584 ed
 
 - [ ] `yf.Ticker("AAPL").history(period="5d")` returns OHLCV rows
 - [ ] `t.fast_info()` returns a cached quote snapshot
-- [ ] QR rows cite `ticker.py`/`base.py`/`scrapers/*.py` resolvable in the yfinance graph
+- [ ] QR rows cite `ticker.py:L1`/`base.py:L1`/`scrapers/*.py` resolvable in the yfinance graph

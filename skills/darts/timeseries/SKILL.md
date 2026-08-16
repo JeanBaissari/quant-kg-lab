@@ -42,7 +42,7 @@ forecasting metric family — the evaluation surface for every forecast.
 | `.end_time()` | `timeseries.py:L1990` | Last timestamp of the series |
 | `.copy()` | `timeseries.py:L2347` | Deep copy — avoid aliasing mutations |
 | `.get_index_at_point()` | `timeseries.py:L2365` | Index lookup at a time point |
-| `err()` | `metrics/metrics.py:L41` | Element-wise error |
+| `err()` | `metrics/metrics.py:L3010` | Element-wise error |
 | `merr()` | `metrics/metrics.py:L138` | Mean error |
 | `ae()` | `metrics/metrics.py:L226` | Absolute error |
 | `mae()` | `metrics/metrics.py:L323` | Mean absolute error |
@@ -51,8 +51,8 @@ forecasting metric family — the evaluation surface for every forecast.
 | `mape()` | `metrics/metrics.py:L323` | Mean absolute percentage error |
 | `mase()` | `metrics/metrics.py:L542` | Mean absolute scaled error — scale-free |
 | `smape()` | `metrics/metrics.py:L138` | Symmetric MAPE |
-| `quantile_loss()` | `metrics/metrics.py` | Pinball/quantile loss — interval quality |
-| `coefficient_of_variation()` | `metrics/metrics.py` | CV of errors — scale-relative accuracy |
+| `quantile_loss()` | `metrics/metrics.py:L3010` | Pinball/quantile loss — interval quality |
+| `coefficient_of_variation()` | `metrics/metrics.py:L2516` | CV of errors — scale-relative accuracy |
 
 ## Common Patterns
 
@@ -92,4 +92,4 @@ Graph: `knowledge_graphs/darts/.graphify/graph.json` — 3954 nodes · 8240 edge
 
 - [ ] `TimeSeries.from_dataframe(df, time_col, value_cols)` builds a series
 - [ ] `mape(actual, pred)` / `mase(actual, pred)` compute on aligned series
-- [ ] QR rows cite `timeseries.py`/`metrics/metrics.py` files resolvable in the darts graph
+- [ ] QR rows cite `timeseries.py:L1`/`metrics/metrics.py:L1` files resolvable in the darts graph

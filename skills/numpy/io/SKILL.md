@@ -36,14 +36,22 @@ to hold in memory.
 
 | API | Signature | Description | Graph Node |
 |-----|-----------|-------------|------------|
-| `loadtxt` | `np.loadtxt(fname, delimiter=',')` | Read a text array — simple, fast, strict |
-| `savetxt` | `np.savetxt(fname, X, delimiter=',')` | Write a text array with a format string |
-| `genfromtxt` | `np.genfromtxt(fname, delimiter=',')` | Text read with missing-value handling |
-| `save` | `np.save('x.npy', arr)` | Binary single-array save (.npy) |
-| `load` | `np.load('x.npy')` | Binary load — also accepts `mmap_mode` |
-| `savez` | `np.savez('x.npz', a=a, b=b)` | Uncompressed multi-array archive (.npz) |
-| `savez_compressed` | `np.savez_compressed('x.npz', a=a)` | Compressed multi-array archive |
-| `memmap` | `np.memmap(path, dtype, mode='r')` | Memory-mapped array — lazy on-disk access |
+| `loadtxt` | `np.loadtxt(fname, delimiter=',')` | Read a text array — simple, fast, strict | `lib/_npyio_impl.py:L1120` |
+
+| `savetxt` | `np.savetxt(fname, X, delimiter=',')` | Write a text array with a format string | `lib/_npyio_impl.py:L1399` |
+
+| `genfromtxt` | `np.genfromtxt(fname, delimiter=',')` | Text read with missing-value handling | `lib/_npyio_impl.py:L1735` |
+
+| `save` | `np.save('x.npy', arr)` | Binary single-array save (.npy) | `lib/_npyio_impl.py:L505` |
+
+| `load` | `np.load('x.npy')` | Binary load — also accepts `mmap_mode` | `lib/_npyio_impl.py:L312` |
+
+| `savez` | `np.savez('x.npz', a=a, b=b)` | Uncompressed multi-array archive (.npz) | `lib/_npyio_impl.py:L581` |
+
+| `savez_compressed` | `np.savez_compressed('x.npz', a=a)` | Compressed multi-array archive | `lib/_npyio_impl.py:L682` |
+
+| `memmap` | `np.memmap(path, dtype, mode='r')` | Memory-mapped array — lazy on-disk access | `_core/memmap.py:L24` |
+
 | `ndarray` | `np.ndarray` | The loaded array type |
 
 ## Common Patterns

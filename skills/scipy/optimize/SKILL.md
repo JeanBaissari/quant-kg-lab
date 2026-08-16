@@ -27,16 +27,16 @@ Numerical optimization and root finding. Covers local optimization (`minimize`),
 
 | API | Source File | Degree | Description |
 |-----|------------|--------|-------------|
-| `OptimizeResult` | `_optimize.py` | 153 | Result container for all optimizers (attributes: `x`, `fun`, `success`, `nit`) |
-| `minimize()` | `_minimize.py` | 10 | Unified interface for local optimization (BFGS, Nelder-Mead, SLSQP, trust-constr, etc.) |
-| `ScalarFunction` | `_differentiable_functions.py` | 89 | Wraps objective + gradient for scalar optimizers |
-| `Bounds` | `_constraints.py` | 62 | Box constraints `(lb, ub)` for variables |
-| `NonlinearConstraint` | `_constraints.py` | 59 | Nonlinear equality/inequality constraints |
-| `LinearConstraint` | `_constraints.py` | 59 | Linear constraints `A @ x` bounds |
-| `DifferentialEvolutionSolver` | `_differentialevolution.py` | 42 | Global optimization via differential evolution |
-| `basinhopping()` | `_basinhopping.py` | 9 | Global optimization with random perturbation + local refinement |
-| `dual_annealing()` | `_dual_annealing.py` | 9 | Generalized simulated annealing (global) |
-| `curve_fit()` | `_minpack_py.py` | 7 | Nonlinear least-squares curve fitting |
+| `OptimizeResult` | `optimize/_optimize.py:L114` | 153 | Result container for all optimizers (attributes: `x`, `fun`, `success`, `nit`) |
+| `minimize()` | `_minimize.py:L54` | 10 | Unified interface for local optimization (BFGS, Nelder-Mead, SLSQP, trust-constr, etc.) |
+| `ScalarFunction` | `_differentiable_functions.py:L128` | 89 | Wraps objective + gradient for scalar optimizers |
+| `Bounds` | `optimize/_constraints.py:L257` | 62 | Box constraints `(lb, ub)` for variables |
+| `NonlinearConstraint` | `optimize/_constraints.py:L22` | 59 | Nonlinear equality/inequality constraints |
+| `LinearConstraint` | `optimize/_constraints.py:L143` | 59 | Linear constraints `A @ x` bounds |
+| `DifferentialEvolutionSolver` | `optimize/_differentialevolution.py:L538` | 42 | Global optimization via differential evolution |
+| `basinhopping()` | `_basinhopping.py:L351` | 9 | Global optimization with random perturbation + local refinement |
+| `dual_annealing()` | `_dual_annealing.py:L453` | 9 | Generalized simulated annealing (global) |
+| `curve_fit()` | `_minpack_py.py:L590` | 7 | Nonlinear least-squares curve fitting |
 
 ### Additional Key APIs (by degree rank)
 
@@ -52,9 +52,12 @@ Numerical optimization and root finding. Covers local optimization (`minimize`),
 | `bracket()` | function | Bracket a root for bisection/newton |
 | `approx_fprime()` | function | Finite-difference gradient approximation |
 | `check_grad()` | function | Verify analytical gradient against finite differences |
-| `MemoizeJac` | class | Memoized Jacobian wrapper for efficiency |
-| `BFGS` | class | BFGS Hessian update strategy |
-| `HessianUpdateStrategy` | class | Base for Hessian approximation strategies |
+| `MemoizeJac` | class | Memoized Jacobian wrapper for efficiency | `optimize/_optimize.py:L63` |
+
+| `BFGS` | class | BFGS Hessian update strategy | `optimize/_hessian_update_strategy.py:L285` |
+
+| `HessianUpdateStrategy` | class | Base for Hessian approximation strategies | `optimize/_hessian_update_strategy.py:L11` |
+
 | `toms748()` | function | TOMS 748 algorithm for root finding |
 
 ## Common Patterns
@@ -174,5 +177,5 @@ print(f"Global min: x={res.x}, fun={res.fun}")
 ## Provenance
 
 - Knowledge graph: scipy, 14071 nodes, 23466 edges, 1076 communities
-- God nodes: `OptimizeResult` (135), `_tstutils.py` (76), `OptimizeWarning` (70) — public-API hubs only (see GRAPH_SPEC noise filter)
+- God nodes: `OptimizeResult` (135), `_tstutils.py:L1` (76), `OptimizeWarning` (70) — public-API hubs only (see GRAPH_SPEC noise filter)
 - Extraction: graphify @ 0514ef9e7329, backend opencode, description coverage 81%

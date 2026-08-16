@@ -32,8 +32,8 @@ jobs:
       - run: pip install pyyaml
       - name: Lint skills against docs/specs/SKILL_SPEC.md
         run: python scripts/validate_skills.py --ci
-      - name: Verify graph-node citations resolve (QKG_012)
-        run: python scripts/verify_citations.py
+      - name: Verify graph-node citations resolve + every QR row carries a line (QKG_012/069)
+        run: python scripts/verify_citations.py --require-lines
       - name: Verify QR rows are complete for every library (QKG_021/033, GRAPH_SPEC c6)
         run: |
           for lib in $(python3 -c "import json; print(' '.join(json.load(open('graphs.lock'))['libraries']))"); do

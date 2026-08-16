@@ -44,29 +44,29 @@ across every model.
 | `PLForecastingModule` | `models/forecasting/pl_forecasting_module.py:L76` | Lightning wrapper — the deep-model engine (deg 283 hub) |
 | `SKLearnModel` | `models/forecasting/sklearn_model.py:L101` | sklearn regressors as forecasters (wrapping) |
 | `SKLearnModelWithCategoricalFeatures` | `models/forecasting/sklearn_model.py:L1629` | sklearn wrapper with categorical covariate support |
-| `CatBoostModel` | `models/forecasting/catboost_model.py` | CatBoost forecaster — native categoricals |
+| `CatBoostModel` | `models/forecasting/catboost_model.py:L49` | CatBoost forecaster — native categoricals |
 | `LightGBMModel` | `models/forecasting/lgbm.py:L35` | LightGBM forecaster |
-| `LinearRegressionModel` | `models/forecasting/linear_regression_model.py` | Linear regression forecaster |
-| `RandomForest` | `models/forecasting/random_forest.py` | Random forest forecaster |
+| `LinearRegressionModel` | `models/forecasting/linear_regression_model.py:L29` | Linear regression forecaster |
+| `RandomForest` | `models/forecasting/random_forest.py:L194` | Random forest forecaster |
 | `XGBModel` | `models/forecasting/xgboost.py:L60` | XGBoost forecaster |
-| `NBEATSModel` | `models/forecasting/nbeats.py` | N-BEATS — deep basis-expansion forecaster |
-| `NHiTSModel` | `models/forecasting/nhits.py` | N-HiTS — hierarchical interpolation, multi-horizon |
-| `TCNModel` | `models/forecasting/tcn_model.py` | Temporal convolution network |
-| `BlockRNNModel` | `models/forecasting/block_rnn_model.py` | Block RNN — LSTM/GRU forecasters |
-| `DLinearModel` | `models/forecasting/dlinear.py` | DLinear — linear decomposition forecaster |
-| `NLinearModel` | `models/forecasting/nlinear.py` | NLinear — normalization + linear |
+| `NBEATSModel` | `models/forecasting/nbeats.py:L532` | N-BEATS — deep basis-expansion forecaster |
+| `NHiTSModel` | `models/forecasting/nhits.py:L462` | N-HiTS — hierarchical interpolation, multi-horizon |
+| `TCNModel` | `models/forecasting/tcn_model.py:L261` | Temporal convolution network |
+| `BlockRNNModel` | `models/forecasting/block_rnn_model.py:L259` | Block RNN — LSTM/GRU forecasters |
+| `DLinearModel` | `models/forecasting/dlinear.py:L223` | DLinear — linear decomposition forecaster |
+| `NLinearModel` | `models/forecasting/nlinear.py:L185` | NLinear — normalization + linear |
 | `PatchTSTFMModel` | `models/forecasting/patchtst_fm_model.py:L373` | PatchTST foundation-style transformer |
-| `Chronos2Model` | `models/forecasting/chronos2_model.py` | Chronos2 — LLM-style token forecasting |
+| `Chronos2Model` | `models/forecasting/chronos2_model.py:L581` | Chronos2 — LLM-style token forecasting |
 | `NeuralForecastModel` | `models/forecasting/nf_model.py:L336` | NeuralForecast integration |
 | `StatsForecastModel` | `models/forecasting/sf_model.py:L39` | StatsForecast integration |
 | `FoundationModel` | `models/forecasting/foundation_model.py:L20` | Foundation-model adapter (zero-shot) |
 | `EnsembleModel` | `models/forecasting/ensemble_model.py:L43` | Ensemble of forecasters |
-| `NaiveEnsembleModel` | `models/forecasting/naive_ensemble_model.py` | Simple averaging ensemble |
+| `NaiveEnsembleModel` | `models/forecasting/naive_ensemble_model.py:L16` | Simple averaging ensemble |
 | `ConformalModel` | `models/forecasting/conformal_models.py:L62` | Conformal prediction — prediction intervals |
-| `ConformalQRModel` | `models/forecasting/conformal_models.py` | Conformal via quantile regression |
-| `ConformalNaiveModel` | `models/forecasting/conformal_models.py` | Conformal via naive residual bounds |
-| `GlobalNaiveDrift` | `models/forecasting/global_baseline_models.py` | Naive-with-drift baseline (curated M2b) |
-| `MultivariateModel` | `models/forecasting/multivariate_model.py` | Multivariate-capable base |
+| `ConformalQRModel` | `models/forecasting/conformal_models.py:L1720` | Conformal via quantile regression |
+| `ConformalNaiveModel` | `models/forecasting/conformal_models.py:L1587` | Conformal via naive residual bounds |
+| `GlobalNaiveDrift` | `models/forecasting/global_baseline_models.py:L560` | Naive-with-drift baseline (curated M2b) |
+| `MultivariateModel` | `models/forecasting/multivariate_model.py:L22` | Multivariate-capable base |
 | `MixedCovariatesTorchModel` | `models/forecasting/torch_forecasting_model.py:L3177` | Deep model with past+future covariates |
 | `PastCovariatesTorchModel` | `models/forecasting/torch_forecasting_model.py:L3081` | Deep model with past covariates only |
 

@@ -37,7 +37,7 @@ factor-research output format that feeds pyfolio for portfolio-level reporting.
 | `create_full_tear_sheet()` | `tears.py:L489` | All tear sheets in one pass |
 | `create_event_returns_tear_sheet()` | `tears.py:L530` | Event-study returns around an event window |
 | `GridFigure` | `tears.py:L26` | Coordinates tear sheet charts across a grid of subplots |
-| `plotting.py` | Style contexts and chart helpers for tear sheets |
+| `plotting.py:L1` | Style contexts and chart helpers for tear sheets |
 
 ## Common Patterns
 

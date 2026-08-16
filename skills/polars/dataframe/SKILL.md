@@ -37,26 +37,26 @@ counterpart to pandas.
 
 | API | Source File | Description |
 |-----|------------|-------------|
-| `DataFrame` | `dataframe/frame.py:L204` | The eager tabular structure — select/filter/group_by/join |
-| `Series` | `series/series.py:L287` | One-dimensional column with dtype + name — deg 287 hub |
-| `Schema` | `schema.py` | Column-name → dtype mapping object |
+| `DataFrame` | `dataframe/frame.py:L211` | The eager tabular structure — select/filter/group_by/join |
+| `Series` | `series/series.py:L174` | One-dimensional column with dtype + name — deg 287 hub |
+| `Schema` | `schema.py:L65` | Column-name → dtype mapping object |
 | `LazyFrame` | `lazyframe/frame.py:L253` | Lazy query plan — collect()/sink_* executes it |
-| `DataFrame.group_by` | `dataframe/group_by.py` | Grouped aggregation — `df.group_by("k").agg(...)` |
-| `DataFrame.join` | `dataframe/frame.py` | Join two frames — how="inner/left/outer/cross/asof" |
-| `DataFrame.melt` | `dataframe/frame.py` | Wide → long reshape (unpivot) |
-| `DataFrame.pivot` | `dataframe/frame.py` | Long → wide reshape (pivot) |
-| `DataFrame.rename` | `dataframe/frame.py` | Rename columns — `df.rename({"old": "new"})` |
-| `DataFrame.with_columns` | `dataframe/frame.py` | Add/overwrite columns with expressions |
-| `DataFrame.unique` | `dataframe/frame.py` | Distinct rows — `keep="first/last/none"` |
-| `DataFrame.explode` | `dataframe/frame.py` | Expand list columns into one row per element |
-| `DataFrame.head/tail` | `dataframe/frame.py` | First/last n rows |
-| `DataFrame.sample` | `dataframe/frame.py` | Random rows — `fraction`, `with_replacement`, `seed` |
-| `DataFrame.to_pandas` | `dataframe/frame.py` | Convert to pandas (zero-copy where possible) |
-| `pl.from_pandas` | `_reexport.py` | Build a polars DataFrame from pandas |
-| `pl.from_numpy` | `_reexport.py` | Build from a numpy array (orient/columns) |
-| `DataFrame.describe` | `dataframe/frame.py` | Summary statistics (count/mean/std/min/max) |
-| `DataFrame.is_empty` | `dataframe/frame.py` | True when zero rows |
-| `DataFrame.write_parquet` | `dataframe/frame.py` | Eager write — `df.write_parquet("f.parquet")` |
+| `DataFrame.group_by` | `dataframe/group_by.py:L123` | Grouped aggregation — `df.group_by("k").agg(...)` |
+| `DataFrame.join` | `dataframe/frame.py:L8251` | Join two frames — how="inner/left/outer/cross/asof" |
+| `DataFrame.melt` | `dataframe/frame.py:L12985` | Wide → long reshape (unpivot) |
+| `DataFrame.pivot` | `dataframe/frame.py:L9596` | Long → wide reshape (pivot) |
+| `DataFrame.rename` | `dataframe/frame.py:L5263` | Rename columns — `df.rename({"old": "new"})` |
+| `DataFrame.with_columns` | `dataframe/frame.py:L10570` | Add/overwrite columns with expressions |
+| `DataFrame.unique` | `dataframe/frame.py:L11293` | Distinct rows — `keep="first/last/none"` |
+| `DataFrame.explode` | `dataframe/frame.py:L9519` | Expand list columns into one row per element |
+| `DataFrame.head/tail` | `dataframe/frame.py:L211` | First/last n rows |
+| `DataFrame.sample` | `dataframe/frame.py:L11585` | Random rows — `fraction`, `with_replacement`, `seed` |
+| `DataFrame.to_pandas` | `dataframe/frame.py:L2533` | Convert to pandas (zero-copy where possible) |
+| `pl.from_pandas` | `_reexport.py:L1` | Build a polars DataFrame from pandas |
+| `pl.from_numpy` | `_reexport.py:L1` | Build from a numpy array (orient/columns) |
+| `DataFrame.describe` | `dataframe/frame.py:L5915` | Summary statistics (count/mean/std/min/max) |
+| `DataFrame.is_empty` | `dataframe/frame.py:L12446` | True when zero rows |
+| `DataFrame.write_parquet` | `dataframe/frame.py:L4136` | Eager write — `df.write_parquet("f.parquet")` |
 
 ## Common Patterns
 

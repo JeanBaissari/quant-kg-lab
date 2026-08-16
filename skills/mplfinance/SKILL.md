@@ -40,7 +40,7 @@ overlays — the charting layer for strategy and factor reviews.
 | `plot()` | `plotting.py:L402` | The main entry — type/style/volume/mav/addplot/panels/figscale |
 | `make_addplot()` | `plotting.py:L1422` | Build an overlay series (indicator/MA) for a panel |
 | `make_marketcolors()` | `_styles.py:L282` | Custom up/down/edge market colors |
-| `make_mpf_style()` | `_styles.py` | Compose a full style from a base + market colors |
+| `make_mpf_style()` | `_styles.py:L138` | Compose a full style from a base + market colors |
 | `candlestick2_ohlc()` | `original_flavor.py:L555` | Legacy candle primitive (original_flavor API) |
 | `plot_day_summary2_ohlc()` | `original_flavor.py:L411` | Daily OHLC summary plot |
 | `Mpf_Figure` | `_mplwraps.py:L65` | The figure wrapper returned by plot() |
@@ -86,4 +86,4 @@ Graph: `knowledge_graphs/mplfinance/.graphify/graph.json` — 244 nodes · 317 e
 
 - [ ] `mpf.plot(df, type="candle", volume=True, savefig="t.png")` renders headless
 - [ ] `make_addplot(series)` overlays on the price panel
-- [ ] QR rows cite `plotting.py`/`_styles.py`/`_utils.py` resolvable in the mplfinance graph
+- [ ] QR rows cite `plotting.py:L1`/`_styles.py:L1`/`_utils.py:L1` resolvable in the mplfinance graph

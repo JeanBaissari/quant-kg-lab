@@ -32,25 +32,26 @@ functions, and joins.
 
 | API | Source File | Description |
 |-----|------------|-------------|
-| `col` | `functions/col.py` | Expression constructor: `pl.col("name")` |
-| `select` / `with_columns` | `dataframe/frame.py` | Expression application — project or add columns |
-| `group_by` | `lazyframe/group_by.py` | Grouped aggregation: `df.group_by("k").agg(pl.col("v").mean())` |
-| `Expr` | `expr/expr.py` | Expression class — deg 254 hub: .mean/.sum/.rank/.shift/.diff/.over/.rolling |
-| `lit` | `functions/lit.py` | Constant expression — `pl.lit(1.0)` |
-| `when` / `then` / `otherwise` | `functions/whenthen.py` | Conditional expression — `pl.when(c).then(a).otherwise(b)` |
-| `concat` | `functions/` | Horizontal/vertical frame concat — `pl.concat([df1, df2])` |
+| `col` | `functions/col.py:L154` | Expression constructor: `pl.col("name")` |
+| `select` / `with_columns` | `functions/lazy.py:L2344` | Expression application — project or add columns |
+| `group_by` | `lazyframe/group_by.py:L24` | Grouped aggregation: `df.group_by("k").agg(pl.col("v").mean())` |
+| `Expr` | `expr/expr.py:L135` | Expression class — deg 254 hub: .mean/.sum/.rank/.shift/.diff/.over/.rolling |
+| `lit` | `functions/lit.py:L31` | Constant expression — `pl.lit(1.0)` |
+| `when` / `then` / `otherwise` | `functions/whenthen.py:L18` | Conditional expression — `pl.when(c).then(a).otherwise(b)` |
+| `concat` | `functions/` | Horizontal/vertical frame concat — `pl.concat([df1, df2])` | `functions/eager.py:L64` |
+
 | `Expr.cast` | `expr/expr.py:L2181` | Type cast — `pl.col("v").cast(pl.Float64)` |
-| `Expr.rank` | `expr/expr.py` | Rank — `.rank(method="average"\|"min"\|"dense")` |
-| `Expr.over` | `expr/expr.py` | Window clause — `.rank().over("date")` |
-| `Expr.rolling_*` | `expr/expr.py` | Rolling aggregations — `.rolling_mean(20)` etc. |
-| `Expr.shift` / `Expr.diff` | `expr/expr.py` | Lag / first-difference — return construction |
-| `Expr.ewm_*` | `expr/expr.py` | Exponentially weighted — `.ewm_mean(span=20)` |
-| `Expr.qcut` / `Expr.cut` | `expr/expr.py` | Quantile binning — factor-quantile building |
-| `Expr.filter` | `expr/expr.py` | Row filter inside expressions |
-| `Expr.is_nan` / `Expr.is_null` | `expr/expr.py` | Missing-value masks |
-| `Expr.str` | `expr/string.py` | String namespace — `.str.starts_with/.contains/.to_datetime` |
-| `Expr.dt` | `expr/datetime.py` | Datetime namespace — `.dt.month/.dt.weekday/.dt.round` |
-| `Expr.arr` | `expr/list.py` | List namespace — `.arr.explode/.arr.first/.arr.sum` |
+| `Expr.rank` | `expr/expr.py:L9860` | Rank — `.rank(method="average"\|"min"\|"dense")` |
+| `Expr.over` | `expr/expr.py:L4110` | Window clause — `.rank().over("date")` |
+| `Expr.rolling_*` | `expr/expr.py:L135` | Rolling aggregations — `.rolling_mean(20)` etc. |
+| `Expr.shift` / `Expr.diff` | `expr/expr.py:L3164` | Lag / first-difference — return construction |
+| `Expr.ewm_*` | `expr/expr.py:L135` | Exponentially weighted — `.ewm_mean(span=20)` |
+| `Expr.qcut` / `Expr.cut` | `expr/expr.py:L4777` | Quantile binning — factor-quantile building |
+| `Expr.filter` | `expr/expr.py:L4984` | Row filter inside expressions |
+| `Expr.is_nan` / `Expr.is_null` | `expr/expr.py:L1290` | Missing-value masks |
+| `Expr.str` | `expr/string.py:L45` | String namespace — `.str.starts_with/.contains/.to_datetime` |
+| `Expr.dt` | `expr/datetime.py:L38` | Datetime namespace — `.dt.month/.dt.weekday/.dt.round` |
+| `Expr.arr` | `expr/list.py:L29` | List namespace — `.arr.explode/.arr.first/.arr.sum` |
 | `functions/aggregation` | `functions/aggregation/` | Aggregate constructors — horizontal/vertical reductions |
 | `functions/range` | `functions/range/` | Range constructors — int_range, date_range, datetime_range |
 

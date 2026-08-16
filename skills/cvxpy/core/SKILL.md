@@ -33,16 +33,16 @@ canonicalizes and dispatches to a solver (SCS/ECOS/OSQP/Clarabel).
 
 | API | Source File | Description |
 |-----|------------|-------------|
-| `Variable` | `expressions/variable.py` | Decision variable with shape and attributes (nonneg, symmetric, PSD...) |
-| `Parameter` | `expressions/constants/parameter.py` | Solver-side constant you can change between solves (warm re-solve) |
-| `Constant` | `expressions/constants/constant.py` | Fixed numeric constant in an expression tree |
-| `Expression` | `expressions/expression.py` | Base of the expression tree — value, shape, is_affine()/is_convex() |
-| `Minimize` | `problems/objective.py` | Minimization objective — `Minimize(cost_expr)` |
-| `Maximize` | `problems/objective.py` | Maximization objective — `Maximize(utility_expr)` |
-| `Problem` | `problems/problem.py` | Holds objective + constraints; `solve()` returns the optimal value |
-| `norm()` | `atoms/norm.py` | Convex atom: vector/matrix norm (p-norm, spectral, nuclear) |
-| `quad_form()` | `atoms/quad_form.py` | Convex atom: quadratic form xᵀPx with P PSD |
-| `sum_squares()` | `atoms/sum_squares.py` | Convex atom: sum of squared entries — least-squares staple |
+| `Variable` | `expressions/variable.py:L34` | Decision variable with shape and attributes (nonneg, symmetric, PSD...) |
+| `Parameter` | `expressions/constants/parameter.py:L36` | Solver-side constant you can change between solves (warm re-solve) |
+| `Constant` | `expressions/constants/constant.py:L34` | Fixed numeric constant in an expression tree |
+| `Expression` | `expressions/expression.py:L144` | Base of the expression tree — value, shape, is_affine()/is_convex() |
+| `Minimize` | `problems/objective.py:L118` | Minimization objective — `Minimize(cost_expr)` |
+| `Maximize` | `problems/objective.py:L194` | Maximization objective — `Maximize(utility_expr)` |
+| `Problem` | `problems/problem.py:L138` | Holds objective + constraints; `solve()` returns the optimal value |
+| `norm()` | `atoms/norm.py:L30` | Convex atom: vector/matrix norm (p-norm, spectral, nuclear) |
+| `quad_form()` | `atoms/quad_form.py:L290` | Convex atom: quadratic form xᵀPx with P PSD |
+| `sum_squares()` | `atoms/sum_squares.py:L21` | Convex atom: sum of squared entries — least-squares staple |
 
 ## Common Patterns
 

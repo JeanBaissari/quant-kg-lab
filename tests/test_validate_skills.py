@@ -310,5 +310,54 @@ class TestSubprocessCli(ValidatorTestCase):
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
 
 
+
+class TestLineAwareCitations(ValidatorTestCase):
+    """QKG_069: verify_citations --require-lines fails on wrong/missing lines.
+    verify_citations.py resolves ROOT at import (no --root flag), so these
+    tests plant a bad row in the REAL numpy/core skill, run the real script,
+    and restore via addCleanup."""
+
+    def run_verify(self, *extra):
+        import subprocess
+        r = subprocess.run(
+            [sys.executable, "scripts/verify_citations.py", *extra],
+            capture_output=True, text=True, cwd=str(REAL_ROOT))
+        return r
+
+    def _plant(self, old_row, new_row):
+        p = REAL_ROOT / "skills" / "numpy" / "core" / "SKILL.md"
+        t = p.read_text()
+        assert old_row in t, f"plant anchor missing: {old_row}"
+        p.write_text(t.replace(old_row, new_row, 1))
+        self.addCleanup(lambda: p.write_text(t))
+
+    def test_wrong_line_fails(self):
+        self._plant("_core/_asarray.py:L24", "_core/_asarray.py:L999")
+        r = self.run_verify("--require-lines")
+        self.assertEqual(r.returncode, 1, r.stdout + r.stderr)
+        self.assertIn("LINE", r.stdout + r.stderr)
+
+    def test_missing_line_fails_require_lines(self):
+        self._plant("`_core/_asarray.py:L24`", "`_core/_asarray.py`")
+        r = self.run_verify("--require-lines")
+        self.assertEqual(r.returncode, 1, r.stdout + r.stderr)
+        self.assertIn("no :L line", r.stdout + r.stderr)
+
+    def test_plain_gate_ignores_missing_lines(self):
+        self._plant("`_core/_asarray.py:L24`", "`_core/_asarray.py`")
+        r = self.run_verify()
+        self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+
+
+if __name__ == "__main__":
+    unittest.main()
+
+
+
+if __name__ == "__main__":
+    unittest.main()
+
+
+
 if __name__ == "__main__":
     unittest.main()

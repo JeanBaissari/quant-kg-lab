@@ -36,10 +36,10 @@ Communities: 81 ("Neural Networks"), 136, 386.
 ## Quick Reference
 | Class/Function | Source File | Purpose | Key Params |
 |---------------|-------------|---------|------------|
-| `MLPClassifier` | `neural_network/_multilayer_perceptron.py` | Multi-layer Perceptron classifier | `hidden_layer_sizes`, `activation` ('relu'/'tanh'/'logistic'), `alpha`, `batch_size`, `learning_rate`, `max_iter`, `early_stopping` |
-| `MLPRegressor` | `neural_network/_multilayer_perceptron.py` | Multi-layer Perceptron regressor | `hidden_layer_sizes`, `activation`, `alpha`, `batch_size`, `learning_rate`, `max_iter`, `early_stopping` |
-| `BernoulliRBM` | `neural_network/_rbm.py` | Restricted Boltzmann Machine (unsupervised) | `n_components`, `learning_rate`, `batch_size`, `n_iter` |
-| `BaseMultilayerPerceptron` | `neural_network/_multilayer_perceptron.py` | Abstract base for MLP | — |
+| `MLPClassifier` | `neural_network/_multilayer_perceptron.py:L879` | Multi-layer Perceptron classifier | `hidden_layer_sizes`, `activation` ('relu'/'tanh'/'logistic'), `alpha`, `batch_size`, `learning_rate`, `max_iter`, `early_stopping` |
+| `MLPRegressor` | `neural_network/_multilayer_perceptron.py:L1386` | Multi-layer Perceptron regressor | `hidden_layer_sizes`, `activation`, `alpha`, `batch_size`, `learning_rate`, `max_iter`, `early_stopping` |
+| `BernoulliRBM` | `neural_network/_rbm.py:L25` | Restricted Boltzmann Machine (unsupervised) | `n_components`, `learning_rate`, `batch_size`, `n_iter` |
+| `BaseMultilayerPerceptron` | `neural_network/_multilayer_perceptron.py:L58` | Abstract base for MLP | — |
 
 ### Key Methods (from graph node analysis)
 

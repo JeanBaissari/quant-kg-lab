@@ -140,5 +140,5 @@ print(scores, scores.mean())
 ## Provenance
 
 - Knowledge graph: scikit-learn, 8450 nodes, 28094 edges, 401 communities
-- God nodes: `pairwise.py` (39), `_classification.py` (31), `_ranking.py` (22) — public-API hubs only (see GRAPH_SPEC noise filter)
+- God nodes: `pairwise.py:L1` (39), `_classification.py:L1` (31), `_ranking.py:L1` (22) — public-API hubs only (see GRAPH_SPEC noise filter)
 - Extraction: graphify @ 6f8b95aa2234, backend opencode, description coverage 81%

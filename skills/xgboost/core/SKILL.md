@@ -25,7 +25,7 @@ related_skills:
 
 # XGBoost Core API
 
-Extracted from XGBoost knowledge graph. Sources: `python-package/xgboost/core.py`, `data.py`, `training.py`, `callback.py`.
+Extracted from XGBoost knowledge graph. Sources: `python-package/xgboost/core.py:L1`, `data.py:L1`, `training.py:L1`, `callback.py:L1`.
 
 ## Quick Reference
 ### Data Structures
@@ -210,10 +210,10 @@ def objective(trial):
 
 ## References
 
-- Source: `python-package/xgboost/core.py` (Booster, DMatrix, DataIter)
-- Source: `python-package/xgboost/training.py` (train, cv, CVPack)
-- Source: `python-package/xgboost/callback.py` (TrainingCallback, EarlyStopping, LearningRateScheduler)
-- Source: `python-package/xgboost/data.py` (data dispatch, pandas/polars/cupy support)
+- Source: `python-package/xgboost/core.py:L1` (Booster, DMatrix, DataIter)
+- Source: `python-package/xgboost/training.py:L1` (train, cv, CVPack)
+- Source: `python-package/xgboost/callback.py:L1` (TrainingCallback, EarlyStopping, LearningRateScheduler)
+- Source: `python-package/xgboost/data.py:L1` (data dispatch, pandas/polars/cupy support)
 
 ## Provenance
 

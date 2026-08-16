@@ -34,14 +34,14 @@ Communities: 176 ("Decision Trees"), 0 ("Linear Models + DecisionTreeClassifier/
 ## Quick Reference
 | Class/Function | Source File | Purpose | Key Params |
 |---------------|-------------|---------|------------|
-| `DecisionTreeClassifier` | `tree/_classes.py` | CART classification tree | `criterion` ('gini'/'entropy'), `max_depth`, `min_samples_split`, `min_samples_leaf`, `max_features`, `class_weight` |
-| `DecisionTreeRegressor` | `tree/_classes.py` | CART regression tree | `criterion` ('squared_error'/'friedman_mse'/'absolute_error'), `max_depth`, `min_samples_split`, `min_samples_leaf` |
-| `ExtraTreeClassifier` | `tree/_classes.py` | Extremely randomized classification tree | `max_features`, `max_depth`, `min_samples_split` |
-| `ExtraTreeRegressor` | `tree/_classes.py` | Extremely randomized regression tree | `max_features`, `max_depth`, `min_samples_split` |
-| `BaseDecisionTree` | `tree/_classes.py` | Abstract base for all tree classes | — |
-| `export_graphviz` | `tree/_export.py` | Export tree to Graphviz DOT format | `decision_tree`, `feature_names`, `class_names`, `filled`, `rounded` |
-| `plot_tree` | `tree/_export.py` | Render tree inline (matplotlib) | `decision_tree`, `feature_names`, `class_names`, `filled`, `fontsize` |
-| `export_text` | `tree/_export.py` | Export tree as plain text | `decision_tree`, `feature_names`, `spacing`, `decimals` |
+| `DecisionTreeClassifier` | `tree/_classes.py:L870` | CART classification tree | `criterion` ('gini'/'entropy'), `max_depth`, `min_samples_split`, `min_samples_leaf`, `max_features`, `class_weight` |
+| `DecisionTreeRegressor` | `tree/_classes.py:L1296` | CART regression tree | `criterion` ('squared_error'/'friedman_mse'/'absolute_error'), `max_depth`, `min_samples_split`, `min_samples_leaf` |
+| `ExtraTreeClassifier` | `tree/_classes.py:L1670` | Extremely randomized classification tree | `max_features`, `max_depth`, `min_samples_split` |
+| `ExtraTreeRegressor` | `tree/_classes.py:L1976` | Extremely randomized regression tree | `max_features`, `max_depth`, `min_samples_split` |
+| `BaseDecisionTree` | `tree/_classes.py:L95` | Abstract base for all tree classes | — |
+| `export_graphviz` | `tree/_export.py:L835` | Export tree to Graphviz DOT format | `decision_tree`, `feature_names`, `class_names`, `filled`, `rounded` |
+| `plot_tree` | `tree/_export.py:L116` | Render tree inline (matplotlib) | `decision_tree`, `feature_names`, `class_names`, `filled`, `fontsize` |
+| `export_text` | `tree/_export.py:L1051` | Export tree as plain text | `decision_tree`, `feature_names`, `spacing`, `decimals` |
 
 ### Key Methods (from graph node analysis)
 

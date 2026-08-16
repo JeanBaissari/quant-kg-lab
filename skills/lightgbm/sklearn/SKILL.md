@@ -28,7 +28,7 @@ related_skills:
 
 # LightGBM Scikit-learn API
 
-Extracted from LightGBM knowledge graph. Source: `python-package/lightgbm/sklearn.py`.
+Extracted from LightGBM knowledge graph. Source: `python-package/lightgbm/sklearn.py:L1`.
 
 ## Quick Reference
 ### Estimators
@@ -245,9 +245,12 @@ model.fit(X_train, y_train, categorical_feature=['color', 'brand'])
 
 | Source | Target | Relation | Description |
 |--------|--------|----------|-------------|
-| `_LGBMClassifierBase` | `GridSearchCV` | **compatible** | LightGBM sklearn wrappers compatible with sklearn CV |
-| `LGBMClassifier` | `sklearn.pipeline.Pipeline` | **compatible** | Fully compatible with sklearn Pipeline |
-| `LGBMRegressor` | `sklearn.model_selection.RandomizedSearchCV` | **compatible** | Works with sklearn parameter search |
+| `_LGBMClassifierBase` | `GridSearchCV` | **compatible** | LightGBM sklearn wrappers compatible with sklearn CV | `compat.py:L120` |
+
+| `LGBMClassifier` | `sklearn.pipeline.Pipeline` | **compatible** | Fully compatible with sklearn Pipeline | `sklearn.py:L1564` |
+
+| `LGBMRegressor` | `sklearn.model_selection.RandomizedSearchCV` | **compatible** | Works with sklearn parameter search | `sklearn.py:L1449` |
+
 | `LGBMModel.get_params()` | `optuna.Trial` | **optimization_target** | Hyperparameters tuned via optuna |
 | `lgb.LGBMClassifier` | `sklearn.calibration.CalibratedClassifierCV` | **compatible** | Supports probability calibration |
 
@@ -281,9 +284,12 @@ study.optimize(objective, n_trials=100)
 ### XGBoost Sklearn Equivalents
 | LightGBM | XGBoost |
 |----------|---------|
-| `LGBMClassifier` | `XGBClassifier` | — |
-| `LGBMRegressor` | `XGBRegressor` | — |
-| `LGBMRanker` | `XGBRanker` | — |
+| `LGBMClassifier` | `XGBClassifier` | — | `sklearn.py:L1564` |
+
+| `LGBMRegressor` | `XGBRegressor` | — | `sklearn.py:L1449` |
+
+| `LGBMRanker` | `XGBRanker` | — | `sklearn.py:L1874` |
+
 | `n_estimators` / `num_iterations` | `n_estimators` | — |
 | `num_leaves` | `max_depth` (XGBoost is depth-wise) |
 | `importance_type='split'` | `importance_type='gain'` (different defaults!) |
@@ -303,7 +309,7 @@ study.optimize(objective, n_trials=100)
 
 ## References
 
-- Source: `python-package/lightgbm/sklearn.py` (LGBMModel, LGBMClassifier, LGBMRegressor, LGBMRanker, wrappers)
+- Source: `python-package/lightgbm/sklearn.py:L1` (LGBMModel, LGBMClassifier, LGBMRegressor, LGBMRanker, wrappers)
 - Graph communities: 1, 3, 56, 72, 77, 87, 100, 101, 107, 123, 132
 
 ## Provenance

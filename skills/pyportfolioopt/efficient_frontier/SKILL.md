@@ -35,21 +35,21 @@ plus the tail-risk variants (`EfficientCVaR`, `EfficientCDaR`, `EfficientSemivar
 
 | API | Source File | Description |
 |-----|------------|-------------|
-| `EfficientFrontier` | `efficient_frontier/efficient_frontier.py` | Mean-variance optimizer — `max_sharpe()`/`min_volatility()` return optimal weights |
-| `EfficientCVaR` | `efficient_frontier/efficient_cvar.py` | Optimizer minimizing portfolio Conditional Value at Risk along the mean-CVaR frontier |
-| `EfficientCDaR` | `efficient_frontier/efficient_cdar.py` | Optimizer minimizing Conditional Drawdown at Risk along the mean-CDaR frontier |
-| `EfficientSemivariance` | `efficient_frontier/efficient_semivariance.py` | Optimizer minimizing downside risk through semivariance |
-| `BaseConvexOptimizer` | `base/_base_optimizer.py` | Parent class adding cvxpy constraints/objectives to the optimizer |
-| `BaseOptimizer` | `base/_base_optimizer.py` | Parent class storing weights and exposing `clean_weights()` |
-| `EfficientFrontier.max_sharpe()` | `efficient_frontier/efficient_frontier.py` | Max-Sharpe weights — `risk_free_rate` parameter |
-| `EfficientFrontier.min_volatility()` | `efficient_frontier/efficient_frontier.py` | Minimum-variance weights |
-| `EfficientFrontier.efficient_return()` | `efficient_frontier/efficient_frontier.py` | Frontier point at a target return |
-| `EfficientFrontier.add_constraint()` | `base/_base_optimizer.py` | Custom cvxpy constraint — `w >= 0`, `w <= 0.1`, sector bounds |
-| `EfficientFrontier.add_objective()` | `base/_base_optimizer.py` | Custom cvxpy objective term — L2 reg, turnover penalty |
-| `EfficientFrontier.portfolio_performance()` | `efficient_frontier/efficient_frontier.py` | Expected return/vol/Sharpe of the optimal weights |
-| `EfficientFrontier.clean_weights()` | `base/_base_optimizer.py` | Round/clip weights below a cutoff to zero |
-| `EfficientFrontier.save_weights_to_file()` | `efficient_frontier/efficient_frontier.py` | Persist weights (txt/csv) |
-| `DiscreteAllocation` | `discrete_allocation.py` | Whole-share allocation from continuous weights + latest prices |
+| `EfficientFrontier` | `efficient_frontier/efficient_frontier.py:L17` | Mean-variance optimizer — `max_sharpe()`/`min_volatility()` return optimal weights |
+| `EfficientCVaR` | `efficient_frontier/efficient_cvar.py:L15` | Optimizer minimizing portfolio Conditional Value at Risk along the mean-CVaR frontier |
+| `EfficientCDaR` | `efficient_frontier/efficient_cdar.py:L15` | Optimizer minimizing Conditional Drawdown at Risk along the mean-CDaR frontier |
+| `EfficientSemivariance` | `efficient_frontier/efficient_semivariance.py:L13` | Optimizer minimizing downside risk through semivariance |
+| `BaseConvexOptimizer` | `base/_base_optimizer.py:L141` | Parent class adding cvxpy constraints/objectives to the optimizer |
+| `BaseOptimizer` | `base/_base_optimizer.py:L30` | Parent class storing weights and exposing `clean_weights()` |
+| `EfficientFrontier.max_sharpe()` | `efficient_frontier/efficient_frontier.py:L238` | Max-Sharpe weights — `risk_free_rate` parameter |
+| `EfficientFrontier.min_volatility()` | `efficient_frontier/efficient_frontier.py:L195` | Minimum-variance weights |
+| `EfficientFrontier.efficient_return()` | `efficient_frontier/efficient_frontier.py:L418` | Frontier point at a target return |
+| `EfficientFrontier.add_constraint()` | `base/_base_optimizer.py:L371` | Custom cvxpy constraint — `w >= 0`, `w <= 0.1`, sector bounds |
+| `EfficientFrontier.add_objective()` | `base/_base_optimizer.py:L347` | Custom cvxpy objective term — L2 reg, turnover penalty |
+| `EfficientFrontier.portfolio_performance()` | `efficient_frontier/efficient_frontier.py:L472` | Expected return/vol/Sharpe of the optimal weights |
+| `EfficientFrontier.clean_weights()` | `base/_base_optimizer.py:L88` | Round/clip weights below a cutoff to zero |
+| `EfficientFrontier.save_weights_to_file()` | `efficient_frontier/efficient_frontier.py:L17` | Persist weights (txt/csv) |
+| `DiscreteAllocation` | `discrete_allocation.py:L42` | Whole-share allocation from continuous weights + latest prices |
 
 ## Common Patterns
 

@@ -32,14 +32,14 @@ LPM), risk contribution decomposition, and the matrix estimators
 
 | API | Source File | Description |
 |-----|------------|-------------|
-| `RiskFunctions.py` | `src/RiskFunctions.py` | Risk-measure implementations used by the optimizer |
-| `Sharpe_Risk()` | `src/RiskFunctions.py` | Sharpe-based risk/objective calculator |
-| `Risk_Margin()` | `src/RiskFunctions.py` | Marginal risk per asset |
-| `Risk_Contribution()` | `src/RiskFunctions.py` | Per-asset risk contribution decomposition |
-| `CVaR_Hist()` | `src/RiskFunctions.py` | Historical CVaR estimator |
-| `LPM()` | `src/RiskFunctions.py` | Lower partial moment risk |
-| `MAD()` / `SemiDeviation()` | `src/RiskFunctions.py` | Mean-absolute-deviation and semi-deviation risks |
-| `cppfunctions.py` | `external/cppfunctions.py` | Python wrappers for the C++ matrix kernels (duplication, commutation, covariance families) |
+| `RiskFunctions.py:L1` | `src/RiskFunctions.py:L1` | Risk-measure implementations used by the optimizer |
+| `Sharpe_Risk()` | `src/RiskFunctions.py:L2025` | Sharpe-based risk/objective calculator |
+| `Risk_Margin()` | `src/RiskFunctions.py:L2688` | Marginal risk per asset |
+| `Risk_Contribution()` | `src/RiskFunctions.py:L2426` | Per-asset risk contribution decomposition |
+| `CVaR_Hist()` | `src/RiskFunctions.py:L356` | Historical CVaR estimator |
+| `LPM()` | `src/RiskFunctions.py:L438` | Lower partial moment risk |
+| `MAD()` / `SemiDeviation()` | `src/RiskFunctions.py:L71` | Mean-absolute-deviation and semi-deviation risks |
+| `cppfunctions.py:L1` | `external/cppfunctions.py:L1` | Python wrappers for the C++ matrix kernels (duplication, commutation, covariance families) |
 | `semi_covariance_matrix()` | `external/cppfunctions.py:L148` | Downside covariance kernel |
 | `coskewness_matrix()` | `external/cppfunctions.py:L193` | Third-moment matrix — skew-aware optimization |
 | `cokurtosis_matrix()` | `external/cppfunctions.py:L283` | Fourth-moment matrix — tail-aware optimization |
@@ -62,7 +62,7 @@ LPM), risk contribution decomposition, and the matrix estimators
 ## Pitfalls
 
 - **C++ kernels**: the fast matrix functions live in the excluded C++ bindings —
-  `external/cppfunctions.py` is the Python API surface.
+  `external/cppfunctions.py:L1` is the Python API surface.
 - **Sample size**: coskewness/cokurtosis estimators need long histories; short samples
   produce unstable matrices.
 

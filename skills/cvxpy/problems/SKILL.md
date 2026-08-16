@@ -32,19 +32,19 @@ solver selection and stats, and the canonicalization/reduction pipeline.
 
 | API | Source File | Description |
 |-----|------------|-------------|
-| `Problem` | `problems/problem.py:L61` | Objective + constraints container; `solve()` returns the optimal value |
-| `installed_solvers()` | `reductions/solvers/defines.py` | Lists solver backends available in this install |
-| `SCS` | `reductions/solvers/conic_solvers/scs_conif.py` | Splitting-conic-solver backend (default conic) |
-| `ECOS` | `reductions/solvers/conic_solvers/ecos_conif.py` | Embedded cone solver (SOCP) |
-| `OSQP` | `reductions/solvers/qp_solvers/osqp_qpif.py` | QP-first solver — fastest on pure QPs |
+| `Problem` | `problems/problem.py:L138` | Objective + constraints container; `solve()` returns the optimal value |
+| `installed_solvers()` | `reductions/solvers/defines.py:L120` | Lists solver backends available in this install |
+| `SCS` | `reductions/solvers/conic_solvers/scs_conif.py:L82` | Splitting-conic-solver backend (default conic) |
+| `ECOS` | `reductions/solvers/conic_solvers/ecos_conif.py:L40` | Embedded cone solver (SOCP) |
+| `OSQP` | `reductions/solvers/qp_solvers/osqp_qpif.py:L13` | QP-first solver — fastest on pure QPs |
 | `CLARABEL` | `reductions/solvers/conic_solvers/clarabel_conif.py:L65` | Modern interior-point conic solver (default in newer cvxpy) |
-| `Problem.status` | `problems/problem.py` | "optimal" / "infeasible" / "unbounded" / "optimal_inaccurate" |
-| `Problem.value` | `problems/problem.py` | Optimal objective value |
-| `Problem.solver_stats` | `problems/problem.py` | solve_time, setup_time, num_iters per solve |
-| `Problem.solve()` | `problems/problem.py` | Dispatch — solver, warm_start, solver_opts, verbose, max_iters |
-| `Minimize` / `Maximize` | `problems/objective.py` | Objective wrappers — curvature-aware |
-| `Problem.unpack_results()` | `problems/problem.py` | Inject a raw solver solution into the problem tree |
-| `Problem.get_problem_data()` | `problems/problem.py` | The canonicalized data (matrices/cones) before solving |
+| `Problem.status` | `problems/problem.py:L226` | "optimal" / "infeasible" / "unbounded" / "optimal_inaccurate" |
+| `Problem.value` | `problems/problem.py:L216` | Optimal objective value |
+| `Problem.solver_stats` | `problems/problem.py:L525` | solve_time, setup_time, num_iters per solve |
+| `Problem.solve()` | `problems/problem.py:L592` | Dispatch — solver, warm_start, solver_opts, verbose, max_iters |
+| `Minimize` / `Maximize` | `problems/objective.py:L118` | Objective wrappers — curvature-aware |
+| `Problem.unpack_results()` | `problems/problem.py:L1423` | Inject a raw solver solution into the problem tree |
+| `Problem.get_problem_data()` | `problems/problem.py:L704` | The canonicalized data (matrices/cones) before solving |
 
 ## Common Patterns
 

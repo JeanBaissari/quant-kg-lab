@@ -26,18 +26,18 @@ Dual-layer signal generation: **indicators** (technical analysis primitives from
 ## Quick Reference
 | Class / Component | Source File | Purpose | Key Params |
 |-------------------|-------------|---------|------------|
-| `SignalFactory` | `vectorbt/signals/factory.py` | Build signal generator classes | `entry`, `exit`, `mode` |
-| `SignalsAccessor` | `vectorbt/signals/accessors.py` | `.vbt.signals` accessor on DataFrames | wraps boolean signal arrays |
-| `IndicatorBase` | `vectorbt/indicators/factory.py` | Base for all indicator classes | `run()`, `plot()`, params |
-| `MA` | `vectorbt/indicators/basic.py` | Moving average (SMA, EMA, WMA) | `window`, `wtype` |
-| `RSI` | `vectorbt/indicators/basic.py` | Relative Strength Index | `window` (default 14) |
-| `MACD` | `vectorbt/indicators/basic.py` | MACD oscillator | `fast`, `slow`, `signal` |
-| `BBANDS` | `vectorbt/indicators/basic.py` | Bollinger Bands | `window`, `alpha` |
-| `STOCH` | `vectorbt/indicators/basic.py` | Stochastic oscillator | `k_window`, `d_window` |
-| `generate_rand_enex()` | `vectorbt/signals/nb.py` | Numba kernel for random entry/exit | `n`, `entry_prob`, `exit_prob` |
-| `generate_enex_nb()` | `vectorbt/signals/nb.py` | General entry/exit from rules | condition functions |
+| `SignalFactory` | `signals/factory.py:L30` | Build signal generator classes | `entry`, `exit`, `mode` |
+| `SignalsAccessor` | `vectorbt/signals/accessors.py:L219` | `.vbt.signals` accessor on DataFrames | wraps boolean signal arrays |
+| `IndicatorBase` | `indicators/factory.py:L2045` | Base for all indicator classes | `run()`, `plot()`, params |
+| `MA` | `indicators/basic.py:L86` | Moving average (SMA, EMA, WMA) | `window`, `wtype` |
+| `RSI` | `indicators/basic.py:L362` | Relative Strength Index | `window` (default 14) |
+| `MACD` | `indicators/basic.py:L583` | MACD oscillator | `fast`, `slow`, `signal` |
+| `BBANDS` | `indicators/basic.py:L248` | Bollinger Bands | `window`, `alpha` |
+| `STOCH` | `indicators/basic.py:L459` | Stochastic oscillator | `k_window`, `d_window` |
+| `generate_rand_enex()` | `vectorbt/signals/nb.py:L520` | Numba kernel for random entry/exit | `n`, `entry_prob`, `exit_prob` |
+| `generate_enex_nb()` | `vectorbt/signals/nb.py:L159` | General entry/exit from rules | condition functions |
 | `generate_rand_enex_by_prob` | `vectorbt/signals/dispatch.py:L327` | Random entry/exit signals by probability | `entry_prob`, `exit_prob` |
-| `between_partition_ranges` | `vectorbt/signals/dispatch.py` | Engine-neutral range queries | partition indices |
+| `between_partition_ranges` | `signals/dispatch.py:L1085` | Engine-neutral range queries | partition indices |
 
 ## Key Methods (graph degree centrality)
 
@@ -232,5 +232,5 @@ result = MyMA.run(price, window=20)
 ## Provenance
 
 - Knowledge graph: vectorbt, 3682 nodes, 9212 edges, 353 communities
-- God nodes: `SignalsAccessor` (52), `dispatch.py` (38), `nb.py` (32) — public-API hubs only (see GRAPH_SPEC noise filter)
+- God nodes: `SignalsAccessor` (52), `dispatch.py:L1` (38), `nb.py:L1` (32) — public-API hubs only (see GRAPH_SPEC noise filter)
 - Extraction: graphify @ f9897528f675, backend opencode, description coverage 88%

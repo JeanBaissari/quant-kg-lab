@@ -181,5 +181,5 @@ except LinAlgError:
 ## Provenance
 
 - Knowledge graph: numpy, 8094 nodes, 13271 edges, 670 communities
-- God nodes: `f2c_d_lapack.c` (124), `f2c_s_lapack.c` (124), `umath_linalg.cpp` (101) — public-API hubs only (see GRAPH_SPEC noise filter)
+- God nodes: `f2c_d_lapack.c:L1` (124), `f2c_s_lapack.c:L1` (124), `umath_linalg.cpp` (101) — public-API hubs only (see GRAPH_SPEC noise filter)
 - Extraction: graphify @ ab2199763cb1, backend opencode, description coverage 83%

@@ -34,10 +34,10 @@ values, base_values, and data ready for plotting.
 
 | API | Source File | Description |
 |-----|------------|-------------|
-| `Explainer` | `explainers/_explainer.py` | Unified explainer entry — auto-selects the variant from the model type |
-| `Explanation` | `_explanation.py:L44` | Output object: `values`, `base_values`, `data`, `feature_names`; carries `.plot()` |
+| `Explainer` | `explainers/_explainer.py:L22` | Unified explainer entry — auto-selects the variant from the model type |
+| `Explanation` | `_explanation.py:L96` | Output object: `values`, `base_values`, `data`, `feature_names`; carries `.plot()` |
 | `Masker` | `maskers/_masker.py:L14` | Input masking strategies (Independent, Tabular, Partition) for the explainer |
-| `Model` | `models/_model.py` | Model wrapper abstraction (callable/ensemble adapters) |
+| `Model` | `models/_model.py:L12` | Model wrapper abstraction (callable/ensemble adapters) |
 | `TreeExplainer` | `explainers/_tree.py:L141` | Exact SHAP for tree ensembles (xgboost/lightgbm/sklearn) — fast, model-structure-aware |
 | `KernelExplainer` | `explainers/_kernel.py:L41` | Model-agnostic SHAP — any callable, slower, needs background data |
 | `LinearExplainer` | `explainers/_linear.py:L20` | Exact SHAP for linear models (incl. correlation-aware via `feature_perturbation`) |

@@ -33,10 +33,10 @@ priors — the engine behind SARIMAX and structural models.
 
 | API | Source File | Description |
 |-----|------------|-------------|
-| `Initialization` | `tsa/statespace/initialization.py` | State initialization policies (stationary, diffuse, known) |
-| `MLEModel` | `tsa/statespace/mlemodel.py` | Base maximum-likelihood state-space model — subclass to define your system |
-| `MLEResults` | `tsa/statespace/mlemodel.py` | Filtered/smoothed results: states, covariances, forecasts |
-| `NewsResults` | `tsa/statespace/news.py` | News/impact decomposition of forecast revisions |
+| `Initialization` | `tsa/statespace/initialization.py:L17` | State initialization policies (stationary, diffuse, known) |
+| `MLEModel` | `tsa/statespace/mlemodel.py:L92` | Base maximum-likelihood state-space model — subclass to define your system |
+| `MLEResults` | `tsa/statespace/mlemodel.py:L2686` | Filtered/smoothed results: states, covariances, forecasts |
+| `NewsResults` | `tsa/statespace/news.py:L17` | News/impact decomposition of forecast revisions |
 
 ## Common Patterns
 

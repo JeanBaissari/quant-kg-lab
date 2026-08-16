@@ -32,11 +32,11 @@ Granger-causality and whiteness tests, and VECM cointegration modelling.
 
 | API | Source File | Description |
 |-----|------------|-------------|
-| `VAR` | `tsa/vector_ar/var_model.py` | Vector autoregression — fit, forecast, summary |
-| `CausalityTestResults` | `tsa/vector_ar/hypothesis_test_results.py` | Granger-causality test results (stat, pvalue, conclusion) |
-| `WhitenessTestResults` | `tsa/vector_ar/hypothesis_test_results.py` | Residual whiteness test results |
-| `IRAnalysis` | `tsa/vector_ar/irf.py` | Impulse-response functions and variance decomposition |
-| `tsa/vector_ar/vecm.py` | VECM — cointegration-constrained VAR |
+| `VAR` | `tsa/vector_ar/var_model.py:L542` | Vector autoregression — fit, forecast, summary |
+| `CausalityTestResults` | `tsa/vector_ar/hypothesis_test_results.py:L131` | Granger-causality test results (stat, pvalue, conclusion) |
+| `WhitenessTestResults` | `tsa/vector_ar/hypothesis_test_results.py:L226` | Residual whiteness test results |
+| `IRAnalysis` | `tsa/vector_ar/irf.py:L342` | Impulse-response functions and variance decomposition |
+| `tsa/vector_ar/vecm.py:L1` | VECM — cointegration-constrained VAR |
 
 ## Common Patterns
 

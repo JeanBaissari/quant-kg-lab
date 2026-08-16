@@ -25,7 +25,7 @@ related_skills:
 
 # LightGBM Core API
 
-Extracted from LightGBM knowledge graph. Sources: `python-package/lightgbm/basic.py`, `engine.py`, `callback.py`.
+Extracted from LightGBM knowledge graph. Sources: `python-package/lightgbm/basic.py:L1`, `engine.py:L1`, `callback.py:L1`.
 
 ## Quick Reference
 ### Data Structures
@@ -248,9 +248,9 @@ model = optuna_lgb.train(
 
 ## References
 
-- Source: `python-package/lightgbm/basic.py` (Dataset, Booster, Sequence, _InnerPredictor)
-- Source: `python-package/lightgbm/engine.py` (train, cv, CVBooster)
-- Source: `python-package/lightgbm/callback.py` (early_stopping, log_evaluation, record_evaluation, reset_parameter)
+- Source: `python-package/lightgbm/basic.py:L1` (Dataset, Booster, Sequence, _InnerPredictor)
+- Source: `python-package/lightgbm/engine.py:L1` (train, cv, CVBooster)
+- Source: `python-package/lightgbm/callback.py:L1` (early_stopping, log_evaluation, record_evaluation, reset_parameter)
 
 ## Provenance
 

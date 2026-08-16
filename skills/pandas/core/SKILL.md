@@ -42,9 +42,12 @@ The core pandas data structures and operations: `DataFrame` (2-D labeled tabular
 
 | API | Type | Description |
 |-----|------|-------------|
-| `SeriesGroupBy` | class | GroupBy for Series |
-| `TimedeltaArray` | class | Array of timedelta64 data |
-| `Categorical` | class | Efficient categorical data representation |
+| `SeriesGroupBy` | class | GroupBy for Series | `core/groupby/generic.py:L193` |
+
+| `TimedeltaArray` | class | Array of timedelta64 data | `core/arrays/timedeltas.py:L117` |
+
+| `Categorical` | class | Efficient categorical data representation | `core/arrays/categorical.py:L257` |
+
 | `merge()` | function | Database-style join of DataFrames |
 | `concat()` | function | Concatenate DataFrames along an axis |
 | `pivot()` | function | Reshape from long to wide format |

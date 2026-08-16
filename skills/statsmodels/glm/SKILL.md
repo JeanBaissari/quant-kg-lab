@@ -43,10 +43,10 @@ for valid inference under heteroskedasticity.
 | `GLMResults` | `genmod/generalized_linear_model.py:L1750` | Fitted GLM — params, bse, pvalues, conf_int, summary |
 | `Family` | `genmod/families/family.py:L24` | Distribution family base — deviance, resid_dev, loglike |
 | `Poisson` | `genmod/families/family.py:L379` | Count family — log link default |
-| `Binomial` | `genmod/families/family.py` | Binary family — logit/probit/cloglog links |
-| `Gamma` | `genmod/families/family.py` | Positive-skew family — inverse link default |
-| `NegativeBinomial` | `genmod/families/family.py` | Overdispersed count family |
-| `Tweedie` | `genmod/families/family.py` | Power-variance family — p in (1, 2) |
+| `Binomial` | `genmod/families/family.py:L893` | Binary family — logit/probit/cloglog links |
+| `Gamma` | `genmod/families/family.py:L708` | Positive-skew family — inverse link default |
+| `NegativeBinomial` | `genmod/families/family.py:L1343` | Overdispersed count family |
+| `Tweedie` | `genmod/families/family.py:L1576` | Power-variance family — p in (1, 2) |
 | `Link` | `genmod/families/links.py:L23` | Link-function base — identity, log, logit, inverse_power |
 | `GEE` | `genmod/generalized_estimating_equations.py:L488` | Generalized estimating equations — clustered/correlated data |
 | `GEEResults` | `genmod/generalized_estimating_equations.py:L1885` | GEE fit results |
@@ -54,7 +54,7 @@ for valid inference under heteroskedasticity.
 | `OrdinalGEE` | `genmod/generalized_estimating_equations.py:L2467` | Ordinal-category GEE |
 | `CovStruct` | `genmod/cov_struct.py:L29` | Working covariance structure base |
 | `Stationary` | `genmod/cov_struct.py:L596` | Stationary autocorrelation structure |
-| `GLMGam` | `gam/generalized_additive_model.py` | GAM — smooth additive terms |
+| `GLMGam` | `gam/generalized_additive_model.py:L536` | GAM — smooth additive terms |
 | `GLMInfluence` | `stats/outliers_influence.py:L1456` | Influence/diagnostics for GLM fits |
 
 ## Common Patterns

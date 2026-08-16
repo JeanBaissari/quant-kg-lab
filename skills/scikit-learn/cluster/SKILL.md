@@ -36,19 +36,19 @@ Communities: 37 ("Clustering KMeans"), 48 ("Clustering DBSCAN/MeanShift/Spectral
 ## Quick Reference
 | Class/Function | Source File | Purpose | Key Params |
 |---------------|-------------|---------|------------|
-| `KMeans` | `cluster/_kmeans.py` | k-means clustering (Lloyd/Elkan) | `n_clusters`, `init`, `n_init`, `max_iter`, `algorithm` ('lloyd'/'elkan'), `random_state` |
-| `MiniBatchKMeans` | `cluster/_kmeans.py` | Mini-batch k-means (scalable) | `n_clusters`, `batch_size`, `max_iter`, `random_state` |
-| `BisectingKMeans` | `cluster/_bisect_k_means.py` | Hierarchical divisive k-means | `n_clusters`, `bisecting_strategy` ('biggest_inertia'/'largest_cluster'), `random_state` |
-| `DBSCAN` | `cluster/_dbscan.py` | Density-based spatial clustering | `eps`, `min_samples`, `metric`, `algorithm` |
-| `HDBSCAN` | `cluster/_hdbscan/hdbscan.py` | Hierarchical DBSCAN (variable density) | `min_cluster_size`, `min_samples`, `cluster_selection_epsilon`, `metric` |
-| `MeanShift` | `cluster/_mean_shift.py` | Mean shift clustering (density modes) | `bandwidth`, `cluster_all`, `max_iter` |
-| `SpectralClustering` | `cluster/_spectral.py` | Spectral clustering (graph Laplacian) | `n_clusters`, `affinity`, `gamma`, `assign_labels` ('kmeans'/'discretize') |
-| `AgglomerativeClustering` | `cluster/_agglomerative.py` | Hierarchical agglomerative clustering | `n_clusters`, `linkage` ('ward'/'complete'/'average'/'single'), `metric`, `distance_threshold` |
-| `OPTICS` | `cluster/_optics.py` | Ordering Points To Identify Clustering Structure | `min_samples`, `xi`, `min_cluster_size`, `metric` |
-| `Birch` | `cluster/_birch.py` | Balanced Iterative Reducing and Clustering | `threshold`, `branching_factor`, `n_clusters` |
-| `SpectralBiclustering` | `cluster/_bicluster.py` | Spectral co-clustering (checkerboard) | `n_clusters`, `method` ('bistochastic'/'scale'/'log'), `n_components` |
-| `SpectralCoclustering` | `cluster/_bicluster.py` | Spectral co-clustering (diagonal) | `n_clusters`, `svd_method` ('randomized'/'arpack'), `n_svd_vecs` |
-| `AffinityPropagation` | `cluster/_affinity_propagation.py` | Affinity propagation (exemplar-based) | `damping`, `max_iter`, `convergence_iter`, `preference` |
+| `KMeans` | `cluster/_kmeans.py:L1195` | k-means clustering (Lloyd/Elkan) | `n_clusters`, `init`, `n_init`, `max_iter`, `algorithm` ('lloyd'/'elkan'), `random_state` |
+| `MiniBatchKMeans` | `cluster/_kmeans.py:L1687` | Mini-batch k-means (scalable) | `n_clusters`, `batch_size`, `max_iter`, `random_state` |
+| `BisectingKMeans` | `cluster/_bisect_k_means.py:L83` | Hierarchical divisive k-means | `n_clusters`, `bisecting_strategy` ('biggest_inertia'/'largest_cluster'), `random_state` |
+| `DBSCAN` | `cluster/_dbscan.py:L202` | Density-based spatial clustering | `eps`, `min_samples`, `metric`, `algorithm` |
+| `HDBSCAN` | `cluster/_hdbscan/hdbscan.py:L423` | Hierarchical DBSCAN (variable density) | `min_cluster_size`, `min_samples`, `cluster_selection_epsilon`, `metric` |
+| `MeanShift` | `cluster/_mean_shift.py:L300` | Mean shift clustering (density modes) | `bandwidth`, `cluster_all`, `max_iter` |
+| `SpectralClustering` | `cluster/_spectral.py:L379` | Spectral clustering (graph Laplacian) | `n_clusters`, `affinity`, `gamma`, `assign_labels` ('kmeans'/'discretize') |
+| `AgglomerativeClustering` | `cluster/_agglomerative.py:L782` | Hierarchical agglomerative clustering | `n_clusters`, `linkage` ('ward'/'complete'/'average'/'single'), `metric`, `distance_threshold` |
+| `OPTICS` | `cluster/_optics.py:L33` | Ordering Points To Identify Clustering Structure | `min_samples`, `xi`, `min_cluster_size`, `metric` |
+| `Birch` | `cluster/_birch.py:L359` | Balanced Iterative Reducing and Clustering | `threshold`, `branching_factor`, `n_clusters` |
+| `SpectralBiclustering` | `cluster/_bicluster.py:L360` | Spectral co-clustering (checkerboard) | `n_clusters`, `method` ('bistochastic'/'scale'/'log'), `n_components` |
+| `SpectralCoclustering` | `cluster/_bicluster.py:L202` | Spectral co-clustering (diagonal) | `n_clusters`, `svd_method` ('randomized'/'arpack'), `n_svd_vecs` |
+| `AffinityPropagation` | `cluster/_affinity_propagation.py:L312` | Affinity propagation (exemplar-based) | `damping`, `max_iter`, `convergence_iter`, `preference` |
 
 ### Key Methods (from graph node analysis)
 

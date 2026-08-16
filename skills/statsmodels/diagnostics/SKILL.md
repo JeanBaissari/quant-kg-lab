@@ -30,8 +30,8 @@ related_skills:
 
 # statsmodels.diagnostics
 
-Model-validation surface: residual-based tests (`stats/diagnostic.py`), influence and
-outlier analysis (`stats/outliers_influence.py`), ANOVA (`stats/anova.py`), and
+Model-validation surface: residual-based tests (`stats/diagnostic.py:L1`), influence and
+outlier analysis (`stats/outliers_influence.py:L1`), ANOVA (`stats/anova.py:L1`), and
 model-comparison utilities. The "is this fit trustworthy?" layer.
 
 ## Quick Reference
@@ -39,7 +39,7 @@ model-comparison utilities. The "is this fit trustworthy?" layer.
 | API | Source File | Description |
 |-----|------------|-------------|
 | `jarque_bera()` | `stats/stattools.py:L86` | Normality test on residuals (skew + kurtosis) |
-| `durbin_watson()` | `stats/diagnostic.py` | Autocorrelation of residuals — DW ≈ 2 is clean |
+| `durbin_watson()` | `stats/stattools.py:L15` | Autocorrelation of residuals — DW ≈ 2 is clean |
 | `het_breuschpagan()` | `stats/diagnostic.py:L1144` | Heteroskedasticity test (Breusch-Pagan LM) |
 | `het_arch()` | `stats/diagnostic.py:L936` | ARCH effects test (volatility clustering) |
 | `acorr_ljungbox()` | `stats/diagnostic.py:L596` | Ljung-Box autocorrelation — white-noise check |
@@ -54,7 +54,7 @@ model-comparison utilities. The "is this fit trustworthy?" layer.
 | `OLSInfluence` | `stats/outliers_influence.py:L801` | Influence for OLS — cooks, leverage, dfbeta |
 | `MLEInfluence` | `stats/outliers_influence.py:L388` | Influence for ML models (GLM/GLM results) |
 | `GLMInfluence` | `stats/outliers_influence.py:L1456` | GLM influence wrapper |
-| `variance_inflation_factor()` | `stats/outliers_influence.py` | VIF — multicollinearity per regressor |
+| `variance_inflation_factor()` | `stats/outliers_influence.py:L165` | VIF — multicollinearity per regressor |
 | `anova_lm()` | `stats/anova.py:L349` | ANOVA table from fitted models (type I/II/III) |
 | `AnovaRM` | `stats/anova.py:L523` | Repeated-measures ANOVA |
 | `CompareMeans` | `stats/weightstats.py:L862` | Two-sample mean comparison (ttest/ztest) |

@@ -35,11 +35,11 @@ statistics, and resampled metrics.
 |-----|------------|-------------|
 | `GroupBy` | `core/groupby/groupby.py:L752` | Base split-apply-combine object from `df.groupby(keys)` |
 | `DataFrameGroupBy` | `core/groupby/generic.py:L2090` | DataFrame groups with agg/transform/apply/filter |
-| `SeriesGroupBy` | `core/groupby/generic.py` | Series groups — `.agg`, `.transform`, `.expanding`, `.rolling` |
+| `SeriesGroupBy` | `core/groupby/generic.py:L193` | Series groups — `.agg`, `.transform`, `.expanding`, `.rolling` |
 | `Resampler` | `core/resample.py:L119` | Time-based grouping (`df.resample(freq)`) with the same API |
-| `.agg()` | `core/groupby/generic.py` | Named/multiple aggregations per column |
-| `.transform()` | `core/groupby/generic.py` | Same-shape group statistics (demeaning, z-scores) |
-| `.rolling()` | `core/window/rolling.py` | Rolling windows on groups or plain frames |
+| `.agg()` | `core/groupby/generic.py:L109` | Named/multiple aggregations per column |
+| `.transform()` | `core/groupby/generic.py:L2529` | Same-shape group statistics (demeaning, z-scores) |
+| `.rolling()` | `core/window/rolling.py:L1955` | Rolling windows on groups or plain frames |
 
 ## Common Patterns
 

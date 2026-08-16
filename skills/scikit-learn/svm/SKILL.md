@@ -36,15 +36,15 @@ Communities: 60 ("SVM Liblinear"), 72 ("SVM SVC SVR"), 83 ("SVM LinearSVC/NuSVC"
 ## Quick Reference
 | Class/Function | Source File | Purpose | Key Params |
 |---------------|-------------|---------|------------|
-| `SVC` | `svm/_classes.py` | C-Support Vector Classification | `C`, `kernel` ('linear'/'rbf'/'poly'/'sigmoid'), `gamma`, `degree`, `class_weight`, `probability` |
-| `NuSVC` | `svm/_classes.py` | ν-Support Vector Classification | `nu` (0–1), `kernel`, `gamma`, `class_weight` |
-| `SVR` | `svm/_classes.py` | ε-Support Vector Regression | `C`, `epsilon`, `kernel`, `gamma`, `degree` |
-| `NuSVR` | `svm/_classes.py` | ν-Support Vector Regression | `nu`, `C`, `kernel`, `gamma` |
-| `LinearSVC` | `svm/_classes.py` | Linear SVM (liblinear, scales better) | `C`, `loss` ('hinge'/'squared_hinge'), `penalty` ('l1'/'l2'), `dual`, `max_iter` |
-| `LinearSVR` | `svm/_classes.py` | Linear SVM Regression (liblinear) | `C`, `epsilon`, `loss`, `dual`, `max_iter` |
-| `OneClassSVM` | `svm/_classes.py` | Unsupervised outlier detection | `nu`, `kernel`, `gamma` |
-| `BaseLibSVM` | `svm/_base.py` | Abstract base for libsvm wrappers | — |
-| `BaseSVC` | `svm/_base.py` | Abstract base for SVC/NuSVC | — |
+| `SVC` | `svm/_classes.py:L623` | C-Support Vector Classification | `C`, `kernel` ('linear'/'rbf'/'poly'/'sigmoid'), `gamma`, `degree`, `class_weight`, `probability` |
+| `NuSVC` | `svm/_classes.py:L915` | ν-Support Vector Classification | `nu` (0–1), `kernel`, `gamma`, `class_weight` |
+| `SVR` | `svm/_classes.py:L1190` | ε-Support Vector Regression | `C`, `epsilon`, `kernel`, `gamma`, `degree` |
+| `NuSVR` | `svm/_classes.py:L1385` | ν-Support Vector Regression | `nu`, `C`, `kernel`, `gamma` |
+| `LinearSVC` | `svm/_classes.py:L44` | Linear SVM (liblinear, scales better) | `C`, `loss` ('hinge'/'squared_hinge'), `penalty` ('l1'/'l2'), `dual`, `max_iter` |
+| `LinearSVR` | `svm/_classes.py:L367` | Linear SVM Regression (liblinear) | `C`, `epsilon`, `loss`, `dual`, `max_iter` |
+| `OneClassSVM` | `svm/_classes.py:L1573` | Unsupervised outlier detection | `nu`, `kernel`, `gamma` |
+| `BaseLibSVM` | `svm/_base.py:L86` | Abstract base for libsvm wrappers | — |
+| `BaseSVC` | `svm/_base.py:L732` | Abstract base for SVC/NuSVC | — |
 
 ### Key Methods (from graph node analysis)
 

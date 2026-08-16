@@ -84,4 +84,4 @@ Graph: `knowledge_graphs/darts/.graphify/graph.json` — 3954 nodes · 8240 edge
 
 - [ ] `model.historical_forecasts(series, start=0.8, forecast_horizon=7)` runs
 - [ ] `model.gridsearch(parameters, series, metric=mape)` returns best params
-- [ ] QR rows cite `models/forecasting/forecasting_model.py` resolvable in the darts graph
+- [ ] QR rows cite `models/forecasting/forecasting_model.py:L1` resolvable in the darts graph

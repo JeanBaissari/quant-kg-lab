@@ -36,7 +36,7 @@ data from the posterior/prior; backends persist the trace.
 
 | API | Source File | Description |
 |-----|------------|-------------|
-| `sample()` | `sampling/mcmc.py` | Run MCMC — draws/tune/chains/cores, step-method auto-assignment |
+| `sample()` | `sampling/mcmc.py:L554` | Run MCMC — draws/tune/chains/cores, step-method auto-assignment |
 | `sample_prior_predictive()` | `sampling/forward.py:L485` | Draw from the prior → data (prior predictive check) |
 | `sample_posterior_predictive()` | `sampling/forward.py:L607` | Draw new data from the posterior — forecasts/backtests |
 | `draw()` | `sampling/forward.py:L397` | Draw from a random variable directly |

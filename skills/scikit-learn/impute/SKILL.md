@@ -35,10 +35,10 @@ Communities: 140 ("Imputation SimpleImputer/MissingIndicator"), 297 ("IterativeI
 ## Quick Reference
 | Class/Function | Source File | Purpose | Key Params |
 |---------------|-------------|---------|------------|
-| `SimpleImputer` | `impute/_base.py` | Basic univariate imputation | `strategy` ('mean'/'median'/'most_frequent'/'constant'), `missing_values` (np.nan), `fill_value`, `keep_empty_features` |
-| `KNNImputer` | `impute/_knn.py` | k-Nearest Neighbors imputation | `n_neighbors`, `weights` ('uniform'/'distance'), `metric`, `keep_empty_features` |
-| `IterativeImputer` | `impute/_iterative.py` | Multivariate MICE-style imputation | `estimator` (default BayesianRidge), `max_iter`, `n_nearest_features`, `initial_strategy`, `imputation_order`, `skip_complete`, `keep_empty_features` |
-| `MissingIndicator` | `impute/_base.py` | Binary indicator of missingness | `missing_values`, `features` ('all'/'missing-only'), `sparse` |
+| `SimpleImputer` | `impute/_base.py:L171` | Basic univariate imputation | `strategy` ('mean'/'median'/'most_frequent'/'constant'), `missing_values` (np.nan), `fill_value`, `keep_empty_features` |
+| `KNNImputer` | `impute/_knn.py:L24` | k-Nearest Neighbors imputation | `n_neighbors`, `weights` ('uniform'/'distance'), `metric`, `keep_empty_features` |
+| `IterativeImputer` | `impute/_iterative.py:L58` | Multivariate MICE-style imputation | `estimator` (default BayesianRidge), `max_iter`, `n_nearest_features`, `initial_strategy`, `imputation_order`, `skip_complete`, `keep_empty_features` |
+| `MissingIndicator` | `impute/_base.py:L787` | Binary indicator of missingness | `missing_values`, `features` ('all'/'missing-only'), `sparse` |
 
 ### Key Methods (from graph node analysis)
 

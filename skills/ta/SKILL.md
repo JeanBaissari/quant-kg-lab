@@ -39,7 +39,7 @@ needed (unlike ta-lib).
 | API | Source File | Description |
 |-----|------------|-------------|
 | `IndicatorMixin` | `utils.py:L14` | Base class — the shared indicator API (deg 259 hub) |
-| `add_all_ta_features` | `wrapper.py` | Add the full indicator suite as new DataFrame columns |
+| `add_all_ta_features` | `wrapper.py:L543` | Add the full indicator suite as new DataFrame columns |
 | `RSIIndicator` | `momentum.py:L14` | RSI — relative strength over a window |
 | `StochasticOscillator` | `momentum.py:L217` | Stochastic %K/%D |
 | `StochRSIIndicator` | `momentum.py:L549` | Stochastic of RSI |
@@ -102,5 +102,5 @@ Graph: `knowledge_graphs/ta/.graphify/graph.json` — 538 nodes · 1208 edges ·
 
 - [ ] `add_all_ta_features(df)` appends the indicator columns
 - [ ] `ta.trend.MACD(close).macd_diff()` returns a series
-- [ ] QR rows cite `trend.py`/`momentum.py`/`volatility.py`/`volume.py`/`utils.py`
+- [ ] QR rows cite `trend.py:L1`/`momentum.py:L1`/`volatility.py:L1`/`volume.py:L1`/`utils.py:L1`
       files resolvable in the ta graph

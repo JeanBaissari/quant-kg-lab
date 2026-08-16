@@ -32,15 +32,15 @@ and `dependence_plot` (feature interaction).
 
 | API | Source File | Description |
 |-----|------------|-------------|
-| `waterfall_plot()` | `plots/_waterfall.py` | Base value → prediction, per-feature contributions stacked |
-| `beeswarm()` | `plots/_beeswarm.py` | Global summary: feature importance with value distribution |
-| `force_plot()` | `plots/_force.py:L17` | Additive force layout for single or multiple rows |
-| `bar_plot()` | `plots/_bar.py` | Mean |SHAP| bar summary |
-| `dependence_plot()` | `plots/_scatter.py` | Feature value vs SHAP value — at this pin a legacy alias of `dependence_legacy` (see `shap/__init__.py`) |
-| `decision_plot()` | `plots/_decision.py` | Full additive decomposition across all rows — model-agnostic |
-| `image_plot()` | `plots/_image.py` | Image-model explanations — pixel/region attributions overlaid |
-| `heatmap()` | `plots/_heatmap.py` | Per-sample × feature heatmap of SHAP values |
-| `embedding_plot()` | `plots/_embedding.py` | SHAP values projected into an embedding space |
+| `waterfall_plot()` | `plots/_waterfall.py:L16` | Base value → prediction, per-feature contributions stacked |
+| `beeswarm()` | `plots/_beeswarm.py:L40` | Global summary: feature importance with value distribution |
+| `force_plot()` | `plots/_force.py:L30` | Additive force layout for single or multiple rows |
+| `bar_plot()` | `plots/_bar.py:L22` | Mean |SHAP| bar summary |
+| `dependence_plot()` | `plots/_scatter.py:L517` | Feature value vs SHAP value — at this pin a legacy alias of `dependence_legacy` (see `shap/__init__.py:L36`) |
+| `decision_plot()` | `plots/_decision.py:L212` | Full additive decomposition across all rows — model-agnostic |
+| `image_plot()` | `plots/_image.py:L27` | Image-model explanations — pixel/region attributions overlaid |
+| `heatmap()` | `plots/_heatmap.py:L11` | Per-sample × feature heatmap of SHAP values |
+| `embedding_plot()` | `plots/_embedding.py:L9` | SHAP values projected into an embedding space |
 | `plots/resources/` | Bundled JS/logo assets for interactive force plots |
 
 ## Common Patterns

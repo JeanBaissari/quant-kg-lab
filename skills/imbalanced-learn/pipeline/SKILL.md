@@ -40,7 +40,7 @@ transformer and an estimator — sampling happens inside the fold, not before th
 | `Pipeline` | `pipeline.py:L111` | Sampling-aware step chain — samplers valid between transformers/estimators |
 | `.fit_transform()` | `pipeline.py:L537` | Fit + transform through the chain |
 | `.transform()` | `pipeline.py:L999` | Transform stage outputs (post-sampler) |
-| `.fit()` | `pipeline.py` | Fit all steps (with internal resampling in the right position) |
+| `.fit()` | `pipeline.py:L111` | Fit all steps (with internal resampling in the right position) |
 | `InputTags` | `utils/_tags.py:L20` | Tags: which steps accept what data |
 | `SamplerTags` | `utils/_tags.py:L82` | Sampler capability tags |
 | `InstanceHardnessCV` | `model_selection/_split.py:L11` | Hardness-based cross-validation splitter |
@@ -84,4 +84,4 @@ Graph: `knowledge_graphs/imbalanced-learn/.graphify/graph.json` — 611 nodes ·
 
 - [ ] `make_pipeline(StandardScaler(), SMOTE(), RandomForestClassifier())` fits + scores
 - [ ] `cross_val_score(pipe, X, y)` runs without resampling leakage
-- [ ] QR rows cite `pipeline.py`/`model_selection/_split.py` resolvable in the imbalanced-learn graph
+- [ ] QR rows cite `pipeline.py:L1`/`model_selection/_split.py:L1` resolvable in the imbalanced-learn graph

@@ -37,12 +37,12 @@ transformations, then execute with `collect` (in-memory) or `sink_*`
 |-----|------------|-------------|
 | `LazyFrame` | `lazyframe/frame.py:L253` | Lazy query plan over a DataFrame or scan — the LazyFrame type |
 | `.collect()` | `lazyframe/frame.py:L253` | Execute the plan into a DataFrame (in-memory) |
-| `.sink_parquet()` | `lazyframe/frame.py` | Streaming execution writing parquet — bounded memory |
-| `.sink_csv()` | `lazyframe/frame.py` | Streaming execution writing CSV |
-| `.sink_ipc()` | `lazyframe/frame.py` | Streaming execution writing IPC |
-| `.sink_ndjson()` | `lazyframe/frame.py` | Streaming execution writing NDJSON |
-| `.sink_delta()` | `lazyframe/frame.py` | Streaming execution writing a Delta table |
-| `.sink_iceberg()` | `lazyframe/frame.py` | Streaming execution writing an Iceberg table |
+| `.sink_parquet()` | `lazyframe/frame.py:L2822` | Streaming execution writing parquet — bounded memory |
+| `.sink_csv()` | `lazyframe/frame.py:L3780` | Streaming execution writing CSV |
+| `.sink_ipc()` | `lazyframe/frame.py:L3521` | Streaming execution writing IPC |
+| `.sink_ndjson()` | `lazyframe/frame.py:L4145` | Streaming execution writing NDJSON |
+| `.sink_delta()` | `lazyframe/frame.py:L3151` | Streaming execution writing a Delta table |
+| `.sink_iceberg()` | `lazyframe/frame.py:L3467` | Streaming execution writing an Iceberg table |
 | `.explain()` | `lazyframe/frame.py:L1290` | Show the (optimized) query plan as text |
 | `.show_graph()` | `lazyframe/frame.py:L1451` | Render the query plan as a Graphviz graph |
 | `.inspect()` | `lazyframe/frame.py:L1662` | Inspect a node in the computation graph during execution |
@@ -53,12 +53,12 @@ transformations, then execute with `collect` (in-memory) or `sink_*`
 | `.sort()` | `lazyframe/frame.py:L1690` | Sort by columns (stable) |
 | `.pipe()` | `lazyframe/frame.py:L919` | Pipe the plan through a function (with schema hint via `.pipe_with_schema`) |
 | `.describe()` | `lazyframe/frame.py:L1062` | Summary statistics as a DataFrame |
-| `.cache()` | `lazyframe/frame.py` | Materialize + reuse this node in the plan (memoization) |
-| `.fetch()` | `lazyframe/frame.py` | Collect a small number of rows for debugging (deprecated — use `.limit(n).collect()`) |
-| `.profile()` | `lazyframe/frame.py` | Execution profile: per-node timing (deprecated — see `collect(profile=True)`) |
-| `SQLContext` | `sql/context.py` | Register LazyFrames/DataFrames under names; run SQL across them |
-| `LazyGroupBy` | `lazyframe/group_by.py:L18` | Lazy grouped aggregation — `lf.group_by(...).agg(...)` |
-| `QueryOptFlags` | `lazyframe/opt_flags.py:L21` | Optimization flags: projection pushdown, predicate pushdown, streaming, etc. |
+| `.cache()` | `lazyframe/frame.py:L4654` | Materialize + reuse this node in the plan (memoization) |
+| `.fetch()` | `lazyframe/frame.py:L4602` | Collect a small number of rows for debugging (deprecated — use `.limit(n).collect()`) |
+| `.profile()` | `lazyframe/frame.py:L2066` | Execution profile: per-node timing (deprecated — see `collect(profile=True)`) |
+| `SQLContext` | `sql/context.py:L91` | Register LazyFrames/DataFrames under names; run SQL across them |
+| `LazyGroupBy` | `lazyframe/group_by.py:L24` | Lazy grouped aggregation — `lf.group_by(...).agg(...)` |
+| `QueryOptFlags` | `lazyframe/opt_flags.py:L25` | Optimization flags: projection pushdown, predicate pushdown, streaming, etc. |
 | `GPUEngine` | `lazyframe/engine_config.py:L11` | GPU execution engine configuration |
 
 ## Common Patterns

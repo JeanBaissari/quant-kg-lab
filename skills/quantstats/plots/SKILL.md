@@ -29,8 +29,8 @@ related_skills:
 # quantstats.plots
 
 Visualization layer: wrapper functions (`returns()`, `drawdown()`, `rolling_*`,
-heatmaps, distribution) backed by `_plotting/core.py` primitives, plus
-Monte-Carlo simulation (`_montecarlo.py`) for path-based risk analytics.
+heatmaps, distribution) backed by `_plotting/core.py:L1` primitives, plus
+Monte-Carlo simulation (`_montecarlo.py:L1`) for path-based risk analytics.
 
 ## Quick Reference
 
@@ -97,4 +97,4 @@ Graph: `knowledge_graphs/quantstats/.graphify/graph.json` — 393 nodes · 531 e
 
 - [ ] `qs.plots.returns(returns)` renders with Agg backend
 - [ ] `run_montecarlo(returns, n=100, seed=1)` returns a MonteCarloResult
-- [ ] QR rows cite `_plotting/*.py` / `_montecarlo.py` resolvable in the quantstats graph
+- [ ] QR rows cite `_plotting/*.py` / `_montecarlo.py:L1` resolvable in the quantstats graph

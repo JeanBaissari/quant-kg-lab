@@ -34,10 +34,10 @@ plus `ExponentialSmoothing` for trend/seasonal baselines.
 
 | API | Source File | Description |
 |-----|------------|-------------|
-| `SARIMAXSpecification` | `tsa/arima/specification.py` | Builds the SARIMAX model spec from order/seasonal terms |
-| `SARIMAXParams` | `tsa/arima/params.py` | Parameter container for ARIMA-family models |
-| `ArmaProcess` | `tsa/arima_process.py` | ARMA process simulation and ACV/PSD analytics |
-| `ARMAEstimationResult` | `tsa/arima/estimators/_base.py` | Estimation result container (params, cov, fit stats) |
+| `SARIMAXSpecification` | `tsa/arima/specification.py:L23` | Builds the SARIMAX model spec from order/seasonal terms |
+| `SARIMAXParams` | `tsa/arima/params.py:L15` | Parameter container for ARIMA-family models |
+| `ArmaProcess` | `tsa/arima_process.py:L677` | ARMA process simulation and ACV/PSD analytics |
+| `ARMAEstimationResult` | `tsa/arima/estimators/_base.py:L11` | Estimation result container (params, cov, fit stats) |
 | `tsa/arima/estimators/` | Estimators: statespace, conditional-sum-of-squares, etc. |
 
 ## Common Patterns

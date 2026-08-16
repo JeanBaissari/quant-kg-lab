@@ -36,7 +36,7 @@ off the model context.
 
 | API | Source File | Description |
 |-----|------------|-------------|
-| `Model` | `model/core.py` | The Bayesian model container — the `with pm.Model():` context |
+| `Model` | `model/core.py:L1680` | The Bayesian model container — the `with pm.Model():` context |
 | `modelcontext()` | `model/core.py:L131` | Get/set the current model context |
 | `ModelManager` | `model/core.py:L102` | Context-stack manager for nested models |
 | `BaseModel` | `model/core.py:L362` | Base class with enter/exit + registry hooks |
@@ -86,4 +86,4 @@ Graph: `knowledge_graphs/pymc/.graphify/graph.json` — 4067 nodes · 11144 edge
 
 - [ ] `with pm.Model(): pm.Normal("x")` registers one free_rv
 - [ ] `modelcontext()` returns the active model inside the context
-- [ ] QR rows cite `model/core.py`/`data.py` files resolvable in the pymc graph
+- [ ] QR rows cite `model/core.py:L1`/`data.py:L1` files resolvable in the pymc graph

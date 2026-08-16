@@ -130,5 +130,5 @@ study.optimize(
 ## Provenance
 
 - Knowledge graph: optuna, 2205 nodes, 4010 edges, 226 communities
-- God nodes: `_IntegrationModule` (5), `_LightGBMModule` (4), `__init__.py` (2) — public-API hubs only (see GRAPH_SPEC noise filter)
+- God nodes: `_IntegrationModule` (5), `_LightGBMModule` (4), `__init__.py:L1` (2) — public-API hubs only (see GRAPH_SPEC noise filter)
 - Extraction: graphify @ b6f2ea62fbe7, backend opencode, description coverage 85%

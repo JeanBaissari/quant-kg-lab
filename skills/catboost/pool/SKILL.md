@@ -72,4 +72,4 @@ Graph: `knowledge_graphs/catboost/.graphify/graph.json` — 793 nodes · 1569 ed
 
 - [ ] `Pool(X, y, cat_features=[...])` builds without error
 - [ ] `model.fit(Pool)` uses the declared categoricals
-- [ ] QR rows cite `core.py` files resolvable in the catboost graph
+- [ ] QR rows cite `core.py:L1` files resolvable in the catboost graph

@@ -38,7 +38,7 @@ pre-estimation gate for volatility models and cointegration setups.
 | `phillips_ouliaris()` | `unitroot/_phillips_ouliaris.py:L134` | Phillips-Ouliaris cointegration test — residual-based, two series |
 | `engle_granger()` | `unitroot/_engle_granger.py:L25` | Engle-Granger two-step cointegration test |
 | `EngleGrangerTestResults` | `unitroot/_engle_granger.py:L108` | EG results — rho, lags, summary, critical values |
-| `ADF.pvalues` / `.stat` | `unitroot/unitroot.py` | Test statistic + MacKinnon p-values |
+| `ADF.pvalues` / `.stat` | `unitroot/unitroot.py:L672` | Test statistic + MacKinnon p-values |
 | `.lags` / `.max_lags` | `unitroot/_engle_granger.py:L163` | Optimal lag selection used in the test |
 
 ## Common Patterns

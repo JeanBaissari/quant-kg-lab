@@ -39,9 +39,12 @@ contractions; `seterr`/`errstate` control floating-point error handling.
 | `add` | `np.add(a, b)` | Element-wise addition — the canonical ufunc |
 | `einsum` | `np.einsum(subscripts, *operands)` | Einstein summation — any tensor contraction | `_core/einsumfunc.py:L1243` |
 | `broadcast_to` | `np.broadcast_to(arr, shape)` | Explicit broadcast to a target shape (read-only view) |
-| `broadcast_shapes` | `np.broadcast_shapes(*shapes)` | Resolve the broadcast result shape of inputs |
-| `seterr` | `np.seterr(all='warn')` | Set floating-point error handling (ignore/warn/raise) |
-| `geterr` | `np.geterr()` | Current floating-point error settings |
+| `broadcast_shapes` | `np.broadcast_shapes(*shapes)` | Resolve the broadcast result shape of inputs | `lib/_stride_tricks_impl.py:L541` |
+
+| `seterr` | `np.seterr(all='warn')` | Set floating-point error handling (ignore/warn/raise) | `_core/_ufunc_config.py:L20` |
+
+| `geterr` | `np.geterr()` | Current floating-point error settings | `_core/_ufunc_config.py:L112` |
+
 | `ufunc` | `np.ufunc` | The ufunc type — `add.reduce`, `multiply.accumulate`, `outer` |
 | `ndarray` | `np.ndarray` | The N-dimensional array — ufunc operand |
 

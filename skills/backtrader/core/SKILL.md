@@ -26,38 +26,42 @@ The event-driven backtesting engine. `Cerebro` is the central orchestrator — y
 ## Quick Reference
 | Class / Component | Source File | Purpose | Key Params |
 |-------------------|-------------|---------|------------|
-| `Cerebro` | `backtrader/cerebro.py` | Backtesting engine / orchestration | `stdstats`, `runonce`, `preload` |
-| `Strategy` | `backtrader/strategy.py` | User trading logic base class | `next()`, `__init__()`, `notify_order()` |
-| `MetaParams` | `backtrader/metabase.py` | Metaclass for declarative parameter system | `params = (('period', 14),)` |
-| `LineRoot` | `backtrader/lineroot.py` | Root of time-series hierarchy | line operations (`+`, `-`, `*`, `/`) |
-| `LineBuffer` | `backtrader/linebuffer.py` | Circular buffer for time-series data | underlying array storage |
-| `LineSeries` | `backtrader/lineseries.py` | Named group of lines (open, high, low, close) | `.lines` attribute |
-| `DataBase` | `backtrader/feed.py` | Abstract data feed base class | `dataname`, `fromdate`, `todate` |
+| `Cerebro` | `cerebro.py:L60` | Backtesting engine / orchestration | `stdstats`, `runonce`, `preload` |
+| `Strategy` | `strategy.py:L107` | User trading logic base class | `next()`, `__init__()`, `notify_order()` |
+| `MetaParams` | `metabase.py:L203` | Metaclass for declarative parameter system | `params = (('period', 14),)` |
+| `LineRoot` | `lineroot.py:L61` | Root of time-series hierarchy | line operations (`+`, `-`, `*`, `/`) |
+| `LineBuffer` | `linebuffer.py:L50` | Circular buffer for time-series data | underlying array storage |
+| `LineSeries` | `lineseries.py:L444` | Named group of lines (open, high, low, close) | `.lines` attribute |
+| `DataBase` | `feed.py:L599` | Abstract data feed base class | `dataname`, `fromdate`, `todate` |
 | `GenericCSVData` | `backtrader/feeds/csvgeneric.py:L32` | CSV data feed with column mapping | `dtformat`, `timeframe` |
-| `YahooFinanceCSV` | `backtrader/feeds/yahoo.py` | Yahoo Finance CSV loader | pre-configured OHLCV columns |
-| `BackBroker` | `backtrader/brokers/bbroker.py` | Default broker backend | `cash`, `commission` |
-| `CommInfoBase` | `backtrader/comminfo.py` | Commission scheme base | `commission`, `margin`, `stocklike` |
-| `Order` | `backtrader/order.py` | Order object (created, submitted, accepted, completed) | `.buy()`, `.sell()`, `.close()` |
-| `Position` | `backtrader/position.py` | Current position tracking | `.size`, `.price`, `.pnl` |
-| `Trade` | `backtrader/trade.py` | Completed trade tracking | `.pnl`, `.pnlcomm`, `.bars` |
-| `SignalStrategy` | `backtrader/strategy.py` | Strategy driven by signals | `signal`, `sigtype` |
-| `Sizer` | `backtrader/sizers/fixedsize.py` | Position sizing strategy | `FixedSize`, `PercentSizer` |
+| `YahooFinanceCSV` | `feeds/yahoo.py:L192` | Yahoo Finance CSV loader | pre-configured OHLCV columns |
+| `BackBroker` | `brokers/bbroker.py:L36` | Default broker backend | `cash`, `commission` |
+| `CommInfoBase` | `comminfo.py:L30` | Commission scheme base | `commission`, `margin`, `stocklike` |
+| `Order` | `order.py:L528` | Order object (created, submitted, accepted, completed) | `.buy()`, `.sell()`, `.close()` |
+| `Position` | `position.py:L28` | Current position tracking | `.size`, `.price`, `.pnl` |
+| `Trade` | `trade.py:L94` | Completed trade tracking | `.pnl`, `.pnlcomm`, `.bars` |
+| `SignalStrategy` | `strategy.py:L1524` | Strategy driven by signals | `signal`, `sigtype` |
+| `Sizer` | `sizer.py:L29` | Position sizing strategy | `FixedSize`, `PercentSizer` |
 
 ## Key Methods & Attributes (graph degree centrality)
 
 | Method / Attribute | Prevalence | Description |
 |--------------------|------------|-------------|
-| `MetaParams` metaclass | 247 edges | God node — parameter system underpins everything |
-| `LineRoot` operations | 110 edges | Time-series math (+, -, *, /, >, <) |
+| `MetaParams` metaclass | 247 edges | God node — parameter system underpins everything | `metabase.py:L203` |
+
+| `LineRoot` operations | 110 edges | Time-series math (+, -, *, /, >, <) | `lineroot.py:L61` |
+
 | `Strategy.next()` | core | Called on each bar — main trading logic |
 | `Strategy.__init__()` | core | Pre-compute indicators, set up data |
 | `Strategy.buy()` / `sell()` | core | Submit orders to broker |
 | `Strategy.notify_order()` | core | Order status changes callback |
 | `Strategy.notify_trade()` | core | Trade open/close callback |
 | `LineBuffer.buflen()` | 65 edges | Get buffer length (required bars available) |
-| `LineIterator` | 69 edges | Iteration over time-series data |
+| `LineIterator` | 69 edges | Iteration over time-series data | `lineiterator.py:L148` |
+
 | `DataBase._load()` | 72 edges | Load next bar from data source |
-| `BackBroker` execution | 59 edges | Order matching and execution |
+| `BackBroker` execution | 59 edges | Order matching and execution | `brokers/bbroker.py:L36` |
+
 | `Cerebro.run()` | core | Run the backtest loop |
 | `Cerebro.adddata()` | core | Add data feed to engine |
 | `Cerebro.addstrategy()` | core | Register strategy class |

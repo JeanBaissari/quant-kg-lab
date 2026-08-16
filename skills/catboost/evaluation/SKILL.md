@@ -82,4 +82,4 @@ Graph: `knowledge_graphs/catboost/.graphify/graph.json` — 793 nodes · 1569 ed
 
 - [ ] `cv(Pool(...), params, fold_count=3)` returns per-iteration metric stats
 - [ ] `CatboostEvaluation(...)` runs a head-to-head comparison
-- [ ] QR rows cite `core.py`/`eval/*.py`/`metrics.py` files resolvable in the catboost graph
+- [ ] QR rows cite `core.py:L1`/`eval/*.py`/`metrics.py:L1` files resolvable in the catboost graph

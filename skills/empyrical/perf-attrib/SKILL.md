@@ -37,8 +37,8 @@ contributions + residual (alpha), the engine behind pyfolio's
 |-----|------------|-------------|
 | `perf_attrib()` | `perf_attrib.py:L5` | Decompose returns into factor + residual components over the sample |
 | `compute_exposures()` | `perf_attrib.py:L120` | Portfolio exposure to each factor per period (from position weights) |
-| `perf_attrib.py` | `perf_attrib.py:L1` | Module: returns, factor returns, exposures → attribution |
-| `stats.py` | `stats.py:L1` | Metric primitives used by the attribution layer |
+| `perf_attrib.py:L1` | Module: returns, factor returns, exposures → attribution |
+| `stats.py:L1` | Metric primitives used by the attribution layer |
 
 ## Common Patterns
 

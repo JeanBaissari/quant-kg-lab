@@ -27,18 +27,18 @@ NumPy's random module provides a modern, reproducible, and high-performance rand
 
 | API | Signature | Description | Graph Node |
 |-----|-----------|-------------|-----------|
-| `default_rng` | `default_rng(seed=None)` | Create a new Generator with default BitGenerator (PCG64) | `random/__init__.py` |
-| `Generator` | Class wrapping a BitGenerator | Primary distribution-sampling interface | `random/__init__.py` |
-| `PCG64` | `PCG64(seed=None)` | Default BitGenerator — fast, statistically sound | `random/__init__.py` |
-| `SeedSequence` | `SeedSequence(entropy=None)` | Generate independent seed states for parallel streams | `random/__init__.py` |
-| `random` | `rng.random(size=None, dtype=np.float64)` | Uniform floats in [0, 1) | `random/__init__.py` |
-| `normal` | `rng.normal(loc=0.0, scale=1.0, size=None)` | Gaussian/normal distribution | `random/__init__.py` |
-| `uniform` | `rng.uniform(low=0.0, high=1.0, size=None)` | Uniform floats in [low, high) | `random/__init__.py` |
-| `integers` | `rng.integers(low, high=None, size=None)` | Random integers in [low, high) | `random/__init__.py` |
-| `choice` | `rng.choice(a, size=None, replace=True, p=None)` | Random sample from a 1-D array | `random/__init__.py` |
-| `permutation` | `rng.permutation(x)` | Randomly permute a sequence or return a permuted range | `random/__init__.py` |
+| `default_rng` | `default_rng(seed=None)` | Create a new Generator with default BitGenerator (PCG64) | `random/__init__.py:L194` |
+| `Generator` | Class wrapping a BitGenerator | Primary distribution-sampling interface | `random/__init__.py:L194` |
+| `PCG64` | `PCG64(seed=None)` | Default BitGenerator — fast, statistically sound | `random/__init__.py:L194` |
+| `SeedSequence` | `SeedSequence(entropy=None)` | Generate independent seed states for parallel streams | `random/__init__.py:L194` |
+| `random` | `rng.random(size=None, dtype=np.float64)` | Uniform floats in [0, 1) | `random/__init__.py:L194` |
+| `normal` | `rng.normal(loc=0.0, scale=1.0, size=None)` | Gaussian/normal distribution | `random/__init__.py:L194` |
+| `uniform` | `rng.uniform(low=0.0, high=1.0, size=None)` | Uniform floats in [low, high) | `random/__init__.py:L194` |
+| `integers` | `rng.integers(low, high=None, size=None)` | Random integers in [low, high) | `random/__init__.py:L194` |
+| `choice` | `rng.choice(a, size=None, replace=True, p=None)` | Random sample from a 1-D array | `random/__init__.py:L194` |
+| `permutation` | `rng.permutation(x)` | Randomly permute a sequence or return a permuted range | `random/__init__.py:L194` |
 
-> Note: these symbols are re-exported by `numpy/random/__init__.py` from the Cython core
+> Note: these symbols are re-exported by `numpy/random/__init__.py:L1` from the Cython core
 > (`_generator.pyx` et al. — no tree-sitter grammar), so the graph carries them as **CURATED
 > re-export nodes** (see `scripts/inject_curated_nodes.py`, QKG_021) instead of extracted
 > definitions. `integers` is a `Generator` method; module-level `numpy.random.integers` was
@@ -235,5 +235,5 @@ Pickling helpers exist in `numpy.random._pickle`: `__generator_ctor()`, `__bit_g
 ## Provenance
 
 - Knowledge graph: numpy, 8094 nodes, 13271 edges, 670 communities
-- God nodes: `distributions.c` (85), `legacy-distributions.c` (36), `randomkit.c` (19) — public-API hubs only (see GRAPH_SPEC noise filter)
+- God nodes: `distributions.c:L1` (85), `legacy-distributions.c:L1` (36), `randomkit.c:L1` (19) — public-API hubs only (see GRAPH_SPEC noise filter)
 - Extraction: graphify @ ab2199763cb1, backend opencode, description coverage 83%

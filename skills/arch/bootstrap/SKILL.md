@@ -32,11 +32,11 @@ with a `conf_int` helper for percentile confidence intervals on any statistic.
 
 | API | Source File | Description |
 |-----|------------|-------------|
-| `bootstrap/base.py` | Bootstrap base: `conf_int(stat_func, reps)` percentile intervals |
-| `StationaryBootstrap` | `bootstrap/base.py` | Politis-Romano stationary bootstrap (random block lengths) |
-| `CircularBlockBootstrap` | `bootstrap/base.py` | Fixed-length circular block resampling |
-| `_samplers_python.py` | `bootstrap/_samplers_python.py` | Pure-Python sampler implementations (Cython `_samplers.pyx` is curated-absent) |
-| `multiple_comparison.py` | `bootstrap/multiple_comparison.py` | Multiple-comparison adjusted intervals (SMM) |
+| `bootstrap/base.py:L1` | Bootstrap base: `conf_int(stat_func, reps)` percentile intervals |
+| `StationaryBootstrap` | `bootstrap/base.py:L1511` | Politis-Romano stationary bootstrap (random block lengths) |
+| `CircularBlockBootstrap` | `bootstrap/base.py:L1367` | Fixed-length circular block resampling |
+| `_samplers_python.py:L1` | `bootstrap/_samplers_python.py:L1` | Pure-Python sampler implementations (Cython `_samplers.pyx` is curated-absent) |
+| `multiple_comparison.py:L1` | `bootstrap/multiple_comparison.py:L1` | Multiple-comparison adjusted intervals (SMM) |
 
 ## Common Patterns
 

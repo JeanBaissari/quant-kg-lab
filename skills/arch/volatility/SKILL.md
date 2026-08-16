@@ -41,10 +41,10 @@ the results object exposes `conditional_volatility`, `params`, and `forecast()`.
 | `VolatilityProcess` | `univariate/volatility.py:L202` | Base class for ARCH-family volatility processes |
 | `GARCH` | `univariate/volatility.py:L970` | GARCH(p,q) volatility process — the workhorse spec |
 | `EGARCH` | `univariate/volatility.py:L2536` | Exponential GARCH — asymmetric leverage effects |
-| `Distribution` | `univariate/distribution.py:L40` | Base class for residual distributions |
+| `Distribution` | `univariate/distribution.py:L482` | Base class for residual distributions |
 | `Normal` | `univariate/distribution.py:L345` | Normal residual distribution |
-| `StudentT` | `univariate/distribution.py` | Student-t residuals — fat tails |
-| `SkewStudentT` | `univariate/distribution.py` | Skewed Student-t — tail + skew jointly |
+| `StudentT` | `univariate/distribution.py:L482` | Student-t residuals — fat tails |
+| `SkewStudentT` | `univariate/distribution.py:L698` | Skewed Student-t — tail + skew jointly |
 | `.aic()` / `.bic()` | `univariate/base.py:L1299` | Information criteria for model selection |
 | `.conditional_volatility()` | `univariate/base.py:L1325` | Fitted conditional volatility series |
 | `.std_resid()` | `univariate/base.py:L1360` | Standardized residuals — whiteness/diagnostics |

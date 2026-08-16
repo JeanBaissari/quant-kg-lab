@@ -26,16 +26,16 @@ The portfolio simulation engine. `Portfolio.from_signals()` takes boolean entry/
 ## Quick Reference
 | Class / Function | Source File | Purpose | Key Params |
 |------------------|-------------|---------|------------|
-| `Portfolio` | `vectorbt/portfolio/base.py` | Core portfolio object with stats, plotting, trades | wraps simulation result |
-| `Portfolio.from_signals()` | `vectorbt/portfolio/base.py` | Simulate from entry/exit boolean arrays | `price`, `entries`, `exits`, `init_cash`, `fees`, `slippage` |
-| `Portfolio.from_orders()` | `vectorbt/portfolio/base.py` | Simulate from explicit order arrays | `price`, `size`, `order_type` |
-| `Orders` | `vectorbt/portfolio/orders.py` | Order record accessor | `.records`, `.count`, `.stats` |
-| `Trades` | `vectorbt/portfolio/trades.py` | Trade record accessor (entry+exit pairs) | `.records`, `.pnl`, `.returns` |
-| `Positions` | `vectorbt/portfolio/trades.py` | Position record accessor | `.records`, `.duration` |
-| `Logs` | `vectorbt/portfolio/logs.py` | Execution log accessor | `.records_readable` |
-| `simulate_from_signals_nb()` | `vectorbt/portfolio/nb.py` | Numba simulation kernel | internal (called by from_signals) |
-| `simulate_from_orders_nb()` | `vectorbt/portfolio/nb.py` | Numba order execution kernel | internal (called by from_orders) |
-| `AccumulationModeT` | `vectorbt/portfolio/enums.py` | Position accumulation mode enum | `Add`, `TargetPercent`, `TargetValue` |
+| `Portfolio` | `vectorbt/portfolio/base.py:L1498` | Core portfolio object with stats, plotting, trades | wraps simulation result |
+| `Portfolio.from_signals()` | `vectorbt/portfolio/base.py:L2048` | Simulate from entry/exit boolean arrays | `price`, `entries`, `exits`, `init_cash`, `fees`, `slippage` |
+| `Portfolio.from_orders()` | `vectorbt/portfolio/base.py:L1617` | Simulate from explicit order arrays | `price`, `size`, `order_type` |
+| `Orders` | `portfolio/orders.py:L164` | Order record accessor | `.records`, `.count`, `.stats` |
+| `Trades` | `portfolio/trades.py:L568` | Trade record accessor (entry+exit pairs) | `.records`, `.pnl`, `.returns` |
+| `Positions` | `portfolio/trades.py:L1471` | Position record accessor | `.records`, `.duration` |
+| `Logs` | `portfolio/logs.py:L178` | Execution log accessor | `.records_readable` |
+| `simulate_from_signals_nb()` | `vectorbt/portfolio/nb.py:L1916` | Numba simulation kernel | internal (called by from_signals) |
+| `simulate_from_orders_nb()` | `vectorbt/portfolio/nb.py:L1353` | Numba order execution kernel | internal (called by from_orders) |
+| `AccumulationModeT` | `portfolio/enums.py:L116` | Position accumulation mode enum | `Add`, `TargetPercent`, `TargetValue` |
 
 ## Key Methods (graph degree centrality)
 
@@ -234,5 +234,5 @@ print(logs.records_readable)
 ## Provenance
 
 - Knowledge graph: vectorbt, 3682 nodes, 9212 edges, 353 communities
-- God nodes: `Orders` (113), `Trades` (108), `nb.py` (101) — public-API hubs only (see GRAPH_SPEC noise filter)
+- God nodes: `Orders` (113), `Trades` (108), `nb.py:L1` (101) — public-API hubs only (see GRAPH_SPEC noise filter)
 - Extraction: graphify @ f9897528f675, backend opencode, description coverage 88%

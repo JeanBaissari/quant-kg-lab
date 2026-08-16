@@ -46,7 +46,7 @@ value you report.
 | `Fixed` | `maskers/_fixed.py:L11` | No-op masker — fixed reference input |
 | `FixedComposite` | `maskers/_fixed_composite.py:L7` | Fixed masker over a composite structure |
 | `joint_clustering()` | `maskers/_composite.py:L133` | Build a clustering for Partition masking from data |
-| `Masker.save()` / `.load()` | `maskers/_masker.py` | Persist maskers (e.g. for a model card) |
+| `Masker.save()` / `.load()` | `maskers/_masker.py:L14` | Persist maskers (e.g. for a model card) |
 
 ## Common Patterns
 

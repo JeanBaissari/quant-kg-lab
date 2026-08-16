@@ -131,5 +131,5 @@ print(cross_val_score(rs.best_estimator_, Xtr, ytr, cv=tscv).mean())
 ## Provenance
 
 - Knowledge graph: scikit-learn, 8450 nodes, 28094 edges, 401 communities
-- God nodes: `BaseSearchCV` (50), `StratifiedShuffleSplit` (31), `_split.py` (30) — public-API hubs only (see GRAPH_SPEC noise filter)
+- God nodes: `BaseSearchCV` (50), `StratifiedShuffleSplit` (31), `_split.py:L1` (30) — public-API hubs only (see GRAPH_SPEC noise filter)
 - Extraction: graphify @ 6f8b95aa2234, backend opencode, description coverage 81%

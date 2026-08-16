@@ -38,12 +38,12 @@ cone programs.
 | `SOC` | `constraints/second_order.py:L25` | Second-order cone constraint `||x|| <= t` |
 | `ExpCone` | `constraints/exponential.py:L30` | Exponential cone (log/exp constraints) |
 | `PSD` | `constraints/psd.py:L25` | Positive-semidefinite constraint on a symmetric matrix variable |
-| `Constraint` | `constraints/constraint.py` | Base class: `dual_value`, violation, and canonicalization hooks |
-| `PowCone` | `constraints/power.py` | Power cone x^α y^(1-α) >= |z| — convex constraints with powers |
-| `Zero` | `constraints/zero.py` | Canonical equality used by the solver reduction layer |
-| `NonNeg` | `constraints/nonpos.py` | Canonical inequality `expr >= 0` |
-| `Constraint.violation()` | `constraints/constraint.py` | Measure of how far a candidate point violates the constraint |
-| `Constraint.dual_value` | `constraints/constraint.py` | Shadow price / KKT multiplier after solve |
+| `Constraint` | `constraints/constraint.py:L27` | Base class: `dual_value`, violation, and canonicalization hooks |
+| `PowCone` | `constraints/power.py:L25` | Power cone x^α y^(1-α) >= |z| — convex constraints with powers |
+| `Zero` | `constraints/zero.py:L23` | Canonical equality used by the solver reduction layer |
+| `NonNeg` | `constraints/nonpos.py:L109` | Canonical inequality `expr >= 0` |
+| `Constraint.violation()` | `constraints/constraint.py:L209` | Measure of how far a candidate point violates the constraint |
+| `Constraint.dual_value` | `constraints/constraint.py:L356` | Shadow price / KKT multiplier after solve |
 
 ## Common Patterns
 

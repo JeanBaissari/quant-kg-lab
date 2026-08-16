@@ -27,8 +27,8 @@ The foundational array computing layer: the `ndarray` (N-dimensional homogeneous
 
 | API | Signature | Description | Graph Node |
 |---|---------|-----------|----------|
-| `array` | `np.array(object, dtype=None)` | Create an ndarray from array-like input | `__init__.py` |
-| `asarray` | `np.asarray(a, dtype=None)` | Convert to ndarray — no copy if input is already ndarray | `_core/_asarray.py` |
+| `array` | `np.array(object, dtype=None)` | Create an ndarray from array-like input | `__init__.py:L1` |
+| `asarray` | `np.asarray(a, dtype=None)` | Convert to ndarray — no copy if input is already ndarray | `_core/_asarray.py:L24` |
 | `arange` | `np.arange([start,] stop[, step])` | Evenly spaced values within a half-open interval | _core/src/multiarray/ctors.c:L3093 |
 | `linspace` | `np.linspace(start, stop, num=50)` | Evenly spaced numbers over a closed interval | _core/function_base.py:L28 |
 | `reshape` | `np.reshape(a, newshape)` | Reshape ndarray without changing data | _core/fromnumeric.py:L224 |
@@ -406,5 +406,5 @@ np.sort(data, order=['x', 'y'])  # sort by x, then y
 ## Provenance
 
 - Knowledge graph: numpy, 8094 nodes, 13271 edges, 670 communities
-- God nodes: `MaskedArray` (151), `core.py` (115), `fromnumeric.py` (92) — public-API hubs only (see GRAPH_SPEC noise filter)
+- God nodes: `MaskedArray` (151), `core.py:L1` (115), `fromnumeric.py:L1` (92) — public-API hubs only (see GRAPH_SPEC noise filter)
 - Extraction: graphify @ ab2199763cb1, backend opencode, description coverage 83%

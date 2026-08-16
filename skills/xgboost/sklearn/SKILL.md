@@ -28,7 +28,7 @@ related_skills:
 
 # XGBoost Scikit-learn API
 
-Extracted from XGBoost knowledge graph. Source: `python-package/xgboost/sklearn.py`.
+Extracted from XGBoost knowledge graph. Source: `python-package/xgboost/sklearn.py:L1`.
 
 ## Quick Reference
 ### Estimators
@@ -202,11 +202,16 @@ model.fit(X_train2, y_train2, xgb_model=model.get_booster())
 
 | Source | Target | Relation | Description |
 |--------|--------|----------|-------------|
-| `XGBClassifierBase` | `sklearn.feature_selection` | **consumer** | Used with RFECV, SelectFromModel, etc. |
-| `XGBRegressorBase` | `backtrader.simulate_portfolio()` | **quant_bridge** | XGBoost regressor feeds predictions into portfolio simulation |
-| `XGBClassifier` | `sklearn.pipeline.Pipeline` | **compatible** | Fully compatible with sklearn Pipeline, FeatureUnion |
-| `XGBClassifier` | `sklearn.model_selection.GridSearchCV` | **compatible** | Accepts sklearn-compatible param grids |
-| `XGBRegressor` | `optuna.Trial` | **optimization_target** | Hyperparameters tuned via optuna |
+| `XGBClassifierBase` | `sklearn.feature_selection` | **consumer** | Used with RFECV, SelectFromModel, etc. | `compat.py:L60` |
+
+| `XGBRegressorBase` | `backtrader.simulate_portfolio()` | **quant_bridge** | XGBoost regressor feeds predictions into portfolio simulation | `compat.py:L63` |
+
+| `XGBClassifier` | `sklearn.pipeline.Pipeline` | **compatible** | Fully compatible with sklearn Pipeline, FeatureUnion | `sklearn.py:L1758` |
+
+| `XGBClassifier` | `sklearn.model_selection.GridSearchCV` | **compatible** | Accepts sklearn-compatible param grids | `sklearn.py:L1758` |
+
+| `XGBRegressor` | `optuna.Trial` | **optimization_target** | Hyperparameters tuned via optuna | `sklearn.py:L2051` |
+
 | `XGBModel.get_booster()` | `xgb.Booster` | **bridge** | Access native API from sklearn wrapper |
 
 ### Optuna Hyperparameter Optimization
@@ -247,11 +252,11 @@ study.optimize(objective, n_trials=100)
 
 ## References
 
-- Source: `python-package/xgboost/sklearn.py` (XGBModel, XGBClassifier, XGBRegressor, XGBRanker, mixins)
+- Source: `python-package/xgboost/sklearn.py:L1` (XGBModel, XGBClassifier, XGBRegressor, XGBRanker, mixins)
 - Graph communities: 0, 1, 23, 37, 79, 83, 124, 132, 149, 187, 370, 371, 394
 
 ## Provenance
 
 - Knowledge graph: xgboost, 1631 nodes, 4318 edges, 80 communities
-- God nodes: `XGBModel` (51), `sklearn.py` (48), `XGBRanker` (19) — public-API hubs only (see GRAPH_SPEC noise filter)
+- God nodes: `XGBModel` (51), `sklearn.py:L1` (48), `XGBRanker` (19) — public-API hubs only (see GRAPH_SPEC noise filter)
 - Extraction: graphify @ 2a4786e61e08, backend opencode, description coverage 84%
