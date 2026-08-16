@@ -7,6 +7,7 @@ license: MIT
 composes: [scikit-learn-model-selection, optuna-study]
 tags: [quantitative-finance, backtesting, walk-forward, time-series, cross-validation]
 related_skills: [scikit-learn-model-selection, optuna-study]
+target_version: cross-lib
 ---
 
 # Walk-Forward Validation for Trading Strategies

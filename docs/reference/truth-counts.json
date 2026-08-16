@@ -172,12 +172,12 @@
   ],
   "nodes": 92154,
   "edges": 229921,
-  "skills": 136,
+  "skills": 137,
   "routers": 27,
   "modules": 97,
-  "playbooks": 12,
+  "playbooks": 13,
   "citations": {
-    "checked": 1147,
+    "checked": 1214,
     "dangling": 0
   },
   "bridges": {

@@ -7,6 +7,7 @@ license: MIT
 composes: [pyportfolioopt-expected-returns, pyportfolioopt-risk-models, pyportfolioopt-efficient-frontier, pyportfolioopt-black-litterman, cvxpy-problems, cvxpy-atoms, riskfolio-portfolio, riskfolio-risk-measures, pandas-core]
 tags: [quantitative-finance, portfolio-optimization, mean-variance, cvxpy, riskfolio, black-litterman, workflow]
 related_skills: [pyportfolioopt-expected-returns, pyportfolioopt-risk-models, pyportfolioopt-efficient-frontier, pyportfolioopt-black-litterman, cvxpy-problems, cvxpy-atoms, riskfolio-portfolio, riskfolio-risk-measures, pandas-core]
+target_version: cross-lib
 ---
 
 # Quant Portfolio Optimization (returns → risk model → frontier → constraints → allocation)

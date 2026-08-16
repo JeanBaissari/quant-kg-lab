@@ -7,6 +7,7 @@ license: MIT
 composes: [scikit-learn-ensemble, scikit-learn-inspection]
 tags: [quantitative-finance, factor-research, feature-importance, shap, permutation-importance]
 related_skills: [scikit-learn-ensemble, scikit-learn-inspection]
+target_version: cross-lib
 ---
 
 # Factor Importance Ranking

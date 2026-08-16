@@ -7,6 +7,7 @@ license: MIT
 composes: [quant-full-pipeline, quant-portfolio-construction, quant-walk-forward-validation]
 tags: [quantitative-finance, machine-learning, strategy, backtesting, workflow]
 related_skills: [quant-full-pipeline, quant-portfolio-construction, quant-walk-forward-validation]
+target_version: cross-lib
 ---
 
 # Quant ML Strategy (model → signal → execution → HPO → sizing)

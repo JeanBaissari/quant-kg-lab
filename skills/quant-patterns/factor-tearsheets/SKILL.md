@@ -7,6 +7,7 @@ license: MIT
 composes: [alphalens-factor-analysis, alphalens-tearsheets, pyfolio-timeseries, pyfolio-tearsheets, pandas-core, quant-factor-research]
 tags: [quantitative-finance, factor-research, alphalens, pyfolio, tearsheets, ic, workflow]
 related_skills: [alphalens-factor-analysis, alphalens-tearsheets, pyfolio-timeseries, pyfolio-tearsheets, pandas-core, quant-factor-research]
+target_version: cross-lib
 ---
 
 # Quant Factor Tearsheets (factor → clean panel → IC/quantile evidence → pyfolio report)

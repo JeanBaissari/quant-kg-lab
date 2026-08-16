@@ -7,6 +7,7 @@ license: MIT
 composes: [empyrical-stats, quantstats-stats, pyfolio-timeseries, backtrader-analyzers, pyportfolioopt-efficient-frontier]
 tags: [quantitative-finance, metrics, conventions, reporting, workflow, harmonization]
 related_skills: [empyrical-stats, quantstats-stats, pyfolio-timeseries, backtrader-analyzers, pyportfolioopt-efficient-frontier]
+target_version: cross-lib
 ---
 
 # Quant Metric Conventions (signs, defaults, annualization)

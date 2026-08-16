@@ -7,6 +7,7 @@ license: MIT
 composes: [shap-explainers, shap-plots, shap-maskers, xgboost-core, lightgbm-core, scikit-learn-ensemble, quant-factor-importance]
 tags: [quantitative-finance, explainability, shap, feature-importance, model-interpretation, workflow]
 related_skills: [shap-explainers, shap-plots, shap-maskers, xgboost-core, lightgbm-core, scikit-learn-ensemble, quant-factor-importance]
+target_version: cross-lib
 ---
 
 # Quant Explainability (model → explainer → global attribution → local drill-down → trust)

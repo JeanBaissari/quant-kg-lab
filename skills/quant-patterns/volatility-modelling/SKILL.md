@@ -7,6 +7,7 @@ license: MIT
 composes: [arch-volatility, arch-forecast, arch-unitroot, statsmodels-tsa, pandas-ts, numpy-core]
 tags: [quantitative-finance, volatility, garch, forecast, risk, workflow]
 related_skills: [arch-volatility, arch-forecast, arch-unitroot, statsmodels-tsa, pandas-ts, numpy-core]
+target_version: cross-lib
 ---
 
 # Quant Volatility Modelling (returns → stationarity → GARCH → forecast → risk)

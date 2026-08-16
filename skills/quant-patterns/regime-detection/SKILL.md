@@ -7,6 +7,7 @@ license: MIT
 composes: [scikit-learn-cluster, scikit-learn-decomposition, scikit-learn-gaussian-process]
 tags: [quantitative-finance, regime-detection, market-regimes, hmm, gmm, clustering]
 related_skills: [scikit-learn-cluster, scikit-learn-decomposition, scikit-learn-gaussian-process]
+target_version: cross-lib
 ---
 
 # Market Regime Detection
