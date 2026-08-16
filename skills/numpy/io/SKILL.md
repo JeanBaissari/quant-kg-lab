@@ -1,6 +1,8 @@
 ---
 name: numpy-io
-description: "Use when reading or writing NumPy arrays — loadtxt/savetxt/genfromtxt text I/O, save/load/savez binary .npy/.npz round-trips, and memmap for large on-disk arrays."
+description: "Use when reading or writing NumPy arrays \u2014 loadtxt/savetxt/genfromtxt\
+  \ text I/O, save/load/savez binary .npy/.npz round-trips, and memmap for large on-disk\
+  \ arrays."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -10,8 +12,8 @@ extraction_date: 2026-08-13
 graph:
   nodes: 8306
   edges: 13483
-  community_count: 670
-  graph_hash: df005c66bd19581a
+  community_count: 619
+  graph_hash: 9ea08f5479cbb7c7
 tags:
 - numpy
 - io

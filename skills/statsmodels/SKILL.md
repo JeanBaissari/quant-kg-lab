@@ -1,6 +1,8 @@
 ---
 name: statsmodels
-description: "Use when working with statsmodels — the statistical-modelling entry point. Router indexing the statsmodels sub-skills; load the sub-skill for the model family you need."
+description: "Use when working with statsmodels \u2014 the statistical-modelling entry\
+  \ point. Router indexing the statsmodels sub-skills; load the sub-skill for the\
+  \ model family you need."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -11,7 +13,7 @@ graph:
   nodes: 11616
   edges: 33529
   community_count: 638
-  graph_hash: 460a1b24977f4557
+  graph_hash: 22b3083cca514704
 tags:
 - statsmodels
 - router

@@ -1,6 +1,8 @@
 ---
 name: numpy-ufuncs
-description: "Use when working with NumPy universal functions — element-wise ufuncs (arithmetic/math/comparison), reduction methods, broadcasting rules, einsum, and error-state configuration."
+description: "Use when working with NumPy universal functions \u2014 element-wise\
+  \ ufuncs (arithmetic/math/comparison), reduction methods, broadcasting rules, einsum,\
+  \ and error-state configuration."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -10,8 +12,8 @@ extraction_date: 2026-08-13
 graph:
   nodes: 8306
   edges: 13483
-  community_count: 670
-  graph_hash: df005c66bd19581a
+  community_count: 619
+  graph_hash: 9ea08f5479cbb7c7
 tags:
 - numpy
 - ufuncs

@@ -4,11 +4,10 @@
 - Corpus is ~19,105 words - fits in a single context window. You may not need a graph.
 
 ## Summary
-- 332 nodes · 512 edges · 15 communities detected
-- Extraction: 86% EXTRACTED · 14% INFERRED · 0% AMBIGUOUS · INFERRED: 73 edges (avg confidence: 0.5)
-- Token cost: 0 input · 0 output
-- Edge kinds: rationale_for: 143 · calls: 115 · method: 110 · uses: 73 · contains: 55 · inherits: 10 · imports_from: 6
-
+- 342 nodes · 522 edges · 16 communities detected
+- Non-singleton communities: 15
+- Extraction: EXTRACTED: 84.1% · INFERRED: 14.0%
+- Edge kinds: calls: 115 · contains: 65 · imports_from: 6 · inherits: 10 · method: 110 · rationale_for: 143 · uses: 73
 
 ## Input Scope
 - Requested: all
@@ -19,17 +18,18 @@
 ## Graph Freshness
 - Built from Git commit: `a6638d2`
 - Compare this hash to `git rev-parse HEAD` before trusting freshness-sensitive graph output.
-## God Nodes (most connected - your core abstractions)
-1. `EfficientFrontier` - 42 edges
-2. `OptimizationError` - 25 edges
-3. `InstantiationError` - 24 edges
-4. `CLA` - 23 edges
-5. `BlackLittermanModel` - 18 edges
-6. `BaseConvexOptimizer` - 17 edges
-7. `EfficientCDaR` - 16 edges
-8. `EfficientCVaR` - 15 edges
-9. `EfficientSemivariance` - 13 edges
-10. `BaseOptimizer` - 11 edges
+## God Nodes
+
+- `EfficientFrontier` (42)
+- `OptimizationError` (25)
+- `InstantiationError` (24)
+- `CLA` (23)
+- `BlackLittermanModel` (18)
+- `BaseConvexOptimizer` (17)
+- `EfficientCDaR` (16)
+- `EfficientCVaR` (15)
+- `__init__.py` (15)
+- `risk_models.py` (14)
 
 ## Surprising Connections (you probably didn't know these)
 - `BaseConvexOptimizer` --uses--> `InstantiationError`  [INFERRED]

@@ -1,6 +1,7 @@
 ---
 name: arch-unitroot
-description: "Use when testing for unit roots and stationarity with arch — ADF, Phillips-Perron, KPSS, and cointegration tests."
+description: "Use when testing for unit roots and stationarity with arch \u2014 ADF,\
+  \ Phillips-Perron, KPSS, and cointegration tests."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -11,7 +12,7 @@ graph:
   nodes: 1367
   edges: 3900
   community_count: 135
-  graph_hash: 5b23bf9efa5ee1d1
+  graph_hash: e3f8bcd939a66a6d
 tags:
 - arch
 - unitroot

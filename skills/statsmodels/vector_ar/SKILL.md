@@ -1,6 +1,7 @@
 ---
 name: statsmodels-vector-ar
-description: "Use when modelling multivariate time series with statsmodels — VAR/VECM, impulse-response analysis, and causality/whiteness tests."
+description: "Use when modelling multivariate time series with statsmodels \u2014\
+  \ VAR/VECM, impulse-response analysis, and causality/whiteness tests."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -11,7 +12,7 @@ graph:
   nodes: 11616
   edges: 33529
   community_count: 638
-  graph_hash: 460a1b24977f4557
+  graph_hash: 22b3083cca514704
 tags:
 - statsmodels
 - vector-ar

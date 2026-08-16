@@ -293,7 +293,7 @@ def graph_info(lib):
     info = {
         "nodes": len(data.get("nodes", [])),
         "edges": len(data.get("links", [])),
-        "communities": len(data.get("graph", {}).get("community_labels", [])),
+        "communities": len({nd.get("community") for nd in data.get("nodes", []) if nd.get("community") is not None}),  # GRAPH_SPEC §7 distinct non-null (QKG_068)
         "labels": {n.get("label", "") for n in data.get("nodes", [])},
         "path": g,
     }

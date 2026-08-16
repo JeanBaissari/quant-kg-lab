@@ -6,10 +6,9 @@
 
 ## Summary
 - 1631 nodes · 4318 edges · 80 communities detected
-- Extraction: 56% EXTRACTED · 44% INFERRED · 0% AMBIGUOUS · INFERRED: 1920 edges (avg confidence: 0.5)
-- Token cost: 0 input · 0 output
-- Edge kinds: uses: 1920 · rationale_for: 597 · calls: 584 · contains: 560 · method: 370 · imports_from: 189 · inherits: 98
-
+- Non-singleton communities: 80
+- Extraction: EXTRACTED: 55.5% · INFERRED: 44.5%
+- Edge kinds: calls: 584 · contains: 560 · imports_from: 189 · inherits: 98 · method: 370 · rationale_for: 597 · uses: 1920
 
 ## Input Scope
 - Requested: all
@@ -20,17 +19,18 @@
 ## Graph Freshness
 - Built from Git commit: `2a4786e`
 - Compare this hash to `git rev-parse HEAD` before trusting freshness-sensitive graph output.
-## God Nodes (most connected - your core abstractions)
-1. `Categories` - 179 edges
-2. `DMatrix` - 161 edges
-3. `Objective` - 146 edges
-4. `Booster` - 144 edges
-5. `TransformedDf` - 133 edges
-6. `ArrowTransformed` - 105 edges
-7. `PandasTransformed` - 105 edges
-8. `XGBoostError` - 102 edges
-9. `TreeObjective` - 100 edges
-10. `data.py` - 94 edges
+## God Nodes
+
+- `Categories` (179)
+- `DMatrix` (161)
+- `Objective` (146)
+- `Booster` (144)
+- `TransformedDf` (133)
+- `ArrowTransformed` (105)
+- `PandasTransformed` (105)
+- `XGBoostError` (102)
+- `TreeObjective` (100)
+- `data.py` (94)
 
 ## Surprising Connections (you probably didn't know these)
 - `XGBoost Experimental Federated Learning related API.` --uses--> `RabitTracker`  [INFERRED]

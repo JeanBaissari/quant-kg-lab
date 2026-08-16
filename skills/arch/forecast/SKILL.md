@@ -1,6 +1,8 @@
 ---
 name: arch-forecast
-description: "Use when forecasting with arch models — forecast()/rolling_forecast, variance vs mean forecasts, analytic/simulation/bootstrap methods, and ARCHModelForecast result objects."
+description: "Use when forecasting with arch models \u2014 forecast()/rolling_forecast,\
+  \ variance vs mean forecasts, analytic/simulation/bootstrap methods, and ARCHModelForecast\
+  \ result objects."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -11,7 +13,7 @@ graph:
   nodes: 1367
   edges: 3900
   community_count: 135
-  graph_hash: 5b23bf9efa5ee1d1
+  graph_hash: e3f8bcd939a66a6d
 tags:
 - arch
 - forecast

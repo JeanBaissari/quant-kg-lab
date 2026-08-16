@@ -1,7 +1,7 @@
 ---
 name: scikit-learn-covariance
-description: Use when estimating return covariance for portfolio risk — empirical, shrunk
-  (Ledoit-Wolf), and robust (MCD) estimators in sklearn.covariance.
+description: "Use when estimating return covariance for portfolio risk \u2014 empirical,\
+  \ shrunk (Ledoit-Wolf), and robust (MCD) estimators in sklearn.covariance."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -11,8 +11,8 @@ extraction_date: 2026-08-06
 graph:
   nodes: 8450
   edges: 28094
-  community_count: 401
-  graph_hash: fc25a6d284e9a3ed
+  community_count: 367
+  graph_hash: 75a69cbf83913826
 tags:
 - scikit-learn
 - machine-learning

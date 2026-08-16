@@ -5,11 +5,10 @@
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 3682 nodes · 9212 edges · 327 communities detected
-- Extraction: 49% EXTRACTED · 51% INFERRED · 0% AMBIGUOUS · INFERRED: 4731 edges (avg confidence: 0.5)
-- Token cost: 0 input · 0 output
-- Edge kinds: uses: 4731 · rationale_for: 1638 · contains: 1057 · method: 856 · calls: 779 · inherits: 150 · imports_from: 1
-
+- 3682 nodes · 9212 edges · 353 communities detected
+- Non-singleton communities: 340
+- Extraction: EXTRACTED: 48.6% · INFERRED: 51.4%
+- Edge kinds: calls: 779 · contains: 1057 · imports_from: 1 · inherits: 150 · method: 856 · rationale_for: 1638 · uses: 4731
 
 ## Input Scope
 - Requested: all
@@ -20,17 +19,18 @@
 ## Graph Freshness
 - Built from Git commit: `f989752`
 - Compare this hash to `git rev-parse HEAD` before trusting freshness-sensitive graph output.
-## God Nodes (most connected - your core abstractions)
-1. `Config` - 579 edges
-2. `ArrayWrapper` - 535 edges
-3. `Wrapping` - 426 edges
-4. `PlotsBuilderMixin` - 292 edges
-5. `StatsBuilderMixin` - 292 edges
-6. `MappedArray` - 274 edges
-7. `Configured` - 247 edges
-8. `Drawdowns` - 242 edges
-9. `Ranges` - 186 edges
-10. `RepEval` - 184 edges
+## God Nodes
+
+- `Config` (579)
+- `ArrayWrapper` (535)
+- `Wrapping` (426)
+- `PlotsBuilderMixin` (292)
+- `StatsBuilderMixin` (292)
+- `MappedArray` (274)
+- `Configured` (247)
+- `Drawdowns` (242)
+- `Ranges` (186)
+- `RepEval` (184)
 
 ## Surprising Connections (you probably didn't know these)
 - `Class that exposes methods to group columns.      `group_by` can be:      * bool` --uses--> `Configured`  [INFERRED]

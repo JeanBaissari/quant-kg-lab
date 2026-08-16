@@ -158,10 +158,16 @@ library's `GRAPH_REPORT.md`.
 
 ## 7. Canonical metrics (resolve prior ambiguities)
 
-- **Community count** = number of **distinct `community` IDs assigned to retained nodes**
-  (e.g. pandas = 1,986). The lower figure some `GRAPH_REPORT.md` headers show (pandas "1771")
-  counts only non-singleton communities; report BOTH, but `community_count` in skill frontmatter
-  and `graphs.lock` uses the distinct-ID definition.
+- **Community count** = number of **distinct, non-null `community` IDs assigned to retained
+  nodes** (nodes with `community: null` — e.g. curated manifest entries — are excluded; e.g.
+  pandas = 396). `community_count` in skill frontmatter uses this definition. Nodes in
+  `.graphify_labels.json` / `graph.community_labels` MUST be a bijection with retained
+  communities: one key per live `community` ID, zero stale keys (a stale key is one whose
+  community has no retained nodes). Enforced by `scripts/sync_skills.py` (QKG_068).
+  GRAPH_REPORTs report BOTH the distinct count and the non-singleton count.
+- **Topology signature** — the leading `n=<N>;e=<E>` of `topology_signature` MUST equal
+  `len(nodes)` / `len(links)`; prune and curation passes MUST re-stamp it
+  (`scripts/restamp_graphs.py`), leaving the `<feature-hints>` tail untouched (QKG_068).
 - **Description coverage** = `described_code_nodes / retained_code_nodes` using the semantic
   definition in §3 (stubs excluded).
 

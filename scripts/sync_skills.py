@@ -25,7 +25,7 @@ def graph_stats(lib):
         "graph_hash": h,
         "nodes": len(g["nodes"]),
         "edges": len(g["links"]),
-        "community_count": len(g.get("graph", {}).get("community_labels", {})),
+        "community_count": len({nd.get("community") for nd in g.get("nodes", []) if nd.get("community") is not None}),  # GRAPH_SPEC §7: distinct non-null IDs (QKG_068)
     }
 
 

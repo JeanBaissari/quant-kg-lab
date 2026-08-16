@@ -1,8 +1,8 @@
 ---
 name: scikit-learn-inspection
-description: Use when explaining fitted models in quant pipelines — permutation importance,
-  partial dependence, decision boundaries, and prediction-vs-decision consistency checks
-  via sklearn.inspection.
+description: "Use when explaining fitted models in quant pipelines \u2014 permutation\
+  \ importance, partial dependence, decision boundaries, and prediction-vs-decision\
+  \ consistency checks via sklearn.inspection."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -12,8 +12,8 @@ extraction_date: 2026-08-06
 graph:
   nodes: 8450
   edges: 28094
-  community_count: 401
-  graph_hash: fc25a6d284e9a3ed
+  community_count: 367
+  graph_hash: 75a69cbf83913826
 tags:
 - scikit-learn
 - machine-learning

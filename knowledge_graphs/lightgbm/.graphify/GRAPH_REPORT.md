@@ -4,11 +4,10 @@
 - Corpus is ~42,094 words - fits in a single context window. You may not need a graph.
 
 ## Summary
-- 594 nodes · 2099 edges · 17 communities detected
-- Extraction: 51% EXTRACTED · 49% INFERRED · 0% AMBIGUOUS · INFERRED: 1026 edges (avg confidence: 0.5)
-- Token cost: 0 input · 0 output
-- Edge kinds: uses: 1026 · calls: 459 · rationale_for: 240 · method: 209 · contains: 122 · imports_from: 24 · inherits: 18 · imports: 1
-
+- 593 nodes · 2029 edges · 17 communities detected
+- Non-singleton communities: 17
+- Extraction: EXTRACTED: 49.4% · INFERRED: 50.6%
+- Edge kinds: calls: 391 · contains: 121 · imports: 1 · imports_from: 24 · inherits: 18 · method: 209 · rationale_for: 239 · uses: 1026
 
 ## Input Scope
 - Requested: all
@@ -19,17 +18,18 @@
 ## Graph Freshness
 - Built from Git commit: `f9bf8d1`
 - Compare this hash to `git rev-parse HEAD` before trusting freshness-sensitive graph output.
-## God Nodes (most connected - your core abstractions)
-1. `pd_DataFrame` - 231 edges
-2. `pd_Series` - 173 edges
-3. `pd_CategoricalDtype` - 142 edges
-4. `Booster` - 138 edges
-5. `Dataset` - 120 edges
-6. `LightGBMError` - 118 edges
-7. `LGBMModel` - 72 edges
-8. `_safe_call()` - 70 edges
-9. `LGBMDeprecationWarning` - 57 edges
-10. `LGBMClassifier` - 49 edges
+## God Nodes
+
+- `pd_DataFrame` (231)
+- `pd_Series` (173)
+- `pd_CategoricalDtype` (142)
+- `Booster` (138)
+- `Dataset` (120)
+- `LightGBMError` (117)
+- `LGBMModel` (72)
+- `basic.py` (66)
+- `LGBMDeprecationWarning` (57)
+- `LGBMClassifier` (49)
 
 ## Surprising Connections (you probably didn't know these)
 - `Booster` --uses--> `pd_CategoricalDtype`  [INFERRED]

@@ -1,6 +1,7 @@
 ---
 name: catboost-pool
-description: "Use when building catboost data containers — Pool with cat_features/text_features/group_id/pairs, and the from_dataframe/from_numpy constructors."
+description: "Use when building catboost data containers \u2014 Pool with cat_features/text_features/group_id/pairs,\
+  \ and the from_dataframe/from_numpy constructors."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -10,7 +11,7 @@ extraction_date: 2026-08-13
 graph:
   nodes: 793
   edges: 1569
-  community_count: 38
+  community_count: 52
   graph_hash: 59f3c1631da37620
 tags:
 - catboost

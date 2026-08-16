@@ -1,6 +1,7 @@
 ---
 name: pandas-groupby
-description: "Use when doing split-apply-combine with pandas — DataFrameGroupBy, agg/apply/transform, rolling group statistics, and resampling workflows."
+description: "Use when doing split-apply-combine with pandas \u2014 DataFrameGroupBy,\
+  \ agg/apply/transform, rolling group statistics, and resampling workflows."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -10,8 +11,8 @@ extraction_date: 2026-08-12
 graph:
   nodes: 11368
   edges: 39913
-  community_count: 410
-  graph_hash: 4d026ee98025ac0c
+  community_count: 396
+  graph_hash: e0d7084604dec6e0
 tags:
 - pandas
 - groupby

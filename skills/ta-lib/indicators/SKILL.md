@@ -12,7 +12,7 @@ graph:
   nodes: 381
   edges: 379
   community_count: 174
-  graph_hash: 1cdcccf662bedb05
+  graph_hash: 37e909fa24666c66
 tags:
 - ta-lib
 - indicators

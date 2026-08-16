@@ -1,6 +1,8 @@
 ---
 name: ta
-description: "Use when computing technical indicators with ta — pure-Python pandas-native indicators (trend/momentum/volatility/volume), add_all_ta_features, and the ta-lib alternative without the system C library."
+description: "Use when computing technical indicators with ta \u2014 pure-Python pandas-native\
+  \ indicators (trend/momentum/volatility/volume), add_all_ta_features, and the ta-lib\
+  \ alternative without the system C library."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -11,7 +13,7 @@ graph:
   nodes: 538
   edges: 1208
   community_count: 42
-  graph_hash: 212d8bb84955e97d
+  graph_hash: cbe70e45f62aaff1
 tags:
 - ta
 - technical-analysis

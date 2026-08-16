@@ -2,7 +2,7 @@
 
 # Quality Gate — darts
 
-Graph: `knowledge_graphs/darts/.graphify/graph.json` · GRAPH_SPEC §5 · generated 2026-08-15
+Graph: `knowledge_graphs/darts/.graphify/graph.json` · GRAPH_SPEC §5 · generated 2026-08-16
 
 | criterion | status | counts |
 |---|---|---|

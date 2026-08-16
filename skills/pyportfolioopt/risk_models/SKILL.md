@@ -12,7 +12,7 @@ graph:
   nodes: 342
   edges: 522
   community_count: 16
-  graph_hash: 50f7a3628b7218f1
+  graph_hash: e238a0e0014fb438
 tags:
 - pyportfolioopt
 - risk

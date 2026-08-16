@@ -1,6 +1,7 @@
 ---
 name: shap
-description: "Use when working with shap — the model-explainability entry point. Router indexing the shap sub-skills; load the sub-skill for the layer you need."
+description: "Use when working with shap \u2014 the model-explainability entry point.\
+  \ Router indexing the shap sub-skills; load the sub-skill for the layer you need."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -11,7 +12,7 @@ graph:
   nodes: 1277
   edges: 1752
   community_count: 108
-  graph_hash: bc0cb8c9a6ed8ed2
+  graph_hash: 56d741979f6b195b
 tags:
 - shap
 - router

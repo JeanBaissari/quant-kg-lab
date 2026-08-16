@@ -1,6 +1,7 @@
 ---
 name: shap-explainers
-description: "Use when computing SHAP values with shap — Explainer (Tree/Linear/Kernel/Deep), Explanation objects, and maskers."
+description: "Use when computing SHAP values with shap \u2014 Explainer (Tree/Linear/Kernel/Deep),\
+  \ Explanation objects, and maskers."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -11,7 +12,7 @@ graph:
   nodes: 1277
   edges: 1752
   community_count: 108
-  graph_hash: bc0cb8c9a6ed8ed2
+  graph_hash: 56d741979f6b195b
 tags:
 - shap
 - explainability

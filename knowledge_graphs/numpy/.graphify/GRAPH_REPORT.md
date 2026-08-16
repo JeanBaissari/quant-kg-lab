@@ -4,11 +4,10 @@
 - Large corpus: 448 files · ~1,685,298 words. Semantic extraction will be expensive (many Claude tokens). Consider running on a subfolder, or use --no-semantic to run AST-only.
 
 ## Summary
-- 8345 nodes · 13507 edges · 526 communities detected
-- Extraction: 95% EXTRACTED · 5% INFERRED · 0% AMBIGUOUS · INFERRED: 718 edges (avg confidence: 0.5)
-- Token cost: 0 input · 0 output
-- Edge kinds: contains: 5238 · calls: 4777 · rationale_for: 1718 · method: 923 · uses: 718 · inherits: 99 · imports_from: 24 · imports: 10
-
+- 8306 nodes · 13483 edges · 619 communities detected
+- Non-singleton communities: 595
+- Extraction: EXTRACTED: 93.2% · INFERRED: 5.3%
+- Edge kinds: calls: 4748 · contains: 5335 · imports: 10 · imports_from: 24 · inherits: 97 · method: 881 · rationale_for: 1677 · uses: 711
 
 ## Input Scope
 - Requested: all
@@ -19,17 +18,18 @@
 ## Graph Freshness
 - Built from Git commit: `ab21997`
 - Compare this hash to `git rev-parse HEAD` before trusting freshness-sensitive graph output.
-## God Nodes (most connected - your core abstractions)
-1. `ABCPolyBase` - 251 edges
-2. `MaskedArray` - 151 edges
-3. `container` - 63 edges
-4. `chararray` - 60 edges
-5. `matrix` - 58 edges
-6. `Expr` - 55 edges
-7. `AxisConcatenator` - 52 edges
-8. `MAError` - 49 edges
-9. `getmask()` - 44 edges
-10. `DataSource` - 42 edges
+## God Nodes
+
+- `ABCPolyBase` (251)
+- `__init__.py` (221)
+- `MaskedArray` (151)
+- `f2c_d_lapack.c` (124)
+- `f2c_s_lapack.c` (124)
+- `auxfuncs.py` (117)
+- `core.py` (115)
+- `umath_linalg.cpp` (101)
+- `fromnumeric.py` (92)
+- `multiarraymodule.c` (92)
 
 ## Surprising Connections (you probably didn't know these)
 - `Return the data pointer cast to a particular c-types object.         For example` --uses--> `DTypePromotionError`  [INFERRED]

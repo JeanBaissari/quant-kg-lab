@@ -4,11 +4,10 @@
 - Large corpus: 835 files · ~2,140,474 words. Semantic extraction will be expensive (many Claude tokens). Consider running on a subfolder, or use --no-semantic to run AST-only.
 
 ## Summary
-- 14193 nodes · 23606 edges · 811 communities detected
-- Extraction: 80% EXTRACTED · 20% INFERRED · 0% AMBIGUOUS · INFERRED: 4745 edges (avg confidence: 0.5)
-- Token cost: 0 input · 0 output
-- Edge kinds: contains: 5601 · calls: 5027 · uses: 4745 · method: 4084 · rationale_for: 3698 · inherits: 432 · imports_from: 16 · imports: 3
-
+- 14071 nodes · 23466 edges · 1061 communities detected
+- Non-singleton communities: 1042
+- Extraction: EXTRACTED: 79.8% · INFERRED: 20.2%
+- Edge kinds: calls: 5002 · contains: 5521 · imports: 3 · imports_from: 16 · inherits: 432 · method: 4082 · rationale_for: 3674 · uses: 4736
 
 ## Input Scope
 - Requested: all
@@ -19,17 +18,18 @@
 ## Graph Freshness
 - Built from Git commit: `0514ef9`
 - Compare this hash to `git rev-parse HEAD` before trusting freshness-sensitive graph output.
-## God Nodes (most connected - your core abstractions)
-1. `CensoredData` - 342 edges
-2. `FitError` - 320 edges
-3. `rv_continuous` - 278 edges
-4. `LowLevelCallable` - 250 edges
-5. `UnivariateDistribution` - 196 edges
-6. `sparray` - 178 edges
-7. `spmatrix` - 168 edges
-8. `MapWrapper` - 154 edges
-9. `FunctionDoc` - 152 edges
-10. `OptimizeResult` - 135 edges
+## God Nodes
+
+- `CensoredData` (342)
+- `FitError` (320)
+- `rv_continuous` (278)
+- `cython_special_wrappers.cpp` (265)
+- `LowLevelCallable` (250)
+- `UnivariateDistribution` (196)
+- `sparray` (178)
+- `spmatrix` (168)
+- `MapWrapper` (154)
+- `FunctionDoc` (152)
 
 ## Surprising Connections (you probably didn't know these)
 - `============================================== Discrete Fourier transforms (:mod` --uses--> `PytestTester`  [INFERRED]

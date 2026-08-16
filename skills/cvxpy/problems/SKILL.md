@@ -12,7 +12,7 @@ graph:
   nodes: 6380
   edges: 16515
   community_count: 297
-  graph_hash: 844b4634a60894f8
+  graph_hash: e985870ca0f4d020
 tags:
 - cvxpy
 - problems

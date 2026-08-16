@@ -11,8 +11,8 @@ extraction_date: 2026-07-29
 graph:
   nodes: 11368
   edges: 39913
-  community_count: 410
-  graph_hash: 4d026ee98025ac0c
+  community_count: 396
+  graph_hash: e0d7084604dec6e0
 tags:
 - pandas
 - core

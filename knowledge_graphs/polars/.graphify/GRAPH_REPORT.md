@@ -5,11 +5,10 @@
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 5296 nodes · 16925 edges · 451 communities detected
-- Extraction: 39% EXTRACTED · 61% INFERRED · 0% AMBIGUOUS · INFERRED: 10321 edges (avg confidence: 0.5)
-- Token cost: 0 input · 0 output
-- Edge kinds: uses: 10321 · rationale_for: 2208 · method: 1965 · calls: 1236 · contains: 852 · imports_from: 179 · inherits: 151 · imports: 13
-
+- 5296 nodes · 16925 edges · 485 communities detected
+- Non-singleton communities: 453
+- Extraction: EXTRACTED: 39.0% · INFERRED: 61.0%
+- Edge kinds: calls: 1236 · contains: 852 · imports: 13 · imports_from: 179 · inherits: 151 · method: 1965 · rationale_for: 2208 · uses: 10321
 
 ## Input Scope
 - Requested: all
@@ -20,17 +19,18 @@
 ## Graph Freshness
 - Built from Git commit: `1f779c9`
 - Compare this hash to `git rev-parse HEAD` before trusting freshness-sensitive graph output.
-## God Nodes (most connected - your core abstractions)
-1. `CompatLevel` - 532 edges
-2. `sphinx_accessor` - 505 edges
-3. `ModuleUpgradeRequiredError` - 458 edges
-4. `ShapeError` - 436 edges
-5. `QueryOptFlags` - 367 edges
-6. `ComputeError` - 316 edges
-7. `Schema` - 311 edges
-8. `Series` - 289 edges
-9. `ExprStringNameSpace` - 281 edges
-10. `ExprDateTimeNameSpace` - 278 edges
+## God Nodes
+
+- `CompatLevel` (532)
+- `sphinx_accessor` (505)
+- `ModuleUpgradeRequiredError` (458)
+- `ShapeError` (436)
+- `QueryOptFlags` (367)
+- `ComputeError` (316)
+- `Schema` (311)
+- `Series` (289)
+- `ExprStringNameSpace` (281)
+- `ExprDateTimeNameSpace` (278)
 
 ## Surprising Connections (you probably didn't know these)
 - `Configure polars; offers options for table formatting and more.      Notes     -` --uses--> `GPUEngine`  [INFERRED]

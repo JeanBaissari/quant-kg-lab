@@ -5,11 +5,10 @@
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 4059 nodes · 11136 edges · 135 communities detected
-- Extraction: 47% EXTRACTED · 53% INFERRED · 0% AMBIGUOUS · INFERRED: 5912 edges (avg confidence: 0.5)
-- Token cost: 0 input · 0 output
-- Edge kinds: uses: 5912 · method: 1478 · contains: 1187 · rationale_for: 1163 · calls: 916 · inherits: 466 · imports_from: 11 · imports: 3
-
+- 4067 nodes · 11144 edges · 156 communities detected
+- Non-singleton communities: 140
+- Extraction: EXTRACTED: 46.9% · INFERRED: 53.1%
+- Edge kinds: calls: 916 · contains: 1195 · imports: 3 · imports_from: 11 · inherits: 466 · method: 1478 · rationale_for: 1163 · uses: 5912
 
 ## Input Scope
 - Requested: all
@@ -20,17 +19,18 @@
 ## Graph Freshness
 - Built from Git commit: `47bdf54`
 - Compare this hash to `git rev-parse HEAD` before trusting freshness-sensitive graph output.
-## God Nodes (most connected - your core abstractions)
-1. `SymbolicRandomVariable` - 339 edges
-2. `DictToArrayBijection` - 319 edges
-3. `MeasurableOp` - 234 edges
-4. `MinibatchOp` - 206 edges
-5. `Distribution` - 186 edges
-6. `Continuous` - 170 edges
-7. `MultiTrace` - 168 edges
-8. `RaveledVars` - 150 edges
-9. `MeasurableElemwise` - 137 edges
-10. `BlockModelAccessError` - 122 edges
+## God Nodes
+
+- `SymbolicRandomVariable` (339)
+- `DictToArrayBijection` (319)
+- `MeasurableOp` (234)
+- `MinibatchOp` (206)
+- `Distribution` (186)
+- `Continuous` (170)
+- `MultiTrace` (168)
+- `RaveledVars` (150)
+- `MeasurableElemwise` (137)
+- `BlockModelAccessError` (122)
 
 ## Surprising Connections (you probably didn't know these)
 - `Bundle warnings, convergence stats and metadata of a sampling run.` --uses--> `SamplerWarning`  [INFERRED]

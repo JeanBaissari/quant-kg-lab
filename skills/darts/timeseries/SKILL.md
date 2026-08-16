@@ -1,6 +1,8 @@
 ---
 name: darts-timeseries
-description: "Use when working with darts TimeSeries containers and forecasting metrics — series construction/alignment, frequency handling, imputation, and the metric family (MAPE/SMAPE/MASE/RMSE/quantile)."
+description: "Use when working with darts TimeSeries containers and forecasting metrics\
+  \ \u2014 series construction/alignment, frequency handling, imputation, and the\
+  \ metric family (MAPE/SMAPE/MASE/RMSE/quantile)."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -11,7 +13,7 @@ graph:
   nodes: 3954
   edges: 8240
   community_count: 245
-  graph_hash: 4deb706235a6ae4a
+  graph_hash: 98a2e69ac67ca67f
 tags:
 - darts
 - timeseries

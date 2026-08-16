@@ -5,11 +5,10 @@
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1413 nodes · 2121 edges · 133 communities detected
-- Extraction: 89% EXTRACTED · 11% INFERRED · 0% AMBIGUOUS · INFERRED: 231 edges (avg confidence: 0.5)
-- Token cost: 0 input · 0 output
-- Edge kinds: rationale_for: 494 · contains: 455 · calls: 413 · method: 349 · uses: 231 · imports_from: 116 · inherits: 63
-
+- 1277 nodes · 1752 edges · 108 communities detected
+- Non-singleton communities: 100
+- Extraction: EXTRACTED: 88.1% · INFERRED: 11.9%
+- Edge kinds: calls: 311 · contains: 317 · imports_from: 116 · inherits: 63 · method: 335 · rationale_for: 401 · uses: 209
 
 ## Input Scope
 - Requested: all
@@ -20,17 +19,18 @@
 ## Graph Freshness
 - Built from Git commit: `df974a1`
 - Compare this hash to `git rev-parse HEAD` before trusting freshness-sensitive graph output.
-## God Nodes (most connected - your core abstractions)
-1. `Explainer` - 95 edges
-2. `Masker` - 73 edges
-3. `Explanation` - 48 edges
-4. `Model` - 38 edges
-5. `__run_measure()` - 31 edges
-6. `TreeExplainer` - 20 edges
-7. `KerasWrap` - 17 edges
-8. `TFDeep` - 17 edges
-9. `KernelExplainer` - 17 edges
-10. `Text` - 16 edges
+## God Nodes
+
+- `Explainer` (95)
+- `Masker` (73)
+- `Explanation` (48)
+- `Model` (38)
+- `Explainer` (35)
+- `__init__.py` (31)
+- `_exceptions.py` (29)
+- `_explanation.py` (26)
+- `_tree.py` (26)
+- `_legacy.py` (25)
 
 ## Surprising Connections (you probably didn't know these)
 - `UnsupportedModule` --uses--> `Cohorts`  [INFERRED]

@@ -1,6 +1,8 @@
 ---
 name: darts
-description: "Use when working with darts — the forecasting entry point. Router indexing the darts sub-skills; load the sub-skill for the forecasting stage you need."
+description: "Use when working with darts \u2014 the forecasting entry point. Router\
+  \ indexing the darts sub-skills; load the sub-skill for the forecasting stage you\
+  \ need."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -11,7 +13,7 @@ graph:
   nodes: 3954
   edges: 8240
   community_count: 245
-  graph_hash: 4deb706235a6ae4a
+  graph_hash: 98a2e69ac67ca67f
 tags:
 - darts
 - router

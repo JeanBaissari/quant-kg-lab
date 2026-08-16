@@ -5,10 +5,9 @@
 
 ## Summary
 - 180 nodes · 258 edges · 23 communities detected
-- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
-- Token cost: 0 input · 0 output
-- Edge kinds: contains: 94 · calls: 78 · rationale_for: 78 · imports_from: 7 · inherits: 1
-
+- Non-singleton communities: 23
+- Extraction: EXTRACTED: 100.0%
+- Edge kinds: calls: 78 · contains: 94 · imports_from: 7 · inherits: 1 · rationale_for: 78
 
 ## Input Scope
 - Requested: all
@@ -19,17 +18,18 @@
 ## Graph Freshness
 - Built from Git commit: `40f61b4`
 - Compare this hash to `git rev-parse HEAD` before trusting freshness-sensitive graph output.
-## God Nodes (most connected - your core abstractions)
-1. `render()` - 9 edges
-2. `get_versions()` - 8 edges
-3. `annualization_factor()` - 8 edges
-4. `_aligned_series()` - 8 edges
-5. `_adjust_returns()` - 7 edges
-6. `annual_return()` - 7 edges
-7. `alpha_aligned()` - 7 edges
-8. `default_returns_func()` - 7 edges
-9. `NotThisMethod` - 6 edges
-10. `gpd_risk_estimates_aligned()` - 6 edges
+## God Nodes
+
+- `stats.py` (58)
+- `_version.py` (20)
+- `utils.py` (20)
+- `render()` (9)
+- `_aligned_series()` (8)
+- `annualization_factor()` (8)
+- `get_versions()` (8)
+- `_adjust_returns()` (7)
+- `alpha_aligned()` (7)
+- `annual_return()` (7)
 
 ## Surprising Connections (you probably didn't know these)
 - `alpha_aligned()` --calls--> `_adjust_returns()`  [EXTRACTED]

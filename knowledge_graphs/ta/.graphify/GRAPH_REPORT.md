@@ -4,11 +4,10 @@
 - Corpus is ~16,991 words - fits in a single context window. You may not need a graph.
 
 ## Summary
-- 537 nodes · 1207 edges · 42 communities detected
-- Extraction: 55% EXTRACTED · 45% INFERRED · 0% AMBIGUOUS · INFERRED: 549 edges (avg confidence: 0.5)
-- Token cost: 0 input · 0 output
-- Edge kinds: uses: 549 · rationale_for: 225 · method: 170 · contains: 133 · calls: 87 · inherits: 43
-
+- 538 nodes · 1208 edges · 42 communities detected
+- Non-singleton communities: 42
+- Extraction: EXTRACTED: 54.5% · INFERRED: 45.4%
+- Edge kinds: calls: 87 · contains: 134 · inherits: 43 · method: 170 · rationale_for: 225 · uses: 549
 
 ## Input Scope
 - Requested: all
@@ -19,17 +18,18 @@
 ## Graph Freshness
 - Built from Git commit: `a890410`
 - Compare this hash to `git rev-parse HEAD` before trusting freshness-sensitive graph output.
-## God Nodes (most connected - your core abstractions)
-1. `IndicatorMixin` - 259 edges
-2. `.. module:: wrapper    :synopsis: Wrapper of Indicators.  .. moduleauthor:: Dari` - 43 edges
-3. `Add volume technical analysis features to dataframe.      Args:         df (pand` - 43 edges
-4. `Add volatility technical analysis features to dataframe.      Args:         df (` - 43 edges
-5. `Add trend technical analysis features to dataframe.      Args:         df (panda` - 43 edges
-6. `Add trend technical analysis features to dataframe.      Args:         df (panda` - 43 edges
-7. `Add others analysis features to dataframe.      Args:         df (pandas.core.fr` - 43 edges
-8. `Add all technical analysis features to dataframe.      Args:         df (pandas.` - 43 edges
-9. `BollingerBands` - 27 edges
-10. `KeltnerChannel` - 27 edges
+## God Nodes
+
+- `IndicatorMixin` (259)
+- `trend.py` (44)
+- `IndicatorMixin` (43)
+- `.. module:: wrapper    :synopsis: Wrapper of Indicators.  .. moduleauthor:: Dari` (43)
+- `Add volatility technical analysis features to dataframe.      Args:         df (` (43)
+- `Add trend technical analysis features to dataframe.      Args:         df (panda` (43)
+- `Add trend technical analysis features to dataframe.      Args:         df (panda` (43)
+- `Add others analysis features to dataframe.      Args:         df (pandas.core.fr` (43)
+- `Add all technical analysis features to dataframe.      Args:         df (pandas.` (43)
+- `Add volume technical analysis features to dataframe.      Args:         df (pand` (43)
 
 ## Surprising Connections (you probably didn't know these)
 - `.. module:: momentum    :synopsis: Momentum Indicators.  .. moduleauthor:: Dario` --uses--> `IndicatorMixin`  [INFERRED]

@@ -4,11 +4,10 @@
 - Corpus is ~23,154 words - fits in a single context window. You may not need a graph.
 
 ## Summary
-- 305 nodes · 361 edges · 60 communities detected
-- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
-- Token cost: 0 input · 0 output
-- Edge kinds: contains: 154 · rationale_for: 135 · calls: 58 · imports_from: 13 · inherits: 1
-
+- 305 nodes · 361 edges · 61 communities detected
+- Non-singleton communities: 60
+- Extraction: EXTRACTED: 100.0%
+- Edge kinds: calls: 58 · contains: 154 · imports_from: 13 · inherits: 1 · rationale_for: 135
 
 ## Input Scope
 - Requested: all
@@ -19,17 +18,18 @@
 ## Graph Freshness
 - Built from Git commit: `4b901f6`
 - Compare this hash to `git rev-parse HEAD` before trusting freshness-sensitive graph output.
-## God Nodes (most connected - your core abstractions)
-1. `create_full_tear_sheet()` - 9 edges
-2. `render()` - 8 edges
-3. `get_versions()` - 7 edges
-4. `cum_returns()` - 6 edges
-5. `NotThisMethod` - 5 edges
-6. `perf_attrib()` - 5 edges
-7. `get_top_drawdowns()` - 5 edges
-8. `git_pieces_from_vcs()` - 4 edges
-9. `show_perf_attrib_stats()` - 4 edges
-10. `_stack_positions()` - 4 edges
+## God Nodes
+
+- `timeseries.py` (40)
+- `plotting.py` (38)
+- `utils.py` (22)
+- `_version.py` (20)
+- `perf_attrib.py` (14)
+- `tears.py` (11)
+- `create_full_tear_sheet()` (9)
+- `pos.py` (8)
+- `round_trips.py` (8)
+- `render()` (8)
 
 ## Surprising Connections (you probably didn't know these)
 - `summarize_paths()` --calls--> `cum_returns()`  [EXTRACTED]

@@ -4,11 +4,10 @@
 - Corpus is ~49,017 words - fits in a single context window. You may not need a graph.
 
 ## Summary
-- 611 nodes · 865 edges · 41 communities detected
-- Extraction: 82% EXTRACTED · 18% INFERRED · 0% AMBIGUOUS · INFERRED: 160 edges (avg confidence: 0.5)
-- Token cost: 0 input · 0 output
-- Edge kinds: rationale_for: 216 · method: 199 · uses: 160 · contains: 126 · calls: 123 · inherits: 38 · imports_from: 3
-
+- 611 nodes · 865 edges · 43 communities detected
+- Non-singleton communities: 41
+- Extraction: EXTRACTED: 81.5% · INFERRED: 18.5%
+- Edge kinds: calls: 123 · contains: 126 · imports_from: 3 · inherits: 38 · method: 199 · rationale_for: 216 · uses: 160
 
 ## Input Scope
 - Requested: all
@@ -19,17 +18,18 @@
 ## Graph Freshness
 - Built from Git commit: `8504e95`
 - Compare this hash to `git rev-parse HEAD` before trusting freshness-sensitive graph output.
-## God Nodes (most connected - your core abstractions)
-1. `Pipeline` - 44 edges
-2. `BaseSampler` - 32 edges
-3. `InputTags` - 27 edges
-4. `ValueDifferenceMetric` - 26 edges
-5. `ArraysTransformer` - 21 edges
-6. `SamplerTags` - 19 edges
-7. `Tags` - 19 edges
-8. `SamplerMixin` - 15 edges
-9. `FunctionSampler` - 15 edges
-10. `EditedNearestNeighbours` - 15 edges
+## God Nodes
+
+- `Pipeline` (44)
+- `BaseSampler` (32)
+- `estimator_checks.py` (32)
+- `InputTags` (27)
+- `ValueDifferenceMetric` (26)
+- `ArraysTransformer` (21)
+- `SamplerTags` (19)
+- `Tags` (19)
+- `_validation.py` (18)
+- `FunctionSampler` (15)
 
 ## Surprising Connections (you probably didn't know these)
 - `Class to perform over-sampling using SMOTE and cleaning using ENN.` --uses--> `BaseSampler`  [INFERRED]

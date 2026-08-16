@@ -1,6 +1,7 @@
 ---
 name: cvxpy-atoms
-description: "Use when choosing cvxpy atoms — norm/quad_form/elementwise functions, matrix atoms, and the curvature rules that keep models DCP."
+description: "Use when choosing cvxpy atoms \u2014 norm/quad_form/elementwise functions,\
+  \ matrix atoms, and the curvature rules that keep models DCP."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -11,7 +12,7 @@ graph:
   nodes: 6380
   edges: 16515
   community_count: 297
-  graph_hash: 844b4634a60894f8
+  graph_hash: e985870ca0f4d020
 tags:
 - cvxpy
 - atoms

@@ -1,6 +1,8 @@
 ---
 name: statsmodels-glm
-description: "Use when fitting generalized linear models with statsmodels — GLM families/links/varfuncs, GEE with covariance structures, GLMGam, robust covariance (HC0–HC3/cluster), and Tweedie models."
+description: "Use when fitting generalized linear models with statsmodels \u2014 GLM\
+  \ families/links/varfuncs, GEE with covariance structures, GLMGam, robust covariance\
+  \ (HC0\u2013HC3/cluster), and Tweedie models."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -11,7 +13,7 @@ graph:
   nodes: 11616
   edges: 33529
   community_count: 638
-  graph_hash: 460a1b24977f4557
+  graph_hash: 22b3083cca514704
 tags:
 - statsmodels
 - glm

@@ -2,7 +2,7 @@
 
 # Quality Gate — empyrical
 
-Graph: `knowledge_graphs/empyrical/.graphify/graph.json` · GRAPH_SPEC §5 · generated 2026-08-15
+Graph: `knowledge_graphs/empyrical/.graphify/graph.json` · GRAPH_SPEC §5 · generated 2026-08-16
 
 | criterion | status | counts |
 |---|---|---|

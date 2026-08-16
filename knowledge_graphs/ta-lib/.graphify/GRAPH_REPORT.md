@@ -5,11 +5,10 @@
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1140 nodes · 5352 edges · 200 communities detected
-- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
-- Token cost: 0 input · 0 output
-- Edge kinds: calls: 4214 · contains: 1133 · imports_from: 3 · rationale_for: 2
-
+- 381 nodes · 379 edges · 174 communities detected
+- Non-singleton communities: 21
+- Extraction: EXTRACTED: 100.0%
+- Edge kinds: contains: 374 · imports_from: 3 · rationale_for: 2
 
 ## Input Scope
 - Requested: all
@@ -20,17 +19,18 @@
 ## Graph Freshness
 - Built from Git commit: `a9ff1b4`
 - Compare this hash to `git rev-parse HEAD` before trusting freshness-sensitive graph output.
-## God Nodes (most connected - your core abstractions)
-1. `__Pyx_AddTraceback()` - 761 edges
-2. `__Pyx_ParseKeywords()` - 369 edges
-3. `__Pyx_RaiseArgtupleInvalid()` - 366 edges
-4. `__pyx_f_5talib_7_ta_lib__ta_check_success()` - 346 edges
-5. `__pyx_f_5talib_7_ta_lib_check_array()` - 326 edges
-6. `__pyx_f_5numpy_7ndarray_4data_data()` - 325 edges
-7. `__Pyx_PyLong_As_int()` - 137 edges
-8. `__pyx_f_5talib_7_ta_lib_check_length4()` - 136 edges
-9. `__pyx_f_5numpy_7ndarray_5shape_shape()` - 128 edges
-10. `__pyx_f_5talib_7_ta_lib_make_double_array()` - 99 edges
+## God Nodes
+
+- `_ta_lib.c` (373)
+- `__init__.py` (4)
+- `abstract.py` (2)
+- `get_function_groups()` (2)
+- `get_functions()` (2)
+- `Function()` (1)
+- `_wrapper()` (1)
+- `Returns a list of all the functions supported by TALIB` (1)
+- `Returns a dict with keys of function-group names and values of lists     of func` (1)
+- `stream.py` (1)
 
 ## Surprising Connections (you probably didn't know these)
 - `__Pyx_AddTraceback()` --calls--> `__Pyx_CLineForTraceback()`  [EXTRACTED]

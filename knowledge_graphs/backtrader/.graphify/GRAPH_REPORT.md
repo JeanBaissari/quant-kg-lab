@@ -5,11 +5,10 @@
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2680 nodes · 4964 edges · 193 communities detected
-- Extraction: 69% EXTRACTED · 31% INFERRED · 0% AMBIGUOUS · INFERRED: 1531 edges (avg confidence: 0.5)
-- Token cost: 0 input · 0 output
-- Edge kinds: uses: 1531 · method: 1409 · rationale_for: 619 · calls: 577 · contains: 454 · inherits: 276 · imports_from: 97 · imports: 1
-
+- 2680 nodes · 4964 edges · 206 communities detected
+- Non-singleton communities: 194
+- Extraction: EXTRACTED: 69.2% · INFERRED: 30.8%
+- Edge kinds: calls: 577 · contains: 454 · imports: 1 · imports_from: 97 · inherits: 276 · method: 1409 · rationale_for: 619 · uses: 1531
 
 ## Input Scope
 - Requested: all
@@ -20,17 +19,18 @@
 ## Graph Freshness
 - Built from Git commit: `b853d7c`
 - Compare this hash to `git rev-parse HEAD` before trusting freshness-sensitive graph output.
-## God Nodes (most connected - your core abstractions)
-1. `MetaParams` - 260 edges
-2. `LineRoot` - 119 edges
-3. `LineSingle` - 111 edges
-4. `Strategy` - 111 edges
-5. `PandasMarketCalendar` - 79 edges
-6. `DataBase` - 72 edges
-7. `CommInfoBase` - 71 edges
-8. `LineIterator` - 71 edges
-9. `LineMultiple` - 70 edges
-10. `IBStore` - 67 edges
+## God Nodes
+
+- `MetaParams` (260)
+- `LineRoot` (119)
+- `Strategy` (111)
+- `LineSingle` (111)
+- `PandasMarketCalendar` (79)
+- `DataBase` (72)
+- `CommInfoBase` (71)
+- `LineIterator` (71)
+- `LineMultiple` (70)
+- `IBStore` (67)
 
 ## Surprising Connections (you probably didn't know these)
 - `Returns the actual margin/guarantees needed for a single item of the         ass` --uses--> `MetaParams`  [INFERRED]

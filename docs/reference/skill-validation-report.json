@@ -1,11 +1,6 @@
 {
-<<<<<<< Updated upstream
-  "generated": "2026-08-15T03:12:03+00:00",
-  "git_sha": "c91b5c9",
-=======
-  "generated": "2026-08-15T02:20:27+00:00",
-  "git_sha": "2f808a3",
->>>>>>> Stashed changes
+  "generated": "2026-08-16T04:43:36+00:00",
+  "git_sha": "5e0bdcb",
   "mode": {
     "ci": true,
     "strict": false,
@@ -101,36 +96,28 @@
       "lint": [],
       "api_fail": [],
       "api_warn": [],
-      "meta_warn": [
-        "graph meta: community_count mismatch \u2014 graph has 52, skill claims 38"
-      ],
+      "meta_warn": [],
       "provenance": []
     },
     "skills/catboost/core/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
-      "meta_warn": [
-        "graph meta: community_count mismatch \u2014 graph has 52, skill claims 38"
-      ],
+      "meta_warn": [],
       "provenance": []
     },
     "skills/catboost/evaluation/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
-      "meta_warn": [
-        "graph meta: community_count mismatch \u2014 graph has 52, skill claims 38"
-      ],
+      "meta_warn": [],
       "provenance": []
     },
     "skills/catboost/pool/SKILL.md": {
       "lint": [],
       "api_fail": [],
       "api_warn": [],
-      "meta_warn": [
-        "graph meta: community_count mismatch \u2014 graph has 52, skill claims 38"
-      ],
+      "meta_warn": [],
       "provenance": []
     },
     "skills/cvxpy/SKILL.md": {
@@ -710,9 +697,7 @@
     "skills/scikit-learn/cluster/SKILL.md": {
       "lint": [],
       "api_fail": [],
-      "api_warn": [
-        "class DBSCAN: not found (library not installed, no graph node)"
-      ],
+      "api_warn": [],
       "meta_warn": [],
       "provenance": []
     },
@@ -733,9 +718,7 @@
     "skills/scikit-learn/decomposition/SKILL.md": {
       "lint": [],
       "api_fail": [],
-      "api_warn": [
-        "class FastICA: not found (library not installed, no graph node)"
-      ],
+      "api_warn": [],
       "meta_warn": [],
       "provenance": []
     },
@@ -784,9 +767,7 @@
     "skills/scikit-learn/metrics/SKILL.md": {
       "lint": [],
       "api_fail": [],
-      "api_warn": [
-        "func mean_tweedie_deviance: not found (library not installed, no graph node)"
-      ],
+      "api_warn": [],
       "meta_warn": [],
       "provenance": []
     },
@@ -999,13 +980,7 @@
     "skills/vectorbt/signals/SKILL.md": {
       "lint": [],
       "api_fail": [],
-      "api_warn": [
-        "class BBANDS: not found (library not installed, no graph node)",
-        "class MA: not found (library not installed, no graph node)",
-        "class MACD: not found (library not installed, no graph node)",
-        "class RSI: not found (library not installed, no graph node)",
-        "class STOCH: not found (library not installed, no graph node)"
-      ],
+      "api_warn": [],
       "meta_warn": [],
       "provenance": []
     },
@@ -1059,7 +1034,7 @@
     "lint": 0,
     "api_fail": 0,
     "provenance": 0,
-    "api_warn": 60,
-    "meta_warn": 4
+    "api_warn": 52,
+    "meta_warn": 0
   }
 }

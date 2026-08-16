@@ -11,8 +11,8 @@ extraction_date: 2026-07-29
 graph:
   nodes: 8306
   edges: 13483
-  community_count: 670
-  graph_hash: df005c66bd19581a
+  community_count: 619
+  graph_hash: 9ea08f5479cbb7c7
 tags:
 - numpy
 related_skills:

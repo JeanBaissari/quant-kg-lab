@@ -1,6 +1,7 @@
 ---
 name: shap-plots
-description: "Use when visualizing SHAP explanations — waterfall, summary/beeswarm, force, bar, and dependence plots."
+description: "Use when visualizing SHAP explanations \u2014 waterfall, summary/beeswarm,\
+  \ force, bar, and dependence plots."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -11,7 +12,7 @@ graph:
   nodes: 1277
   edges: 1752
   community_count: 108
-  graph_hash: bc0cb8c9a6ed8ed2
+  graph_hash: 56d741979f6b195b
 tags:
 - shap
 - plots

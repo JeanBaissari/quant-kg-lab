@@ -1,6 +1,7 @@
 ---
 name: shap-maskers
-description: "Use when shaping model inputs for SHAP — Tabular/Image/Partition/Composite maskers, background datasets, and how masking defines what SHAP values mean."
+description: "Use when shaping model inputs for SHAP \u2014 Tabular/Image/Partition/Composite\
+  \ maskers, background datasets, and how masking defines what SHAP values mean."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -11,7 +12,7 @@ graph:
   nodes: 1277
   edges: 1752
   community_count: 108
-  graph_hash: bc0cb8c9a6ed8ed2
+  graph_hash: 56d741979f6b195b
 tags:
 - shap
 - maskers

@@ -1,6 +1,7 @@
 ---
 name: statsmodels-core
-description: "Use when building statistical models in Python — OLS/GLS/WLS, GLM, model results and diagnostics, formula API, and summary tables."
+description: "Use when building statistical models in Python \u2014 OLS/GLS/WLS, GLM,\
+  \ model results and diagnostics, formula API, and summary tables."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -11,7 +12,7 @@ graph:
   nodes: 11616
   edges: 33529
   community_count: 638
-  graph_hash: 460a1b24977f4557
+  graph_hash: 22b3083cca514704
 tags:
 - statsmodels
 - regression

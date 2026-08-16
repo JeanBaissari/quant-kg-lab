@@ -12,8 +12,8 @@ extraction_date: 2026-07-29
 graph:
   nodes: 2208
   edges: 4013
-  community_count: 226
-  graph_hash: f183610fc15fb948
+  community_count: 223
+  graph_hash: 1d44e2e3a333f787
 tags:
 - optuna
 - hyperparameter-optimization

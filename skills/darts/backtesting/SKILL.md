@@ -1,6 +1,8 @@
 ---
 name: darts-backtesting
-description: "Use when validating darts forecasts — historical_forecasts rolling out-of-sample evaluation, backtest-driven model selection, and grid search over forecasting parameters."
+description: "Use when validating darts forecasts \u2014 historical_forecasts rolling\
+  \ out-of-sample evaluation, backtest-driven model selection, and grid search over\
+  \ forecasting parameters."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -11,7 +13,7 @@ graph:
   nodes: 3954
   edges: 8240
   community_count: 245
-  graph_hash: 4deb706235a6ae4a
+  graph_hash: 98a2e69ac67ca67f
 tags:
 - darts
 - backtesting

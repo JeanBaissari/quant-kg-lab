@@ -5,10 +5,9 @@
 
 ## Summary
 - 172 nodes · 231 edges · 5 communities detected
-- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
-- Token cost: 0 input · 0 output
-- Edge kinds: contains: 83 · rationale_for: 77 · calls: 62 · inherits: 4 · method: 4 · imports_from: 1
-
+- Non-singleton communities: 5
+- Extraction: EXTRACTED: 100.0%
+- Edge kinds: calls: 62 · contains: 83 · imports_from: 1 · inherits: 4 · method: 4 · rationale_for: 77
 
 ## Input Scope
 - Requested: all
@@ -19,17 +18,18 @@
 ## Graph Freshness
 - Built from Git commit: `77084f1`
 - Compare this hash to `git rev-parse HEAD` before trusting freshness-sensitive graph output.
-## God Nodes (most connected - your core abstractions)
-1. `GridFigure` - 13 edges
-2. `render()` - 9 edges
-3. `get_versions()` - 8 edges
-4. `create_returns_tear_sheet()` - 7 edges
-5. `create_information_tear_sheet()` - 7 edges
-6. `create_event_returns_tear_sheet()` - 7 edges
-7. `compute_forward_returns()` - 7 edges
-8. `NotThisMethod` - 6 edges
-9. `create_turnover_tear_sheet()` - 6 edges
-10. `create_event_study_tear_sheet()` - 6 edges
+## God Nodes
+
+- `plotting.py` (21)
+- `_version.py` (20)
+- `utils.py` (19)
+- `performance.py` (16)
+- `GridFigure` (13)
+- `render()` (9)
+- `tears.py` (8)
+- `get_versions()` (8)
+- `create_event_returns_tear_sheet()` (7)
+- `create_information_tear_sheet()` (7)
 
 ## Surprising Connections (you probably didn't know these)
 - `NotThisMethod` --inherits--> `Exception`  [EXTRACTED]

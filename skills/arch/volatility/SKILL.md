@@ -1,6 +1,7 @@
 ---
 name: arch-volatility
-description: "Use when modelling conditional volatility with arch — ARCH/GARCH/EGARCH fits, conditional_volatility, and forecast()."
+description: "Use when modelling conditional volatility with arch \u2014 ARCH/GARCH/EGARCH\
+  \ fits, conditional_volatility, and forecast()."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -11,7 +12,7 @@ graph:
   nodes: 1367
   edges: 3900
   community_count: 135
-  graph_hash: 5b23bf9efa5ee1d1
+  graph_hash: e3f8bcd939a66a6d
 tags:
 - arch
 - volatility

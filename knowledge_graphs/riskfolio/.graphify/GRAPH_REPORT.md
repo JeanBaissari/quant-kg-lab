@@ -5,11 +5,10 @@
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 426 nodes · 599 edges · 26 communities detected
-- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
-- Token cost: 0 input · 0 output
-- Edge kinds: calls: 187 · rationale_for: 180 · contains: 167 · method: 63 · inherits: 2
-
+- 426 nodes · 599 edges · 29 communities detected
+- Non-singleton communities: 26
+- Extraction: EXTRACTED: 100.0%
+- Edge kinds: calls: 187 · contains: 167 · inherits: 2 · method: 63 · rationale_for: 180
 
 ## Input Scope
 - Requested: all
@@ -20,17 +19,18 @@
 ## Graph Freshness
 - Built from Git commit: `632a9e4`
 - Compare this hash to `git rev-parse HEAD` before trusting freshness-sensitive graph output.
-## God Nodes (most connected - your core abstractions)
-1. `Portfolio` - 50 edges
-2. `Sharpe_Risk()` - 37 edges
-3. `Risk_Margin()` - 37 edges
-4. `Risk_Contribution()` - 36 edges
-5. `HCPortfolio` - 19 edges
-6. `denoiseCov()` - 8 edges
-7. `CliqHierarchyTree2s()` - 8 edges
-8. `EVaR_Hist()` - 8 edges
-9. `RLVaR_Hist()` - 8 edges
-10. `codep_dist()` - 7 edges
+## God Nodes
+
+- `Portfolio` (50)
+- `RiskFunctions.py` (44)
+- `Risk_Margin()` (37)
+- `Sharpe_Risk()` (37)
+- `Risk_Contribution()` (36)
+- `AuxFunctions.py` (26)
+- `HCPortfolio` (19)
+- `PlotFunctions.py` (18)
+- `DBHT.py` (17)
+- `cppfunctions.py` (15)
 
 ## Surprising Connections (you probably didn't know these)
 - `Portfolio` --inherits--> `object`  [EXTRACTED]

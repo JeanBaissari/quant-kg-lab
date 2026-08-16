@@ -5,11 +5,10 @@
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1368 nodes · 3900 edges · 116 communities detected
-- Extraction: 44% EXTRACTED · 56% INFERRED · 0% AMBIGUOUS · INFERRED: 2181 edges (avg confidence: 0.5)
-- Token cost: 0 input · 0 output
-- Edge kinds: uses: 2181 · method: 650 · rationale_for: 417 · calls: 315 · contains: 219 · inherits: 82 · imports_from: 36
-
+- 1367 nodes · 3900 edges · 135 communities detected
+- Non-singleton communities: 118
+- Extraction: EXTRACTED: 43.9% · INFERRED: 55.9%
+- Edge kinds: calls: 315 · contains: 220 · imports_from: 36 · inherits: 82 · method: 650 · rationale_for: 416 · uses: 2181
 
 ## Input Scope
 - Requested: all
@@ -20,17 +19,17 @@
 ## Graph Freshness
 - Built from Git commit: `704bb70`
 - Compare this hash to `git rev-parse HEAD` before trusting freshness-sensitive graph output.
-## God Nodes (most connected - your core abstractions)
-1. `AbstractDocStringInheritor` - 249 edges
-2. `Normal` - 186 edges
-3. `VolatilityProcess` - 149 edges
-4. `Distribution` - 132 edges
-5. `ConstantVariance` - 126 edges
-6. `WaldTestStatistic` - 82 edges
-7. `ConvergenceWarning` - 74 edges
-8. `StartingValueWarning` - 74 edges
-9. `DataScaleWarning` - 74 edges
-10. `Substitution` - 72 edges
+## God Nodes
+
+- `AbstractDocStringInheritor` (249)
+- `Normal` (186)
+- `VolatilityProcess` (149)
+- `Distribution` (132)
+- `ConstantVariance` (126)
+- `ConvergenceWarning` (74)
+- `DataScaleWarning` (74)
+- `StartingValueWarning` (74)
+- `Substitution` (72)
 
 ## Surprising Connections (you probably didn't know these)
 - `Distributions to use in ARCH models.  All distributions must inherit from :class` --uses--> `AbstractDocStringInheritor`  [INFERRED]
@@ -392,11 +391,14 @@ Nodes (1): Contains values used to approximate the critical value and p-value fr
 
 ### Community 89 - "Community 89"
 Cohesion: 1.00
-Nodes (1): Contains values used to approximate the critical value and p-value from statist
+Nodes (1): Contains values used to approximate the critical value and
+ p-value from statist
 
 ### Community 90 - "Community 90"
 Cohesion: 1.00
-Nodes (1): Critical values produced by phillips-ouliaris-simulation.py  Z-type statistics
+Nodes (1): Critical values produced by phillips-ouliaris-simulation.py
+ 
+ Z-type statistics
 
 ### Community 91 - "Community 91"
 Cohesion: 1.00
@@ -581,9 +583,12 @@ Nodes (1): Names of model parameters          Returns         -------         na
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 - **Thin community `Community 88`** (1 nodes): `Contains values used to approximate the critical value and p-value from DFGLS st`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 89`** (1 nodes): `Contains values used to approximate the critical value and p-value from statist`
+- **Thin community `Community 89`** (1 nodes): `Contains values used to approximate the critical value and
+ p-value from statist`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 90`** (1 nodes): `Critical values produced by phillips-ouliaris-simulation.py  Z-type statistics`
+- **Thin community `Community 90`** (1 nodes): `Critical values produced by phillips-ouliaris-simulation.py
+ 
+ Z-type statistics`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 - **Thin community `Community 91`** (1 nodes): `Critical values for the three different models specified for the Zivot-Andrews u`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.

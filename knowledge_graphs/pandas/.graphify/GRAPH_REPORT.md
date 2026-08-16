@@ -4,11 +4,10 @@
 - Large corpus: 324 files · ~946,406 words. Semantic extraction will be expensive (many Claude tokens). Consider running on a subfolder, or use --no-semantic to run AST-only.
 
 ## Summary
-- 11837 nodes · 40707 edges · 359 communities detected
-- Extraction: 42% EXTRACTED · 58% INFERRED · 0% AMBIGUOUS · INFERRED: 23563 edges (avg confidence: 0.5)
-- Token cost: 0 input · 0 output
-- Edge kinds: uses: 23563 · calls: 5161 · method: 4951 · rationale_for: 4158 · contains: 2260 · inherits: 372 · imports_from: 237 · imports: 5
-
+- 11368 nodes · 39913 edges · 396 communities detected
+- Non-singleton communities: 360
+- Extraction: EXTRACTED: 41.6% · INFERRED: 58.4%
+- Edge kinds: calls: 5064 · contains: 1928 · imports: 5 · imports_from: 235 · inherits: 372 · method: 4951 · rationale_for: 4033 · uses: 23325
 
 ## Input Scope
 - Requested: all
@@ -19,17 +18,18 @@
 ## Graph Freshness
 - Built from Git commit: `9828540`
 - Compare this hash to `git rev-parse HEAD` before trusting freshness-sensitive graph output.
-## God Nodes (most connected - your core abstractions)
-1. `DatetimeTZDtype` - 1701 edges
-2. `CategoricalDtype` - 1480 edges
-3. `PeriodDtype` - 1087 edges
-4. `StringDtype` - 1031 edges
-5. `ArrowDtype` - 1018 edges
-6. `DataFrame` - 887 edges
-7. `IntervalDtype` - 864 edges
-8. `WriteBuffer` - 777 edges
-9. `Series` - 659 edges
-10. `MultiIndex` - 530 edges
+## God Nodes
+
+- `DatetimeTZDtype` (1582)
+- `CategoricalDtype` (1480)
+- `PeriodDtype` (1087)
+- `StringDtype` (1031)
+- `ArrowDtype` (1018)
+- `DataFrame` (887)
+- `WriteBuffer` (777)
+- `IntervalDtype` (745)
+- `Series` (659)
+- `MultiIndex` (530)
 
 ## Surprising Connections (you probably didn't know these)
 - `Warning raised for any upcoming change.      This is the base class for all pand` --uses--> `OptionError`  [INFERRED]

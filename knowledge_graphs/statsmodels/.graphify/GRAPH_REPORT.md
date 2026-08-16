@@ -4,11 +4,10 @@
 - Large corpus: 458 files · ~871,206 words. Semantic extraction will be expensive (many Claude tokens). Consider running on a subfolder, or use --no-semantic to run AST-only.
 
 ## Summary
-- 11645 nodes · 33581 edges · 540 communities detected
-- Extraction: 43% EXTRACTED · 57% INFERRED · 0% AMBIGUOUS · INFERRED: 19222 edges (avg confidence: 0.5)
-- Token cost: 0 input · 0 output
-- Edge kinds: uses: 19222 · rationale_for: 4855 · method: 4071 · calls: 2673 · contains: 2192 · inherits: 515 · imports_from: 53
-
+- 11616 nodes · 33529 edges · 638 communities detected
+- Non-singleton communities: 546
+- Extraction: EXTRACTED: 42.7% · INFERRED: 57.3%
+- Edge kinds: calls: 2673 · contains: 2177 · imports_from: 53 · inherits: 515 · method: 4066 · rationale_for: 4841 · uses: 19204
 
 ## Input Scope
 - Requested: all
@@ -19,17 +18,18 @@
 ## Graph Freshness
 - Built from Git commit: `179d1f4`
 - Compare this hash to `git rev-parse HEAD` before trusting freshness-sensitive graph output.
-## God Nodes (most connected - your core abstractions)
-1. `Appender` - 1093 edges
-2. `FormulaManager` - 929 edges
-3. `OLS` - 857 edges
-4. `ValueWarning` - 838 edges
-5. `SpecificationWarning` - 690 edges
-6. `SimpleTable` - 681 edges
-7. `ConvergenceWarning` - 658 edges
-8. `Docstring` - 450 edges
-9. `Substitution` - 426 edges
-10. `GLM` - 375 edges
+## God Nodes
+
+- `Appender` (1093)
+- `FormulaManager` (929)
+- `OLS` (857)
+- `ValueWarning` (838)
+- `SpecificationWarning` (690)
+- `SimpleTable` (681)
+- `ConvergenceWarning` (658)
+- `Docstring` (450)
+- `Substitution` (426)
+- `GLM` (375)
 
 ## Surprising Connections (you probably didn't know these)
 - `Holds common functions for l1 solvers.` --uses--> `ConvergenceWarning`  [INFERRED]

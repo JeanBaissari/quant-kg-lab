@@ -5,11 +5,10 @@
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 793 nodes · 1569 edges · 38 communities detected
-- Extraction: 80% EXTRACTED · 20% INFERRED · 0% AMBIGUOUS · INFERRED: 313 edges (avg confidence: 0.5)
-- Token cost: 0 input · 0 output
-- Edge kinds: calls: 444 · method: 362 · uses: 313 · contains: 201 · rationale_for: 182 · inherits: 38 · imports_from: 24 · imports: 5
-
+- 793 nodes · 1569 edges · 52 communities detected
+- Non-singleton communities: 47
+- Extraction: EXTRACTED: 80.1% · INFERRED: 19.9%
+- Edge kinds: calls: 444 · contains: 201 · imports: 5 · imports_from: 24 · inherits: 38 · method: 362 · rationale_for: 182 · uses: 313
 
 ## Input Scope
 - Requested: all
@@ -20,17 +19,18 @@
 ## Graph Freshness
 - Built from Git commit: `549af60`
 - Compare this hash to `git rev-parse HEAD` before trusting freshness-sensitive graph output.
-## God Nodes (most connected - your core abstractions)
-1. `BuiltinMetric` - 123 edges
-2. `OfflineMetricVisualizer` - 122 edges
-3. `_CatBoostBase` - 84 edges
-4. `Pool` - 68 edges
-5. `CatBoost` - 52 edges
-6. `MetricEvaluationResult` - 24 edges
-7. `FoldModelsHandler` - 23 edges
-8. `CaseEvaluationResult` - 21 edges
-9. `FoldStorage` - 20 edges
-10. `ExecutionCase` - 19 edges
+## God Nodes
+
+- `BuiltinMetric` (123)
+- `OfflineMetricVisualizer` (122)
+- `_CatBoostBase` (84)
+- `core.py` (70)
+- `Pool` (68)
+- `CatBoost` (52)
+- `.__init__()` (31)
+- `.is_fitted()` (29)
+- `helpers.h` (25)
+- `MetricEvaluationResult` (24)
 
 ## Surprising Connections (you probably didn't know these)
 - `polars` --uses--> `Pool`  [INFERRED]

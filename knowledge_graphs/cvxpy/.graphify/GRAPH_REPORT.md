@@ -5,11 +5,10 @@
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 6330 nodes · 16465 edges · 282 communities detected
-- Extraction: 43% EXTRACTED · 57% INFERRED · 0% AMBIGUOUS · INFERRED: 9411 edges (avg confidence: 0.5)
-- Token cost: 0 input · 0 output
-- Edge kinds: uses: 9411 · rationale_for: 2590 · method: 2392 · calls: 947 · contains: 879 · inherits: 233 · imports: 7 · imports_from: 6
-
+- 6380 nodes · 16515 edges · 297 communities detected
+- Non-singleton communities: 292
+- Extraction: EXTRACTED: 42.7% · INFERRED: 57.0%
+- Edge kinds: calls: 947 · contains: 929 · imports: 7 · imports_from: 6 · inherits: 233 · method: 2392 · rationale_for: 2590 · uses: 9411
 
 ## Input Scope
 - Requested: all
@@ -20,17 +19,18 @@
 ## Graph Freshness
 - Built from Git commit: `e3b50dc`
 - Compare this hash to `git rev-parse HEAD` before trusting freshness-sensitive graph output.
-## God Nodes (most connected - your core abstractions)
-1. `Constraint` - 831 edges
-2. `Expression` - 725 edges
-3. `Atom` - 500 edges
-4. `Solution` - 449 edges
-5. `Variable` - 401 edges
-6. `reshape` - 318 edges
-7. `AffAtom` - 312 edges
-8. `ConicSolver` - 283 edges
-9. `Elementwise` - 243 edges
-10. `conj` - 188 edges
+## God Nodes
+
+- `Constraint` (831)
+- `Expression` (725)
+- `Atom` (500)
+- `Solution` (449)
+- `Variable` (401)
+- `reshape` (318)
+- `AffAtom` (312)
+- `ConicSolver` (283)
+- `Elementwise` (243)
+- `conj` (188)
 
 ## Surprising Connections (you probably didn't know these)
 - `Copyright 2013 Steven Diamond  Licensed under the Apache License, Version 2.0 (t` --uses--> `Expression`  [INFERRED]

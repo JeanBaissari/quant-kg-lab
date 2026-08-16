@@ -96,7 +96,7 @@ def provenance_block(lib, module):
     return (
         "## Provenance\n\n"
         f"- Knowledge graph: {lib}, {len(g['nodes'])} nodes, {len(g['links'])} edges, "
-        f"{len(g.get('graph', {}).get('community_labels', {}))} communities\n"
+        f"{len({nd.get('community') for nd in g.get('nodes', []) if nd.get('community') is not None})} communities\n"  # GRAPH_SPEC §7 (QKG_068)
         f"- God nodes: {god_nodes(g, deg, nodes)} — public-API hubs only "
         f"(see GRAPH_SPEC noise filter)\n"
         f"- Extraction: graphify @ {sha}, backend opencode, description coverage {pct:.0f}%\n"

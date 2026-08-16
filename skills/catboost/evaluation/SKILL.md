@@ -1,6 +1,8 @@
 ---
 name: catboost-evaluation
-description: "Use when cross-validating or evaluating catboost models — cv() fold training, CatboostEvaluation model comparison, metric evaluation results, and fold handling."
+description: "Use when cross-validating or evaluating catboost models \u2014 cv()\
+  \ fold training, CatboostEvaluation model comparison, metric evaluation results,\
+  \ and fold handling."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -10,7 +12,7 @@ extraction_date: 2026-08-13
 graph:
   nodes: 793
   edges: 1569
-  community_count: 38
+  community_count: 52
   graph_hash: 59f3c1631da37620
 tags:
 - catboost

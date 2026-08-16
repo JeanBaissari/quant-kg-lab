@@ -4,11 +4,10 @@
 - Corpus is ~42,133 words - fits in a single context window. You may not need a graph.
 
 ## Summary
-- 393 nodes · 531 edges · 48 communities detected
-- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
-- Token cost: 0 input · 0 output
-- Edge kinds: rationale_for: 187 · contains: 186 · calls: 141 · method: 7 · imports_from: 5 · inherits: 5
-
+- 393 nodes · 531 edges · 51 communities detected
+- Non-singleton communities: 48
+- Extraction: EXTRACTED: 100.0%
+- Edge kinds: calls: 141 · contains: 186 · imports_from: 5 · inherits: 5 · method: 7 · rationale_for: 187
 
 ## Input Scope
 - Requested: all
@@ -19,17 +18,18 @@
 ## Graph Freshness
 - Built from Git commit: `fbd10da`
 - Compare this hash to `git rev-parse HEAD` before trusting freshness-sensitive graph output.
-## God Nodes (most connected - your core abstractions)
-1. `_get_utils()` - 14 edges
-2. `html()` - 11 edges
-3. `MonteCarloResult` - 10 edges
-4. `_get_stats()` - 10 edges
-5. `metrics()` - 10 edges
-6. `probabilistic_ratio()` - 10 edges
-7. `_prepare_returns()` - 10 edges
-8. `_get_colors()` - 9 edges
-9. `_get_utils()` - 8 edges
-10. `full()` - 8 edges
+## God Nodes
+
+- `stats.py` (81)
+- `utils.py` (37)
+- `wrappers.py` (22)
+- `reports.py` (16)
+- `core.py` (15)
+- `_compat.py` (14)
+- `_get_utils()` (14)
+- `html()` (11)
+- `MonteCarloResult` (10)
+- `_get_stats()` (10)
 
 ## Surprising Connections (you probably didn't know these)
 - `cvar()` --calls--> `conditional_value_at_risk()`  [EXTRACTED]

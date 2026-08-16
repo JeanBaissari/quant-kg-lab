@@ -5,11 +5,10 @@
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 3952 nodes · 8238 edges · 245 communities detected
-- Extraction: 59% EXTRACTED · 41% INFERRED · 0% AMBIGUOUS · INFERRED: 3374 edges (avg confidence: 0.5)
-- Token cost: 0 input · 0 output
-- Edge kinds: uses: 3374 · method: 1655 · rationale_for: 1435 · calls: 730 · contains: 630 · inherits: 305 · imports_from: 107 · imports: 2
-
+- 3954 nodes · 8240 edges · 245 communities detected
+- Non-singleton communities: 245
+- Extraction: EXTRACTED: 59.0% · INFERRED: 40.9%
+- Edge kinds: calls: 730 · contains: 632 · imports: 2 · imports_from: 107 · inherits: 305 · method: 1655 · rationale_for: 1435 · uses: 3374
 
 ## Input Scope
 - Requested: all
@@ -20,17 +19,18 @@
 ## Graph Freshness
 - Built from Git commit: `080b534`
 - Compare this hash to `git rev-parse HEAD` before trusting freshness-sensitive graph output.
-## God Nodes (most connected - your core abstractions)
-1. `PLForecastingModule` - 283 edges
-2. `SeriesType` - 250 edges
-3. `TimeSeries` - 194 edges
-4. `Likelihood` - 194 edges
-5. `ForecastingModel` - 181 edges
-6. `LikelihoodType` - 181 edges
-7. `SequentialEncoder` - 180 edges
-8. `GlobalForecastingModel` - 160 edges
-9. `Pipeline` - 142 edges
-10. `TorchForecastingModel` - 142 edges
+## God Nodes
+
+- `PLForecastingModule` (283)
+- `SeriesType` (250)
+- `Likelihood` (194)
+- `TimeSeries` (194)
+- `ForecastingModel` (181)
+- `LikelihoodType` (181)
+- `SequentialEncoder` (180)
+- `GlobalForecastingModel` (160)
+- `Pipeline` (142)
+- `TorchForecastingModel` (142)
 
 ## Surprising Connections (you probably didn't know these)
 - `Base Forecasting Model Explainer --------------------------------  A `_Forecasti` --uses--> `ForecastingModel`  [INFERRED]

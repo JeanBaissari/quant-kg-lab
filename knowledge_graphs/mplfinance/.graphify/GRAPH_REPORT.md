@@ -4,11 +4,10 @@
 - Corpus is ~24,964 words - fits in a single context window. You may not need a graph.
 
 ## Summary
-- 244 nodes · 317 edges · 12 communities detected
-- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 19 edges (avg confidence: 0.5)
-- Token cost: 0 input · 0 output
-- Edge kinds: contains: 119 · rationale_for: 87 · calls: 85 · uses: 19 · method: 6 · inherits: 1
-
+- 244 nodes · 317 edges · 31 communities detected
+- Non-singleton communities: 12
+- Extraction: EXTRACTED: 94.0% · INFERRED: 6.0%
+- Edge kinds: calls: 85 · contains: 119 · inherits: 1 · method: 6 · rationale_for: 87 · uses: 19
 
 ## Input Scope
 - Requested: all
@@ -19,17 +18,18 @@
 ## Graph Freshness
 - Built from Git commit: `493811d`
 - Compare this hash to `git rev-parse HEAD` before trusting freshness-sensitive graph output.
-## God Nodes (most connected - your core abstractions)
-1. `IntegerIndexDateTimeFormatter` - 24 edges
-2. `plot()` - 11 edges
-3. `_check_for_and_apply_style()` - 6 edges
-4. `_convert_segment_dates()` - 6 edges
-5. `_valid_lines_kwargs()` - 6 edges
-6. `_construct_hollow_candlestick_collections()` - 6 edges
-7. `_construct_pnf_scatter()` - 6 edges
-8. `_determine_width_config()` - 6 edges
-9. `Mpf_Figure` - 5 edges
-10. `_check_input()` - 5 edges
+## God Nodes
+
+- `_utils.py` (31)
+- `plotting.py` (30)
+- `IntegerIndexDateTimeFormatter` (24)
+- `_arg_validators.py` (22)
+- `original_flavor.py` (16)
+- `plot()` (11)
+- `_styles.py` (10)
+- `_helpers.py` (9)
+- `_check_for_and_apply_style()` (6)
+- `_construct_hollow_candlestick_collections()` (6)
 
 ## Surprising Connections (you probably didn't know these)
 - `ema: exponential moving average` --uses--> `IntegerIndexDateTimeFormatter`  [INFERRED]

@@ -1,6 +1,7 @@
 ---
 name: darts-models
-description: "Use when choosing a darts forecasting model — the model zoo (naive/statistical/ML/deep/ensemble/conformal families), fit/predict contract, and covariates support."
+description: "Use when choosing a darts forecasting model \u2014 the model zoo (naive/statistical/ML/deep/ensemble/conformal\
+  \ families), fit/predict contract, and covariates support."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -11,7 +12,7 @@ graph:
   nodes: 3954
   edges: 8240
   community_count: 245
-  graph_hash: 4deb706235a6ae4a
+  graph_hash: 98a2e69ac67ca67f
 tags:
 - darts
 - models

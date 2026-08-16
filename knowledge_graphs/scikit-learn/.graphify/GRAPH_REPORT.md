@@ -4,11 +4,10 @@
 - Large corpus: 397 files · ~826,838 words. Semantic extraction will be expensive (many Claude tokens). Consider running on a subfolder, or use --no-semantic to run AST-only.
 
 ## Summary
-- 8662 nodes · 29241 edges · 348 communities detected
-- Extraction: 39% EXTRACTED · 61% INFERRED · 0% AMBIGUOUS · INFERRED: 17834 edges (avg confidence: 0.5)
-- Token cost: 0 input · 0 output
-- Edge kinds: uses: 17834 · rationale_for: 3367 · method: 2645 · calls: 2343 · contains: 2215 · inherits: 767 · imports_from: 64 · imports: 6
-
+- 8450 nodes · 28094 edges · 367 communities detected
+- Non-singleton communities: 346
+- Extraction: EXTRACTED: 39.8% · INFERRED: 60.2%
+- Edge kinds: calls: 2321 · contains: 2160 · imports: 5 · imports_from: 64 · inherits: 744 · method: 2598 · rationale_for: 3284 · uses: 16918
 
 ## Input Scope
 - Requested: all
@@ -19,17 +18,18 @@
 ## Graph Freshness
 - Built from Git commit: `6f8b95a`
 - Compare this hash to `git rev-parse HEAD` before trusting freshness-sensitive graph output.
-## God Nodes (most connected - your core abstractions)
-1. `Interval` - 2234 edges
-2. `StrOptions` - 2007 edges
-3. `BaseEstimator` - 1565 edges
-4. `TransformerMixin` - 883 edges
-5. `Parallel` - 766 edges
-6. `RegressorMixin` - 740 edges
-7. `ClassifierMixin` - 664 edges
-8. `HasMethods` - 608 edges
-9. `ConvergenceWarning` - 509 edges
-10. `ClassNamePrefixFeaturesOutMixin` - 501 edges
+## God Nodes
+
+- `Interval` (2234)
+- `StrOptions` (2007)
+- `BaseEstimator` (1531)
+- `TransformerMixin` (883)
+- `RegressorMixin` (740)
+- `Parallel` (732)
+- `ClassifierMixin` (664)
+- `HasMethods` (608)
+- `ConvergenceWarning` (509)
+- `ClassNamePrefixFeaturesOutMixin` (501)
 
 ## Surprising Connections (you probably didn't know these)
 - `Time column with millisecond precision and color styling.` --uses--> `Interval`  [INFERRED]

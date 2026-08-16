@@ -4,11 +4,10 @@
 - Corpus is ~48,288 words - fits in a single context window. You may not need a graph.
 
 ## Summary
-- 823 nodes · 1584 edges · 45 communities detected
-- Extraction: 75% EXTRACTED · 25% INFERRED · 0% AMBIGUOUS · INFERRED: 403 edges (avg confidence: 0.5)
-- Token cost: 0 input · 0 output
-- Edge kinds: method: 475 · uses: 403 · calls: 302 · rationale_for: 177 · contains: 127 · imports_from: 74 · inherits: 26
-
+- 823 nodes · 1584 edges · 52 communities detected
+- Non-singleton communities: 46
+- Extraction: EXTRACTED: 74.6% · INFERRED: 25.4%
+- Edge kinds: calls: 302 · contains: 127 · imports_from: 74 · inherits: 26 · method: 475 · rationale_for: 177 · uses: 403
 
 ## Input Scope
 - Requested: all
@@ -19,17 +18,18 @@
 ## Graph Freshness
 - Built from Git commit: `93eb4c2`
 - Compare this hash to `git rev-parse HEAD` before trusting freshness-sensitive graph output.
-## God Nodes (most connected - your core abstractions)
-1. `YfData` - 125 edges
-2. `YFDataException` - 90 edges
-3. `YFException` - 64 edges
-4. `Ticker` - 62 edges
-5. `TickerBase` - 57 edges
-6. `YFRateLimitError` - 40 edges
-7. `FastInfo` - 40 edges
-8. `Domain` - 39 edges
-9. `WebSocket` - 31 edges
-10. `Search` - 28 edges
+## God Nodes
+
+- `YfData` (125)
+- `YFDataException` (90)
+- `YFException` (64)
+- `Ticker` (62)
+- `TickerBase` (57)
+- `utils.py` (51)
+- `YFRateLimitError` (40)
+- `FastInfo` (40)
+- `Domain` (39)
+- `WebSocket` (31)
 
 ## Surprising Connections (you probably didn't know these)
 - `Per-call scratch state for download(). Concurrent calls each get     their own i` --uses--> `YfData`  [INFERRED]

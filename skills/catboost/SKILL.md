@@ -1,6 +1,7 @@
 ---
 name: catboost
-description: "Use when working with catboost — the boosting entry point. Router indexing the catboost sub-skills; load the sub-skill for the layer you need."
+description: "Use when working with catboost \u2014 the boosting entry point. Router\
+  \ indexing the catboost sub-skills; load the sub-skill for the layer you need."
 version: 0.2.0
 author: quant-kg-lab
 license: MIT
@@ -10,7 +11,7 @@ extraction_date: 2026-08-13
 graph:
   nodes: 793
   edges: 1569
-  community_count: 38
+  community_count: 52
   graph_hash: 59f3c1631da37620
 tags:
 - catboost
