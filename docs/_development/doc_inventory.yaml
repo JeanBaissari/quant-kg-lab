@@ -86,7 +86,7 @@ docs:
 - path: docs/index.md
   type: Guide
   status: current
-  last_verified: '2026-08-06'
+  last_verified: '2026-08-16'
 - path: docs/libraries/alphalens/index.md
   type: Generated
   status: generated
@@ -504,6 +504,10 @@ docs:
   status: generated
   last_verified: ''
 - path: docs/reference/quality-gate/gate-yfinance.md
+  type: Generated
+  status: generated
+  last_verified: ''
+- path: docs/reference/session-summary-2026-08-16.md
   type: Generated
   status: generated
   last_verified: ''

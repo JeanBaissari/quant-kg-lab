@@ -213,13 +213,6 @@ def objective(trial):
 - [ ] `predict()` output shape matches expectation (n_samples, n_classes) for multi-class
 - [ ] Feature names preserved through DMatrix → Booster → predict
 
-## References
-
-- Source: `python-package/xgboost/core.py:L1` (Booster, DMatrix, DataIter)
-- Source: `python-package/xgboost/training.py:L1` (train, cv, CVPack)
-- Source: `python-package/xgboost/callback.py:L1` (TrainingCallback, EarlyStopping, LearningRateScheduler)
-- Source: `python-package/xgboost/data.py:L1` (data dispatch, pandas/polars/cupy support)
-
 ## Provenance
 
 - Knowledge graph: xgboost, 1631 nodes, 4318 edges, 80 communities

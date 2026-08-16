@@ -5,7 +5,6 @@ on:
     paths:
       - 'skills/**'
       - 'scripts/validate_skills.py'
-      - 'scripts/normalize_skills.py'
       - 'docs/specs/SKILL_SPEC.md'
       - 'graphs.lock'
   pull_request:

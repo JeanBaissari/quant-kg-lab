@@ -62,13 +62,13 @@ noise-filter policy, and the graph quality gate.
 | [scikit-learn](https://github.com/scikit-learn/scikit-learn) | Machine learning | 8,450 · 28,094 |
 | [xgboost](https://github.com/dmlc/xgboost) | Gradient boosting | 1,631 · 4,318 |
 | [vectorbt](https://github.com/polakowo/vectorbt) | Vectorized backtesting | 3,682 · 9,212 |
-| [optuna](https://github.com/optuna/optuna) | Hyperparameter optimization | 2,205 · 4,010 |
+| [optuna](https://github.com/optuna/optuna) | Hyperparameter optimization | 2,208 · 4,013 |
 | [backtrader](https://github.com/mementum/backtrader) | Event-driven backtesting | 2,680 · 4,964 |
 | [lightgbm](https://github.com/microsoft/LightGBM) | Gradient boosting | 593 · 2,029 |
 | [ta-lib](https://github.com/TA-Lib/ta-lib-python) | Technical indicators | 381 · 379 |
 | [statsmodels](https://github.com/statsmodels/statsmodels) | Statistical models (regression, GLM, time series) | 11,616 · 33,529 |
 | [cvxpy](https://github.com/cvxpy/cvxpy) | Convex optimization | 6,380 · 16,515 |
-| [PyPortfolioOpt](https://github.com/robertmartin8/PyPortfolioOpt) | Portfolio optimization | 342 · 512 |
+| [PyPortfolioOpt](https://github.com/robertmartin8/PyPortfolioOpt) | Portfolio optimization | 342 · 522 |
 | [arch](https://github.com/bashtage/arch) | Volatility modelling (ARCH/GARCH) | 1,367 · 3,900 |
 | [alphalens](https://github.com/quantopian/alphalens) | Factor analysis | 172 · 231 |
 | [pyfolio](https://github.com/quantopian/pyfolio) | Portfolio tear sheets | 305 · 361 |
@@ -140,8 +140,8 @@ python scripts/validate_skills.py --ci  # verify skill claims against live APIs
 
 **Gold standard reached for all 28 libraries**: every graph passes the quality gate (real
 community labels, ≥80% semantic descriptions, clean god nodes, `built_from_commit` pinned,
-audited edges, ≥95% API-surface coverage); 136 spec-normalized skills (16 routers + 108
-modules + 12 playbooks) with live-API validation, graph-node citations (1147, 0 dangling) and
+audited edges, ≥95% API-surface coverage); 137 spec-normalized skills (27 routers + 97
+modules + 13 playbooks) with live-API validation, graph-node citations (1147, 0 dangling) and
 a green citation gate with `--require-complete` on every library; 71/71 precise cross-library
 bridges as a curated overlay; workflow playbooks across the whole stack; provenance-gated CI.
 See `ROADMAP.md` for the phased plan and current state.

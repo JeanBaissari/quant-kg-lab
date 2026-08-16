@@ -51,11 +51,10 @@ Statistical functions, probability distributions, and hypothesis tests. The work
 
 | API | Type | Description |
 |-----|------|-------------|
-| `rv_continuous` | class | Base class for custom continuous distributions; `norm`, `t`, `chi2` are instances | `stats/_distn_infrastructure.py:L1669` |
-| `CensoredData` | class | Right/left/interval-censored data container | `stats/_censored_data.py:L61` |
-| `QMCEngine` | class | Quasi-Monte Carlo sampling (Sobol, Halton) | `stats/_qmc.py:L799` |
-| `fit()` | function | Public fit method (scipy ≥ 1.9): `dist.fit(data)` returns `(loc, scale)` tuple | |
-
+| `rv_continuous` | class | Base class for custom continuous distributions; `norm`, `t`, `chi2` are instances |
+| `CensoredData` | class | Right/left/interval-censored data container |
+| `QMCEngine` | class | Quasi-Monte Carlo sampling (Sobol, Halton) |
+| `fit()` | function | Public fit method (scipy ≥ 1.9): `dist.fit(data)` returns `(loc, scale)` tuple |
 | `pearsonr()` | function | Pearson correlation coefficient with p-value |
 | `spearmanr()` | function | Spearman rank correlation |
 | `linregress()` | function | Linear regression with p-values |

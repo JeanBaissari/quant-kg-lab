@@ -2,11 +2,11 @@
 
 **Type**: Guide
 **Status**: current
-**Last Verified**: 2026-08-14
+**Last Verified**: 2026-08-16
 
 quant-kg-lab is a gold-standard knowledge base: **28 library knowledge graphs** (~92K nodes /
-~230K edges) distilled into **136 spec-normalized skills** (27 routers, 97 module
-skills, 12 cross-library playbooks) plus **71/71 curated cross-library bridges** (1147, 0 dangling — all 28 libraries gate-green). Every skill
+~230K edges) distilled into **137 spec-normalized skills** (27 routers, 97 module
+skills, 13 cross-library playbooks) plus **71/71 curated cross-library bridges** (1147, 0 dangling — all 28 libraries gate-green). Every skill
 claim traces to a graph node (`source_file:line`) and is validated against the live library
 API in CI. Every skill's frontmatter declares its `target_version` (nearest released
 library version to the pinned commit) and `upstream_status` (current/stale/dead) — skills
@@ -50,7 +50,7 @@ Releases ship the skills tarball too:
 
 ```bash
 unzip qkg-skills.zip && unzip qkg-quant-patterns.zip
-#    → skills/...  (copy-in layout, 124 library skills + 12 playbooks)
+#    → skills/...  (copy-in layout, 124 library skills + 13 playbooks)
 cp -r skills/scipy/stats ~/.claude/skills/scipy-stats
 ```
 
@@ -75,7 +75,7 @@ tool runs in the release workflow — a release that fails verification never sh
 | Layer | Contents |
 |-------|----------|
 | Graphs | 28 libraries pinned in `graphs.lock`, all passing the GRAPH_SPEC §5 quality gate (c1–c6) |
-| Skills | 136 `SKILL.md` — 27 routers + 97 modules + 12 playbooks, 1147 citations, 0 dangling |
+| Skills | 137 `SKILL.md` — 27 routers + 97 modules + 13 playbooks, 1147 citations, 0 dangling |
 | Bridges | 71 curated cross-library edges (overlay graph) |
 | Playbooks | volatility modelling, factor tearsheets, portfolio optimization, explainability, HPO, walk-forward, and more |
 | CI gates | provenance, quality-gate, citations, `--require-complete` 28/28, doc audit, artifact safety |
@@ -114,4 +114,4 @@ python3 scripts/check_artifact_safety.py --include-dist
 - [Consume without rebuilding](README.md#consume-without-rebuilding) — README section
 - [ADR-0007](docs/adr/ADR-0007-distribution-bundles.md) — the bundle contract
 
-*Last verified against the repo: 2026-08-13.*
+*Last verified against the repo: 2026-08-16.*
