@@ -34,7 +34,7 @@ authoritative freshness field):
 # <Title>
 
 **Type**: Guide
-**Status**: current          <!-- current | draft | stale | superseded -->
+**Status**: current          <!-- current | draft | stale | superseded | historical -->
 **Last Verified**: 2026-08-06
 
 … body …

@@ -19,7 +19,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs"
 CENSUS = DOCS / "_development" / "doc_inventory.yaml"
 TYPES = ["Spec", "Guide", "Library Index", "ADR", "Audit", "Generated", "Narrative"]
-STATUSES = ["current", "draft", "stale", "superseded", "proposed", "accepted"]
+STATUSES = ["current", "draft", "stale", "superseded", "proposed", "accepted", "historical"]
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
 def skip(path):

@@ -2,7 +2,7 @@
 
 **Type**: Guide
 **Status**: current
-**Last Verified**: 2026-08-13
+**Last Verified**: 2026-08-17
 
 > QKG_059, decision D2 from the ecosystem surface map (QKG_058). This document
 > reconciles the two skill-frontmatter schemas so quant-kg-lab skills can be loaded by
@@ -44,7 +44,7 @@ skill_id: SKILL-<kebab-name>
 type: procedure           # default for library skills; orchestration for playbooks
 ```
 
-3. **The vault gate is broader than skill_id/type.** Verified against all 127 repo
+3. **The vault gate is broader than skill_id/type.** Verified against all 142 repo
    skills: 2 files exceed the vault's ≤300-line rule (`numpy/core` 410,
    `lightgbm/sklearn` 313) and 12 module dirs are snake_case (the vault requires
    kebab-case dir names — `factor_analysis`, `black_litterman`, `feature_selection`,
@@ -71,12 +71,12 @@ below).
 ## Category placement
 
 Vault rule (vault-map.md): a new category needs ≥3 skills or an explicit sponsor
-decision. The 25 library skills + 12 playbooks clear it trivially. Proposed mapping:
+decision. The 28 library skills + 18 playbooks clear it trivially. Proposed mapping:
 
 | Hermes category | Repo content |
 |---|---|
-| `quant-dev` (existing) | 12 `quant-patterns` playbooks (they ARE quant workflows) |
-| `quant-libs` (new, sponsor decision) | 115 library/module skills by domain |
+| `quant-dev` (existing) | 18 `quant-patterns` playbooks (they ARE quant workflows) |
+| `quant-libs` (new, sponsor decision) | 124 library/module skills by domain |
 
 `projects.conf` gains `$PROJECTS_ROOT/quant-kg-lab quant-dev quant-libs` → `sync-skills.sh`
 creates one symlink per category dir in the project (whole-category granularity — you
@@ -85,7 +85,7 @@ cannot link a subset).
 ## Landing checklist (vault-side, verified 2026-08-13)
 
 **Phase A — vault content (~1 day)**
-1. Copy the 115 library skills + 12 playbooks into the vault as **real dirs**:
+1. Copy the 124 library skills + 18 playbooks into the vault as **real dirs**:
    `.hermes/skills/quant-libs/<lib>[-<module>]/SKILL.md` +
    `.hermes/skills/quant-dev/<playbook>/SKILL.md`.
 2. Append the compatibility header to each vault copy (`skill_id: SKILL-<kebab>`,
@@ -148,4 +148,4 @@ cannot link a subset).
   `system/vault-map.md`
 - `prd/00-foundation/QKG_058_ecosystem_surface_map.md` — decisions D1–D6
 
-*Last verified against the repo: 2026-08-13.*
+*Last verified against the repo: 2026-08-17.*

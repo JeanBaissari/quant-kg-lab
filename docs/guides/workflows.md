@@ -2,7 +2,7 @@
 
 **Type**: Guide
 **Status**: current
-**Last Verified**: 2026-08-06
+**Last Verified**: 2026-08-17
 
 Patterns and ideas for *using* quant-kg-lab in day-to-day quantitative work — planning sessions,
 research, and PhD documentation. The skills are copy-in; the tooling around them is what turns a
@@ -36,10 +36,7 @@ python scripts/query_graph.py _cross_library "Portfolio"   # cross-library bridg
 python scripts/validate_skills.py scipy --provenance   # claims exist + trace to the graph
 ```
 
-**Compose a research session with a playbook.** Load `quant-full-pipeline` and let the agent chain
-the atomic skills (pandas → ta-lib → features → model → vectorbt → optuna → risk), pulling each
-sub-skill's API detail on demand. `quant-factor-research` and `quant-ml-strategy` are the other two
-entry points.
+**Compose a research session with a playbook.** The 18 playbooks in `skills/quant-patterns/` chain atomic skills into cross-library workflows — e.g. `quant-full-pipeline` links pandas → ta-lib → features → model → vectorbt → optuna → risk. Each playbook pulls sub-skill API detail on demand.
 
 ## Patterns worth reusing
 
@@ -49,8 +46,7 @@ entry points.
   jump to `source_file:line` to confirm it. No more "does this method exist?".
 - **Bridges as a design aid.** The `_cross_library` overlay answers "what connects X to Y?" — e.g.
   `ta-lib.RSI → vectorbt.SignalFactory` — which is exactly the seam where quant pipelines break.
-- **HPO objective = OOS metric.** Every playbook bakes in walk-forward, purge/embargo, and
-  risk-adjusted objectives — the leak-free defaults that hand-rolled notebooks usually miss.
+- **HPO objective = OOS metric.** Playbooks that involve model training bake in walk-forward, purge/embargo, and risk-adjusted objectives — the leak-free defaults that hand-rolled notebooks usually miss.
 
 ## Ideas / backlog for building this out
 
@@ -58,9 +54,7 @@ entry points.
   graph via `extract_skill_refs.py`; drop it straight into a thesis appendix.
 - **Paper reproducibility**: pin the exact library commit a result used via `graphs.lock`, so a
   reviewer can rebuild the same graph and skill set.
-- **New-library onboarding**: `rebuild_graph.sh <newlib>` + `normalize_skills.py` gives a
-  first-pass skill set for any library in the expansion backlog (statsmodels, cvxpy, PyPortfolioOpt…
-  — see `ROADMAP.md` Phase 6).
+- **New-library onboarding**: `rebuild_graph.sh <newlib>` + `normalize_skills.py` gives a first-pass skill set for any library in the expansion backlog — see `ROADMAP.md` Phase 6).
 - **Agent evals**: use `validate_skills.py` output as a regression gate — a skill that starts
   failing API validation flags upstream API drift before it reaches your strategies.
 - **Studio / Obsidian export**: `graphify export obsidian` for an offline, navigable vault of the

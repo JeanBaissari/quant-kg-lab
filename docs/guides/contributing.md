@@ -2,7 +2,7 @@
 
 **Type**: Guide
 **Status**: current
-**Last Verified**: 2026-08-06
+**Last Verified**: 2026-08-17
 
 How to add or change a doc or a skill without breaking the standards. The two gates are
 `scripts/doc_audit.py` (docs) and `scripts/validate_skills.py` (skills).
@@ -48,4 +48,4 @@ when you touch a doc.
 - [Standards](../_development/standards.md) — the canon.
 - [Docs index](../index.md) — the hub.
 
-*Last verified against the repo: 2026-08-06.*
+*Last verified against the repo: 2026-08-17.*

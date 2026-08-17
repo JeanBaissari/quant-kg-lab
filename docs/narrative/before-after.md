@@ -1,8 +1,10 @@
 # Before / After — the consolidation
 
+> **Note**: This document describes the state of the repo at commit 368f6f0 on 2026-08-12. For current state, see [README.md](../../README.md).
+
 **Type**: Narrative
-**Status**: current
-**Last Verified**: 2026-08-06
+**Status**: historical
+**Last Verified**: 2026-08-12
 
 This repo is its own case study: how a promising-but-drifted "pile of skills" became a verifiable,
 reproducible, composable knowledge base. If you're building something similar for *your* stack,

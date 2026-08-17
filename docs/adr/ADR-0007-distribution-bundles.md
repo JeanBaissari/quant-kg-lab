@@ -8,7 +8,7 @@
 
 ## Context
 
-The repo's value is the gold-standard knowledge base (11 graphs + 56 skills), but consuming it
+The repo's value is the gold-standard knowledge base (28 graphs + 142 skills), but consuming it
 today requires running the graphify pipeline or cloning the repo. The 2026-08-12 audit verified
 the committed artifacts are free of personal data (repo-relative `source_file`, zero absolute
 paths); distribution is therefore safe *if* the gitignored intermediates (`repo/`,
@@ -39,7 +39,7 @@ first runs the quality gate.
 - Curated overlay nodes (QKG_021) ship inside the library bundle — they are part of
   `graph.json`, not a separate artifact.
 - Release automation depends on GitHub Actions availability; manual `export_bundle.py` runs
-  remain the fallback (same output, verified byte-identical).
+  remain the fallback (same output, deterministic file-content verification).
 
 ## Alternatives considered
 
@@ -51,9 +51,9 @@ first runs the quality gate.
 ## Addendum (2026-08-13, QKG_040) — skills tarball + semver tags
 
 - Releases ship **qkg-skills.zip** (all library skills, copy-in layout) and
-  **qkg-quant-patterns.zip** (playbooks) alongside the 19 graph bundles + overlay — the
+  **qkg-quant-patterns.zip** (playbooks) alongside the 28 graph bundles + overlay — the
   "consumers get graphs + skills without graphify" promise is now literal, under the same
-  safety assertions (zero absolute paths) and byte-identical manifest contract.
+  safety assertions (zero absolute paths) and deterministic file-content verification manifest contract.
 - Tag scheme is **semver** (`v0.2.0`, …). The first release used a commit-hash tag
   (`v1eec0ffa2b6b`) before the semver convention; `bundle.json` keeps per-library
   `graphs.lock` commits as the reproducibility anchor, so tags stay human-readable while
