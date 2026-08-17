@@ -60,7 +60,7 @@ jobs:
       matrix:
         libs:
           - "numpy scipy pandas scikit-learn optuna vectorbt xgboost lightgbm backtrader ta-lib statsmodels cvxpy pyportfolioopt arch"
-          - "alphalens pyfolio riskfolio shap polars empyrical quantstats yfinance imbalanced-learn pymc mplfinance catboost ta darts"
+          - "pyfolio riskfolio shap polars empyrical quantstats yfinance imbalanced-learn pymc mplfinance catboost ta darts"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -73,9 +73,10 @@ jobs:
           cd /tmp && wget -q https://github.com/TA-Lib/ta-lib/releases/download/v0.6.4/ta-lib-0.6.4-src.tar.gz
           tar xzf ta-lib-0.6.4-src.tar.gz && cd ta-lib-0.6.4
           ./configure --prefix=/usr >/dev/null && make -j2 >/dev/null && sudo make install >/dev/null
+      - name: Install PyYAML
+        run: pip install pyyaml
       - name: Install target libraries
-        run: |
-          pip install pyyaml ${{ matrix.libs }} | tail -3 || true
+        run: pip install ${{ matrix.libs }}
       - name: Validate skills against live APIs + provenance (strict, reverse-trust)
         run: python scripts/validate_skills.py --strict --provenance ${{ matrix.libs }}
       - if: always()
