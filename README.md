@@ -1,150 +1,109 @@
 # quant-kg-lab
 
-**A quantitative knowledge-graph laboratory** — it extracts structured knowledge graphs from
-premier scientific-Python libraries and distills them into **verifiable, copy-in agent skills**
+A quantitative knowledge-graph laboratory: extract knowledge graphs from scientific-Python
+libraries, distill them into verifiable, copy-in agent skills for quantitative research.
 
-> 🚀 **New here?** Start with [`QUICKSTART.md`](QUICKSTART.md) — consume the knowledge base in 2 minutes.
-for quantitative research and development.
+> **Last Verified**: 2026-08-17
 
-Not a package to install. A knowledge base to **copy from** — every skill traces back to a
-graph node and a source line, and is checked against the live library API in CI.
+## What it is
 
-## Thesis
+- **Knowledge graphs from source.** Each of 28 libraries is extracted at a pinned commit via
+  `graphify` into a graph of modules, classes, and functions with semantic edges (calls, inherits,
+  imports).
+- **Verifiable agent skills.** 142 spec-driven `SKILL.md` files (copy-in, not a package) where
+  every Quick Reference row cites a graph node (`source_file:line`), and API symbols and graph
+  citations are checked against the live library in CI.
+- **Cross-library bridges.** 71/71 precise cross-library edges inject a `_cross_library` overlay
+  so skills reference related APIs across pandas, scipy, sklearn, etc.
+- **18 workflow playbooks.** End-to-end patterns (data -> features -> model -> backtest -> HPO ->
+  risk) that compose across the full quant stack.
 
-Quantitative work spans data (pandas, numpy), statistics & signal processing (scipy),
-statistical learning (scikit-learn, xgboost, lightgbm), hyperparameter optimization (optuna),
-technical analysis (ta-lib), and backtesting (vectorbt, backtrader). This repo builds a
-**persistent, queryable knowledge graph** of each of those libraries and turns them into
-**spec-driven agent skills** an agent can load to work fluently across the whole stack.
+## Current state
 
-Two things make it more than a pile of library docs:
+> Numbers sourced from `docs/reference/truth-counts.json`. Counts are CI-gated; a drift-detector
+> catches any mismatch — it does not prevent it.
 
-- **① Verifiable skills.** Every claim in a skill traces to a graph node (`source_file:line`)
-  and is validated against the installed library's real API in CI. Skills you can trust, not
-  hallucinated cheatsheets. → `docs/specs/SKILL_SPEC.md`, `scripts/validate_skills.py`
-- **② A composable quant stack.** Cross-library **bridges** and **workflow playbooks** encode
-  *how* the libraries compose into research loops (data → features → model → backtest → HPO →
-  risk) — so it reads as one stack, not ten isolated references. → `skills/quant-patterns/`,
-  `docs/reference/unified-index.md`
+| Metric | Current main | v0.4.0 release |
+|--------|-------------|----------------|
+| Libraries | 28 | 28 |
+| Knowledge-graph nodes | 92,154 | 92,154 |
+| Knowledge-graph edges | 229,921 | 229,921 |
+| Skills (total) | 142 | 137 |
+| - Routers | 27 | 27 |
+| - Module skills | 97 | 97 |
+| - Playbooks | 18 | 13 |
+| Citations checked | 1,207 | 1,147 |
+| Dangling citations | 0 | 0 |
+| Cross-library bridges | 71 / 71 | 71 / 71 |
+| Governed docs | 127 | 126 |
 
-## Architecture
+**Path 8/9 additions since v0.4.0**: `qkg` CLI, BM25 full-text search, quality scores, skill
+versioning, freshness timestamps, `node_type` frontmatter field, and 5 new playbooks (13 -> 18).
 
-```
-quant-kg-lab/
-├── knowledge_graphs/<lib>/.graphify/   # graph.json + GRAPH_REPORT.md + labels (28 libraries)
-├── skills/<lib>/<module>/SKILL.md      # atomic, per-module skills (+ routers)
-│   └── quant-patterns/                 #   cross-library workflow playbooks
-├── scripts/                            # rebuild, query, validate, audit, bundle tooling
-├── docs/                               # index.md hub → specs/ guides/ libraries/ reference/ adr/ audit/
-├── graphs.lock                         # pinned upstream commits — reproducibility manifest
-└── .github/workflows/                  # skill validation + graph provenance gate + docs audit
-```
+## Quick start
 
-## Pipeline
-
-1. **Extract** — `graphify` ingests a library's source (pinned commit) → knowledge graph
-   (nodes = modules/classes/functions, edges = calls/inherits/imports/uses).
-2. **Query** — community detection surfaces module boundaries; degree centrality surfaces the
-   real API hubs ("god nodes").
-3. **Author** — one spec-driven `SKILL.md` per quant-relevant module (`docs/specs/SKILL_SPEC.md`).
-4. **Validate** — every skill's claims are checked against the live API + graph provenance in CI.
-
-See `docs/guides/methodology.md` for the full pipeline and `docs/specs/GRAPH_SPEC.md` for the schema, the
-noise-filter policy, and the graph quality gate.
-
-## Libraries under analysis
-
-| Library | Domain | Nodes · Edges |
-|---------|--------|---------------|
-| [pandas](https://github.com/pandas-dev/pandas) | Data frames, time series | 11,368 · 39,913 |
-| [scipy](https://github.com/scipy/scipy) | Stats, optimize, signal | 14,071 · 23,466 |
-| [numpy](https://github.com/numpy/numpy) | Arrays, linalg, random | 8,306 · 13,483 |
-| [scikit-learn](https://github.com/scikit-learn/scikit-learn) | Machine learning | 8,450 · 28,094 |
-| [xgboost](https://github.com/dmlc/xgboost) | Gradient boosting | 1,631 · 4,318 |
-| [vectorbt](https://github.com/polakowo/vectorbt) | Vectorized backtesting | 3,682 · 9,212 |
-| [optuna](https://github.com/optuna/optuna) | Hyperparameter optimization | 2,208 · 4,013 |
-| [backtrader](https://github.com/mementum/backtrader) | Event-driven backtesting | 2,680 · 4,964 |
-| [lightgbm](https://github.com/microsoft/LightGBM) | Gradient boosting | 593 · 2,029 |
-| [ta-lib](https://github.com/TA-Lib/ta-lib-python) | Technical indicators | 381 · 379 |
-| [statsmodels](https://github.com/statsmodels/statsmodels) | Statistical models (regression, GLM, time series) | 11,616 · 33,529 |
-| [cvxpy](https://github.com/cvxpy/cvxpy) | Convex optimization | 6,380 · 16,515 |
-| [PyPortfolioOpt](https://github.com/robertmartin8/PyPortfolioOpt) | Portfolio optimization | 342 · 522 |
-| [arch](https://github.com/bashtage/arch) | Volatility modelling (ARCH/GARCH) | 1,367 · 3,900 |
-| [alphalens](https://github.com/quantopian/alphalens) | Factor analysis | 172 · 231 |
-| [pyfolio](https://github.com/quantopian/pyfolio) | Portfolio tear sheets | 305 · 361 |
-| [Riskfolio-Lib](https://github.com/dcajasn/Riskfolio-Lib) | Portfolio optimization suite | 426 · 599 |
-| [shap](https://github.com/shap/shap) | Model explainability | 1,277 · 1,752 |
-| [polars](https://github.com/pola-rs/polars) | Fast DataFrame library | 5,296 · 16,925 |
-| [empyrical](https://github.com/Quantopian/empyrical) | Performance-metric primitives | 180 · 258 |
-| [quantstats](https://github.com/ranaroussi/quantstats) | Portfolio analytics + tear sheets | 393 · 531 |
-| [yfinance](https://github.com/ranaroussi/yfinance) | Market data download | 823 · 1,584 |
-| [imbalanced-learn](https://github.com/scikit-learn-contrib/imbalanced-learn) | Class-imbalance resampling | 611 · 865 |
-| [pymc](https://github.com/pymc-devs/pymc) | Bayesian / probabilistic modelling | 4,067 · 11,144 |
-| [mplfinance](https://github.com/matplotlib/mplfinance) | Financial charting | 244 · 317 |
-| [catboost](https://github.com/catboost/catboost) | Gradient boosting (native categoricals) | 793 · 1,569 |
-| [ta](https://github.com/bukosabino/ta) | Pure-Python technical analysis | 538 · 1,208 |
-| [darts](https://github.com/unit8co/darts) | ML time-series forecasting | 3,954 · 8,240 |
-
-**Total: ~92K nodes / ~230K edges across 28 graphs.** Pinned commits in `graphs.lock`; every
-graph passes the [quality gate](docs/specs/GRAPH_SPEC.md#5-quality-gate) (labels, descriptions,
-god nodes, pin, audit, API-surface coverage).
-
-## Using a skill (copy-in)
-
-These skills are intentionally **not** distributed as a package. To use one, copy the skill
-directory into your agent's skills location:
+**Path A — `qkg` CLI (recommended)**
 
 ```bash
-cp -r skills/scipy/stats /path/to/your/.claude/skills/scipy-stats
-# or into any agentskills.io / Hermes-compatible skills directory
+pip install quant-kg-lab   # or clone and pip install -e .
+qkg search "kolmogorov smirnov"   # BM25 search across all graphs
+qkg skill scipy-stats             # show a skill with citations
 ```
 
-Only the `name` and `description` frontmatter are required by loaders; the provenance metadata is
-carried along and ignored safely by agents that don't use it.
-
-## Consume without rebuilding
-
-Every tag ships versioned bundles as **GitHub Release assets** (ADR-0007): one zip per library
-plus the cross-library overlay, the **skills tarball** (`qkg-skills.zip`, all skills in
-copy-in layout) and the playbooks (`qkg-quant-patterns.zip`), with a `bundle.json` manifest
-(per-file sha256, pinned commit, node/edge counts). No graphify, no network, no rebuild:
+**Path B — Manual copy (no tools)**
 
 ```bash
-# 1. Download the release assets (v0.2.0+): graph bundles + skills tarball
-unzip qkg-scipy.zip && unzip qkg-cross-library-overlay.zip && unzip qkg-skills.zip
-#    → scipy/graph.json + GRAPH_REPORT.md + labels  ·  skills/scipy/... (copy-in)
-# 2. Copy the skills you need (copy-in, per SKILL_SPEC)
+# Pick a skill directory and copy it into your agent's skills folder
 cp -r skills/scipy/stats ~/.claude/skills/scipy-stats
-# 3. Verify skills against your installed library (with the repo checkout)
+# The name + description frontmatter are required; provenance metadata is carried along.
+```
+
+**Path C — GitHub Release assets (no rebuild)**
+
+```bash
+# Download from the latest release: graph bundles + skills tarball
+unzip qkg-skills.zip               # all skills in copy-in layout
+cp -r skills/scipy/stats ~/.claude/skills/scipy-stats
+# Verify against your installed library
 python3 scripts/validate_skills.py --ci scipy
 ```
 
-Bundles are sha256-verified within a release (`bundle.json` verifies every per-file
-sha256), and are asserted free of absolute paths and gitignored intermediates — the same
-`scripts/check_artifact_safety.py` check runs in CI. Build one locally with
-`python3 scripts/export_bundle.py --lib all --out dist`.
+## What is verified
 
-## Reproducibility
+- **Graph provenance**: every graph is rebuildable from its pinned commit in `graphs.lock`.
+- **Community labels**: all 28 graphs have real (non-AST-stub) community labels.
+- **Semantic descriptions**: all 28 graphs pass >= 80% description coverage (c2 green).
+- **Quality gate**: all 28 graphs pass the full gate (c1-c6) — labels, descriptions, clean god
+  nodes, pinned commits, audited edges.
+- **Skill citations**: Quick Reference API symbols and graph citations are checked; 0 dangling
+  citations across 1,207 checked references.
+- **Cross-library bridges**: 71/71 resolved and injected as a `_cross_library` overlay.
+- **Doc audit**: `scripts/doc_audit.py --ci` passes with 0 errors.
 
-Every graph is rebuildable from its pinned commit:
+## What is deferred
 
-```bash
-npm install -g @sentropic/graphify      # the external extraction engine
-pip install -r requirements.txt         # the target libraries (for validation)
-scripts/rebuild_graph.sh scipy          # clone@pin → extract → merge → cluster → audit
-python scripts/query_graph.py scipy "kolmogorov smirnov"   # query any graph
-python scripts/validate_skills.py --ci  # verify skill claims against live APIs
-```
+- **Freshness timestamps**: skill frontmatter includes `last_verified` but automated freshness
+  enforcement across the full corpus is not yet in CI.
+- **Full API-surface validation**: the validator checks 10 core libraries in CI; the remaining 18
+  are validated locally but not in the matrix (planned — QKG_070).
+- **Description coverage beyond 80%**: raising the floor from 80% to 95%+ across all graphs is
+  tracked but not a current gate.
+- **Byte-identical reproducibility**: bundles are sha256-verified within a release, but
+  cross-run byte-identical archives are not guaranteed (graphify can produce minor diffs).
 
-## Status
+## Specs, guides, and references
 
-**Gold standard reached for all 28 libraries**: every graph passes the quality gate (real
-community labels, ≥80% semantic descriptions, clean god nodes, `built_from_commit` pinned,
-audited edges, ≥95% API-surface coverage); 137 spec-normalized skills (27 routers + 97
-modules + 13 playbooks) with live-API validation, graph-node citations (1147, 0 dangling) and
-a green citation gate with `--require-complete` on every library; 71/71 precise cross-library
-bridges as a curated overlay; workflow playbooks across the whole stack; provenance-gated CI.
-See `ROADMAP.md` for the phased plan and current state.
+| Document | Purpose |
+|----------|---------|
+| `docs/specs/SKILL_SPEC.md` | Single skill template + frontmatter schema |
+| `docs/specs/GRAPH_SPEC.md` | Graph schema, noise-filter policy, quality gate |
+| `docs/guides/methodology.md` | Full extraction -> authoring -> validation pipeline |
+| `docs/guides/onboarding-checklist.md` | How to onboard a new library |
+| `ROADMAP.md` | Phased plan and current status |
+| `QUICKSTART.md` | Consume the knowledge base in 2 minutes |
+| `CLAUDE.md` | Working conventions for agents |
+| `docs/reference/truth-counts.json` | Canonical counts (CI-gated) |
+| `graphs.lock` | Pinned upstream commits per library |
 
 ## License
 

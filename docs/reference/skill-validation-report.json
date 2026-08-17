@@ -1,8 +1,8 @@
 {
-  "generated": "2026-08-17T19:28:50+00:00",
-  "git_sha": "9a4d81e",
+  "generated": "2026-08-17T19:32:13+00:00",
+  "git_sha": "7c2f1ae",
   "mode": {
-    "ci": true,
+    "ci": false,
     "strict": false,
     "provenance": false
   },
