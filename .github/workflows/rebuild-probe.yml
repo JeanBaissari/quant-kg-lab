@@ -49,8 +49,8 @@ jobs:
           #   large monorepo: pandas
           #   small HTTP:     yfinance
           for lib in empyrical pyportfolioopt scipy xgboost ta-lib pandas yfinance; do
-            commit=$(python3 -c "import json; print(json.load(open(os.environ['LOCK']))['libraries']['$lib']['commit'])")
-            repo=$(python3 -c "import json; print(json.load(open(os.environ['LOCK']))['libraries']['$lib']['repo'])")
+            commit=$(python3 -c "import json, os; print(json.load(open(os.environ['LOCK']))['libraries']['$lib']['commit'])")
+            repo=$(python3 -c "import json, os; print(json.load(open(os.environ['LOCK']))['libraries']['$lib']['repo'])")
             echo "== $lib @ $commit =="
             rm -rf /tmp/probe-$lib && mkdir -p /tmp/probe-$lib && cd /tmp/probe-$lib
             git clone --quiet --filter=blob:none "https://github.com/$repo" repo
@@ -67,7 +67,7 @@ jobs:
               --exclude 'tests/**' --exclude 'tests/' --exclude 'test_*' --exclude 'benchmarks/**' \
               --exclude 'examples/**' --exclude 'docs/**' --exclude '*.pyx' --exclude '*.txt' \
               --exclude '*.html' --exclude '*.m' --exclude '*.R' --exclude '*.f90' >/dev/null 2>&1
-            python3 <<'EOF'
+            python3 <<"EOF"
             import json, os
             g = json.load(open('$PWD/out/graph.json'))
             lock = json.load(open(os.environ['LOCK']))

@@ -53,7 +53,8 @@ jobs:
 
   api:
     # GATE: validate skill claims against the LIVE installed APIs + provenance.
-    # QKG_070: 2x14 matrix so ALL 28 libraries are live-checked (was 10/28).
+    # QKG_070: 14+13 matrix so 27/28 libraries are live-checked (was 10/28).
+    # alphalens excluded (SafeConfigParser removed in 3.12); pyfolio kept but may also fail on 3.12.
     # Reverse-trust: graph-backed claims absent from the installed lib now fail.
     # TA-Lib's C library is built from source so ta-lib skills really validate.
     strategy:

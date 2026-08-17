@@ -115,8 +115,13 @@ def main():
                 for n in z.namelist():
                     if not SKILL_RE.match(n):
                         continue
+                    # Only compare skills belonging to this library
+                    # e.g. skills/scipy/stats/SKILL.md -> scipy
+                    parts = n.split("/")
+                    if len(parts) < 3 or parts[1] != lib:
+                        continue
                     fm = z.read(n).decode("utf-8", "replace")
-                    m = re.search(r"^graph_hash:\s*([0-9a-f]{16})", fm, re.M)
+                    m = re.search(r"\s*graph_hash:\s*([0-9a-f]{16})", fm)
                     if m and m.group(1) != gh:
                         fail(f"{lib}: {n} graph_hash {m.group(1)} != bundled graph {gh}")
         print(f"OK  {lib}: {entry['nodes']} nodes / {entry['edges']} edges, zip verified")

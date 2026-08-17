@@ -18,7 +18,9 @@ Sources of truth (in priority order):
 Usage:
   python3 scripts/emit_counts.py                  # writes truth-counts.json
   python3 scripts/emit_counts.py --markdown       # prints the README block
-  python3 scripts/emit_counts.py --diff           # exit 1 if committed docs drift
+  python3 scripts/emit_counts.py --diff           # read-only: exit 1 if committed
+                                                    truth-counts.json drifts from
+                                                    canonical counts
 """
 import json, sys, pathlib, re
 
@@ -92,26 +94,38 @@ def markdown_block(t):
 def main():
     t = truth()
     out = ROOT / "docs" / "reference" / "truth-counts.json"
-    out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(json.dumps(t, indent=2) + "\n")
-    if "--markdown" in sys.argv[1:]:
-        print(markdown_block(t))
-    elif "--diff" in sys.argv[1:]:
-        # check the committed README/QUICKSTART/ROADMAP numbers match
-        expected = markdown_block(t)
+    if "--diff" in sys.argv[1:]:
+        # Read-only: compare canonical counts against the committed file.
+        # Do NOT write truth-counts.json here.
+        if not out.exists():
+            print("truth-counts.json not found — run emit_counts.py without "
+                  "--diff to create it first", file=sys.stderr)
+            return 1
+        committed = json.load(open(out))
         drift = []
-        for p in ("README.md", "QUICKSTART.md", "ROADMAP.md"):
-            text = (ROOT / p).read_text()
-            for token in (f"all {t['libraries']} libraries", f"{t['skills']} spec-normalized",
-                          f"{t['citations'].get('checked')}, 0 dangling",
-                          f"{t['bridges']['resolved']}/{t['bridges']['attempted']}"):
-                if token not in text:
-                    drift.append(f"{p}: missing {token!r}")
+        # --- scalar checks ---
+        for key in ("skills", "playbooks", "routers", "modules",
+                     "nodes", "edges", "docs", "libraries"):
+            expected = t[key]
+            actual = committed.get(key)
+            if expected != actual:
+                drift.append(f"  {key}: expected={expected}  actual={actual}")
+        # --- dict checks ---
+        for key in ("citations", "bridges"):
+            expected = t[key]
+            actual = committed.get(key)
+            if expected != actual:
+                drift.append(f"  {key}: expected={expected}  actual={actual}")
         if drift:
+            print("truth-counts drift detected:", file=sys.stderr)
             print("\n".join(drift), file=sys.stderr)
             return 1
-        print("truth-counts: committed docs match (no drift)")
+        print("truth-counts: committed file matches canonical counts (no drift)")
+    elif "--markdown" in sys.argv[1:]:
+        print(markdown_block(t))
     else:
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(json.dumps(t, indent=2) + "\n")
         print(f"wrote {out.relative_to(ROOT)} ({t['libraries']} libs, {t['skills']} skills)")
     return 0
 
