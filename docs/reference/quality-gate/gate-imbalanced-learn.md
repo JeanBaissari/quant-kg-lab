@@ -2,12 +2,12 @@
 
 # Quality Gate — imbalanced-learn
 
-Graph: `knowledge_graphs/imbalanced-learn/.graphify/graph.json` · GRAPH_SPEC §5 · generated 2026-08-16
+Graph: `knowledge_graphs/imbalanced-learn/.graphify/graph.json` · GRAPH_SPEC §5 · generated 2026-08-17
 
 | criterion | status | counts |
 |---|---|---|
 | c1 real labels | PASS | distinct=43 non_singleton=41 default_labels=0 default_graph=0 coverage=100.0% |
-| c2 descriptions | PASS | described=252 describable=298 pct=84.6% |
+| c2 descriptions | PASS | described=252 describable=298 pct=84.6% (target: 80%) |
 | c3 god nodes | PASS | top20=20 noise=0 |
 | c4 pin | PASS | expected=8504e95f0160f61d1b617ca66f779646d2ee609e found=8504e95f0160f61d1b617ca66f779646d2ee609e (graph) |
 | c5 audited | PASS | exists |

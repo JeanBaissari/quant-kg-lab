@@ -2,12 +2,12 @@
 
 # Quality Gate — darts
 
-Graph: `knowledge_graphs/darts/.graphify/graph.json` · GRAPH_SPEC §5 · generated 2026-08-16
+Graph: `knowledge_graphs/darts/.graphify/graph.json` · GRAPH_SPEC §5 · generated 2026-08-17
 
 | criterion | status | counts |
 |---|---|---|
 | c1 real labels | PASS | distinct=245 non_singleton=245 default_labels=0 default_graph=0 coverage=100.0% |
-| c2 descriptions | PASS | described=1902 describable=2232 pct=85.2% |
+| c2 descriptions | PASS | described=1902 describable=2232 pct=85.2% (target: 80%) |
 | c3 god nodes | PASS | top20=20 noise=0 |
 | c4 pin | PASS | expected=080b5340366b8df25e048f4cfd11ca99e3806e97 found=080b5340366b8df25e048f4cfd11ca99e3806e97 (graph) |
 | c5 audited | PASS | exists |

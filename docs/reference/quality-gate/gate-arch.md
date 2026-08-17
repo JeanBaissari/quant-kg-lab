@@ -2,12 +2,12 @@
 
 # Quality Gate — arch
 
-Graph: `knowledge_graphs/arch/.graphify/graph.json` · GRAPH_SPEC §5 · generated 2026-08-16
+Graph: `knowledge_graphs/arch/.graphify/graph.json` · GRAPH_SPEC §5 · generated 2026-08-17
 
 | criterion | status | counts |
 |---|---|---|
 | c1 real labels | PASS | distinct=135 non_singleton=118 default_labels=0 default_graph=0 coverage=100.0% |
-| c2 descriptions | PASS | described=831 describable=881 pct=94.3% |
+| c2 descriptions | PASS | described=831 describable=881 pct=94.3% (target: 80%) |
 | c3 god nodes | PASS | top20=20 noise=0 |
 | c4 pin | PASS | expected=704bb70e48372e3ccccdde7da379811657ad0224 found=704bb70e48372e3ccccdde7da379811657ad0224 (graph) |
 | c5 audited | PASS | exists |

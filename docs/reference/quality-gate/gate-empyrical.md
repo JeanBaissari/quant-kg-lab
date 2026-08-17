@@ -2,12 +2,12 @@
 
 # Quality Gate — empyrical
 
-Graph: `knowledge_graphs/empyrical/.graphify/graph.json` · GRAPH_SPEC §5 · generated 2026-08-16
+Graph: `knowledge_graphs/empyrical/.graphify/graph.json` · GRAPH_SPEC §5 · generated 2026-08-17
 
 | criterion | status | counts |
 |---|---|---|
 | c1 real labels | PASS | distinct=23 non_singleton=23 default_labels=0 default_graph=0 coverage=100.0% |
-| c2 descriptions | PASS | described=83 describable=89 pct=93.3% |
+| c2 descriptions | PASS | described=83 describable=89 pct=93.3% (target: 80%) |
 | c3 god nodes | PASS | top20=20 noise=0 |
 | c4 pin | PASS | expected=40f61b4f229df10898d46d08f7b1bdc543c0f99c found=40f61b4f229df10898d46d08f7b1bdc543c0f99c (graph) |
 | c5 audited | PASS | exists |

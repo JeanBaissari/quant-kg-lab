@@ -74,6 +74,15 @@ def cmd_graph(args):
     sys.exit(result.returncode)
 
 
+def cmd_freshness(args):
+    """Check upstream freshness of all pinned graphs."""
+    cmd = [sys.executable, str(SCRIPTS / "check_freshness.py")]
+    if args.ci:
+        cmd.append("--ci")
+    result = subprocess.run(cmd)
+    sys.exit(result.returncode)
+
+
 def main():
     parser = argparse.ArgumentParser(
         prog="qkg", description="quant-kg-lab skill manager"
@@ -110,6 +119,10 @@ def main():
     p_graph.add_argument("lib", help="Library name")
     p_graph.add_argument("query", nargs="+", help="Search query")
     p_graph.set_defaults(func=cmd_graph)
+
+    p_freshness = sub.add_parser("freshness", help="Check upstream freshness of pinned graphs")
+    p_freshness.add_argument("--ci", action="store_true", help="CI mode (exit 1 on stale)")
+    p_freshness.set_defaults(func=cmd_freshness)
 
     args = parser.parse_args()
     if not args.command:

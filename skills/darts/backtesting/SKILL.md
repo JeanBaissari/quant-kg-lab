@@ -13,7 +13,7 @@ graph:
   nodes: 3954
   edges: 8240
   community_count: 245
-  graph_hash: a7e60646dbde36e7
+  graph_hash: 5c5d8a76d0253ade
 tags:
 - darts
 - backtesting

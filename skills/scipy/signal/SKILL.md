@@ -12,7 +12,7 @@ graph:
   nodes: 14071
   edges: 23466
   community_count: 1061
-  graph_hash: 0a4109fd8f56eff1
+  graph_hash: a01c8f8bb3e63782
 tags:
 - scipy
 - signal

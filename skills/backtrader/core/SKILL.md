@@ -12,7 +12,7 @@ graph:
   nodes: 2680
   edges: 4964
   community_count: 206
-  graph_hash: cf88173e47db1f05
+  graph_hash: 58f821144ba4d073
 tags:
 - backtrader
 - core

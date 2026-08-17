@@ -13,7 +13,7 @@ graph:
   nodes: 244
   edges: 317
   community_count: 31
-  graph_hash: 9e4084dc3d4e6492
+  graph_hash: ceb5fc2ca634900a
 tags:
 - mplfinance
 - charting

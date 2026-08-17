@@ -14,6 +14,7 @@ import json
 import re
 import sys
 from pathlib import Path
+import math
 from collections import deque, Counter
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -69,36 +70,62 @@ def _tokenize(text):
             tokens.append(tok)
     return tokens
 
-def _score_node(node, query_tokens):
-    """Score a node against query tokens.
+# BM25 parameters
+BM25_K1 = 1.5
+BM25_B = 0.75
 
-    ``score = (tokens_in_label * 2) + (tokens_in_desc * 1)``.
-    +1 bonus when the node label *equals* a query token (exact label hit).
-    Fuzzy fallback (threshold 0.6) is applied per-token against the full label
-    vocabulary collected by the caller.
+def _compute_idf(nodes):
+    """Pre-compute IDF across all loaded nodes.
+
+    Returns (idf dict, average document length).
+    IDF formula: ``log((N - df + 0.5) / (df + 0.5) + 1)``
+    where N = total nodes, df = document frequency per token.
+    """
+    N = len(nodes)
+    doc_freq = Counter()       # token -> how many nodes contain it
+    doc_lengths = []           # length (in tokens) of each node
+    for node in nodes:
+        text = ((node.get("label") or "") + " " + (node.get("description") or "")).lower()
+        toks = []
+        for tok in re.sub(r"[–—_\-]+", " ", text).split():
+            tok = re.sub(r"[^a-z0-9]+$", "", tok)
+            if tok:
+                toks.append(tok)
+        doc_lengths.append(len(toks))
+        for tok in set(toks):
+            doc_freq[tok] += 1
+    avgdl = sum(doc_lengths) / N if N else 1
+    idf = {}
+    for tok, df in doc_freq.items():
+        idf[tok] = math.log((N - df + 0.5) / (df + 0.5) + 1)
+    return idf, avgdl
+
+def _score_node(node, query_tokens, idf, avgdl):
+    """Score a node against query tokens using BM25.
+
+    score = sum(idf[t] * (tf[t] * (k1 + 1)) / (tf[t] + k1 * (1 - b + b * dl/avgdl)))
     """
     label = (node.get("label") or "").lower()
     desc = (node.get("description") or "").lower()
-    score = 0
-    for tok in query_tokens:
-        if tok in label:
-            score += 2
-            # bonus: label exactly matches a query token
-            if label == tok:
-                score += 1
-        elif tok in desc:
-            score += 1
-        else:
-            # fuzzy fallback — checked against the label vocabulary
-            close = difflib.get_close_matches(tok, [label], n=1, cutoff=0.6)
-            if close:
-                score += 2
-            else:
-                # try against individual description tokens for a partial bump
-                desc_toks = desc.split()
-                close = difflib.get_close_matches(tok, desc_toks, n=1, cutoff=0.6)
-                if close:
-                    score += 1
+    text = label + " " + desc
+    # Tokenize the node's full text
+    doc_toks = []
+    for tok in re.sub(r"[–—_\-]+", " ", text).split():
+        tok = re.sub(r"[^a-z0-9]+$", "", tok)
+        if tok:
+            doc_toks.append(tok)
+    dl = len(doc_toks)
+    tf = Counter(doc_toks)
+    score = 0.0
+    for t in query_tokens:
+        if t not in idf:
+            continue
+        tf_t = tf.get(t, 0)
+        if tf_t == 0:
+            continue
+        numerator = idf[t] * (tf_t * (BM25_K1 + 1))
+        denominator = tf_t + BM25_K1 * (1 - BM25_B + BM25_B * dl / avgdl)
+        score += numerator / denominator
     return score
 
 def _load_all_graphs():
@@ -116,8 +143,23 @@ def _load_all_graphs():
                 graphs.append((lib_dir.name, json.load(f)))
     return graphs
 
-def cross_library_search(query, top_n=20):
-    """Search across every library graph and return scored results."""
+def cross_library_search(query, top_n=50, lib_filter=None, min_score=0.0):
+    """Search across every library graph and return BM25-scored results.
+
+    Parameters
+    ----------
+    query : str
+        Natural-language query.
+    top_n : int
+        Maximum results to display (hard cap 50).
+    lib_filter : str | None
+        If set, restrict search to this library name only.
+    min_score : float
+        Discard results with score below this threshold.
+    """
+    MAX_RESULTS = 50
+    top_n = min(top_n, MAX_RESULTS)
+
     query_tokens = _tokenize(query)
     if not query_tokens:
         print("No search terms after tokenisation.")
@@ -128,21 +170,32 @@ def cross_library_search(query, top_n=20):
         print("No library graphs found under knowledge_graphs/.")
         return
 
+    # Filter to requested library
+    if lib_filter:
+        lib_filter_resolved = LIBRARY_ALIASES.get(lib_filter, lib_filter)
+        graphs = [(ln, g) for ln, g in graphs if ln == lib_filter_resolved]
+        if not graphs:
+            available = [ln for ln, _ in _load_all_graphs()]
+            print(f"Library '{lib_filter}' not found. Available: {', '.join(available)}")
+            return
+
+    # Collect all nodes across (filtered) graphs for IDF computation
+    all_nodes = []
+    for lib_name, graph in graphs:
+        all_nodes.extend(graph.get("nodes", []))
+
+    if not all_nodes:
+        print("No nodes found to index.")
+        return
+
+    idf, avgdl = _compute_idf(all_nodes)
+
     results = []  # (score, lib, node)
     for lib_name, graph in graphs:
         for node in graph.get("nodes", []):
-            sc = _score_node(node, query_tokens)
-            if sc > 0:
+            sc = _score_node(node, query_tokens, idf, avgdl)
+            if sc > min_score:
                 results.append((sc, lib_name, node))
-
-    if not results:
-        # Retry with fuzzy-only scoring (no exact matches found)
-        print("No exact token matches; trying fuzzy search across all graphs…")
-        for lib_name, graph in graphs:
-            for node in graph.get("nodes", []):
-                sc = _score_node(node, query_tokens)
-                if sc > 0:
-                    results.append((sc, lib_name, node))
 
     if not results:
         print(f"No matches found for '{query}' across {len(graphs)} libraries.")
@@ -152,12 +205,12 @@ def cross_library_search(query, top_n=20):
     top = results[:top_n]
 
     print(f"Cross-library results for '{query}' ({len(results)} total, top {len(top)}):\n")
-    print(f"{'lib':<18} {'score':>5}  {'node_label':<40} source")
-    print("-" * 105)
+    print(f"{'lib':<18} {'score':>7}  {'node_label':<40} source")
+    print("-" * 107)
     for sc, lib, node in top:
         loc = node.get("source_file", "") + ":" + node.get("source_location", "")
         label = node.get("label", node.get("id", ""))
-        print(f"{lib:<18} {sc:>5}  {label:<40} {loc}")
+        print(f"{lib:<18} {sc:>7.2f}  {label:<40} {loc}")
 
 def bfs_traverse(graph, start_node_ids, depth=3):
     """BFS from start nodes, returning subgraph."""
@@ -332,7 +385,9 @@ if __name__ == "__main__":
     parser.add_argument("--path", nargs=2, metavar=("A", "B"), help="Find path between two nodes")
     parser.add_argument("--explain", action="store_true", help="Explain a single node")
     parser.add_argument("--depth", type=int, default=3, help="BFS depth (default: 3)")
-    parser.add_argument("--top", type=int, default=20, help="Number of cross-library results (default: 20)")
+    parser.add_argument("--top", type=int, default=50, help="Number of cross-library results (default: 50, max: 50)")
+    parser.add_argument("--lib", type=str, default=None, help="Restrict search to a specific library (cross-library mode)")
+    parser.add_argument("--min-score", type=float, default=0.0, help="Minimum BM25 score threshold (default: 0)")
 
     args = parser.parse_args()
 
@@ -340,7 +395,7 @@ if __name__ == "__main__":
         query_str = " ".join(args.positional)
         if not query_str:
             parser.error("--all requires a query string")
-        cross_library_search(query_str, top_n=args.top)
+        cross_library_search(query_str, top_n=args.top, lib_filter=args.lib, min_score=args.min_score)
     elif not args.positional:
         parser.print_help()
     else:
@@ -369,4 +424,4 @@ if __name__ == "__main__":
         else:
             # No known library prefix — treat all positionals as a query in cross-library mode
             query_str = " ".join(args.positional)
-            cross_library_search(query_str, top_n=args.top)
+            cross_library_search(query_str, top_n=args.top, lib_filter=args.lib, min_score=args.min_score)

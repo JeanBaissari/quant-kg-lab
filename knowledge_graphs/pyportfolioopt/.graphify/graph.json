@@ -31,7 +31,8 @@
       "source_file": "__init__.py",
       "source_location": "L1",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "base_init",
@@ -40,7 +41,8 @@
       "source_file": "base/__init__.py",
       "source_location": "L1",
       "community": 15,
-      "community_name": "Community 15"
+      "community_name": "Community 15",
+      "node_type": "module"
     },
     {
       "id": "base_base_optimizer",
@@ -49,7 +51,8 @@
       "source_file": "base/_base_optimizer.py",
       "source_location": "L1",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "module"
     },
     {
       "id": "base_base_optimizer_baseoptimizer",
@@ -59,7 +62,8 @@
       "source_location": "L30",
       "community": 0,
       "community_name": "Community 0",
-      "description": "BaseOptimizer \u2014 parent class storing weights and exposing clean_weights() output."
+      "description": "BaseOptimizer \u2014 parent class storing weights and exposing clean_weights() output.",
+      "node_type": "class"
     },
     {
       "id": "base_base_optimizer_baseoptimizer_init",
@@ -69,7 +73,8 @@
       "source_location": "L45",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Initializes the base optimizer with the number of assets."
+      "description": "Initializes the base optimizer with the number of assets.",
+      "node_type": "method"
     },
     {
       "id": "base_base_optimizer_baseoptimizer_make_output_weights",
@@ -79,7 +84,8 @@
       "source_location": "L63",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Builds the output weights dictionary from the raw weight array."
+      "description": "Builds the output weights dictionary from the raw weight array.",
+      "node_type": "method"
     },
     {
       "id": "base_base_optimizer_baseoptimizer_set_weights",
@@ -89,7 +95,8 @@
       "source_location": "L77",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Sets the weights attribute from a user-supplied weights array."
+      "description": "Sets the weights attribute from a user-supplied weights array.",
+      "node_type": "method"
     },
     {
       "id": "base_base_optimizer_baseoptimizer_clean_weights",
@@ -99,7 +106,8 @@
       "source_location": "L88",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Cleans raw weights by zeroing tiny allocations and renormalizing."
+      "description": "Cleans raw weights by zeroing tiny allocations and renormalizing.",
+      "node_type": "method"
     },
     {
       "id": "base_base_optimizer_baseoptimizer_save_weights_to_file",
@@ -109,7 +117,8 @@
       "source_location": "L117",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Saves the optimized weights to a text file for later use."
+      "description": "Saves the optimized weights to a text file for later use.",
+      "node_type": "method"
     },
     {
       "id": "base_base_optimizer_baseconvexoptimizer",
@@ -119,7 +128,8 @@
       "source_location": "L141",
       "community": 0,
       "community_name": "Community 0",
-      "description": "BaseConvexOptimizer \u2014 parent class that adds cvxpy constraints and objectives to the optimizer."
+      "description": "BaseConvexOptimizer \u2014 parent class that adds cvxpy constraints and objectives to the optimizer.",
+      "node_type": "class"
     },
     {
       "id": "base_base_optimizer_baseconvexoptimizer_init",
@@ -129,7 +139,8 @@
       "source_location": "L169",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Initializes the convex optimizer with weight bounds and preprocessing."
+      "description": "Initializes the convex optimizer with weight bounds and preprocessing.",
+      "node_type": "method"
     },
     {
       "id": "base_base_optimizer_baseconvexoptimizer_deepcopy",
@@ -139,7 +150,8 @@
       "source_location": "L207",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Returns a custom deep copy of the optimizer state."
+      "description": "Returns a custom deep copy of the optimizer state.",
+      "node_type": "method"
     },
     {
       "id": "base_base_optimizer_baseconvexoptimizer_map_bounds_to_constraints",
@@ -149,7 +161,8 @@
       "source_location": "L221",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Converts input weight bounds into constraints for cvxpy."
+      "description": "Converts input weight bounds into constraints for cvxpy.",
+      "node_type": "method"
     },
     {
       "id": "base_base_optimizer_baseconvexoptimizer_is_parameter_defined",
@@ -159,7 +172,8 @@
       "source_location": "L269",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Checks whether a given cvxpy parameter has been defined."
+      "description": "Checks whether a given cvxpy parameter has been defined.",
+      "node_type": "method"
     },
     {
       "id": "base_base_optimizer_baseconvexoptimizer_update_parameter_value",
@@ -169,7 +183,8 @@
       "source_location": "L287",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Updates the value of a previously defined cvxpy parameter."
+      "description": "Updates the value of a previously defined cvxpy parameter.",
+      "node_type": "method"
     },
     {
       "id": "base_base_optimizer_baseconvexoptimizer_solve_cvxpy_opt_problem",
@@ -179,7 +194,8 @@
       "source_location": "L307",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Solves the formulated cvxpy problem and checks the resulting weights."
+      "description": "Solves the formulated cvxpy problem and checks the resulting weights.",
+      "node_type": "method"
     },
     {
       "id": "base_base_optimizer_baseconvexoptimizer_add_objective",
@@ -189,7 +205,8 @@
       "source_location": "L347",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Adds a new convex term to the objective function."
+      "description": "Adds a new convex term to the objective function.",
+      "node_type": "method"
     },
     {
       "id": "base_base_optimizer_baseconvexoptimizer_add_constraint",
@@ -199,7 +216,8 @@
       "source_location": "L371",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Adds a new constraint to the convex optimization problem."
+      "description": "Adds a new constraint to the convex optimization problem.",
+      "node_type": "method"
     },
     {
       "id": "base_base_optimizer_baseconvexoptimizer_add_sector_constraints",
@@ -209,7 +227,8 @@
       "source_location": "L398",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Adds constraints on the summed weights of asset groups."
+      "description": "Adds constraints on the summed weights of asset groups.",
+      "node_type": "method"
     },
     {
       "id": "base_base_optimizer_baseconvexoptimizer_convex_objective",
@@ -219,7 +238,8 @@
       "source_location": "L439",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Optimizes a custom convex objective function under added constraints."
+      "description": "Optimizes a custom convex objective function under added constraints.",
+      "node_type": "method"
     },
     {
       "id": "base_base_optimizer_baseconvexoptimizer_nonconvex_objective",
@@ -229,7 +249,8 @@
       "source_location": "L480",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Optimizes a custom non-convex objective function using the scipy backend."
+      "description": "Optimizes a custom non-convex objective function using the scipy backend.",
+      "node_type": "method"
     },
     {
       "id": "base_base_optimizer_portfolio_performance",
@@ -239,7 +260,8 @@
       "source_location": "L561",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Computes and prints the performance of the optimized portfolio."
+      "description": "Computes and prints the performance of the optimized portfolio.",
+      "node_type": "function"
     },
     {
       "id": "base_base_optimizer_get_all_args",
@@ -248,7 +270,8 @@
       "source_file": "base/_base_optimizer.py",
       "source_location": "L634",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "function"
     },
     {
       "id": "base_base_optimizer_flatten",
@@ -257,7 +280,8 @@
       "source_file": "base/_base_optimizer.py",
       "source_location": "L654",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "function"
     },
     {
       "id": "base_base_optimizer_rationale_1",
@@ -266,7 +290,8 @@
       "source_file": "base/_base_optimizer.py",
       "source_location": "L1",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "module"
     },
     {
       "id": "base_base_optimizer_rationale_31",
@@ -275,7 +300,8 @@
       "source_file": "base/_base_optimizer.py",
       "source_location": "L31",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "module"
     },
     {
       "id": "base_base_optimizer_rationale_46",
@@ -284,7 +310,8 @@
       "source_file": "base/_base_optimizer.py",
       "source_location": "L46",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "module"
     },
     {
       "id": "base_base_optimizer_rationale_64",
@@ -293,7 +320,8 @@
       "source_file": "base/_base_optimizer.py",
       "source_location": "L64",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "module"
     },
     {
       "id": "base_base_optimizer_rationale_78",
@@ -302,7 +330,8 @@
       "source_file": "base/_base_optimizer.py",
       "source_location": "L78",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "module"
     },
     {
       "id": "base_base_optimizer_rationale_89",
@@ -311,7 +340,8 @@
       "source_file": "base/_base_optimizer.py",
       "source_location": "L89",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "module"
     },
     {
       "id": "base_base_optimizer_rationale_118",
@@ -320,7 +350,8 @@
       "source_file": "base/_base_optimizer.py",
       "source_location": "L118",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "module"
     },
     {
       "id": "base_base_optimizer_rationale_142",
@@ -329,7 +360,8 @@
       "source_file": "base/_base_optimizer.py",
       "source_location": "L142",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "module"
     },
     {
       "id": "base_base_optimizer_rationale_178",
@@ -338,7 +370,8 @@
       "source_file": "base/_base_optimizer.py",
       "source_location": "L178",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "module"
     },
     {
       "id": "base_base_optimizer_rationale_208",
@@ -347,7 +380,8 @@
       "source_file": "base/_base_optimizer.py",
       "source_location": "L208",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "module"
     },
     {
       "id": "base_base_optimizer_rationale_222",
@@ -356,7 +390,8 @@
       "source_file": "base/_base_optimizer.py",
       "source_location": "L222",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "module"
     },
     {
       "id": "base_base_optimizer_rationale_308",
@@ -365,7 +400,8 @@
       "source_file": "base/_base_optimizer.py",
       "source_location": "L308",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "module"
     },
     {
       "id": "base_base_optimizer_rationale_348",
@@ -374,7 +410,8 @@
       "source_file": "base/_base_optimizer.py",
       "source_location": "L348",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "module"
     },
     {
       "id": "base_base_optimizer_rationale_372",
@@ -383,7 +420,8 @@
       "source_file": "base/_base_optimizer.py",
       "source_location": "L372",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "module"
     },
     {
       "id": "base_base_optimizer_rationale_399",
@@ -392,7 +430,8 @@
       "source_file": "base/_base_optimizer.py",
       "source_location": "L399",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "module"
     },
     {
       "id": "base_base_optimizer_rationale_440",
@@ -401,7 +440,8 @@
       "source_file": "base/_base_optimizer.py",
       "source_location": "L440",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "module"
     },
     {
       "id": "base_base_optimizer_rationale_489",
@@ -410,7 +450,8 @@
       "source_file": "base/_base_optimizer.py",
       "source_location": "L489",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "module"
     },
     {
       "id": "base_base_optimizer_rationale_564",
@@ -419,7 +460,8 @@
       "source_file": "base/_base_optimizer.py",
       "source_location": "L564",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "module"
     },
     {
       "id": "base_base_optimizer_rationale_635",
@@ -428,7 +470,8 @@
       "source_file": "base/_base_optimizer.py",
       "source_location": "L635",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "module"
     },
     {
       "id": "base_optimizer",
@@ -438,7 +481,8 @@
       "source_location": "L1",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Module re-exporting the optimizer classes for backwards compatibility."
+      "description": "Module re-exporting the optimizer classes for backwards compatibility.",
+      "node_type": "module"
     },
     {
       "id": "base_optimizer_rationale_1",
@@ -447,7 +491,8 @@
       "source_file": "base_optimizer.py",
       "source_location": "L1",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "module"
     },
     {
       "id": "black_litterman",
@@ -457,7 +502,8 @@
       "source_location": "L1",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Module implementing the Black-Litterman model and market-implied return estimators."
+      "description": "Module implementing the Black-Litterman model and market-implied return estimators.",
+      "node_type": "module"
     },
     {
       "id": "black_litterman_market_implied_prior_returns",
@@ -467,7 +513,8 @@
       "source_location": "L19",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Computes the market-capitalization-weighted prior estimate of expected returns."
+      "description": "Computes the market-capitalization-weighted prior estimate of expected returns.",
+      "node_type": "function"
     },
     {
       "id": "black_litterman_market_implied_risk_aversion",
@@ -477,7 +524,8 @@
       "source_location": "L60",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Calculates the market-implied risk-aversion parameter from market data."
+      "description": "Calculates the market-implied risk-aversion parameter from market data.",
+      "node_type": "function"
     },
     {
       "id": "black_litterman_blacklittermanmodel",
@@ -487,7 +535,8 @@
       "source_location": "L100",
       "community": 2,
       "community_name": "Community 2",
-      "description": "BlackLittermanModel \u2014 combines market-implied prior returns with investor views to produce posterior estimates."
+      "description": "BlackLittermanModel \u2014 combines market-implied prior returns with investor views to produce posterior estimates.",
+      "node_type": "class"
     },
     {
       "id": "baseoptimizer",
@@ -497,7 +546,8 @@
       "source_location": "",
       "community": 5,
       "community_name": "Community 5",
-      "description": "BaseOptimizer \u2014 shared parent class for optimizers such as Black-Litterman, CLA, and HRP."
+      "description": "BaseOptimizer \u2014 shared parent class for optimizers such as Black-Litterman, CLA, and HRP.",
+      "node_type": "class"
     },
     {
       "id": "black_litterman_blacklittermanmodel_init",
@@ -507,7 +557,8 @@
       "source_location": "L141",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Initializes the model, parsing views and setting the prior and uncertainty matrices."
+      "description": "Initializes the model, parsing views and setting the prior and uncertainty matrices.",
+      "node_type": "method"
     },
     {
       "id": "black_litterman_blacklittermanmodel_parse_views",
@@ -517,7 +568,8 @@
       "source_location": "L224",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Parses absolute views into the Q vector and P matrix form."
+      "description": "Parses absolute views into the Q vector and P matrix form.",
+      "node_type": "method"
     },
     {
       "id": "black_litterman_blacklittermanmodel_set_q_p",
@@ -527,7 +579,8 @@
       "source_location": "L255",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Builds the views matrix P and return vector Q."
+      "description": "Builds the views matrix P and return vector Q.",
+      "node_type": "method"
     },
     {
       "id": "black_litterman_blacklittermanmodel_set_pi",
@@ -537,7 +590,8 @@
       "source_location": "L274",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Sets the prior expected returns, defaulting to market-implied priors."
+      "description": "Sets the prior expected returns, defaulting to market-implied priors.",
+      "node_type": "method"
     },
     {
       "id": "black_litterman_blacklittermanmodel_set_tau",
@@ -547,7 +601,8 @@
       "source_location": "L299",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Sets the tau scalar that scales the covariance prior."
+      "description": "Sets the tau scalar that scales the covariance prior.",
+      "node_type": "method"
     },
     {
       "id": "black_litterman_blacklittermanmodel_set_risk_aversion",
@@ -557,7 +612,8 @@
       "source_location": "L304",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Sets the investor risk-aversion parameter used in the model."
+      "description": "Sets the investor risk-aversion parameter used in the model.",
+      "node_type": "method"
     },
     {
       "id": "black_litterman_blacklittermanmodel_set_omega",
@@ -567,7 +623,8 @@
       "source_location": "L309",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Sets the uncertainty matrix using the default or Idzorek method."
+      "description": "Sets the uncertainty matrix using the default or Idzorek method.",
+      "node_type": "method"
     },
     {
       "id": "black_litterman_blacklittermanmodel_check_attribute_dimensions",
@@ -577,7 +634,8 @@
       "source_location": "L349",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Ensures all initialized model attributes have consistent dimensions."
+      "description": "Ensures all initialized model attributes have consistent dimensions.",
+      "node_type": "method"
     },
     {
       "id": "black_litterman_blacklittermanmodel_default_omega",
@@ -587,7 +645,8 @@
       "source_location": "L366",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Calculates the default uncertainty matrix when omega is not supplied."
+      "description": "Calculates the default uncertainty matrix when omega is not supplied.",
+      "node_type": "method"
     },
     {
       "id": "black_litterman_blacklittermanmodel_idzorek_method",
@@ -597,7 +656,8 @@
       "source_location": "L380",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Builds the uncertainty matrix from user confidences via Idzorek's method."
+      "description": "Builds the uncertainty matrix from user confidences via Idzorek's method.",
+      "node_type": "method"
     },
     {
       "id": "black_litterman_blacklittermanmodel_bl_returns",
@@ -607,7 +667,8 @@
       "source_location": "L417",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Calculates the posterior expected returns given views on assets."
+      "description": "Calculates the posterior expected returns given views on assets.",
+      "node_type": "method"
     },
     {
       "id": "black_litterman_blacklittermanmodel_bl_cov",
@@ -617,7 +678,8 @@
       "source_location": "L445",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Calculates the posterior covariance matrix given the investor views."
+      "description": "Calculates the posterior covariance matrix given the investor views.",
+      "node_type": "method"
     },
     {
       "id": "black_litterman_blacklittermanmodel_bl_weights",
@@ -627,7 +689,8 @@
       "source_location": "L474",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Computes the optimal weights implied by the posterior Black-Litterman returns."
+      "description": "Computes the optimal weights implied by the posterior Black-Litterman returns.",
+      "node_type": "method"
     },
     {
       "id": "black_litterman_blacklittermanmodel_optimize",
@@ -637,7 +700,8 @@
       "source_location": "L512",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Alias for bl_weights() returning the Black-Litterman optimal weights."
+      "description": "Alias for bl_weights() returning the Black-Litterman optimal weights.",
+      "node_type": "method"
     },
     {
       "id": "black_litterman_blacklittermanmodel_portfolio_performance",
@@ -647,7 +711,8 @@
       "source_location": "L518",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Computes and prints the performance of the optimized portfolio."
+      "description": "Computes and prints the performance of the optimized portfolio.",
+      "node_type": "method"
     },
     {
       "id": "black_litterman_rationale_1",
@@ -656,7 +721,8 @@
       "source_file": "black_litterman.py",
       "source_location": "L1",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "module"
     },
     {
       "id": "black_litterman_rationale_22",
@@ -665,7 +731,8 @@
       "source_file": "black_litterman.py",
       "source_location": "L22",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "module"
     },
     {
       "id": "black_litterman_rationale_61",
@@ -674,7 +741,8 @@
       "source_file": "black_litterman.py",
       "source_location": "L61",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "module"
     },
     {
       "id": "black_litterman_rationale_101",
@@ -683,7 +751,8 @@
       "source_file": "black_litterman.py",
       "source_location": "L101",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "module"
     },
     {
       "id": "black_litterman_rationale_154",
@@ -692,7 +761,8 @@
       "source_file": "black_litterman.py",
       "source_location": "L154",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "module"
     },
     {
       "id": "black_litterman_rationale_225",
@@ -701,7 +771,8 @@
       "source_file": "black_litterman.py",
       "source_location": "L225",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "module"
     },
     {
       "id": "black_litterman_rationale_350",
@@ -710,7 +781,8 @@
       "source_file": "black_litterman.py",
       "source_location": "L350",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "module"
     },
     {
       "id": "black_litterman_rationale_367",
@@ -719,7 +791,8 @@
       "source_file": "black_litterman.py",
       "source_location": "L367",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "module"
     },
     {
       "id": "black_litterman_rationale_381",
@@ -728,7 +801,8 @@
       "source_file": "black_litterman.py",
       "source_location": "L381",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "module"
     },
     {
       "id": "black_litterman_rationale_418",
@@ -737,7 +811,8 @@
       "source_file": "black_litterman.py",
       "source_location": "L418",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "module"
     },
     {
       "id": "black_litterman_rationale_446",
@@ -746,7 +821,8 @@
       "source_file": "black_litterman.py",
       "source_location": "L446",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "module"
     },
     {
       "id": "black_litterman_rationale_475",
@@ -755,7 +831,8 @@
       "source_file": "black_litterman.py",
       "source_location": "L475",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "module"
     },
     {
       "id": "black_litterman_rationale_513",
@@ -764,7 +841,8 @@
       "source_file": "black_litterman.py",
       "source_location": "L513",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "module"
     },
     {
       "id": "black_litterman_rationale_519",
@@ -773,7 +851,8 @@
       "source_file": "black_litterman.py",
       "source_location": "L519",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "module"
     },
     {
       "id": "cla",
@@ -783,7 +862,8 @@
       "source_location": "L1",
       "community": 5,
       "community_name": "Community 5",
-      "description": "Module implementing the critical line algorithm optimizer CLA."
+      "description": "Module implementing the critical line algorithm optimizer CLA.",
+      "node_type": "module"
     },
     {
       "id": "cla_cla",
@@ -793,7 +873,8 @@
       "source_location": "L13",
       "community": 3,
       "community_name": "Community 3",
-      "description": "CLA \u2014 efficient-frontier optimizer built on the critical line algorithm."
+      "description": "CLA \u2014 efficient-frontier optimizer built on the critical line algorithm.",
+      "node_type": "class"
     },
     {
       "id": "cla_cla_init",
@@ -803,7 +884,8 @@
       "source_location": "L50",
       "community": 3,
       "community_name": "Community 3",
-      "description": "Initializes the CLA optimizer with expected returns and covariance matrix."
+      "description": "Initializes the CLA optimizer with expected returns and covariance matrix.",
+      "node_type": "method"
     },
     {
       "id": "cla_cla_infnone",
@@ -813,7 +895,8 @@
       "source_location": "L107",
       "community": 3,
       "community_name": "Community 3",
-      "description": "Maps None values to infinity for the critical line algorithm."
+      "description": "Maps None values to infinity for the critical line algorithm.",
+      "node_type": "method"
     },
     {
       "id": "cla_cla_init_algo",
@@ -823,7 +906,8 @@
       "source_location": "L123",
       "community": 3,
       "community_name": "Community 3",
-      "description": "Initializes the starting portfolio for the critical line algorithm."
+      "description": "Initializes the starting portfolio for the critical line algorithm.",
+      "node_type": "method"
     },
     {
       "id": "cla_cla_compute_bi",
@@ -833,7 +917,8 @@
       "source_location": "L140",
       "community": 3,
       "community_name": "Community 3",
-      "description": "Computes the b-vector for the critical line linear system."
+      "description": "Computes the b-vector for the critical line linear system.",
+      "node_type": "method"
     },
     {
       "id": "cla_cla_compute_w",
@@ -843,7 +928,8 @@
       "source_location": "L147",
       "community": 3,
       "community_name": "Community 3",
-      "description": "Computes the optimal weight vector for the current critical line."
+      "description": "Computes the optimal weight vector for the current critical line.",
+      "node_type": "method"
     },
     {
       "id": "cla_cla_compute_lambda",
@@ -853,7 +939,8 @@
       "source_location": "L168",
       "community": 3,
       "community_name": "Community 3",
-      "description": "Computes the Lagrange multiplier lambda for the critical line."
+      "description": "Computes the Lagrange multiplier lambda for the critical line.",
+      "node_type": "method"
     },
     {
       "id": "cla_cla_get_matrices",
@@ -863,7 +950,8 @@
       "source_location": "L195",
       "community": 3,
       "community_name": "Community 3",
-      "description": "Builds the matrices required by the critical line algorithm."
+      "description": "Builds the matrices required by the critical line algorithm.",
+      "node_type": "method"
     },
     {
       "id": "cla_cla_get_b",
@@ -873,7 +961,8 @@
       "source_location": "L204",
       "community": 3,
       "community_name": "Community 3",
-      "description": "Computes the vector b used by the critical line algorithm."
+      "description": "Computes the vector b used by the critical line algorithm.",
+      "node_type": "method"
     },
     {
       "id": "cla_cla_diff_lists",
@@ -883,7 +972,8 @@
       "source_location": "L208",
       "community": 3,
       "community_name": "Community 3",
-      "description": "Computes the set difference between two lists of assets."
+      "description": "Computes the set difference between two lists of assets.",
+      "node_type": "method"
     },
     {
       "id": "cla_cla_reduce_matrix",
@@ -893,7 +983,8 @@
       "source_location": "L212",
       "community": 3,
       "community_name": "Community 3",
-      "description": "Extracts a submatrix using the specified row and column indices."
+      "description": "Extracts a submatrix using the specified row and column indices.",
+      "node_type": "method"
     },
     {
       "id": "cla_cla_purge_num_err",
@@ -903,7 +994,8 @@
       "source_location": "L238",
       "community": 3,
       "community_name": "Community 3",
-      "description": "Removes negligible portfolio weights caused by numerical error."
+      "description": "Removes negligible portfolio weights caused by numerical error.",
+      "node_type": "method"
     },
     {
       "id": "cla_cla_purge_excess",
@@ -913,7 +1005,8 @@
       "source_location": "L263",
       "community": 3,
       "community_name": "Community 3",
-      "description": "Removes weights that have exceeded their bounds during iteration."
+      "description": "Removes weights that have exceeded their bounds during iteration.",
+      "node_type": "method"
     },
     {
       "id": "cla_cla_golden_section",
@@ -923,7 +1016,8 @@
       "source_location": "L289",
       "community": 3,
       "community_name": "Community 3",
-      "description": "Finds the Sharpe-maximizing portfolio using a golden-section search."
+      "description": "Finds the Sharpe-maximizing portfolio using a golden-section search.",
+      "node_type": "method"
     },
     {
       "id": "cla_cla_eval_sr",
@@ -933,7 +1027,8 @@
       "source_location": "L323",
       "community": 3,
       "community_name": "Community 3",
-      "description": "Evaluates the Sharpe ratio of a candidate portfolio on the critical line."
+      "description": "Evaluates the Sharpe ratio of a candidate portfolio on the critical line.",
+      "node_type": "method"
     },
     {
       "id": "cla_cla_solve",
@@ -943,7 +1038,8 @@
       "source_location": "L330",
       "community": 3,
       "community_name": "Community 3",
-      "description": "Solves the critical-line linear system to produce optimal portfolio weights."
+      "description": "Solves the critical-line linear system to produce optimal portfolio weights.",
+      "node_type": "method"
     },
     {
       "id": "cla_cla_max_sharpe",
@@ -953,7 +1049,8 @@
       "source_location": "L400",
       "community": 3,
       "community_name": "Community 3",
-      "description": "Maximizes the Sharpe ratio along the critical line frontier."
+      "description": "Maximizes the Sharpe ratio along the critical line frontier.",
+      "node_type": "method"
     },
     {
       "id": "cla_cla_min_volatility",
@@ -963,7 +1060,8 @@
       "source_location": "L424",
       "community": 3,
       "community_name": "Community 3",
-      "description": "Minimizes portfolio volatility along the critical line efficient frontier."
+      "description": "Minimizes portfolio volatility along the critical line efficient frontier.",
+      "node_type": "method"
     },
     {
       "id": "cla_cla_efficient_frontier",
@@ -973,7 +1071,8 @@
       "source_location": "L443",
       "community": 3,
       "community_name": "Community 3",
-      "description": "Computes the entire efficient frontier for a range of target returns."
+      "description": "Computes the entire efficient frontier for a range of target returns.",
+      "node_type": "method"
     },
     {
       "id": "cla_cla_set_weights",
@@ -983,7 +1082,8 @@
       "source_location": "L483",
       "community": 3,
       "community_name": "Community 3",
-      "description": "Sets the weights attribute from a user-supplied weights array."
+      "description": "Sets the weights attribute from a user-supplied weights array.",
+      "node_type": "method"
     },
     {
       "id": "cla_cla_portfolio_performance",
@@ -993,7 +1093,8 @@
       "source_location": "L487",
       "community": 3,
       "community_name": "Community 3",
-      "description": "Computes and prints the performance of the optimized portfolio."
+      "description": "Computes and prints the performance of the optimized portfolio.",
+      "node_type": "method"
     },
     {
       "id": "cla_rationale_1",
@@ -1002,7 +1103,8 @@
       "source_file": "cla.py",
       "source_location": "L1",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "cla_rationale_14",
@@ -1011,7 +1113,8 @@
       "source_file": "cla.py",
       "source_location": "L14",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "module"
     },
     {
       "id": "cla_rationale_51",
@@ -1020,7 +1123,8 @@
       "source_file": "cla.py",
       "source_location": "L51",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "module"
     },
     {
       "id": "cla_rationale_108",
@@ -1029,7 +1133,8 @@
       "source_file": "cla.py",
       "source_location": "L108",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "module"
     },
     {
       "id": "cla_rationale_213",
@@ -1038,7 +1143,8 @@
       "source_file": "cla.py",
       "source_location": "L213",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "module"
     },
     {
       "id": "cla_rationale_401",
@@ -1047,7 +1153,8 @@
       "source_file": "cla.py",
       "source_location": "L401",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "module"
     },
     {
       "id": "cla_rationale_425",
@@ -1056,7 +1163,8 @@
       "source_file": "cla.py",
       "source_location": "L425",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "module"
     },
     {
       "id": "cla_rationale_444",
@@ -1065,7 +1173,8 @@
       "source_file": "cla.py",
       "source_location": "L444",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "module"
     },
     {
       "id": "cla_rationale_488",
@@ -1074,7 +1183,8 @@
       "source_file": "cla.py",
       "source_location": "L488",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "module"
     },
     {
       "id": "discrete_allocation",
@@ -1084,7 +1194,8 @@
       "source_location": "L1",
       "community": 11,
       "community_name": "Community 11",
-      "description": "Module implementing whole-share discrete allocation of continuous portfolio weights."
+      "description": "Module implementing whole-share discrete allocation of continuous portfolio weights.",
+      "node_type": "module"
     },
     {
       "id": "discrete_allocation_get_latest_prices",
@@ -1094,7 +1205,8 @@
       "source_location": "L17",
       "community": 11,
       "community_name": "Community 11",
-      "description": "Retrieves the most recent price for each asset from price data."
+      "description": "Retrieves the most recent price for each asset from price data.",
+      "node_type": "function"
     },
     {
       "id": "discrete_allocation_discreteallocation",
@@ -1104,7 +1216,8 @@
       "source_location": "L42",
       "community": 11,
       "community_name": "Community 11",
-      "description": "DiscreteAllocation \u2014 converts continuous weights into whole-share allocations via greedy or LP methods."
+      "description": "DiscreteAllocation \u2014 converts continuous weights into whole-share allocations via greedy or LP methods.",
+      "node_type": "class"
     },
     {
       "id": "discrete_allocation_discreteallocation_init",
@@ -1114,7 +1227,8 @@
       "source_location": "L63",
       "community": 11,
       "community_name": "Community 11",
-      "description": "Initializes the allocator from continuous weights and current prices."
+      "description": "Initializes the allocator from continuous weights and current prices.",
+      "node_type": "method"
     },
     {
       "id": "discrete_allocation_discreteallocation_remove_zero_positions",
@@ -1124,7 +1238,8 @@
       "source_location": "L109",
       "community": 11,
       "community_name": "Community 11",
-      "description": "Removes assets with zero shares from the discrete allocation."
+      "description": "Removes assets with zero shares from the discrete allocation.",
+      "node_type": "method"
     },
     {
       "id": "discrete_allocation_discreteallocation_allocation_rmse_error",
@@ -1134,7 +1249,8 @@
       "source_location": "L119",
       "community": 11,
       "community_name": "Community 11",
-      "description": "Calculates and prints the RMSE between discrete and continuous weights."
+      "description": "Calculates and prints the RMSE between discrete and continuous weights.",
+      "node_type": "method"
     },
     {
       "id": "discrete_allocation_discreteallocation_greedy_portfolio",
@@ -1144,7 +1260,8 @@
       "source_location": "L158",
       "community": 11,
       "community_name": "Community 11",
-      "description": "Converts continuous weights into a discrete allocation using a greedy algorithm."
+      "description": "Converts continuous weights into a discrete allocation using a greedy algorithm.",
+      "node_type": "method"
     },
     {
       "id": "discrete_allocation_discreteallocation_lp_portfolio",
@@ -1154,7 +1271,8 @@
       "source_location": "L287",
       "community": 11,
       "community_name": "Community 11",
-      "description": "Converts continuous weights into a discrete allocation using integer programming."
+      "description": "Converts continuous weights into a discrete allocation using integer programming.",
+      "node_type": "method"
     },
     {
       "id": "discrete_allocation_rationale_1",
@@ -1163,7 +1281,8 @@
       "source_file": "discrete_allocation.py",
       "source_location": "L1",
       "community": 11,
-      "community_name": "Community 11"
+      "community_name": "Community 11",
+      "node_type": "module"
     },
     {
       "id": "discrete_allocation_rationale_18",
@@ -1172,7 +1291,8 @@
       "source_file": "discrete_allocation.py",
       "source_location": "L18",
       "community": 11,
-      "community_name": "Community 11"
+      "community_name": "Community 11",
+      "node_type": "module"
     },
     {
       "id": "discrete_allocation_rationale_43",
@@ -1181,7 +1301,8 @@
       "source_file": "discrete_allocation.py",
       "source_location": "L43",
       "community": 11,
-      "community_name": "Community 11"
+      "community_name": "Community 11",
+      "node_type": "module"
     },
     {
       "id": "discrete_allocation_rationale_66",
@@ -1190,7 +1311,8 @@
       "source_file": "discrete_allocation.py",
       "source_location": "L66",
       "community": 11,
-      "community_name": "Community 11"
+      "community_name": "Community 11",
+      "node_type": "module"
     },
     {
       "id": "discrete_allocation_rationale_110",
@@ -1199,7 +1321,8 @@
       "source_file": "discrete_allocation.py",
       "source_location": "L110",
       "community": 11,
-      "community_name": "Community 11"
+      "community_name": "Community 11",
+      "node_type": "module"
     },
     {
       "id": "discrete_allocation_rationale_120",
@@ -1208,7 +1331,8 @@
       "source_file": "discrete_allocation.py",
       "source_location": "L120",
       "community": 11,
-      "community_name": "Community 11"
+      "community_name": "Community 11",
+      "node_type": "module"
     },
     {
       "id": "discrete_allocation_rationale_159",
@@ -1217,7 +1341,8 @@
       "source_file": "discrete_allocation.py",
       "source_location": "L159",
       "community": 11,
-      "community_name": "Community 11"
+      "community_name": "Community 11",
+      "node_type": "module"
     },
     {
       "id": "discrete_allocation_rationale_288",
@@ -1226,7 +1351,8 @@
       "source_file": "discrete_allocation.py",
       "source_location": "L288",
       "community": 11,
-      "community_name": "Community 11"
+      "community_name": "Community 11",
+      "node_type": "module"
     },
     {
       "id": "efficient_frontier_init",
@@ -1235,7 +1361,8 @@
       "source_file": "efficient_frontier/__init__.py",
       "source_location": "L1",
       "community": 14,
-      "community_name": "Community 14"
+      "community_name": "Community 14",
+      "node_type": "module"
     },
     {
       "id": "efficient_frontier_init_rationale_1",
@@ -1244,7 +1371,8 @@
       "source_file": "efficient_frontier/__init__.py",
       "source_location": "L1",
       "community": 14,
-      "community_name": "Community 14"
+      "community_name": "Community 14",
+      "node_type": "module"
     },
     {
       "id": "efficient_frontier_efficient_cdar",
@@ -1253,7 +1381,8 @@
       "source_file": "efficient_frontier/efficient_cdar.py",
       "source_location": "L1",
       "community": 6,
-      "community_name": "Community 6"
+      "community_name": "Community 6",
+      "node_type": "module"
     },
     {
       "id": "efficient_frontier_efficient_cdar_efficientcdar",
@@ -1263,7 +1392,8 @@
       "source_location": "L15",
       "community": 6,
       "community_name": "Community 6",
-      "description": "EfficientCDaR \u2014 optimizer minimizing portfolio Conditional Drawdown at Risk along the mean-CDaR frontier."
+      "description": "EfficientCDaR \u2014 optimizer minimizing portfolio Conditional Drawdown at Risk along the mean-CDaR frontier.",
+      "node_type": "class"
     },
     {
       "id": "efficientfrontier",
@@ -1273,7 +1403,8 @@
       "source_location": "",
       "community": 9,
       "community_name": "Community 9",
-      "description": "EfficientFrontier \u2014 parent optimizer subclassed by the CDaR, CVaR, and semivariance frontiers."
+      "description": "EfficientFrontier \u2014 parent optimizer subclassed by the CDaR, CVaR, and semivariance frontiers.",
+      "node_type": "class"
     },
     {
       "id": "efficient_frontier_efficient_cdar_efficientcdar_init",
@@ -1283,7 +1414,8 @@
       "source_location": "L48",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Initializes the optimizer with expected returns and a validated beta."
+      "description": "Initializes the optimizer with expected returns and a validated beta.",
+      "node_type": "method"
     },
     {
       "id": "efficient_frontier_efficient_cdar_efficientcdar_set_weights",
@@ -1293,7 +1425,8 @@
       "source_location": "L100",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Sets the weights attribute from a user-supplied weights array."
+      "description": "Sets the weights attribute from a user-supplied weights array.",
+      "node_type": "method"
     },
     {
       "id": "efficient_frontier_efficient_cdar_efficientcdar_validate_beta",
@@ -1302,7 +1435,8 @@
       "source_file": "efficient_frontier/efficient_cdar.py",
       "source_location": "L104",
       "community": 6,
-      "community_name": "Community 6"
+      "community_name": "Community 6",
+      "node_type": "method"
     },
     {
       "id": "efficient_frontier_efficient_cdar_efficientcdar_min_volatility",
@@ -1311,7 +1445,8 @@
       "source_file": "efficient_frontier/efficient_cdar.py",
       "source_location": "L114",
       "community": 6,
-      "community_name": "Community 6"
+      "community_name": "Community 6",
+      "node_type": "method"
     },
     {
       "id": "efficient_frontier_efficient_cdar_efficientcdar_max_sharpe",
@@ -1321,7 +1456,8 @@
       "source_location": "L117",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Maximizes the Sharpe ratio for the CDaR optimizer."
+      "description": "Maximizes the Sharpe ratio for the CDaR optimizer.",
+      "node_type": "method"
     },
     {
       "id": "efficient_frontier_efficient_cdar_efficientcdar_max_quadratic_utility",
@@ -1331,7 +1467,8 @@
       "source_location": "L120",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Maximizes quadratic utility within the CDaR optimization framework."
+      "description": "Maximizes quadratic utility within the CDaR optimization framework.",
+      "node_type": "method"
     },
     {
       "id": "efficient_frontier_efficient_cdar_efficientcdar_min_cdar",
@@ -1341,7 +1478,8 @@
       "source_location": "L123",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Minimizes portfolio Conditional Drawdown at Risk for the frontier."
+      "description": "Minimizes portfolio Conditional Drawdown at Risk for the frontier.",
+      "node_type": "method"
     },
     {
       "id": "efficient_frontier_efficient_cdar_efficientcdar_efficient_return",
@@ -1351,7 +1489,8 @@
       "source_location": "L149",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Minimizes portfolio CDaR for a given target return."
+      "description": "Minimizes portfolio CDaR for a given target return.",
+      "node_type": "method"
     },
     {
       "id": "efficient_frontier_efficient_cdar_efficientcdar_efficient_risk",
@@ -1361,7 +1500,8 @@
       "source_location": "L187",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Maximizes return for a target level of portfolio CDaR."
+      "description": "Maximizes return for a target level of portfolio CDaR.",
+      "node_type": "method"
     },
     {
       "id": "efficient_frontier_efficient_cdar_efficientcdar_add_cdar_constraints",
@@ -1371,7 +1511,8 @@
       "source_location": "L231",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Adds the constraints that encode CDaR into the optimization problem."
+      "description": "Adds the constraints that encode CDaR into the optimization problem.",
+      "node_type": "method"
     },
     {
       "id": "efficient_frontier_efficient_cdar_efficientcdar_portfolio_performance",
@@ -1381,7 +1522,8 @@
       "source_location": "L240",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Computes and prints the performance of the optimized portfolio."
+      "description": "Computes and prints the performance of the optimized portfolio.",
+      "node_type": "method"
     },
     {
       "id": "efficient_frontier_efficient_cdar_rationale_1",
@@ -1390,7 +1532,8 @@
       "source_file": "efficient_frontier/efficient_cdar.py",
       "source_location": "L1",
       "community": 6,
-      "community_name": "Community 6"
+      "community_name": "Community 6",
+      "node_type": "module"
     },
     {
       "id": "efficient_frontier_efficient_cdar_rationale_16",
@@ -1399,7 +1542,8 @@
       "source_file": "efficient_frontier/efficient_cdar.py",
       "source_location": "L16",
       "community": 6,
-      "community_name": "Community 6"
+      "community_name": "Community 6",
+      "node_type": "module"
     },
     {
       "id": "efficient_frontier_efficient_cdar_rationale_58",
@@ -1408,7 +1552,8 @@
       "source_file": "efficient_frontier/efficient_cdar.py",
       "source_location": "L58",
       "community": 6,
-      "community_name": "Community 6"
+      "community_name": "Community 6",
+      "node_type": "module"
     },
     {
       "id": "efficient_frontier_efficient_cdar_rationale_124",
@@ -1417,7 +1562,8 @@
       "source_file": "efficient_frontier/efficient_cdar.py",
       "source_location": "L124",
       "community": 6,
-      "community_name": "Community 6"
+      "community_name": "Community 6",
+      "node_type": "module"
     },
     {
       "id": "efficient_frontier_efficient_cdar_rationale_150",
@@ -1426,7 +1572,8 @@
       "source_file": "efficient_frontier/efficient_cdar.py",
       "source_location": "L150",
       "community": 6,
-      "community_name": "Community 6"
+      "community_name": "Community 6",
+      "node_type": "module"
     },
     {
       "id": "efficient_frontier_efficient_cdar_rationale_188",
@@ -1435,7 +1582,8 @@
       "source_file": "efficient_frontier/efficient_cdar.py",
       "source_location": "L188",
       "community": 6,
-      "community_name": "Community 6"
+      "community_name": "Community 6",
+      "node_type": "module"
     },
     {
       "id": "efficient_frontier_efficient_cdar_rationale_241",
@@ -1444,7 +1592,8 @@
       "source_file": "efficient_frontier/efficient_cdar.py",
       "source_location": "L241",
       "community": 6,
-      "community_name": "Community 6"
+      "community_name": "Community 6",
+      "node_type": "module"
     },
     {
       "id": "efficient_frontier_efficient_cvar",
@@ -1453,7 +1602,8 @@
       "source_file": "efficient_frontier/efficient_cvar.py",
       "source_location": "L1",
       "community": 8,
-      "community_name": "Community 8"
+      "community_name": "Community 8",
+      "node_type": "module"
     },
     {
       "id": "efficient_frontier_efficient_cvar_efficientcvar",
@@ -1463,7 +1613,8 @@
       "source_location": "L15",
       "community": 8,
       "community_name": "Community 8",
-      "description": "EfficientCVaR \u2014 optimizer minimizing portfolio Conditional Value at Risk along the mean-CVaR frontier."
+      "description": "EfficientCVaR \u2014 optimizer minimizing portfolio Conditional Value at Risk along the mean-CVaR frontier.",
+      "node_type": "class"
     },
     {
       "id": "efficient_frontier_efficient_cvar_efficientcvar_init",
@@ -1473,7 +1624,8 @@
       "source_location": "L49",
       "community": 8,
       "community_name": "Community 8",
-      "description": "Initializes the CVaR optimizer with expected returns and beta."
+      "description": "Initializes the CVaR optimizer with expected returns and beta.",
+      "node_type": "method"
     },
     {
       "id": "efficient_frontier_efficient_cvar_efficientcvar_set_weights",
@@ -1483,7 +1635,8 @@
       "source_location": "L100",
       "community": 8,
       "community_name": "Community 8",
-      "description": "Sets the weights attribute from a user-supplied weights array."
+      "description": "Sets the weights attribute from a user-supplied weights array.",
+      "node_type": "method"
     },
     {
       "id": "efficient_frontier_efficient_cvar_efficientcvar_validate_beta",
@@ -1492,7 +1645,8 @@
       "source_file": "efficient_frontier/efficient_cvar.py",
       "source_location": "L104",
       "community": 8,
-      "community_name": "Community 8"
+      "community_name": "Community 8",
+      "node_type": "method"
     },
     {
       "id": "efficient_frontier_efficient_cvar_efficientcvar_min_volatility",
@@ -1501,7 +1655,8 @@
       "source_file": "efficient_frontier/efficient_cvar.py",
       "source_location": "L114",
       "community": 8,
-      "community_name": "Community 8"
+      "community_name": "Community 8",
+      "node_type": "method"
     },
     {
       "id": "efficient_frontier_efficient_cvar_efficientcvar_max_sharpe",
@@ -1511,7 +1666,8 @@
       "source_location": "L117",
       "community": 8,
       "community_name": "Community 8",
-      "description": "Maximizes the Sharpe ratio for the CVaR optimizer."
+      "description": "Maximizes the Sharpe ratio for the CVaR optimizer.",
+      "node_type": "method"
     },
     {
       "id": "efficient_frontier_efficient_cvar_efficientcvar_max_quadratic_utility",
@@ -1521,7 +1677,8 @@
       "source_location": "L120",
       "community": 8,
       "community_name": "Community 8",
-      "description": "Maximizes quadratic utility within the CVaR optimization framework."
+      "description": "Maximizes quadratic utility within the CVaR optimization framework.",
+      "node_type": "method"
     },
     {
       "id": "efficient_frontier_efficient_cvar_efficientcvar_min_cvar",
@@ -1531,7 +1688,8 @@
       "source_location": "L123",
       "community": 8,
       "community_name": "Community 8",
-      "description": "Minimizes portfolio Conditional Value at Risk for the frontier."
+      "description": "Minimizes portfolio Conditional Value at Risk for the frontier.",
+      "node_type": "method"
     },
     {
       "id": "efficient_frontier_efficient_cvar_efficientcvar_efficient_return",
@@ -1541,7 +1699,8 @@
       "source_location": "L153",
       "community": 8,
       "community_name": "Community 8",
-      "description": "Minimizes portfolio CVaR for a given target return."
+      "description": "Minimizes portfolio CVaR for a given target return.",
+      "node_type": "method"
     },
     {
       "id": "efficient_frontier_efficient_cvar_efficientcvar_efficient_risk",
@@ -1551,7 +1710,8 @@
       "source_location": "L201",
       "community": 8,
       "community_name": "Community 8",
-      "description": "Maximizes return for a target level of portfolio CVaR."
+      "description": "Maximizes return for a target level of portfolio CVaR.",
+      "node_type": "method"
     },
     {
       "id": "efficient_frontier_efficient_cvar_efficientcvar_portfolio_performance",
@@ -1561,7 +1721,8 @@
       "source_location": "L247",
       "community": 8,
       "community_name": "Community 8",
-      "description": "Computes and prints the performance of the optimized portfolio."
+      "description": "Computes and prints the performance of the optimized portfolio.",
+      "node_type": "method"
     },
     {
       "id": "efficient_frontier_efficient_cvar_rationale_1",
@@ -1570,7 +1731,8 @@
       "source_file": "efficient_frontier/efficient_cvar.py",
       "source_location": "L1",
       "community": 8,
-      "community_name": "Community 8"
+      "community_name": "Community 8",
+      "node_type": "module"
     },
     {
       "id": "efficient_frontier_efficient_cvar_rationale_16",
@@ -1579,7 +1741,8 @@
       "source_file": "efficient_frontier/efficient_cvar.py",
       "source_location": "L16",
       "community": 8,
-      "community_name": "Community 8"
+      "community_name": "Community 8",
+      "node_type": "module"
     },
     {
       "id": "efficient_frontier_efficient_cvar_rationale_59",
@@ -1588,7 +1751,8 @@
       "source_file": "efficient_frontier/efficient_cvar.py",
       "source_location": "L59",
       "community": 8,
-      "community_name": "Community 8"
+      "community_name": "Community 8",
+      "node_type": "module"
     },
     {
       "id": "efficient_frontier_efficient_cvar_rationale_124",
@@ -1597,7 +1761,8 @@
       "source_file": "efficient_frontier/efficient_cvar.py",
       "source_location": "L124",
       "community": 8,
-      "community_name": "Community 8"
+      "community_name": "Community 8",
+      "node_type": "module"
     },
     {
       "id": "efficient_frontier_efficient_cvar_rationale_154",
@@ -1606,7 +1771,8 @@
       "source_file": "efficient_frontier/efficient_cvar.py",
       "source_location": "L154",
       "community": 8,
-      "community_name": "Community 8"
+      "community_name": "Community 8",
+      "node_type": "module"
     },
     {
       "id": "efficient_frontier_efficient_cvar_rationale_202",
@@ -1615,7 +1781,8 @@
       "source_file": "efficient_frontier/efficient_cvar.py",
       "source_location": "L202",
       "community": 8,
-      "community_name": "Community 8"
+      "community_name": "Community 8",
+      "node_type": "module"
     },
     {
       "id": "efficient_frontier_efficient_cvar_rationale_248",
@@ -1624,7 +1791,8 @@
       "source_file": "efficient_frontier/efficient_cvar.py",
       "source_location": "L248",
       "community": 8,
-      "community_name": "Community 8"
+      "community_name": "Community 8",
+      "node_type": "module"
     },
     {
       "id": "efficient_frontier_efficient_frontier",
@@ -1633,7 +1801,8 @@
       "source_file": "efficient_frontier/efficient_frontier.py",
       "source_location": "L1",
       "community": 10,
-      "community_name": "Community 10"
+      "community_name": "Community 10",
+      "node_type": "module"
     },
     {
       "id": "efficient_frontier_efficient_frontier_efficientfrontier",
@@ -1643,7 +1812,8 @@
       "source_location": "L17",
       "community": 10,
       "community_name": "Community 10",
-      "description": "EfficientFrontier \u2014 pypfopt's mean-variance optimizer whose max_sharpe() and min_volatility() return the optimal weights."
+      "description": "EfficientFrontier \u2014 pypfopt's mean-variance optimizer whose max_sharpe() and min_volatility() return the optimal weights.",
+      "node_type": "class"
     },
     {
       "id": "baseconvexoptimizer",
@@ -1653,7 +1823,8 @@
       "source_location": "",
       "community": 10,
       "community_name": "Community 10",
-      "description": "BaseConvexOptimizer \u2014 base class from which EfficientFrontier inherits its convex machinery."
+      "description": "BaseConvexOptimizer \u2014 base class from which EfficientFrontier inherits its convex machinery.",
+      "node_type": "class"
     },
     {
       "id": "efficient_frontier_efficient_frontier_efficientfrontier_init",
@@ -1663,7 +1834,8 @@
       "source_location": "L57",
       "community": 10,
       "community_name": "Community 10",
-      "description": "Initializes the optimizer with expected returns, covariance matrix, and weight bounds."
+      "description": "Initializes the optimizer with expected returns, covariance matrix, and weight bounds.",
+      "node_type": "method"
     },
     {
       "id": "efficient_frontier_efficient_frontier_efficientfrontier_validate_expected_returns",
@@ -1672,7 +1844,8 @@
       "source_file": "efficient_frontier/efficient_frontier.py",
       "source_location": "L126",
       "community": 10,
-      "community_name": "Community 10"
+      "community_name": "Community 10",
+      "node_type": "method"
     },
     {
       "id": "efficient_frontier_efficient_frontier_efficientfrontier_validate_cov_matrix",
@@ -1681,7 +1854,8 @@
       "source_file": "efficient_frontier/efficient_frontier.py",
       "source_location": "L139",
       "community": 10,
-      "community_name": "Community 10"
+      "community_name": "Community 10",
+      "node_type": "method"
     },
     {
       "id": "efficient_frontier_efficient_frontier_efficientfrontier_validate_returns",
@@ -1691,7 +1865,8 @@
       "source_location": "L149",
       "community": 10,
       "community_name": "Community 10",
-      "description": "Validates the daily returns needed by some efficient-frontier subclasses."
+      "description": "Validates the daily returns needed by some efficient-frontier subclasses.",
+      "node_type": "method"
     },
     {
       "id": "efficient_frontier_efficient_frontier_efficientfrontier_make_weight_sum_constraint",
@@ -1701,7 +1876,8 @@
       "source_location": "L172",
       "community": 13,
       "community_name": "Community 13",
-      "description": "Helper that builds the weight-sum constraint, optionally enforcing market neutrality."
+      "description": "Helper that builds the weight-sum constraint, optionally enforcing market neutrality.",
+      "node_type": "method"
     },
     {
       "id": "efficient_frontier_efficient_frontier_efficientfrontier_min_volatility",
@@ -1711,7 +1887,8 @@
       "source_location": "L195",
       "community": 10,
       "community_name": "Community 10",
-      "description": "Minimizes portfolio volatility and returns the optimal weights."
+      "description": "Minimizes portfolio volatility and returns the optimal weights.",
+      "node_type": "method"
     },
     {
       "id": "efficient_frontier_efficient_frontier_efficientfrontier_max_return",
@@ -1721,7 +1898,8 @@
       "source_location": "L213",
       "community": 13,
       "community_name": "Community 13",
-      "description": "Helper maximizing return, used internally rather than directly by users."
+      "description": "Helper maximizing return, used internally rather than directly by users.",
+      "node_type": "method"
     },
     {
       "id": "efficient_frontier_efficient_frontier_efficientfrontier_max_sharpe",
@@ -1731,7 +1909,8 @@
       "source_location": "L238",
       "community": 10,
       "community_name": "Community 10",
-      "description": "Maximizes the Sharpe ratio, producing the tangency portfolio."
+      "description": "Maximizes the Sharpe ratio, producing the tangency portfolio.",
+      "node_type": "method"
     },
     {
       "id": "efficient_frontier_efficient_frontier_efficientfrontier_max_quadratic_utility",
@@ -1741,7 +1920,8 @@
       "source_location": "L317",
       "community": 13,
       "community_name": "Community 13",
-      "description": "Maximizes quadratic utility, balancing expected return against portfolio variance."
+      "description": "Maximizes quadratic utility, balancing expected return against portfolio variance.",
+      "node_type": "method"
     },
     {
       "id": "efficient_frontier_efficient_frontier_efficientfrontier_efficient_risk",
@@ -1751,7 +1931,8 @@
       "source_location": "L359",
       "community": 13,
       "community_name": "Community 13",
-      "description": "Maximizes return for a target level of portfolio risk."
+      "description": "Maximizes return for a target level of portfolio risk.",
+      "node_type": "method"
     },
     {
       "id": "efficient_frontier_efficient_frontier_efficientfrontier_efficient_return",
@@ -1761,7 +1942,8 @@
       "source_location": "L418",
       "community": 13,
       "community_name": "Community 13",
-      "description": "Returns the Markowitz portfolio minimizing volatility for a given target return."
+      "description": "Returns the Markowitz portfolio minimizing volatility for a given target return.",
+      "node_type": "method"
     },
     {
       "id": "efficient_frontier_efficient_frontier_efficientfrontier_portfolio_performance",
@@ -1771,7 +1953,8 @@
       "source_location": "L472",
       "community": 10,
       "community_name": "Community 10",
-      "description": "Computes and prints the performance of the optimized portfolio."
+      "description": "Computes and prints the performance of the optimized portfolio.",
+      "node_type": "method"
     },
     {
       "id": "efficient_frontier_efficient_frontier_efficientfrontier_validate_market_neutral",
@@ -1781,7 +1964,8 @@
       "source_location": "L513",
       "community": 13,
       "community_name": "Community 13",
-      "description": "Validates that market-neutral settings are compatible with the weight bounds."
+      "description": "Validates that market-neutral settings are compatible with the weight bounds.",
+      "node_type": "method"
     },
     {
       "id": "efficient_frontier_efficient_frontier_rationale_1",
@@ -1790,7 +1974,8 @@
       "source_file": "efficient_frontier/efficient_frontier.py",
       "source_location": "L1",
       "community": 10,
-      "community_name": "Community 10"
+      "community_name": "Community 10",
+      "node_type": "module"
     },
     {
       "id": "efficient_frontier_efficient_frontier_rationale_18",
@@ -1799,7 +1984,8 @@
       "source_file": "efficient_frontier/efficient_frontier.py",
       "source_location": "L18",
       "community": 10,
-      "community_name": "Community 10"
+      "community_name": "Community 10",
+      "node_type": "module"
     },
     {
       "id": "efficient_frontier_efficient_frontier_rationale_66",
@@ -1808,7 +1994,8 @@
       "source_file": "efficient_frontier/efficient_frontier.py",
       "source_location": "L66",
       "community": 10,
-      "community_name": "Community 10"
+      "community_name": "Community 10",
+      "node_type": "module"
     },
     {
       "id": "efficient_frontier_efficient_frontier_rationale_150",
@@ -1817,7 +2004,8 @@
       "source_file": "efficient_frontier/efficient_frontier.py",
       "source_location": "L150",
       "community": 10,
-      "community_name": "Community 10"
+      "community_name": "Community 10",
+      "node_type": "module"
     },
     {
       "id": "efficient_frontier_efficient_frontier_rationale_173",
@@ -1826,7 +2014,8 @@
       "source_file": "efficient_frontier/efficient_frontier.py",
       "source_location": "L173",
       "community": 13,
-      "community_name": "Community 13"
+      "community_name": "Community 13",
+      "node_type": "module"
     },
     {
       "id": "efficient_frontier_efficient_frontier_rationale_196",
@@ -1835,7 +2024,8 @@
       "source_file": "efficient_frontier/efficient_frontier.py",
       "source_location": "L196",
       "community": 10,
-      "community_name": "Community 10"
+      "community_name": "Community 10",
+      "node_type": "module"
     },
     {
       "id": "efficient_frontier_efficient_frontier_rationale_214",
@@ -1844,7 +2034,8 @@
       "source_file": "efficient_frontier/efficient_frontier.py",
       "source_location": "L214",
       "community": 13,
-      "community_name": "Community 13"
+      "community_name": "Community 13",
+      "node_type": "module"
     },
     {
       "id": "efficient_frontier_efficient_frontier_rationale_239",
@@ -1853,7 +2044,8 @@
       "source_file": "efficient_frontier/efficient_frontier.py",
       "source_location": "L239",
       "community": 10,
-      "community_name": "Community 10"
+      "community_name": "Community 10",
+      "node_type": "module"
     },
     {
       "id": "efficient_frontier_efficient_frontier_rationale_318",
@@ -1862,7 +2054,8 @@
       "source_file": "efficient_frontier/efficient_frontier.py",
       "source_location": "L318",
       "community": 13,
-      "community_name": "Community 13"
+      "community_name": "Community 13",
+      "node_type": "module"
     },
     {
       "id": "efficient_frontier_efficient_frontier_rationale_360",
@@ -1871,7 +2064,8 @@
       "source_file": "efficient_frontier/efficient_frontier.py",
       "source_location": "L360",
       "community": 13,
-      "community_name": "Community 13"
+      "community_name": "Community 13",
+      "node_type": "module"
     },
     {
       "id": "efficient_frontier_efficient_frontier_rationale_419",
@@ -1880,7 +2074,8 @@
       "source_file": "efficient_frontier/efficient_frontier.py",
       "source_location": "L419",
       "community": 13,
-      "community_name": "Community 13"
+      "community_name": "Community 13",
+      "node_type": "module"
     },
     {
       "id": "efficient_frontier_efficient_frontier_rationale_473",
@@ -1889,7 +2084,8 @@
       "source_file": "efficient_frontier/efficient_frontier.py",
       "source_location": "L473",
       "community": 10,
-      "community_name": "Community 10"
+      "community_name": "Community 10",
+      "node_type": "module"
     },
     {
       "id": "efficient_frontier_efficient_semivariance",
@@ -1898,7 +2094,8 @@
       "source_file": "efficient_frontier/efficient_semivariance.py",
       "source_location": "L1",
       "community": 9,
-      "community_name": "Community 9"
+      "community_name": "Community 9",
+      "node_type": "module"
     },
     {
       "id": "efficient_frontier_efficient_semivariance_efficientsemivariance",
@@ -1908,7 +2105,8 @@
       "source_location": "L13",
       "community": 9,
       "community_name": "Community 9",
-      "description": "EfficientSemivariance \u2014 optimizer minimizing portfolio downside risk through semivariance."
+      "description": "EfficientSemivariance \u2014 optimizer minimizing portfolio downside risk through semivariance.",
+      "node_type": "class"
     },
     {
       "id": "efficient_frontier_efficient_semivariance_efficientsemivariance_init",
@@ -1918,7 +2116,8 @@
       "source_location": "L50",
       "community": 9,
       "community_name": "Community 9",
-      "description": "Initializes the optimizer with expected returns and historical returns."
+      "description": "Initializes the optimizer with expected returns and historical returns.",
+      "node_type": "method"
     },
     {
       "id": "efficient_frontier_efficient_semivariance_efficientsemivariance_min_volatility",
@@ -1927,7 +2126,8 @@
       "source_file": "efficient_frontier/efficient_semivariance.py",
       "source_location": "L110",
       "community": 9,
-      "community_name": "Community 9"
+      "community_name": "Community 9",
+      "node_type": "method"
     },
     {
       "id": "efficient_frontier_efficient_semivariance_efficientsemivariance_max_sharpe",
@@ -1937,7 +2137,8 @@
       "source_location": "L113",
       "community": 9,
       "community_name": "Community 9",
-      "description": "Maximizes the Sharpe ratio for the semivariance optimizer."
+      "description": "Maximizes the Sharpe ratio for the semivariance optimizer.",
+      "node_type": "method"
     },
     {
       "id": "efficient_frontier_efficient_semivariance_efficientsemivariance_min_semivariance",
@@ -1946,7 +2147,8 @@
       "source_file": "efficient_frontier/efficient_semivariance.py",
       "source_location": "L116",
       "community": 9,
-      "community_name": "Community 9"
+      "community_name": "Community 9",
+      "node_type": "method"
     },
     {
       "id": "efficient_frontier_efficient_semivariance_efficientsemivariance_max_quadratic_utility",
@@ -1956,7 +2158,8 @@
       "source_location": "L143",
       "community": 9,
       "community_name": "Community 9",
-      "description": "Maximizes quadratic utility using portfolio semivariance as the risk term."
+      "description": "Maximizes quadratic utility using portfolio semivariance as the risk term.",
+      "node_type": "method"
     },
     {
       "id": "efficient_frontier_efficient_semivariance_efficientsemivariance_efficient_risk",
@@ -1966,7 +2169,8 @@
       "source_location": "L186",
       "community": 9,
       "community_name": "Community 9",
-      "description": "Maximizes return for a target semideviation of the portfolio."
+      "description": "Maximizes return for a target semideviation of the portfolio.",
+      "node_type": "method"
     },
     {
       "id": "efficient_frontier_efficient_semivariance_efficientsemivariance_efficient_return",
@@ -1976,7 +2180,8 @@
       "source_location": "L230",
       "community": 9,
       "community_name": "Community 9",
-      "description": "Minimizes semideviation for a given target portfolio return."
+      "description": "Minimizes semideviation for a given target portfolio return.",
+      "node_type": "method"
     },
     {
       "id": "efficient_frontier_efficient_semivariance_efficientsemivariance_portfolio_performance",
@@ -1986,7 +2191,8 @@
       "source_location": "L281",
       "community": 9,
       "community_name": "Community 9",
-      "description": "Computes and prints the performance of the optimized portfolio."
+      "description": "Computes and prints the performance of the optimized portfolio.",
+      "node_type": "method"
     },
     {
       "id": "efficient_frontier_efficient_semivariance_rationale_1",
@@ -1995,7 +2201,8 @@
       "source_file": "efficient_frontier/efficient_semivariance.py",
       "source_location": "L1",
       "community": 9,
-      "community_name": "Community 9"
+      "community_name": "Community 9",
+      "node_type": "module"
     },
     {
       "id": "efficient_frontier_efficient_semivariance_rationale_14",
@@ -2004,7 +2211,8 @@
       "source_file": "efficient_frontier/efficient_semivariance.py",
       "source_location": "L14",
       "community": 9,
-      "community_name": "Community 9"
+      "community_name": "Community 9",
+      "node_type": "module"
     },
     {
       "id": "efficient_frontier_efficient_semivariance_rationale_61",
@@ -2013,7 +2221,8 @@
       "source_file": "efficient_frontier/efficient_semivariance.py",
       "source_location": "L61",
       "community": 9,
-      "community_name": "Community 9"
+      "community_name": "Community 9",
+      "node_type": "module"
     },
     {
       "id": "efficient_frontier_efficient_semivariance_rationale_117",
@@ -2022,7 +2231,8 @@
       "source_file": "efficient_frontier/efficient_semivariance.py",
       "source_location": "L117",
       "community": 9,
-      "community_name": "Community 9"
+      "community_name": "Community 9",
+      "node_type": "module"
     },
     {
       "id": "efficient_frontier_efficient_semivariance_rationale_144",
@@ -2031,7 +2241,8 @@
       "source_file": "efficient_frontier/efficient_semivariance.py",
       "source_location": "L144",
       "community": 9,
-      "community_name": "Community 9"
+      "community_name": "Community 9",
+      "node_type": "module"
     },
     {
       "id": "efficient_frontier_efficient_semivariance_rationale_187",
@@ -2040,7 +2251,8 @@
       "source_file": "efficient_frontier/efficient_semivariance.py",
       "source_location": "L187",
       "community": 9,
-      "community_name": "Community 9"
+      "community_name": "Community 9",
+      "node_type": "module"
     },
     {
       "id": "efficient_frontier_efficient_semivariance_rationale_231",
@@ -2049,7 +2261,8 @@
       "source_file": "efficient_frontier/efficient_semivariance.py",
       "source_location": "L231",
       "community": 9,
-      "community_name": "Community 9"
+      "community_name": "Community 9",
+      "node_type": "module"
     },
     {
       "id": "efficient_frontier_efficient_semivariance_rationale_282",
@@ -2058,7 +2271,8 @@
       "source_file": "efficient_frontier/efficient_semivariance.py",
       "source_location": "L282",
       "community": 9,
-      "community_name": "Community 9"
+      "community_name": "Community 9",
+      "node_type": "module"
     },
     {
       "id": "exceptions",
@@ -2068,7 +2282,8 @@
       "source_location": "L1",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Module defining custom exceptions such as OptimizationError and InstantiationError."
+      "description": "Module defining custom exceptions such as OptimizationError and InstantiationError.",
+      "node_type": "module"
     },
     {
       "id": "exceptions_optimizationerror",
@@ -2078,7 +2293,8 @@
       "source_location": "L8",
       "community": 0,
       "community_name": "Community 0",
-      "description": "OptimizationError \u2014 custom exception raised when a portfolio optimization problem fails."
+      "description": "OptimizationError \u2014 custom exception raised when a portfolio optimization problem fails.",
+      "node_type": "class"
     },
     {
       "id": "exception",
@@ -2088,7 +2304,8 @@
       "source_location": "",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Built-in base class from which pypfopt's custom exceptions derive."
+      "description": "Built-in base class from which pypfopt's custom exceptions derive.",
+      "node_type": "class"
     },
     {
       "id": "exceptions_optimizationerror_init",
@@ -2097,7 +2314,8 @@
       "source_file": "exceptions.py",
       "source_location": "L14",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "method"
     },
     {
       "id": "exceptions_instantiationerror",
@@ -2107,7 +2325,8 @@
       "source_location": "L21",
       "community": 0,
       "community_name": "Community 0",
-      "description": "InstantiationError \u2014 custom exception raised when an optimizer is constructed with invalid inputs."
+      "description": "InstantiationError \u2014 custom exception raised when an optimizer is constructed with invalid inputs.",
+      "node_type": "class"
     },
     {
       "id": "exceptions_rationale_1",
@@ -2116,7 +2335,8 @@
       "source_file": "exceptions.py",
       "source_location": "L1",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "module"
     },
     {
       "id": "exceptions_rationale_9",
@@ -2125,7 +2345,8 @@
       "source_file": "exceptions.py",
       "source_location": "L9",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "module"
     },
     {
       "id": "exceptions_rationale_22",
@@ -2134,7 +2355,8 @@
       "source_file": "exceptions.py",
       "source_location": "L22",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "module"
     },
     {
       "id": "expected_returns",
@@ -2144,7 +2366,8 @@
       "source_location": "L1",
       "community": 12,
       "community_name": "Community 12",
-      "description": "Module implementing expected-return estimators including CAPM and historical means."
+      "description": "Module implementing expected-return estimators including CAPM and historical means.",
+      "node_type": "module"
     },
     {
       "id": "expected_returns_check_returns",
@@ -2153,7 +2376,8 @@
       "source_file": "expected_returns.py",
       "source_location": "L29",
       "community": 12,
-      "community_name": "Community 12"
+      "community_name": "Community 12",
+      "node_type": "function"
     },
     {
       "id": "expected_returns_returns_from_prices",
@@ -2163,7 +2387,8 @@
       "source_location": "L41",
       "community": 12,
       "community_name": "Community 12",
-      "description": "Converts asset price data into a daily returns series."
+      "description": "Converts asset price data into a daily returns series.",
+      "node_type": "function"
     },
     {
       "id": "expected_returns_prices_from_returns",
@@ -2173,7 +2398,8 @@
       "source_location": "L65",
       "community": 12,
       "community_name": "Community 12",
-      "description": "Calculates pseudo-prices from a returns series for downstream use."
+      "description": "Calculates pseudo-prices from a returns series for downstream use.",
+      "node_type": "function"
     },
     {
       "id": "expected_returns_return_model",
@@ -2183,7 +2409,8 @@
       "source_location": "L91",
       "community": 12,
       "community_name": "Community 12",
-      "description": "Computes an expected-returns estimate using the specified return model."
+      "description": "Computes an expected-returns estimate using the specified return model.",
+      "node_type": "function"
     },
     {
       "id": "expected_returns_mean_historical_return",
@@ -2193,7 +2420,8 @@
       "source_location": "L129",
       "community": 12,
       "community_name": "Community 12",
-      "description": "Estimates the annualized mean of historical daily asset returns."
+      "description": "Estimates the annualized mean of historical daily asset returns.",
+      "node_type": "function"
     },
     {
       "id": "expected_returns_ema_historical_return",
@@ -2203,7 +2431,8 @@
       "source_location": "L174",
       "community": 12,
       "community_name": "Community 12",
-      "description": "Computes the exponentially-weighted mean of historical daily returns."
+      "description": "Computes the exponentially-weighted mean of historical daily returns.",
+      "node_type": "function"
     },
     {
       "id": "expected_returns_capm_return",
@@ -2213,7 +2442,8 @@
       "source_location": "L226",
       "community": 12,
       "community_name": "Community 12",
-      "description": "Estimates expected returns using the Capital Asset Pricing Model."
+      "description": "Estimates expected returns using the Capital Asset Pricing Model.",
+      "node_type": "function"
     },
     {
       "id": "expected_returns_rationale_1",
@@ -2222,7 +2452,8 @@
       "source_file": "expected_returns.py",
       "source_location": "L1",
       "community": 12,
-      "community_name": "Community 12"
+      "community_name": "Community 12",
+      "node_type": "module"
     },
     {
       "id": "expected_returns_rationale_42",
@@ -2231,7 +2462,8 @@
       "source_file": "expected_returns.py",
       "source_location": "L42",
       "community": 12,
-      "community_name": "Community 12"
+      "community_name": "Community 12",
+      "node_type": "module"
     },
     {
       "id": "expected_returns_rationale_66",
@@ -2240,7 +2472,8 @@
       "source_file": "expected_returns.py",
       "source_location": "L66",
       "community": 12,
-      "community_name": "Community 12"
+      "community_name": "Community 12",
+      "node_type": "module"
     },
     {
       "id": "expected_returns_rationale_92",
@@ -2249,7 +2482,8 @@
       "source_file": "expected_returns.py",
       "source_location": "L92",
       "community": 12,
-      "community_name": "Community 12"
+      "community_name": "Community 12",
+      "node_type": "module"
     },
     {
       "id": "expected_returns_rationale_132",
@@ -2258,7 +2492,8 @@
       "source_file": "expected_returns.py",
       "source_location": "L132",
       "community": 12,
-      "community_name": "Community 12"
+      "community_name": "Community 12",
+      "node_type": "module"
     },
     {
       "id": "expected_returns_rationale_182",
@@ -2267,7 +2502,8 @@
       "source_file": "expected_returns.py",
       "source_location": "L182",
       "community": 12,
-      "community_name": "Community 12"
+      "community_name": "Community 12",
+      "node_type": "module"
     },
     {
       "id": "expected_returns_rationale_235",
@@ -2276,7 +2512,8 @@
       "source_file": "expected_returns.py",
       "source_location": "L235",
       "community": 12,
-      "community_name": "Community 12"
+      "community_name": "Community 12",
+      "node_type": "module"
     },
     {
       "id": "hierarchical_portfolio",
@@ -2286,7 +2523,8 @@
       "source_location": "L1",
       "community": 5,
       "community_name": "Community 5",
-      "description": "Module implementing hierarchical risk parity portfolio construction with clustering."
+      "description": "Module implementing hierarchical risk parity portfolio construction with clustering.",
+      "node_type": "module"
     },
     {
       "id": "hierarchical_portfolio_hrpopt",
@@ -2296,7 +2534,8 @@
       "source_location": "L26",
       "community": 5,
       "community_name": "Community 5",
-      "description": "HRPOpt \u2014 constructs a hierarchical risk parity portfolio from cluster variances."
+      "description": "HRPOpt \u2014 constructs a hierarchical risk parity portfolio from cluster variances.",
+      "node_type": "class"
     },
     {
       "id": "hierarchical_portfolio_hrpopt_init",
@@ -2306,7 +2545,8 @@
       "source_location": "L54",
       "community": 5,
       "community_name": "Community 5",
-      "description": "Initializes the HRP optimizer from a historical returns dataframe."
+      "description": "Initializes the HRP optimizer from a historical returns dataframe.",
+      "node_type": "method"
     },
     {
       "id": "hierarchical_portfolio_hrpopt_get_cluster_var",
@@ -2316,7 +2556,8 @@
       "source_location": "L85",
       "community": 5,
       "community_name": "Community 5",
-      "description": "Computes the variance of each cluster in the asset hierarchy."
+      "description": "Computes the variance of each cluster in the asset hierarchy.",
+      "node_type": "method"
     },
     {
       "id": "hierarchical_portfolio_hrpopt_get_quasi_diag",
@@ -2326,7 +2567,8 @@
       "source_location": "L108",
       "community": 5,
       "community_name": "Community 5",
-      "description": "Sorts clustered items by distance into a quasi-diagonal order."
+      "description": "Sorts clustered items by distance into a quasi-diagonal order.",
+      "node_type": "method"
     },
     {
       "id": "hierarchical_portfolio_hrpopt_raw_hrp_allocation",
@@ -2336,7 +2578,8 @@
       "source_location": "L125",
       "community": 5,
       "community_name": "Community 5",
-      "description": "Recursively computes risk-minimizing weights across the hierarchical cluster tree."
+      "description": "Recursively computes risk-minimizing weights across the hierarchical cluster tree.",
+      "node_type": "method"
     },
     {
       "id": "hierarchical_portfolio_hrpopt_optimize",
@@ -2346,7 +2589,8 @@
       "source_location": "L164",
       "community": 5,
       "community_name": "Community 5",
-      "description": "Builds the hierarchical risk parity portfolio using hierarchical clustering."
+      "description": "Builds the hierarchical risk parity portfolio using hierarchical clustering.",
+      "node_type": "method"
     },
     {
       "id": "hierarchical_portfolio_hrpopt_portfolio_performance",
@@ -2356,7 +2600,8 @@
       "source_location": "L203",
       "community": 5,
       "community_name": "Community 5",
-      "description": "Computes and prints the performance of the optimized portfolio."
+      "description": "Computes and prints the performance of the optimized portfolio.",
+      "node_type": "method"
     },
     {
       "id": "hierarchical_portfolio_rationale_1",
@@ -2365,7 +2610,8 @@
       "source_file": "hierarchical_portfolio.py",
       "source_location": "L1",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "hierarchical_portfolio_rationale_27",
@@ -2374,7 +2620,8 @@
       "source_file": "hierarchical_portfolio.py",
       "source_location": "L27",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "hierarchical_portfolio_rationale_55",
@@ -2383,7 +2630,8 @@
       "source_file": "hierarchical_portfolio.py",
       "source_location": "L55",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "hierarchical_portfolio_rationale_86",
@@ -2392,7 +2640,8 @@
       "source_file": "hierarchical_portfolio.py",
       "source_location": "L86",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "hierarchical_portfolio_rationale_109",
@@ -2401,7 +2650,8 @@
       "source_file": "hierarchical_portfolio.py",
       "source_location": "L109",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "hierarchical_portfolio_rationale_126",
@@ -2410,7 +2660,8 @@
       "source_file": "hierarchical_portfolio.py",
       "source_location": "L126",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "hierarchical_portfolio_rationale_165",
@@ -2419,7 +2670,8 @@
       "source_file": "hierarchical_portfolio.py",
       "source_location": "L165",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "hierarchical_portfolio_rationale_204",
@@ -2428,7 +2680,8 @@
       "source_file": "hierarchical_portfolio.py",
       "source_location": "L204",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "objective_functions",
@@ -2438,7 +2691,8 @@
       "source_location": "L1",
       "community": 7,
       "community_name": "Community 7",
-      "description": "Module providing convex objective functions and penalty terms for optimization."
+      "description": "Module providing convex objective functions and penalty terms for optimization.",
+      "node_type": "module"
     },
     {
       "id": "objective_functions_objective_value",
@@ -2447,7 +2701,8 @@
       "source_file": "objective_functions.py",
       "source_location": "L35",
       "community": 7,
-      "community_name": "Community 7"
+      "community_name": "Community 7",
+      "node_type": "function"
     },
     {
       "id": "objective_functions_portfolio_variance",
@@ -2457,7 +2712,8 @@
       "source_location": "L64",
       "community": 7,
       "community_name": "Community 7",
-      "description": "Calculates the total variance of a portfolio as an objective term."
+      "description": "Calculates the total variance of a portfolio as an objective term.",
+      "node_type": "function"
     },
     {
       "id": "objective_functions_portfolio_return",
@@ -2467,7 +2723,8 @@
       "source_location": "L84",
       "community": 7,
       "community_name": "Community 7",
-      "description": "Calculates the negative mean return of a portfolio as an objective."
+      "description": "Calculates the negative mean return of a portfolio as an objective.",
+      "node_type": "function"
     },
     {
       "id": "objective_functions_sharpe_ratio",
@@ -2477,7 +2734,8 @@
       "source_location": "L107",
       "community": 7,
       "community_name": "Community 7",
-      "description": "Calculates the negative Sharpe ratio of a portfolio as an objective."
+      "description": "Calculates the negative Sharpe ratio of a portfolio as an objective.",
+      "node_type": "function"
     },
     {
       "id": "objective_functions_l2_reg",
@@ -2487,7 +2745,8 @@
       "source_location": "L138",
       "community": 7,
       "community_name": "Community 7",
-      "description": "L2 regularization penalty that increases the number of nonzero weights."
+      "description": "L2 regularization penalty that increases the number of nonzero weights.",
+      "node_type": "function"
     },
     {
       "id": "objective_functions_quadratic_utility",
@@ -2497,7 +2756,8 @@
       "source_location": "L165",
       "community": 7,
       "community_name": "Community 7",
-      "description": "Quadratic utility objective balancing expected return against variance."
+      "description": "Quadratic utility objective balancing expected return against variance.",
+      "node_type": "function"
     },
     {
       "id": "objective_functions_transaction_cost",
@@ -2507,7 +2767,8 @@
       "source_location": "L198",
       "community": 7,
       "community_name": "Community 7",
-      "description": "Transaction cost model penalizing the changes in portfolio weights."
+      "description": "Transaction cost model penalizing the changes in portfolio weights.",
+      "node_type": "function"
     },
     {
       "id": "objective_functions_ex_ante_tracking_error",
@@ -2517,7 +2778,8 @@
       "source_location": "L221",
       "community": 7,
       "community_name": "Community 7",
-      "description": "Calculates the ex-ante tracking error against a benchmark portfolio."
+      "description": "Calculates the ex-ante tracking error against a benchmark portfolio.",
+      "node_type": "function"
     },
     {
       "id": "objective_functions_ex_post_tracking_error",
@@ -2527,7 +2789,8 @@
       "source_location": "L245",
       "community": 7,
       "community_name": "Community 7",
-      "description": "Calculates the ex-post tracking error between portfolio and benchmark returns."
+      "description": "Calculates the ex-post tracking error between portfolio and benchmark returns.",
+      "node_type": "function"
     },
     {
       "id": "objective_functions_rationale_1",
@@ -2536,7 +2799,8 @@
       "source_file": "objective_functions.py",
       "source_location": "L1",
       "community": 7,
-      "community_name": "Community 7"
+      "community_name": "Community 7",
+      "node_type": "module"
     },
     {
       "id": "objective_functions_rationale_36",
@@ -2545,7 +2809,8 @@
       "source_file": "objective_functions.py",
       "source_location": "L36",
       "community": 7,
-      "community_name": "Community 7"
+      "community_name": "Community 7",
+      "node_type": "module"
     },
     {
       "id": "objective_functions_rationale_65",
@@ -2554,7 +2819,8 @@
       "source_file": "objective_functions.py",
       "source_location": "L65",
       "community": 7,
-      "community_name": "Community 7"
+      "community_name": "Community 7",
+      "node_type": "module"
     },
     {
       "id": "objective_functions_rationale_85",
@@ -2563,7 +2829,8 @@
       "source_file": "objective_functions.py",
       "source_location": "L85",
       "community": 7,
-      "community_name": "Community 7"
+      "community_name": "Community 7",
+      "node_type": "module"
     },
     {
       "id": "objective_functions_rationale_108",
@@ -2572,7 +2839,8 @@
       "source_file": "objective_functions.py",
       "source_location": "L108",
       "community": 7,
-      "community_name": "Community 7"
+      "community_name": "Community 7",
+      "node_type": "module"
     },
     {
       "id": "objective_functions_rationale_139",
@@ -2581,7 +2849,8 @@
       "source_file": "objective_functions.py",
       "source_location": "L139",
       "community": 7,
-      "community_name": "Community 7"
+      "community_name": "Community 7",
+      "node_type": "module"
     },
     {
       "id": "objective_functions_rationale_166",
@@ -2590,7 +2859,8 @@
       "source_file": "objective_functions.py",
       "source_location": "L166",
       "community": 7,
-      "community_name": "Community 7"
+      "community_name": "Community 7",
+      "node_type": "module"
     },
     {
       "id": "objective_functions_rationale_199",
@@ -2599,7 +2869,8 @@
       "source_file": "objective_functions.py",
       "source_location": "L199",
       "community": 7,
-      "community_name": "Community 7"
+      "community_name": "Community 7",
+      "node_type": "module"
     },
     {
       "id": "objective_functions_rationale_222",
@@ -2608,7 +2879,8 @@
       "source_file": "objective_functions.py",
       "source_location": "L222",
       "community": 7,
-      "community_name": "Community 7"
+      "community_name": "Community 7",
+      "node_type": "module"
     },
     {
       "id": "objective_functions_rationale_246",
@@ -2617,7 +2889,8 @@
       "source_file": "objective_functions.py",
       "source_location": "L246",
       "community": 7,
-      "community_name": "Community 7"
+      "community_name": "Community 7",
+      "node_type": "module"
     },
     {
       "id": "plotting",
@@ -2627,7 +2900,8 @@
       "source_location": "L1",
       "community": 4,
       "community_name": "Community 4",
-      "description": "Module providing plotting utilities for frontiers, covariance matrices, and portfolio weights."
+      "description": "Module providing plotting utilities for frontiers, covariance matrices, and portfolio weights.",
+      "node_type": "module"
     },
     {
       "id": "plotting_import_matplotlib",
@@ -2636,7 +2910,8 @@
       "source_file": "plotting.py",
       "source_location": "L20",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "function"
     },
     {
       "id": "plotting_get_plotly",
@@ -2645,7 +2920,8 @@
       "source_file": "plotting.py",
       "source_location": "L30",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "function"
     },
     {
       "id": "plotting_plot_io",
@@ -2654,7 +2930,8 @@
       "source_file": "plotting.py",
       "source_location": "L43",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "function"
     },
     {
       "id": "plotting_plot_covariance",
@@ -2664,7 +2941,8 @@
       "source_location": "L69",
       "community": 4,
       "community_name": "Community 4",
-      "description": "Plots a heatmap of the covariance or correlation matrix."
+      "description": "Plots a heatmap of the covariance or correlation matrix.",
+      "node_type": "function"
     },
     {
       "id": "plotting_plot_dendrogram",
@@ -2674,7 +2952,8 @@
       "source_location": "L112",
       "community": 4,
       "community_name": "Community 4",
-      "description": "Plots the asset clusters in the form of a dendrogram."
+      "description": "Plots the asset clusters in the form of a dendrogram.",
+      "node_type": "function"
     },
     {
       "id": "plotting_plot_cla",
@@ -2683,7 +2962,8 @@
       "source_file": "plotting.py",
       "source_location": "L156",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "function"
     },
     {
       "id": "plotting_ef_default_returns_range",
@@ -2692,7 +2972,8 @@
       "source_file": "plotting.py",
       "source_location": "L236",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "function"
     },
     {
       "id": "plotting_plot_ef",
@@ -2701,7 +2982,8 @@
       "source_file": "plotting.py",
       "source_location": "L250",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "function"
     },
     {
       "id": "plotting_plot_efficient_frontier",
@@ -2711,7 +2993,8 @@
       "source_location": "L324",
       "community": 4,
       "community_name": "Community 4",
-      "description": "Plots the efficient frontier for mean-variance and related optimizers."
+      "description": "Plots the efficient frontier for mean-variance and related optimizers.",
+      "node_type": "function"
     },
     {
       "id": "plotting_plot_weights",
@@ -2721,7 +3004,8 @@
       "source_location": "L415",
       "community": 4,
       "community_name": "Community 4",
-      "description": "Plots the portfolio weights as a horizontal bar chart."
+      "description": "Plots the portfolio weights as a horizontal bar chart.",
+      "node_type": "function"
     },
     {
       "id": "plotting_rationale_1",
@@ -2730,7 +3014,8 @@
       "source_file": "plotting.py",
       "source_location": "L1",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "plotting_rationale_21",
@@ -2739,7 +3024,8 @@
       "source_file": "plotting.py",
       "source_location": "L21",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "plotting_rationale_31",
@@ -2748,7 +3034,8 @@
       "source_file": "plotting.py",
       "source_location": "L31",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "plotting_rationale_44",
@@ -2757,7 +3044,8 @@
       "source_file": "plotting.py",
       "source_location": "L44",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "plotting_rationale_70",
@@ -2766,7 +3054,8 @@
       "source_file": "plotting.py",
       "source_location": "L70",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "plotting_rationale_113",
@@ -2775,7 +3064,8 @@
       "source_file": "plotting.py",
       "source_location": "L113",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "plotting_rationale_157",
@@ -2784,7 +3074,8 @@
       "source_file": "plotting.py",
       "source_location": "L157",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "plotting_rationale_237",
@@ -2793,7 +3084,8 @@
       "source_file": "plotting.py",
       "source_location": "L237",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "plotting_rationale_251",
@@ -2802,7 +3094,8 @@
       "source_file": "plotting.py",
       "source_location": "L251",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "plotting_rationale_335",
@@ -2811,7 +3104,8 @@
       "source_file": "plotting.py",
       "source_location": "L335",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "plotting_rationale_416",
@@ -2820,7 +3114,8 @@
       "source_file": "plotting.py",
       "source_location": "L416",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "risk_models",
@@ -2830,7 +3125,8 @@
       "source_location": "L1",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Module implementing risk models and covariance estimators for portfolio optimization."
+      "description": "Module implementing risk models and covariance estimators for portfolio optimization.",
+      "node_type": "module"
     },
     {
       "id": "risk_models_is_positive_semidefinite",
@@ -2839,7 +3135,8 @@
       "source_file": "risk_models.py",
       "source_location": "L33",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "function"
     },
     {
       "id": "risk_models_fix_nonpositive_semidefinite",
@@ -2849,7 +3146,8 @@
       "source_location": "L57",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Repairs a covariance matrix that is not positive semidefinite."
+      "description": "Repairs a covariance matrix that is not positive semidefinite.",
+      "node_type": "function"
     },
     {
       "id": "risk_models_risk_matrix",
@@ -2859,7 +3157,8 @@
       "source_location": "L116",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Computes a covariance matrix using the specified risk-model method."
+      "description": "Computes a covariance matrix using the specified risk-model method.",
+      "node_type": "function"
     },
     {
       "id": "risk_models_sample_cov",
@@ -2869,7 +3168,8 @@
       "source_location": "L172",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Estimates the annualized sample covariance matrix of asset returns."
+      "description": "Estimates the annualized sample covariance matrix of asset returns.",
+      "node_type": "function"
     },
     {
       "id": "risk_models_semicovariance",
@@ -2879,7 +3179,8 @@
       "source_location": "L206",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Estimates the semicovariance matrix using only downside return deviations."
+      "description": "Estimates the semicovariance matrix using only downside return deviations.",
+      "node_type": "function"
     },
     {
       "id": "risk_models_pair_exp_cov",
@@ -2888,7 +3189,8 @@
       "source_file": "risk_models.py",
       "source_location": "L256",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "function"
     },
     {
       "id": "risk_models_exp_cov",
@@ -2898,7 +3200,8 @@
       "source_location": "L281",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Estimates the exponentially-weighted covariance matrix of asset returns."
+      "description": "Estimates the exponentially-weighted covariance matrix of asset returns.",
+      "node_type": "function"
     },
     {
       "id": "risk_models_min_cov_determinant",
@@ -2908,7 +3211,8 @@
       "source_location": "L330",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Estimates a covariance matrix using the minimum covariance determinant method."
+      "description": "Estimates a covariance matrix using the minimum covariance determinant method.",
+      "node_type": "function"
     },
     {
       "id": "risk_models_cov_to_corr",
@@ -2918,7 +3222,8 @@
       "source_location": "L366",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Converts a covariance matrix into a correlation matrix."
+      "description": "Converts a covariance matrix into a correlation matrix.",
+      "node_type": "function"
     },
     {
       "id": "risk_models_corr_to_cov",
@@ -2928,7 +3233,8 @@
       "source_location": "L389",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Converts a correlation matrix back into a covariance matrix."
+      "description": "Converts a correlation matrix back into a covariance matrix.",
+      "node_type": "function"
     },
     {
       "id": "risk_models_covarianceshrinkage",
@@ -2938,7 +3244,8 @@
       "source_location": "L412",
       "community": 1,
       "community_name": "Community 1",
-      "description": "CovarianceShrinkage \u2014 estimates a shrunk covariance matrix using Ledoit-Wolf and related methods."
+      "description": "CovarianceShrinkage \u2014 estimates a shrunk covariance matrix using Ledoit-Wolf and related methods.",
+      "node_type": "class"
     },
     {
       "id": "risk_models_covarianceshrinkage_init",
@@ -2948,7 +3255,8 @@
       "source_location": "L427",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Initializes the covariance shrinkage estimator from price data."
+      "description": "Initializes the covariance shrinkage estimator from price data.",
+      "node_type": "method"
     },
     {
       "id": "risk_models_covarianceshrinkage_format_and_annualize",
@@ -2958,7 +3266,8 @@
       "source_location": "L465",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Formats and annualizes the estimated covariance matrix, fixing non-positive-semidefinite results."
+      "description": "Formats and annualizes the estimated covariance matrix, fixing non-positive-semidefinite results.",
+      "node_type": "method"
     },
     {
       "id": "risk_models_covarianceshrinkage_shrunk_covariance",
@@ -2968,7 +3277,8 @@
       "source_location": "L484",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Shrinks the sample covariance matrix toward the identity matrix."
+      "description": "Shrinks the sample covariance matrix toward the identity matrix.",
+      "node_type": "method"
     },
     {
       "id": "risk_models_covarianceshrinkage_ledoit_wolf",
@@ -2978,7 +3288,8 @@
       "source_location": "L509",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Computes the Ledoit-Wolf shrinkage estimate of the covariance matrix."
+      "description": "Computes the Ledoit-Wolf shrinkage estimate of the covariance matrix.",
+      "node_type": "method"
     },
     {
       "id": "risk_models_covarianceshrinkage_ledoit_wolf_single_factor",
@@ -2987,7 +3298,8 @@
       "source_file": "risk_models.py",
       "source_location": "L545",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "method"
     },
     {
       "id": "risk_models_covarianceshrinkage_ledoit_wolf_constant_correlation",
@@ -2996,7 +3308,8 @@
       "source_file": "risk_models.py",
       "source_location": "L602",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "method"
     },
     {
       "id": "risk_models_covarianceshrinkage_oracle_approximating",
@@ -3006,7 +3319,8 @@
       "source_location": "L657",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Computes the Oracle Approximating Shrinkage estimate of the covariance matrix."
+      "description": "Computes the Oracle Approximating Shrinkage estimate of the covariance matrix.",
+      "node_type": "method"
     },
     {
       "id": "risk_models_rationale_1",
@@ -3015,7 +3329,8 @@
       "source_file": "risk_models.py",
       "source_location": "L1",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "module"
     },
     {
       "id": "risk_models_rationale_34",
@@ -3024,7 +3339,8 @@
       "source_file": "risk_models.py",
       "source_location": "L34",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "module"
     },
     {
       "id": "risk_models_rationale_58",
@@ -3033,7 +3349,8 @@
       "source_file": "risk_models.py",
       "source_location": "L58",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "module"
     },
     {
       "id": "risk_models_rationale_117",
@@ -3042,7 +3359,8 @@
       "source_file": "risk_models.py",
       "source_location": "L117",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "module"
     },
     {
       "id": "risk_models_rationale_173",
@@ -3051,7 +3369,8 @@
       "source_file": "risk_models.py",
       "source_location": "L173",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "module"
     },
     {
       "id": "risk_models_rationale_214",
@@ -3060,7 +3379,8 @@
       "source_file": "risk_models.py",
       "source_location": "L214",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "module"
     },
     {
       "id": "risk_models_rationale_257",
@@ -3069,7 +3389,8 @@
       "source_file": "risk_models.py",
       "source_location": "L257",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "module"
     },
     {
       "id": "risk_models_rationale_284",
@@ -3078,7 +3399,8 @@
       "source_file": "risk_models.py",
       "source_location": "L284",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "module"
     },
     {
       "id": "risk_models_rationale_367",
@@ -3087,7 +3409,8 @@
       "source_file": "risk_models.py",
       "source_location": "L367",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "module"
     },
     {
       "id": "risk_models_rationale_390",
@@ -3096,7 +3419,8 @@
       "source_file": "risk_models.py",
       "source_location": "L390",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "module"
     },
     {
       "id": "risk_models_rationale_413",
@@ -3105,7 +3429,8 @@
       "source_file": "risk_models.py",
       "source_location": "L413",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "module"
     },
     {
       "id": "risk_models_rationale_428",
@@ -3114,7 +3439,8 @@
       "source_file": "risk_models.py",
       "source_location": "L428",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "module"
     },
     {
       "id": "risk_models_rationale_466",
@@ -3123,7 +3449,8 @@
       "source_file": "risk_models.py",
       "source_location": "L466",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "module"
     },
     {
       "id": "risk_models_rationale_485",
@@ -3132,7 +3459,8 @@
       "source_file": "risk_models.py",
       "source_location": "L485",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "module"
     },
     {
       "id": "risk_models_rationale_510",
@@ -3141,7 +3469,8 @@
       "source_file": "risk_models.py",
       "source_location": "L510",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "module"
     },
     {
       "id": "risk_models_rationale_546",
@@ -3150,7 +3479,8 @@
       "source_file": "risk_models.py",
       "source_location": "L546",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "module"
     },
     {
       "id": "risk_models_rationale_603",
@@ -3159,7 +3489,8 @@
       "source_file": "risk_models.py",
       "source_location": "L603",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "module"
     },
     {
       "id": "risk_models_rationale_658",
@@ -3168,7 +3499,8 @@
       "source_file": "risk_models.py",
       "source_location": "L658",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "module"
     },
     {
       "id": "curated_base_optimizer",
@@ -3177,7 +3509,8 @@
       "source_file": "__init__.py",
       "community": 5,
       "community_name": "Community 5",
-      "description": "The ``base_optimizer`` module houses the parent classes ``BaseOptimizer`` from which all."
+      "description": "The ``base_optimizer`` module houses the parent classes ``BaseOptimizer`` from which all.",
+      "node_type": "function"
     },
     {
       "id": "curated_black_litterman",
@@ -3186,7 +3519,8 @@
       "source_file": "__init__.py",
       "community": 5,
       "community_name": "Community 5",
-      "description": "The ``black_litterman`` module houses the BlackLittermanModel class, which."
+      "description": "The ``black_litterman`` module houses the BlackLittermanModel class, which.",
+      "node_type": "function"
     },
     {
       "id": "curated_cla",
@@ -3195,7 +3529,8 @@
       "source_file": "__init__.py",
       "community": 5,
       "community_name": "Community 5",
-      "description": "The ``cla`` module houses the CLA class, which."
+      "description": "The ``cla`` module houses the CLA class, which.",
+      "node_type": "function"
     },
     {
       "id": "curated_discrete_allocation",
@@ -3204,7 +3539,8 @@
       "source_file": "__init__.py",
       "community": 5,
       "community_name": "Community 5",
-      "description": "The ``discrete_allocation`` module contains the ``DiscreteAllocation`` class, which."
+      "description": "The ``discrete_allocation`` module contains the ``DiscreteAllocation`` class, which.",
+      "node_type": "function"
     },
     {
       "id": "curated_efficient_frontier",
@@ -3213,7 +3549,8 @@
       "source_file": "__init__.py",
       "community": 5,
       "community_name": "Community 5",
-      "description": "The ``efficient_frontier`` module houses the EfficientFrontier class and its descendants,."
+      "description": "The ``efficient_frontier`` module houses the EfficientFrontier class and its descendants,.",
+      "node_type": "function"
     },
     {
       "id": "curated_exceptions",
@@ -3222,7 +3559,8 @@
       "source_file": "__init__.py",
       "community": 5,
       "community_name": "Community 5",
-      "description": "The ``exceptions`` module houses custom exceptions. Currently implemented:."
+      "description": "The ``exceptions`` module houses custom exceptions. Currently implemented:.",
+      "node_type": "function"
     },
     {
       "id": "curated_expected_returns",
@@ -3231,7 +3569,8 @@
       "source_file": "__init__.py",
       "community": 5,
       "community_name": "Community 5",
-      "description": "The ``expected_returns`` module provides functions for estimating the expected returns of."
+      "description": "The ``expected_returns`` module provides functions for estimating the expected returns of.",
+      "node_type": "function"
     },
     {
       "id": "curated_hierarchical_portfolio",
@@ -3240,7 +3579,8 @@
       "source_file": "__init__.py",
       "community": 5,
       "community_name": "Community 5",
-      "description": "The ``hierarchical_portfolio`` module seeks to implement one of the recent advances in."
+      "description": "The ``hierarchical_portfolio`` module seeks to implement one of the recent advances in.",
+      "node_type": "function"
     },
     {
       "id": "curated_objective_functions",
@@ -3249,7 +3589,8 @@
       "source_file": "__init__.py",
       "community": 5,
       "community_name": "Community 5",
-      "description": "The ``objective_functions`` module provides optimization objectives, including the actual."
+      "description": "The ``objective_functions`` module provides optimization objectives, including the actual.",
+      "node_type": "function"
     },
     {
       "id": "curated_risk_models",
@@ -3258,7 +3599,8 @@
       "source_file": "__init__.py",
       "community": 5,
       "community_name": "Community 5",
-      "description": "The ``risk_models`` module provides functions for estimating the covariance matrix given."
+      "description": "The ``risk_models`` module provides functions for estimating the covariance matrix given.",
+      "node_type": "function"
     }
   ],
   "links": [

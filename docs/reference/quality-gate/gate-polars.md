@@ -2,12 +2,12 @@
 
 # Quality Gate — polars
 
-Graph: `knowledge_graphs/polars/.graphify/graph.json` · GRAPH_SPEC §5 · generated 2026-08-16
+Graph: `knowledge_graphs/polars/.graphify/graph.json` · GRAPH_SPEC §5 · generated 2026-08-17
 
 | criterion | status | counts |
 |---|---|---|
 | c1 real labels | PASS | distinct=485 non_singleton=453 default_labels=0 default_graph=0 coverage=100.0% |
-| c2 descriptions | PASS | described=2252 describable=2759 pct=81.6% |
+| c2 descriptions | PASS | described=2252 describable=2759 pct=81.6% (target: 80%) |
 | c3 god nodes | PASS | top20=20 noise=0 |
 | c4 pin | PASS | expected=1f779c90256872c50a16622ce0e4e4f11e885b1a found=1f779c90256872c50a16622ce0e4e4f11e885b1a (graph) |
 | c5 audited | PASS | exists |

@@ -2,12 +2,12 @@
 
 # Quality Gate — mplfinance
 
-Graph: `knowledge_graphs/mplfinance/.graphify/graph.json` · GRAPH_SPEC §5 · generated 2026-08-16
+Graph: `knowledge_graphs/mplfinance/.graphify/graph.json` · GRAPH_SPEC §5 · generated 2026-08-17
 
 | criterion | status | counts |
 |---|---|---|
 | c1 real labels | PASS | distinct=31 non_singleton=12 default_labels=0 default_graph=0 coverage=100.0% |
-| c2 descriptions | PASS | described=56 describable=56 pct=100.0% |
+| c2 descriptions | PASS | described=56 describable=56 pct=100.0% (target: 80%) |
 | c3 god nodes | PASS | top20=20 noise=0 |
 | c4 pin | PASS | expected=493811dac9a203de7ec148fb95504e7d3f400ba5 found=493811dac9a203de7ec148fb95504e7d3f400ba5 (graph) |
 | c5 audited | PASS | exists |

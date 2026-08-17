@@ -13,7 +13,7 @@ graph:
   nodes: 611
   edges: 865
   community_count: 43
-  graph_hash: f6c2a46427904f14
+  graph_hash: 1f3d925de8211eee
 tags:
 - imbalanced-learn
 - ensemble

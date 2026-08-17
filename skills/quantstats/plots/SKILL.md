@@ -12,7 +12,7 @@ graph:
   nodes: 393
   edges: 531
   community_count: 51
-  graph_hash: 98393f286b04d0d2
+  graph_hash: 26577c7d6f2121fd
 tags:
 - quantstats
 - plots

@@ -12,7 +12,7 @@ graph:
   nodes: 3682
   edges: 9212
   community_count: 353
-  graph_hash: 4952c3623e7b56de
+  graph_hash: 57184c7798e74b3d
 tags:
 - vectorbt
 - signals

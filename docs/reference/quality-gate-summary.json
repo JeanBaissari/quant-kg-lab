@@ -1,6 +1,6 @@
 {
-  "generated": "2026-08-17T00:27:52+00:00",
-  "git_sha": "796c956",
+  "generated": "2026-08-17T17:45:51+00:00",
+  "git_sha": "6d0fdc3",
   "mode": "all",
   "ci": true,
   "pass": true,
@@ -17,7 +17,7 @@
         "c2": {
           "name": "descriptions",
           "pass": true,
-          "counts": "described=4620 describable=5520 pct=83.7%"
+          "counts": "described=4620 describable=5520 pct=83.7% (target: 80%)"
         },
         "c3": {
           "name": "god nodes",
@@ -53,7 +53,7 @@
         "c2": {
           "name": "descriptions",
           "pass": true,
-          "counts": "described=6984 describable=8640 pct=80.8%"
+          "counts": "described=6984 describable=8640 pct=80.8% (target: 80%)"
         },
         "c3": {
           "name": "god nodes",
@@ -89,7 +89,7 @@
         "c2": {
           "name": "descriptions",
           "pass": true,
-          "counts": "described=5382 describable=6651 pct=80.9%"
+          "counts": "described=5382 describable=6651 pct=80.9% (target: 80%)"
         },
         "c3": {
           "name": "god nodes",
@@ -125,7 +125,7 @@
         "c2": {
           "name": "descriptions",
           "pass": true,
-          "counts": "described=3339 describable=4122 pct=81.0%"
+          "counts": "described=3339 describable=4122 pct=81.0% (target: 80%)"
         },
         "c3": {
           "name": "god nodes",
@@ -161,7 +161,7 @@
         "c2": {
           "name": "descriptions",
           "pass": true,
-          "counts": "described=1131 describable=1326 pct=85.3%"
+          "counts": "described=1131 describable=1326 pct=85.3% (target: 80%)"
         },
         "c3": {
           "name": "god nodes",
@@ -197,7 +197,7 @@
         "c2": {
           "name": "descriptions",
           "pass": true,
-          "counts": "described=1742 describable=1974 pct=88.2%"
+          "counts": "described=1742 describable=1974 pct=88.2% (target: 80%)"
         },
         "c3": {
           "name": "god nodes",
@@ -233,7 +233,7 @@
         "c2": {
           "name": "descriptions",
           "pass": true,
-          "counts": "described=1702 describable=2025 pct=84.0%"
+          "counts": "described=1702 describable=2025 pct=84.0% (target: 80%)"
         },
         "c3": {
           "name": "god nodes",
@@ -269,7 +269,7 @@
         "c2": {
           "name": "descriptions",
           "pass": true,
-          "counts": "described=346 describable=369 pct=93.8%"
+          "counts": "described=346 describable=369 pct=93.8% (target: 80%)"
         },
         "c3": {
           "name": "god nodes",
@@ -305,7 +305,7 @@
         "c2": {
           "name": "descriptions",
           "pass": true,
-          "counts": "described=707 describable=840 pct=84.2%"
+          "counts": "described=707 describable=840 pct=84.2% (target: 80%)"
         },
         "c3": {
           "name": "god nodes",
@@ -341,7 +341,7 @@
         "c2": {
           "name": "descriptions",
           "pass": true,
-          "counts": "described=219 describable=260 pct=84.2%"
+          "counts": "described=219 describable=260 pct=84.2% (target: 80%)"
         },
         "c3": {
           "name": "god nodes",
@@ -377,7 +377,7 @@
         "c2": {
           "name": "descriptions",
           "pass": true,
-          "counts": "described=5062 describable=6157 pct=82.2%"
+          "counts": "described=5062 describable=6157 pct=82.2% (target: 80%)"
         },
         "c3": {
           "name": "god nodes",
@@ -413,7 +413,7 @@
         "c2": {
           "name": "descriptions",
           "pass": true,
-          "counts": "described=3107 describable=3664 pct=84.8%"
+          "counts": "described=3107 describable=3664 pct=84.8% (target: 80%)"
         },
         "c3": {
           "name": "god nodes",
@@ -449,7 +449,7 @@
         "c2": {
           "name": "descriptions",
           "pass": true,
-          "counts": "described=168 describable=183 pct=91.8%"
+          "counts": "described=168 describable=183 pct=91.8% (target: 80%)"
         },
         "c3": {
           "name": "god nodes",
@@ -485,7 +485,7 @@
         "c2": {
           "name": "descriptions",
           "pass": true,
-          "counts": "described=831 describable=881 pct=94.3%"
+          "counts": "described=831 describable=881 pct=94.3% (target: 80%)"
         },
         "c3": {
           "name": "god nodes",
@@ -521,7 +521,7 @@
         "c2": {
           "name": "descriptions",
           "pass": true,
-          "counts": "described=79 describable=91 pct=86.8%"
+          "counts": "described=79 describable=91 pct=86.8% (target: 80%)"
         },
         "c3": {
           "name": "god nodes",
@@ -557,7 +557,7 @@
         "c2": {
           "name": "descriptions",
           "pass": true,
-          "counts": "described=131 describable=163 pct=80.4%"
+          "counts": "described=131 describable=163 pct=80.4% (target: 80%)"
         },
         "c3": {
           "name": "god nodes",
@@ -593,7 +593,7 @@
         "c2": {
           "name": "descriptions",
           "pass": true,
-          "counts": "described=225 describable=243 pct=92.6%"
+          "counts": "described=225 describable=243 pct=92.6% (target: 80%)"
         },
         "c3": {
           "name": "god nodes",
@@ -629,7 +629,7 @@
         "c2": {
           "name": "descriptions",
           "pass": true,
-          "counts": "described=621 describable=745 pct=83.4%"
+          "counts": "described=621 describable=745 pct=83.4% (target: 80%)"
         },
         "c3": {
           "name": "god nodes",
@@ -665,7 +665,7 @@
         "c2": {
           "name": "descriptions",
           "pass": true,
-          "counts": "described=2252 describable=2759 pct=81.6%"
+          "counts": "described=2252 describable=2759 pct=81.6% (target: 80%)"
         },
         "c3": {
           "name": "god nodes",
@@ -701,7 +701,7 @@
         "c2": {
           "name": "descriptions",
           "pass": true,
-          "counts": "described=83 describable=89 pct=93.3%"
+          "counts": "described=83 describable=89 pct=93.3% (target: 80%)"
         },
         "c3": {
           "name": "god nodes",
@@ -737,7 +737,7 @@
         "c2": {
           "name": "descriptions",
           "pass": true,
-          "counts": "described=158 describable=169 pct=93.5%"
+          "counts": "described=158 describable=169 pct=93.5% (target: 80%)"
         },
         "c3": {
           "name": "god nodes",
@@ -773,7 +773,7 @@
         "c2": {
           "name": "descriptions",
           "pass": true,
-          "counts": "described=591 describable=608 pct=97.2%"
+          "counts": "described=591 describable=608 pct=97.2% (target: 80%)"
         },
         "c3": {
           "name": "god nodes",
@@ -809,7 +809,7 @@
         "c2": {
           "name": "descriptions",
           "pass": true,
-          "counts": "described=252 describable=298 pct=84.6%"
+          "counts": "described=252 describable=298 pct=84.6% (target: 80%)"
         },
         "c3": {
           "name": "god nodes",
@@ -845,7 +845,7 @@
         "c2": {
           "name": "descriptions",
           "pass": true,
-          "counts": "described=2270 describable=2738 pct=82.9%"
+          "counts": "described=2270 describable=2738 pct=82.9% (target: 80%)"
         },
         "c3": {
           "name": "god nodes",
@@ -881,7 +881,7 @@
         "c2": {
           "name": "descriptions",
           "pass": true,
-          "counts": "described=56 describable=56 pct=100.0%"
+          "counts": "described=56 describable=56 pct=100.0% (target: 80%)"
         },
         "c3": {
           "name": "god nodes",
@@ -917,7 +917,7 @@
         "c2": {
           "name": "descriptions",
           "pass": true,
-          "counts": "described=477 describable=545 pct=87.5%"
+          "counts": "described=477 describable=545 pct=87.5% (target: 80%)"
         },
         "c3": {
           "name": "god nodes",
@@ -953,7 +953,7 @@
         "c2": {
           "name": "descriptions",
           "pass": true,
-          "counts": "described=274 describable=309 pct=88.7%"
+          "counts": "described=274 describable=309 pct=88.7% (target: 80%)"
         },
         "c3": {
           "name": "god nodes",
@@ -989,7 +989,7 @@
         "c2": {
           "name": "descriptions",
           "pass": true,
-          "counts": "described=1902 describable=2232 pct=85.2%"
+          "counts": "described=1902 describable=2232 pct=85.2% (target: 80%)"
         },
         "c3": {
           "name": "god nodes",

@@ -13,7 +13,7 @@ graph:
   nodes: 172
   edges: 231
   community_count: 5
-  graph_hash: b1726a0e2484f41b
+  graph_hash: b9a5f8898b936c87
 tags:
 - alphalens
 - router

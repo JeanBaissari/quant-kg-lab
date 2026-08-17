@@ -13,7 +13,7 @@ graph:
   nodes: 426
   edges: 599
   community_count: 29
-  graph_hash: dc57c0d4aa45a96d
+  graph_hash: 372545b1ab9706e9
 tags:
 - riskfolio
 - risk-measures

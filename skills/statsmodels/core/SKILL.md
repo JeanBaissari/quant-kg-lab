@@ -12,7 +12,7 @@ graph:
   nodes: 11616
   edges: 33529
   community_count: 638
-  graph_hash: 22b3083cca514704
+  graph_hash: 8d751b1519a13938
 tags:
 - statsmodels
 - regression

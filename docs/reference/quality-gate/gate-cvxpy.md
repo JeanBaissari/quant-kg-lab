@@ -2,12 +2,12 @@
 
 # Quality Gate — cvxpy
 
-Graph: `knowledge_graphs/cvxpy/.graphify/graph.json` · GRAPH_SPEC §5 · generated 2026-08-16
+Graph: `knowledge_graphs/cvxpy/.graphify/graph.json` · GRAPH_SPEC §5 · generated 2026-08-17
 
 | criterion | status | counts |
 |---|---|---|
 | c1 real labels | PASS | distinct=297 non_singleton=292 default_labels=0 default_graph=0 coverage=100.0% |
-| c2 descriptions | PASS | described=3107 describable=3664 pct=84.8% |
+| c2 descriptions | PASS | described=3107 describable=3664 pct=84.8% (target: 80%) |
 | c3 god nodes | PASS | top20=20 noise=0 |
 | c4 pin | PASS | expected=e3b50dccf808e52e36f7b134b710e0e245742cc0 found=e3b50dccf808e52e36f7b134b710e0e245742cc0 (graph) |
 | c5 audited | PASS | exists |

@@ -12,7 +12,7 @@ graph:
   nodes: 305
   edges: 361
   community_count: 61
-  graph_hash: cc432015b7700967
+  graph_hash: e3709d355d12539e
 tags:
 - pyfolio
 - timeseries

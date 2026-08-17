@@ -32,7 +32,8 @@
       "source_file": "__init__.py",
       "source_location": "L1",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "module"
     },
     {
       "id": "basic",
@@ -42,7 +43,8 @@
       "source_location": "L1",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Module defining the low-level Booster and Dataset wrappers over the native library."
+      "description": "Module defining the low-level Booster and Dataset wrappers over the native library.",
+      "node_type": "module"
     },
     {
       "id": "basic_lightgbmerror",
@@ -52,7 +54,8 @@
       "source_location": "L152",
       "community": 9,
       "community_name": "Community 9",
-      "description": "Base exception raised for errors coming from the LightGBM native library."
+      "description": "Base exception raised for errors coming from the LightGBM native library.",
+      "node_type": "class"
     },
     {
       "id": "exception",
@@ -62,7 +65,8 @@
       "source_location": "",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Exception \u2014 the base type that LightGBMError and EarlyStopException derive from."
+      "description": "Exception \u2014 the base type that LightGBMError and EarlyStopException derive from.",
+      "node_type": "class"
     },
     {
       "id": "basic_is_zero",
@@ -71,7 +75,8 @@
       "source_file": "basic.py",
       "source_location": "L158",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "function"
     },
     {
       "id": "basic_get_sample_count",
@@ -80,7 +85,8 @@
       "source_file": "basic.py",
       "source_location": "L162",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "function"
     },
     {
       "id": "basic_np2d_to_np1d",
@@ -89,7 +95,8 @@
       "source_file": "basic.py",
       "source_location": "L174",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "function"
     },
     {
       "id": "basic_missingtype",
@@ -98,7 +105,8 @@
       "source_file": "basic.py",
       "source_location": "L193",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "function"
     },
     {
       "id": "enum",
@@ -108,7 +116,8 @@
       "source_location": "",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Enum \u2014 base class for LightGBM's internal enumerations like dataset names."
+      "description": "Enum \u2014 base class for LightGBM's internal enumerations like dataset names.",
+      "node_type": "class"
     },
     {
       "id": "basic_dummylogger",
@@ -117,7 +126,8 @@
       "source_file": "basic.py",
       "source_location": "L199",
       "community": 15,
-      "community_name": "Community 15"
+      "community_name": "Community 15",
+      "node_type": "function"
     },
     {
       "id": "basic_dummylogger_info",
@@ -127,7 +137,8 @@
       "source_location": "L200",
       "community": 15,
       "community_name": "Community 15",
-      "description": "Logs an info-level message, no-op without a registered logger."
+      "description": "Logs an info-level message, no-op without a registered logger.",
+      "node_type": "method"
     },
     {
       "id": "basic_dummylogger_warning",
@@ -137,7 +148,8 @@
       "source_location": "L203",
       "community": 15,
       "community_name": "Community 15",
-      "description": "Logs a warning-level message, no-op without a registered logger."
+      "description": "Logs a warning-level message, no-op without a registered logger.",
+      "node_type": "method"
     },
     {
       "id": "basic_has_method",
@@ -146,7 +158,8 @@
       "source_file": "basic.py",
       "source_location": "L212",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "function"
     },
     {
       "id": "basic_register_logger",
@@ -156,7 +169,8 @@
       "source_location": "L216",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Registers a custom logger for all LightGBM logging output."
+      "description": "Registers a custom logger for all LightGBM logging output.",
+      "node_type": "function"
     },
     {
       "id": "basic_normalize_native_string",
@@ -165,7 +179,8 @@
       "source_file": "basic.py",
       "source_location": "L241",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "function"
     },
     {
       "id": "basic_log_info",
@@ -174,7 +189,8 @@
       "source_file": "basic.py",
       "source_location": "L258",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "function"
     },
     {
       "id": "basic_log_warning",
@@ -183,7 +199,8 @@
       "source_file": "basic.py",
       "source_location": "L262",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "function"
     },
     {
       "id": "basic_log_native",
@@ -192,7 +209,8 @@
       "source_file": "basic.py",
       "source_location": "L267",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "function"
     },
     {
       "id": "basic_log_callback",
@@ -201,7 +219,8 @@
       "source_file": "basic.py",
       "source_location": "L271",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "function"
     },
     {
       "id": "basic_is_numeric",
@@ -210,7 +229,8 @@
       "source_file": "basic.py",
       "source_location": "L300",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "function"
     },
     {
       "id": "basic_is_numpy_1d_array",
@@ -219,7 +239,8 @@
       "source_file": "basic.py",
       "source_location": "L311",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "function"
     },
     {
       "id": "basic_is_numpy_column_array",
@@ -228,7 +249,8 @@
       "source_file": "basic.py",
       "source_location": "L316",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "function"
     },
     {
       "id": "basic_cast_numpy_array_to_dtype",
@@ -237,7 +259,8 @@
       "source_file": "basic.py",
       "source_location": "L324",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "function"
     },
     {
       "id": "basic_is_1d_list",
@@ -246,7 +269,8 @@
       "source_file": "basic.py",
       "source_location": "L331",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "function"
     },
     {
       "id": "basic_is_list_of_numpy_arrays",
@@ -255,7 +279,8 @@
       "source_file": "basic.py",
       "source_location": "L336",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "function"
     },
     {
       "id": "basic_is_list_of_sequences",
@@ -264,7 +289,8 @@
       "source_file": "basic.py",
       "source_location": "L340",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "function"
     },
     {
       "id": "basic_is_1d_collection",
@@ -273,7 +299,8 @@
       "source_file": "basic.py",
       "source_location": "L344",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "function"
     },
     {
       "id": "basic_list_to_1d_numpy",
@@ -282,7 +309,8 @@
       "source_file": "basic.py",
       "source_location": "L349",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "function"
     },
     {
       "id": "basic_is_numpy_2d_array",
@@ -291,7 +319,8 @@
       "source_file": "basic.py",
       "source_location": "L373",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "function"
     },
     {
       "id": "basic_is_2d_list",
@@ -300,7 +329,8 @@
       "source_file": "basic.py",
       "source_location": "L378",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "function"
     },
     {
       "id": "basic_is_2d_collection",
@@ -309,7 +339,8 @@
       "source_file": "basic.py",
       "source_location": "L383",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "function"
     },
     {
       "id": "basic_extract_arrow_stream_capsule_pointer",
@@ -318,7 +349,8 @@
       "source_file": "basic.py",
       "source_location": "L393",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "function"
     },
     {
       "id": "basic_data_to_2d_numpy",
@@ -327,7 +359,8 @@
       "source_file": "basic.py",
       "source_location": "L398",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "function"
     },
     {
       "id": "basic_cfloat32_array_to_numpy",
@@ -336,7 +369,8 @@
       "source_file": "basic.py",
       "source_location": "L417",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "function"
     },
     {
       "id": "basic_cfloat64_array_to_numpy",
@@ -345,7 +379,8 @@
       "source_file": "basic.py",
       "source_location": "L425",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "function"
     },
     {
       "id": "basic_cint32_array_to_numpy",
@@ -354,7 +389,8 @@
       "source_file": "basic.py",
       "source_location": "L433",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "function"
     },
     {
       "id": "basic_cint64_array_to_numpy",
@@ -363,7 +399,8 @@
       "source_file": "basic.py",
       "source_location": "L441",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "function"
     },
     {
       "id": "basic_c_str",
@@ -372,7 +409,8 @@
       "source_file": "basic.py",
       "source_location": "L449",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "function"
     },
     {
       "id": "basic_c_array",
@@ -381,7 +419,8 @@
       "source_file": "basic.py",
       "source_location": "L454",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "function"
     },
     {
       "id": "basic_json_default_with_numpy",
@@ -390,7 +429,8 @@
       "source_file": "basic.py",
       "source_location": "L459",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "function"
     },
     {
       "id": "basic_to_string",
@@ -399,7 +439,8 @@
       "source_file": "basic.py",
       "source_location": "L469",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "function"
     },
     {
       "id": "basic_param_dict_to_str",
@@ -408,7 +449,8 @@
       "source_file": "basic.py",
       "source_location": "L477",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "function"
     },
     {
       "id": "basic_tempfile",
@@ -417,7 +459,8 @@
       "source_file": "basic.py",
       "source_location": "L492",
       "community": 14,
-      "community_name": "Community 14"
+      "community_name": "Community 14",
+      "node_type": "function"
     },
     {
       "id": "basic_tempfile_enter",
@@ -427,7 +470,8 @@
       "source_location": "L495",
       "community": 14,
       "community_name": "Community 14",
-      "description": "Returns the temporary file when entering its context manager."
+      "description": "Returns the temporary file when entering its context manager.",
+      "node_type": "method"
     },
     {
       "id": "basic_tempfile_exit",
@@ -436,7 +480,8 @@
       "source_file": "basic.py",
       "source_location": "L501",
       "community": 14,
-      "community_name": "Community 14"
+      "community_name": "Community 14",
+      "node_type": "method"
     },
     {
       "id": "basic_lgbmdeprecationwarning",
@@ -446,7 +491,8 @@
       "source_location": "L508",
       "community": 9,
       "community_name": "Community 9",
-      "description": "Warning category for deprecated LightGBM APIs."
+      "description": "Warning category for deprecated LightGBM APIs.",
+      "node_type": "class"
     },
     {
       "id": "futurewarning",
@@ -455,7 +501,8 @@
       "source_file": "",
       "source_location": "",
       "community": 9,
-      "community_name": "Community 9"
+      "community_name": "Community 9",
+      "node_type": "class"
     },
     {
       "id": "basic_configaliases",
@@ -464,7 +511,8 @@
       "source_file": "basic.py",
       "source_location": "L514",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "function"
     },
     {
       "id": "basic_configaliases_get_all_param_aliases",
@@ -474,7 +522,8 @@
       "source_location": "L519",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Collects every known alias for all configuration parameters."
+      "description": "Collects every known alias for all configuration parameters.",
+      "node_type": "method"
     },
     {
       "id": "basic_configaliases_get",
@@ -484,7 +533,8 @@
       "source_location": "L548",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Looks up a parameter value honoring LightGBM's configuration aliases."
+      "description": "Looks up a parameter value honoring LightGBM's configuration aliases.",
+      "node_type": "method"
     },
     {
       "id": "basic_configaliases_get_sorted",
@@ -494,7 +544,8 @@
       "source_location": "L557",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Returns the configuration aliases sorted into a stable order."
+      "description": "Returns the configuration aliases sorted into a stable order.",
+      "node_type": "method"
     },
     {
       "id": "basic_configaliases_get_by_alias",
@@ -504,7 +555,8 @@
       "source_location": "L563",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Looks up a parameter value using a specific alias name."
+      "description": "Looks up a parameter value using a specific alias name.",
+      "node_type": "method"
     },
     {
       "id": "basic_choose_param_value",
@@ -513,7 +565,8 @@
       "source_file": "basic.py",
       "source_location": "L575",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "function"
     },
     {
       "id": "basic_convert_from_sliced_object",
@@ -522,7 +575,8 @@
       "source_file": "basic.py",
       "source_location": "L664",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "function"
     },
     {
       "id": "basic_c_float_array",
@@ -531,7 +585,8 @@
       "source_file": "basic.py",
       "source_location": "L676",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "function"
     },
     {
       "id": "basic_c_int_array",
@@ -540,7 +595,8 @@
       "source_file": "basic.py",
       "source_location": "L697",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "function"
     },
     {
       "id": "basic_is_allowed_numpy_dtype",
@@ -549,7 +605,8 @@
       "source_file": "basic.py",
       "source_location": "L718",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "function"
     },
     {
       "id": "basic_check_for_bad_pandas_dtypes",
@@ -558,7 +615,8 @@
       "source_file": "basic.py",
       "source_location": "L723",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "function"
     },
     {
       "id": "basic_pandas_to_numpy",
@@ -567,7 +625,8 @@
       "source_file": "basic.py",
       "source_location": "L735",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "function"
     },
     {
       "id": "basic_data_from_pandas",
@@ -576,7 +635,8 @@
       "source_file": "basic.py",
       "source_location": "L752",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "function"
     },
     {
       "id": "basic_dump_pandas_categorical",
@@ -585,7 +645,8 @@
       "source_file": "basic.py",
       "source_location": "L802",
       "community": 6,
-      "community_name": "Community 6"
+      "community_name": "Community 6",
+      "node_type": "function"
     },
     {
       "id": "basic_load_pandas_categorical",
@@ -594,7 +655,8 @@
       "source_file": "basic.py",
       "source_location": "L814",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "function"
     },
     {
       "id": "basic_sequence",
@@ -604,7 +666,8 @@
       "source_location": "L842",
       "community": 12,
       "community_name": "Community 12",
-      "description": "Sequence \u2014 base interface for lazy, row-wise data access that Dataset consumes."
+      "description": "Sequence \u2014 base interface for lazy, row-wise data access that Dataset consumes.",
+      "node_type": "class"
     },
     {
       "id": "basic_sequence_getitem",
@@ -614,7 +677,8 @@
       "source_location": "L873",
       "community": 12,
       "community_name": "Community 12",
-      "description": "Returns the data for the given row index of the sequence."
+      "description": "Returns the data for the given row index of the sequence.",
+      "node_type": "method"
     },
     {
       "id": "basic_sequence_len",
@@ -624,7 +688,8 @@
       "source_location": "L903",
       "community": 12,
       "community_name": "Community 12",
-      "description": "Returns the total row count of this data sequence."
+      "description": "Returns the total row count of this data sequence.",
+      "node_type": "method"
     },
     {
       "id": "basic_innerpredictor",
@@ -633,7 +698,8 @@
       "source_file": "basic.py",
       "source_location": "L908",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "function"
     },
     {
       "id": "basic_innerpredictor_init",
@@ -643,7 +709,8 @@
       "source_location": "L919",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Initializes the inner predictor from a Booster or model string."
+      "description": "Initializes the inner predictor from a Booster or model string.",
+      "node_type": "method"
     },
     {
       "id": "basic_innerpredictor_from_booster",
@@ -653,7 +720,8 @@
       "source_location": "L955",
       "community": 13,
       "community_name": "Community 13",
-      "description": "Builds an inner predictor from a trained Booster."
+      "description": "Builds an inner predictor from a trained Booster.",
+      "node_type": "method"
     },
     {
       "id": "basic_innerpredictor_from_model_file",
@@ -663,7 +731,8 @@
       "source_location": "L977",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Builds an inner predictor by loading a model text file."
+      "description": "Builds an inner predictor by loading a model text file.",
+      "node_type": "method"
     },
     {
       "id": "basic_innerpredictor_del",
@@ -672,7 +741,8 @@
       "source_file": "basic.py",
       "source_location": "L1007",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "method"
     },
     {
       "id": "basic_innerpredictor_getstate",
@@ -681,7 +751,8 @@
       "source_file": "basic.py",
       "source_location": "L1014",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "method"
     },
     {
       "id": "basic_innerpredictor_predict",
@@ -691,7 +762,8 @@
       "source_location": "L1020",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Predicts for input data by dispatching to the native prediction paths."
+      "description": "Predicts for input data by dispatching to the native prediction paths.",
+      "node_type": "method"
     },
     {
       "id": "basic_innerpredictor_get_num_preds",
@@ -701,7 +773,8 @@
       "source_location": "L1180",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Returns the number of predictions the model produces per sample."
+      "description": "Returns the number of predictions the model produces per sample.",
+      "node_type": "method"
     },
     {
       "id": "basic_innerpredictor_inner_predict_np2d",
@@ -711,7 +784,8 @@
       "source_location": "L1209",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Performs native prediction for a 2-D numpy matrix."
+      "description": "Performs native prediction for a 2-D numpy matrix.",
+      "node_type": "method"
     },
     {
       "id": "basic_innerpredictor_pred_for_np2d",
@@ -721,7 +795,8 @@
       "source_location": "L1250",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Predicts for a 2-D numpy matrix and returns the result."
+      "description": "Predicts for a 2-D numpy matrix and returns the result.",
+      "node_type": "method"
     },
     {
       "id": "basic_innerpredictor_create_sparse_native",
@@ -731,7 +806,8 @@
       "source_location": "L1297",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Wraps sparse prediction results into native sparse arrays."
+      "description": "Wraps sparse prediction results into native sparse arrays.",
+      "node_type": "method"
     },
     {
       "id": "basic_innerpredictor_inner_predict_csr",
@@ -741,7 +817,8 @@
       "source_location": "L1359",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Performs native prediction for CSR sparse input data."
+      "description": "Performs native prediction for CSR sparse input data.",
+      "node_type": "method"
     },
     {
       "id": "basic_innerpredictor_inner_predict_csr_sparse",
@@ -751,7 +828,8 @@
       "source_location": "L1409",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Performs native prediction on CSR data, returning sparse results."
+      "description": "Performs native prediction on CSR data, returning sparse results.",
+      "node_type": "method"
     },
     {
       "id": "basic_innerpredictor_pred_for_csr",
@@ -761,7 +839,8 @@
       "source_location": "L1467",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Predicts for CSR sparse data via the native library."
+      "description": "Predicts for CSR sparse data via the native library.",
+      "node_type": "method"
     },
     {
       "id": "basic_innerpredictor_inner_predict_sparse_csc",
@@ -771,7 +850,8 @@
       "source_location": "L1520",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Performs native prediction on CSC data, returning sparse results."
+      "description": "Performs native prediction on CSC data, returning sparse results.",
+      "node_type": "method"
     },
     {
       "id": "basic_innerpredictor_pred_for_csc",
@@ -781,7 +861,8 @@
       "source_location": "L1578",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Predicts for CSC sparse data via the native library."
+      "description": "Predicts for CSC sparse data via the native library.",
+      "node_type": "method"
     },
     {
       "id": "basic_innerpredictor_pred_for_narwhals",
@@ -791,7 +872,8 @@
       "source_location": "L1639",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Predicts for narwhals DataFrame input using the arrow stream capsule."
+      "description": "Predicts for narwhals DataFrame input using the arrow stream capsule.",
+      "node_type": "method"
     },
     {
       "id": "basic_innerpredictor_current_iteration",
@@ -801,7 +883,8 @@
       "source_location": "L1675",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Returns the index of the current iteration of the predictor."
+      "description": "Returns the index of the current iteration of the predictor.",
+      "node_type": "method"
     },
     {
       "id": "basic_dataset",
@@ -811,7 +894,8 @@
       "source_location": "L1693",
       "community": 0,
       "community_name": "Community 0",
-      "description": "LightGBM's internal dataset \u2014 bins features and holds labels/weights for efficient training."
+      "description": "LightGBM's internal dataset \u2014 bins features and holds labels/weights for efficient training.",
+      "node_type": "class"
     },
     {
       "id": "basic_dataset_init",
@@ -821,7 +905,8 @@
       "source_location": "L1704",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Initializes a Dataset from data, labels, and training parameters."
+      "description": "Initializes a Dataset from data, labels, and training parameters.",
+      "node_type": "method"
     },
     {
       "id": "basic_dataset_del",
@@ -831,7 +916,8 @@
       "source_location": "L1821",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Frees the native Dataset handle when the object is destroyed."
+      "description": "Frees the native Dataset handle when the object is destroyed.",
+      "node_type": "method"
     },
     {
       "id": "basic_dataset_create_sample_indices",
@@ -841,7 +927,8 @@
       "source_location": "L1827",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Builds the sample indices used when constructing a Dataset from sequences."
+      "description": "Builds the sample indices used when constructing a Dataset from sequences.",
+      "node_type": "method"
     },
     {
       "id": "basic_dataset_init_from_ref_dataset",
@@ -851,7 +938,8 @@
       "source_location": "L1861",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Creates a Dataset aligned with a reference Dataset's structure."
+      "description": "Creates a Dataset aligned with a reference Dataset's structure.",
+      "node_type": "method"
     },
     {
       "id": "basic_dataset_init_from_sample",
@@ -861,7 +949,8 @@
       "source_location": "L1890",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Initializes Dataset data from a sampled subset of the raw sequences."
+      "description": "Initializes Dataset data from a sampled subset of the raw sequences.",
+      "node_type": "method"
     },
     {
       "id": "basic_dataset_push_rows",
@@ -871,7 +960,8 @@
       "source_location": "L1954",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Adds rows of data to the Dataset under construction."
+      "description": "Adds rows of data to the Dataset under construction.",
+      "node_type": "method"
     },
     {
       "id": "basic_dataset_get_params",
@@ -881,7 +971,8 @@
       "source_location": "L1984",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Returns the Dataset's full parameter dictionary used at construction."
+      "description": "Returns the Dataset's full parameter dictionary used at construction.",
+      "node_type": "method"
     },
     {
       "id": "basic_dataset_free_handle",
@@ -891,7 +982,8 @@
       "source_location": "L2021",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Releases the native Dataset handle held by this object."
+      "description": "Releases the native Dataset handle held by this object.",
+      "node_type": "method"
     },
     {
       "id": "basic_dataset_set_init_score_by_predictor",
@@ -901,7 +993,8 @@
       "source_location": "L2030",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Sets initial scores from a predictor for continued training."
+      "description": "Sets initial scores from a predictor for continued training.",
+      "node_type": "method"
     },
     {
       "id": "basic_dataset_lazy_init",
@@ -911,7 +1004,8 @@
       "source_location": "L2073",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Internal Dataset method that constructs the native dataset lazily on first use."
+      "description": "Internal Dataset method that constructs the native dataset lazily on first use.",
+      "node_type": "method"
     },
     {
       "id": "basic_dataset_yield_row_from_seqlist",
@@ -921,7 +1015,8 @@
       "source_location": "L2203",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Yields rows from a list of sequences for Dataset construction."
+      "description": "Yields rows from a list of sequences for Dataset construction.",
+      "node_type": "method"
     },
     {
       "id": "basic_dataset_sample",
@@ -931,7 +1026,8 @@
       "source_location": "L2217",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Samples rows from the sequence data for Dataset construction."
+      "description": "Samples rows from the sequence data for Dataset construction.",
+      "node_type": "method"
     },
     {
       "id": "basic_dataset_init_from_seqs",
@@ -941,7 +1037,8 @@
       "source_location": "L2245",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Initializes Dataset data from sequences of rows, pushing them in."
+      "description": "Initializes Dataset data from sequences of rows, pushing them in.",
+      "node_type": "method"
     },
     {
       "id": "basic_dataset_init_from_np2d",
@@ -951,7 +1048,8 @@
       "source_location": "L2279",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Initializes Dataset data from a 2-D numpy array."
+      "description": "Initializes Dataset data from a 2-D numpy array.",
+      "node_type": "method"
     },
     {
       "id": "basic_dataset_init_from_list_np2d",
@@ -961,7 +1059,8 @@
       "source_location": "L2307",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Initializes Dataset data from a list of 2-D numpy arrays."
+      "description": "Initializes Dataset data from a list of 2-D numpy arrays.",
+      "node_type": "method"
     },
     {
       "id": "basic_dataset_init_from_csr",
@@ -971,7 +1070,8 @@
       "source_location": "L2362",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Initializes Dataset data from a CSR sparse matrix."
+      "description": "Initializes Dataset data from a CSR sparse matrix.",
+      "node_type": "method"
     },
     {
       "id": "basic_dataset_init_from_csc",
@@ -981,7 +1081,8 @@
       "source_location": "L2397",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Initializes Dataset data from a CSC sparse matrix."
+      "description": "Initializes Dataset data from a CSC sparse matrix.",
+      "node_type": "method"
     },
     {
       "id": "basic_dataset_init_from_narwhals",
@@ -990,7 +1091,8 @@
       "source_file": "basic.py",
       "source_location": "L2432",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "method"
     },
     {
       "id": "basic_dataset_compare_params_for_warning",
@@ -1000,7 +1102,8 @@
       "source_location": "L2456",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Compares params with the reference Dataset to warn on conflicts."
+      "description": "Compares params with the reference Dataset to warn on conflicts.",
+      "node_type": "method"
     },
     {
       "id": "basic_dataset_construct",
@@ -1010,7 +1113,8 @@
       "source_location": "L2490",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Builds the native Dataset from raw data, binning the features."
+      "description": "Builds the native Dataset from raw data, binning the features.",
+      "node_type": "method"
     },
     {
       "id": "basic_dataset_create_valid",
@@ -1020,7 +1124,8 @@
       "source_location": "L2585",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Creates a validation Dataset aligned with the current Dataset."
+      "description": "Creates a validation Dataset aligned with the current Dataset.",
+      "node_type": "method"
     },
     {
       "id": "basic_dataset_subset",
@@ -1030,7 +1135,8 @@
       "source_location": "L2674",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Returns a subset of the current Dataset by row indices."
+      "description": "Returns a subset of the current Dataset by row indices.",
+      "node_type": "method"
     },
     {
       "id": "basic_dataset_save_binary",
@@ -1040,7 +1146,8 @@
       "source_location": "L2708",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Saves the constructed Dataset to a binary file for fast reload."
+      "description": "Saves the constructed Dataset to a binary file for fast reload.",
+      "node_type": "method"
     },
     {
       "id": "basic_dataset_update_params",
@@ -1050,7 +1157,8 @@
       "source_location": "L2734",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Updates the Dataset's params and propagates them to the native handle."
+      "description": "Updates the Dataset's params and propagates them to the native handle.",
+      "node_type": "method"
     },
     {
       "id": "basic_dataset_reverse_update_params",
@@ -1059,7 +1167,8 @@
       "source_file": "basic.py",
       "source_location": "L2762",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "method"
     },
     {
       "id": "basic_dataset_set_field",
@@ -1069,7 +1178,8 @@
       "source_location": "L2768",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Sets a raw field (e.g. label, weight, or group) on the native Dataset."
+      "description": "Sets a raw field (e.g. label, weight, or group) on the native Dataset.",
+      "node_type": "method"
     },
     {
       "id": "basic_dataset_get_field",
@@ -1079,7 +1189,8 @@
       "source_location": "L2864",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Retrieves a raw field (e.g. label or weight) from the native Dataset."
+      "description": "Retrieves a raw field (e.g. label or weight) from the native Dataset.",
+      "node_type": "method"
     },
     {
       "id": "basic_dataset_set_categorical_feature",
@@ -1089,7 +1200,8 @@
       "source_location": "L2925",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Marks which features are categorical for the Dataset."
+      "description": "Marks which features are categorical for the Dataset.",
+      "node_type": "method"
     },
     {
       "id": "basic_dataset_set_predictor",
@@ -1099,7 +1211,8 @@
       "source_location": "L2963",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Sets a predictor for continued training with initial scores."
+      "description": "Sets a predictor for continued training with initial scores.",
+      "node_type": "method"
     },
     {
       "id": "basic_dataset_set_reference",
@@ -1109,7 +1222,8 @@
       "source_location": "L3002",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Sets a reference Dataset whose binning and metadata are inherited."
+      "description": "Sets a reference Dataset whose binning and metadata are inherited.",
+      "node_type": "method"
     },
     {
       "id": "basic_dataset_set_feature_name",
@@ -1119,7 +1233,8 @@
       "source_location": "L3030",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Assigns the given names to the Dataset's features."
+      "description": "Assigns the given names to the Dataset's features.",
+      "node_type": "method"
     },
     {
       "id": "basic_dataset_set_label",
@@ -1129,7 +1244,8 @@
       "source_location": "L3061",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Sets the label field used for training the Dataset."
+      "description": "Sets the label field used for training the Dataset.",
+      "node_type": "method"
     },
     {
       "id": "basic_dataset_set_weight",
@@ -1139,7 +1255,8 @@
       "source_location": "L3094",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Sets the weight field used for training the Dataset."
+      "description": "Sets the weight field used for training the Dataset.",
+      "node_type": "method"
     },
     {
       "id": "basic_dataset_set_init_score",
@@ -1149,7 +1266,8 @@
       "source_location": "L3133",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Sets the initial score field of the Dataset."
+      "description": "Sets the initial score field of the Dataset.",
+      "node_type": "method"
     },
     {
       "id": "basic_dataset_set_group",
@@ -1159,7 +1277,8 @@
       "source_location": "L3161",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Sets the query group field for ranking with the Dataset."
+      "description": "Sets the query group field for ranking with the Dataset.",
+      "node_type": "method"
     },
     {
       "id": "basic_dataset_set_position",
@@ -1169,7 +1288,8 @@
       "source_location": "L3198",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Sets the position field for ranking with the Dataset."
+      "description": "Sets the position field for ranking with the Dataset.",
+      "node_type": "method"
     },
     {
       "id": "basic_dataset_get_feature_name",
@@ -1179,7 +1299,8 @@
       "source_location": "L3222",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Returns the names of the features in the Dataset."
+      "description": "Returns the names of the features in the Dataset.",
+      "node_type": "method"
     },
     {
       "id": "basic_dataset_get_label",
@@ -1189,7 +1310,8 @@
       "source_location": "L3267",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Returns the label field currently stored in the Dataset."
+      "description": "Returns the label field currently stored in the Dataset.",
+      "node_type": "method"
     },
     {
       "id": "basic_dataset_get_weight",
@@ -1199,7 +1321,8 @@
       "source_location": "L3286",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Returns the weight field currently stored in the Dataset."
+      "description": "Returns the weight field currently stored in the Dataset.",
+      "node_type": "method"
     },
     {
       "id": "basic_dataset_get_init_score",
@@ -1209,7 +1332,8 @@
       "source_location": "L3305",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Returns the initial score field currently stored in the Dataset."
+      "description": "Returns the initial score field currently stored in the Dataset.",
+      "node_type": "method"
     },
     {
       "id": "basic_dataset_get_data",
@@ -1219,7 +1343,8 @@
       "source_location": "L3324",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Returns the original data that built this Dataset as rows."
+      "description": "Returns the original data that built this Dataset as rows.",
+      "node_type": "method"
     },
     {
       "id": "basic_dataset_get_group",
@@ -1229,7 +1354,8 @@
       "source_location": "L3366",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Returns the query group field currently stored in the Dataset."
+      "description": "Returns the query group field currently stored in the Dataset.",
+      "node_type": "method"
     },
     {
       "id": "basic_dataset_get_position",
@@ -1239,7 +1365,8 @@
       "source_location": "L3392",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Returns the position field currently stored in the Dataset."
+      "description": "Returns the position field currently stored in the Dataset.",
+      "node_type": "method"
     },
     {
       "id": "basic_dataset_num_data",
@@ -1249,7 +1376,8 @@
       "source_location": "L3405",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Returns the number of rows in the Dataset."
+      "description": "Returns the number of rows in the Dataset.",
+      "node_type": "method"
     },
     {
       "id": "basic_dataset_num_feature",
@@ -1259,7 +1387,8 @@
       "source_location": "L3425",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Returns the number of features in the Dataset."
+      "description": "Returns the number of features in the Dataset.",
+      "node_type": "method"
     },
     {
       "id": "basic_dataset_feature_num_bin",
@@ -1269,7 +1398,8 @@
       "source_location": "L3445",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Returns the number of bins for a given feature."
+      "description": "Returns the number of bins for a given feature.",
+      "node_type": "method"
     },
     {
       "id": "basic_dataset_get_ref_chain",
@@ -1279,7 +1409,8 @@
       "source_location": "L3477",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Returns the chain of reference Datasets starting from this one."
+      "description": "Returns the chain of reference Datasets starting from this one.",
+      "node_type": "method"
     },
     {
       "id": "basic_dataset_add_features_from",
@@ -1289,7 +1420,8 @@
       "source_location": "L3507",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Adds features from another Dataset to the current Dataset."
+      "description": "Adds features from another Dataset to the current Dataset.",
+      "node_type": "method"
     },
     {
       "id": "basic_dataset_dump_text",
@@ -1299,7 +1431,8 @@
       "source_location": "L3587",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Writes the Dataset to a text dump format."
+      "description": "Writes the Dataset to a text dump format.",
+      "node_type": "method"
     },
     {
       "id": "basic_evalresult",
@@ -1309,7 +1442,8 @@
       "source_location": "L3627",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Container for a single evaluation-metric result produced during training."
+      "description": "Container for a single evaluation-metric result produced during training.",
+      "node_type": "class"
     },
     {
       "id": "namedtuple",
@@ -1318,7 +1452,8 @@
       "source_file": "",
       "source_location": "",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "class"
     },
     {
       "id": "basic_evalresult_len",
@@ -1327,7 +1462,8 @@
       "source_file": "basic.py",
       "source_location": "L3657",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "method"
     },
     {
       "id": "basic_evalresult_iter",
@@ -1336,7 +1472,8 @@
       "source_file": "basic.py",
       "source_location": "L3663",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "method"
     },
     {
       "id": "basic_evalresult_is_cv_result",
@@ -1345,7 +1482,8 @@
       "source_file": "basic.py",
       "source_location": "L3669",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "method"
     },
     {
       "id": "basic_booster",
@@ -1355,7 +1493,8 @@
       "source_location": "L3681",
       "community": 6,
       "community_name": "Community 6",
-      "description": "The trained LightGBM model \u2014 wraps the native booster with predict, feature_importance, and save/load."
+      "description": "The trained LightGBM model \u2014 wraps the native booster with predict, feature_importance, and save/load.",
+      "node_type": "class"
     },
     {
       "id": "basic_booster_init",
@@ -1365,7 +1504,8 @@
       "source_location": "L3684",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Booster constructor \u2014 builds a booster from parameters and a training Dataset or a saved model file."
+      "description": "Booster constructor \u2014 builds a booster from parameters and a training Dataset or a saved model file.",
+      "node_type": "method"
     },
     {
       "id": "basic_booster_del",
@@ -1375,7 +1515,8 @@
       "source_location": "L3822",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Frees the Booster's native resources when the object is destroyed."
+      "description": "Frees the Booster's native resources when the object is destroyed.",
+      "node_type": "method"
     },
     {
       "id": "basic_booster_copy",
@@ -1385,7 +1526,8 @@
       "source_location": "L3834",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Creates a shallow copy of the Booster object."
+      "description": "Creates a shallow copy of the Booster object.",
+      "node_type": "method"
     },
     {
       "id": "basic_booster_deepcopy",
@@ -1395,7 +1537,8 @@
       "source_location": "L3837",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Creates a deep copy of the Booster via its model string."
+      "description": "Creates a deep copy of the Booster via its model string.",
+      "node_type": "method"
     },
     {
       "id": "basic_booster_getstate",
@@ -1405,7 +1548,8 @@
       "source_location": "L3841",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Captures the Booster's state for pickling via its model string."
+      "description": "Captures the Booster's state for pickling via its model string.",
+      "node_type": "method"
     },
     {
       "id": "basic_booster_setstate",
@@ -1414,7 +1558,8 @@
       "source_file": "basic.py",
       "source_location": "L3850",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "method"
     },
     {
       "id": "basic_booster_get_loaded_param",
@@ -1424,7 +1569,8 @@
       "source_location": "L3865",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Returns the parameters loaded from the model file."
+      "description": "Returns the parameters loaded from the model file.",
+      "node_type": "method"
     },
     {
       "id": "basic_booster_free_dataset",
@@ -1434,7 +1580,8 @@
       "source_location": "L3893",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Releases the Booster's references to its training and validation Datasets."
+      "description": "Releases the Booster's references to its training and validation Datasets.",
+      "node_type": "method"
     },
     {
       "id": "basic_booster_free_buffer",
@@ -1444,7 +1591,8 @@
       "source_location": "L3906",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Frees the buffer used when loading a model."
+      "description": "Frees the buffer used when loading a model.",
+      "node_type": "method"
     },
     {
       "id": "basic_booster_set_network",
@@ -1454,7 +1602,8 @@
       "source_location": "L3911",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Configures the network sockets used for distributed training."
+      "description": "Configures the network sockets used for distributed training.",
+      "node_type": "method"
     },
     {
       "id": "basic_booster_free_network",
@@ -1464,7 +1613,8 @@
       "source_location": "L3949",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Releases the network resources held by the Booster."
+      "description": "Releases the network resources held by the Booster.",
+      "node_type": "method"
     },
     {
       "id": "basic_booster_trees_to_dataframe",
@@ -1474,7 +1624,8 @@
       "source_location": "L3961",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Parses the fitted model into a readable DataFrame of tree splits."
+      "description": "Parses the fitted model into a readable DataFrame of tree splits.",
+      "node_type": "method"
     },
     {
       "id": "basic_booster_set_train_data_name",
@@ -1484,7 +1635,8 @@
       "source_location": "L4119",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Sets the display name of the Booster's training Dataset."
+      "description": "Sets the display name of the Booster's training Dataset.",
+      "node_type": "method"
     },
     {
       "id": "basic_booster_add_valid",
@@ -1494,7 +1646,8 @@
       "source_location": "L4135",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Adds a validation Dataset that the Booster evaluates during training."
+      "description": "Adds a validation Dataset that the Booster evaluates during training.",
+      "node_type": "method"
     },
     {
       "id": "basic_booster_reset_parameter",
@@ -1504,7 +1657,8 @@
       "source_location": "L4167",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Resets the Booster's training parameters to new values."
+      "description": "Resets the Booster's training parameters to new values.",
+      "node_type": "method"
     },
     {
       "id": "basic_booster_update",
@@ -1514,7 +1668,8 @@
       "source_location": "L4191",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Performs one boosting iteration on the Booster."
+      "description": "Performs one boosting iteration on the Booster.",
+      "node_type": "method"
     },
     {
       "id": "basic_booster_boost",
@@ -1524,7 +1679,8 @@
       "source_location": "L4272",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Adds one boosting iteration with custom gradient statistics."
+      "description": "Adds one boosting iteration with custom gradient statistics.",
+      "node_type": "method"
     },
     {
       "id": "basic_booster_rollback_one_iter",
@@ -1534,7 +1690,8 @@
       "source_location": "L4334",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Removes the last boosting iteration from the model."
+      "description": "Removes the last boosting iteration from the model.",
+      "node_type": "method"
     },
     {
       "id": "basic_booster_current_iteration",
@@ -1544,7 +1701,8 @@
       "source_location": "L4346",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Returns the index of the current iteration of the Booster."
+      "description": "Returns the index of the current iteration of the Booster.",
+      "node_type": "method"
     },
     {
       "id": "basic_booster_num_model_per_iteration",
@@ -1554,7 +1712,8 @@
       "source_location": "L4363",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Returns the number of models trained per boosting iteration."
+      "description": "Returns the number of models trained per boosting iteration.",
+      "node_type": "method"
     },
     {
       "id": "basic_booster_num_trees",
@@ -1564,7 +1723,8 @@
       "source_location": "L4380",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Returns the number of trees in the Booster."
+      "description": "Returns the number of trees in the Booster.",
+      "node_type": "method"
     },
     {
       "id": "basic_booster_upper_bound",
@@ -1574,7 +1734,8 @@
       "source_location": "L4397",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Returns the upper bound value of the model's predictions."
+      "description": "Returns the upper bound value of the model's predictions.",
+      "node_type": "method"
     },
     {
       "id": "basic_booster_lower_bound",
@@ -1584,7 +1745,8 @@
       "source_location": "L4414",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Returns the lower bound value of the model's predictions."
+      "description": "Returns the lower bound value of the model's predictions.",
+      "node_type": "method"
     },
     {
       "id": "basic_booster_eval",
@@ -1594,7 +1756,8 @@
       "source_location": "L4431",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Evaluates a given Dataset with the fitted model and returns results."
+      "description": "Evaluates a given Dataset with the fitted model and returns results.",
+      "node_type": "method"
     },
     {
       "id": "basic_booster_eval_train",
@@ -1604,7 +1767,8 @@
       "source_location": "L4487",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Evaluates the fitted model on its training data."
+      "description": "Evaluates the fitted model on its training data.",
+      "node_type": "method"
     },
     {
       "id": "basic_booster_eval_valid",
@@ -1614,7 +1778,8 @@
       "source_location": "L4522",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Evaluates the fitted model on its validation data."
+      "description": "Evaluates the fitted model on its validation data.",
+      "node_type": "method"
     },
     {
       "id": "basic_booster_save_model",
@@ -1624,7 +1789,8 @@
       "source_location": "L4561",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Saves the fitted Booster model to a file."
+      "description": "Saves the fitted Booster model to a file.",
+      "node_type": "method"
     },
     {
       "id": "basic_booster_shuffle_models",
@@ -1634,7 +1800,8 @@
       "source_location": "L4605",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Shuffles the models within a given iteration range."
+      "description": "Shuffles the models within a given iteration range.",
+      "node_type": "method"
     },
     {
       "id": "basic_booster_model_from_string",
@@ -1644,7 +1811,8 @@
       "source_location": "L4634",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Loads a Booster from a model string, restoring categorical metadata."
+      "description": "Loads a Booster from a model string, restoring categorical metadata.",
+      "node_type": "method"
     },
     {
       "id": "basic_booster_model_to_string",
@@ -1654,7 +1822,8 @@
       "source_location": "L4671",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Serializes the Booster into a model string representation."
+      "description": "Serializes the Booster into a model string representation.",
+      "node_type": "method"
     },
     {
       "id": "basic_booster_dump_model",
@@ -1664,7 +1833,8 @@
       "source_location": "L4735",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Dumps the Booster to a JSON string representation."
+      "description": "Dumps the Booster to a JSON string representation.",
+      "node_type": "method"
     },
     {
       "id": "basic_booster_predict",
@@ -1674,7 +1844,8 @@
       "source_location": "L4814",
       "community": 13,
       "community_name": "Community 13",
-      "description": "Makes predictions for new data with the fitted Booster."
+      "description": "Makes predictions for new data with the fitted Booster.",
+      "node_type": "method"
     },
     {
       "id": "basic_booster_refit",
@@ -1684,7 +1855,8 @@
       "source_location": "L4898",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Rebuilds the model on new data while reusing the existing tree structure."
+      "description": "Rebuilds the model on new data while reusing the existing tree structure.",
+      "node_type": "method"
     },
     {
       "id": "basic_booster_get_leaf_output",
@@ -1694,7 +1866,8 @@
       "source_location": "L5108",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Returns the output value of a specified leaf in a tree."
+      "description": "Returns the output value of a specified leaf in a tree.",
+      "node_type": "method"
     },
     {
       "id": "basic_booster_set_leaf_output",
@@ -1704,7 +1877,8 @@
       "source_location": "L5134",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Sets the output value of a specified leaf in a tree."
+      "description": "Sets the output value of a specified leaf in a tree.",
+      "node_type": "method"
     },
     {
       "id": "basic_booster_num_feature",
@@ -1714,7 +1888,8 @@
       "source_location": "L5168",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Returns the number of features in the Booster."
+      "description": "Returns the number of features in the Booster.",
+      "node_type": "method"
     },
     {
       "id": "basic_booster_feature_name",
@@ -1724,7 +1899,8 @@
       "source_location": "L5185",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Returns the list of feature names used by the Booster."
+      "description": "Returns the list of feature names used by the Booster.",
+      "node_type": "method"
     },
     {
       "id": "basic_booster_feature_importance",
@@ -1734,7 +1910,8 @@
       "source_location": "L5229",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Returns feature importance scores using the chosen importance type."
+      "description": "Returns feature importance scores using the chosen importance type.",
+      "node_type": "method"
     },
     {
       "id": "basic_booster_get_split_value_histogram",
@@ -1744,7 +1921,8 @@
       "source_location": "L5269",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Returns a histogram of split values for a specified feature."
+      "description": "Returns a histogram of split values for a specified feature.",
+      "node_type": "method"
     },
     {
       "id": "basic_booster_inner_eval",
@@ -1754,7 +1932,8 @@
       "source_location": "L5343",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Evaluates the Booster on its internal training and validation data."
+      "description": "Evaluates the Booster on its internal training and validation data.",
+      "node_type": "method"
     },
     {
       "id": "basic_booster_inner_predict",
@@ -1764,7 +1943,8 @@
       "source_location": "L5409",
       "community": 0,
       "community_name": "Community 0",
-      "description": "Predicts for the training and validation Datasets of the Booster."
+      "description": "Predicts for the training and validation Datasets of the Booster.",
+      "node_type": "method"
     },
     {
       "id": "basic_booster_get_eval_info",
@@ -1774,7 +1954,8 @@
       "source_location": "L5440",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Gets the names and count of inner evaluation results."
+      "description": "Gets the names and count of inner evaluation results.",
+      "node_type": "method"
     },
     {
       "id": "basic_rationale_153",
@@ -1783,7 +1964,8 @@
       "source_file": "basic.py",
       "source_location": "L153",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_221",
@@ -1792,7 +1974,8 @@
       "source_file": "basic.py",
       "source_location": "L221",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_242",
@@ -1801,7 +1984,8 @@
       "source_file": "basic.py",
       "source_location": "L242",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_272",
@@ -1810,7 +1994,8 @@
       "source_file": "basic.py",
       "source_location": "L272",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_289",
@@ -1819,7 +2004,8 @@
       "source_file": "basic.py",
       "source_location": "L289",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_301",
@@ -1828,7 +2014,8 @@
       "source_file": "basic.py",
       "source_location": "L301",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_312",
@@ -1837,7 +2024,8 @@
       "source_file": "basic.py",
       "source_location": "L312",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_317",
@@ -1846,7 +2034,8 @@
       "source_file": "basic.py",
       "source_location": "L317",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_325",
@@ -1855,7 +2044,8 @@
       "source_file": "basic.py",
       "source_location": "L325",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_332",
@@ -1864,7 +2054,8 @@
       "source_file": "basic.py",
       "source_location": "L332",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_345",
@@ -1873,7 +2064,8 @@
       "source_file": "basic.py",
       "source_location": "L345",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_355",
@@ -1882,7 +2074,8 @@
       "source_file": "basic.py",
       "source_location": "L355",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_374",
@@ -1891,7 +2084,8 @@
       "source_file": "basic.py",
       "source_location": "L374",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_379",
@@ -1900,7 +2094,8 @@
       "source_file": "basic.py",
       "source_location": "L379",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_384",
@@ -1909,7 +2104,8 @@
       "source_file": "basic.py",
       "source_location": "L384",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_394",
@@ -1918,7 +2114,8 @@
       "source_file": "basic.py",
       "source_location": "L394",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_403",
@@ -1927,7 +2124,8 @@
       "source_file": "basic.py",
       "source_location": "L403",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_418",
@@ -1936,7 +2134,8 @@
       "source_file": "basic.py",
       "source_location": "L418",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_426",
@@ -1945,7 +2144,8 @@
       "source_file": "basic.py",
       "source_location": "L426",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_434",
@@ -1954,7 +2154,8 @@
       "source_file": "basic.py",
       "source_location": "L434",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_442",
@@ -1963,7 +2164,8 @@
       "source_file": "basic.py",
       "source_location": "L442",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_450",
@@ -1972,7 +2174,8 @@
       "source_file": "basic.py",
       "source_location": "L450",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_455",
@@ -1981,7 +2184,8 @@
       "source_file": "basic.py",
       "source_location": "L455",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_460",
@@ -1990,7 +2194,8 @@
       "source_file": "basic.py",
       "source_location": "L460",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_478",
@@ -1999,7 +2204,8 @@
       "source_file": "basic.py",
       "source_location": "L478",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_493",
@@ -2008,7 +2214,8 @@
       "source_file": "basic.py",
       "source_location": "L493",
       "community": 14,
-      "community_name": "Community 14"
+      "community_name": "Community 14",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_509",
@@ -2017,7 +2224,8 @@
       "source_file": "basic.py",
       "source_location": "L509",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_576",
@@ -2026,7 +2234,8 @@
       "source_file": "basic.py",
       "source_location": "L576",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_665",
@@ -2035,7 +2244,8 @@
       "source_file": "basic.py",
       "source_location": "L665",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_677",
@@ -2044,7 +2254,8 @@
       "source_file": "basic.py",
       "source_location": "L677",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_698",
@@ -2053,7 +2264,8 @@
       "source_file": "basic.py",
       "source_location": "L698",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_843",
@@ -2062,7 +2274,8 @@
       "source_file": "basic.py",
       "source_location": "L843",
       "community": 12,
-      "community_name": "Community 12"
+      "community_name": "Community 12",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_874",
@@ -2071,7 +2284,8 @@
       "source_file": "basic.py",
       "source_location": "L874",
       "community": 12,
-      "community_name": "Community 12"
+      "community_name": "Community 12",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_904",
@@ -2080,7 +2294,8 @@
       "source_file": "basic.py",
       "source_location": "L904",
       "community": 12,
-      "community_name": "Community 12"
+      "community_name": "Community 12",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_909",
@@ -2089,7 +2304,8 @@
       "source_file": "basic.py",
       "source_location": "L909",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_926",
@@ -2098,7 +2314,8 @@
       "source_file": "basic.py",
       "source_location": "L926",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_960",
@@ -2107,7 +2324,8 @@
       "source_file": "basic.py",
       "source_location": "L960",
       "community": 13,
-      "community_name": "Community 13"
+      "community_name": "Community 13",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_982",
@@ -2116,7 +2334,8 @@
       "source_file": "basic.py",
       "source_location": "L982",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_1031",
@@ -2125,7 +2344,8 @@
       "source_file": "basic.py",
       "source_location": "L1031",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_1188",
@@ -2134,7 +2354,8 @@
       "source_file": "basic.py",
       "source_location": "L1188",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_1257",
@@ -2143,7 +2364,8 @@
       "source_file": "basic.py",
       "source_location": "L1257",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_1474",
@@ -2152,7 +2374,8 @@
       "source_file": "basic.py",
       "source_location": "L1474",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_1585",
@@ -2161,7 +2384,8 @@
       "source_file": "basic.py",
       "source_location": "L1585",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_1646",
@@ -2170,7 +2394,8 @@
       "source_file": "basic.py",
       "source_location": "L1646",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_1676",
@@ -2179,7 +2404,8 @@
       "source_file": "basic.py",
       "source_location": "L1676",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_1694",
@@ -2188,7 +2414,8 @@
       "source_file": "basic.py",
       "source_location": "L1694",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_1718",
@@ -2197,7 +2424,8 @@
       "source_file": "basic.py",
       "source_location": "L1718",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_1828",
@@ -2206,7 +2434,8 @@
       "source_file": "basic.py",
       "source_location": "L1828",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_1866",
@@ -2215,7 +2444,8 @@
       "source_file": "basic.py",
       "source_location": "L1866",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_1897",
@@ -2224,7 +2454,8 @@
       "source_file": "basic.py",
       "source_location": "L1897",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_1955",
@@ -2233,7 +2464,8 @@
       "source_file": "basic.py",
       "source_location": "L1955",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_1985",
@@ -2242,7 +2474,8 @@
       "source_file": "basic.py",
       "source_location": "L1985",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_2218",
@@ -2251,7 +2484,8 @@
       "source_file": "basic.py",
       "source_location": "L2218",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_2251",
@@ -2260,7 +2494,8 @@
       "source_file": "basic.py",
       "source_location": "L2251",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_2286",
@@ -2269,7 +2504,8 @@
       "source_file": "basic.py",
       "source_location": "L2286",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_2314",
@@ -2278,7 +2514,8 @@
       "source_file": "basic.py",
       "source_location": "L2314",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_2369",
@@ -2287,7 +2524,8 @@
       "source_file": "basic.py",
       "source_location": "L2369",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_2404",
@@ -2296,7 +2534,8 @@
       "source_file": "basic.py",
       "source_location": "L2404",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_2439",
@@ -2305,7 +2544,8 @@
       "source_file": "basic.py",
       "source_location": "L2439",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_2462",
@@ -2314,7 +2554,8 @@
       "source_file": "basic.py",
       "source_location": "L2462",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_2491",
@@ -2323,7 +2564,8 @@
       "source_file": "basic.py",
       "source_location": "L2491",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_2595",
@@ -2332,7 +2574,8 @@
       "source_file": "basic.py",
       "source_location": "L2595",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_2679",
@@ -2341,7 +2584,8 @@
       "source_file": "basic.py",
       "source_location": "L2679",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_2709",
@@ -2350,7 +2594,8 @@
       "source_file": "basic.py",
       "source_location": "L2709",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_2773",
@@ -2359,7 +2604,8 @@
       "source_file": "basic.py",
       "source_location": "L2773",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_2865",
@@ -2368,7 +2614,8 @@
       "source_file": "basic.py",
       "source_location": "L2865",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_2929",
@@ -2377,7 +2624,8 @@
       "source_file": "basic.py",
       "source_location": "L2929",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_2967",
@@ -2386,7 +2634,8 @@
       "source_file": "basic.py",
       "source_location": "L2967",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_3003",
@@ -2395,7 +2644,8 @@
       "source_file": "basic.py",
       "source_location": "L3003",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_3031",
@@ -2404,7 +2654,8 @@
       "source_file": "basic.py",
       "source_location": "L3031",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_3062",
@@ -2413,7 +2664,8 @@
       "source_file": "basic.py",
       "source_location": "L3062",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_3098",
@@ -2422,7 +2674,8 @@
       "source_file": "basic.py",
       "source_location": "L3098",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_3137",
@@ -2431,7 +2684,8 @@
       "source_file": "basic.py",
       "source_location": "L3137",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_3165",
@@ -2440,7 +2694,8 @@
       "source_file": "basic.py",
       "source_location": "L3165",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_3202",
@@ -2449,7 +2704,8 @@
       "source_file": "basic.py",
       "source_location": "L3202",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_3223",
@@ -2458,7 +2714,8 @@
       "source_file": "basic.py",
       "source_location": "L3223",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_3268",
@@ -2467,7 +2724,8 @@
       "source_file": "basic.py",
       "source_location": "L3268",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_3287",
@@ -2476,7 +2734,8 @@
       "source_file": "basic.py",
       "source_location": "L3287",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_3306",
@@ -2485,7 +2744,8 @@
       "source_file": "basic.py",
       "source_location": "L3306",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_3325",
@@ -2494,7 +2754,8 @@
       "source_file": "basic.py",
       "source_location": "L3325",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_3367",
@@ -2503,7 +2764,8 @@
       "source_file": "basic.py",
       "source_location": "L3367",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_3393",
@@ -2512,7 +2774,8 @@
       "source_file": "basic.py",
       "source_location": "L3393",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_3406",
@@ -2521,7 +2784,8 @@
       "source_file": "basic.py",
       "source_location": "L3406",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_3426",
@@ -2530,7 +2794,8 @@
       "source_file": "basic.py",
       "source_location": "L3426",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_3446",
@@ -2539,7 +2804,8 @@
       "source_file": "basic.py",
       "source_location": "L3446",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_3478",
@@ -2548,7 +2814,8 @@
       "source_file": "basic.py",
       "source_location": "L3478",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_3508",
@@ -2557,7 +2824,8 @@
       "source_file": "basic.py",
       "source_location": "L3508",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_3588",
@@ -2566,7 +2834,8 @@
       "source_file": "basic.py",
       "source_location": "L3588",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_3628",
@@ -2575,7 +2844,8 @@
       "source_file": "basic.py",
       "source_location": "L3628",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_3670",
@@ -2584,7 +2854,8 @@
       "source_file": "basic.py",
       "source_location": "L3670",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_3691",
@@ -2593,7 +2864,8 @@
       "source_file": "basic.py",
       "source_location": "L3691",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_3894",
@@ -2602,7 +2874,8 @@
       "source_file": "basic.py",
       "source_location": "L3894",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_3918",
@@ -2611,7 +2884,8 @@
       "source_file": "basic.py",
       "source_location": "L3918",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_3950",
@@ -2620,7 +2894,8 @@
       "source_file": "basic.py",
       "source_location": "L3950",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_3962",
@@ -2629,7 +2904,8 @@
       "source_file": "basic.py",
       "source_location": "L3962",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_4120",
@@ -2638,7 +2914,8 @@
       "source_file": "basic.py",
       "source_location": "L4120",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_4136",
@@ -2647,7 +2924,8 @@
       "source_file": "basic.py",
       "source_location": "L4136",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_4168",
@@ -2656,7 +2934,8 @@
       "source_file": "basic.py",
       "source_location": "L4168",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_4196",
@@ -2665,7 +2944,8 @@
       "source_file": "basic.py",
       "source_location": "L4196",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_4278",
@@ -2674,7 +2954,8 @@
       "source_file": "basic.py",
       "source_location": "L4278",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_4335",
@@ -2683,7 +2964,8 @@
       "source_file": "basic.py",
       "source_location": "L4335",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_4347",
@@ -2692,7 +2974,8 @@
       "source_file": "basic.py",
       "source_location": "L4347",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_4364",
@@ -2701,7 +2984,8 @@
       "source_file": "basic.py",
       "source_location": "L4364",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_4381",
@@ -2710,7 +2994,8 @@
       "source_file": "basic.py",
       "source_location": "L4381",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_4398",
@@ -2719,7 +3004,8 @@
       "source_file": "basic.py",
       "source_location": "L4398",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_4415",
@@ -2728,7 +3014,8 @@
       "source_file": "basic.py",
       "source_location": "L4415",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_4437",
@@ -2737,7 +3024,8 @@
       "source_file": "basic.py",
       "source_location": "L4437",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_4491",
@@ -2746,7 +3034,8 @@
       "source_file": "basic.py",
       "source_location": "L4491",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_4526",
@@ -2755,7 +3044,8 @@
       "source_file": "basic.py",
       "source_location": "L4526",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_4568",
@@ -2764,7 +3054,8 @@
       "source_file": "basic.py",
       "source_location": "L4568",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_4610",
@@ -2773,7 +3064,8 @@
       "source_file": "basic.py",
       "source_location": "L4610",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_4635",
@@ -2782,7 +3074,8 @@
       "source_file": "basic.py",
       "source_location": "L4635",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_4677",
@@ -2791,7 +3084,8 @@
       "source_file": "basic.py",
       "source_location": "L4677",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_4742",
@@ -2800,7 +3094,8 @@
       "source_file": "basic.py",
       "source_location": "L4742",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_4826",
@@ -2809,7 +3104,8 @@
       "source_file": "basic.py",
       "source_location": "L4826",
       "community": 13,
-      "community_name": "Community 13"
+      "community_name": "Community 13",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_4914",
@@ -2818,7 +3114,8 @@
       "source_file": "basic.py",
       "source_location": "L4914",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_5109",
@@ -2827,7 +3124,8 @@
       "source_file": "basic.py",
       "source_location": "L5109",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_5140",
@@ -2836,7 +3134,8 @@
       "source_file": "basic.py",
       "source_location": "L5140",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_5169",
@@ -2845,7 +3144,8 @@
       "source_file": "basic.py",
       "source_location": "L5169",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_5186",
@@ -2854,7 +3154,8 @@
       "source_file": "basic.py",
       "source_location": "L5186",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_5234",
@@ -2863,7 +3164,8 @@
       "source_file": "basic.py",
       "source_location": "L5234",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_5275",
@@ -2872,7 +3174,8 @@
       "source_file": "basic.py",
       "source_location": "L5275",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_5350",
@@ -2881,7 +3184,8 @@
       "source_file": "basic.py",
       "source_location": "L5350",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_5410",
@@ -2890,7 +3194,8 @@
       "source_file": "basic.py",
       "source_location": "L5410",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_5441",
@@ -2899,7 +3204,8 @@
       "source_file": "basic.py",
       "source_location": "L5441",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_1117",
@@ -2908,7 +3214,8 @@
       "source_file": "basic.py",
       "source_location": "L1117",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_1125",
@@ -2917,7 +3224,8 @@
       "source_file": "basic.py",
       "source_location": "L1125",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "module"
     },
     {
       "id": "basic_rationale_1163",
@@ -2926,7 +3234,8 @@
       "source_file": "basic.py",
       "source_location": "L1163",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "callback",
@@ -2936,7 +3245,8 @@
       "source_location": "L1",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Module of training callbacks \u2014 early stopping, logging, and learning-rate schedules."
+      "description": "Module of training callbacks \u2014 early stopping, logging, and learning-rate schedules.",
+      "node_type": "module"
     },
     {
       "id": "callback_earlystopexception",
@@ -2946,7 +3256,8 @@
       "source_location": "L36",
       "community": 2,
       "community_name": "Community 2",
-      "description": "EarlyStopException \u2014 raised to halt training when early stopping is triggered."
+      "description": "EarlyStopException \u2014 raised to halt training when early stopping is triggered.",
+      "node_type": "class"
     },
     {
       "id": "callback_earlystopexception_init",
@@ -2956,7 +3267,8 @@
       "source_location": "L43",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Stores the best iteration when constructing the exception."
+      "description": "Stores the best iteration when constructing the exception.",
+      "node_type": "method"
     },
     {
       "id": "callback_callbackenv",
@@ -2966,7 +3278,8 @@
       "source_location": "L67",
       "community": 2,
       "community_name": "Community 2",
-      "description": "CallbackEnv \u2014 passes Booster state and evaluation results into each callback."
+      "description": "CallbackEnv \u2014 passes Booster state and evaluation results into each callback.",
+      "node_type": "class"
     },
     {
       "id": "callback_is_using_cv",
@@ -2975,7 +3288,8 @@
       "source_file": "callback.py",
       "source_location": "L76",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "function"
     },
     {
       "id": "callback_format_eval_result",
@@ -2984,7 +3298,8 @@
       "source_file": "callback.py",
       "source_location": "L84",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "function"
     },
     {
       "id": "callback_logevaluationcallback",
@@ -2993,7 +3308,8 @@
       "source_file": "callback.py",
       "source_location": "L94",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "function"
     },
     {
       "id": "callback_logevaluationcallback_init",
@@ -3002,7 +3318,8 @@
       "source_file": "callback.py",
       "source_location": "L97",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "method"
     },
     {
       "id": "callback_logevaluationcallback_call",
@@ -3012,7 +3329,8 @@
       "source_location": "L104",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Logs the formatted evaluation results after each iteration."
+      "description": "Logs the formatted evaluation results after each iteration.",
+      "node_type": "method"
     },
     {
       "id": "callback_log_evaluation",
@@ -3022,7 +3340,8 @@
       "source_location": "L110",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Creates a callback that logs evaluation results each iteration."
+      "description": "Creates a callback that logs evaluation results each iteration.",
+      "node_type": "function"
     },
     {
       "id": "callback_recordevaluationcallback",
@@ -3031,7 +3350,8 @@
       "source_file": "callback.py",
       "source_location": "L136",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "function"
     },
     {
       "id": "callback_recordevaluationcallback_init",
@@ -3040,7 +3360,8 @@
       "source_file": "callback.py",
       "source_location": "L139",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "method"
     },
     {
       "id": "callback_recordevaluationcallback_call",
@@ -3049,7 +3370,8 @@
       "source_file": "callback.py",
       "source_location": "L164",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "method"
     },
     {
       "id": "callback_record_evaluation",
@@ -3059,7 +3381,8 @@
       "source_location": "L182",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Creates a callback that records evaluation history into a dictionary."
+      "description": "Creates a callback that records evaluation history into a dictionary.",
+      "node_type": "function"
     },
     {
       "id": "callback_resetparametercallback",
@@ -3068,7 +3391,8 @@
       "source_file": "callback.py",
       "source_location": "L218",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "function"
     },
     {
       "id": "callback_resetparametercallback_init",
@@ -3077,7 +3401,8 @@
       "source_file": "callback.py",
       "source_location": "L221",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "method"
     },
     {
       "id": "callback_resetparametercallback_call",
@@ -3087,7 +3412,8 @@
       "source_location": "L227",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Applies the configured parameter reset during the callback."
+      "description": "Applies the configured parameter reset during the callback.",
+      "node_type": "method"
     },
     {
       "id": "callback_reset_parameter",
@@ -3097,7 +3423,8 @@
       "source_location": "L253",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Creates a callback that resets a parameter after the first iteration."
+      "description": "Creates a callback that resets a parameter after the first iteration.",
+      "node_type": "function"
     },
     {
       "id": "callback_earlystoppingcallback",
@@ -3106,7 +3433,8 @@
       "source_file": "callback.py",
       "source_location": "L277",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "function"
     },
     {
       "id": "callback_earlystoppingcallback_init",
@@ -3116,7 +3444,8 @@
       "source_location": "L280",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Sets up the early stopping criteria and its internal storage."
+      "description": "Sets up the early stopping criteria and its internal storage.",
+      "node_type": "method"
     },
     {
       "id": "callback_earlystoppingcallback_reset_storages",
@@ -3126,7 +3455,8 @@
       "source_location": "L299",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Clears stored evaluation state before early stopping runs."
+      "description": "Clears stored evaluation state before early stopping runs.",
+      "node_type": "method"
     },
     {
       "id": "callback_earlystoppingcallback_gt_delta",
@@ -3135,7 +3465,8 @@
       "source_file": "callback.py",
       "source_location": "L306",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "method"
     },
     {
       "id": "callback_earlystoppingcallback_lt_delta",
@@ -3144,7 +3475,8 @@
       "source_file": "callback.py",
       "source_location": "L309",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "method"
     },
     {
       "id": "callback_earlystoppingcallback_is_train_set",
@@ -3154,7 +3486,8 @@
       "source_location": "L312",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Checks whether a named Dataset is the training data."
+      "description": "Checks whether a named Dataset is the training data.",
+      "node_type": "method"
     },
     {
       "id": "callback_earlystoppingcallback_final_iteration_check",
@@ -3164,7 +3497,8 @@
       "source_location": "L391",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Raises EarlyStopException when no metric improvement is found."
+      "description": "Raises EarlyStopException when no metric improvement is found.",
+      "node_type": "method"
     },
     {
       "id": "callback_earlystoppingcallback_call",
@@ -3174,7 +3508,8 @@
       "source_location": "L405",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Checks evaluation results each iteration and raises EarlyStopException when training stalls."
+      "description": "Checks evaluation results each iteration and raises EarlyStopException when training stalls.",
+      "node_type": "method"
     },
     {
       "id": "callback_should_enable_early_stopping",
@@ -3183,7 +3518,8 @@
       "source_file": "callback.py",
       "source_location": "L450",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "function"
     },
     {
       "id": "callback_early_stopping",
@@ -3193,7 +3529,8 @@
       "source_location": "L462",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Creates a callback that stops training when metrics stop improving."
+      "description": "Creates a callback that stops training when metrics stop improving.",
+      "node_type": "function"
     },
     {
       "id": "callback_rationale_37",
@@ -3202,7 +3539,8 @@
       "source_file": "callback.py",
       "source_location": "L37",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "module"
     },
     {
       "id": "callback_rationale_44",
@@ -3211,7 +3549,8 @@
       "source_file": "callback.py",
       "source_location": "L44",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "module"
     },
     {
       "id": "callback_rationale_77",
@@ -3220,7 +3559,8 @@
       "source_file": "callback.py",
       "source_location": "L77",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "module"
     },
     {
       "id": "callback_rationale_85",
@@ -3229,7 +3569,8 @@
       "source_file": "callback.py",
       "source_location": "L85",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "module"
     },
     {
       "id": "callback_rationale_95",
@@ -3238,7 +3579,8 @@
       "source_file": "callback.py",
       "source_location": "L95",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "module"
     },
     {
       "id": "callback_rationale_111",
@@ -3247,7 +3589,8 @@
       "source_file": "callback.py",
       "source_location": "L111",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "module"
     },
     {
       "id": "callback_rationale_137",
@@ -3256,7 +3599,8 @@
       "source_file": "callback.py",
       "source_location": "L137",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "module"
     },
     {
       "id": "callback_rationale_183",
@@ -3265,7 +3609,8 @@
       "source_file": "callback.py",
       "source_location": "L183",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "module"
     },
     {
       "id": "callback_rationale_219",
@@ -3274,7 +3619,8 @@
       "source_file": "callback.py",
       "source_location": "L219",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "module"
     },
     {
       "id": "callback_rationale_254",
@@ -3283,7 +3629,8 @@
       "source_file": "callback.py",
       "source_location": "L254",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "module"
     },
     {
       "id": "callback_rationale_278",
@@ -3292,7 +3639,8 @@
       "source_file": "callback.py",
       "source_location": "L278",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "module"
     },
     {
       "id": "callback_rationale_313",
@@ -3301,7 +3649,8 @@
       "source_file": "callback.py",
       "source_location": "L313",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "module"
     },
     {
       "id": "callback_rationale_451",
@@ -3310,7 +3659,8 @@
       "source_file": "callback.py",
       "source_location": "L451",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "module"
     },
     {
       "id": "callback_rationale_468",
@@ -3319,7 +3669,8 @@
       "source_file": "callback.py",
       "source_location": "L468",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "module"
     },
     {
       "id": "compat",
@@ -3329,7 +3680,8 @@
       "source_location": "L1",
       "community": 7,
       "community_name": "Community 7",
-      "description": "Compatibility shims for optional dependencies (pandas, scipy, dask, graphviz)."
+      "description": "Compatibility shims for optional dependencies (pandas, scipy, dask, graphviz).",
+      "node_type": "module"
     },
     {
       "id": "compat_validate_data",
@@ -3338,7 +3690,8 @@
       "source_file": "compat.py",
       "source_location": "L34",
       "community": 7,
-      "community_name": "Community 7"
+      "community_name": "Community 7",
+      "node_type": "function"
     },
     {
       "id": "compat_lgbmmodelbase",
@@ -3347,7 +3700,8 @@
       "source_file": "compat.py",
       "source_location": "L115",
       "community": 7,
-      "community_name": "Community 7"
+      "community_name": "Community 7",
+      "node_type": "function"
     },
     {
       "id": "compat_lgbmclassifierbase",
@@ -3356,7 +3710,8 @@
       "source_file": "compat.py",
       "source_location": "L120",
       "community": 7,
-      "community_name": "Community 7"
+      "community_name": "Community 7",
+      "node_type": "function"
     },
     {
       "id": "compat_lgbmregressorbase",
@@ -3365,7 +3720,8 @@
       "source_file": "compat.py",
       "source_location": "L125",
       "community": 7,
-      "community_name": "Community 7"
+      "community_name": "Community 7",
+      "node_type": "function"
     },
     {
       "id": "compat_pd_series",
@@ -3375,7 +3731,8 @@
       "source_location": "L162",
       "community": 3,
       "community_name": "Community 3",
-      "description": "Compatibility alias for pandas.Series."
+      "description": "Compatibility alias for pandas.Series.",
+      "node_type": "function"
     },
     {
       "id": "compat_pd_series_init",
@@ -3384,7 +3741,8 @@
       "source_file": "compat.py",
       "source_location": "L165",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "method"
     },
     {
       "id": "compat_pd_dataframe",
@@ -3394,7 +3752,8 @@
       "source_location": "L168",
       "community": 4,
       "community_name": "Community 4",
-      "description": "Compatibility alias for pandas.DataFrame, used when pandas is installed (else a stub)."
+      "description": "Compatibility alias for pandas.DataFrame, used when pandas is installed (else a stub).",
+      "node_type": "function"
     },
     {
       "id": "compat_pd_dataframe_init",
@@ -3403,7 +3762,8 @@
       "source_file": "compat.py",
       "source_location": "L171",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "method"
     },
     {
       "id": "compat_pd_categoricaldtype",
@@ -3413,7 +3773,8 @@
       "source_location": "L174",
       "community": 5,
       "community_name": "Community 5",
-      "description": "Compatibility alias for pandas.CategoricalDtype, used for categorical features."
+      "description": "Compatibility alias for pandas.CategoricalDtype, used for categorical features.",
+      "node_type": "function"
     },
     {
       "id": "compat_pd_categoricaldtype_init",
@@ -3422,7 +3783,8 @@
       "source_file": "compat.py",
       "source_location": "L177",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "method"
     },
     {
       "id": "compat_lgbmcpucount",
@@ -3431,7 +3793,8 @@
       "source_file": "compat.py",
       "source_location": "L185",
       "community": 7,
-      "community_name": "Community 7"
+      "community_name": "Community 7",
+      "node_type": "function"
     },
     {
       "id": "compat_rationale_116",
@@ -3440,7 +3803,8 @@
       "source_file": "compat.py",
       "source_location": "L116",
       "community": 7,
-      "community_name": "Community 7"
+      "community_name": "Community 7",
+      "node_type": "module"
     },
     {
       "id": "compat_rationale_121",
@@ -3449,7 +3813,8 @@
       "source_file": "compat.py",
       "source_location": "L121",
       "community": 7,
-      "community_name": "Community 7"
+      "community_name": "Community 7",
+      "node_type": "module"
     },
     {
       "id": "compat_rationale_126",
@@ -3458,7 +3823,8 @@
       "source_file": "compat.py",
       "source_location": "L126",
       "community": 7,
-      "community_name": "Community 7"
+      "community_name": "Community 7",
+      "node_type": "module"
     },
     {
       "id": "compat_rationale_163",
@@ -3467,7 +3833,8 @@
       "source_file": "compat.py",
       "source_location": "L163",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "module"
     },
     {
       "id": "compat_rationale_169",
@@ -3476,7 +3843,8 @@
       "source_file": "compat.py",
       "source_location": "L169",
       "community": 4,
-      "community_name": "Community 4"
+      "community_name": "Community 4",
+      "node_type": "module"
     },
     {
       "id": "compat_rationale_175",
@@ -3485,7 +3853,8 @@
       "source_file": "compat.py",
       "source_location": "L175",
       "community": 5,
-      "community_name": "Community 5"
+      "community_name": "Community 5",
+      "node_type": "module"
     },
     {
       "id": "compat_rationale_65",
@@ -3494,7 +3863,8 @@
       "source_file": "compat.py",
       "source_location": "L65",
       "community": 7,
-      "community_name": "Community 7"
+      "community_name": "Community 7",
+      "node_type": "module"
     },
     {
       "id": "dask",
@@ -3504,7 +3874,8 @@
       "source_location": "L1",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Module providing Dask-distributed LightGBM estimators."
+      "description": "Module providing Dask-distributed LightGBM estimators.",
+      "node_type": "module"
     },
     {
       "id": "dask_remotesocket",
@@ -3513,7 +3884,8 @@
       "source_file": "dask.py",
       "source_location": "L74",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "function"
     },
     {
       "id": "dask_remotesocket_acquire",
@@ -3523,7 +3895,8 @@
       "source_location": "L75",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Acquires a remote socket for Dask worker communication."
+      "description": "Acquires a remote socket for Dask worker communication.",
+      "node_type": "method"
     },
     {
       "id": "dask_remotesocket_release",
@@ -3533,7 +3906,8 @@
       "source_location": "L81",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Releases the remote socket once Dask training finishes."
+      "description": "Releases the remote socket once Dask training finishes.",
+      "node_type": "method"
     },
     {
       "id": "dask_acquire_port",
@@ -3542,7 +3916,8 @@
       "source_file": "dask.py",
       "source_location": "L85",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "function"
     },
     {
       "id": "dask_datasetnames",
@@ -3551,7 +3926,8 @@
       "source_file": "dask.py",
       "source_location": "L91",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "function"
     },
     {
       "id": "dask_get_dask_client",
@@ -3560,7 +3936,8 @@
       "source_file": "dask.py",
       "source_location": "L103",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "function"
     },
     {
       "id": "dask_assign_open_ports_to_workers",
@@ -3569,7 +3946,8 @@
       "source_file": "dask.py",
       "source_location": "L124",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "function"
     },
     {
       "id": "dask_concat",
@@ -3578,7 +3956,8 @@
       "source_file": "dask.py",
       "source_location": "L161",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "function"
     },
     {
       "id": "dask_remove_list_padding",
@@ -3587,7 +3966,8 @@
       "source_file": "dask.py",
       "source_location": "L174",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "function"
     },
     {
       "id": "dask_pad_eval_names",
@@ -3596,7 +3976,8 @@
       "source_file": "dask.py",
       "source_location": "L178",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "function"
     },
     {
       "id": "dask_train_part",
@@ -3605,7 +3986,8 @@
       "source_file": "dask.py",
       "source_location": "L196",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "function"
     },
     {
       "id": "dask_split_to_parts",
@@ -3614,7 +3996,8 @@
       "source_file": "dask.py",
       "source_location": "L387",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "function"
     },
     {
       "id": "dask_machines_to_worker_map",
@@ -3623,7 +4006,8 @@
       "source_file": "dask.py",
       "source_location": "L398",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "function"
     },
     {
       "id": "dask_train",
@@ -3632,7 +4016,8 @@
       "source_file": "dask.py",
       "source_location": "L442",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "function"
     },
     {
       "id": "dask_predict_part",
@@ -3641,7 +4026,8 @@
       "source_file": "dask.py",
       "source_location": "L877",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "function"
     },
     {
       "id": "dask_predict",
@@ -3650,7 +4036,8 @@
       "source_file": "dask.py",
       "source_location": "L926",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "function"
     },
     {
       "id": "dask_dasklgbmmodel",
@@ -3659,7 +4046,8 @@
       "source_file": "dask.py",
       "source_location": "L1080",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "function"
     },
     {
       "id": "dask_dasklgbmmodel_client",
@@ -3669,7 +4057,8 @@
       "source_location": "L1082",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Exposes the Dask client used for distributed training and prediction."
+      "description": "Exposes the Dask client used for distributed training and prediction.",
+      "node_type": "method"
     },
     {
       "id": "dask_dasklgbmmodel_lgb_dask_getstate",
@@ -3679,7 +4068,8 @@
       "source_location": "L1093",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Strips un-picklable attributes before the Dask model is serialized."
+      "description": "Strips un-picklable attributes before the Dask model is serialized.",
+      "node_type": "method"
     },
     {
       "id": "dask_dasklgbmmodel_lgb_dask_fit",
@@ -3689,7 +4079,8 @@
       "source_location": "L1102",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Runs the distributed training routine behind the Dask estimators' fit methods."
+      "description": "Runs the distributed training routine behind the Dask estimators' fit methods.",
+      "node_type": "method"
     },
     {
       "id": "dask_dasklgbmmodel_lgb_dask_to_local",
@@ -3699,7 +4090,8 @@
       "source_location": "L1156",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Converts the distributed model into its single-machine local counterpart."
+      "description": "Converts the distributed model into its single-machine local counterpart.",
+      "node_type": "method"
     },
     {
       "id": "dask_dasklgbmmodel_lgb_dask_copy_extra_params",
@@ -3709,7 +4101,8 @@
       "source_location": "L1165",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Copies extra parameters onto the Dask model instance before fitting."
+      "description": "Copies extra parameters onto the Dask model instance before fitting.",
+      "node_type": "method"
     },
     {
       "id": "dask_dasklgbmclassifier",
@@ -3719,7 +4112,8 @@
       "source_location": "L1177",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Dask-distributed LightGBM classifier."
+      "description": "Dask-distributed LightGBM classifier.",
+      "node_type": "class"
     },
     {
       "id": "lgbmclassifier",
@@ -3728,7 +4122,8 @@
       "source_file": "",
       "source_location": "",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "class"
     },
     {
       "id": "dask_dasklgbmclassifier_init",
@@ -3737,7 +4132,8 @@
       "source_file": "dask.py",
       "source_location": "L1180",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "method"
     },
     {
       "id": "dask_dasklgbmclassifier_getstate",
@@ -3747,7 +4143,8 @@
       "source_location": "L1242",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Prepares the classifier's state for pickling and serialization."
+      "description": "Prepares the classifier's state for pickling and serialization.",
+      "node_type": "method"
     },
     {
       "id": "dask_dasklgbmclassifier_fit",
@@ -3757,7 +4154,8 @@
       "source_location": "L1245",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Fits the Dask classifier on the distributed training data."
+      "description": "Fits the Dask classifier on the distributed training data.",
+      "node_type": "method"
     },
     {
       "id": "dask_dasklgbmclassifier_predict",
@@ -3767,7 +4165,8 @@
       "source_location": "L1309",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Predicts class labels across the distributed data partitions."
+      "description": "Predicts class labels across the distributed data partitions.",
+      "node_type": "method"
     },
     {
       "id": "dask_dasklgbmclassifier_predict_proba",
@@ -3777,7 +4176,8 @@
       "source_location": "L1343",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Predicts class probabilities across the distributed data partitions."
+      "description": "Predicts class probabilities across the distributed data partitions.",
+      "node_type": "method"
     },
     {
       "id": "dask_dasklgbmclassifier_to_local",
@@ -3787,7 +4187,8 @@
       "source_location": "L1378",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Converts the distributed classifier into a local LGBMClassifier instance."
+      "description": "Converts the distributed classifier into a local LGBMClassifier instance.",
+      "node_type": "method"
     },
     {
       "id": "dask_dasklgbmregressor",
@@ -3797,7 +4198,8 @@
       "source_location": "L1389",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Dask-distributed LightGBM regressor."
+      "description": "Dask-distributed LightGBM regressor.",
+      "node_type": "class"
     },
     {
       "id": "lgbmregressor",
@@ -3806,7 +4208,8 @@
       "source_file": "",
       "source_location": "",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "class"
     },
     {
       "id": "dask_dasklgbmregressor_init",
@@ -3815,7 +4218,8 @@
       "source_file": "dask.py",
       "source_location": "L1392",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "method"
     },
     {
       "id": "dask_dasklgbmregressor_getstate",
@@ -3825,7 +4229,8 @@
       "source_location": "L1454",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Prepares the regressor's state for pickling and serialization."
+      "description": "Prepares the regressor's state for pickling and serialization.",
+      "node_type": "method"
     },
     {
       "id": "dask_dasklgbmregressor_fit",
@@ -3835,7 +4240,8 @@
       "source_location": "L1457",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Fits the Dask regressor on the distributed training data."
+      "description": "Fits the Dask regressor on the distributed training data.",
+      "node_type": "method"
     },
     {
       "id": "dask_dasklgbmregressor_predict",
@@ -3845,7 +4251,8 @@
       "source_location": "L1521",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Predicts regression values across the distributed data partitions."
+      "description": "Predicts regression values across the distributed data partitions.",
+      "node_type": "method"
     },
     {
       "id": "dask_dasklgbmregressor_to_local",
@@ -3855,7 +4262,8 @@
       "source_location": "L1555",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Converts the distributed regressor into a local LGBMRegressor instance."
+      "description": "Converts the distributed regressor into a local LGBMRegressor instance.",
+      "node_type": "method"
     },
     {
       "id": "dask_dasklgbmranker",
@@ -3865,7 +4273,8 @@
       "source_location": "L1566",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Dask-distributed LightGBM ranker."
+      "description": "Dask-distributed LightGBM ranker.",
+      "node_type": "class"
     },
     {
       "id": "lgbmranker",
@@ -3874,7 +4283,8 @@
       "source_file": "",
       "source_location": "",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "class"
     },
     {
       "id": "dask_dasklgbmranker_init",
@@ -3883,7 +4293,8 @@
       "source_file": "dask.py",
       "source_location": "L1569",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "method"
     },
     {
       "id": "dask_dasklgbmranker_getstate",
@@ -3893,7 +4304,8 @@
       "source_location": "L1631",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Prepares the ranker's state for pickling and serialization."
+      "description": "Prepares the ranker's state for pickling and serialization.",
+      "node_type": "method"
     },
     {
       "id": "dask_dasklgbmranker_fit",
@@ -3903,7 +4315,8 @@
       "source_location": "L1634",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Fits the Dask ranker on the distributed training data."
+      "description": "Fits the Dask ranker on the distributed training data.",
+      "node_type": "method"
     },
     {
       "id": "dask_dasklgbmranker_predict",
@@ -3913,7 +4326,8 @@
       "source_location": "L1707",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Predicts ranking scores across the distributed data partitions."
+      "description": "Predicts ranking scores across the distributed data partitions.",
+      "node_type": "method"
     },
     {
       "id": "dask_dasklgbmranker_to_local",
@@ -3923,7 +4337,8 @@
       "source_location": "L1741",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Converts the distributed ranker into a local LGBMRanker instance."
+      "description": "Converts the distributed ranker into a local LGBMRanker instance.",
+      "node_type": "method"
     },
     {
       "id": "dask_rationale_92",
@@ -3932,7 +4347,8 @@
       "source_file": "dask.py",
       "source_location": "L92",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "module"
     },
     {
       "id": "dask_rationale_104",
@@ -3941,7 +4357,8 @@
       "source_file": "dask.py",
       "source_location": "L104",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "module"
     },
     {
       "id": "dask_rationale_129",
@@ -3950,7 +4367,8 @@
       "source_file": "dask.py",
       "source_location": "L129",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "module"
     },
     {
       "id": "dask_rationale_183",
@@ -3959,7 +4377,8 @@
       "source_file": "dask.py",
       "source_location": "L183",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "module"
     },
     {
       "id": "dask_rationale_403",
@@ -3968,7 +4387,8 @@
       "source_file": "dask.py",
       "source_location": "L403",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "module"
     },
     {
       "id": "dask_rationale_464",
@@ -3977,7 +4397,8 @@
       "source_file": "dask.py",
       "source_location": "L464",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "module"
     },
     {
       "id": "dask_rationale_937",
@@ -3986,7 +4407,8 @@
       "source_file": "dask.py",
       "source_location": "L937",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "module"
     },
     {
       "id": "dask_rationale_1083",
@@ -3995,7 +4417,8 @@
       "source_file": "dask.py",
       "source_location": "L1083",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "module"
     },
     {
       "id": "dask_rationale_1094",
@@ -4004,7 +4427,8 @@
       "source_file": "dask.py",
       "source_location": "L1094",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "module"
     },
     {
       "id": "dask_rationale_1178",
@@ -4013,7 +4437,8 @@
       "source_file": "dask.py",
       "source_location": "L1178",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "module"
     },
     {
       "id": "dask_rationale_1205",
@@ -4022,7 +4447,8 @@
       "source_file": "dask.py",
       "source_location": "L1205",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "module"
     },
     {
       "id": "dask_rationale_1262",
@@ -4031,7 +4457,8 @@
       "source_file": "dask.py",
       "source_location": "L1262",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "module"
     },
     {
       "id": "dask_rationale_1320",
@@ -4040,7 +4467,8 @@
       "source_file": "dask.py",
       "source_location": "L1320",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "module"
     },
     {
       "id": "dask_rationale_1354",
@@ -4049,7 +4477,8 @@
       "source_file": "dask.py",
       "source_location": "L1354",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "module"
     },
     {
       "id": "dask_rationale_1379",
@@ -4058,7 +4487,8 @@
       "source_file": "dask.py",
       "source_location": "L1379",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "module"
     },
     {
       "id": "dask_rationale_1390",
@@ -4067,7 +4497,8 @@
       "source_file": "dask.py",
       "source_location": "L1390",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "module"
     },
     {
       "id": "dask_rationale_1417",
@@ -4076,7 +4507,8 @@
       "source_file": "dask.py",
       "source_location": "L1417",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "module"
     },
     {
       "id": "dask_rationale_1473",
@@ -4085,7 +4517,8 @@
       "source_file": "dask.py",
       "source_location": "L1473",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "module"
     },
     {
       "id": "dask_rationale_1532",
@@ -4094,7 +4527,8 @@
       "source_file": "dask.py",
       "source_location": "L1532",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "module"
     },
     {
       "id": "dask_rationale_1556",
@@ -4103,7 +4537,8 @@
       "source_file": "dask.py",
       "source_location": "L1556",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "module"
     },
     {
       "id": "dask_rationale_1567",
@@ -4112,7 +4547,8 @@
       "source_file": "dask.py",
       "source_location": "L1567",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "module"
     },
     {
       "id": "dask_rationale_1594",
@@ -4121,7 +4557,8 @@
       "source_file": "dask.py",
       "source_location": "L1594",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "module"
     },
     {
       "id": "dask_rationale_1653",
@@ -4130,7 +4567,8 @@
       "source_file": "dask.py",
       "source_location": "L1653",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "module"
     },
     {
       "id": "dask_rationale_1718",
@@ -4139,7 +4577,8 @@
       "source_file": "dask.py",
       "source_location": "L1718",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "module"
     },
     {
       "id": "dask_rationale_1742",
@@ -4148,7 +4587,8 @@
       "source_file": "dask.py",
       "source_location": "L1742",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "module"
     },
     {
       "id": "engine",
@@ -4158,7 +4598,8 @@
       "source_location": "L1",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Module implementing the high-level training and cross-validation APIs over Booster and Dataset."
+      "description": "Module implementing the high-level training and cross-validation APIs over Booster and Dataset.",
+      "node_type": "module"
     },
     {
       "id": "engine_choose_num_iterations",
@@ -4167,7 +4608,8 @@
       "source_file": "engine.py",
       "source_location": "L52",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "function"
     },
     {
       "id": "engine_train",
@@ -4177,7 +4619,8 @@
       "source_location": "L108",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Trains a Booster with given parameters, choosing the number of iterations."
+      "description": "Trains a Booster with given parameters, choosing the number of iterations.",
+      "node_type": "function"
     },
     {
       "id": "engine_cvbooster",
@@ -4187,7 +4630,8 @@
       "source_location": "L353",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Holds the per-fold boosters produced by lightgbm.cv for cross-validated prediction."
+      "description": "Holds the per-fold boosters produced by lightgbm.cv for cross-validated prediction.",
+      "node_type": "class"
     },
     {
       "id": "engine_cvbooster_init",
@@ -4197,7 +4641,8 @@
       "source_location": "L373",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Initializes the CVBooster from a serialized model string."
+      "description": "Initializes the CVBooster from a serialized model string.",
+      "node_type": "method"
     },
     {
       "id": "engine_cvbooster_from_dict",
@@ -4207,7 +4652,8 @@
       "source_location": "L391",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Restores a CVBooster from a serialized dictionary of models."
+      "description": "Restores a CVBooster from a serialized dictionary of models.",
+      "node_type": "method"
     },
     {
       "id": "engine_cvbooster_to_dict",
@@ -4217,7 +4663,8 @@
       "source_location": "L398",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Serializes the CVBooster into a dictionary of models."
+      "description": "Serializes the CVBooster into a dictionary of models.",
+      "node_type": "method"
     },
     {
       "id": "engine_cvbooster_getattr",
@@ -4227,7 +4674,8 @@
       "source_location": "L415",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Redirects method calls on CVBooster to the underlying Booster."
+      "description": "Redirects method calls on CVBooster to the underlying Booster.",
+      "node_type": "method"
     },
     {
       "id": "engine_cvbooster_getstate",
@@ -4236,7 +4684,8 @@
       "source_file": "engine.py",
       "source_location": "L427",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "method"
     },
     {
       "id": "engine_cvbooster_setstate",
@@ -4245,7 +4694,8 @@
       "source_file": "engine.py",
       "source_location": "L430",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "method"
     },
     {
       "id": "engine_cvbooster_model_from_string",
@@ -4255,7 +4705,8 @@
       "source_location": "L433",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Loads a CVBooster from a serialized model string."
+      "description": "Loads a CVBooster from a serialized model string.",
+      "node_type": "method"
     },
     {
       "id": "engine_cvbooster_model_to_string",
@@ -4265,7 +4716,8 @@
       "source_location": "L449",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Serializes the CVBooster to a JSON model string."
+      "description": "Serializes the CVBooster to a JSON model string.",
+      "node_type": "method"
     },
     {
       "id": "engine_cvbooster_save_model",
@@ -4275,7 +4727,8 @@
       "source_location": "L479",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Saves the CVBooster to a file as JSON text."
+      "description": "Saves the CVBooster to a file as JSON text.",
+      "node_type": "method"
     },
     {
       "id": "engine_make_n_folds",
@@ -4284,7 +4737,8 @@
       "source_file": "engine.py",
       "source_location": "L519",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "function"
     },
     {
       "id": "engine_agg_cv_result",
@@ -4293,7 +4747,8 @@
       "source_file": "engine.py",
       "source_location": "L592",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "function"
     },
     {
       "id": "engine_cv",
@@ -4303,7 +4758,8 @@
       "source_location": "L632",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Runs cross-validation with given parameters, folding data and aggregating results."
+      "description": "Runs cross-validation with given parameters, folding data and aggregating results.",
+      "node_type": "function"
     },
     {
       "id": "engine_rationale_53",
@@ -4312,7 +4768,8 @@
       "source_file": "engine.py",
       "source_location": "L53",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "module"
     },
     {
       "id": "engine_rationale_119",
@@ -4321,7 +4778,8 @@
       "source_file": "engine.py",
       "source_location": "L119",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "module"
     },
     {
       "id": "engine_rationale_354",
@@ -4330,7 +4788,8 @@
       "source_file": "engine.py",
       "source_location": "L354",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "module"
     },
     {
       "id": "engine_rationale_377",
@@ -4339,7 +4798,8 @@
       "source_file": "engine.py",
       "source_location": "L377",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "module"
     },
     {
       "id": "engine_rationale_392",
@@ -4348,7 +4808,8 @@
       "source_file": "engine.py",
       "source_location": "L392",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "module"
     },
     {
       "id": "engine_rationale_405",
@@ -4357,7 +4818,8 @@
       "source_file": "engine.py",
       "source_location": "L405",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "module"
     },
     {
       "id": "engine_rationale_416",
@@ -4366,7 +4828,8 @@
       "source_file": "engine.py",
       "source_location": "L416",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "module"
     },
     {
       "id": "engine_rationale_434",
@@ -4375,7 +4838,8 @@
       "source_file": "engine.py",
       "source_location": "L434",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "module"
     },
     {
       "id": "engine_rationale_455",
@@ -4384,7 +4848,8 @@
       "source_file": "engine.py",
       "source_location": "L455",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "module"
     },
     {
       "id": "engine_rationale_486",
@@ -4393,7 +4858,8 @@
       "source_file": "engine.py",
       "source_location": "L486",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "module"
     },
     {
       "id": "engine_rationale_531",
@@ -4402,7 +4868,8 @@
       "source_file": "engine.py",
       "source_location": "L531",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "module"
     },
     {
       "id": "engine_rationale_595",
@@ -4411,7 +4878,8 @@
       "source_file": "engine.py",
       "source_location": "L595",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "module"
     },
     {
       "id": "engine_rationale_649",
@@ -4420,7 +4888,8 @@
       "source_file": "engine.py",
       "source_location": "L649",
       "community": 2,
-      "community_name": "Community 2"
+      "community_name": "Community 2",
+      "node_type": "module"
     },
     {
       "id": "libpath",
@@ -4430,7 +4899,8 @@
       "source_location": "L1",
       "community": 16,
       "community_name": "Community 16",
-      "description": "Module that locates and exposes the path to the native LightGBM library."
+      "description": "Module that locates and exposes the path to the native LightGBM library.",
+      "node_type": "module"
     },
     {
       "id": "libpath_find_lib_path",
@@ -4439,7 +4909,8 @@
       "source_file": "libpath.py",
       "source_location": "L13",
       "community": 16,
-      "community_name": "Community 16"
+      "community_name": "Community 16",
+      "node_type": "function"
     },
     {
       "id": "libpath_rationale_14",
@@ -4448,7 +4919,8 @@
       "source_file": "libpath.py",
       "source_location": "L14",
       "community": 16,
-      "community_name": "Community 16"
+      "community_name": "Community 16",
+      "node_type": "module"
     },
     {
       "id": "plotting",
@@ -4458,7 +4930,8 @@
       "source_location": "L1",
       "community": 7,
       "community_name": "Community 7",
-      "description": "Plotting helpers for feature importance, metrics, and trees."
+      "description": "Plotting helpers for feature importance, metrics, and trees.",
+      "node_type": "module"
     },
     {
       "id": "plotting_check_not_tuple_of_2_elements",
@@ -4467,7 +4940,8 @@
       "source_file": "plotting.py",
       "source_location": "L27",
       "community": 7,
-      "community_name": "Community 7"
+      "community_name": "Community 7",
+      "node_type": "function"
     },
     {
       "id": "plotting_float2str",
@@ -4476,7 +4950,8 @@
       "source_file": "plotting.py",
       "source_location": "L33",
       "community": 7,
-      "community_name": "Community 7"
+      "community_name": "Community 7",
+      "node_type": "function"
     },
     {
       "id": "plotting_plot_importance",
@@ -4486,7 +4961,8 @@
       "source_location": "L37",
       "community": 7,
       "community_name": "Community 7",
-      "description": "Plots the model's feature importances as a bar chart."
+      "description": "Plots the model's feature importances as a bar chart.",
+      "node_type": "function"
     },
     {
       "id": "plotting_plot_split_value_histogram",
@@ -4496,7 +4972,8 @@
       "source_location": "L176",
       "community": 7,
       "community_name": "Community 7",
-      "description": "Plots the split value histogram for a specified feature."
+      "description": "Plots the split value histogram for a specified feature.",
+      "node_type": "function"
     },
     {
       "id": "plotting_plot_metric",
@@ -4506,7 +4983,8 @@
       "source_location": "L294",
       "community": 7,
       "community_name": "Community 7",
-      "description": "Plots a metric's evolution during training from evaluation results."
+      "description": "Plots a metric's evolution during training from evaluation results.",
+      "node_type": "function"
     },
     {
       "id": "plotting_determine_direction_for_numeric_split",
@@ -4515,7 +4993,8 @@
       "source_file": "plotting.py",
       "source_location": "L434",
       "community": 7,
-      "community_name": "Community 7"
+      "community_name": "Community 7",
+      "node_type": "function"
     },
     {
       "id": "plotting_determine_direction_for_categorical_split",
@@ -4524,7 +5003,8 @@
       "source_file": "plotting.py",
       "source_location": "L453",
       "community": 7,
-      "community_name": "Community 7"
+      "community_name": "Community 7",
+      "node_type": "function"
     },
     {
       "id": "plotting_to_graphviz",
@@ -4533,7 +5013,8 @@
       "source_file": "plotting.py",
       "source_location": "L460",
       "community": 7,
-      "community_name": "Community 7"
+      "community_name": "Community 7",
+      "node_type": "function"
     },
     {
       "id": "plotting_create_tree_digraph",
@@ -4543,7 +5024,8 @@
       "source_location": "L623",
       "community": 7,
       "community_name": "Community 7",
-      "description": "Creates a graphviz digraph of a specified tree in the model."
+      "description": "Creates a graphviz digraph of a specified tree in the model.",
+      "node_type": "function"
     },
     {
       "id": "plotting_plot_tree",
@@ -4553,7 +5035,8 @@
       "source_location": "L749",
       "community": 7,
       "community_name": "Community 7",
-      "description": "Plots a specified tree of the Booster using graphviz."
+      "description": "Plots a specified tree of the Booster using graphviz.",
+      "node_type": "function"
     },
     {
       "id": "plotting_rationale_28",
@@ -4562,7 +5045,8 @@
       "source_file": "plotting.py",
       "source_location": "L28",
       "community": 7,
-      "community_name": "Community 7"
+      "community_name": "Community 7",
+      "node_type": "module"
     },
     {
       "id": "plotting_rationale_55",
@@ -4571,7 +5055,8 @@
       "source_file": "plotting.py",
       "source_location": "L55",
       "community": 7,
-      "community_name": "Community 7"
+      "community_name": "Community 7",
+      "node_type": "module"
     },
     {
       "id": "plotting_rationale_192",
@@ -4580,7 +5065,8 @@
       "source_file": "plotting.py",
       "source_location": "L192",
       "community": 7,
-      "community_name": "Community 7"
+      "community_name": "Community 7",
+      "node_type": "module"
     },
     {
       "id": "plotting_rationale_308",
@@ -4589,7 +5075,8 @@
       "source_file": "plotting.py",
       "source_location": "L308",
       "community": 7,
-      "community_name": "Community 7"
+      "community_name": "Community 7",
+      "node_type": "module"
     },
     {
       "id": "plotting_rationale_472",
@@ -4598,7 +5085,8 @@
       "source_file": "plotting.py",
       "source_location": "L472",
       "community": 7,
-      "community_name": "Community 7"
+      "community_name": "Community 7",
+      "node_type": "module"
     },
     {
       "id": "plotting_rationale_633",
@@ -4607,7 +5095,8 @@
       "source_file": "plotting.py",
       "source_location": "L633",
       "community": 7,
-      "community_name": "Community 7"
+      "community_name": "Community 7",
+      "node_type": "module"
     },
     {
       "id": "plotting_rationale_761",
@@ -4616,7 +5105,8 @@
       "source_file": "plotting.py",
       "source_location": "L761",
       "community": 7,
-      "community_name": "Community 7"
+      "community_name": "Community 7",
+      "node_type": "module"
     },
     {
       "id": "sklearn",
@@ -4626,7 +5116,8 @@
       "source_location": "L1",
       "community": 10,
       "community_name": "Community 10",
-      "description": "Module defining the scikit-learn-compatible LightGBM estimators."
+      "description": "Module defining the scikit-learn-compatible LightGBM estimators.",
+      "node_type": "module"
     },
     {
       "id": "sklearn_get_group_from_constructed_dataset",
@@ -4635,7 +5126,8 @@
       "source_file": "sklearn.py",
       "source_location": "L127",
       "community": 10,
-      "community_name": "Community 10"
+      "community_name": "Community 10",
+      "node_type": "function"
     },
     {
       "id": "sklearn_get_label_from_constructed_dataset",
@@ -4644,7 +5136,8 @@
       "source_file": "sklearn.py",
       "source_location": "L137",
       "community": 10,
-      "community_name": "Community 10"
+      "community_name": "Community 10",
+      "node_type": "function"
     },
     {
       "id": "sklearn_get_weight_from_constructed_dataset",
@@ -4653,7 +5146,8 @@
       "source_file": "sklearn.py",
       "source_location": "L147",
       "community": 10,
-      "community_name": "Community 10"
+      "community_name": "Community 10",
+      "node_type": "function"
     },
     {
       "id": "sklearn_objectivefunctionwrapper",
@@ -4662,7 +5156,8 @@
       "source_file": "sklearn.py",
       "source_location": "L157",
       "community": 11,
-      "community_name": "Community 11"
+      "community_name": "Community 11",
+      "node_type": "function"
     },
     {
       "id": "sklearn_objectivefunctionwrapper_init",
@@ -4672,7 +5167,8 @@
       "source_location": "L160",
       "community": 11,
       "community_name": "Community 11",
-      "description": "Constructs the proxy that wraps a custom objective function."
+      "description": "Constructs the proxy that wraps a custom objective function.",
+      "node_type": "method"
     },
     {
       "id": "sklearn_objectivefunctionwrapper_call",
@@ -4682,7 +5178,8 @@
       "source_location": "L203",
       "community": 10,
       "community_name": "Community 10",
-      "description": "Calls the wrapped objective with gradients for the current data."
+      "description": "Calls the wrapped objective with gradients for the current data.",
+      "node_type": "method"
     },
     {
       "id": "sklearn_evalfunctionwrapper",
@@ -4691,7 +5188,8 @@
       "source_file": "sklearn.py",
       "source_location": "L244",
       "community": 10,
-      "community_name": "Community 10"
+      "community_name": "Community 10",
+      "node_type": "function"
     },
     {
       "id": "sklearn_evalfunctionwrapper_init",
@@ -4701,7 +5199,8 @@
       "source_location": "L247",
       "community": 10,
       "community_name": "Community 10",
-      "description": "Constructs the proxy that wraps a custom evaluation function."
+      "description": "Constructs the proxy that wraps a custom evaluation function.",
+      "node_type": "method"
     },
     {
       "id": "sklearn_evalfunctionwrapper_call",
@@ -4711,7 +5210,8 @@
       "source_location": "L286",
       "community": 10,
       "community_name": "Community 10",
-      "description": "Calls the wrapped evaluation function with the current data."
+      "description": "Calls the wrapped evaluation function with the current data.",
+      "node_type": "method"
     },
     {
       "id": "sklearn_extract_evaluation_meta_data",
@@ -4720,7 +5220,8 @@
       "source_file": "sklearn.py",
       "source_location": "L515",
       "community": 10,
-      "community_name": "Community 10"
+      "community_name": "Community 10",
+      "node_type": "function"
     },
     {
       "id": "sklearn_validate_eval_set_xy",
@@ -4729,7 +5230,8 @@
       "source_file": "sklearn.py",
       "source_location": "L539",
       "community": 10,
-      "community_name": "Community 10"
+      "community_name": "Community 10",
+      "node_type": "function"
     },
     {
       "id": "sklearn_lgbmmodel",
@@ -4739,7 +5241,8 @@
       "source_location": "L575",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Base scikit-learn-style estimator implementing fit/predict over the LightGBM booster."
+      "description": "Base scikit-learn-style estimator implementing fit/predict over the LightGBM booster.",
+      "node_type": "class"
     },
     {
       "id": "lgbmmodelbase",
@@ -4748,7 +5251,8 @@
       "source_file": "",
       "source_location": "",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "function"
     },
     {
       "id": "sklearn_lgbmmodel_init",
@@ -4758,7 +5262,8 @@
       "source_location": "L578",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Constructs the gradient boosting model with LightGBM parameters."
+      "description": "Constructs the gradient boosting model with LightGBM parameters.",
+      "node_type": "method"
     },
     {
       "id": "sklearn_lgbmmodel_more_tags",
@@ -4767,7 +5272,8 @@
       "source_file": "sklearn.py",
       "source_location": "L764",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "method"
     },
     {
       "id": "sklearn_lgbmmodel_update_sklearn_tags_from_dict",
@@ -4777,7 +5283,8 @@
       "source_location": "L806",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Updates the sklearn tags inherited from scikit-learn base classes."
+      "description": "Updates the sklearn tags inherited from scikit-learn base classes.",
+      "node_type": "method"
     },
     {
       "id": "sklearn_lgbmmodel_sklearn_tags",
@@ -4787,7 +5294,8 @@
       "source_location": "L823",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Returns the sklearn tags describing the estimator's capabilities."
+      "description": "Returns the sklearn tags describing the estimator's capabilities.",
+      "node_type": "method"
     },
     {
       "id": "sklearn_lgbmmodel_sklearn_is_fitted",
@@ -4797,7 +5305,8 @@
       "source_location": "L840",
       "community": 8,
       "community_name": "Community 8",
-      "description": "scikit-learn hook reporting whether the estimator has been fitted."
+      "description": "scikit-learn hook reporting whether the estimator has been fitted.",
+      "node_type": "method"
     },
     {
       "id": "sklearn_lgbmmodel_get_params",
@@ -4806,7 +5315,8 @@
       "source_file": "sklearn.py",
       "source_location": "L843",
       "community": 11,
-      "community_name": "Community 11"
+      "community_name": "Community 11",
+      "node_type": "method"
     },
     {
       "id": "sklearn_lgbmmodel_set_params",
@@ -4815,7 +5325,8 @@
       "source_file": "sklearn.py",
       "source_location": "L889",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "method"
     },
     {
       "id": "sklearn_lgbmmodel_process_params",
@@ -4825,7 +5336,8 @@
       "source_location": "L909",
       "community": 11,
       "community_name": "Community 11",
-      "description": "Normalizes and prepares the estimator's parameters for LightGBM training."
+      "description": "Normalizes and prepares the estimator's parameters for LightGBM training.",
+      "node_type": "method"
     },
     {
       "id": "sklearn_lgbmmodel_process_n_jobs",
@@ -4835,7 +5347,8 @@
       "source_location": "L995",
       "community": 11,
       "community_name": "Community 11",
-      "description": "Converts special n_jobs values into their actual thread counts."
+      "description": "Converts special n_jobs values into their actual thread counts.",
+      "node_type": "method"
     },
     {
       "id": "sklearn_lgbmmodel_fit",
@@ -4845,7 +5358,8 @@
       "source_location": "L1015",
       "community": 10,
       "community_name": "Community 10",
-      "description": "Fits the model on training data, running validation and callbacks."
+      "description": "Fits the model on training data, running validation and callbacks.",
+      "node_type": "method"
     },
     {
       "id": "sklearn_lgbmmodel_predict",
@@ -4855,7 +5369,8 @@
       "source_location": "L1219",
       "community": 8,
       "community_name": "Community 8",
-      "description": "Predicts outcomes for new data using the fitted model."
+      "description": "Predicts outcomes for new data using the fitted model.",
+      "node_type": "method"
     },
     {
       "id": "sklearn_lgbmmodel_n_features",
@@ -4865,7 +5380,8 @@
       "source_location": "L1291",
       "community": 8,
       "community_name": "Community 8",
-      "description": "Reports the number of features of the fitted model."
+      "description": "Reports the number of features of the fitted model.",
+      "node_type": "method"
     },
     {
       "id": "sklearn_lgbmmodel_n_features_in",
@@ -4875,7 +5391,8 @@
       "source_location": "L1298",
       "community": 9,
       "community_name": "Community 9",
-      "description": "Reports the number of features seen in the fitted dataset."
+      "description": "Reports the number of features seen in the fitted dataset.",
+      "node_type": "method"
     },
     {
       "id": "sklearn_lgbmmodel_best_score",
@@ -4885,7 +5402,8 @@
       "source_location": "L1320",
       "community": 8,
       "community_name": "Community 8",
-      "description": "Reports the best score achieved by the fitted model."
+      "description": "Reports the best score achieved by the fitted model.",
+      "node_type": "method"
     },
     {
       "id": "sklearn_lgbmmodel_best_iteration",
@@ -4895,7 +5413,8 @@
       "source_location": "L1327",
       "community": 8,
       "community_name": "Community 8",
-      "description": "Reports the best iteration found by early stopping during fit."
+      "description": "Reports the best iteration found by early stopping during fit.",
+      "node_type": "method"
     },
     {
       "id": "sklearn_lgbmmodel_objective",
@@ -4905,7 +5424,8 @@
       "source_location": "L1336",
       "community": 8,
       "community_name": "Community 8",
-      "description": "Reports the objective function used while fitting this model."
+      "description": "Reports the objective function used while fitting this model.",
+      "node_type": "method"
     },
     {
       "id": "sklearn_lgbmmodel_n_estimators",
@@ -4915,7 +5435,8 @@
       "source_location": "L1343",
       "community": 8,
       "community_name": "Community 8",
-      "description": "Reports the true number of boosting iterations performed."
+      "description": "Reports the true number of boosting iterations performed.",
+      "node_type": "method"
     },
     {
       "id": "sklearn_lgbmmodel_n_iter",
@@ -4925,7 +5446,8 @@
       "source_location": "L1356",
       "community": 8,
       "community_name": "Community 8",
-      "description": "Alias reporting the number of boosting iterations performed."
+      "description": "Alias reporting the number of boosting iterations performed.",
+      "node_type": "method"
     },
     {
       "id": "sklearn_lgbmmodel_booster",
@@ -4935,7 +5457,8 @@
       "source_location": "L1369",
       "community": 8,
       "community_name": "Community 8",
-      "description": "Exposes the underlying Booster object of the fitted model."
+      "description": "Exposes the underlying Booster object of the fitted model.",
+      "node_type": "method"
     },
     {
       "id": "sklearn_lgbmmodel_evals_result",
@@ -4945,7 +5468,8 @@
       "source_location": "L1376",
       "community": 8,
       "community_name": "Community 8",
-      "description": "Exposes the evaluation results for the specified validation sets."
+      "description": "Exposes the evaluation results for the specified validation sets.",
+      "node_type": "method"
     },
     {
       "id": "sklearn_lgbmmodel_feature_importances",
@@ -4954,7 +5478,8 @@
       "source_file": "sklearn.py",
       "source_location": "L1383",
       "community": 8,
-      "community_name": "Community 8"
+      "community_name": "Community 8",
+      "node_type": "method"
     },
     {
       "id": "sklearn_lgbmmodel_feature_name",
@@ -4964,7 +5489,8 @@
       "source_location": "L1396",
       "community": 9,
       "community_name": "Community 9",
-      "description": "Exposes the names of the features used by the fitted model."
+      "description": "Exposes the names of the features used by the fitted model.",
+      "node_type": "method"
     },
     {
       "id": "sklearn_lgbmmodel_feature_names_in",
@@ -4974,7 +5500,8 @@
       "source_location": "L1408",
       "community": 9,
       "community_name": "Community 9",
-      "description": "Exposes scikit-learn-compatible input feature names of the fitted model."
+      "description": "Exposes scikit-learn-compatible input feature names of the fitted model.",
+      "node_type": "method"
     },
     {
       "id": "sklearn_lgbmregressor",
@@ -4984,7 +5511,8 @@
       "source_location": "L1449",
       "community": 1,
       "community_name": "Community 1",
-      "description": "scikit-learn-compatible LightGBM regressor."
+      "description": "scikit-learn-compatible LightGBM regressor.",
+      "node_type": "class"
     },
     {
       "id": "lgbmregressorbase",
@@ -4993,7 +5521,8 @@
       "source_file": "",
       "source_location": "",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "function"
     },
     {
       "id": "sklearn_lgbmregressor_init",
@@ -5002,7 +5531,8 @@
       "source_file": "sklearn.py",
       "source_location": "L1454",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "method"
     },
     {
       "id": "sklearn_lgbmregressor_more_tags",
@@ -5011,7 +5541,8 @@
       "source_file": "sklearn.py",
       "source_location": "L1503",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "method"
     },
     {
       "id": "sklearn_lgbmregressor_sklearn_tags",
@@ -5020,7 +5551,8 @@
       "source_file": "sklearn.py",
       "source_location": "L1513",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "method"
     },
     {
       "id": "sklearn_lgbmregressor_fit",
@@ -5030,7 +5562,8 @@
       "source_location": "L1516",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Fits the regressor model on the given training data."
+      "description": "Fits the regressor model on the given training data.",
+      "node_type": "method"
     },
     {
       "id": "sklearn_lgbmclassifier",
@@ -5040,7 +5573,8 @@
       "source_location": "L1564",
       "community": 1,
       "community_name": "Community 1",
-      "description": "scikit-learn-compatible LightGBM classifier."
+      "description": "scikit-learn-compatible LightGBM classifier.",
+      "node_type": "class"
     },
     {
       "id": "lgbmclassifierbase",
@@ -5049,7 +5583,8 @@
       "source_file": "",
       "source_location": "",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "function"
     },
     {
       "id": "sklearn_lgbmclassifier_init",
@@ -5058,7 +5593,8 @@
       "source_file": "sklearn.py",
       "source_location": "L1569",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "method"
     },
     {
       "id": "sklearn_lgbmclassifier_more_tags",
@@ -5067,7 +5603,8 @@
       "source_file": "sklearn.py",
       "source_location": "L1618",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "method"
     },
     {
       "id": "sklearn_lgbmclassifier_sklearn_tags",
@@ -5076,7 +5613,8 @@
       "source_file": "sklearn.py",
       "source_location": "L1628",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "method"
     },
     {
       "id": "sklearn_lgbmclassifier_fit",
@@ -5086,7 +5624,8 @@
       "source_location": "L1635",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Fits the classifier model on the given training data."
+      "description": "Fits the classifier model on the given training data.",
+      "node_type": "method"
     },
     {
       "id": "sklearn_lgbmclassifier_predict",
@@ -5096,7 +5635,8 @@
       "source_location": "L1731",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Predicts class labels for new samples with the fitted classifier."
+      "description": "Predicts class labels for new samples with the fitted classifier.",
+      "node_type": "method"
     },
     {
       "id": "sklearn_lgbmclassifier_predict_proba",
@@ -5105,7 +5645,8 @@
       "source_file": "sklearn.py",
       "source_location": "L1761",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "method"
     },
     {
       "id": "sklearn_lgbmclassifier_decision_function",
@@ -5115,7 +5656,8 @@
       "source_location": "L1809",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Returns the raw margin score for each input sample."
+      "description": "Returns the raw margin score for each input sample.",
+      "node_type": "method"
     },
     {
       "id": "sklearn_lgbmclassifier_classes",
@@ -5125,7 +5667,8 @@
       "source_location": "L1855",
       "community": 8,
       "community_name": "Community 8",
-      "description": "Exposes the array of class labels of the fitted classifier."
+      "description": "Exposes the array of class labels of the fitted classifier.",
+      "node_type": "method"
     },
     {
       "id": "sklearn_lgbmclassifier_n_classes",
@@ -5135,7 +5678,8 @@
       "source_location": "L1862",
       "community": 8,
       "community_name": "Community 8",
-      "description": "Reports the number of classes of the fitted classifier."
+      "description": "Reports the number of classes of the fitted classifier.",
+      "node_type": "method"
     },
     {
       "id": "sklearn_lgbmclassifier_is_multiclass",
@@ -5145,7 +5689,8 @@
       "source_location": "L1869",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Indicates whether the classifier is configured for multiclass problems."
+      "description": "Indicates whether the classifier is configured for multiclass problems.",
+      "node_type": "method"
     },
     {
       "id": "sklearn_lgbmranker",
@@ -5155,7 +5700,8 @@
       "source_location": "L1874",
       "community": 1,
       "community_name": "Community 1",
-      "description": "scikit-learn-compatible LightGBM ranking estimator (learning-to-rank / LambdaRank)."
+      "description": "scikit-learn-compatible LightGBM ranking estimator (learning-to-rank / LambdaRank).",
+      "node_type": "class"
     },
     {
       "id": "sklearn_lgbmranker_init",
@@ -5164,7 +5710,8 @@
       "source_file": "sklearn.py",
       "source_location": "L1886",
       "community": 1,
-      "community_name": "Community 1"
+      "community_name": "Community 1",
+      "node_type": "method"
     },
     {
       "id": "sklearn_lgbmranker_fit",
@@ -5174,7 +5721,8 @@
       "source_location": "L1935",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Fits the ranker model on the given training data."
+      "description": "Fits the ranker model on the given training data.",
+      "node_type": "method"
     },
     {
       "id": "sklearn_rationale_158",
@@ -5183,7 +5731,8 @@
       "source_file": "sklearn.py",
       "source_location": "L158",
       "community": 11,
-      "community_name": "Community 11"
+      "community_name": "Community 11",
+      "node_type": "module"
     },
     {
       "id": "sklearn_rationale_161",
@@ -5192,7 +5741,8 @@
       "source_file": "sklearn.py",
       "source_location": "L161",
       "community": 11,
-      "community_name": "Community 11"
+      "community_name": "Community 11",
+      "node_type": "module"
     },
     {
       "id": "sklearn_rationale_208",
@@ -5201,7 +5751,8 @@
       "source_file": "sklearn.py",
       "source_location": "L208",
       "community": 10,
-      "community_name": "Community 10"
+      "community_name": "Community 10",
+      "node_type": "module"
     },
     {
       "id": "sklearn_rationale_245",
@@ -5210,7 +5761,8 @@
       "source_file": "sklearn.py",
       "source_location": "L245",
       "community": 10,
-      "community_name": "Community 10"
+      "community_name": "Community 10",
+      "node_type": "module"
     },
     {
       "id": "sklearn_rationale_248",
@@ -5219,7 +5771,8 @@
       "source_file": "sklearn.py",
       "source_location": "L248",
       "community": 10,
-      "community_name": "Community 10"
+      "community_name": "Community 10",
+      "node_type": "module"
     },
     {
       "id": "sklearn_rationale_291",
@@ -5228,7 +5781,8 @@
       "source_file": "sklearn.py",
       "source_location": "L291",
       "community": 10,
-      "community_name": "Community 10"
+      "community_name": "Community 10",
+      "node_type": "module"
     },
     {
       "id": "sklearn_rationale_521",
@@ -5237,7 +5791,8 @@
       "source_file": "sklearn.py",
       "source_location": "L521",
       "community": 10,
-      "community_name": "Community 10"
+      "community_name": "Community 10",
+      "node_type": "module"
     },
     {
       "id": "sklearn_rationale_545",
@@ -5246,7 +5801,8 @@
       "source_file": "sklearn.py",
       "source_location": "L545",
       "community": 10,
-      "community_name": "Community 10"
+      "community_name": "Community 10",
+      "node_type": "module"
     },
     {
       "id": "sklearn_rationale_576",
@@ -5255,7 +5811,8 @@
       "source_file": "sklearn.py",
       "source_location": "L576",
       "community": 9,
-      "community_name": "Community 9"
+      "community_name": "Community 9",
+      "node_type": "module"
     },
     {
       "id": "sklearn_rationale_602",
@@ -5264,7 +5821,8 @@
       "source_file": "sklearn.py",
       "source_location": "L602",
       "community": 9,
-      "community_name": "Community 9"
+      "community_name": "Community 9",
+      "node_type": "module"
     },
     {
       "id": "sklearn_rationale_811",
@@ -5273,7 +5831,8 @@
       "source_file": "sklearn.py",
       "source_location": "L811",
       "community": 9,
-      "community_name": "Community 9"
+      "community_name": "Community 9",
+      "node_type": "module"
     },
     {
       "id": "sklearn_rationale_844",
@@ -5282,7 +5841,8 @@
       "source_file": "sklearn.py",
       "source_location": "L844",
       "community": 11,
-      "community_name": "Community 11"
+      "community_name": "Community 11",
+      "node_type": "module"
     },
     {
       "id": "sklearn_rationale_890",
@@ -5291,7 +5851,8 @@
       "source_file": "sklearn.py",
       "source_location": "L890",
       "community": 9,
-      "community_name": "Community 9"
+      "community_name": "Community 9",
+      "node_type": "module"
     },
     {
       "id": "sklearn_rationale_910",
@@ -5300,7 +5861,8 @@
       "source_file": "sklearn.py",
       "source_location": "L910",
       "community": 11,
-      "community_name": "Community 11"
+      "community_name": "Community 11",
+      "node_type": "module"
     },
     {
       "id": "sklearn_rationale_996",
@@ -5309,7 +5871,8 @@
       "source_file": "sklearn.py",
       "source_location": "L996",
       "community": 11,
-      "community_name": "Community 11"
+      "community_name": "Community 11",
+      "node_type": "module"
     },
     {
       "id": "sklearn_rationale_1037",
@@ -5318,7 +5881,8 @@
       "source_file": "sklearn.py",
       "source_location": "L1037",
       "community": 10,
-      "community_name": "Community 10"
+      "community_name": "Community 10",
+      "node_type": "module"
     },
     {
       "id": "sklearn_rationale_1230",
@@ -5327,7 +5891,8 @@
       "source_file": "sklearn.py",
       "source_location": "L1230",
       "community": 8,
-      "community_name": "Community 8"
+      "community_name": "Community 8",
+      "node_type": "module"
     },
     {
       "id": "sklearn_rationale_1292",
@@ -5336,7 +5901,8 @@
       "source_file": "sklearn.py",
       "source_location": "L1292",
       "community": 8,
-      "community_name": "Community 8"
+      "community_name": "Community 8",
+      "node_type": "module"
     },
     {
       "id": "sklearn_rationale_1299",
@@ -5345,7 +5911,8 @@
       "source_file": "sklearn.py",
       "source_location": "L1299",
       "community": 9,
-      "community_name": "Community 9"
+      "community_name": "Community 9",
+      "node_type": "module"
     },
     {
       "id": "sklearn_rationale_1306",
@@ -5354,7 +5921,8 @@
       "source_file": "sklearn.py",
       "source_location": "L1306",
       "community": 9,
-      "community_name": "Community 9"
+      "community_name": "Community 9",
+      "node_type": "module"
     },
     {
       "id": "sklearn_rationale_1321",
@@ -5363,7 +5931,8 @@
       "source_file": "sklearn.py",
       "source_location": "L1321",
       "community": 8,
-      "community_name": "Community 8"
+      "community_name": "Community 8",
+      "node_type": "module"
     },
     {
       "id": "sklearn_rationale_1328",
@@ -5372,7 +5941,8 @@
       "source_file": "sklearn.py",
       "source_location": "L1328",
       "community": 8,
-      "community_name": "Community 8"
+      "community_name": "Community 8",
+      "node_type": "module"
     },
     {
       "id": "sklearn_rationale_1337",
@@ -5381,7 +5951,8 @@
       "source_file": "sklearn.py",
       "source_location": "L1337",
       "community": 8,
-      "community_name": "Community 8"
+      "community_name": "Community 8",
+      "node_type": "module"
     },
     {
       "id": "sklearn_rationale_1344",
@@ -5390,7 +5961,8 @@
       "source_file": "sklearn.py",
       "source_location": "L1344",
       "community": 8,
-      "community_name": "Community 8"
+      "community_name": "Community 8",
+      "node_type": "module"
     },
     {
       "id": "sklearn_rationale_1357",
@@ -5399,7 +5971,8 @@
       "source_file": "sklearn.py",
       "source_location": "L1357",
       "community": 8,
-      "community_name": "Community 8"
+      "community_name": "Community 8",
+      "node_type": "module"
     },
     {
       "id": "sklearn_rationale_1370",
@@ -5408,7 +5981,8 @@
       "source_file": "sklearn.py",
       "source_location": "L1370",
       "community": 8,
-      "community_name": "Community 8"
+      "community_name": "Community 8",
+      "node_type": "module"
     },
     {
       "id": "sklearn_rationale_1377",
@@ -5417,7 +5991,8 @@
       "source_file": "sklearn.py",
       "source_location": "L1377",
       "community": 8,
-      "community_name": "Community 8"
+      "community_name": "Community 8",
+      "node_type": "module"
     },
     {
       "id": "sklearn_rationale_1384",
@@ -5426,7 +6001,8 @@
       "source_file": "sklearn.py",
       "source_location": "L1384",
       "community": 8,
-      "community_name": "Community 8"
+      "community_name": "Community 8",
+      "node_type": "module"
     },
     {
       "id": "sklearn_rationale_1397",
@@ -5435,7 +6011,8 @@
       "source_file": "sklearn.py",
       "source_location": "L1397",
       "community": 9,
-      "community_name": "Community 9"
+      "community_name": "Community 9",
+      "node_type": "module"
     },
     {
       "id": "sklearn_rationale_1409",
@@ -5444,7 +6021,8 @@
       "source_file": "sklearn.py",
       "source_location": "L1409",
       "community": 9,
-      "community_name": "Community 9"
+      "community_name": "Community 9",
+      "node_type": "module"
     },
     {
       "id": "sklearn_rationale_1429",
@@ -5453,7 +6031,8 @@
       "source_file": "sklearn.py",
       "source_location": "L1429",
       "community": 9,
-      "community_name": "Community 9"
+      "community_name": "Community 9",
+      "node_type": "module"
     },
     {
       "id": "sklearn_rationale_1535",
@@ -5462,7 +6041,8 @@
       "source_file": "sklearn.py",
       "source_location": "L1535",
       "community": 9,
-      "community_name": "Community 9"
+      "community_name": "Community 9",
+      "node_type": "module"
     },
     {
       "id": "sklearn_rationale_1655",
@@ -5471,7 +6051,8 @@
       "source_file": "sklearn.py",
       "source_location": "L1655",
       "community": 9,
-      "community_name": "Community 9"
+      "community_name": "Community 9",
+      "node_type": "module"
     },
     {
       "id": "sklearn_rationale_1742",
@@ -5480,7 +6061,8 @@
       "source_file": "sklearn.py",
       "source_location": "L1742",
       "community": 9,
-      "community_name": "Community 9"
+      "community_name": "Community 9",
+      "node_type": "module"
     },
     {
       "id": "sklearn_rationale_1772",
@@ -5489,7 +6071,8 @@
       "source_file": "sklearn.py",
       "source_location": "L1772",
       "community": 9,
-      "community_name": "Community 9"
+      "community_name": "Community 9",
+      "node_type": "module"
     },
     {
       "id": "sklearn_rationale_1818",
@@ -5498,7 +6081,8 @@
       "source_file": "sklearn.py",
       "source_location": "L1818",
       "community": 9,
-      "community_name": "Community 9"
+      "community_name": "Community 9",
+      "node_type": "module"
     },
     {
       "id": "sklearn_rationale_1856",
@@ -5507,7 +6091,8 @@
       "source_file": "sklearn.py",
       "source_location": "L1856",
       "community": 8,
-      "community_name": "Community 8"
+      "community_name": "Community 8",
+      "node_type": "module"
     },
     {
       "id": "sklearn_rationale_1863",
@@ -5516,7 +6101,8 @@
       "source_file": "sklearn.py",
       "source_location": "L1863",
       "community": 8,
-      "community_name": "Community 8"
+      "community_name": "Community 8",
+      "node_type": "module"
     },
     {
       "id": "sklearn_rationale_1870",
@@ -5525,7 +6111,8 @@
       "source_file": "sklearn.py",
       "source_location": "L1870",
       "community": 9,
-      "community_name": "Community 9"
+      "community_name": "Community 9",
+      "node_type": "module"
     },
     {
       "id": "sklearn_rationale_1875",
@@ -5534,7 +6121,8 @@
       "source_file": "sklearn.py",
       "source_location": "L1875",
       "community": 9,
-      "community_name": "Community 9"
+      "community_name": "Community 9",
+      "node_type": "module"
     },
     {
       "id": "sklearn_rationale_1957",
@@ -5543,7 +6131,8 @@
       "source_file": "sklearn.py",
       "source_location": "L1957",
       "community": 9,
-      "community_name": "Community 9"
+      "community_name": "Community 9",
+      "node_type": "module"
     },
     {
       "id": "sklearn_rationale_1066",
@@ -5552,7 +6141,8 @@
       "source_file": "sklearn.py",
       "source_location": "L1066",
       "community": 10,
-      "community_name": "Community 10"
+      "community_name": "Community 10",
+      "node_type": "module"
     },
     {
       "id": "sklearn_rationale_1452",
@@ -5561,7 +6151,8 @@
       "source_file": "sklearn.py",
       "source_location": "L1452",
       "community": 10,
-      "community_name": "Community 10"
+      "community_name": "Community 10",
+      "node_type": "module"
     },
     {
       "id": "sklearn_rationale_1567",
@@ -5570,7 +6161,8 @@
       "source_file": "sklearn.py",
       "source_location": "L1567",
       "community": 10,
-      "community_name": "Community 10"
+      "community_name": "Community 10",
+      "node_type": "module"
     },
     {
       "id": "sklearn_rationale_1884",
@@ -5579,7 +6171,8 @@
       "source_file": "sklearn.py",
       "source_location": "L1884",
       "community": 10,
-      "community_name": "Community 10"
+      "community_name": "Community 10",
+      "node_type": "module"
     }
   ],
   "links": [

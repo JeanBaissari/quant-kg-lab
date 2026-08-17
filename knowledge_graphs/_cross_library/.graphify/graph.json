@@ -10,379 +10,442 @@
       "id": "numpy::ndarray",
       "label": "ndarray",
       "library": "numpy",
-      "source_file": ""
+      "source_file": "",
+      "node_type": "function"
     },
     {
       "id": "pandas::dataframe",
       "label": "DataFrame",
       "library": "pandas",
-      "source_file": ""
+      "source_file": "",
+      "node_type": "class"
     },
     {
       "id": "vectorbt::base_array_wrapper_arraywrapper",
       "label": "ArrayWrapper",
       "library": "vectorbt",
-      "source_file": "base/array_wrapper.py"
+      "source_file": "base/array_wrapper.py",
+      "node_type": "class"
     },
     {
       "id": "numpy::curated_linalg",
       "label": "linalg",
       "library": "numpy",
-      "source_file": "__init__.py"
+      "source_file": "__init__.py",
+      "node_type": "function"
     },
     {
       "id": "scipy::linalg_linalg_pythran",
       "label": "_linalg_pythran.py",
       "library": "scipy",
-      "source_file": "linalg/_linalg_pythran.py"
+      "source_file": "linalg/_linalg_pythran.py",
+      "node_type": "module"
     },
     {
       "id": "scikit-learn::base_baseestimator",
       "label": "BaseEstimator",
       "library": "scikit-learn",
-      "source_file": "base.py"
+      "source_file": "base.py",
+      "node_type": "class"
     },
     {
       "id": "vectorbt::portfolio_base_portfolio",
       "label": "Portfolio",
       "library": "vectorbt",
-      "source_file": "portfolio/base.py"
+      "source_file": "portfolio/base.py",
+      "node_type": "class"
     },
     {
       "id": "backtrader::feed_database",
       "label": "DataBase",
       "library": "backtrader",
-      "source_file": "feed.py"
+      "source_file": "feed.py",
+      "node_type": "class"
     },
     {
       "id": "ta-lib::ta_lib_pyx_pw_5talib_7_ta_lib_287rsi",
       "label": "__pyx_pw_5talib_7_ta_lib_287RSI()",
       "library": "ta-lib",
-      "source_file": "_ta_lib.c"
+      "source_file": "_ta_lib.c",
+      "node_type": "function"
     },
     {
       "id": "vectorbt::signals_factory_signalfactory",
       "label": "SignalFactory",
       "library": "vectorbt",
-      "source_file": "signals/factory.py"
+      "source_file": "signals/factory.py",
+      "node_type": "class"
     },
     {
       "id": "ta-lib::ta_lib_pyx_pw_5talib_7_ta_lib_231macd",
       "label": "__pyx_pw_5talib_7_ta_lib_231MACD()",
       "library": "ta-lib",
-      "source_file": "_ta_lib.c"
+      "source_file": "_ta_lib.c",
+      "node_type": "function"
     },
     {
       "id": "optuna::study_study_study",
       "label": "Study",
       "library": "optuna",
-      "source_file": "study/study.py"
+      "source_file": "study/study.py",
+      "node_type": "class"
     },
     {
       "id": "backtrader::cerebro_cerebro",
       "label": "Cerebro",
       "library": "backtrader",
-      "source_file": "cerebro.py"
+      "source_file": "cerebro.py",
+      "node_type": "class"
     },
     {
       "id": "backtrader::strategy_strategy",
       "label": "Strategy",
       "library": "backtrader",
-      "source_file": "strategy.py"
+      "source_file": "strategy.py",
+      "node_type": "class"
     },
     {
       "id": "xgboost::sklearn_xgbclassifier",
       "label": "XGBClassifier",
       "library": "xgboost",
-      "source_file": "sklearn.py"
+      "source_file": "sklearn.py",
+      "node_type": "class"
     },
     {
       "id": "scikit-learn::pipeline_pipeline",
       "label": "Pipeline",
       "library": "scikit-learn",
-      "source_file": "pipeline.py"
+      "source_file": "pipeline.py",
+      "node_type": "class"
     },
     {
       "id": "xgboost::sklearn_xgbregressor",
       "label": "XGBRegressor",
       "library": "xgboost",
-      "source_file": "sklearn.py"
+      "source_file": "sklearn.py",
+      "node_type": "class"
     },
     {
       "id": "xgboost::callback_trainingcallback",
       "label": "TrainingCallback",
       "library": "xgboost",
-      "source_file": "callback.py"
+      "source_file": "callback.py",
+      "node_type": "class"
     },
     {
       "id": "lightgbm::lgbmclassifier",
       "label": "LGBMClassifier",
       "library": "lightgbm",
-      "source_file": ""
+      "source_file": "",
+      "node_type": "class"
     },
     {
       "id": "scikit-learn::model_selection_search_gridsearchcv",
       "label": "GridSearchCV",
       "library": "scikit-learn",
-      "source_file": "model_selection/_search.py"
+      "source_file": "model_selection/_search.py",
+      "node_type": "class"
     },
     {
       "id": "scikit-learn::ensemble_forest_randomforestclassifier",
       "label": "RandomForestClassifier",
       "library": "scikit-learn",
-      "source_file": "ensemble/_forest.py"
+      "source_file": "ensemble/_forest.py",
+      "node_type": "class"
     },
     {
       "id": "scipy::ndimage_measurements_stats",
       "label": "_stats()",
       "library": "scipy",
-      "source_file": "ndimage/_measurements.py"
+      "source_file": "ndimage/_measurements.py",
+      "node_type": "function"
     },
     {
       "id": "scikit-learn::feature_selection_univariate_selection_selectkbest",
       "label": "SelectKBest",
       "library": "scikit-learn",
-      "source_file": "feature_selection/_univariate_selection.py"
+      "source_file": "feature_selection/_univariate_selection.py",
+      "node_type": "class"
     },
     {
       "id": "scipy::optimizeresult",
       "label": "OptimizeResult",
       "library": "scipy",
-      "source_file": ""
+      "source_file": "",
+      "node_type": "class"
     },
     {
       "id": "pyportfolioopt::expected_returns",
       "label": "expected_returns.py",
       "library": "pyportfolioopt",
-      "source_file": "expected_returns.py"
+      "source_file": "expected_returns.py",
+      "node_type": "module"
     },
     {
       "id": "pyportfolioopt::base_base_optimizer_baseconvexoptimizer",
       "label": "BaseConvexOptimizer",
       "library": "pyportfolioopt",
-      "source_file": "base/_base_optimizer.py"
+      "source_file": "base/_base_optimizer.py",
+      "node_type": "class"
     },
     {
       "id": "cvxpy::problems_problem_problem",
       "label": "Problem",
       "library": "cvxpy",
-      "source_file": "problems/problem.py"
+      "source_file": "problems/problem.py",
+      "node_type": "class"
     },
     {
       "id": "cvxpy::expressions_variable_variable",
       "label": "Variable",
       "library": "cvxpy",
-      "source_file": "expressions/variable.py"
+      "source_file": "expressions/variable.py",
+      "node_type": "class"
     },
     {
       "id": "statsmodels::regression_linear_model_ols",
       "label": "OLS",
       "library": "statsmodels",
-      "source_file": "regression/linear_model.py"
+      "source_file": "regression/linear_model.py",
+      "node_type": "class"
     },
     {
       "id": "scikit-learn::linear_model_base_linearregression",
       "label": "LinearRegression",
       "library": "scikit-learn",
-      "source_file": "linear_model/_base.py"
+      "source_file": "linear_model/_base.py",
+      "node_type": "class"
     },
     {
       "id": "statsmodels::base_data_pandasdata",
       "label": "PandasData",
       "library": "statsmodels",
-      "source_file": "base/data.py"
+      "source_file": "base/data.py",
+      "node_type": "class"
     },
     {
       "id": "alphalens::performance",
       "label": "performance.py",
       "library": "alphalens",
-      "source_file": "performance.py"
+      "source_file": "performance.py",
+      "node_type": "module"
     },
     {
       "id": "alphalens::tears",
       "label": "tears.py",
       "library": "alphalens",
-      "source_file": "tears.py"
+      "source_file": "tears.py",
+      "node_type": "module"
     },
     {
       "id": "pyfolio::tears",
       "label": "tears.py",
       "library": "pyfolio",
-      "source_file": "tears.py"
+      "source_file": "tears.py",
+      "node_type": "module"
     },
     {
       "id": "arch::univariate_base_archmodel",
       "label": "ARCHModel",
       "library": "arch",
-      "source_file": "univariate/base.py"
+      "source_file": "univariate/base.py",
+      "node_type": "class"
     },
     {
       "id": "arch::unitroot_unitroot_adf",
       "label": "ADF",
       "library": "arch",
-      "source_file": "unitroot/unitroot.py"
+      "source_file": "unitroot/unitroot.py",
+      "node_type": "class"
     },
     {
       "id": "riskfolio::src_portfolio_portfolio",
       "label": "Portfolio",
       "library": "riskfolio",
-      "source_file": "src/Portfolio.py"
+      "source_file": "src/Portfolio.py",
+      "node_type": "class"
     },
     {
       "id": "pyportfolioopt::efficientfrontier",
       "label": "EfficientFrontier",
       "library": "pyportfolioopt",
-      "source_file": ""
+      "source_file": "",
+      "node_type": "class"
     },
     {
       "id": "shap::explainer",
       "label": "Explainer",
       "library": "shap",
-      "source_file": ""
+      "source_file": "",
+      "node_type": "class"
     },
     {
       "id": "xgboost::core_booster",
       "label": "Booster",
       "library": "xgboost",
-      "source_file": "core.py"
+      "source_file": "core.py",
+      "node_type": "class"
     },
     {
       "id": "lightgbm::basic_booster",
       "label": "Booster",
       "library": "lightgbm",
-      "source_file": "basic.py"
+      "source_file": "basic.py",
+      "node_type": "class"
     },
     {
       "id": "polars::dataframe_frame_dataframe",
       "label": "DataFrame",
       "library": "polars",
-      "source_file": "dataframe/frame.py"
+      "source_file": "dataframe/frame.py",
+      "node_type": "class"
     },
     {
       "id": "pyfolio::timeseries",
       "label": "timeseries.py",
       "library": "pyfolio",
-      "source_file": "timeseries.py"
+      "source_file": "timeseries.py",
+      "node_type": "module"
     },
     {
       "id": "empyrical::stats_sharpe_ratio",
       "label": "sharpe_ratio()",
       "library": "empyrical",
-      "source_file": "stats.py"
+      "source_file": "stats.py",
+      "node_type": "function"
     },
     {
       "id": "empyrical::perf_attrib",
       "label": "perf_attrib.py",
       "library": "empyrical",
-      "source_file": "perf_attrib.py"
+      "source_file": "perf_attrib.py",
+      "node_type": "module"
     },
     {
       "id": "pyfolio::perf_attrib",
       "label": "perf_attrib.py",
       "library": "pyfolio",
-      "source_file": "perf_attrib.py"
+      "source_file": "perf_attrib.py",
+      "node_type": "module"
     },
     {
       "id": "quantstats::reports_metrics",
       "label": "metrics()",
       "library": "quantstats",
-      "source_file": "reports.py"
+      "source_file": "reports.py",
+      "node_type": "function"
     },
     {
       "id": "quantstats::reports_full",
       "label": "full()",
       "library": "quantstats",
-      "source_file": "reports.py"
+      "source_file": "reports.py",
+      "node_type": "function"
     },
     {
       "id": "yfinance::ticker_ticker",
       "label": "Ticker",
       "library": "yfinance",
-      "source_file": "ticker.py"
+      "source_file": "ticker.py",
+      "node_type": "class"
     },
     {
       "id": "yfinance::multi_downloadctx",
       "label": "_DownloadCtx",
       "library": "yfinance",
-      "source_file": "multi.py"
+      "source_file": "multi.py",
+      "node_type": "function"
     },
     {
       "id": "imbalanced-learn::smote_base_smote",
       "label": "SMOTE",
       "library": "imbalanced-learn",
-      "source_file": "over_sampling/_smote/base.py"
+      "source_file": "over_sampling/_smote/base.py",
+      "node_type": "class"
     },
     {
       "id": "imbalanced-learn::ensemble_forest_balancedrandomforestclassifier",
       "label": "BalancedRandomForestClassifier",
       "library": "imbalanced-learn",
-      "source_file": "ensemble/_forest.py"
+      "source_file": "ensemble/_forest.py",
+      "node_type": "class"
     },
     {
       "id": "pymc::model_core_model",
       "label": "Model",
       "library": "pymc",
-      "source_file": "model/core.py"
+      "source_file": "model/core.py",
+      "node_type": "class"
     },
     {
       "id": "pymc::distributions_timeseries_garch11",
       "label": "GARCH11",
       "library": "pymc",
-      "source_file": "distributions/timeseries.py"
+      "source_file": "distributions/timeseries.py",
+      "node_type": "class"
     },
     {
       "id": "pymc::backends_arviz_datatreeconverter_sample_stats_to_xarray",
       "label": ".sample_stats_to_xarray()",
       "library": "pymc",
-      "source_file": "backends/arviz.py"
+      "source_file": "backends/arviz.py",
+      "node_type": "method"
     },
     {
       "id": "mplfinance::arg_validators_get_valid_plot_types",
       "label": "_get_valid_plot_types()",
       "library": "mplfinance",
-      "source_file": "_arg_validators.py"
+      "source_file": "_arg_validators.py",
+      "node_type": "function"
     },
     {
       "id": "catboost::core_catboostclassifier",
       "label": "CatBoostClassifier",
       "library": "catboost",
-      "source_file": "core.py"
+      "source_file": "core.py",
+      "node_type": "class"
     },
     {
       "id": "catboost::core_pool",
       "label": "Pool",
       "library": "catboost",
-      "source_file": "core.py"
+      "source_file": "core.py",
+      "node_type": "class"
     },
     {
       "id": "ta::wrapper_add_all_ta_features",
       "label": "add_all_ta_features()",
       "library": "ta",
-      "source_file": "wrapper.py"
+      "source_file": "wrapper.py",
+      "node_type": "function"
     },
     {
       "id": "ta::momentum_rsiindicator",
       "label": "RSIIndicator",
       "library": "ta",
-      "source_file": "momentum.py"
+      "source_file": "momentum.py",
+      "node_type": "class"
     },
     {
       "id": "ta::trend_macd",
       "label": "MACD",
       "library": "ta",
-      "source_file": "trend.py"
+      "source_file": "trend.py",
+      "node_type": "class"
     },
     {
       "id": "darts::timeseries_timeseries",
       "label": "TimeSeries",
       "library": "darts",
-      "source_file": "timeseries.py"
+      "source_file": "timeseries.py",
+      "node_type": "class"
     },
     {
       "id": "darts::forecasting_forecasting_model_forecastingmodel",
       "label": "ForecastingModel",
       "library": "darts",
-      "source_file": "models/forecasting/forecasting_model.py"
+      "source_file": "models/forecasting/forecasting_model.py",
+      "node_type": "class"
     }
   ],
   "links": [

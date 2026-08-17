@@ -1,11 +1,14 @@
 name: Rebuild Probe
 
-# QKG_054 — weekly STRUCTURAL reproducibility probe.
+# QKG_054 / QKG_083 — weekly STRUCTURAL reproducibility probe.
 #
-# Re-extracts two sample libraries from their graphs.lock pins (graphify
+# Re-extracts seven sample libraries from their graphs.lock pins (graphify
 # extract-only: local tree-sitter AST + Louvain, NO LLM) and diffs node/edge
 # counts against graphs.lock. Proves "the pinned commit still extracts to the
 # same shape" — the structural half of reproducibility.
+#
+# Libs span 5 build profiles: 2 pure-Python, 2 C/C++ extension, 1 system-dep,
+# 1 large monorepo, 1 small HTTP-based.  Expanded from 2 → 7 in QKG_083.
 #
 # Explicitly INFORMATIONAL: this job never blocks, never PRs, never writes.
 # Full semantic rebuilds (c2 ≥80% descriptions) are NOT CI-automatable — the
@@ -35,11 +38,17 @@ jobs:
           mkdir -p .graphify-cli
           printf '{"name":"graphify-cli-install","version":"1.0.0","private":true}\n' > .graphify-cli/package.json
           (cd .graphify-cli && npm i "@sentropic/graphify@0.17.1" --no-audit --no-fund)
-      - name: Extract two sample libs at pin + diff vs graphs.lock
+      - name: Extract 7 sample libs at pin + diff vs graphs.lock
         run: |
           export GRAPHIFY_CLI="$PWD/.graphify-cli/node_modules/@sentropic/graphify/dist/cli.js"
           export LOCK="$GITHUB_WORKSPACE/graphs.lock"
-          for lib in empyrical mplfinance; do
+          # QKG_083: 7 libs across 5 build profiles
+          #   pure-Python:    empyrical (dead), pyportfolioopt
+          #   C/C++ extension: scipy, xgboost
+          #   system C lib:   ta-lib
+          #   large monorepo: pandas
+          #   small HTTP:     yfinance
+          for lib in empyrical pyportfolioopt scipy xgboost ta-lib pandas yfinance; do
             commit=$(python3 -c "import json; print(json.load(open(os.environ['LOCK']))['libraries']['$lib']['commit'])")
             repo=$(python3 -c "import json; print(json.load(open(os.environ['LOCK']))['libraries']['$lib']['repo'])")
             echo "== $lib @ $commit =="
@@ -47,7 +56,13 @@ jobs:
             git clone --quiet --filter=blob:none "https://github.com/$repo" repo
             git -C repo fetch --quiet --depth 1 origin "$commit" || git -C repo fetch --quiet origin
             git -C repo checkout --quiet "$commit"
-            pkg=repo; [ "$lib" = "mplfinance" ] && pkg=repo/src/mplfinance
+            # Package subdirs matching rebuild_graph.sh pkg_subdir()
+            case "$lib" in
+              pyportfolioopt) pkg=repo/pypfopt;;
+              xgboost)        pkg=repo/python-package/xgboost;;
+              ta-lib)         pkg=repo/talib;;
+              *)              pkg=repo;;
+            esac
             node "$GRAPHIFY_CLI" extract "$pkg" --out "$PWD/out" --no-description --no-label \
               --exclude 'tests/**' --exclude 'tests/' --exclude 'test_*' --exclude 'benchmarks/**' \
               --exclude 'examples/**' --exclude 'docs/**' --exclude '*.pyx' --exclude '*.txt' \

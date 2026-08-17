@@ -189,7 +189,8 @@
       "source_file": "__init__.py",
       "source_location": "L1",
       "community": 31,
-      "community_name": "Community 31"
+      "community_name": "Community 31",
+      "node_type": "module"
     },
     {
       "id": "init_wrapper",
@@ -198,7 +199,8 @@
       "source_file": "__init__.py",
       "source_location": "L40",
       "community": 31,
-      "community_name": "Community 31"
+      "community_name": "Community 31",
+      "node_type": "function"
     },
     {
       "id": "init_get_functions",
@@ -207,7 +209,8 @@
       "source_file": "__init__.py",
       "source_location": "L331",
       "community": 31,
-      "community_name": "Community 31"
+      "community_name": "Community 31",
+      "node_type": "function"
     },
     {
       "id": "init_get_function_groups",
@@ -216,7 +219,8 @@
       "source_file": "__init__.py",
       "source_location": "L340",
       "community": 31,
-      "community_name": "Community 31"
+      "community_name": "Community 31",
+      "node_type": "function"
     },
     {
       "id": "init_rationale_332",
@@ -225,7 +229,8 @@
       "source_file": "__init__.py",
       "source_location": "L332",
       "community": 31,
-      "community_name": "Community 31"
+      "community_name": "Community 31",
+      "node_type": "module"
     },
     {
       "id": "init_rationale_341",
@@ -234,7 +239,8 @@
       "source_file": "__init__.py",
       "source_location": "L341",
       "community": 31,
-      "community_name": "Community 31"
+      "community_name": "Community 31",
+      "node_type": "module"
     },
     {
       "id": "ta_lib",
@@ -243,7 +249,8 @@
       "source_file": "_ta_lib.c",
       "source_location": "L1",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_1_ta_check_success",
@@ -253,7 +260,8 @@
       "source_location": "L5961",
       "community": 8,
       "community_name": "Community 8",
-      "description": "Checks the return code of a TA-Lib C call, raising an exception on failure."
+      "description": "Checks the return code of a TA-Lib C call, raising an exception on failure.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_3_ta_initialize",
@@ -263,7 +271,8 @@
       "source_location": "L6086",
       "community": 55,
       "community_name": "Community 55",
-      "description": "Initializes the TA-Lib library, preparing its global state for indicator computation."
+      "description": "Initializes the TA-Lib library, preparing its global state for indicator computation.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_5_ta_shutdown",
@@ -273,7 +282,8 @@
       "source_location": "L6134",
       "community": 122,
       "community_name": "Community 122",
-      "description": "Shuts down the TA-Lib library, releasing its global resources."
+      "description": "Shuts down the TA-Lib library, releasing its global resources.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_7ma_type_1_init",
@@ -282,7 +292,8 @@
       "source_file": "_ta_lib.c",
       "source_location": "L6188",
       "community": 25,
-      "community_name": "Community 25"
+      "community_name": "Community 25",
+      "node_type": "method"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_7ma_type_3_getitem",
@@ -291,7 +302,8 @@
       "source_file": "_ta_lib.c",
       "source_location": "L6379",
       "community": 13,
-      "community_name": "Community 13"
+      "community_name": "Community 13",
+      "node_type": "method"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_7_ta_set_unstable_period",
@@ -301,7 +313,8 @@
       "source_location": "L6507",
       "community": 11,
       "community_name": "Community 11",
-      "description": "Sets the unstable-period warmup value that suppresses leading indicator values."
+      "description": "Sets the unstable-period warmup value that suppresses leading indicator values.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_9_ta_get_unstable_period",
@@ -311,7 +324,8 @@
       "source_location": "L6647",
       "community": 11,
       "community_name": "Community 11",
-      "description": "Returns the current unstable-period warmup value used by indicators."
+      "description": "Returns the current unstable-period warmup value used by indicators.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_11_ta_set_compatibility",
@@ -321,7 +335,8 @@
       "source_location": "L6778",
       "community": 8,
       "community_name": "Community 8",
-      "description": "Sets TA-Lib's compatibility mode to match other software's indicator output."
+      "description": "Sets TA-Lib's compatibility mode to match other software's indicator output.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_13_ta_get_compatibility",
@@ -331,7 +346,8 @@
       "source_location": "L6891",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Returns the current compatibility mode of the TA-Lib engine."
+      "description": "Returns the current compatibility mode of the TA-Lib engine.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_15_ta_set_candle_settings",
@@ -341,7 +357,8 @@
       "source_location": "L6946",
       "community": 11,
       "community_name": "Community 11",
-      "description": "Sets the candle settings that govern candlestick pattern recognition."
+      "description": "Sets the candle settings that govern candlestick pattern recognition.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_17_ta_restore_candle_default_settings",
@@ -351,7 +368,8 @@
       "source_location": "L7095",
       "community": 8,
       "community_name": "Community 8",
-      "description": "Restores the default candle settings for candlestick pattern recognition."
+      "description": "Restores the default candle settings for candlestick pattern recognition.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_19accbands",
@@ -361,7 +379,8 @@
       "source_location": "L7804",
       "community": 20,
       "community_name": "Community 20",
-      "description": "Acceleration Bands \u2014 volatility bands plotted a set factor above and below a simple moving average."
+      "description": "Acceleration Bands \u2014 volatility bands plotted a set factor above and below a simple moving average.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_21acos",
@@ -371,7 +390,8 @@
       "source_location": "L8040",
       "community": 59,
       "community_name": "Community 59",
-      "description": "Arccosine \u2014 computes the inverse cosine of each price value."
+      "description": "Arccosine \u2014 computes the inverse cosine of each price value.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_23ad",
@@ -381,7 +401,8 @@
       "source_location": "L8200",
       "community": 5,
       "community_name": "Community 5",
-      "description": "Chaikin A/D Line \u2014 cumulative volume weighted by where the close sits in the high-low range."
+      "description": "Chaikin A/D Line \u2014 cumulative volume weighted by where the close sits in the high-low range.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_25add",
@@ -391,7 +412,8 @@
       "source_location": "L8410",
       "community": 69,
       "community_name": "Community 69",
-      "description": "Vector Addition \u2014 returns the arithmetic sum of two price series."
+      "description": "Vector Addition \u2014 returns the arithmetic sum of two price series.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_27adosc",
@@ -401,7 +423,8 @@
       "source_location": "L8588",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Chaikin A/D Oscillator \u2014 the difference between fast and slow EMAs of the Accumulation/Distribution line."
+      "description": "Chaikin A/D Oscillator \u2014 the difference between fast and slow EMAs of the Accumulation/Distribution line.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_29adx",
@@ -411,7 +434,8 @@
       "source_location": "L8829",
       "community": 84,
       "community_name": "Community 84",
-      "description": "Average Directional Movement Index \u2014 measures trend strength on a 0\u2013100 scale, regardless of direction."
+      "description": "Average Directional Movement Index \u2014 measures trend strength on a 0\u2013100 scale, regardless of direction.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_31adxr",
@@ -421,7 +445,8 @@
       "source_location": "L9040",
       "community": 94,
       "community_name": "Community 94",
-      "description": "ADX Rating \u2014 a smoothed ADX, the average of the current ADX and the ADX n periods ago."
+      "description": "ADX Rating \u2014 a smoothed ADX, the average of the current ADX and the ADX n periods ago.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_33apo",
@@ -431,7 +456,8 @@
       "source_location": "L9251",
       "community": 103,
       "community_name": "Community 103",
-      "description": "Absolute Price Oscillator \u2014 the difference between a fast and a slow moving average of price."
+      "description": "Absolute Price Oscillator \u2014 the difference between a fast and a slow moving average of price.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_35aroon",
@@ -441,7 +467,8 @@
       "source_location": "L9456",
       "community": 114,
       "community_name": "Community 114",
-      "description": "Aroon \u2014 up/down lines measuring how recently the highest high and lowest low occurred over a period."
+      "description": "Aroon \u2014 up/down lines measuring how recently the highest high and lowest low occurred over a period.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_37aroonosc",
@@ -451,7 +478,8 @@
       "source_location": "L9666",
       "community": 19,
       "community_name": "Community 19",
-      "description": "Aroon Oscillator \u2014 Aroon Up minus Aroon Down, oscillating between -100 and +100."
+      "description": "Aroon Oscillator \u2014 Aroon Up minus Aroon Down, oscillating between -100 and +100.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_39asin",
@@ -461,7 +489,8 @@
       "source_location": "L9861",
       "community": 3,
       "community_name": "Community 3",
-      "description": "Arcsine \u2014 computes the inverse sine of each price value."
+      "description": "Arcsine \u2014 computes the inverse sine of each price value.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_41atan",
@@ -471,7 +500,8 @@
       "source_location": "L10021",
       "community": 24,
       "community_name": "Community 24",
-      "description": "Arctangent \u2014 computes the inverse tangent of each price value."
+      "description": "Arctangent \u2014 computes the inverse tangent of each price value.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_43atr",
@@ -481,7 +511,8 @@
       "source_location": "L10181",
       "community": 20,
       "community_name": "Community 20",
-      "description": "Average True Range \u2014 a volatility measure averaging the true range over a period."
+      "description": "Average True Range \u2014 a volatility measure averaging the true range over a period.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_45avgprice",
@@ -491,7 +522,8 @@
       "source_location": "L10392",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Average Price \u2014 the mean of open, high, low, and close for each bar."
+      "description": "Average Price \u2014 the mean of open, high, low, and close for each bar.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_47avgdev",
@@ -501,7 +533,8 @@
       "source_location": "L10602",
       "community": 124,
       "community_name": "Community 124",
-      "description": "Average Deviation \u2014 the mean absolute deviation of price from its average over a period."
+      "description": "Average Deviation \u2014 the mean absolute deviation of price from its average over a period.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_49bbands",
@@ -511,7 +544,8 @@
       "source_location": "L10779",
       "community": 23,
       "community_name": "Community 23",
-      "description": "Bollinger Bands \u2014 upper, middle, and lower bands at a moving average plus/minus k standard deviations."
+      "description": "Bollinger Bands \u2014 upper, middle, and lower bands at a moving average plus/minus k standard deviations.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_51beta",
@@ -521,7 +555,8 @@
       "source_location": "L11023",
       "community": 19,
       "community_name": "Community 19",
-      "description": "Beta \u2014 the slope of the linear regression of the series against a market series (systematic risk)."
+      "description": "Beta \u2014 the slope of the linear regression of the series against a market series (systematic risk).",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_53bop",
@@ -531,7 +566,8 @@
       "source_location": "L11218",
       "community": 24,
       "community_name": "Community 24",
-      "description": "Balance of Power \u2014 measures buying and selling pressure from each bar's price range."
+      "description": "Balance of Power \u2014 measures buying and selling pressure from each bar's price range.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_55cci",
@@ -541,7 +577,8 @@
       "source_location": "L11428",
       "community": 20,
       "community_name": "Community 20",
-      "description": "Commodity Channel Index \u2014 the typical price's deviation from its moving average, scaled by mean deviation."
+      "description": "Commodity Channel Index \u2014 the typical price's deviation from its moving average, scaled by mean deviation.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_57cdl2crows",
@@ -551,7 +588,8 @@
       "source_location": "L11639",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Two Crows candlestick pattern \u2014 a bearish reversal detected across three candles."
+      "description": "Two Crows candlestick pattern \u2014 a bearish reversal detected across three candles.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_59cdl3blackcrows",
@@ -561,7 +599,8 @@
       "source_location": "L11849",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Three Black Crows candlestick pattern \u2014 bearish reversal of three consecutive long black candles."
+      "description": "Three Black Crows candlestick pattern \u2014 bearish reversal of three consecutive long black candles.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_61cdl3inside",
@@ -571,7 +610,8 @@
       "source_location": "L12059",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Three Inside Up/Down candlestick pattern \u2014 a three-candle bullish or bearish reversal signal."
+      "description": "Three Inside Up/Down candlestick pattern \u2014 a three-candle bullish or bearish reversal signal.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_63cdl3linestrike",
@@ -581,7 +621,8 @@
       "source_location": "L12269",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Three Line Strike candlestick pattern \u2014 a three-candle continuation pattern with a counter-move."
+      "description": "Three Line Strike candlestick pattern \u2014 a three-candle continuation pattern with a counter-move.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_65cdl3outside",
@@ -591,7 +632,8 @@
       "source_location": "L12479",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Three Outside Up/Down candlestick pattern \u2014 a three-candle bullish or bearish reversal signal."
+      "description": "Three Outside Up/Down candlestick pattern \u2014 a three-candle bullish or bearish reversal signal.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_67cdl3starsinsouth",
@@ -601,7 +643,8 @@
       "source_location": "L12689",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Three Stars in the South candlestick pattern \u2014 a rare bullish bottoming pattern."
+      "description": "Three Stars in the South candlestick pattern \u2014 a rare bullish bottoming pattern.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_69cdl3whitesoldiers",
@@ -611,7 +654,8 @@
       "source_location": "L12899",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Three Advancing White Soldiers candlestick pattern \u2014 bullish reversal of three long white candles."
+      "description": "Three Advancing White Soldiers candlestick pattern \u2014 bullish reversal of three long white candles.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_71cdlabandonedbaby",
@@ -621,7 +665,8 @@
       "source_location": "L13109",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Abandoned Baby candlestick pattern \u2014 a doji isolated by gaps, signaling a reversal."
+      "description": "Abandoned Baby candlestick pattern \u2014 a doji isolated by gaps, signaling a reversal.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_73cdladvanceblock",
@@ -631,7 +676,8 @@
       "source_location": "L13336",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Advance Block candlestick pattern \u2014 three white candles with fading closes, a bearish reversal signal."
+      "description": "Advance Block candlestick pattern \u2014 three white candles with fading closes, a bearish reversal signal.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_75cdlbelthold",
@@ -641,7 +687,8 @@
       "source_location": "L13546",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Belt Hold candlestick pattern \u2014 a one-candle bullish or bearish reversal at support or resistance."
+      "description": "Belt Hold candlestick pattern \u2014 a one-candle bullish or bearish reversal at support or resistance.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_77cdlbreakaway",
@@ -651,7 +698,8 @@
       "source_location": "L13756",
       "community": 188,
       "community_name": "Community 188",
-      "description": "Breakaway candlestick pattern \u2014 a five-candle reversal signaling a market bottom or top."
+      "description": "Breakaway candlestick pattern \u2014 a five-candle reversal signaling a market bottom or top.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_79cdlclosingmarubozu",
@@ -661,7 +709,8 @@
       "source_location": "L13966",
       "community": 189,
       "community_name": "Community 189",
-      "description": "Closing Marubozu candlestick pattern \u2014 a long-body candle with no lower shadow."
+      "description": "Closing Marubozu candlestick pattern \u2014 a long-body candle with no lower shadow.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_81cdlconcealbabyswall",
@@ -671,7 +720,8 @@
       "source_location": "L14176",
       "community": 190,
       "community_name": "Community 190",
-      "description": "Concealing Baby Swallow candlestick pattern \u2014 a four-candle bearish continuation pattern."
+      "description": "Concealing Baby Swallow candlestick pattern \u2014 a four-candle bearish continuation pattern.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_83cdlcounterattack",
@@ -681,7 +731,8 @@
       "source_location": "L14386",
       "community": 191,
       "community_name": "Community 191",
-      "description": "Counterattack candlestick pattern \u2014 two same-colored candles closing at similar prices, a reversal signal."
+      "description": "Counterattack candlestick pattern \u2014 two same-colored candles closing at similar prices, a reversal signal.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_85cdldarkcloudcover",
@@ -691,7 +742,8 @@
       "source_location": "L14596",
       "community": 192,
       "community_name": "Community 192",
-      "description": "Dark Cloud Cover candlestick pattern \u2014 bearish reversal with a black candle closing into a prior white candle."
+      "description": "Dark Cloud Cover candlestick pattern \u2014 bearish reversal with a black candle closing into a prior white candle.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_87cdldoji",
@@ -701,7 +753,8 @@
       "source_location": "L14823",
       "community": 193,
       "community_name": "Community 193",
-      "description": "Doji candlestick pattern \u2014 a candle with nearly equal open and close, signaling indecision."
+      "description": "Doji candlestick pattern \u2014 a candle with nearly equal open and close, signaling indecision.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_89cdldojistar",
@@ -711,7 +764,8 @@
       "source_location": "L15033",
       "community": 194,
       "community_name": "Community 194",
-      "description": "Doji Star candlestick pattern \u2014 a doji gapping after a long candle, signaling a reversal."
+      "description": "Doji Star candlestick pattern \u2014 a doji gapping after a long candle, signaling a reversal.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_91cdldragonflydoji",
@@ -721,7 +775,8 @@
       "source_location": "L15243",
       "community": 199,
       "community_name": "Community 199",
-      "description": "Dragonfly Doji candlestick pattern \u2014 a doji with a long lower shadow, a potential bottom signal."
+      "description": "Dragonfly Doji candlestick pattern \u2014 a doji with a long lower shadow, a potential bottom signal.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_93cdlengulfing",
@@ -731,7 +786,8 @@
       "source_location": "L15453",
       "community": 200,
       "community_name": "Community 200",
-      "description": "Engulfing candlestick pattern \u2014 a candle that fully engulfs the prior body, signaling a reversal."
+      "description": "Engulfing candlestick pattern \u2014 a candle that fully engulfs the prior body, signaling a reversal.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_95cdleveningdojistar",
@@ -741,7 +797,8 @@
       "source_location": "L15663",
       "community": 201,
       "community_name": "Community 201",
-      "description": "Evening Doji Star candlestick pattern \u2014 a bearish three-candle top reversal built around a doji."
+      "description": "Evening Doji Star candlestick pattern \u2014 a bearish three-candle top reversal built around a doji.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_97cdleveningstar",
@@ -751,7 +808,8 @@
       "source_location": "L15890",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Evening Star candlestick pattern \u2014 a bearish three-candle top reversal pattern."
+      "description": "Evening Star candlestick pattern \u2014 a bearish three-candle top reversal pattern.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_99cdlgapsidesidewhite",
@@ -761,7 +819,8 @@
       "source_location": "L16117",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Up/Down Gap Side-by-Side White Lines candlestick pattern \u2014 a continuation pattern of white candles separated by gaps."
+      "description": "Up/Down Gap Side-by-Side White Lines candlestick pattern \u2014 a continuation pattern of white candles separated by gaps.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_101cdlgravestonedoji",
@@ -771,7 +830,8 @@
       "source_location": "L16327",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Gravestone Doji candlestick pattern \u2014 a doji with a long upper shadow, a potential top signal."
+      "description": "Gravestone Doji candlestick pattern \u2014 a doji with a long upper shadow, a potential top signal.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_103cdlhammer",
@@ -781,7 +841,8 @@
       "source_location": "L16537",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Hammer candlestick pattern \u2014 a single-candle bullish bottoming pattern with a long lower shadow."
+      "description": "Hammer candlestick pattern \u2014 a single-candle bullish bottoming pattern with a long lower shadow.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_105cdlhangingman",
@@ -791,7 +852,8 @@
       "source_location": "L16747",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Hanging Man candlestick pattern \u2014 a bearish top pattern shaped like a hammer."
+      "description": "Hanging Man candlestick pattern \u2014 a bearish top pattern shaped like a hammer.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_107cdlharami",
@@ -801,7 +863,8 @@
       "source_location": "L16957",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Harami candlestick pattern \u2014 a small candle inside the prior body, signaling a potential reversal."
+      "description": "Harami candlestick pattern \u2014 a small candle inside the prior body, signaling a potential reversal.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_109cdlharamicross",
@@ -811,7 +874,8 @@
       "source_location": "L17167",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Harami Cross candlestick pattern \u2014 a doji inside the prior body, a stronger reversal signal."
+      "description": "Harami Cross candlestick pattern \u2014 a doji inside the prior body, a stronger reversal signal.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_111cdlhighwave",
@@ -821,7 +885,8 @@
       "source_location": "L17377",
       "community": 2,
       "community_name": "Community 2",
-      "description": "High Wave candlestick pattern \u2014 long shadows around a small body, signaling volatility."
+      "description": "High Wave candlestick pattern \u2014 long shadows around a small body, signaling volatility.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_113cdlhikkake",
@@ -831,7 +896,8 @@
       "source_location": "L17587",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Hikkake candlestick pattern \u2014 a pattern signaling the end of a corrective move."
+      "description": "Hikkake candlestick pattern \u2014 a pattern signaling the end of a corrective move.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_115cdlhikkakemod",
@@ -841,7 +907,8 @@
       "source_location": "L17797",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Modified Hikkake candlestick pattern \u2014 a variant of the Hikkake continuation pattern."
+      "description": "Modified Hikkake candlestick pattern \u2014 a variant of the Hikkake continuation pattern.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_117cdlhomingpigeon",
@@ -851,7 +918,8 @@
       "source_location": "L18007",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Homing Pigeon candlestick pattern \u2014 a bullish two-candle bottoming pattern."
+      "description": "Homing Pigeon candlestick pattern \u2014 a bullish two-candle bottoming pattern.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_119cdlidentical3crows",
@@ -861,7 +929,8 @@
       "source_location": "L18217",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Identical Three Crows candlestick pattern \u2014 three identical black candles, a bearish reversal signal."
+      "description": "Identical Three Crows candlestick pattern \u2014 three identical black candles, a bearish reversal signal.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_121cdlinneck",
@@ -871,7 +940,8 @@
       "source_location": "L18427",
       "community": 2,
       "community_name": "Community 2",
-      "description": "In Neck candlestick pattern \u2014 a bearish continuation pattern of two black candles."
+      "description": "In Neck candlestick pattern \u2014 a bearish continuation pattern of two black candles.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_123cdlinvertedhammer",
@@ -881,7 +951,8 @@
       "source_location": "L18637",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Inverted Hammer candlestick pattern \u2014 a bullish bottoming pattern with a long upper shadow."
+      "description": "Inverted Hammer candlestick pattern \u2014 a bullish bottoming pattern with a long upper shadow.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_125cdlkicking",
@@ -891,7 +962,8 @@
       "source_location": "L18847",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Kicking candlestick pattern \u2014 a two-candle reversal with a gap and opposite-colored marubozu candles."
+      "description": "Kicking candlestick pattern \u2014 a two-candle reversal with a gap and opposite-colored marubozu candles.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_127cdlkickingbylength",
@@ -901,7 +973,8 @@
       "source_location": "L19057",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Kicking by Length candlestick pattern \u2014 a two-candle reversal requiring length in the marubozu bodies."
+      "description": "Kicking by Length candlestick pattern \u2014 a two-candle reversal requiring length in the marubozu bodies.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_129cdlladderbottom",
@@ -911,7 +984,8 @@
       "source_location": "L19267",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Ladder Bottom candlestick pattern \u2014 a five-candle bullish bottoming pattern."
+      "description": "Ladder Bottom candlestick pattern \u2014 a five-candle bullish bottoming pattern.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_131cdllongleggeddoji",
@@ -921,7 +995,8 @@
       "source_location": "L19477",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Long-Legged Doji candlestick pattern \u2014 a doji with long shadows signaling strong indecision."
+      "description": "Long-Legged Doji candlestick pattern \u2014 a doji with long shadows signaling strong indecision.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_133cdllongline",
@@ -931,7 +1006,8 @@
       "source_location": "L19687",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Long Line candlestick pattern \u2014 a long-body candle without shadows, signaling a strong move."
+      "description": "Long Line candlestick pattern \u2014 a long-body candle without shadows, signaling a strong move.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_135cdlmarubozu",
@@ -941,7 +1017,8 @@
       "source_location": "L19897",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Marubozu candlestick pattern \u2014 a long-body candle without shadows, signaling a strong move."
+      "description": "Marubozu candlestick pattern \u2014 a long-body candle without shadows, signaling a strong move.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_137cdlmatchinglow",
@@ -951,7 +1028,8 @@
       "source_location": "L20107",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Matching Low candlestick pattern \u2014 two candles closing at the same low, a bullish continuation signal."
+      "description": "Matching Low candlestick pattern \u2014 two candles closing at the same low, a bullish continuation signal.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_139cdlmathold",
@@ -961,7 +1039,8 @@
       "source_location": "L20317",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Mat Hold candlestick pattern \u2014 a bullish continuation pattern of three advancing white candles."
+      "description": "Mat Hold candlestick pattern \u2014 a bullish continuation pattern of three advancing white candles.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_141cdlmorningdojistar",
@@ -971,7 +1050,8 @@
       "source_location": "L20544",
       "community": 7,
       "community_name": "Community 7",
-      "description": "Morning Doji Star candlestick pattern \u2014 a bullish three-candle bottom reversal built around a doji."
+      "description": "Morning Doji Star candlestick pattern \u2014 a bullish three-candle bottom reversal built around a doji.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_143cdlmorningstar",
@@ -981,7 +1061,8 @@
       "source_location": "L20771",
       "community": 5,
       "community_name": "Community 5",
-      "description": "Morning Star candlestick pattern \u2014 a bullish three-candle bottom reversal pattern."
+      "description": "Morning Star candlestick pattern \u2014 a bullish three-candle bottom reversal pattern.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_145cdlonneck",
@@ -991,7 +1072,8 @@
       "source_location": "L20998",
       "community": 6,
       "community_name": "Community 6",
-      "description": "On Neck candlestick pattern \u2014 a bearish continuation pattern of two black candles."
+      "description": "On Neck candlestick pattern \u2014 a bearish continuation pattern of two black candles.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_147cdlpiercing",
@@ -1001,7 +1083,8 @@
       "source_location": "L21208",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Piercing candlestick pattern \u2014 a bullish two-candle bottoming pattern closing deep into the prior body."
+      "description": "Piercing candlestick pattern \u2014 a bullish two-candle bottoming pattern closing deep into the prior body.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_149cdlrickshawman",
@@ -1011,7 +1094,8 @@
       "source_location": "L21418",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Rickshaw Man candlestick pattern \u2014 a doji with very long shadows signaling indecision."
+      "description": "Rickshaw Man candlestick pattern \u2014 a doji with very long shadows signaling indecision.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_151cdlrisefall3methods",
@@ -1021,7 +1105,8 @@
       "source_location": "L21628",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Rising/Falling Three Methods candlestick pattern \u2014 a continuation pattern of three small candles within a larger one."
+      "description": "Rising/Falling Three Methods candlestick pattern \u2014 a continuation pattern of three small candles within a larger one.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_153cdlseparatinglines",
@@ -1031,7 +1116,8 @@
       "source_location": "L21838",
       "community": 7,
       "community_name": "Community 7",
-      "description": "Separating Lines candlestick pattern \u2014 two same-colored candles at similar opens, a continuation signal."
+      "description": "Separating Lines candlestick pattern \u2014 two same-colored candles at similar opens, a continuation signal.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_155cdlshootingstar",
@@ -1041,7 +1127,8 @@
       "source_location": "L22048",
       "community": 5,
       "community_name": "Community 5",
-      "description": "Shooting Star candlestick pattern \u2014 a bearish top pattern with a long upper shadow."
+      "description": "Shooting Star candlestick pattern \u2014 a bearish top pattern with a long upper shadow.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_157cdlshortline",
@@ -1051,7 +1138,8 @@
       "source_location": "L22258",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Short Line candlestick pattern \u2014 a small-body candle signaling indecision."
+      "description": "Short Line candlestick pattern \u2014 a small-body candle signaling indecision.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_159cdlspinningtop",
@@ -1061,7 +1149,8 @@
       "source_location": "L22468",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Spinning Top candlestick pattern \u2014 a small body with long shadows signaling indecision."
+      "description": "Spinning Top candlestick pattern \u2014 a small body with long shadows signaling indecision.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_161cdlstalledpattern",
@@ -1071,7 +1160,8 @@
       "source_location": "L22678",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Stalled Pattern candlestick pattern \u2014 three white candles with fading momentum, a bearish reversal signal."
+      "description": "Stalled Pattern candlestick pattern \u2014 three white candles with fading momentum, a bearish reversal signal.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_163cdlsticksandwich",
@@ -1081,7 +1171,8 @@
       "source_location": "L22888",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Stick Sandwich candlestick pattern \u2014 two black candles sandwiching a white candle, a bullish pattern."
+      "description": "Stick Sandwich candlestick pattern \u2014 two black candles sandwiching a white candle, a bullish pattern.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_165cdltakuri",
@@ -1091,7 +1182,8 @@
       "source_location": "L23098",
       "community": 7,
       "community_name": "Community 7",
-      "description": "Takuri candlestick pattern \u2014 a doji with an unusually long lower shadow, a bottoming signal."
+      "description": "Takuri candlestick pattern \u2014 a doji with an unusually long lower shadow, a bottoming signal.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_167cdltasukigap",
@@ -1101,7 +1193,8 @@
       "source_location": "L23308",
       "community": 5,
       "community_name": "Community 5",
-      "description": "Tasuki Gap candlestick pattern \u2014 a three-candle gap continuation pattern."
+      "description": "Tasuki Gap candlestick pattern \u2014 a three-candle gap continuation pattern.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_169cdlthrusting",
@@ -1111,7 +1204,8 @@
       "source_location": "L23518",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Thrusting candlestick pattern \u2014 a black candle closing into a prior white candle, a bearish signal."
+      "description": "Thrusting candlestick pattern \u2014 a black candle closing into a prior white candle, a bearish signal.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_171cdltristar",
@@ -1121,7 +1215,8 @@
       "source_location": "L23728",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Tristar candlestick pattern \u2014 three dojis signaling a reversal."
+      "description": "Tristar candlestick pattern \u2014 three dojis signaling a reversal.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_173cdlunique3river",
@@ -1131,7 +1226,8 @@
       "source_location": "L23938",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Unique Three River candlestick pattern \u2014 a rare bullish bottoming pattern."
+      "description": "Unique Three River candlestick pattern \u2014 a rare bullish bottoming pattern.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_175cdlupsidegap2crows",
@@ -1141,7 +1237,8 @@
       "source_location": "L24148",
       "community": 2,
       "community_name": "Community 2",
-      "description": "Upside Gap Two Crows candlestick pattern \u2014 a bearish reversal after an upside gap."
+      "description": "Upside Gap Two Crows candlestick pattern \u2014 a bearish reversal after an upside gap.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_177cdlxsidegap3methods",
@@ -1151,7 +1248,8 @@
       "source_location": "L24358",
       "community": 7,
       "community_name": "Community 7",
-      "description": "Upside/Downside Gap Three Methods candlestick pattern \u2014 a gap continuation pattern."
+      "description": "Upside/Downside Gap Three Methods candlestick pattern \u2014 a gap continuation pattern.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_179ceil",
@@ -1161,7 +1259,8 @@
       "source_location": "L24568",
       "community": 23,
       "community_name": "Community 23",
-      "description": "Ceiling \u2014 rounds each price value up to the nearest integer."
+      "description": "Ceiling \u2014 rounds each price value up to the nearest integer.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_181cmo",
@@ -1171,7 +1270,8 @@
       "source_location": "L24728",
       "community": 24,
       "community_name": "Community 24",
-      "description": "Chande Momentum Oscillator \u2014 momentum from the ratio of up-move to down-move sums, ranging -100 to +100."
+      "description": "Chande Momentum Oscillator \u2014 momentum from the ratio of up-move to down-move sums, ranging -100 to +100.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_183correl",
@@ -1181,7 +1281,8 @@
       "source_location": "L24905",
       "community": 19,
       "community_name": "Community 19",
-      "description": "Pearson's Correlation Coefficient between two price series over a period."
+      "description": "Pearson's Correlation Coefficient between two price series over a period.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_185cos",
@@ -1191,7 +1292,8 @@
       "source_location": "L25100",
       "community": 23,
       "community_name": "Community 23",
-      "description": "Cosine \u2014 computes the cosine of each price value."
+      "description": "Cosine \u2014 computes the cosine of each price value.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_187cosh",
@@ -1201,7 +1303,8 @@
       "source_location": "L25260",
       "community": 24,
       "community_name": "Community 24",
-      "description": "Hyperbolic Cosine \u2014 computes the hyperbolic cosine of each price value."
+      "description": "Hyperbolic Cosine \u2014 computes the hyperbolic cosine of each price value.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_189dema",
@@ -1211,7 +1314,8 @@
       "source_location": "L25420",
       "community": 23,
       "community_name": "Community 23",
-      "description": "Double Exponential Moving Average \u2014 a reduced-lag average built from two cascaded EMAs."
+      "description": "Double Exponential Moving Average \u2014 a reduced-lag average built from two cascaded EMAs.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_191div",
@@ -1221,7 +1325,8 @@
       "source_location": "L25597",
       "community": 19,
       "community_name": "Community 19",
-      "description": "Vector Division \u2014 returns the quotient of two price series."
+      "description": "Vector Division \u2014 returns the quotient of two price series.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_193dx",
@@ -1231,7 +1336,8 @@
       "source_location": "L25775",
       "community": 20,
       "community_name": "Community 20",
-      "description": "Directional Movement Index \u2014 the normalized difference between +DI and -DI (the input to ADX)."
+      "description": "Directional Movement Index \u2014 the normalized difference between +DI and -DI (the input to ADX).",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_195ema",
@@ -1241,7 +1347,8 @@
       "source_location": "L25986",
       "community": 24,
       "community_name": "Community 24",
-      "description": "Exponential Moving Average \u2014 a moving average that weights recent prices more heavily."
+      "description": "Exponential Moving Average \u2014 a moving average that weights recent prices more heavily.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_197exp",
@@ -1251,7 +1358,8 @@
       "source_location": "L26163",
       "community": 53,
       "community_name": "Community 53",
-      "description": "Exponential \u2014 raises e to the power of each price value."
+      "description": "Exponential \u2014 raises e to the power of each price value.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_199floor",
@@ -1261,7 +1369,8 @@
       "source_location": "L26323",
       "community": 54,
       "community_name": "Community 54",
-      "description": "Floor \u2014 rounds each price value down to the nearest integer."
+      "description": "Floor \u2014 rounds each price value down to the nearest integer.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_201ht_dcperiod",
@@ -1271,7 +1380,8 @@
       "source_location": "L26483",
       "community": 8,
       "community_name": "Community 8",
-      "description": "Hilbert Transform Dominant Cycle Period \u2014 the dominant cycle period of the price series, computed via Hilbert Transform."
+      "description": "Hilbert Transform Dominant Cycle Period \u2014 the dominant cycle period of the price series, computed via Hilbert Transform.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_203ht_dcphase",
@@ -1281,7 +1391,8 @@
       "source_location": "L26643",
       "community": 56,
       "community_name": "Community 56",
-      "description": "Hilbert Transform Dominant Cycle Phase \u2014 the dominant cycle phase in degrees, computed via Hilbert Transform."
+      "description": "Hilbert Transform Dominant Cycle Phase \u2014 the dominant cycle phase in degrees, computed via Hilbert Transform.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_205ht_phasor",
@@ -1291,7 +1402,8 @@
       "source_location": "L26803",
       "community": 57,
       "community_name": "Community 57",
-      "description": "Hilbert Transform Phasor \u2014 the in-phase and quadrature components of the dominant cycle, computed via Hilbert Transform."
+      "description": "Hilbert Transform Phasor \u2014 the in-phase and quadrature components of the dominant cycle, computed via Hilbert Transform.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_207ht_sine",
@@ -1301,7 +1413,8 @@
       "source_location": "L26978",
       "community": 8,
       "community_name": "Community 8",
-      "description": "Hilbert Transform Sine Wave \u2014 the sine and lead-sine waveforms of the dominant cycle, computed via Hilbert Transform."
+      "description": "Hilbert Transform Sine Wave \u2014 the sine and lead-sine waveforms of the dominant cycle, computed via Hilbert Transform.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_209ht_trendline",
@@ -1311,7 +1424,8 @@
       "source_location": "L27153",
       "community": 58,
       "community_name": "Community 58",
-      "description": "Hilbert Transform Instantaneous Trendline \u2014 an instantaneous trendline of price, computed via Hilbert Transform."
+      "description": "Hilbert Transform Instantaneous Trendline \u2014 an instantaneous trendline of price, computed via Hilbert Transform.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_211ht_trendmode",
@@ -1321,7 +1435,8 @@
       "source_location": "L27313",
       "community": 8,
       "community_name": "Community 8",
-      "description": "Hilbert Transform Trend vs Cycle Mode \u2014 classifies whether the market is trending or cycling, computed via Hilbert Transform."
+      "description": "Hilbert Transform Trend vs Cycle Mode \u2014 classifies whether the market is trending or cycling, computed via Hilbert Transform.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_213imi",
@@ -1331,7 +1446,8 @@
       "source_location": "L27473",
       "community": 19,
       "community_name": "Community 19",
-      "description": "Intraday Momentum Index \u2014 an RSI-like oscillator using intraday open-to-close gains and losses."
+      "description": "Intraday Momentum Index \u2014 an RSI-like oscillator using intraday open-to-close gains and losses.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_215kama",
@@ -1341,7 +1457,8 @@
       "source_location": "L27668",
       "community": 60,
       "community_name": "Community 60",
-      "description": "Kaufman Adaptive Moving Average \u2014 a moving average whose smoothing adapts to market efficiency/volatility."
+      "description": "Kaufman Adaptive Moving Average \u2014 a moving average whose smoothing adapts to market efficiency/volatility.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_217linearreg",
@@ -1351,7 +1468,8 @@
       "source_location": "L27845",
       "community": 61,
       "community_name": "Community 61",
-      "description": "Linear Regression \u2014 the endpoint value of the least-squares regression line over a period."
+      "description": "Linear Regression \u2014 the endpoint value of the least-squares regression line over a period.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_219linearreg_angle",
@@ -1361,7 +1479,8 @@
       "source_location": "L28022",
       "community": 8,
       "community_name": "Community 8",
-      "description": "Linear Regression Angle \u2014 the angle of the linear-regression line over a lookback window, in degrees."
+      "description": "Linear Regression Angle \u2014 the angle of the linear-regression line over a lookback window, in degrees.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_221linearreg_intercept",
@@ -1371,7 +1490,8 @@
       "source_location": "L28199",
       "community": 3,
       "community_name": "Community 3",
-      "description": "Linear Regression Intercept \u2014 the intercept of the least-squares line fitted to price over a lookback window."
+      "description": "Linear Regression Intercept \u2014 the intercept of the least-squares line fitted to price over a lookback window.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_223linearreg_slope",
@@ -1381,7 +1501,8 @@
       "source_location": "L28376",
       "community": 62,
       "community_name": "Community 62",
-      "description": "Linear Regression Slope \u2014 the slope of the least-squares line fitted to price over a lookback window."
+      "description": "Linear Regression Slope \u2014 the slope of the least-squares line fitted to price over a lookback window.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_225ln",
@@ -1391,7 +1512,8 @@
       "source_location": "L28553",
       "community": 63,
       "community_name": "Community 63",
-      "description": "Natural Logarithm \u2014 computes the natural log of each price value."
+      "description": "Natural Logarithm \u2014 computes the natural log of each price value.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_227log10",
@@ -1401,7 +1523,8 @@
       "source_location": "L28713",
       "community": 8,
       "community_name": "Community 8",
-      "description": "Base-10 Logarithm \u2014 computes the base-10 log of each price value."
+      "description": "Base-10 Logarithm \u2014 computes the base-10 log of each price value.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_229ma",
@@ -1411,7 +1534,8 @@
       "source_location": "L28873",
       "community": 3,
       "community_name": "Community 3",
-      "description": "Moving Average \u2014 a generic moving average with a selectable MA type (SMA/EMA/WMA/\u2026)."
+      "description": "Moving Average \u2014 a generic moving average with a selectable MA type (SMA/EMA/WMA/\u2026).",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_231macd",
@@ -1421,7 +1545,8 @@
       "source_location": "L29064",
       "community": 64,
       "community_name": "Community 64",
-      "description": "Moving Average Convergence/Divergence \u2014 the fast-minus-slow EMA line, its signal EMA, and the histogram."
+      "description": "Moving Average Convergence/Divergence \u2014 the fast-minus-slow EMA line, its signal EMA, and the histogram.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_233macdext",
@@ -1431,7 +1556,8 @@
       "source_location": "L29294",
       "community": 65,
       "community_name": "Community 65",
-      "description": "MACD with controllable MA types \u2014 MACD allowing each of the fast, slow, and signal averages to use a chosen MA type."
+      "description": "MACD with controllable MA types \u2014 MACD allowing each of the fast, slow, and signal averages to use a chosen MA type.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_235macdfix",
@@ -1441,7 +1567,8 @@
       "source_location": "L29566",
       "community": 8,
       "community_name": "Community 8",
-      "description": "MACD Fix 12/26 \u2014 MACD with fixed 12/26 periods and a configurable signal period."
+      "description": "MACD Fix 12/26 \u2014 MACD with fixed 12/26 periods and a configurable signal period.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_237mama",
@@ -1451,7 +1578,8 @@
       "source_location": "L29768",
       "community": 3,
       "community_name": "Community 3",
-      "description": "MESA Adaptive Moving Average \u2014 an adaptive moving average that tracks price across changing cycles."
+      "description": "MESA Adaptive Moving Average \u2014 an adaptive moving average that tracks price across changing cycles.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_239mavp",
@@ -1461,7 +1589,8 @@
       "source_location": "L29974",
       "community": 17,
       "community_name": "Community 17",
-      "description": "Moving Average with Variable Period \u2014 a moving average whose period varies per bar from an input array."
+      "description": "Moving Average with Variable Period \u2014 a moving average whose period varies per bar from an input array.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_241max",
@@ -1471,7 +1600,8 @@
       "source_location": "L30197",
       "community": 66,
       "community_name": "Community 66",
-      "description": "Highest value over a period."
+      "description": "Highest value over a period.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_243maxindex",
@@ -1481,7 +1611,8 @@
       "source_location": "L30374",
       "community": 67,
       "community_name": "Community 67",
-      "description": "Index of the highest value over a period."
+      "description": "Index of the highest value over a period.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_245medprice",
@@ -1491,7 +1622,8 @@
       "source_location": "L30564",
       "community": 19,
       "community_name": "Community 19",
-      "description": "Median Price \u2014 the midpoint of each bar's high and low."
+      "description": "Median Price \u2014 the midpoint of each bar's high and low.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_247mfi",
@@ -1501,7 +1633,8 @@
       "source_location": "L30742",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Money Flow Index \u2014 a volume-weighted RSI using typical price and volume, ranging 0 to 100."
+      "description": "Money Flow Index \u2014 a volume-weighted RSI using typical price and volume, ranging 0 to 100.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_249midpoint",
@@ -1511,7 +1644,8 @@
       "source_location": "L30969",
       "community": 68,
       "community_name": "Community 68",
-      "description": "Midpoint \u2014 the average of the highest and lowest close over a period."
+      "description": "Midpoint \u2014 the average of the highest and lowest close over a period.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_251midprice",
@@ -1521,7 +1655,8 @@
       "source_location": "L31146",
       "community": 70,
       "community_name": "Community 70",
-      "description": "Midpoint Price \u2014 the average of the highest high and lowest low over a period."
+      "description": "Midpoint Price \u2014 the average of the highest high and lowest low over a period.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_253min",
@@ -1531,7 +1666,8 @@
       "source_location": "L31341",
       "community": 3,
       "community_name": "Community 3",
-      "description": "Lowest value over a period."
+      "description": "Lowest value over a period.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_255minindex",
@@ -1541,7 +1677,8 @@
       "source_location": "L31518",
       "community": 71,
       "community_name": "Community 71",
-      "description": "Index of the lowest value over a period."
+      "description": "Index of the lowest value over a period.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_257minmax",
@@ -1551,7 +1688,8 @@
       "source_location": "L31708",
       "community": 72,
       "community_name": "Community 72",
-      "description": "Lowest and highest values over a period."
+      "description": "Lowest and highest values over a period.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_259minmaxindex",
@@ -1561,7 +1699,8 @@
       "source_location": "L31900",
       "community": 23,
       "community_name": "Community 23",
-      "description": "Indices of the lowest and highest values over a period."
+      "description": "Indices of the lowest and highest values over a period.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_261minus_di",
@@ -1571,7 +1710,8 @@
       "source_location": "L32115",
       "community": 20,
       "community_name": "Community 20",
-      "description": "Minus Directional Indicator \u2014 measures downward trend strength as part of the Directional Movement system."
+      "description": "Minus Directional Indicator \u2014 measures downward trend strength as part of the Directional Movement system.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_263minus_dm",
@@ -1581,7 +1721,8 @@
       "source_location": "L32326",
       "community": 73,
       "community_name": "Community 73",
-      "description": "Minus Directional Movement \u2014 measures the downward directional movement over a given period."
+      "description": "Minus Directional Movement \u2014 measures the downward directional movement over a given period.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_265mom",
@@ -1591,7 +1732,8 @@
       "source_location": "L32521",
       "community": 74,
       "community_name": "Community 74",
-      "description": "Momentum \u2014 price minus the price n periods ago."
+      "description": "Momentum \u2014 price minus the price n periods ago.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_267mult",
@@ -1601,7 +1743,8 @@
       "source_location": "L32698",
       "community": 75,
       "community_name": "Community 75",
-      "description": "Vector Multiplication \u2014 returns the product of two price series."
+      "description": "Vector Multiplication \u2014 returns the product of two price series.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_269natr",
@@ -1611,7 +1754,8 @@
       "source_location": "L32876",
       "community": 18,
       "community_name": "Community 18",
-      "description": "Normalized Average True Range \u2014 ATR expressed as a percentage of price."
+      "description": "Normalized Average True Range \u2014 ATR expressed as a percentage of price.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_271obv",
@@ -1621,7 +1765,8 @@
       "source_location": "L33087",
       "community": 76,
       "community_name": "Community 76",
-      "description": "On Balance Volume \u2014 cumulative volume added or subtracted by the close direction."
+      "description": "On Balance Volume \u2014 cumulative volume added or subtracted by the close direction.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_273plus_di",
@@ -1631,7 +1776,8 @@
       "source_location": "L33265",
       "community": 20,
       "community_name": "Community 20",
-      "description": "Plus Directional Indicator \u2014 measures upward trend strength as part of the Directional Movement system."
+      "description": "Plus Directional Indicator \u2014 measures upward trend strength as part of the Directional Movement system.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_275plus_dm",
@@ -1641,7 +1787,8 @@
       "source_location": "L33476",
       "community": 77,
       "community_name": "Community 77",
-      "description": "Plus Directional Movement \u2014 measures the upward directional movement over a given period."
+      "description": "Plus Directional Movement \u2014 measures the upward directional movement over a given period.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_277ppo",
@@ -1651,7 +1798,8 @@
       "source_location": "L33671",
       "community": 78,
       "community_name": "Community 78",
-      "description": "Percentage Price Oscillator \u2014 the absolute price oscillator expressed as a percentage of the slow average."
+      "description": "Percentage Price Oscillator \u2014 the absolute price oscillator expressed as a percentage of the slow average.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_279roc",
@@ -1661,7 +1809,8 @@
       "source_location": "L33876",
       "community": 3,
       "community_name": "Community 3",
-      "description": "Rate of Change \u2014 the percentage change in price over n periods."
+      "description": "Rate of Change \u2014 the percentage change in price over n periods.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_281rocp",
@@ -1671,7 +1820,8 @@
       "source_location": "L34053",
       "community": 79,
       "community_name": "Community 79",
-      "description": "Rate of Change Percentage \u2014 (price minus prior price) divided by the prior price."
+      "description": "Rate of Change Percentage \u2014 (price minus prior price) divided by the prior price.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_283rocr",
@@ -1681,7 +1831,8 @@
       "source_location": "L34230",
       "community": 80,
       "community_name": "Community 80",
-      "description": "Rate of Change Ratio \u2014 price divided by the prior price."
+      "description": "Rate of Change Ratio \u2014 price divided by the prior price.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_285rocr100",
@@ -1691,7 +1842,8 @@
       "source_location": "L34407",
       "community": 81,
       "community_name": "Community 81",
-      "description": "Rate of Change Ratio 100 \u2014 current price as a percentage of the price n periods ago."
+      "description": "Rate of Change Ratio 100 \u2014 current price as a percentage of the price n periods ago.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_287rsi",
@@ -1701,7 +1853,8 @@
       "source_location": "L34584",
       "community": 82,
       "community_name": "Community 82",
-      "description": "Relative Strength Index \u2014 measures momentum on a 0\u2013100 scale from average gains and losses."
+      "description": "Relative Strength Index \u2014 measures momentum on a 0\u2013100 scale from average gains and losses.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_289sar",
@@ -1711,7 +1864,8 @@
       "source_location": "L34761",
       "community": 83,
       "community_name": "Community 83",
-      "description": "Parabolic SAR \u2014 trailing stop-and-reverse points tracking price support and resistance."
+      "description": "Parabolic SAR \u2014 trailing stop-and-reverse points tracking price support and resistance.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_291sarext",
@@ -1721,7 +1875,8 @@
       "source_location": "L34970",
       "community": 85,
       "community_name": "Community 85",
-      "description": "Parabolic SAR Extended \u2014 a Parabolic SAR variant with configurable acceleration and offset parameters."
+      "description": "Parabolic SAR Extended \u2014 a Parabolic SAR variant with configurable acceleration and offset parameters.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_293sin",
@@ -1731,7 +1886,8 @@
       "source_location": "L35263",
       "community": 3,
       "community_name": "Community 3",
-      "description": "Sine \u2014 computes the sine of each price value."
+      "description": "Sine \u2014 computes the sine of each price value.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_295sinh",
@@ -1741,7 +1897,8 @@
       "source_location": "L35423",
       "community": 86,
       "community_name": "Community 86",
-      "description": "Hyperbolic Sine \u2014 computes the hyperbolic sine of each price value."
+      "description": "Hyperbolic Sine \u2014 computes the hyperbolic sine of each price value.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_297sma",
@@ -1751,7 +1908,8 @@
       "source_location": "L35583",
       "community": 87,
       "community_name": "Community 87",
-      "description": "Simple Moving Average \u2014 the unweighted mean of prices over a fixed period."
+      "description": "Simple Moving Average \u2014 the unweighted mean of prices over a fixed period.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_299sqrt",
@@ -1761,7 +1919,8 @@
       "source_location": "L35760",
       "community": 88,
       "community_name": "Community 88",
-      "description": "Square Root \u2014 computes the square root of each price value."
+      "description": "Square Root \u2014 computes the square root of each price value.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_301stddev",
@@ -1771,7 +1930,8 @@
       "source_location": "L35920",
       "community": 89,
       "community_name": "Community 89",
-      "description": "Standard Deviation \u2014 measures the dispersion of prices around a moving average."
+      "description": "Standard Deviation \u2014 measures the dispersion of prices around a moving average.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_303stoch",
@@ -1781,7 +1941,8 @@
       "source_location": "L36111",
       "community": 90,
       "community_name": "Community 90",
-      "description": "Stochastic Oscillator \u2014 measures momentum by comparing the close to the recent high-low range."
+      "description": "Stochastic Oscillator \u2014 measures momentum by comparing the close to the recent high-low range.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_305stochf",
@@ -1791,7 +1952,8 @@
       "source_location": "L36393",
       "community": 91,
       "community_name": "Community 91",
-      "description": "Stochastic Fast \u2014 the fast variant of the Stochastic Oscillator with minimal smoothing."
+      "description": "Stochastic Fast \u2014 the fast variant of the Stochastic Oscillator with minimal smoothing.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_307stochrsi",
@@ -1801,7 +1963,8 @@
       "source_location": "L36647",
       "community": 92,
       "community_name": "Community 92",
-      "description": "Stochastic RSI \u2014 a Stochastic Oscillator applied to RSI values to sharpen momentum signals."
+      "description": "Stochastic RSI \u2014 a Stochastic Oscillator applied to RSI values to sharpen momentum signals.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_309sub",
@@ -1811,7 +1974,8 @@
       "source_location": "L36881",
       "community": 93,
       "community_name": "Community 93",
-      "description": "Vector Subtraction \u2014 returns the difference of two price series."
+      "description": "Vector Subtraction \u2014 returns the difference of two price series.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_311sum",
@@ -1821,7 +1985,8 @@
       "source_location": "L37059",
       "community": 3,
       "community_name": "Community 3",
-      "description": "Summation \u2014 the sum of prices over a rolling period."
+      "description": "Summation \u2014 the sum of prices over a rolling period.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_313t3",
@@ -1831,7 +1996,8 @@
       "source_location": "L37236",
       "community": 95,
       "community_name": "Community 95",
-      "description": "T3 Moving Average \u2014 a smoothed moving average that reduces lag using a volume factor."
+      "description": "T3 Moving Average \u2014 a smoothed moving average that reduces lag using a volume factor.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_315tan",
@@ -1841,7 +2007,8 @@
       "source_location": "L37427",
       "community": 96,
       "community_name": "Community 96",
-      "description": "Tangent \u2014 computes the tangent of each price value."
+      "description": "Tangent \u2014 computes the tangent of each price value.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_317tanh",
@@ -1851,7 +2018,8 @@
       "source_location": "L37587",
       "community": 97,
       "community_name": "Community 97",
-      "description": "Hyperbolic Tangent \u2014 computes the hyperbolic tangent of each price value."
+      "description": "Hyperbolic Tangent \u2014 computes the hyperbolic tangent of each price value.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_319tema",
@@ -1861,7 +2029,8 @@
       "source_location": "L37747",
       "community": 98,
       "community_name": "Community 98",
-      "description": "Triple Exponential Moving Average \u2014 a lag-reducing EMA applied three times to price."
+      "description": "Triple Exponential Moving Average \u2014 a lag-reducing EMA applied three times to price.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_321trange",
@@ -1871,7 +2040,8 @@
       "source_location": "L37924",
       "community": 99,
       "community_name": "Community 99",
-      "description": "True Range \u2014 the greatest of the current high-low spread and the prior close gaps."
+      "description": "True Range \u2014 the greatest of the current high-low spread and the prior close gaps.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_323trima",
@@ -1881,7 +2051,8 @@
       "source_location": "L38118",
       "community": 100,
       "community_name": "Community 100",
-      "description": "Triangular Moving Average \u2014 a weighted average emphasizing the middle of the lookback window."
+      "description": "Triangular Moving Average \u2014 a weighted average emphasizing the middle of the lookback window.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_325trix",
@@ -1891,7 +2062,8 @@
       "source_location": "L38295",
       "community": 3,
       "community_name": "Community 3",
-      "description": "Triple Exponential Average \u2014 the rate of change of a triple-smoothed EMA."
+      "description": "Triple Exponential Average \u2014 the rate of change of a triple-smoothed EMA.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_327tsf",
@@ -1901,7 +2073,8 @@
       "source_location": "L38472",
       "community": 101,
       "community_name": "Community 101",
-      "description": "Time Series Forecast \u2014 a least-squares linear regression projection of price."
+      "description": "Time Series Forecast \u2014 a least-squares linear regression projection of price.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_329typprice",
@@ -1911,7 +2084,8 @@
       "source_location": "L38649",
       "community": 102,
       "community_name": "Community 102",
-      "description": "Typical Price \u2014 the average of each bar's high, low, and close."
+      "description": "Typical Price \u2014 the average of each bar's high, low, and close.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_331ultosc",
@@ -1921,7 +2095,8 @@
       "source_location": "L38843",
       "community": 104,
       "community_name": "Community 104",
-      "description": "Ultimate Oscillator \u2014 a momentum oscillator blending three timeframes of buying pressure."
+      "description": "Ultimate Oscillator \u2014 a momentum oscillator blending three timeframes of buying pressure.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_333var",
@@ -1931,7 +2106,8 @@
       "source_location": "L39082",
       "community": 105,
       "community_name": "Community 105",
-      "description": "Variance \u2014 measures the dispersion of prices around a moving average."
+      "description": "Variance \u2014 measures the dispersion of prices around a moving average.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_335wclprice",
@@ -1941,7 +2117,8 @@
       "source_location": "L39273",
       "community": 106,
       "community_name": "Community 106",
-      "description": "Weighted Close Price \u2014 the close weighted with the high and low."
+      "description": "Weighted Close Price \u2014 the close weighted with the high and low.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_337willr",
@@ -1951,7 +2128,8 @@
       "source_location": "L39467",
       "community": 107,
       "community_name": "Community 107",
-      "description": "Williams %R \u2014 a momentum oscillator measuring where the close sits within the recent high-low range."
+      "description": "Williams %R \u2014 a momentum oscillator measuring where the close sits within the recent high-low range.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_339wma",
@@ -1961,7 +2139,8 @@
       "source_location": "L39678",
       "community": 108,
       "community_name": "Community 108",
-      "description": "Weighted Moving Average \u2014 a moving average with linearly increasing weights on recent prices."
+      "description": "Weighted Moving Average \u2014 a moving average with linearly increasing weights on recent prices.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_341str2bytes",
@@ -1971,7 +2150,8 @@
       "source_location": "L39855",
       "community": 109,
       "community_name": "Community 109",
-      "description": "Encodes a Python string to bytes for TA-Lib's C interface."
+      "description": "Encodes a Python string to bytes for TA-Lib's C interface.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_343bytes2str",
@@ -1981,7 +2161,8 @@
       "source_location": "L39980",
       "community": 110,
       "community_name": "Community 110",
-      "description": "Decodes bytes returned by TA-Lib into a Python string."
+      "description": "Decodes bytes returned by TA-Lib into a Python string.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_345str2bytes",
@@ -1991,7 +2172,8 @@
       "source_location": "L40106",
       "community": 111,
       "community_name": "Community 111",
-      "description": "Encodes a Python string to bytes for TA-Lib's C interface."
+      "description": "Encodes a Python string to bytes for TA-Lib's C interface.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_347bytes2str",
@@ -2001,7 +2183,8 @@
       "source_location": "L40211",
       "community": 112,
       "community_name": "Community 112",
-      "description": "Decodes bytes returned by TA-Lib into a Python string."
+      "description": "Decodes bytes returned by TA-Lib into a Python string.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_8function_1_init",
@@ -2011,7 +2194,8 @@
       "source_location": "L40316",
       "community": 25,
       "community_name": "Community 25",
-      "description": "Constructs a Function object wrapping a named TA-Lib indicator for the abstract interface."
+      "description": "Constructs a Function object wrapping a named TA-Lib indicator for the abstract interface.",
+      "node_type": "method"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_8function_3_local",
@@ -2021,7 +2205,8 @@
       "source_location": "L40553",
       "community": 28,
       "community_name": "Community 28",
-      "description": "Reports the local status of a Function within the abstract indicator interface."
+      "description": "Reports the local status of a Function within the abstract indicator interface.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_8function_5info",
@@ -2031,7 +2216,8 @@
       "source_location": "L41152",
       "community": 28,
       "community_name": "Community 28",
-      "description": "Returns the full metadata for a Function, including inputs, outputs, parameters, and documentation."
+      "description": "Returns the full metadata for a Function, including inputs, outputs, parameters, and documentation.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_8function_7function_flags",
@@ -2041,7 +2227,8 @@
       "source_location": "L41288",
       "community": 198,
       "community_name": "Community 198",
-      "description": "Returns the flags describing a Function's behavior and input requirements."
+      "description": "Returns the flags describing a Function's behavior and input requirements.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_8function_9output_flags",
@@ -2051,7 +2238,8 @@
       "source_location": "L41411",
       "community": 25,
       "community_name": "Community 25",
-      "description": "Returns the flags describing the nature of a Function's output arrays."
+      "description": "Returns the flags describing the nature of a Function's output arrays.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_8function_11get_input_names",
@@ -2061,7 +2249,8 @@
       "source_location": "L41550",
       "community": 25,
       "community_name": "Community 25",
-      "description": "Returns the names of a Function's input parameters, such as price or volume."
+      "description": "Returns the names of a Function's input parameters, such as price or volume.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_8function_13set_input_names",
@@ -2071,7 +2260,8 @@
       "source_location": "L41776",
       "community": 16,
       "community_name": "Community 16",
-      "description": "Sets custom names for a Function's input parameters."
+      "description": "Sets custom names for a Function's input parameters.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_8function_15get_input_arrays",
@@ -2081,7 +2271,8 @@
       "source_location": "L42053",
       "community": 14,
       "community_name": "Community 14",
-      "description": "Returns the input data arrays currently assigned to a Function."
+      "description": "Returns the input data arrays currently assigned to a Function.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_8function_17set_input_arrays",
@@ -2091,7 +2282,8 @@
       "source_location": "L42237",
       "community": 25,
       "community_name": "Community 25",
-      "description": "Assigns the input data arrays on which a Function operates."
+      "description": "Assigns the input data arrays on which a Function operates.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_8function_19get_parameters",
@@ -2101,7 +2293,8 @@
       "source_location": "L42569",
       "community": 28,
       "community_name": "Community 28",
-      "description": "Returns the current values of a Function's optional parameters."
+      "description": "Returns the current values of a Function's optional parameters.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_8function_21set_parameters",
@@ -2111,7 +2304,8 @@
       "source_location": "L42797",
       "community": 11,
       "community_name": "Community 11",
-      "description": "Sets the optional parameter values, such as periods, for a Function."
+      "description": "Sets the optional parameter values, such as periods, for a Function.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_8function_23set_function_args",
@@ -2121,7 +2315,8 @@
       "source_location": "L43133",
       "community": 21,
       "community_name": "Community 21",
-      "description": "Configures a Function in one call from input names and parameter values."
+      "description": "Configures a Function in one call from input names and parameter values.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_8function_25lookback",
@@ -2131,7 +2326,8 @@
       "source_location": "L43576",
       "community": 28,
       "community_name": "Community 28",
-      "description": "Returns the number of leading bars a Function needs before producing valid output."
+      "description": "Returns the number of leading bars a Function needs before producing valid output.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_8function_27output_names",
@@ -2141,7 +2337,8 @@
       "source_location": "L43885",
       "community": 25,
       "community_name": "Community 25",
-      "description": "Returns the names of the output arrays a Function will produce."
+      "description": "Returns the names of the output arrays a Function will produce.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_8function_29outputs",
@@ -2151,7 +2348,8 @@
       "source_location": "L44039",
       "community": 14,
       "community_name": "Community 14",
-      "description": "Returns the output arrays computed after a Function has run."
+      "description": "Returns the output arrays computed after a Function has run.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_8function_31run",
@@ -2161,7 +2359,8 @@
       "source_location": "L44505",
       "community": 11,
       "community_name": "Community 11",
-      "description": "Executes the wrapped indicator over the assigned inputs and returns its outputs."
+      "description": "Executes the wrapped indicator over the assigned inputs and returns its outputs.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_8function_33_call",
@@ -2171,7 +2370,8 @@
       "source_location": "L44668",
       "community": 28,
       "community_name": "Community 28",
-      "description": "Invokes the wrapped indicator directly, computing and returning its outputs."
+      "description": "Invokes the wrapped indicator directly, computing and returning its outputs.",
+      "node_type": "method"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_8function_35_input_price_series_names",
@@ -2181,7 +2381,8 @@
       "source_location": "L45616",
       "community": 25,
       "community_name": "Community 25",
-      "description": "Identifies which of a Function's inputs are price series for length validation."
+      "description": "Identifies which of a Function's inputs are price series for length validation.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_8function_37_call_function",
@@ -2191,7 +2392,8 @@
       "source_location": "L45896",
       "community": 28,
       "community_name": "Community 28",
-      "description": "Runs the underlying TA-Lib indicator for a Function over its assigned data."
+      "description": "Runs the underlying TA-Lib indicator for a Function over its assigned data.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_8function_39_check_opt_input_value",
@@ -2201,7 +2403,8 @@
       "source_location": "L46420",
       "community": 25,
       "community_name": "Community 25",
-      "description": "Validates an optional input value against the indicator's declared parameter metadata."
+      "description": "Validates an optional input value against the indicator's declared parameter metadata.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_8function_41_get_opt_input_value",
@@ -2211,7 +2414,8 @@
       "source_location": "L46697",
       "community": 25,
       "community_name": "Community 25",
-      "description": "Returns an optional input value with any declared type conversion applied."
+      "description": "Returns an optional input value with any declared type conversion applied.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_8function_43_repr",
@@ -2221,7 +2425,8 @@
       "source_location": "L46857",
       "community": 195,
       "community_name": "Community 195",
-      "description": "Returns a compact developer-oriented string representation of a Function."
+      "description": "Returns a compact developer-oriented string representation of a Function.",
+      "node_type": "method"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_8function_45_unicode",
@@ -2231,7 +2436,8 @@
       "source_location": "L46977",
       "community": 196,
       "community_name": "Community 196",
-      "description": "Returns the Unicode-formatted documentation of a Function and its parameters."
+      "description": "Returns the Unicode-formatted documentation of a Function and its parameters.",
+      "node_type": "method"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_8function_47_str",
@@ -2241,7 +2447,8 @@
       "source_location": "L47106",
       "community": 197,
       "community_name": "Community 197",
-      "description": "Returns a human-readable summary of a Function's name, parameters, and outputs."
+      "description": "Returns a human-readable summary of a Function's name, parameters, and outputs.",
+      "node_type": "method"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_349_ta_getgrouptable",
@@ -2251,7 +2458,8 @@
       "source_location": "L47249",
       "community": 113,
       "community_name": "Community 113",
-      "description": "Returns the list of TA-Lib indicator groups, such as Overlap and Momentum."
+      "description": "Returns the list of TA-Lib indicator groups, such as Overlap and Momentum.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_351_ta_getfunctable",
@@ -2261,7 +2469,8 @@
       "source_location": "L47331",
       "community": 115,
       "community_name": "Community 115",
-      "description": "Returns the indicator function names belonging to a given TA-Lib group."
+      "description": "Returns the indicator function names belonging to a given TA-Lib group.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_353_get_flags",
@@ -2271,7 +2480,8 @@
       "source_location": "L47476",
       "community": 10,
       "community_name": "Community 10",
-      "description": "Returns the behavioral and output flag strings for a TA-Lib indicator by name."
+      "description": "Returns the behavioral and output flag strings for a TA-Lib indicator by name.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_355_ta_getfuncinfo",
@@ -2281,7 +2491,8 @@
       "source_location": "L47826",
       "community": 10,
       "community_name": "Community 10",
-      "description": "Returns the metadata for a TA-Lib indicator, including its group, inputs, and outputs."
+      "description": "Returns the metadata for a TA-Lib indicator, including its group, inputs, and outputs.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_357_ta_getinputparameterinfo",
@@ -2291,7 +2502,8 @@
       "source_location": "L48126",
       "community": 10,
       "community_name": "Community 10",
-      "description": "Returns the declared metadata for one of an indicator's input parameters."
+      "description": "Returns the declared metadata for one of an indicator's input parameters.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_359_ta_getoptinputparameterinfo",
@@ -2301,7 +2513,8 @@
       "source_location": "L48377",
       "community": 10,
       "community_name": "Community 10",
-      "description": "Returns an optional parameter's metadata, including its default and valid range."
+      "description": "Returns an optional parameter's metadata, including its default and valid range.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_361_ta_getoutputparameterinfo",
@@ -2311,7 +2524,8 @@
       "source_location": "L48655",
       "community": 10,
       "community_name": "Community 10",
-      "description": "Returns the declared metadata for one of an indicator's output parameters."
+      "description": "Returns the declared metadata for one of an indicator's output parameters.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_363_get_defaults_and_docs",
@@ -2321,7 +2535,8 @@
       "source_location": "L48922",
       "community": 25,
       "community_name": "Community 25",
-      "description": "Returns the default parameter values and documentation for every TA-Lib indicator."
+      "description": "Returns the default parameter values and documentation for every TA-Lib indicator.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_365stream_accbands",
@@ -2331,7 +2546,8 @@
       "source_location": "L49627",
       "community": 18,
       "community_name": "Community 18",
-      "description": "Acceleration Bands \u2014 volatility bands plotted a set factor above and below a simple moving average."
+      "description": "Acceleration Bands \u2014 volatility bands plotted a set factor above and below a simple moving average.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_367stream_acos",
@@ -2341,7 +2557,8 @@
       "source_location": "L49861",
       "community": 116,
       "community_name": "Community 116",
-      "description": "Inverse Cosine \u2014 computes the arc-cosine of each input value in radians."
+      "description": "Inverse Cosine \u2014 computes the arc-cosine of each input value in radians.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_369stream_ad",
@@ -2351,7 +2568,8 @@
       "source_location": "L50011",
       "community": 5,
       "community_name": "Community 5",
-      "description": "Chaikin A/D Line \u2014 cumulative accumulation/distribution based on where price closes within the range."
+      "description": "Chaikin A/D Line \u2014 cumulative accumulation/distribution based on where price closes within the range.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_371stream_add",
@@ -2361,7 +2579,8 @@
       "source_location": "L50220",
       "community": 17,
       "community_name": "Community 17",
-      "description": "Vector Addition \u2014 computes the element-wise sum of two price series."
+      "description": "Vector Addition \u2014 computes the element-wise sum of two price series.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_373stream_adosc",
@@ -2371,7 +2590,8 @@
       "source_location": "L50391",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Chaikin A/D Oscillator \u2014 the difference between fast and slow EMAs of the Accumulation/Distribution line."
+      "description": "Chaikin A/D Oscillator \u2014 the difference between fast and slow EMAs of the Accumulation/Distribution line.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_375stream_adx",
@@ -2381,7 +2601,8 @@
       "source_location": "L50631",
       "community": 18,
       "community_name": "Community 18",
-      "description": "Average Directional Movement Index \u2014 measures trend strength on a 0\u2013100 scale, regardless of direction."
+      "description": "Average Directional Movement Index \u2014 measures trend strength on a 0\u2013100 scale, regardless of direction.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_377stream_adxr",
@@ -2391,7 +2612,8 @@
       "source_location": "L50838",
       "community": 18,
       "community_name": "Community 18",
-      "description": "Average Directional Movement Index Rating \u2014 smooths ADX to gauge trend strength over a longer horizon."
+      "description": "Average Directional Movement Index Rating \u2014 smooths ADX to gauge trend strength over a longer horizon.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_379stream_apo",
@@ -2401,7 +2623,8 @@
       "source_location": "L51045",
       "community": 117,
       "community_name": "Community 117",
-      "description": "Absolute Price Oscillator \u2014 the difference between fast and slow EMAs of price."
+      "description": "Absolute Price Oscillator \u2014 the difference between fast and slow EMAs of price.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_381stream_aroon",
@@ -2411,7 +2634,8 @@
       "source_location": "L51240",
       "community": 17,
       "community_name": "Community 17",
-      "description": "Aroon \u2014 gauges trend direction from the time since the highest high and lowest low."
+      "description": "Aroon \u2014 gauges trend direction from the time since the highest high and lowest low.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_383stream_aroonosc",
@@ -2421,7 +2645,8 @@
       "source_location": "L51445",
       "community": 17,
       "community_name": "Community 17",
-      "description": "Aroon Oscillator \u2014 the difference between Aroon Up and Aroon Down, oscillating around zero."
+      "description": "Aroon Oscillator \u2014 the difference between Aroon Up and Aroon Down, oscillating around zero.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_385stream_asin",
@@ -2431,7 +2656,8 @@
       "source_location": "L51633",
       "community": 118,
       "community_name": "Community 118",
-      "description": "Inverse Sine \u2014 computes the arc-sine of each input value in radians."
+      "description": "Inverse Sine \u2014 computes the arc-sine of each input value in radians.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_387stream_atan",
@@ -2441,7 +2667,8 @@
       "source_location": "L51783",
       "community": 119,
       "community_name": "Community 119",
-      "description": "Inverse Tangent \u2014 computes the arc-tangent of each input value in radians."
+      "description": "Inverse Tangent \u2014 computes the arc-tangent of each input value in radians.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_389stream_atr",
@@ -2451,7 +2678,8 @@
       "source_location": "L51933",
       "community": 18,
       "community_name": "Community 18",
-      "description": "Average True Range \u2014 a moving average of true range that gauges volatility."
+      "description": "Average True Range \u2014 a moving average of true range that gauges volatility.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_391stream_avgprice",
@@ -2461,7 +2689,8 @@
       "source_location": "L52140",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Average Price \u2014 the average of open, high, low, and close for each bar."
+      "description": "Average Price \u2014 the average of open, high, low, and close for each bar.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_393stream_avgdev",
@@ -2471,7 +2700,8 @@
       "source_location": "L52349",
       "community": 120,
       "community_name": "Community 120",
-      "description": "Average Deviation \u2014 the mean absolute deviation of price from its moving average."
+      "description": "Average Deviation \u2014 the mean absolute deviation of price from its moving average.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_395stream_bbands",
@@ -2481,7 +2711,8 @@
       "source_location": "L52516",
       "community": 121,
       "community_name": "Community 121",
-      "description": "Bollinger Bands \u2014 volatility bands plotted a set number of standard deviations around a moving average."
+      "description": "Bollinger Bands \u2014 volatility bands plotted a set number of standard deviations around a moving average.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_397stream_beta",
@@ -2491,7 +2722,8 @@
       "source_location": "L52752",
       "community": 17,
       "community_name": "Community 17",
-      "description": "Beta \u2014 the slope of the regression of one series on another over a lookback period."
+      "description": "Beta \u2014 the slope of the regression of one series on another over a lookback period.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_399stream_bop",
@@ -2501,7 +2733,8 @@
       "source_location": "L52940",
       "community": 7,
       "community_name": "Community 7",
-      "description": "Balance of Power \u2014 compares intraday buying and selling strength from open, high, low, and close."
+      "description": "Balance of Power \u2014 compares intraday buying and selling strength from open, high, low, and close.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_401stream_cci",
@@ -2511,7 +2744,8 @@
       "source_location": "L53149",
       "community": 123,
       "community_name": "Community 123",
-      "description": "Commodity Channel Index \u2014 measures the deviation of typical price from its moving average to signal overbought and oversold levels."
+      "description": "Commodity Channel Index \u2014 measures the deviation of typical price from its moving average to signal overbought and oversold levels.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_403stream_cdl2crows",
@@ -2521,7 +2755,8 @@
       "source_location": "L53356",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Two Crows \u2014 a three-candlestick bearish reversal pattern."
+      "description": "Two Crows \u2014 a three-candlestick bearish reversal pattern.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_405stream_cdl3blackcrows",
@@ -2531,7 +2766,8 @@
       "source_location": "L53565",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Three Black Crows \u2014 a bearish reversal pattern of three consecutive long black candles."
+      "description": "Three Black Crows \u2014 a bearish reversal pattern of three consecutive long black candles.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_407stream_cdl3inside",
@@ -2541,7 +2777,8 @@
       "source_location": "L53774",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Three Inside Up/Down \u2014 a three-candlestick reversal pattern built on an engulfing candle."
+      "description": "Three Inside Up/Down \u2014 a three-candlestick reversal pattern built on an engulfing candle.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_409stream_cdl3linestrike",
@@ -2551,7 +2788,8 @@
       "source_location": "L53983",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Three-Line Strike \u2014 a reversal pattern of three same-direction candles followed by a counter move."
+      "description": "Three-Line Strike \u2014 a reversal pattern of three same-direction candles followed by a counter move.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_411stream_cdl3outside",
@@ -2561,7 +2799,8 @@
       "source_location": "L54192",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Three Outside Up/Down \u2014 a three-candlestick reversal pattern built on an engulfing candle."
+      "description": "Three Outside Up/Down \u2014 a three-candlestick reversal pattern built on an engulfing candle.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_413stream_cdl3starsinsouth",
@@ -2571,7 +2810,8 @@
       "source_location": "L54401",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Three Stars In The South \u2014 a rare bullish reversal pattern of three progressively smaller candles."
+      "description": "Three Stars In The South \u2014 a rare bullish reversal pattern of three progressively smaller candles.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_415stream_cdl3whitesoldiers",
@@ -2581,7 +2821,8 @@
       "source_location": "L54610",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Three White Soldiers \u2014 a bullish reversal pattern of three consecutive long white candles."
+      "description": "Three White Soldiers \u2014 a bullish reversal pattern of three consecutive long white candles.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_417stream_cdlabandonedbaby",
@@ -2591,7 +2832,8 @@
       "source_location": "L54819",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Abandoned Baby \u2014 a three-candlestick reversal marked by a doji gapped clear of the candles on both sides."
+      "description": "Abandoned Baby \u2014 a three-candlestick reversal marked by a doji gapped clear of the candles on both sides.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_419stream_cdladvanceblock",
@@ -2601,7 +2843,8 @@
       "source_location": "L55045",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Advance Block \u2014 a bearish reversal pattern of three white candles with shrinking bodies."
+      "description": "Advance Block \u2014 a bearish reversal pattern of three white candles with shrinking bodies.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_421stream_cdlbelthold",
@@ -2611,7 +2854,8 @@
       "source_location": "L55254",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Belt Hold \u2014 a single-candle pattern formed by a long body opening at an extreme."
+      "description": "Belt Hold \u2014 a single-candle pattern formed by a long body opening at an extreme.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_423stream_cdlbreakaway",
@@ -2621,7 +2865,8 @@
       "source_location": "L55463",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Breakaway \u2014 a five-candlestick reversal pattern of progressively widening ranges."
+      "description": "Breakaway \u2014 a five-candlestick reversal pattern of progressively widening ranges.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_425stream_cdlclosingmarubozu",
@@ -2631,7 +2876,8 @@
       "source_location": "L55672",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Closing Marubozu \u2014 a long-bodied candle closing at its extreme with no lower shadow."
+      "description": "Closing Marubozu \u2014 a long-bodied candle closing at its extreme with no lower shadow.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_427stream_cdlconcealbabyswall",
@@ -2641,7 +2887,8 @@
       "source_location": "L55881",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Concealing Baby Swallow \u2014 a four-candlestick bullish pattern found during a downtrend."
+      "description": "Concealing Baby Swallow \u2014 a four-candlestick bullish pattern found during a downtrend.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_429stream_cdlcounterattack",
@@ -2651,7 +2898,8 @@
       "source_location": "L56090",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Counterattack \u2014 a two-candlestick reversal pattern of opposing long candles closing at the same level."
+      "description": "Counterattack \u2014 a two-candlestick reversal pattern of opposing long candles closing at the same level.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_431stream_cdldarkcloudcover",
@@ -2661,7 +2909,8 @@
       "source_location": "L56299",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Dark Cloud Cover \u2014 a bearish two-candlestick reversal where a black candle closes into a prior white candle's body."
+      "description": "Dark Cloud Cover \u2014 a bearish two-candlestick reversal where a black candle closes into a prior white candle's body.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_433stream_cdldoji",
@@ -2671,7 +2920,8 @@
       "source_location": "L56525",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Doji \u2014 a candle whose open and close are virtually equal, signaling indecision."
+      "description": "Doji \u2014 a candle whose open and close are virtually equal, signaling indecision.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_435stream_cdldojistar",
@@ -2681,7 +2931,8 @@
       "source_location": "L56734",
       "community": 7,
       "community_name": "Community 7",
-      "description": "Doji Star \u2014 a doji following a long candle that warns of a possible reversal."
+      "description": "Doji Star \u2014 a doji following a long candle that warns of a possible reversal.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_437stream_cdldragonflydoji",
@@ -2691,7 +2942,8 @@
       "source_location": "L56943",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Dragonfly Doji \u2014 a doji with a long lower shadow, signaling a possible bullish reversal."
+      "description": "Dragonfly Doji \u2014 a doji with a long lower shadow, signaling a possible bullish reversal.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_439stream_cdlengulfing",
@@ -2701,7 +2953,8 @@
       "source_location": "L57152",
       "community": 5,
       "community_name": "Community 5",
-      "description": "Engulfing Pattern \u2014 a reversal signaled when a candle's body fully engulfs the prior candle's body."
+      "description": "Engulfing Pattern \u2014 a reversal signaled when a candle's body fully engulfs the prior candle's body.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_441stream_cdleveningdojistar",
@@ -2711,7 +2964,8 @@
       "source_location": "L57361",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Evening Doji Star \u2014 a bearish three-candlestick reversal with a doji after a long white candle."
+      "description": "Evening Doji Star \u2014 a bearish three-candlestick reversal with a doji after a long white candle.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_443stream_cdleveningstar",
@@ -2721,7 +2975,8 @@
       "source_location": "L57587",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Evening Star \u2014 a bearish three-candlestick reversal pattern ending with a long black candle."
+      "description": "Evening Star \u2014 a bearish three-candlestick reversal pattern ending with a long black candle.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_445stream_cdlgapsidesidewhite",
@@ -2731,7 +2986,8 @@
       "source_location": "L57813",
       "community": 7,
       "community_name": "Community 7",
-      "description": "Up/Down Gap Side-by-Side White Lines \u2014 two white candles gapped side by side within a trend."
+      "description": "Up/Down Gap Side-by-Side White Lines \u2014 two white candles gapped side by side within a trend.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_447stream_cdlgravestonedoji",
@@ -2741,7 +2997,8 @@
       "source_location": "L58022",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Gravestone Doji \u2014 a doji with a long upper shadow, signaling a possible bearish reversal."
+      "description": "Gravestone Doji \u2014 a doji with a long upper shadow, signaling a possible bearish reversal.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_449stream_cdlhammer",
@@ -2751,7 +3008,8 @@
       "source_location": "L58231",
       "community": 5,
       "community_name": "Community 5",
-      "description": "Hammer \u2014 a bullish reversal candle with a small body and a long lower shadow after a decline."
+      "description": "Hammer \u2014 a bullish reversal candle with a small body and a long lower shadow after a decline.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_451stream_cdlhangingman",
@@ -2761,7 +3019,8 @@
       "source_location": "L58440",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Hanging Man \u2014 a bearish reversal candle with a small body and a long lower shadow after an advance."
+      "description": "Hanging Man \u2014 a bearish reversal candle with a small body and a long lower shadow after an advance.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_453stream_cdlharami",
@@ -2771,7 +3030,8 @@
       "source_location": "L58649",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Harami Pattern \u2014 a small candle contained within the prior candle's body, signaling a possible reversal."
+      "description": "Harami Pattern \u2014 a small candle contained within the prior candle's body, signaling a possible reversal.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_455stream_cdlharamicross",
@@ -2781,7 +3041,8 @@
       "source_location": "L58858",
       "community": 7,
       "community_name": "Community 7",
-      "description": "Harami Cross Pattern \u2014 a doji contained within the prior candle's body, a stronger reversal signal."
+      "description": "Harami Cross Pattern \u2014 a doji contained within the prior candle's body, a stronger reversal signal.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_457stream_cdlhighwave",
@@ -2791,7 +3052,8 @@
       "source_location": "L59067",
       "community": 1,
       "community_name": "Community 1",
-      "description": "High-Wave Candle \u2014 a candle with a small body and very long shadows, signaling strong indecision."
+      "description": "High-Wave Candle \u2014 a candle with a small body and very long shadows, signaling strong indecision.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_459stream_cdlhikkake",
@@ -2801,7 +3063,8 @@
       "source_location": "L59276",
       "community": 5,
       "community_name": "Community 5",
-      "description": "Hikkake Pattern \u2014 a complex continuation pattern built from inside bars and their breakouts."
+      "description": "Hikkake Pattern \u2014 a complex continuation pattern built from inside bars and their breakouts.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_461stream_cdlhikkakemod",
@@ -2811,7 +3074,8 @@
       "source_location": "L59485",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Modified Hikkake Pattern \u2014 a variant of the Hikkake pattern with a different breakout confirmation."
+      "description": "Modified Hikkake Pattern \u2014 a variant of the Hikkake pattern with a different breakout confirmation.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_463stream_cdlhomingpigeon",
@@ -2821,7 +3085,8 @@
       "source_location": "L59694",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Homing Pigeon \u2014 a bullish two-candlestick pattern found within a downtrend."
+      "description": "Homing Pigeon \u2014 a bullish two-candlestick pattern found within a downtrend.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_465stream_cdlidentical3crows",
@@ -2831,7 +3096,8 @@
       "source_location": "L59903",
       "community": 7,
       "community_name": "Community 7",
-      "description": "Identical Three Crows \u2014 a bearish pattern of three identical black candles making new lows."
+      "description": "Identical Three Crows \u2014 a bearish pattern of three identical black candles making new lows.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_467stream_cdlinneck",
@@ -2841,7 +3107,8 @@
       "source_location": "L60112",
       "community": 1,
       "community_name": "Community 1",
-      "description": "In-Neck Pattern \u2014 a bearish two-candlestick pattern where the second candle closes near the prior candle's low."
+      "description": "In-Neck Pattern \u2014 a bearish two-candlestick pattern where the second candle closes near the prior candle's low.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_469stream_cdlinvertedhammer",
@@ -2851,7 +3118,8 @@
       "source_location": "L60321",
       "community": 5,
       "community_name": "Community 5",
-      "description": "Inverted Hammer \u2014 a bullish reversal candle with a long upper shadow after a decline."
+      "description": "Inverted Hammer \u2014 a bullish reversal candle with a long upper shadow after a decline.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_471stream_cdlkicking",
@@ -2861,7 +3129,8 @@
       "source_location": "L60530",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Kicking \u2014 a strong two-candlestick reversal marked by a gap between long marubozu candles."
+      "description": "Kicking \u2014 a strong two-candlestick reversal marked by a gap between long marubozu candles.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_473stream_cdlkickingbylength",
@@ -2871,7 +3140,8 @@
       "source_location": "L60739",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Kicking By Length \u2014 a Kicking variant whose direction is set by the longer marubozu."
+      "description": "Kicking By Length \u2014 a Kicking variant whose direction is set by the longer marubozu.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_475stream_cdlladderbottom",
@@ -2881,7 +3151,8 @@
       "source_location": "L60948",
       "community": 7,
       "community_name": "Community 7",
-      "description": "Ladder Bottom \u2014 a bullish five-candlestick reversal pattern found at the end of a decline."
+      "description": "Ladder Bottom \u2014 a bullish five-candlestick reversal pattern found at the end of a decline.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_477stream_cdllongleggeddoji",
@@ -2891,7 +3162,8 @@
       "source_location": "L61157",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Long-Legged Doji \u2014 a doji with long shadows on both sides, signaling strong indecision."
+      "description": "Long-Legged Doji \u2014 a doji with long shadows on both sides, signaling strong indecision.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_479stream_cdllongline",
@@ -2901,7 +3173,8 @@
       "source_location": "L61366",
       "community": 5,
       "community_name": "Community 5",
-      "description": "Long Line Candle \u2014 a long-bodied candle with little or no shadow, signaling strong conviction."
+      "description": "Long Line Candle \u2014 a long-bodied candle with little or no shadow, signaling strong conviction.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_481stream_cdlmarubozu",
@@ -2911,7 +3184,8 @@
       "source_location": "L61575",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Marubozu \u2014 a candle with a full body and no shadows, signaling strong conviction."
+      "description": "Marubozu \u2014 a candle with a full body and no shadows, signaling strong conviction.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_483stream_cdlmatchinglow",
@@ -2921,7 +3195,8 @@
       "source_location": "L61784",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Matching Low \u2014 a bullish two-candlestick pattern of two black candles closing at the same low."
+      "description": "Matching Low \u2014 a bullish two-candlestick pattern of two black candles closing at the same low.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_485stream_cdlmathold",
@@ -2931,7 +3206,8 @@
       "source_location": "L61993",
       "community": 7,
       "community_name": "Community 7",
-      "description": "Mat Hold \u2014 a bullish continuation pattern of a long white candle followed by a gap and declining candles."
+      "description": "Mat Hold \u2014 a bullish continuation pattern of a long white candle followed by a gap and declining candles.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_487stream_cdlmorningdojistar",
@@ -2941,7 +3217,8 @@
       "source_location": "L62219",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Morning Doji Star \u2014 a bullish three-candlestick reversal with a doji after a long black candle."
+      "description": "Morning Doji Star \u2014 a bullish three-candlestick reversal with a doji after a long black candle.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_489stream_cdlmorningstar",
@@ -2951,7 +3228,8 @@
       "source_location": "L62445",
       "community": 5,
       "community_name": "Community 5",
-      "description": "Morning Star \u2014 a bullish three-candlestick reversal pattern ending with a long white candle."
+      "description": "Morning Star \u2014 a bullish three-candlestick reversal pattern ending with a long white candle.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_491stream_cdlonneck",
@@ -2961,7 +3239,8 @@
       "source_location": "L62671",
       "community": 6,
       "community_name": "Community 6",
-      "description": "On-Neck Pattern \u2014 a bearish two-candlestick pattern where the second candle closes at the prior candle's low."
+      "description": "On-Neck Pattern \u2014 a bearish two-candlestick pattern where the second candle closes at the prior candle's low.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_493stream_cdlpiercing",
@@ -2971,7 +3250,8 @@
       "source_location": "L62880",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Piercing Pattern \u2014 a bullish two-candlestick reversal where a white candle closes into a prior black candle's body."
+      "description": "Piercing Pattern \u2014 a bullish two-candlestick reversal where a white candle closes into a prior black candle's body.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_495stream_cdlrickshawman",
@@ -2981,7 +3261,8 @@
       "source_location": "L63089",
       "community": 7,
       "community_name": "Community 7",
-      "description": "Rickshaw Man \u2014 a doji with long shadows and a tiny body, signaling strong indecision."
+      "description": "Rickshaw Man \u2014 a doji with long shadows and a tiny body, signaling strong indecision.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_497stream_cdlrisefall3methods",
@@ -2991,7 +3272,8 @@
       "source_location": "L63298",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Rising/Falling Three Methods \u2014 a five-candlestick continuation pattern with three counter-trend candles."
+      "description": "Rising/Falling Three Methods \u2014 a five-candlestick continuation pattern with three counter-trend candles.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_499stream_cdlseparatinglines",
@@ -3001,7 +3283,8 @@
       "source_location": "L63507",
       "community": 5,
       "community_name": "Community 5",
-      "description": "Separating Lines \u2014 a continuation pattern of two opposing candles opening at the same level."
+      "description": "Separating Lines \u2014 a continuation pattern of two opposing candles opening at the same level.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_501stream_cdlshootingstar",
@@ -3011,7 +3294,8 @@
       "source_location": "L63716",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Shooting Star \u2014 a bearish reversal candle with a long upper shadow after an advance."
+      "description": "Shooting Star \u2014 a bearish reversal candle with a long upper shadow after an advance.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_503stream_cdlshortline",
@@ -3021,7 +3305,8 @@
       "source_location": "L63925",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Short Line Candle \u2014 a short-bodied candle signaling indecision or a pause."
+      "description": "Short Line Candle \u2014 a short-bodied candle signaling indecision or a pause.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_505stream_cdlspinningtop",
@@ -3031,7 +3316,8 @@
       "source_location": "L64134",
       "community": 7,
       "community_name": "Community 7",
-      "description": "Spinning Top \u2014 a small-bodied candle with small shadows, signaling indecision."
+      "description": "Spinning Top \u2014 a small-bodied candle with small shadows, signaling indecision.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_507stream_cdlstalledpattern",
@@ -3041,7 +3327,8 @@
       "source_location": "L64343",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Stalled Pattern \u2014 a bearish pattern of three white candles with shrinking bodies after a rally."
+      "description": "Stalled Pattern \u2014 a bearish pattern of three white candles with shrinking bodies after a rally.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_509stream_cdlsticksandwich",
@@ -3051,7 +3338,8 @@
       "source_location": "L64552",
       "community": 5,
       "community_name": "Community 5",
-      "description": "Stick Sandwich \u2014 a bullish three-candlestick pattern of black candles around a white candle."
+      "description": "Stick Sandwich \u2014 a bullish three-candlestick pattern of black candles around a white candle.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_511stream_cdltakuri",
@@ -3061,7 +3349,8 @@
       "source_location": "L64761",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Takuri \u2014 a bullish candle shaped like a dragonfly doji with a long lower shadow after a decline."
+      "description": "Takuri \u2014 a bullish candle shaped like a dragonfly doji with a long lower shadow after a decline.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_513stream_cdltasukigap",
@@ -3071,7 +3360,8 @@
       "source_location": "L64970",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Tasuki Gap \u2014 a pattern of a price gap followed by counter-move candles that fail to close it."
+      "description": "Tasuki Gap \u2014 a pattern of a price gap followed by counter-move candles that fail to close it.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_515stream_cdlthrusting",
@@ -3081,7 +3371,8 @@
       "source_location": "L65179",
       "community": 7,
       "community_name": "Community 7",
-      "description": "Thrusting Pattern \u2014 a bearish two-candlestick pattern where a white candle closes into a prior black candle's body."
+      "description": "Thrusting Pattern \u2014 a bearish two-candlestick pattern where a white candle closes into a prior black candle's body.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_517stream_cdltristar",
@@ -3091,7 +3382,8 @@
       "source_location": "L65388",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Tristar Pattern \u2014 a three-doji reversal pattern signaling a possible turning point."
+      "description": "Tristar Pattern \u2014 a three-doji reversal pattern signaling a possible turning point.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_519stream_cdlunique3river",
@@ -3101,7 +3393,8 @@
       "source_location": "L65597",
       "community": 5,
       "community_name": "Community 5",
-      "description": "Unique Three River \u2014 a bullish three-candlestick reversal pattern found at the end of a decline."
+      "description": "Unique Three River \u2014 a bullish three-candlestick reversal pattern found at the end of a decline.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_521stream_cdlupsidegap2crows",
@@ -3111,7 +3404,8 @@
       "source_location": "L65806",
       "community": 6,
       "community_name": "Community 6",
-      "description": "Upside Gap Two Crows \u2014 a bearish three-candlestick pattern of a gap followed by two black candles."
+      "description": "Upside Gap Two Crows \u2014 a bearish three-candlestick pattern of a gap followed by two black candles.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_523stream_cdlxsidegap3methods",
@@ -3121,7 +3415,8 @@
       "source_location": "L66015",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Upside/Downside Gap Three Methods \u2014 a continuation pattern where counter-trend candles close a price gap."
+      "description": "Upside/Downside Gap Three Methods \u2014 a continuation pattern where counter-trend candles close a price gap.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_525stream_ceil",
@@ -3131,7 +3426,8 @@
       "source_location": "L66224",
       "community": 125,
       "community_name": "Community 125",
-      "description": "Ceiling \u2014 rounds each input value up to the nearest integer."
+      "description": "Ceiling \u2014 rounds each input value up to the nearest integer.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_527stream_cmo",
@@ -3141,7 +3437,8 @@
       "source_location": "L66374",
       "community": 126,
       "community_name": "Community 126",
-      "description": "Chande Momentum Oscillator \u2014 momentum normalized as the difference between gains and losses over a period."
+      "description": "Chande Momentum Oscillator \u2014 momentum normalized as the difference between gains and losses over a period.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_529stream_correl",
@@ -3151,7 +3448,8 @@
       "source_location": "L66541",
       "community": 127,
       "community_name": "Community 127",
-      "description": "Pearson's Correlation Coefficient \u2014 the correlation between two series over a lookback period."
+      "description": "Pearson's Correlation Coefficient \u2014 the correlation between two series over a lookback period.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_531stream_cos",
@@ -3161,7 +3459,8 @@
       "source_location": "L66729",
       "community": 128,
       "community_name": "Community 128",
-      "description": "Cosine \u2014 computes the cosine of each input value."
+      "description": "Cosine \u2014 computes the cosine of each input value.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_533stream_cosh",
@@ -3171,7 +3470,8 @@
       "source_location": "L66879",
       "community": 3,
       "community_name": "Community 3",
-      "description": "Hyperbolic Cosine \u2014 computes the hyperbolic cosine of each input value."
+      "description": "Hyperbolic Cosine \u2014 computes the hyperbolic cosine of each input value.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_535stream_dema",
@@ -3181,7 +3481,8 @@
       "source_location": "L67029",
       "community": 129,
       "community_name": "Community 129",
-      "description": "Double Exponential Moving Average \u2014 a smoothed average that applies an EMA twice to reduce lag."
+      "description": "Double Exponential Moving Average \u2014 a smoothed average that applies an EMA twice to reduce lag.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_537stream_div",
@@ -3191,7 +3492,8 @@
       "source_location": "L67196",
       "community": 130,
       "community_name": "Community 130",
-      "description": "Vector Division \u2014 computes the element-wise quotient of two price series."
+      "description": "Vector Division \u2014 computes the element-wise quotient of two price series.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_539stream_dx",
@@ -3201,7 +3503,8 @@
       "source_location": "L67367",
       "community": 131,
       "community_name": "Community 131",
-      "description": "Directional Movement Index \u2014 the smoothed ratio of directional movement to true range."
+      "description": "Directional Movement Index \u2014 the smoothed ratio of directional movement to true range.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_541stream_ema",
@@ -3211,7 +3514,8 @@
       "source_location": "L67574",
       "community": 132,
       "community_name": "Community 132",
-      "description": "Exponential Moving Average \u2014 a weighted moving average that gives greater weight to recent prices."
+      "description": "Exponential Moving Average \u2014 a weighted moving average that gives greater weight to recent prices.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_543stream_exp",
@@ -3221,7 +3525,8 @@
       "source_location": "L67741",
       "community": 3,
       "community_name": "Community 3",
-      "description": "Exponential \u2014 raises e to the power of each input value."
+      "description": "Exponential \u2014 raises e to the power of each input value.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_545stream_floor",
@@ -3231,7 +3536,8 @@
       "source_location": "L67891",
       "community": 133,
       "community_name": "Community 133",
-      "description": "Floor \u2014 rounds each input value down to the nearest integer."
+      "description": "Floor \u2014 rounds each input value down to the nearest integer.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_547stream_ht_dcperiod",
@@ -3241,7 +3547,8 @@
       "source_location": "L68041",
       "community": 134,
       "community_name": "Community 134",
-      "description": "Hilbert Transform Dominant Cycle Period \u2014 the dominant cycle period of the price series, computed via Hilbert Transform."
+      "description": "Hilbert Transform Dominant Cycle Period \u2014 the dominant cycle period of the price series, computed via Hilbert Transform.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_549stream_ht_dcphase",
@@ -3251,7 +3558,8 @@
       "source_location": "L68191",
       "community": 3,
       "community_name": "Community 3",
-      "description": "Hilbert Transform Dominant Cycle Phase \u2014 the dominant cycle phase in degrees, computed via Hilbert Transform."
+      "description": "Hilbert Transform Dominant Cycle Phase \u2014 the dominant cycle phase in degrees, computed via Hilbert Transform.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_551stream_ht_phasor",
@@ -3261,7 +3569,8 @@
       "source_location": "L68341",
       "community": 135,
       "community_name": "Community 135",
-      "description": "Hilbert Transform Phasor \u2014 the in-phase and quadrature components of the dominant cycle, computed via Hilbert Transform."
+      "description": "Hilbert Transform Phasor \u2014 the in-phase and quadrature components of the dominant cycle, computed via Hilbert Transform.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_553stream_ht_sine",
@@ -3271,7 +3580,8 @@
       "source_location": "L68508",
       "community": 136,
       "community_name": "Community 136",
-      "description": "Hilbert Transform Sine Wave \u2014 the sine and lead-sine waveforms of the dominant cycle, computed via Hilbert Transform."
+      "description": "Hilbert Transform Sine Wave \u2014 the sine and lead-sine waveforms of the dominant cycle, computed via Hilbert Transform.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_555stream_ht_trendline",
@@ -3281,7 +3591,8 @@
       "source_location": "L68675",
       "community": 137,
       "community_name": "Community 137",
-      "description": "Hilbert Transform Instantaneous Trendline \u2014 an instantaneous trendline of price, computed via Hilbert Transform."
+      "description": "Hilbert Transform Instantaneous Trendline \u2014 an instantaneous trendline of price, computed via Hilbert Transform.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_557stream_ht_trendmode",
@@ -3291,7 +3602,8 @@
       "source_location": "L68825",
       "community": 3,
       "community_name": "Community 3",
-      "description": "Hilbert Transform Trend vs Cycle Mode \u2014 classifies whether the market is trending or cycling, computed via Hilbert Transform."
+      "description": "Hilbert Transform Trend vs Cycle Mode \u2014 classifies whether the market is trending or cycling, computed via Hilbert Transform.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_559stream_imi",
@@ -3301,7 +3613,8 @@
       "source_location": "L68975",
       "community": 138,
       "community_name": "Community 138",
-      "description": "Intraday Momentum Index \u2014 momentum computed from the close relative to the open over a period."
+      "description": "Intraday Momentum Index \u2014 momentum computed from the close relative to the open over a period.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_561stream_kama",
@@ -3311,7 +3624,8 @@
       "source_location": "L69163",
       "community": 139,
       "community_name": "Community 139",
-      "description": "Kaufman Adaptive Moving Average \u2014 a moving average that adapts its smoothing to market noise."
+      "description": "Kaufman Adaptive Moving Average \u2014 a moving average that adapts its smoothing to market noise.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_563stream_linearreg",
@@ -3321,7 +3635,8 @@
       "source_location": "L69330",
       "community": 140,
       "community_name": "Community 140",
-      "description": "Linear Regression \u2014 the least-squares line fitted to price over a lookback window."
+      "description": "Linear Regression \u2014 the least-squares line fitted to price over a lookback window.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_565stream_linearreg_angle",
@@ -3331,7 +3646,8 @@
       "source_location": "L69497",
       "community": 3,
       "community_name": "Community 3",
-      "description": "Linear Regression Angle \u2014 the angle of the linear-regression line over a lookback window, in degrees."
+      "description": "Linear Regression Angle \u2014 the angle of the linear-regression line over a lookback window, in degrees.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_567stream_linearreg_intercept",
@@ -3341,7 +3657,8 @@
       "source_location": "L69664",
       "community": 141,
       "community_name": "Community 141",
-      "description": "Linear Regression Intercept \u2014 the intercept of the least-squares line fitted to price over a lookback window."
+      "description": "Linear Regression Intercept \u2014 the intercept of the least-squares line fitted to price over a lookback window.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_569stream_linearreg_slope",
@@ -3351,7 +3668,8 @@
       "source_location": "L69831",
       "community": 142,
       "community_name": "Community 142",
-      "description": "Linear Regression Slope \u2014 the slope of the least-squares line fitted to price over a lookback window."
+      "description": "Linear Regression Slope \u2014 the slope of the least-squares line fitted to price over a lookback window.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_571stream_ln",
@@ -3361,7 +3679,8 @@
       "source_location": "L69998",
       "community": 143,
       "community_name": "Community 143",
-      "description": "Natural Logarithm \u2014 computes the natural log of each input value."
+      "description": "Natural Logarithm \u2014 computes the natural log of each input value.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_573stream_log10",
@@ -3371,7 +3690,8 @@
       "source_location": "L70148",
       "community": 3,
       "community_name": "Community 3",
-      "description": "Base-10 Logarithm \u2014 computes the base-10 logarithm of each input value."
+      "description": "Base-10 Logarithm \u2014 computes the base-10 logarithm of each input value.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_575stream_ma",
@@ -3381,7 +3701,8 @@
       "source_location": "L70298",
       "community": 144,
       "community_name": "Community 144",
-      "description": "Moving Average \u2014 a generic moving average selectable from several averaging methods."
+      "description": "Moving Average \u2014 a generic moving average selectable from several averaging methods.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_577stream_macd",
@@ -3391,7 +3712,8 @@
       "source_location": "L70479",
       "community": 145,
       "community_name": "Community 145",
-      "description": "Moving Average Convergence/Divergence \u2014 the gap between fast and slow EMAs, with its signal line and histogram."
+      "description": "Moving Average Convergence/Divergence \u2014 the gap between fast and slow EMAs, with its signal line and histogram.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_579stream_macdext",
@@ -3401,7 +3723,8 @@
       "source_location": "L70701",
       "community": 146,
       "community_name": "Community 146",
-      "description": "MACD with Controllable MA Types \u2014 the standard MACD letting each moving average type be chosen."
+      "description": "MACD with Controllable MA Types \u2014 the standard MACD letting each moving average type be chosen.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_581stream_macdfix",
@@ -3411,7 +3734,8 @@
       "source_location": "L70965",
       "community": 3,
       "community_name": "Community 3",
-      "description": "MACD Fixed \u2014 the standard 12/26 MACD with its 9-period signal line, using fixed EMAs."
+      "description": "MACD Fixed \u2014 the standard 12/26 MACD with its 9-period signal line, using fixed EMAs.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_583stream_mama",
@@ -3421,7 +3745,8 @@
       "source_location": "L71159",
       "community": 147,
       "community_name": "Community 147",
-      "description": "MESA Adaptive Moving Average \u2014 a moving average that adapts using the dominant cycle period."
+      "description": "MESA Adaptive Moving Average \u2014 a moving average that adapts using the dominant cycle period.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_585stream_mavp",
@@ -3431,7 +3756,8 @@
       "source_location": "L71357",
       "community": 148,
       "community_name": "Community 148",
-      "description": "Moving Average with Variable Period \u2014 a moving average whose period varies per bar from a period series."
+      "description": "Moving Average with Variable Period \u2014 a moving average whose period varies per bar from a period series.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_587stream_max",
@@ -3441,7 +3767,8 @@
       "source_location": "L71573",
       "community": 149,
       "community_name": "Community 149",
-      "description": "Highest Value \u2014 the highest value over a rolling period."
+      "description": "Highest Value \u2014 the highest value over a rolling period.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_589stream_maxindex",
@@ -3451,7 +3778,8 @@
       "source_location": "L71740",
       "community": 150,
       "community_name": "Community 150",
-      "description": "Index of Highest Value \u2014 the index of the highest value over a rolling period."
+      "description": "Index of Highest Value \u2014 the index of the highest value over a rolling period.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_591stream_medprice",
@@ -3461,7 +3789,8 @@
       "source_location": "L71907",
       "community": 151,
       "community_name": "Community 151",
-      "description": "Median Price \u2014 the average of each bar's high and low."
+      "description": "Median Price \u2014 the average of each bar's high and low.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_593stream_mfi",
@@ -3471,7 +3800,8 @@
       "source_location": "L72078",
       "community": 1,
       "community_name": "Community 1",
-      "description": "Money Flow Index \u2014 an oscillator measuring accumulation/distribution from typical price and volume."
+      "description": "Money Flow Index \u2014 an oscillator measuring accumulation/distribution from typical price and volume.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_595stream_midpoint",
@@ -3481,7 +3811,8 @@
       "source_location": "L72304",
       "community": 3,
       "community_name": "Community 3",
-      "description": "Midpoint \u2014 the midpoint of the highest and lowest values over a rolling period."
+      "description": "Midpoint \u2014 the midpoint of the highest and lowest values over a rolling period.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_597stream_midprice",
@@ -3491,7 +3822,8 @@
       "source_location": "L72471",
       "community": 152,
       "community_name": "Community 152",
-      "description": "Midpoint Price \u2014 the midpoint of the highest high and lowest low over a rolling period."
+      "description": "Midpoint Price \u2014 the midpoint of the highest high and lowest low over a rolling period.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_599stream_min",
@@ -3501,7 +3833,8 @@
       "source_location": "L72659",
       "community": 153,
       "community_name": "Community 153",
-      "description": "Lowest Value \u2014 the lowest value over a rolling period."
+      "description": "Lowest Value \u2014 the lowest value over a rolling period.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_601stream_minindex",
@@ -3511,7 +3844,8 @@
       "source_location": "L72826",
       "community": 154,
       "community_name": "Community 154",
-      "description": "Index of Lowest Value \u2014 the index of the lowest value over a rolling period."
+      "description": "Index of Lowest Value \u2014 the index of the lowest value over a rolling period.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_603stream_minmax",
@@ -3521,7 +3855,8 @@
       "source_location": "L72993",
       "community": 155,
       "community_name": "Community 155",
-      "description": "Lowest and Highest Values \u2014 both extremes over a rolling period."
+      "description": "Lowest and Highest Values \u2014 both extremes over a rolling period.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_605stream_minmaxindex",
@@ -3531,7 +3866,8 @@
       "source_location": "L73177",
       "community": 3,
       "community_name": "Community 3",
-      "description": "Indexes of Lowest and Highest Values \u2014 the indexes of both extremes over a rolling period."
+      "description": "Indexes of Lowest and Highest Values \u2014 the indexes of both extremes over a rolling period.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_607stream_minus_di",
@@ -3541,7 +3877,8 @@
       "source_location": "L73361",
       "community": 156,
       "community_name": "Community 156",
-      "description": "Minus Directional Indicator \u2014 measures downward trend strength as part of the Directional Movement system."
+      "description": "Minus Directional Indicator \u2014 measures downward trend strength as part of the Directional Movement system.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_609stream_minus_dm",
@@ -3551,7 +3888,8 @@
       "source_location": "L73568",
       "community": 157,
       "community_name": "Community 157",
-      "description": "Minus Directional Movement \u2014 measures the downward directional movement over a given period."
+      "description": "Minus Directional Movement \u2014 measures the downward directional movement over a given period.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_611stream_mom",
@@ -3561,7 +3899,8 @@
       "source_location": "L73756",
       "community": 158,
       "community_name": "Community 158",
-      "description": "Momentum \u2014 the change in price between the current bar and a bar a fixed period earlier."
+      "description": "Momentum \u2014 the change in price between the current bar and a bar a fixed period earlier.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_613stream_mult",
@@ -3571,7 +3910,8 @@
       "source_location": "L73923",
       "community": 159,
       "community_name": "Community 159",
-      "description": "Vector Multiplication \u2014 computes the element-wise product of two price series."
+      "description": "Vector Multiplication \u2014 computes the element-wise product of two price series.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_615stream_natr",
@@ -3581,7 +3921,8 @@
       "source_location": "L74094",
       "community": 160,
       "community_name": "Community 160",
-      "description": "Normalized Average True Range \u2014 the average true range expressed as a percentage of the closing price."
+      "description": "Normalized Average True Range \u2014 the average true range expressed as a percentage of the closing price.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_617stream_obv",
@@ -3591,7 +3932,8 @@
       "source_location": "L74301",
       "community": 161,
       "community_name": "Community 161",
-      "description": "On Balance Volume \u2014 cumulative volume added on up bars and subtracted on down bars."
+      "description": "On Balance Volume \u2014 cumulative volume added on up bars and subtracted on down bars.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_619stream_plus_di",
@@ -3601,7 +3943,8 @@
       "source_location": "L74472",
       "community": 162,
       "community_name": "Community 162",
-      "description": "Plus Directional Indicator \u2014 measures upward trend strength as part of the Directional Movement system."
+      "description": "Plus Directional Indicator \u2014 measures upward trend strength as part of the Directional Movement system.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_621stream_plus_dm",
@@ -3611,7 +3954,8 @@
       "source_location": "L74679",
       "community": 163,
       "community_name": "Community 163",
-      "description": "Plus Directional Movement \u2014 measures the upward directional movement over a given period."
+      "description": "Plus Directional Movement \u2014 measures the upward directional movement over a given period.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_623stream_ppo",
@@ -3621,7 +3965,8 @@
       "source_location": "L74867",
       "community": 164,
       "community_name": "Community 164",
-      "description": "Percentage Price Oscillator \u2014 the difference between fast and slow EMAs expressed as a percentage of the slow EMA."
+      "description": "Percentage Price Oscillator \u2014 the difference between fast and slow EMAs expressed as a percentage of the slow EMA.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_625stream_roc",
@@ -3631,7 +3976,8 @@
       "source_location": "L75062",
       "community": 165,
       "community_name": "Community 165",
-      "description": "Rate of Change \u2014 the percent change of price over a given lookback period."
+      "description": "Rate of Change \u2014 the percent change of price over a given lookback period.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_627stream_rocp",
@@ -3641,7 +3987,8 @@
       "source_location": "L75229",
       "community": 3,
       "community_name": "Community 3",
-      "description": "Rate of Change Percentage \u2014 the price change over a lookback period as a fraction."
+      "description": "Rate of Change Percentage \u2014 the price change over a lookback period as a fraction.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_629stream_rocr",
@@ -3651,7 +3998,8 @@
       "source_location": "L75396",
       "community": 166,
       "community_name": "Community 166",
-      "description": "Rate of Change Ratio \u2014 the ratio of the current price to the price a fixed period earlier."
+      "description": "Rate of Change Ratio \u2014 the ratio of the current price to the price a fixed period earlier.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_631stream_rocr100",
@@ -3661,7 +4009,8 @@
       "source_location": "L75563",
       "community": 167,
       "community_name": "Community 167",
-      "description": "Rate of Change Ratio 100 \u2014 the ratio of the current price to the price a fixed period earlier, scaled by 100."
+      "description": "Rate of Change Ratio 100 \u2014 the ratio of the current price to the price a fixed period earlier, scaled by 100.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_633stream_rsi",
@@ -3671,7 +4020,8 @@
       "source_location": "L75730",
       "community": 168,
       "community_name": "Community 168",
-      "description": "Relative Strength Index \u2014 an oscillator measuring the balance of gains and losses on a 0\u2013100 scale."
+      "description": "Relative Strength Index \u2014 an oscillator measuring the balance of gains and losses on a 0\u2013100 scale.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_635stream_sar",
@@ -3681,7 +4031,8 @@
       "source_location": "L75897",
       "community": 169,
       "community_name": "Community 169",
-      "description": "Parabolic SAR \u2014 a trailing stop-and-reversal level that tracks price and flips on reversals."
+      "description": "Parabolic SAR \u2014 a trailing stop-and-reversal level that tracks price and flips on reversals.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_637stream_sarext",
@@ -3691,7 +4042,8 @@
       "source_location": "L76099",
       "community": 17,
       "community_name": "Community 17",
-      "description": "Parabolic SAR Extended \u2014 the Parabolic SAR with configurable start, increment, and maximum offsets."
+      "description": "Parabolic SAR Extended \u2014 the Parabolic SAR with configurable start, increment, and maximum offsets.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_639stream_sin",
@@ -3701,7 +4053,8 @@
       "source_location": "L76385",
       "community": 170,
       "community_name": "Community 170",
-      "description": "Sine \u2014 computes the sine of each input value."
+      "description": "Sine \u2014 computes the sine of each input value.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_641stream_sinh",
@@ -3711,7 +4064,8 @@
       "source_location": "L76535",
       "community": 171,
       "community_name": "Community 171",
-      "description": "Hyperbolic Sine \u2014 computes the hyperbolic sine of each input value."
+      "description": "Hyperbolic Sine \u2014 computes the hyperbolic sine of each input value.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_643stream_sma",
@@ -3721,7 +4075,8 @@
       "source_location": "L76685",
       "community": 172,
       "community_name": "Community 172",
-      "description": "Simple Moving Average \u2014 the unweighted average of price over a fixed lookback period."
+      "description": "Simple Moving Average \u2014 the unweighted average of price over a fixed lookback period.",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_645stream_sqrt",
@@ -3730,7 +4085,8 @@
       "source_file": "_ta_lib.c",
       "source_location": "L76852",
       "community": 173,
-      "community_name": "Community 173"
+      "community_name": "Community 173",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_647stream_stddev",
@@ -3739,7 +4095,8 @@
       "source_file": "_ta_lib.c",
       "source_location": "L77002",
       "community": 174,
-      "community_name": "Community 174"
+      "community_name": "Community 174",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_649stream_stoch",
@@ -3748,7 +4105,8 @@
       "source_file": "_ta_lib.c",
       "source_location": "L77183",
       "community": 175,
-      "community_name": "Community 175"
+      "community_name": "Community 175",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_651stream_stochf",
@@ -3757,7 +4115,8 @@
       "source_file": "_ta_lib.c",
       "source_location": "L77463",
       "community": 176,
-      "community_name": "Community 176"
+      "community_name": "Community 176",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_653stream_stochrsi",
@@ -3766,7 +4125,8 @@
       "source_file": "_ta_lib.c",
       "source_location": "L77715",
       "community": 177,
-      "community_name": "Community 177"
+      "community_name": "Community 177",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_655stream_sub",
@@ -3775,7 +4135,8 @@
       "source_file": "_ta_lib.c",
       "source_location": "L77941",
       "community": 17,
-      "community_name": "Community 17"
+      "community_name": "Community 17",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_657stream_sum",
@@ -3784,7 +4145,8 @@
       "source_file": "_ta_lib.c",
       "source_location": "L78112",
       "community": 178,
-      "community_name": "Community 178"
+      "community_name": "Community 178",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_659stream_t3",
@@ -3793,7 +4155,8 @@
       "source_file": "_ta_lib.c",
       "source_location": "L78279",
       "community": 179,
-      "community_name": "Community 179"
+      "community_name": "Community 179",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_661stream_tan",
@@ -3802,7 +4165,8 @@
       "source_file": "_ta_lib.c",
       "source_location": "L78460",
       "community": 180,
-      "community_name": "Community 180"
+      "community_name": "Community 180",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_663stream_tanh",
@@ -3811,7 +4175,8 @@
       "source_file": "_ta_lib.c",
       "source_location": "L78610",
       "community": 181,
-      "community_name": "Community 181"
+      "community_name": "Community 181",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_665stream_tema",
@@ -3820,7 +4185,8 @@
       "source_file": "_ta_lib.c",
       "source_location": "L78760",
       "community": 182,
-      "community_name": "Community 182"
+      "community_name": "Community 182",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_667stream_trange",
@@ -3829,7 +4195,8 @@
       "source_file": "_ta_lib.c",
       "source_location": "L78927",
       "community": 183,
-      "community_name": "Community 183"
+      "community_name": "Community 183",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_669stream_trima",
@@ -3838,7 +4205,8 @@
       "source_file": "_ta_lib.c",
       "source_location": "L79117",
       "community": 184,
-      "community_name": "Community 184"
+      "community_name": "Community 184",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_671stream_trix",
@@ -3847,7 +4215,8 @@
       "source_file": "_ta_lib.c",
       "source_location": "L79284",
       "community": 185,
-      "community_name": "Community 185"
+      "community_name": "Community 185",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_673stream_tsf",
@@ -3856,7 +4225,8 @@
       "source_file": "_ta_lib.c",
       "source_location": "L79451",
       "community": 186,
-      "community_name": "Community 186"
+      "community_name": "Community 186",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_675stream_typprice",
@@ -3865,7 +4235,8 @@
       "source_file": "_ta_lib.c",
       "source_location": "L79618",
       "community": 187,
-      "community_name": "Community 187"
+      "community_name": "Community 187",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_677stream_ultosc",
@@ -3874,7 +4245,8 @@
       "source_file": "_ta_lib.c",
       "source_location": "L79808",
       "community": 18,
-      "community_name": "Community 18"
+      "community_name": "Community 18",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_679stream_var",
@@ -3883,7 +4255,8 @@
       "source_file": "_ta_lib.c",
       "source_location": "L80043",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_681stream_wclprice",
@@ -3892,7 +4265,8 @@
       "source_file": "_ta_lib.c",
       "source_location": "L80224",
       "community": 7,
-      "community_name": "Community 7"
+      "community_name": "Community 7",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_683stream_willr",
@@ -3901,7 +4275,8 @@
       "source_file": "_ta_lib.c",
       "source_location": "L80414",
       "community": 18,
-      "community_name": "Community 18"
+      "community_name": "Community 18",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyx_pw_5talib_7_ta_lib_685stream_wma",
@@ -3910,7 +4285,8 @@
       "source_file": "_ta_lib.c",
       "source_location": "L80621",
       "community": 3,
-      "community_name": "Community 3"
+      "community_name": "Community 3",
+      "node_type": "function"
     },
     {
       "id": "ta_lib_pyinit_ta_lib",
@@ -3919,7 +4295,8 @@
       "source_file": "_ta_lib.c",
       "source_location": "L81080",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "function"
     },
     {
       "id": "abstract",
@@ -3928,7 +4305,8 @@
       "source_file": "abstract.py",
       "source_location": "L1",
       "community": 43,
-      "community_name": "Community 43"
+      "community_name": "Community 43",
+      "node_type": "module"
     },
     {
       "id": "abstract_function",
@@ -3937,7 +4315,8 @@
       "source_file": "abstract.py",
       "source_location": "L13",
       "community": 43,
-      "community_name": "Community 43"
+      "community_name": "Community 43",
+      "node_type": "function"
     },
     {
       "id": "deprecated",
@@ -3946,7 +4325,8 @@
       "source_file": "deprecated.py",
       "source_location": "L1",
       "community": 202,
-      "community_name": "Community 202"
+      "community_name": "Community 202",
+      "node_type": "module"
     },
     {
       "id": "stream",
@@ -3955,7 +4335,8 @@
       "source_file": "stream.py",
       "source_location": "L1",
       "community": 0,
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "node_type": "module"
     }
   ],
   "links": [

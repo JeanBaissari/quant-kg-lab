@@ -13,7 +13,7 @@ graph:
   nodes: 793
   edges: 1569
   community_count: 52
-  graph_hash: 59f3c1631da37620
+  graph_hash: f926c24c431eefad
 tags:
 - catboost
 - classifier

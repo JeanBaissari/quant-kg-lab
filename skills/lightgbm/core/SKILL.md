@@ -12,7 +12,7 @@ graph:
   nodes: 593
   edges: 2029
   community_count: 17
-  graph_hash: ec5f55de6aef4bff
+  graph_hash: 23ce2a2a962fa021
 tags:
 - lightgbm
 - gradient-boosting

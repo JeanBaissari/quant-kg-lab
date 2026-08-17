@@ -12,7 +12,7 @@ graph:
   nodes: 342
   edges: 522
   community_count: 16
-  graph_hash: e238a0e0014fb438
+  graph_hash: c8c490eaf5b8ac05
 tags:
 - pyportfolioopt
 - expected-returns

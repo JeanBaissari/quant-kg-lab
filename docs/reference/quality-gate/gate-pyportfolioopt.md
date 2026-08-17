@@ -2,12 +2,12 @@
 
 # Quality Gate — pyportfolioopt
 
-Graph: `knowledge_graphs/pyportfolioopt/.graphify/graph.json` · GRAPH_SPEC §5 · generated 2026-08-16
+Graph: `knowledge_graphs/pyportfolioopt/.graphify/graph.json` · GRAPH_SPEC §5 · generated 2026-08-17
 
 | criterion | status | counts |
 |---|---|---|
 | c1 real labels | PASS | distinct=16 non_singleton=15 default_labels=0 default_graph=0 coverage=100.0% |
-| c2 descriptions | PASS | described=168 describable=183 pct=91.8% |
+| c2 descriptions | PASS | described=168 describable=183 pct=91.8% (target: 80%) |
 | c3 god nodes | PASS | top20=20 noise=0 |
 | c4 pin | PASS | expected=a6638d2e06dae6f444fd022cfd4b3c528902a85b found=a6638d2e06dae6f444fd022cfd4b3c528902a85b (graph) |
 | c5 audited | PASS | exists |

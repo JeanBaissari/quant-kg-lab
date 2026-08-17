@@ -42,6 +42,8 @@ jobs:
         run: python3 scripts/emit_counts.py --diff
       - name: Curated descriptions — no builtin docstrings (QKG_073)
         run: python3 scripts/check_curated_descriptions.py
+      - name: Freshness check (informational, QKG_083)
+        run: python3 scripts/check_freshness.py --ci || echo "Some libs are stale (informational only)"
 
   freshness-report:
     # INFORMATIONAL only: how far upstream HEAD has moved past our graphs.lock pins.

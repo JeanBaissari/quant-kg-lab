@@ -2,12 +2,12 @@
 
 # Quality Gate — catboost
 
-Graph: `knowledge_graphs/catboost/.graphify/graph.json` · GRAPH_SPEC §5 · generated 2026-08-16
+Graph: `knowledge_graphs/catboost/.graphify/graph.json` · GRAPH_SPEC §5 · generated 2026-08-17
 
 | criterion | status | counts |
 |---|---|---|
 | c1 real labels | PASS | distinct=52 non_singleton=47 default_labels=0 default_graph=0 coverage=100.0% |
-| c2 descriptions | PASS | described=477 describable=545 pct=87.5% |
+| c2 descriptions | PASS | described=477 describable=545 pct=87.5% (target: 80%) |
 | c3 god nodes | PASS | top20=20 noise=0 |
 | c4 pin | PASS | expected=549af60ecd40819be138046cd9c5ec737dca5e3b found=549af60ecd40819be138046cd9c5ec737dca5e3b (graph) |
 | c5 audited | PASS | exists |

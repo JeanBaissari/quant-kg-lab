@@ -13,7 +13,7 @@ graph:
   nodes: 1367
   edges: 3900
   community_count: 135
-  graph_hash: e1c10f7f48d897c2
+  graph_hash: 11f37141100ca1ec
 tags:
 - arch
 - forecast

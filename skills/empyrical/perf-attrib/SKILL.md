@@ -12,7 +12,7 @@ graph:
   nodes: 180
   edges: 258
   community_count: 23
-  graph_hash: ce35d5e4b0a5c431
+  graph_hash: 4e2d2ce735db5ea0
 tags:
 - empyrical
 - perf-attrib

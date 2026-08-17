@@ -12,7 +12,7 @@ graph:
   nodes: 5296
   edges: 16925
   community_count: 485
-  graph_hash: 4c9e707cde1bc95a
+  graph_hash: fccb547a0409239e
 tags:
 - polars
 - lazyframe

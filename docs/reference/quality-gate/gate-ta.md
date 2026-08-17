@@ -2,12 +2,12 @@
 
 # Quality Gate — ta
 
-Graph: `knowledge_graphs/ta/.graphify/graph.json` · GRAPH_SPEC §5 · generated 2026-08-16
+Graph: `knowledge_graphs/ta/.graphify/graph.json` · GRAPH_SPEC §5 · generated 2026-08-17
 
 | criterion | status | counts |
 |---|---|---|
 | c1 real labels | PASS | distinct=42 non_singleton=42 default_labels=0 default_graph=0 coverage=100.0% |
-| c2 descriptions | PASS | described=274 describable=309 pct=88.7% |
+| c2 descriptions | PASS | described=274 describable=309 pct=88.7% (target: 80%) |
 | c3 god nodes | PASS | top20=20 noise=0 |
 | c4 pin | PASS | expected=a890410710a6e483c9ba08da7f3dd5089e4b9dff found=a890410710a6e483c9ba08da7f3dd5089e4b9dff (graph) |
 | c5 audited | PASS | exists |

@@ -2,12 +2,12 @@
 
 # Quality Gate — alphalens
 
-Graph: `knowledge_graphs/alphalens/.graphify/graph.json` · GRAPH_SPEC §5 · generated 2026-08-16
+Graph: `knowledge_graphs/alphalens/.graphify/graph.json` · GRAPH_SPEC §5 · generated 2026-08-17
 
 | criterion | status | counts |
 |---|---|---|
 | c1 real labels | PASS | distinct=5 non_singleton=5 default_labels=0 default_graph=0 coverage=100.0% |
-| c2 descriptions | PASS | described=79 describable=91 pct=86.8% |
+| c2 descriptions | PASS | described=79 describable=91 pct=86.8% (target: 80%) |
 | c3 god nodes | PASS | top20=20 noise=0 |
 | c4 pin | PASS | expected=77084f1e4c2c0be407e032d444fb19e4be4b0f37 found=77084f1e4c2c0be407e032d444fb19e4be4b0f37 (graph) |
 | c5 audited | PASS | exists |

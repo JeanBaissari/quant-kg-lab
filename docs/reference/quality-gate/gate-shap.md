@@ -2,12 +2,12 @@
 
 # Quality Gate — shap
 
-Graph: `knowledge_graphs/shap/.graphify/graph.json` · GRAPH_SPEC §5 · generated 2026-08-16
+Graph: `knowledge_graphs/shap/.graphify/graph.json` · GRAPH_SPEC §5 · generated 2026-08-17
 
 | criterion | status | counts |
 |---|---|---|
 | c1 real labels | PASS | distinct=109 non_singleton=101 default_labels=0 default_graph=0 coverage=99.0% |
-| c2 descriptions | PASS | described=621 describable=745 pct=83.4% |
+| c2 descriptions | PASS | described=621 describable=745 pct=83.4% (target: 80%) |
 | c3 god nodes | PASS | top20=20 noise=0 |
 | c4 pin | PASS | expected=df974a1966294b9c7acebb1373fd6dc5445d1d3d found=df974a1966294b9c7acebb1373fd6dc5445d1d3d (graph) |
 | c5 audited | PASS | exists |
