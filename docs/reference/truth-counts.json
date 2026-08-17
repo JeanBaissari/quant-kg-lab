@@ -172,10 +172,10 @@
   ],
   "nodes": 92154,
   "edges": 229921,
-  "skills": 137,
+  "skills": 142,
   "routers": 27,
   "modules": 97,
-  "playbooks": 13,
+  "playbooks": 18,
   "citations": {
     "checked": 1207,
     "dangling": 0
@@ -184,11 +184,5 @@
     "resolved": 71,
     "attempted": 71
   },
-  "docs": 127,
-  "quality_summary": {
-    "skills_scored": 137,
-    "avg": 85.4,
-    "min": 45.0,
-    "max": 100.0
-  }
+  "docs": 127
 }
