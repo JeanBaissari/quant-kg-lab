@@ -184,5 +184,11 @@
     "resolved": 71,
     "attempted": 71
   },
-  "docs": 126
+  "docs": 126,
+  "quality_summary": {
+    "skills_scored": 137,
+    "avg": 85.4,
+    "min": 45.0,
+    "max": 100.0
+  }
 }

@@ -29,6 +29,9 @@ Usage:
                                                    # emit current section/hash/related
                                                    # debt as JSON on stdout (redirect to
                                                    # tools/known_debt.json)
+  python scripts/validate_skills.py --scores       # emit per-skill quality scores (JSON)
+                                                   # and inject quality_summary into
+                                                   # docs/reference/truth-counts.json
 """
 import sys, os, re, json, hashlib, datetime, importlib, pkgutil, warnings, pathlib, contextlib
 import yaml
@@ -50,6 +53,9 @@ LOCK = json.load(open(REPO_ROOT / "graphs.lock"))["libraries"]
 IMPORT_BASE = {"scikit-learn": "sklearn", "ta-lib": "talib"}
 REQUIRED_FM = ["name", "description", "version", "license"]
 NAME_RE = re.compile(r"^[a-z0-9-]+$")
+
+SCORE_WEIGHTS = {"citation": 0.30, "api": 0.25, "sections": 0.20,
+                 "depth": 0.15, "crossref": 0.10}
 
 # Required body sections for module skills (SKILL_SPEC §3). Playbooks (§7) and
 # routers (§6) are exempt. Older variants are violations, not silently accepted.
@@ -154,6 +160,125 @@ def curated_symbols(lib):
                 syms.add(lbl)
     _CURATED[lib] = syms
     return syms
+
+
+# --------------------------------------------------------------- skill scoring
+def _parse_qr_citations(body, qr_start):
+    """Parse the Quick Reference section body (from qr_start to next ##) and return
+    (total_api_rows, cited_rows) — rows whose Source-File cell contains `:L`."""
+    qr_end = body.find("\n## ", qr_start + 1)
+    if qr_end == -1:
+        qr_end = len(body)
+    section = body[qr_start:qr_end]
+    total, cited = 0, 0
+    in_table = False
+    for line in section.split("\n"):
+        if not line.lstrip().startswith("|"):
+            in_table = False
+            continue
+        cells = [c.strip() for c in line.strip().strip("|").split("|")]
+        if not cells or set(cells[0]) <= set("-: "):
+            continue
+        if not in_table:
+            in_table = True
+            hdr_lower = " ".join(c.lower() for c in cells)
+            if "source" not in hdr_lower and "graph node" not in hdr_lower:
+                in_table = False
+                continue
+        else:
+            total += 1
+            if len(cells) > 1 and ":L" in cells[1]:
+                cited += 1
+    return total, cited
+
+
+def skill_score(skill_path, names):
+    """Score a skill file 0-100 across five weighted dimensions.
+
+    Returns dict with composite ``score`` and per-dimension breakdown.
+    Playbooks and routers are scored with sections=1.0, crossref=1.0, api=N/A.
+    """
+    p = pathlib.Path(skill_path)
+    lib = skill_lib(p)
+    text = p.read_text()
+    fm, body = parse_frontmatter(text)
+    parts = p.relative_to(SKILLS).parts
+    total_lines = len(text.split("\n"))
+
+    is_router = (lib != "quant-patterns" and len(parts) == 2
+                 and isinstance(fm, dict) and fm.get("name") == lib)
+    is_playbook = lib == "quant-patterns"
+
+    # --- 1. Citation coverage (30%) ---
+    qr_start = body.find("## Quick Reference")
+    if qr_start != -1:
+        qr_total, qr_cited = _parse_qr_citations(body, qr_start)
+    else:
+        qr_total, qr_cited = 0, 0
+    citation = qr_cited / qr_total if qr_total else 0.0
+
+    # --- 2. API coverage (25%) ---
+    if is_playbook or is_router:
+        api = 1.0
+    else:
+        api_text = strip_sections(text, ["Cross-Library Bridges", "Provenance"])
+        classes, functions, _ = extract_claims(api_text)
+        claims = classes | functions
+        if claims:
+            own = library_symbols(lib)
+            labels = graph_node_labels(lib)
+            curated = curated_symbols(lib)
+            if own is None and not labels and not curated:
+                api = 1.0  # library not installed — treat as N/A
+            else:
+                matched = sum(1 for c in claims
+                              if (own and c in own)
+                              or in_graph_labels(labels, c)
+                              or c in curated)
+                api = matched / len(claims)
+        else:
+            api = 1.0
+
+    # --- 3. Section completeness (20%) ---
+    if is_router or is_playbook:
+        sections = 1.0
+    else:
+        headers, _ = collect_headers(body)
+        present = sum(1 for s in REQUIRED_SECTIONS
+                      if s in headers or any(v == s and v2 in headers
+                                             for v2, v in SECTION_VARIANTS.items()))
+        sections = present / len(REQUIRED_SECTIONS) if REQUIRED_SECTIONS else 1.0
+
+    # --- 4. Line depth (15%) ---
+    depth = min(total_lines / 60, 1.0)
+
+    # --- 5. Cross-ref health (10%) ---
+    related = (fm.get("related_skills") or []) if isinstance(fm, dict) else []
+    if related:
+        resolved = sum(1 for r in related if r in names)
+        crossref = resolved / len(related)
+    else:
+        crossref = 1.0
+
+    composite = round(
+        (citation * SCORE_WEIGHTS["citation"]
+         + api * SCORE_WEIGHTS["api"]
+         + sections * SCORE_WEIGHTS["sections"]
+         + depth * SCORE_WEIGHTS["depth"]
+         + crossref * SCORE_WEIGHTS["crossref"]) * 100, 1)
+
+    return {
+        "skill": fm.get("name", "") if isinstance(fm, dict) else "",
+        "path": str(p.relative_to(REPO_ROOT)),
+        "score": composite,
+        "dimensions": {
+            "citation": round(citation * 100, 1),
+            "api": round(api * 100, 1),
+            "sections": round(sections * 100, 1),
+            "depth": round(depth * 100, 1),
+            "crossref": round(crossref * 100, 1),
+        },
+    }
 
 
 # ------------------------------------------------------------- global universe
@@ -350,7 +475,7 @@ def collect_headers(body):
 # ------------------------------------------------------------------------ main
 def main():
     argv = sys.argv[1:]
-    ci = strict = provenance = exclude = dump = False
+    ci = strict = provenance = exclude = dump = scores = False
     root_override = skills_override = None
     positional = []
     i = 0
@@ -361,6 +486,7 @@ def main():
         elif a == "--provenance": provenance = True
         elif a == "--exclude-known-debt": exclude = True
         elif a == "--dump-known-debt": dump = True
+        elif a == "--scores": scores = True
         elif a in ("--root", "--skills"):
             if i + 1 >= len(argv):
                 print(f"{a} requires a value", file=sys.stderr)
@@ -635,25 +761,26 @@ def main():
     n_lint += len(router_errs)
 
     # ---- output
-    print("=== Skill validation ===")
-    for rel, r in report.items():
-        flags = []
-        if r["lint"]: flags.append(f"{len(r['lint'])} lint")
-        if r["api_fail"]: flags.append(f"{len(r['api_fail'])} api-fail")
-        if r["provenance"]: flags.append(f"{len(r['provenance'])} prov")
-        status = "OK " if not (r["lint"] or r["api_fail"]) else "ERR"
-        if flags or r["api_warn"] or r["meta_warn"] or r.get("known"):
-            print(f"{status} {rel}  [{', '.join(flags) or 'warn only'}]")
-            for x in r["lint"]:        print(f"     LINT  {x}")
-            for x in r.get("known", []): print(f"     KNOWN {x}")
-            for x in r["api_fail"]:    print(f"     API   {x}")
-            for x in r["provenance"][:5]: print(f"     PROV  {x}")
-    if router_errs:
-        print("Router errors:")
-        for e in router_errs: print(f"     LINT  {e}")
+    if not scores:
+        print("=== Skill validation ===")
+        for rel, r in report.items():
+            flags = []
+            if r["lint"]: flags.append(f"{len(r['lint'])} lint")
+            if r["api_fail"]: flags.append(f"{len(r['api_fail'])} api-fail")
+            if r["provenance"]: flags.append(f"{len(r['provenance'])} prov")
+            status = "OK " if not (r["lint"] or r["api_fail"]) else "ERR"
+            if flags or r["api_warn"] or r["meta_warn"] or r.get("known"):
+                print(f"{status} {rel}  [{', '.join(flags) or 'warn only'}]")
+                for x in r["lint"]:        print(f"     LINT  {x}")
+                for x in r.get("known", []): print(f"     KNOWN {x}")
+                for x in r["api_fail"]:    print(f"     API   {x}")
+                for x in r["provenance"][:5]: print(f"     PROV  {x}")
+        if router_errs:
+            print("Router errors:")
+            for e in router_errs: print(f"     LINT  {e}")
 
-    extra = f"  demoted_known={n_demoted}" if exclude else ""
-    print(f"\n=== Summary ===  lint={n_lint}  api_fail={n_api}  provenance={n_prov}{extra}")
+        extra = f"  demoted_known={n_demoted}" if exclude else ""
+        print(f"\n=== Summary ===  lint={n_lint}  api_fail={n_api}  provenance={n_prov}{extra}")
     for r in report.values():
         r.pop("_keys", None)                # internal key bookkeeping, not part of the report
     # QKG_051: timestamped, SHA-stamped, gated evidence — the report backbone.
@@ -679,6 +806,27 @@ def main():
     (REPO_ROOT / "docs" / "reference").mkdir(parents=True, exist_ok=True)
     with open(REPO_ROOT / "docs" / "reference" / "skill-validation-report.json", "w") as f:
         json.dump(payload, f, indent=2, default=list)
+
+    # ---- --scores: compute and emit per-skill quality scores
+    if scores:
+        scored = [skill_score(p, names) for p in sorted(SKILLS.rglob("SKILL.md"))]
+        scored.sort(key=lambda s: s["score"], reverse=True)
+        print(json.dumps(scored, indent=2))
+        # Inject quality_summary into truth-counts.json
+        tc_path = REPO_ROOT / "docs" / "reference" / "truth-counts.json"
+        if tc_path.exists():
+            tc = json.load(open(tc_path))
+            sc = [s["score"] for s in scored]
+            tc["quality_summary"] = {
+                "skills_scored": len(sc),
+                "avg": round(sum(sc) / len(sc), 1) if sc else 0,
+                "min": min(sc) if sc else 0,
+                "max": max(sc) if sc else 0,
+            }
+            with open(tc_path, "w") as f:
+                json.dump(tc, f, indent=2)
+                f.write("\n")
+
     if ci and n_lint > 0:
         sys.exit(1)
     if strict and (n_lint > 0 or n_api > 0):

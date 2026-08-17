@@ -6,7 +6,10 @@ Usage:
     python scripts/query_graph.py optuna "What samplers exist?"
     python scripts/query_graph.py sklearn --path "GridSearchCV" "TPESampler"
     python scripts/query_graph.py sklearn --explain "BaseEstimator"
+    python scripts/query_graph.py --all "risk free"
+    python scripts/query_graph.py --all "ARIMA"
 """
+import difflib
 import json
 import re
 import sys
@@ -51,6 +54,110 @@ def find_nodes(graph, query):
         if all(tok in label or tok in desc for tok in tokens):
             matches.append(n)
     return matches
+
+# ── Cross-library search (QKG_076) ──────────────────────────────────────────
+
+def _tokenize(text):
+    """Normalize and split *text* into lowercase alphanumeric tokens."""
+    STOP = {"how", "does", "what", "which", "where", "when", "why", "the", "a",
+            "an", "and", "or", "in", "on", "of", "to", "for", "with", "is", "are",
+            "do", "exist", "work", "works", "any", "many", "all", "about", "using"}
+    tokens = []
+    for tok in re.sub(r"[–—_\-]+", " ", text.lower()).split():
+        tok = re.sub(r"[^a-z0-9]+$", "", tok)
+        if tok and tok not in STOP:
+            tokens.append(tok)
+    return tokens
+
+def _score_node(node, query_tokens):
+    """Score a node against query tokens.
+
+    ``score = (tokens_in_label * 2) + (tokens_in_desc * 1)``.
+    +1 bonus when the node label *equals* a query token (exact label hit).
+    Fuzzy fallback (threshold 0.6) is applied per-token against the full label
+    vocabulary collected by the caller.
+    """
+    label = (node.get("label") or "").lower()
+    desc = (node.get("description") or "").lower()
+    score = 0
+    for tok in query_tokens:
+        if tok in label:
+            score += 2
+            # bonus: label exactly matches a query token
+            if label == tok:
+                score += 1
+        elif tok in desc:
+            score += 1
+        else:
+            # fuzzy fallback — checked against the label vocabulary
+            close = difflib.get_close_matches(tok, [label], n=1, cutoff=0.6)
+            if close:
+                score += 2
+            else:
+                # try against individual description tokens for a partial bump
+                desc_toks = desc.split()
+                close = difflib.get_close_matches(tok, desc_toks, n=1, cutoff=0.6)
+                if close:
+                    score += 1
+    return score
+
+def _load_all_graphs():
+    """Load every committed graph, skipping the ``_cross_library`` directory."""
+    kg_root = REPO_ROOT / "knowledge_graphs"
+    if not kg_root.exists():
+        return []
+    graphs = []
+    for lib_dir in sorted(kg_root.iterdir()):
+        if lib_dir.name.startswith("_"):
+            continue
+        gpath = lib_dir / ".graphify" / "graph.json"
+        if gpath.exists():
+            with open(gpath) as f:
+                graphs.append((lib_dir.name, json.load(f)))
+    return graphs
+
+def cross_library_search(query, top_n=20):
+    """Search across every library graph and return scored results."""
+    query_tokens = _tokenize(query)
+    if not query_tokens:
+        print("No search terms after tokenisation.")
+        return
+
+    graphs = _load_all_graphs()
+    if not graphs:
+        print("No library graphs found under knowledge_graphs/.")
+        return
+
+    results = []  # (score, lib, node)
+    for lib_name, graph in graphs:
+        for node in graph.get("nodes", []):
+            sc = _score_node(node, query_tokens)
+            if sc > 0:
+                results.append((sc, lib_name, node))
+
+    if not results:
+        # Retry with fuzzy-only scoring (no exact matches found)
+        print("No exact token matches; trying fuzzy search across all graphs…")
+        for lib_name, graph in graphs:
+            for node in graph.get("nodes", []):
+                sc = _score_node(node, query_tokens)
+                if sc > 0:
+                    results.append((sc, lib_name, node))
+
+    if not results:
+        print(f"No matches found for '{query}' across {len(graphs)} libraries.")
+        return
+
+    results.sort(key=lambda x: -x[0])
+    top = results[:top_n]
+
+    print(f"Cross-library results for '{query}' ({len(results)} total, top {len(top)}):\n")
+    print(f"{'lib':<18} {'score':>5}  {'node_label':<40} source")
+    print("-" * 105)
+    for sc, lib, node in top:
+        loc = node.get("source_file", "") + ":" + node.get("source_location", "")
+        label = node.get("label", node.get("id", ""))
+        print(f"{lib:<18} {sc:>5}  {label:<40} {loc}")
 
 def bfs_traverse(graph, start_node_ids, depth=3):
     """BFS from start nodes, returning subgraph."""
@@ -219,26 +326,47 @@ if __name__ == "__main__":
         description="Query knowledge graphs",
         epilog="Available: " + (", ".join(libs) or "<none>") + "  (aliases: sklearn, talib)",
     )
-    parser.add_argument("library", help="Library to query (see available list below)")
-    parser.add_argument("query", nargs="?", help="Search query or node name")
+    parser.add_argument("positional", nargs="*", help="Library and/or query (see below)")
+    parser.add_argument("--all", action="store_true", dest="all_libs",
+                        help="Search across ALL library graphs (cross-library mode)")
     parser.add_argument("--path", nargs=2, metavar=("A", "B"), help="Find path between two nodes")
     parser.add_argument("--explain", action="store_true", help="Explain a single node")
     parser.add_argument("--depth", type=int, default=3, help="BFS depth (default: 3)")
+    parser.add_argument("--top", type=int, default=20, help="Number of cross-library results (default: 20)")
 
     args = parser.parse_args()
 
-    # Normalize to the on-disk directory (do NOT replace hyphens — scikit-learn
-    # and ta-lib are hyphenated directory names).
-    lib = LIBRARY_ALIASES.get(args.library, args.library)
-    if lib not in libs:
-        print(f"ERROR: no graph for '{args.library}'. Available: {', '.join(libs) or '<none>'}")
-        sys.exit(1)
-
-    if args.path:
-        path_query(lib, args.path[0], args.path[1])
-    elif args.explain and args.query:
-        explain_node(lib, args.query)
-    elif args.query:
-        bfs_query(lib, args.query, args.depth)
-    else:
+    if args.all_libs:
+        query_str = " ".join(args.positional)
+        if not query_str:
+            parser.error("--all requires a query string")
+        cross_library_search(query_str, top_n=args.top)
+    elif not args.positional:
         parser.print_help()
+    else:
+        # Determine library vs query from positional args
+        # If first arg is a known library (or alias), treat it as library; otherwise treat all as query
+        first = args.positional[0]
+        lib_candidate = LIBRARY_ALIASES.get(first, first)
+        if lib_candidate in libs and not args.path:
+            lib = lib_candidate
+            query_str = " ".join(args.positional[1:]) if len(args.positional) > 1 else None
+            if args.path:
+                path_query(lib, args.path[0], args.path[1])
+            elif args.explain and query_str:
+                explain_node(lib, query_str)
+            elif query_str:
+                bfs_query(lib, query_str, args.depth)
+            else:
+                parser.print_help()
+        elif args.path:
+            # --path requires a library first
+            if len(args.positional) >= 1:
+                lib = LIBRARY_ALIASES.get(args.positional[0], args.positional[0])
+            else:
+                parser.error("--path requires a library argument")
+            path_query(lib, args.path[0], args.path[1])
+        else:
+            # No known library prefix — treat all positionals as a query in cross-library mode
+            query_str = " ".join(args.positional)
+            cross_library_search(query_str, top_n=args.top)
