@@ -79,3 +79,9 @@ Markets alternate between trending, mean-reverting, high-volatility, and low-vol
 | `scikit-learn-preprocessing` | `StandardScaler` before PCA (Step 2) |
 | `scikit-learn-gaussian-process` | composes — Gaussian-process machinery for regime models |
 | `numpy-core` | feature matrix assembly (Steps 1, 3) |
+
+## Related Skills
+
+- [[scikit-learn-cluster]]
+- [[scikit-learn-decomposition]]
+- [[scikit-learn-gaussian-process]]

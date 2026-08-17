@@ -85,3 +85,13 @@ for custom constrained problems.
 | cvxpy-problems | cvxpy-atoms | uses | quad_form, sum, norm atoms |
 | this playbook | quant-full-pipeline | completes | portfolio weights -> position sizing |
 | this playbook | quant-portfolio-optimization | overlaps | this playbook adds risk decomposition focus |
+
+## Related Skills
+
+- [[riskfolio-portfolio]]
+- [[riskfolio-risk-measures]]
+- [[pyportfolioopt-expected-returns]]
+- [[pyportfolioopt-risk-models]]
+- [[pyportfolioopt-efficient-frontier]]
+- [[cvxpy-problems]]
+- [[cvxpy-atoms]]

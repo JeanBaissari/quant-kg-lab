@@ -66,3 +66,12 @@ long-short implementation of it hold up as a portfolio?
 | portfolio | `pyfolio-tearsheets`, `pyfolio-timeseries` | long-short perf report |
 | handoff | `alphalens-factor-analysis` → `pyfolio` | `create_pyfolio_input` (feeds) |
 | selection | `quant-factor-research` | factor gates → robust subset |
+
+## Related Skills
+
+- [[alphalens-factor-analysis]]
+- [[alphalens-tearsheets]]
+- [[pyfolio-timeseries]]
+- [[pyfolio-tearsheets]]
+- [[pandas-core]]
+- [[quant-factor-research]]

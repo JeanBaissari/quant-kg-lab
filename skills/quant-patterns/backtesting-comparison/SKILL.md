@@ -70,3 +70,9 @@ analysis). This playbook maps when each wins and how to bridge between them.
 | signal source | (this playbook) | shared numpy signal generator (powers both) |
 | HPO | `optuna-study` | parameter grid -> vectorbt objective (optimized_by) |
 | comparison | (this playbook) | stats discrepancy -> hidden assumption (diagnoses) |
+
+## Related Skills
+
+- [[backtrader-core]]
+- [[vectorbt-portfolio]]
+- [[vectorbt-signals]]

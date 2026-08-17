@@ -78,3 +78,12 @@ to model misspecification and regime shifts.
 | flexible | `darts-models` | ARIMA / NaiveDrift / EnsembleModel |
 | ensemble | (this playbook) | weighted combination of forecasts |
 | validation | `pandas-ts`, `numpy-core` | rolling-origin RMSE |
+
+## Related Skills
+
+- [[statsmodels-tsa]]
+- [[arch-forecast]]
+- [[arch-volatility]]
+- [[darts-models]]
+- [[pandas-ts]]
+- [[numpy-core]]

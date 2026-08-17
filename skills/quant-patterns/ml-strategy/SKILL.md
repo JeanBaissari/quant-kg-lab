@@ -59,3 +59,9 @@ crux is the mapping from model output to positions, and evaluating it without le
 | sizing | `quant-portfolio-construction` | covariance → weights |
 | HPO | `optuna-study` | xgboost.train / params → optuna.Study (optimized_by) |
 | validation | `quant-walk-forward-validation` | purge/embargo OOS |
+
+## Related Skills
+
+- [[quant-full-pipeline]]
+- [[quant-portfolio-construction]]
+- [[quant-walk-forward-validation]]

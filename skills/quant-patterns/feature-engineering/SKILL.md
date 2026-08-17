@@ -78,3 +78,12 @@ transforms (scipy), and sklearn preprocessing into a leak-free feature pipeline.
 | numpy-core | ta-lib-indicators | provides | raw float64 arrays for ta-lib functions |
 | this playbook | quant-full-pipeline | feeds_into | feature matrix -> model training step |
 | this playbook | quant-ml-strategy | generates | features -> model predictions -> signals |
+
+## Related Skills
+
+- [[ta-lib-indicators]]
+- [[scikit-learn-preprocessing]]
+- [[scikit-learn-decomposition]]
+- [[scipy-stats]]
+- [[pandas-ts]]
+- [[numpy-core]]

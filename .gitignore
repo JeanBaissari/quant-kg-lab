@@ -68,3 +68,4 @@ knowledge_graphs/*/repo/
 *.stamp.bak
 dist/
 _site/
+.obsidian/

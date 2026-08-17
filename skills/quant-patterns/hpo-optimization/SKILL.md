@@ -80,3 +80,10 @@ Trading strategies have more hyperparameters than ML models — entry/exit thres
 | `scikit-learn-model-selection` | `TimeSeriesSplit` walk-forward folds (Step 1) |
 | `quant-walk-forward-validation` | leak-free OOS protocol the objective must follow (Step 1) |
 | `quant-full-pipeline` | consumer playbook — HPO is the optimize stage of the research loop |
+
+## Related Skills
+
+- [[optuna-samplers]]
+- [[optuna-study]]
+- [[scikit-learn-model-selection]]
+- [[quant-walk-forward-validation]]

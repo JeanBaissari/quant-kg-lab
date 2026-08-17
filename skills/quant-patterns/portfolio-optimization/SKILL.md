@@ -74,3 +74,15 @@ family before any allocation is implemented.
 | views | `pyportfolioopt-black-litterman` | priors + views → posterior |
 | custom | `cvxpy-problems` | direct conic formulation |
 | allocation | `pyportfolioopt-efficient-frontier` | `DiscreteAllocation` (input_to) |
+
+## Related Skills
+
+- [[pyportfolioopt-expected-returns]]
+- [[pyportfolioopt-risk-models]]
+- [[pyportfolioopt-efficient-frontier]]
+- [[pyportfolioopt-black-litterman]]
+- [[cvxpy-problems]]
+- [[cvxpy-atoms]]
+- [[riskfolio-portfolio]]
+- [[riskfolio-risk-measures]]
+- [[pandas-core]]

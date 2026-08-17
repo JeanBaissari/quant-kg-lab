@@ -81,3 +81,9 @@ pandas ──▶ ta-lib ──▶ scipy/numpy ──▶ sklearn/xgboost ──�
 | backtest | `vectorbt-signals`, `vectorbt-portfolio` | pandas.DataFrame → vectorbt.Portfolio (input) |
 | HPO | `optuna-study` | vectorbt/model params → optuna.Study (optimized_by) |
 | validation | `quant-walk-forward-validation` | sklearn.TimeSeriesSplit + purge/embargo |
+
+## Related Skills
+
+- [[quant-factor-research]]
+- [[quant-ml-strategy]]
+- [[quant-walk-forward-validation]]

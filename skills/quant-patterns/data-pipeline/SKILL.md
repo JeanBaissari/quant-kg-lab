@@ -76,3 +76,9 @@ playbook chains them without losing dtype fidelity or index semantics.
 | pandas-core | polars-dataframe | performance | polars joins are 5-10x faster on large frames |
 | numpy-core | pandas-core | wraps_into | `pd.DataFrame(arr)` to add index/columns |
 | polars-dataframe | pandas-core | ecosystem | most ML/stats libs expect pandas; convert at boundary |
+
+## Related Skills
+
+- [[pandas-core]]
+- [[polars-dataframe]]
+- [[numpy-core]]

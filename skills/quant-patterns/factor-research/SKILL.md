@@ -53,3 +53,11 @@ analysis, model-based importance, and leak-free selection.
 | importance | `scikit-learn-ensemble`, `quant-factor-importance` | sklearn importances / SHAP |
 | selection | `scikit-learn-feature-selection` | scipy.stats.f_classif → SelectKBest |
 | validation | `quant-walk-forward-validation` | leak-free OOS folds |
+
+## Related Skills
+
+- [[quant-full-pipeline]]
+- [[quant-factor-importance]]
+- [[quant-walk-forward-validation]]
+- [[quant-factor-tearsheets]]
+- [[alphalens-factor-analysis]]

@@ -68,3 +68,8 @@ Standard k-fold cross-validation leaks future information in time-series data. W
 | `quant-factor-research` | consumer playbook — OOS IC/importance validation |
 | `quant-ml-strategy` | consumer playbook — OOS model predictions |
 | `quant-hpo-optimization` | consumer playbook — walk-forward HPO objective |
+
+## Related Skills
+
+- [[scikit-learn-model-selection]]
+- [[optuna-study]]

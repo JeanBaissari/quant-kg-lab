@@ -68,3 +68,12 @@ risk metric conversion.
 | forecasting | `arch-forecast` | variance paths → risk |
 | risk conversion | `numpy-core` | vol → VaR / position size |
 | mean dynamics | `statsmodels-tsa` | AR/drift cross-check |
+
+## Related Skills
+
+- [[arch-volatility]]
+- [[arch-forecast]]
+- [[arch-unitroot]]
+- [[statsmodels-tsa]]
+- [[pandas-ts]]
+- [[numpy-core]]

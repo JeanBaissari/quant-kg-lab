@@ -80,3 +80,11 @@ empyrical/quantstats/pyfolio/backtrader/pyportfolioopt API surfaces).
 | trade-level metrics | `backtrader-analyzers` | analyzer outputs (Sharpe, drawdown) |
 | optimization layer | `pyportfolioopt-efficient-frontier` | risk-free-sensitive `max_sharpe` |
 | harmonization | this playbook | sign/default/annualization normalization |
+
+## Related Skills
+
+- [[empyrical-stats]]
+- [[quantstats-stats]]
+- [[pyfolio-timeseries]]
+- [[backtrader-analyzers]]
+- [[pyportfolioopt-efficient-frontier]]

@@ -66,3 +66,8 @@ Quant strategies rely on identifying which factors (features) drive predictive p
 | `scikit-learn-ensemble` | provides `RandomForestClassifier.feature_importances_` (MDI baseline, Step 2) |
 | `optuna-study` | HPO-driven factor pruning (Step 4) |
 | `quant-factor-research` | consumer playbook — chains these rankings into factor selection |
+
+## Related Skills
+
+- [[scikit-learn-ensemble]]
+- [[scikit-learn-inspection]]

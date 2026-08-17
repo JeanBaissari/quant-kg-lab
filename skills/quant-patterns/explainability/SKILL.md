@@ -67,3 +67,13 @@ defend. SHAP gives exact per-feature attributions when the model is a tree ensem
 | interactions | `shap-explainers` | shap_interaction_values |
 | cross-check | `quant-factor-importance` | permutation vs SHAP ordering |
 | models | `xgboost-core`, `lightgbm-core`, `scikit-learn-ensemble` | explainable model surface |
+
+## Related Skills
+
+- [[shap-explainers]]
+- [[shap-plots]]
+- [[shap-maskers]]
+- [[xgboost-core]]
+- [[lightgbm-core]]
+- [[scikit-learn-ensemble]]
+- [[quant-factor-importance]]

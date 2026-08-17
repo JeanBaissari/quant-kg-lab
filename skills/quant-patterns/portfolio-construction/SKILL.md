@@ -86,3 +86,11 @@ Raw strategy signals must be translated into portfolio weights. This skill cover
 | `scikit-learn-decomposition` | PCA risk-factor decomposition (Step 4) |
 | `numpy-core` | array math for covariance/weights (Steps 2–3, 5) |
 | `quant-ml-strategy` | consumer playbook — sizes ML-signal positions with these weights |
+
+## Related Skills
+
+- [[scikit-learn-covariance]]
+- [[scikit-learn-decomposition]]
+- [[quant-portfolio-optimization]]
+- [[pyportfolioopt-efficient-frontier]]
+- [[riskfolio-portfolio]]
